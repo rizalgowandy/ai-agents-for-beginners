@@ -20,39 +20,45 @@ This course offers a series of Jupyter Notebooks that you can run with to get ha
 
 The code samples use either:
 
-**Requires GitHub Accont - Free**:
+**Requires GitHub Account - Free**:
 
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Labeled as (semantic-kernel.ipynb)
+1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Labelled as (semantic-kernel.ipynb)
 2) AutoGen Framework + GitHub Models Marketplace. Labeled as (autogen.ipynb)
 
 **Requires Azure Subscription**:
-3) Azure AI Foundry + Azure AI Agent Service. Labeled as (azureaiagent.ipynb)
+3) Azure AI Foundry + Azure AI Agent Service. Labelled as (azureaiagent.ipynb)
 
 We encourage you to try out all three types of examples to see which one works best for you.
 
-Whichever option you choose, will determine which setup steps you need to follow below:
+Whichever option you choose, it will determine which setup steps you need to follow below:
 
 ## Requirements
 
 - Python 3.12+
-- A GitHub Account - For Acces to the GitHub Models Marketplace
+  - **NOTE**: If you don't have Python3.12 installed, ensure you install it.  Then create your venv using python3.12 to ensure the correct versions are installed from the requirements.txt file.
+- A GitHub Account - For Access to the GitHub Models Marketplace
 - Azure Subscription - For Access to Azure AI Foundry
 - Azure AI Foundry Account - For Access to the Azure AI Agent Service
 
 We have included a `requirements.txt` file in the root of this repository that contains all the required Python packages to run the code samples.
 
-You can install them by running the following command in your terminal at the roof of the repository:
+You can install them by running the following command in your terminal at the root of the repository:
 
 ```bash
 pip install -r requirements.txt
 ```
 We recommend creating a Python virtual environment to avoid any conflicts and issues.
 
+## Setup VSCode
+Make sure that you are using the right version of Python in VSCode.
+
+![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
+
 ## Set Up for Samples using GitHub Models 
 
 ### Step 1: Retrieve Your GitHub Personal Access Token (PAT)
 
-Currently, this course uses the Github Models Marketplace to offer free access to Large Language Models (LLMs) that will be used to create AI Agents.
+Currently, this course uses the GitHub Models Marketplace to offer free access to Large Language Models (LLMs) that will be used to create AI Agents.
 
 To access this service, you will need to create a GitHub Personal Access Token.
 
@@ -65,6 +71,8 @@ Then select `Generate new token`.
 ![Generate Token](./images/generate-token.png)
 
 You will be prompted to enter a name for your token, select the expiration date (Recommended: 30 Days), and select the scopes for your token (Public Repositories).
+
+It's also necessary to edit the permissions of this token: Permissions -> Models -> Allows access to GitHub Models
 
 Copy your new token that you have just created. You will now add this to your `.env` file included in this course. 
 
@@ -85,15 +93,17 @@ You should now be able to run the code samples of this course.
 
 ## Set Up for Samples using Azure AI Foundry and Azure AI Agent Service
 
-### Step 1: Retrieve Your Azure Project Connection String
+### Step 1: Retrieve Your Azure Project Endpoint
 
-Follow the steps to creating a project and agent in Azure AI Foundry found here: [Create a project in Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-services/agents/quickstart?pivots=ai-foundry-portal?WT.mc_id=academic-105485-koreyst)
+
+Follow the steps to creating a hub and project in Azure AI Foundry found here: [Hub resources overview](https://learn.microsoft.com/en-us/azure/ai-foundry/concepts/ai-resources)
+
 
 Once you have created your project, you will need to retrieve the connection string for your project.
 
 This can be done by going to the **Overview** page of your project in the Azure AI Foundry portal.
 
-![Project Connection String](./images/project-connection-string.png)
+![Project Connection String](./images/project-endpoint.png)
 
 ### Step 2: Create Your `.env` File
 
@@ -105,7 +115,7 @@ cp .env.example .env
 
 This will copy the example file and create a `.env` in your directory and where you fill in the values for the environment variables.
 
-With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_CONNECTION_STRING` field.
+With your token copied, open the `.env` file in your favorite text editor and paste your token into the `PROJECT_ENDPOINT` field.
 
 ### Step 3: Sign in to Azure
 
@@ -116,7 +126,7 @@ Next, open a terminal and run `az login --use-device-code` to sign in to your Az
 Once you've logged in, select your subscription in the terminal.
 
 
-## Additional Envionment Variables - Azure Search and Azure OpenAI 
+## Additional Environment Variables - Azure Search and Azure OpenAI 
 
 For the Agentic RAG Lesson - Lesson 5 - there are samples that use Azure Search and Azure OpenAI.
 
@@ -170,6 +180,6 @@ If you have any issues running this setup, hop into our <a href="https://discord
 
 ## Next Lesson
 
-You are now ready to run the code of this course, happy learning more about the world of AI Agents! 
+You are now ready to run the code for this course. Happy learning more about the world of AI Agents! 
 
 [Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)

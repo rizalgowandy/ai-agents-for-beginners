@@ -2,7 +2,7 @@
 
 ![Generative AI For Beginners](./images/repo-thumbnail.png)
 
-## 10 Lessons teaching everything you need to know to start building AI Agents
+## 11 Lessons teaching everything you need to know to start building AI Agents
 
 [![GitHub license](https://img.shields.io/github/license/microsoft/ai-agents-for-beginners.svg)](https://github.com/microsoft/ai-agents-for-beginners/blob/master/LICENSE?WT.mc_id=academic-105485-koreyst)
 [![GitHub contributors](https://img.shields.io/github/contributors/microsoft/ai-agents-for-beginners.svg)](https://GitHub.com/microsoft/ai-agents-for-beginners/graphs/contributors/?WT.mc_id=academic-105485-koreyst)
@@ -10,7 +10,10 @@
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/microsoft/ai-agents-for-beginners.svg)](https://GitHub.com/microsoft/ai-agents-for-beginners/pulls/?WT.mc_id=academic-105485-koreyst)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com?WT.mc_id=academic-105485-koreyst)
 
-### Language Support
+### 🌐 Multi-Language Support
+
+#### Supported via GitHub Action (Automated & Always Up-to-Date)
+
 [![English](https://img.shields.io/badge/English-brightgreen.svg?style=flat-square)](README.md)
 [![Chinese Simplified](https://img.shields.io/badge/Chinese_Simplified-brightgreen.svg?style=flat-square)](./translations/zh/README.md)
 [![Chinese Traditional](https://img.shields.io/badge/Chinese_Traditional-brightgreen.svg?style=flat-square)](./translations/tw/README.md)     
@@ -34,7 +37,7 @@
 
 ## 🌱 Getting Started
 
-This course has 10 lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
+This course has 11 lessons covering the fundamentals of building AI Agents. Each lesson covers its own topic so start wherever you like!
 
 There is multi-language support for this course. Go to our [available languages here](#-multi-language-support). 
 
@@ -88,24 +91,12 @@ If you have product feedback or errors whilst building visit our [Azure AI Found
 | Multi-Agent Design Pattern               | [Link](./08-multi-agent/README.md)                 | [Video](https://youtu.be/V6HpE9hZEx0?si=rMgDhEu7wXo2uo6g)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | Metacognition Design Pattern             | [Link](./09-metacognition/README.md)               | [Video](https://youtu.be/His9R6gw6Ec?si=8gck6vvdSNCt6OcF)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
 | AI Agents in Production                  | [Link](./10-ai-agents-production/README.md)        | [Video](https://youtu.be/l4TP6IyJxmQ?si=31dnhexRo6yLRJDl)  | [Link](https://aka.ms/ai-agents-beginners/collection?WT.mc_id=academic-105485-koreyst) |
+| AI Agents with MCP                       | [Link](./11-mcp/README.md)                         |                                                            | [Link](https://aka.ms/mcp-for-beginners)                                               |
 
-## 🌐 Multi-Language Support
+### 🌐 Multi-Language Support
 
-| Language             | Code | Link to Translated README                               | Last Updated |
-|----------------------|------|---------------------------------------------------------|--------------|
-| Chinese (Simplified) | zh   | [Chinese Translation](./translations/zh/README.md)      | 2025-03-24   |
-| Chinese (Traditional)| tw   | [Chinese Translation](./translations/tw/README.md)      | 2025-03-28   |
-| Chinese (Hong Kong)  | hk   | [Chinese (Hong Kong) Translation](./translations/hk/README.md) | 2025-03-28   |
-| French               | fr   | [French Translation](./translations/fr/README.md)       | 2025-03-28   |
-| Japanese             | ja   | [Japanese Translation](./translations/ja/README.md)     | 2025-03-28   |
-| Korean               | ko   | [Korean Translation](./translations/ko/README.md)       | 2025-03-28   |
-| Portuguese           | pt   | [Portuguese Translation](./translations/pt/README.md)   | 2025-03-28   |
-| Spanish              | es   | [Spanish Translation](./translations/es/README.md)      | 2025-03-28   |
-| German               | de   | [German Translation](./translations/de/README.md)       | 2025-03-28   |
-| Persian              | fa   | [Persian Translation](./translations/fa/README.md)       | 2025-03-28   |
-| Polish               | pl   | [Polish Translation](./translations/pl/README.md)       | 2025-03-28  |
-| Hindi               | hi   | [Hindi Translation](./translations/hi/README.md)       | 2025-04-05   |
-
+#### Supported via GitHub Action (Automated & Always Up-to-Date)
+#### If you wish to have additional translations languages supported are listed [here](https://github.com/Azure/co-op-translator/blob/main/getting_started/supported-languages.md)
 
 ## 🎒 Other Courses
 
