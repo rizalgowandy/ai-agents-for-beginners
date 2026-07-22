@@ -109,7 +109,7 @@ public class ConcurrentAggregationExecutor() : Executor<ChatMessage>("Concurrent
 
     public override ValueTask HandleAsync(ChatMessage message, IWorkflowContext context, CancellationToken cancellationToken = default)
     {
-        this._messages.AddRange(message);
+        this._messages.Add(message);
         return ValueTask.CompletedTask;
     }
 
