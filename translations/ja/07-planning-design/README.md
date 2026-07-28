@@ -266,7 +266,7 @@ response = client.create_response(
 
 Magnetic One - 複雑なタスクを解決するジェネラリストのマルチエージェントシステムで、複数の難易度の高いエージェントベンチマークで優れた成果を上げています。参考：[Magentic One](https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks)。この実装ではオーケストレーターが特定タスク向けの計画を作成し、それらを利用可能なエージェントに委任します。計画に加えて、オーケストレーターはタスクの進捗を監視し必要に応じて再計画を行う追跡機構も活用します。
 
-### 計画デザインパターンについてさらに質問がありますか？
+### 「プランニング（計画）」設計パターンについてさらに質問がありますか？
 
 [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) に参加して、他の学習者と交流したり、オフィスアワーに参加してAIエージェントについての質問に答えてもらいましょう。
 
