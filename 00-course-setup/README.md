@@ -227,14 +227,33 @@ pip install -r requirements.txt
 
 We recommend running this inside the virtual environment you created earlier.
 
-## Additional Setup for Lesson 5 (Agentic RAG)
+## Optional Setup: Azure AI Search (Lessons 5 and 16)
 
-Lesson 5 uses **Azure AI Search** for retrieval-augmented generation. If you plan to run that lesson, add these variables to your `.env` file:
+The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **in-memory knowledge base** — no extra Azure resources needed. If you want to back them with a real **Azure AI Search** index, the recommended approach is **keyless authentication** with Microsoft Entra ID, consistent with the `az login` flow used everywhere else in this course.
+
+1. **Enable role-based access** on your search service:
+
+    ```bash|powershell
+    az search service update --name <service-name> --resource-group <resource-group> --auth-options aadOrApiKey
+    ```
+
+2. **Assign yourself the required roles** (create/load indexes and query):
+
+    ```bash|powershell
+    az role assignment create --assignee <your-user-or-principal-id> --role "Search Service Contributor" --scope <search-service-resource-id>
+    az role assignment create --assignee <your-user-or-principal-id> --role "Search Index Data Contributor" --scope <search-service-resource-id>
+    ```
+
+3. **Add the endpoint** to your `.env` file:
 
 | Variable | Where to find it |
 |----------|-----------------|
 | `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure portal → your **Azure AI Search** resource → **Overview** → URL |
-| `AZURE_SEARCH_API_KEY` | Azure portal → your **Azure AI Search** resource → **Settings** → **Keys** → primary admin key |
+| `AZURE_SEARCH_API_KEY` | Optional — only for key-based auth. Azure portal → **Settings** → **Keys** → primary admin key |
+
+> **Why keyless?** Admin keys grant full write access to your search service and can leak via `.env` files. With RBAC, your `az login` identity is used instead — the same `AzureCliCredential`/`DefaultAzureCredential` pattern all course notebooks already use. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
+
+See the [Azure AI Search setup guide](./AzureSearch.md) for full index-creation samples in Python and .NET.
 
 ## Additional Setup for Lessons that Call Azure OpenAI Directly (Lessons 6 and 8)
 

@@ -47,8 +47,20 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
    ```bash
    az login
    ```
+3. **(Recommended) Enable keyless access with Microsoft Entra ID (RBAC):**
 
-3. Store both endpoint and API key for Azure AI Search instance to environment variables.
+    ```bash
+    az search service update --name <service-name> --resource-group <resource-group> --auth-options aadOrApiKey
+    az role assignment create --assignee <your-user-or-principal-id> --role "Search Service Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
+    az role assignment create --assignee <your-user-or-principal-id> --role "Search Index Data Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
+    export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "endpoint" -o tsv)
+    ```
+
+    With RBAC enabled, the SDK samples below authenticate with `DefaultAzureCredential` via your `az login` session — no admin key needed. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
+
+4. **(Fallback) Key-based auth** — only if you cannot use RBAC, store the admin key as well:   
+
+#### Store both endpoint and API key for Azure AI Search instance to environment variables.
 
     ```bash
     # zsh/bash
@@ -74,16 +86,20 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
 
     ```python
     import os
-    from azure.core.credentials import AzureKeyCredential
+    from azure.identity import DefaultAzureCredential
     from azure.search.documents import SearchClient
     from azure.search.documents.indexes import SearchIndexClient
     from azure.search.documents.indexes.models import SearchIndex, SimpleField, edm
 
     service_endpoint = os.getenv("AZURE_SEARCH_SERVICE_ENDPOINT")
-    api_key = os.getenv("AZURE_SEARCH_API_KEY")
     index_name = "sample-index"
 
-    credential = AzureKeyCredential(api_key)
+    # Keyless (recommended): uses your `az login` identity via Entra ID RBAC.
+    # Requires the "Search Service Contributor" and "Search Index Data Contributor" roles.
+    credential = DefaultAzureCredential()
+    # Fallback (key-based auth):
+    # from azure.core.credentials import AzureKeyCredential
+    # credential = AzureKeyCredential(os.getenv("AZURE_SEARCH_API_KEY"))
     index_client = SearchIndexClient(service_endpoint, credential)
 
     fields = [
