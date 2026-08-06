@@ -2,6 +2,7 @@
 #:package Azure.Identity@1.*
 #:property PublishAot=false
 
+using Azure;
 using Azure.Identity;
 using Azure.Search.Documents;
 using Azure.Search.Documents.Indexes;
@@ -13,8 +14,7 @@ var indexName = "sample-index";
 // Keyless (recommended): uses your `az login` identity via Entra ID RBAC.
 // Requires the "Search Service Contributor" and "Search Index Data Contributor" roles.
 var credential = new DefaultAzureCredential();
-// Fallback (key-based auth):
-// using Azure;
+// Fallback (key-based auth): replace the credential line above with:
 // var credential = new AzureKeyCredential(Environment.GetEnvironmentVariable("AZURE_SEARCH_API_KEY")!);
 
 var indexClient = new SearchIndexClient(serviceEndpoint, credential);
