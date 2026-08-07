@@ -56,7 +56,7 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
     export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "endpoint" -o tsv)
     ```
 
-    With RBAC enabled, the SDK samples below authenticate with `AzureCliCredential` via your `az login` session — no admin key needed. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
+    With RBAC enabled, the Python SDK sample below authenticates with `AzureCliCredential` via your `az login` session — no admin key needed. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
 
 4. **(Fallback) Key-based auth** — only if you cannot use RBAC, store the admin key as well:   
 
@@ -128,6 +128,8 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
     ```bash
     dotnet run ./AzureSearch.cs
     ```
+
+    The .NET sample below uses `DefaultAzureCredential`, which can use your Azure CLI sign-in from `az login` during local development.
 
 2. Here's the .NET code of `AzureSearch.cs`:
 
