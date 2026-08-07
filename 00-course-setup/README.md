@@ -233,13 +233,13 @@ The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **
 
 1. **Enable role-based access** on your search service:
 
-    ```bash|powershell
+    ```bash
     az search service update --name <service-name> --resource-group <resource-group> --auth-options aadOrApiKey
     ```
 
 2. **Assign yourself the required roles** (create/load indexes and query):
 
-    ```bash|powershell
+    ```bash
     az role assignment create --assignee <your-user-or-principal-id> --role "Search Service Contributor" --scope <search-service-resource-id>
     az role assignment create --assignee <your-user-or-principal-id> --role "Search Index Data Contributor" --scope <search-service-resource-id>
     ```
