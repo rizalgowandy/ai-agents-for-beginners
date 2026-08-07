@@ -56,7 +56,7 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
     export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "endpoint" -o tsv)
     ```
 
-    With RBAC enabled, the SDK samples below authenticate with `DefaultAzureCredential` via your `az login` session — no admin key needed. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
+    With RBAC enabled, the SDK samples below authenticate with `AzureCliCredential` via your `az login` session — no admin key needed. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
 
 4. **(Fallback) Key-based auth** — only if you cannot use RBAC, store the admin key as well:   
 
@@ -86,7 +86,7 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
 
     ```python
     import os
-    from azure.identity import DefaultAzureCredential
+    from azure.identity import AzureCliCredential
     from azure.search.documents import SearchClient
     from azure.search.documents.indexes import SearchIndexClient
     from azure.search.documents.indexes.models import SearchIndex, SimpleField, edm
@@ -96,7 +96,7 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
 
     # Keyless (recommended): uses your `az login` identity via Entra ID RBAC.
     # Requires the "Search Service Contributor" and "Search Index Data Contributor" roles.
-    credential = DefaultAzureCredential()
+    credential = AzureCliCredential()
     # Fallback (key-based auth):
     # from azure.core.credentials import AzureKeyCredential
     # credential = AzureKeyCredential(os.getenv("AZURE_SEARCH_API_KEY"))
@@ -133,18 +133,23 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
 
     ```csharp
     #:package Azure.Search.Documents@11.*
+    #:package Azure.Identity@1.*
     #:property PublishAot=false
-
+    
     using Azure;
+    using Azure.Identity;
     using Azure.Search.Documents;
     using Azure.Search.Documents.Indexes;
     using Azure.Search.Documents.Indexes.Models;
-
+    
     var serviceEndpoint = new Uri(Environment.GetEnvironmentVariable("AZURE_SEARCH_SERVICE_ENDPOINT")!);
-    var apiKey = Environment.GetEnvironmentVariable("AZURE_SEARCH_API_KEY")!;
     var indexName = "sample-index";
-
-    var credential = new AzureKeyCredential(apiKey);
+    
+    // Keyless (recommended): uses your `az login` identity via Entra ID RBAC.
+    // Requires the "Search Service Contributor" and "Search Index Data Contributor" roles.
+    var credential = new DefaultAzureCredential();
+    // Fallback (key-based auth): replace the credential line above with:
+    // var credential = new AzureKeyCredential(Environment.GetEnvironmentVariable("AZURE_SEARCH_API_KEY")!);
     var indexClient = new SearchIndexClient(serviceEndpoint, credential);
 
     var fields = new List<SearchField>()
