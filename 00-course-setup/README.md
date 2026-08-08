@@ -251,7 +251,7 @@ The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **
 | `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure portal → your **Azure AI Search** resource → **Overview** → URL |
 | `AZURE_SEARCH_API_KEY` | Optional — only for key-based auth. Azure portal → **Settings** → **Keys** → primary admin key |
 
-> **Why keyless?** Admin keys grant full write access to your search service and can leak via `.env` files. With RBAC, your `az login` identity is used instead — the same `DefaultAzureCredential` pattern all course notebooks already use. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
+> **Why keyless?** Admin keys grant full write access to your search service and can leak via `.env` files. With RBAC, your `az login` identity is used instead — the same keyless Entra ID pattern (`AzureCliCredential` / `DefaultAzureCredential`) this course already uses for Microsoft Foundry and Azure OpenAI. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
 
 See the [Azure AI Search setup guide](./AzureSearch.md) for full index-creation samples in Python and .NET.
 
