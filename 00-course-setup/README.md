@@ -20,7 +20,7 @@ You should now have your own forked version of this course in the following link
 
 ### Shallow Clone (recommended for workshop / Codespaces)
 
-  >The full repository can be large (~3 GB) when you download full history and all files. If you're only attending the workshop or only need a few lesson folders, a shallow clone (or a sparse clone) is much faster and uses far less disk space.
+  >The full repository can be large (~3 GB) when you download full history and all files. If you're only attending the workshop or only need a few lesson folders, a shallow clone (or a sparse clone) downloads much less.
 
 #### Quick shallow clone — minimal history, all files
 
@@ -58,7 +58,7 @@ Then specify which folders you want (example below shows two folders):
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-After cloning and verifying the files, if you only need files and want to free space (no git history), please delete the repository metadata (💀irreversible — you will lose all Git functionality in this copy):
+After cloning and verifying the files, if you only need files and want to free space (no git history), please delete the repository metadata (💀irreversible — you will lose all Git functionality):
 
 ```bash
 # zsh/bash
@@ -229,7 +229,7 @@ We recommend running this inside the virtual environment you created earlier.
 
 ## Optional Setup: Azure AI Search (Lessons 5 and 16)
 
-The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **in-memory knowledge base** — no extra Azure resources needed. If you want to back them with a real **Azure AI Search** index, the recommended approach is **keyless authentication** with Microsoft Entra ID, consistent with the `az login` flow used everywhere else in this course.
+The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **in-memory knowledge base** — no extra Azure resources needed. If you want to back them with a real **Azure AI Search** resource, enable keyless (Entra ID / RBAC) access as follows:
 
 1. **Enable role-based access** on your search service:
 
@@ -251,13 +251,13 @@ The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **
 | `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure portal → your **Azure AI Search** resource → **Overview** → URL |
 | `AZURE_SEARCH_API_KEY` | Optional — only for key-based auth. Azure portal → **Settings** → **Keys** → primary admin key |
 
-> **Why keyless?** Admin keys grant full write access to your search service and can leak via `.env` files. With RBAC, your `az login` identity is used instead — the same keyless Entra ID pattern (`AzureCliCredential` / `DefaultAzureCredential`) this course already uses for Microsoft Foundry and Azure OpenAI. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
+> **Why keyless?** Admin keys grant full write access to your search service and can leak via `.env` files. With RBAC, your `az login` identity is used instead — the same keyless Entra ID pattern the course notebooks use (via `AzureCliCredential` / `DefaultAzureCredential`). See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
 
 See the [Azure AI Search setup guide](./AzureSearch.md) for full index-creation samples in Python and .NET.
 
 ## Additional Setup for Lessons that Call Azure OpenAI Directly (Lessons 6 and 8)
 
-Some notebooks in lessons 6 and 8 call **Azure OpenAI** directly (using the **Responses API**) instead of going through a Microsoft Foundry project. These samples previously used GitHub Models, which is being deprecated.
+Some notebooks in lessons 6 and 8 call **Azure OpenAI** directly (using the **Responses API**) instead of going through a Microsoft Foundry project. These samples previously used GitHub Models, which is deprecated and does not support the Responses API. Add these variables to your `.env` file:
 
 | Variable | Where to find it |
 |----------|-----------------|
@@ -269,7 +269,7 @@ Some notebooks in lessons 6 and 8 call **Azure OpenAI** directly (using the **Re
 
 ## Alternative Provider: MiniMax (OpenAI-Compatible)
 
-[MiniMax](https://platform.minimaxi.com/) provides large-context models (up to 204K tokens) through an OpenAI-compatible API. Since the Microsoft Agent Framework's `OpenAIChatClient` works with any OpenAI-compatible endpoint, MiniMax is a drop-in alternative.
+[MiniMax](https://platform.minimaxi.com/) provides large-context models (up to 204K tokens) through an OpenAI-compatible API. Since the Microsoft Agent Framework's `OpenAIChatClient` works with any OpenAI-compatible endpoint, you can use MiniMax as a drop-in alternative for lessons that use `OpenAIChatClient`.
 
 Add these variables to your `.env` file:
 
@@ -364,7 +364,7 @@ This is a known issue with Python on macOS where the system SSL certificates are
 
 **Option 2: Use `connection_verify=False` in your notebook (for GitHub Models notebooks only)**
 
-In the Lesson 6 notebook (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`), a commented-out workaround is already included. Uncomment `connection_verify=False` when needed.
+In the Lesson 6 notebook (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`), a commented-out workaround is already included. Uncomment `connection_verify=False` when you hit certificate errors:
 
 ```python
 client = ChatCompletionsClient(
@@ -391,7 +391,7 @@ truststore.inject_into_ssl()
 
 ## Stuck Somewhere?
 
-If you have any issues running this setup, hop into our <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> or <a href="https://github.com/microsoft/ai-agents-for-beginners/issues" target="_blank">create an issue</a>.
+If you have any issues running this setup, hop into our <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> or <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">create an issue</a>.
 
 ## Next Lesson
 
