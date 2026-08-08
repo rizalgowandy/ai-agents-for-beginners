@@ -32,7 +32,7 @@ Before you begin, ensure you have the following:
 
 1. Once the deployment is complete, navigate to your search service in the Azure portal.
 2. In the search service overview pane, copy the URL. It should look like `https://<service-name>.search.windows.net`.
-3. **(Recommended)** Enable keyless access with Microsoft Entra ID (RBAC) as shown in Step 4 below — no key needed. Only if you cannot use RBAC, open the Settings > Keys pane and copy the **primary admin key** (the samples in this guide create indexes and upload documents, which the read-only query key cannot do).
+3. **(Recommended)** Enable keyless access with Microsoft Entra ID (RBAC) as shown in Step 4 below — no key needed. The samples in this guide create/update indexes and upload documents, which require the **Search Service Contributor** and **Search Index Data Contributor** roles (or, for key-based auth, the **primary admin key** — not the query key). Only if you cannot use RBAC, open the **Settings > Keys** pane and copy the **primary admin key**.
 4. Follow the steps in the [Quickstart guide](https://learn.microsoft.com/azure/search/search-get-started-portal?pivots=import-data-new) page to create an index, upload data, and perform a search.
 
 ## Step 4: Use Azure AI Search Tools
@@ -53,8 +53,8 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
     az search service update --name <service-name> --resource-group <resource-group> --auth-options aadOrApiKey
     az role assignment create --assignee <your-user-or-principal-id> --role "Search Service Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
     az role assignment create --assignee <your-user-or-principal-id> --role "Search Index Data Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
-    # az search service show has no "endpoint" field; build the URL from properties.hostName.
-    export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "concat('https://', properties.hostName)" -o tsv)
+    # az search service show has no "endpoint" field; build the URL from the service name.
+    export AZURE_SEARCH_SERVICE_ENDPOINT="https://<service-name>.search.windows.net"
     ```
 
     With RBAC enabled, the Python and .NET SDK samples below authenticate with `DefaultAzureCredential`, which uses your `az login` session during local development — no admin key needed. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
@@ -65,16 +65,16 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
 
     ```bash
     # zsh/bash
-    # az search service show has no "endpoint" field; build the URL from properties.hostName.
-    export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "concat('https://', properties.hostName)" -o tsv)
-    export AZURE_SEARCH_API_KEY=$(az search service admin-key list -g <resource-group> --search-service-name <service-name> --query "primaryKey" -o tsv)
+    # az search service show has no "endpoint" field; build the URL from the service name.
+    export AZURE_SEARCH_SERVICE_ENDPOINT="https://<service-name>.search.windows.net"
+    export AZURE_SEARCH_API_KEY=$(az search service admin-key list -g <resource-group> --service-name <service-name> --query "primaryKey" -o tsv)
     ```
 
     ```powershell
     # PowerShell
-    # az search service show has no "endpoint" field; build the URL from properties.hostName.
-    $env:AZURE_SEARCH_SERVICE_ENDPOINT = "https://$(az search service show -g <resource-group> -n <service-name> --query "properties.hostName" -o tsv)"
-    $env:AZURE_SEARCH_API_KEY = $(az search service admin-key list -g <resource-group> --search-service-name <service-name> --query "primaryKey" -o tsv)
+    # az search service show has no "endpoint" field; build the URL from the service name.
+    $env:AZURE_SEARCH_SERVICE_ENDPOINT = "https://<service-name>.search.windows.net"
+    $env:AZURE_SEARCH_API_KEY = $(az search service admin-key list -g <resource-group> --service-name <service-name> --query "primaryKey" -o tsv)
     ```
 
 ### Using Python SDK
