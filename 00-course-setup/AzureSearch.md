@@ -53,7 +53,8 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
     az search service update --name <service-name> --resource-group <resource-group> --auth-options aadOrApiKey
     az role assignment create --assignee <your-user-or-principal-id> --role "Search Service Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
     az role assignment create --assignee <your-user-or-principal-id> --role "Search Index Data Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
-    export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "endpoint" -o tsv)
+    # az search service show has no "endpoint" field; build the URL from properties.hostName.
+    export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "concat('https://', properties.hostName)" -o tsv)
     ```
 
     With RBAC enabled, the Python and .NET SDK samples below authenticate with `DefaultAzureCredential`, which uses your `az login` session during local development — no admin key needed. See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
@@ -64,13 +65,15 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
 
     ```bash
     # zsh/bash
-    export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "endpoint" -o tsv)
+    # az search service show has no "endpoint" field; build the URL from properties.hostName.
+    export AZURE_SEARCH_SERVICE_ENDPOINT=$(az search service show -g <resource-group> -n <service-name> --query "concat('https://', properties.hostName)" -o tsv)
     export AZURE_SEARCH_API_KEY=$(az search service admin-key list -g <resource-group> --search-service-name <service-name> --query "primaryKey" -o tsv)
     ```
 
     ```powershell
     # PowerShell
-    $env:AZURE_SEARCH_SERVICE_ENDPOINT = az search service show -g <resource-group> -n <service-name> --query "endpoint" -o tsv
+    # az search service show has no "endpoint" field; build the URL from properties.hostName.
+    $env:AZURE_SEARCH_SERVICE_ENDPOINT = "https://$(az search service show -g <resource-group> -n <service-name> --query "properties.hostName" -o tsv)"
     $env:AZURE_SEARCH_API_KEY = $(az search service admin-key list -g <resource-group> --search-service-name <service-name> --query "primaryKey" -o tsv)
     ```
 
