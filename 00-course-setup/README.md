@@ -165,7 +165,7 @@ From your project in the Microsoft Foundry portal:
 
 ### Step 3: Sign in to Azure with `az login`
 
-All notebooks use **`AzureCliCredential`** for authentication — no API keys to manage. This requires you to be signed in via the Azure CLI.
+All notebooks authenticate through your **Azure CLI sign-in** — using `AzureCliCredential` or `DefaultAzureCredential` (both pick up your `az login` session) from the `azure-identity` package — so there are no API keys to manage. This requires you to be signed in via the Azure CLI.
 
 1. **Install the Azure CLI** if you haven't already: [aka.ms/installazurecli](https://aka.ms/installazurecli)
 
@@ -189,7 +189,7 @@ All notebooks use **`AzureCliCredential`** for authentication — no API keys to
     az account show
     ```
 
-> **Why `az login`?** The notebooks authenticate using `AzureCliCredential` from the `azure-identity` package. This means your Azure CLI session provides the credentials — no API keys or secrets in your `.env` file.
+> **Why `az login`?** The notebooks authenticate using `AzureCliCredential` (or `DefaultAzureCredential`, which also picks up your Azure CLI sign-in) from the `azure-identity` package. This means your Azure CLI session provides the credentials — no API keys or secrets in your `.env` file. This is a [security best practice](https://learn.microsoft.com/azure/developer/ai/keyless-connections).
 
 ### Step 4: Create Your `.env` File
 
@@ -229,7 +229,7 @@ We recommend running this inside the virtual environment you created earlier.
 
 ## Optional Setup: Azure AI Search (Lessons 5 and 16)
 
-The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **in-memory knowledge base** — no extra Azure resources needed. If you want to back them with a real **Azure AI Search** resource, enable keyless (Entra ID / RBAC) access as follows:
+The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **in-memory knowledge base** — no extra Azure resources needed. If you want to back them with a real **Azure AI Search** index, note that the **Lesson 16 notebook currently uses key-based authentication**: it switches from in-memory search to Azure AI Search only when **both** `AZURE_SEARCH_SERVICE_ENDPOINT` **and** `AZURE_SEARCH_API_KEY` are set, and otherwise stays on in-memory search — so to run it against a real index you must set the admin key as well. Keyless authentication with Microsoft Entra ID (RBAC) is the recommended approach for your own production code, consistent with the `az login` flow used everywhere else in this course.
 
 1. **Enable role-based access** on your search service:
 
@@ -249,7 +249,7 @@ The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **
 | Variable | Where to find it |
 |----------|-----------------|
 | `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure portal → your **Azure AI Search** resource → **Overview** → URL |
-| `AZURE_SEARCH_API_KEY` | Optional — only for key-based auth. Azure portal → **Settings** → **Keys** → primary admin key |
+| `AZURE_SEARCH_API_KEY` | Required (with the endpoint) to enable Azure AI Search in the Lesson 16 notebook, which uses key-based auth. Azure portal → **Settings** → **Keys** → primary admin key |
 
 > **Why keyless?** Admin keys grant full write access to your search service and can leak via `.env` files. With RBAC, your `az login` identity is used instead — the same keyless Entra ID pattern the course notebooks use (via `AzureCliCredential` / `DefaultAzureCredential`). See [Connect to Azure AI Search using roles](https://learn.microsoft.com/azure/search/search-security-rbac).
 
