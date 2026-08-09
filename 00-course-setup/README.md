@@ -165,7 +165,7 @@ From your project in the Microsoft Foundry portal:
 
 ### Step 3: Sign in to Azure with `az login`
 
-All notebooks authenticate through your **Azure CLI sign-in** — using `AzureCliCredential` or `DefaultAzureCredential` (both pick up your `az login` session) from the `azure-identity` package — so there are no API keys to manage. This requires you to be signed in via the Azure CLI.
+Most notebooks authenticate through your **Azure CLI sign-in** — using `AzureCliCredential` or `DefaultAzureCredential` (both pick up your `az login` session) from the `azure-identity` package — so they do not require API keys. A few lessons and optional integrations use API keys; check each lesson's prerequisites for any additional environment variables. This requires you to be signed in via the Azure CLI.
 
 1. **Install the Azure CLI** if you haven't already: [aka.ms/installazurecli](https://aka.ms/installazurecli)
 
