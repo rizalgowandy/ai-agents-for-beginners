@@ -231,6 +231,8 @@ We recommend running this inside the virtual environment you created earlier.
 
 The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **in-memory knowledge base** — no extra Azure resources needed. If you want to back them with a real **Azure AI Search** index, note that the **Lesson 16 notebook currently uses key-based authentication**: it switches from in-memory search to Azure AI Search only when **both** `AZURE_SEARCH_SERVICE_ENDPOINT` **and** `AZURE_SEARCH_API_KEY` are set, and otherwise stays on in-memory search — so to run it against a real index you must set the admin key as well. Keyless authentication with Microsoft Entra ID (RBAC) is the recommended approach for your own production code, consistent with the `az login` flow used everywhere else in this course.
 
+The RBAC steps below apply to the setup-guide samples and your own code. They do not enable keyless authentication in the Lesson 16 notebook; Lesson 16 still requires both the endpoint and admin key to use Azure AI Search.
+
 1. **Enable role-based access** on your search service:
 
     ```bash
@@ -374,7 +376,7 @@ client = ChatCompletionsClient(
 )
 ```
 
-> **⚠️ Warning:** Disabling SSL verification (`connection_verify=False`) reduces security by skipping certificate validation. Use this only as a temporary workaround in development environments.
+> **⚠️ Warning:** Disabling SSL verification (`connection_verify=False`) reduces security by skipping certificate validation. Use this only as a temporary workaround in development environments. Never use it in production.
 
 **Option 3: Install and use `truststore`**
 
