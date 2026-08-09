@@ -240,8 +240,8 @@ The Lesson 5 (Agentic RAG) and Lesson 16 notebooks run out of the box with an **
 2. **Assign yourself the required roles** (create/load indexes and query):
 
     ```bash
-    az role assignment create --assignee <your-user-or-principal-id> --role "Search Service Contributor" --scope <search-service-resource-id>
-    az role assignment create --assignee <your-user-or-principal-id> --role "Search Index Data Contributor" --scope <search-service-resource-id>
+    az role assignment create --assignee <your-user-or-principal-id> --role "Search Service Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
+    az role assignment create --assignee <your-user-or-principal-id> --role "Search Index Data Contributor" --scope $(az search service show -g <resource-group> -n <service-name> --query id -o tsv)
     ```
 
 3. **Add the endpoint** to your `.env` file:

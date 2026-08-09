@@ -1,5 +1,5 @@
 #:package Azure.Search.Documents@11.*
-#:package Azure.Identity@1.13.*
+#:package Azure.Identity@1.21.0
 #:property PublishAot=false
 
 using Azure;

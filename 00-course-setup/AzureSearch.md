@@ -67,14 +67,14 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
     # zsh/bash
     # az search service show has no "endpoint" field; build the URL from the service name.
     export AZURE_SEARCH_SERVICE_ENDPOINT="https://<service-name>.search.windows.net"
-    export AZURE_SEARCH_API_KEY=$(az search service admin-key list -g <resource-group> --search-service-name <service-name> --query "primaryKey" -o tsv)
+    export AZURE_SEARCH_API_KEY=$(az search admin-key show -g <resource-group> --service-name <service-name> --query "primaryKey" -o tsv)
     ```
 
     ```powershell
     # PowerShell
     # az search service show has no "endpoint" field; build the URL from the service name.
     $env:AZURE_SEARCH_SERVICE_ENDPOINT = "https://<service-name>.search.windows.net"
-    $env:AZURE_SEARCH_API_KEY = $(az search service admin-key list -g <resource-group> --search-service-name <service-name> --query "primaryKey" -o tsv)
+    $env:AZURE_SEARCH_API_KEY = $(az search admin-key show -g <resource-group> --service-name <service-name> --query "primaryKey" -o tsv)
     ```
 
 ### Using Python SDK
@@ -138,7 +138,7 @@ Azure AI Search integrates with various tools to enhance your search capabilitie
 
     ```csharp
     #:package Azure.Search.Documents@11.*
-    #:package Azure.Identity@1.13.*
+    #:package Azure.Identity@1.21.0
     #:property PublishAot=false
 
     using Azure;
