@@ -98,6 +98,7 @@ public class ConcurrentStartExecutor() : Executor<string>("ConcurrentStartExecut
 public class ConcurrentAggregationExecutor() : Executor<ChatMessage>("ConcurrentAggregationExecutor")
 {
     private readonly List<ChatMessage> _messages = [];
+    private readonly object _lock = new();
 
     /// <summary>
     /// Handles incoming messages from the agents and aggregates their responses.
@@ -108,11 +109,20 @@ public class ConcurrentAggregationExecutor() : Executor<ChatMessage>("Concurrent
 
     public override async ValueTask HandleAsync(ChatMessage message, IWorkflowContext context, CancellationToken cancellationToken = default)
     {
-        this._messages.Add(message);
+        string? formattedMessages = null;
 
-        if (this._messages.Count == 2)
+        lock (this._lock)
         {
-            var formattedMessages = string.Join(Environment.NewLine, this._messages.Select(m => $"{m.AuthorName}: {m.Text}"));
+            this._messages.Add(message);
+
+            if (this._messages.Count == 2)
+            {
+                formattedMessages = string.Join(Environment.NewLine, this._messages.Select(m => $"{m.AuthorName}: {m.Text}"));
+            }
+        }
+
+        if (formattedMessages is not null)
+        {
             await context.YieldOutputAsync(formattedMessages);
         }
     }
