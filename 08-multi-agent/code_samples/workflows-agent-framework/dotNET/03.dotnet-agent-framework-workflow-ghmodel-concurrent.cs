@@ -14,7 +14,6 @@ using Microsoft.Extensions.AI;
 using Microsoft.Agents.AI;
 using Microsoft.Agents.AI.Workflows;
 using DotNetEnv;
-using System.Text;
 
 // Load environment variables from .env file
 Env.Load("../../../.env");
@@ -97,6 +96,7 @@ public class ConcurrentStartExecutor() : Executor<string>("ConcurrentStartExecut
 public class ConcurrentAggregationExecutor() : Executor<ChatMessage>("ConcurrentAggregationExecutor")
 {
     private readonly List<ChatMessage> _messages = [];
+    private readonly object _lock = new();
 
     /// <summary>
     /// Handles incoming messages from the agents and aggregates their responses.
@@ -105,22 +105,23 @@ public class ConcurrentAggregationExecutor() : Executor<ChatMessage>("Concurrent
     /// <param name="context">Workflow context for accessing workflow services and adding events</param>
     /// <returns>A task representing the asynchronous operation</returns>
 
-    public override ValueTask HandleAsync(ChatMessage message, IWorkflowContext context, CancellationToken cancellationToken = default)
+    public override async ValueTask HandleAsync(ChatMessage message, IWorkflowContext context, CancellationToken cancellationToken = default)
     {
-        this._messages.Add(message);
-        return ValueTask.CompletedTask;
-    }
+        string? formattedMessages = null;
 
-
-    protected override ValueTask OnMessageDeliveryFinishedAsync(IWorkflowContext context, CancellationToken cancellationToken = default)
-    {
-        StringBuilder resultBuilder = new();
-        foreach (ChatMessage m in this._messages)
+        lock (this._lock)
         {
-            var formattedMessages = string.Join(Environment.NewLine, this._messages.Select(m => $"{m.AuthorName}: {m.Text}"));
-            return context.YieldOutputAsync(formattedMessages);
+            this._messages.Add(message);
+
+            if (this._messages.Count == 2)
+            {
+                formattedMessages = string.Join(Environment.NewLine, this._messages.Select(m => $"{m.AuthorName}: {m.Text}"));
+            }
         }
 
-        return ValueTask.CompletedTask;
+        if (formattedMessages is not null)
+        {
+            await context.YieldOutputAsync(formattedMessages);
+        }
     }
 }
