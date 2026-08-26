@@ -7,7 +7,7 @@
 
 ここが初めてなら、シンプルに始めましょう：
 
-1. [Course Setup](./00-course-setup/README.md) を読みます。
+1. [コース設定](./00-course-setup/README.md) を読みます。
 2. レッスン01～06を順番に完了します。
 3. 学びながら、一つの小さなデモアイデアを心に留めておきます。
 4. 各レッスンの後で「これまでできなかったことが、今エージェントは何ができる
@@ -61,7 +61,7 @@
 レッスンを進める中で、いくつかのプロバイダーオプションがあります：
 
 - **Microsoft Foundry / Azure OpenAI (Responses API)** — レッスン全体で使われる主要ルート。`az login`でキー不要のEntra ID認証が可能です。
-- **Foundry Local** — OpenAI互換APIを通じてデバイス上で完全にモデルを実行（クラウド不要、APIキー不要）。オフラインやコストなし実験に最適。[Course Setup](./00-course-setup/README.md)を参照。
+- **Foundry Local** — OpenAI互換APIを通じてデバイス上で完全にモデルを実行（クラウド不要、APIキー不要）。オフラインやコストなし実験に最適。[コース設定](./00-course-setup/README.md)を参照。
 - **MiniMax** — 大きなコンテキストモデルが使えるOpenAI互換プロバイダーで、代替として利用可能。
 
 > **注意：** GitHub Modelsは廃止予定（2026年7月引退）でResponses APIをサポートしていません。サンプルはAzure OpenAI / Microsoft Foundryへ更新されています。
