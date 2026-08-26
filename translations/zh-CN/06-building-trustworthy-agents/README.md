@@ -1,44 +1,44 @@
-[![可信的AI代理](../../../translated_images/zh-CN/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
+[![可信赖的 AI 代理](../../../translated_images/zh-CN/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
 
 > _(点击上方图片观看本课视频)_
 
-# 构建可信的AI代理
+# 构建可信赖的 AI 代理
 
 ## 介绍
 
 本课将涵盖：
 
-- 如何构建和部署安全且高效的AI代理
-- 开发AI代理时的重要安全考量
-- 如何在开发AI代理时维护数据和用户隐私
+- 如何构建和部署安全有效的 AI 代理
+- 开发 AI 代理时的重要安全考虑
+- 开发 AI 代理时如何维护数据和用户隐私
 
 ## 学习目标
 
-完成本课后，您将能够：
+完成本课后，您将了解如何：
 
-- 识别并减轻创建AI代理时的风险
-- 实施安全措施，确保数据和访问得到妥善管理
-- 创建能够维护数据隐私并提供高质量用户体验的AI代理
+- 识别并减轻创建 AI 代理时的风险
+- 实施安全措施以确保数据和访问权限得到适当管理
+- 创建维护数据隐私并提供优质用户体验的 AI 代理
 
-## 安全性
+## 安全
 
-首先，让我们了解如何构建安全的代理应用程序。安全性意味着AI代理能够按设计运行。作为代理应用程序的开发者，我们有方法和工具来最大化安全性：
+让我们先看看如何构建安全的代理应用。安全意味着 AI 代理按照设计执行。作为代理应用的构建者，我们有方法和工具来最大化安全性：
 
-### 构建系统消息框架
+### 建立系统消息框架
 
-如果您曾使用大型语言模型（LLMs）构建AI应用程序，您会知道设计一个强大的系统提示或系统消息的重要性。这些提示设定了元规则、指令和指南，规定了LLM如何与用户和数据交互。
+如果您曾使用大型语言模型（LLM）构建 AI 应用，您会明白设计强健的系统提示或系统消息的重要性。这些提示确定了元规则、指令和指南，指导 LLM 如何与用户和数据交互。
 
-对于AI代理来说，系统提示更为重要，因为AI代理需要非常具体的指令来完成我们为其设计的任务。
+对于 AI 代理来说，系统提示更为重要，因为 AI 代理需要非常具体的指令来完成我们为其设计的任务。
 
-为了创建可扩展的系统提示，我们可以使用一个系统消息框架来为应用程序中的一个或多个代理构建提示：
+为了创建可扩展的系统提示，我们可以使用系统消息框架来构建应用中的一个或多个代理：
 
-![构建系统消息框架](../../../translated_images/zh-CN/system-message-framework.3a97368c92d11d68.webp)
+![建立系统消息框架](../../../translated_images/zh-CN/system-message-framework.3a97368c92d11d68.webp)
 
 #### 第一步：创建元系统消息
 
-元提示将被LLM用来生成我们创建的代理的系统提示。我们将其设计为一个模板，以便在需要时高效创建多个代理。
+元提示将由 LLM 用来生成我们所创建代理的系统提示。我们将其设计为模板，以便能高效地创建多个代理（如果需要）。
 
-以下是我们提供给LLM的元系统消息示例：
+以下是我们给 LLM 的一个元系统消息示例：
 
 ```plaintext
 You are an expert at creating AI agent assistants. 
@@ -49,7 +49,7 @@ To create the system prompt, be descriptive as possible and provide a structure 
 
 #### 第二步：创建基础提示
 
-下一步是创建一个基础提示来描述AI代理。您应包括代理的角色、代理将完成的任务以及代理的其他职责。
+下一步是创建一个基础提示来描述 AI 代理。您应包括代理的角色、代理将完成的任务，以及代理的其他职责。
 
 以下是一个示例：
 
@@ -57,11 +57,11 @@ To create the system prompt, be descriptive as possible and provide a structure 
 You are a travel agent for Contoso Travel that is great at booking flights for customers. To help customers you can perform the following tasks: lookup available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
 ```
 
-#### 第三步：向LLM提供基础系统消息
+#### 第三步：向 LLM 提供基础系统消息
 
-现在，我们可以通过将元系统消息作为系统消息以及我们的基础系统消息提供给LLM来优化此系统消息。
+现在我们可以通过提供元系统消息作为系统消息，并结合基础系统消息来优化该系统消息。
 
-这将生成一个更适合指导AI代理的系统消息：
+这样会生成一个更适合指导 AI 代理的系统消息：
 
 ```markdown
 **Company Name:** Contoso Travel  
@@ -113,88 +113,100 @@ This AI assistant is designed to streamline the flight booking process for custo
 
 ```
 
-#### 第四步：迭代和改进
+#### 第四步：迭代与改进
 
-此系统消息框架的价值在于能够更轻松地为多个代理扩展创建系统消息，并随着时间的推移改进您的系统消息。很少有系统消息能够在第一次就完全适用于您的用例。通过更改基础系统消息并运行系统，您可以进行小幅调整和改进，从而比较和评估结果。
+该系统消息框架的价值在于可以更容易地扩展多个代理的系统消息创建，并随着时间推移改进您的系统消息。很少有系统消息会第一次就完全符合用例需求。通过更改基础系统消息并运行系统来进行小幅调整和改进，可让您对比和评估效果。
 
 ## 理解威胁
 
-为了构建可信的AI代理，理解并减轻对AI代理的风险和威胁至关重要。让我们来看一些针对AI代理的不同威胁，以及如何更好地规划和应对这些威胁。
+要构建可信赖的 AI 代理，理解并减轻风险和威胁至关重要。下面仅展示 AI 代理面临的一些不同威胁，以及您如何更好地规划和准备应对它们。
 
 ![理解威胁](../../../translated_images/zh-CN/understanding-threats.89edeada8a97fc0f.webp)
 
 ### 任务和指令
 
-**描述：** 攻击者试图通过提示或操控输入来更改AI代理的指令或目标。
+**描述：** 攻击者试图通过提示或操纵输入改变 AI 代理的指令或目标。
 
-**缓解措施：** 执行验证检查和输入过滤器，以在AI代理处理之前检测潜在危险的提示。由于这些攻击通常需要与代理频繁交互，限制对话轮次也是防止此类攻击的另一种方法。
+**缓解措施：** 执行验证检查和输入过滤，检测潜在危险提示，防止其被 AI 代理处理。由于此类攻击通常需要多次与代理交互，限制对话轮数也是防止此类攻击的一个方法。
 
 ### 访问关键系统
 
-**描述：** 如果AI代理可以访问存储敏感数据的系统和服务，攻击者可能会破坏代理与这些服务之间的通信。这些可能是直接攻击，也可能是通过代理间接获取这些系统信息的尝试。
+**描述：** 如果 AI 代理有权访问存储敏感数据的系统和服务，攻击者可以破坏代理与这些服务之间的通信。攻击可以是直接的，也可以是通过代理间接获得这些系统信息的尝试。
 
-**缓解措施：** AI代理应仅在必要时访问系统，以防止此类攻击。代理与系统之间的通信也应是安全的。实施身份验证和访问控制是保护此类信息的另一种方法。
+**缓解措施：** AI 代理应基于“最小权限”原则访问系统，以防范这类攻击。代理与系统间的通信也应当安全，实施身份验证和访问控制是保护信息的另一种方法。
 
 ### 资源和服务过载
 
-**描述：** AI代理可以访问不同的工具和服务来完成任务。攻击者可能利用这一能力，通过AI代理发送大量请求来攻击这些服务，可能导致系统故障或高昂的成本。
+**描述：** AI 代理可以访问不同工具和服务来完成任务。攻击者可能利用此能力，通过代理向这些服务发送大量请求，导致系统故障或高昂成本。
 
-**缓解措施：** 实施策略限制AI代理对服务的请求数量。限制与AI代理的对话轮次和请求数量也是防止此类攻击的另一种方法。
+**缓解措施：** 实施政策限制 AI 代理对某服务的请求次数。限制对话轮数和代理请求数也是防范此类攻击的手段。
 
 ### 知识库投毒
 
-**描述：** 此类攻击并不直接针对AI代理，而是针对AI代理将使用的知识库和其他服务。这可能涉及破坏AI代理将用于完成任务的数据或信息，从而导致对用户的偏见或意外响应。
+**描述：** 此类攻击并不直接针对 AI 代理，而是针对其用以完成任务的知识库和其他服务。攻击可能涉及篡改数据或信息，导致 AI 代理对用户给出有偏见或非预期的回答。
 
-**缓解措施：** 定期验证AI代理将在其工作流程中使用的数据。确保对这些数据的访问是安全的，并且只有可信人员才能更改，以避免此类攻击。
+**缓解措施：** 定期验证 AI 代理工作流中使用的数据。确保访问数据的安全性，仅允许可信人员进行更改，以防止此类攻击。
 
 ### 连锁错误
 
-**描述：** AI代理访问各种工具和服务来完成任务。攻击者引发的错误可能导致与AI代理连接的其他系统故障，使攻击范围扩大并更难排查。
+**描述：** AI 代理访问各种工具和服务以完成任务。攻击者引发的错误可能导致代理连接的其他系统故障，使攻击范围更广且难以排查。
 
-**缓解措施：** 避免此类问题的一种方法是让AI代理在受限环境中运行，例如在Docker容器中执行任务，以防止直接的系统攻击。创建备用机制和重试逻辑，当某些系统返回错误时，可以防止更大的系统故障。
+**缓解措施：** 一种避免方法是让 AI 代理在受限环境中运行，例如在 Docker 容器内执行任务，防止直接系统攻击。创建回退机制及错误重试逻辑，当某些系统返回错误时也可防止更大系统故障。
 
-## 人类参与
+## 人在回路中
 
-另一种构建可信AI代理系统的有效方法是引入人类参与。这种方式创建了一个流程，用户可以在代理运行期间向其提供反馈。用户实际上充当了多代理系统中的代理，通过批准或终止运行过程来参与。
+另一构建可信赖 AI 代理系统的有效方法是采用“人在回路中”。这营造了一个流程，让用户在运行过程中向代理提供反馈。用户实质上充当多代理系统中的代理，提供批准或终止正在运行的过程。
 
-![人类参与](../../../translated_images/zh-CN/human-in-the-loop.5f0068a678f62f4f.webp)
+![人在回路中](../../../translated_images/zh-CN/human-in-the-loop.5f0068a678f62f4f.webp)
 
-以下是一个使用AutoGen实现此概念的代码片段：
+下面是使用 Microsoft Agent Framework 实现该概念的代码片段：
 
 ```python
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the agents.
-model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
-assistant = AssistantAgent("assistant", model_client=model_client)
-user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Use input() to get user input from console.
+# 使用人工审核创建提供者
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
 
-# Create the termination condition which will end the conversation when the user says "APPROVE".
-termination = TextMentionTermination("APPROVE")
+# 创建带有人类审核步骤的代理
+response = provider.create_response(
+    input="Write a 4-line poem about the ocean.",
+    instructions="You are a helpful assistant. Ask for user approval before finalizing.",
+)
 
-# Create the team.
-team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
-
-# Run the conversation and stream to the console.
-stream = team.run_stream(task="Write a 4-line poem about the ocean.")
-# Use asyncio.run(...) when running in a script.
-await Console(stream)
-
+# 用户可以审查并批准响应
+print(response.output_text)
+user_input = input("Do you approve? (APPROVE/REJECT): ")
+if user_input == "APPROVE":
+    print("Response approved.")
+else:
+    print("Response rejected. Revising...")
 ```
 
-## 总结
+## 结论
 
-构建可信的AI代理需要精心设计、强大的安全措施和持续的迭代。通过实施结构化的元提示系统、理解潜在威胁并应用缓解策略，开发者可以创建既安全又高效的AI代理。此外，结合人类参与的方法可以确保AI代理始终与用户需求保持一致，同时将风险降到最低。随着AI的不断发展，保持对安全、隐私和伦理问题的积极态度将是建立AI驱动系统信任和可靠性的关键。
+构建可信赖的 AI 代理需要精心设计、强有力的安全措施以及持续迭代。通过实施结构化的元提示系统、理解潜在威胁并采取缓解策略，开发者可以创建既安全又有效的 AI 代理。此外，融入“人在回路中”的方法确保 AI 代理与用户需求保持一致，同时最大限度降低风险。随着 AI 不断发展，保持对安全、隐私和伦理问题的前瞻性关注，将是培养 AI 驱动系统信任与可靠性的关键。
 
-### 对构建可信AI代理有更多疑问？
+## 代码示例
 
-加入[Azure AI Foundry Discord](https://aka.ms/ai-agents/discord)，与其他学习者交流，参加答疑时间并获取您的AI代理相关问题的解答。
+- [`code_samples/06-system-message-framework.ipynb`](code_samples/06-system-message-framework.ipynb)：元提示系统消息框架的逐步演示。
+- [`code_samples/06-human-in-the-loop.ipynb`](code_samples/06-human-in-the-loop.ipynb)：可信赖代理的预操作审批门、风险分层和审计日志。
 
-## 其他资源
+### 对构建可信赖 AI 代理有更多疑问？
 
-- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">负责任AI概述</a>  
-- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">生成式AI模型和AI应用的评估</a>  
-- <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">安全系统消息</a>  
-- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">风险评估模板</a>  
+加入 [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) 与其他学习者交流，参加办公时间，获取您的 AI 代理问题解答。
+
+## 附加资源
+
+- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">负责任的人工智能概述</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">生成式 AI 模型及 AI 应用评估</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">安全系统消息</a>
+- <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">风险评估模板</a>
 
 ## 上一课
 
@@ -206,5 +218,7 @@ await Console(stream)
 
 ---
 
-**免责声明**：  
-本文档使用AI翻译服务[Co-op Translator](https://github.com/Azure/co-op-translator)进行翻译。尽管我们努力确保翻译的准确性，但请注意，自动翻译可能包含错误或不准确之处。原始语言的文档应被视为权威来源。对于关键信息，建议使用专业人工翻译。我们对因使用此翻译而产生的任何误解或误读不承担责任。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免责声明**：
+本文件由 AI 翻译服务 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻译完成。尽管我们力求准确，但请注意，自动翻译可能包含错误或不准确之处。原始语言版文件应视为权威来源。对于重要信息，建议使用专业人工翻译。我们对因使用本翻译而产生的任何误解或误释不承担责任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -2,161 +2,187 @@
 
 [![Bağlam Mühendisliği](../../../translated_images/tr/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
 
-> _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
+> _(Bu dersin videosunu izlemek için yukarıdaki resme tıklayın)_
 
-Bir AI ajanı geliştirdiğiniz uygulamanın karmaşıklığını anlamak, güvenilir bir ajan oluşturmak için önemlidir. AI ajanlarının, yalnızca istem mühendisliğinin ötesinde karmaşık ihtiyaçları karşılamak için bilgiyi etkili bir şekilde yönetmesi gerekir.
+Bir yapay zeka ajanı için oluşturduğunuz uygulamanın karmaşıklığını anlamak, güvenilir bir ajanın yapılması açısından önemlidir. İpuçları mühendisliğinin ötesinde karmaşık ihtiyaçları karşılamak için bilgiyi etkili bir şekilde yöneten AI Ajanları inşa etmemiz gerekiyor.
 
-Bu derste, bağlam mühendisliğinin ne olduğunu ve AI ajanları oluşturmadaki rolünü inceleyeceğiz.
+Bu derste, bağlam mühendisliği nedir ve AI ajanları oluşturmadaki rolü üzerine bakacağız.
 
 ## Giriş
 
-Bu derste şunları ele alacağız:
+Bu ders şunları kapsayacak:
 
-• **Bağlam Mühendisliği nedir** ve neden istem mühendisliğinden farklıdır.
+• **Bağlam Mühendisliği nedir** ve neden ipucu mühendisliğinden farklıdır.
 
-• **Etkili Bağlam Mühendisliği için stratejiler**, bağlamı nasıl yazacağımız, seçeceğimiz, sıkıştıracağımız ve izole edeceğimiz dahil.
+• **Etkili Bağlam Mühendisliği için stratejiler**, bilgi yazma, seçme, sıkıştırma ve izole etme dahil.
 
-• **Yaygın Bağlam Hataları** ve bunların AI ajanınızı nasıl raydan çıkarabileceği ile bunları düzeltme yolları.
+• AI ajanınızın raydan çıkmasına neden olabilecek **Yaygın Bağlam Hataları** ve bunların nasıl düzeltileceği.
 
 ## Öğrenme Hedefleri
 
-Bu dersi tamamladıktan sonra şunları anlayacaksınız:
+Bu dersi tamamladıktan sonra şunları bileceksiniz:
 
-• **Bağlam mühendisliğini tanımlayın** ve istem mühendisliğinden nasıl farklılaştığını açıklayın.
+• **Bağlam mühendisliğini tanımlamak** ve bunu ipucu mühendisliğinden ayırt etmek.
 
-• **Büyük Dil Modeli (LLM) uygulamalarında bağlamın temel bileşenlerini belirleyin.**
+• Büyük Dil Modeli (LLM) uygulamalarında bağlamın temel bileşenlerini **belirlemek**.
 
-• **Bağlam yazma, seçme, sıkıştırma ve izole etme stratejilerini uygulayın** ve ajan performansını artırın.
+• Ajan performansını artırmak için bağlamı yazma, seçme, sıkıştırma ve izole etme stratejilerini **uygulamak**.
 
-• **Bağlam zehirlenmesi, dikkat dağınıklığı, kafa karışıklığı ve çakışma gibi yaygın bağlam hatalarını tanıyın** ve bunları önlemek için teknikler geliştirin.
+• Zehirlenme, dikkat dağınıklığı, karışıklık ve çatışma gibi **yaygın bağlam hatalarını tanımak** ve hafifletme tekniklerini uygulamak.
 
 ## Bağlam Mühendisliği Nedir?
 
-AI ajanları için bağlam, bir AI ajanının belirli eylemleri planlamasını yönlendiren unsurdur. Bağlam mühendisliği, AI ajanının bir görevin bir sonraki adımını tamamlamak için doğru bilgiye sahip olmasını sağlamaya yönelik bir uygulamadır. Bağlam penceresi boyut olarak sınırlıdır, bu nedenle ajan geliştiricileri olarak bağlam penceresine bilgi ekleme, çıkarma ve sıkıştırma süreçlerini yönetmek için sistemler ve süreçler geliştirmemiz gerekir.
+AI Ajanları için bağlam, bir yapay zekâ ajanın belirli eylemleri planlamasını tetikleyen şeydir. Bağlam Mühendisliği, Yapay Zeka Ajanının görevde bir sonraki adımı tamamlamak için doğru bilgiye sahip olmasını sağlamaktır. Bağlam penceresi sınırlı büyüklüktedir, bu nedenle ajan geliştiricileri olarak bağlam penceresine eklenen, kaldırılan ve yoğunlaştırılan bilgiyi yönetmek için sistemler ve süreçler inşa etmemiz gerekmektedir.
 
-### İstem Mühendisliği ve Bağlam Mühendisliği
+### İpucu Mühendisliği ve Bağlam Mühendisliği Arasındaki Fark
 
-İstem mühendisliği, AI ajanlarını bir dizi kural ile etkili bir şekilde yönlendirmek için sabit bir talimat setine odaklanır. Bağlam mühendisliği ise, AI ajanının zaman içinde ihtiyaç duyduğu dinamik bir bilgi setini, başlangıç istemi de dahil olmak üzere, nasıl yöneteceğine odaklanır. Bağlam mühendisliğinin temel fikri, bu süreci tekrarlanabilir ve güvenilir hale getirmektir.
+İpucu mühendisliği, yapay zeka ajanlarını kurallar setiyle etkili şekilde yönlendirmek için tek bir statik talimat setine odaklanır. Bağlam mühendisliği ise ajanların zaman içinde neye ihtiyaç duyduğunu garanti altına almak için dinamik bilgi setini nasıl yöneteceğidir. Bağlam mühendisliğinin ana fikri bu süreci tekrarlanabilir ve güvenilir hale getirmektir.
 
 ### Bağlam Türleri
 
 [![Bağlam Türleri](../../../translated_images/tr/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
 
-Bağlamın tek bir şey olmadığını unutmamak önemlidir. AI ajanının ihtiyaç duyduğu bilgi, çeşitli kaynaklardan gelebilir ve bu kaynaklara erişimi sağlamak bizim sorumluluğumuzdadır:
+Bağlamın sadece tek bir şey olmadığını hatırlamak önemlidir. Yapay Zeka Ajanının ihtiyaç duyduğu bilgi farklı kaynaklardan gelebilir ve bunlara erişimini sağlamamız gerekir:
 
-AI ajanının yönetmesi gereken bağlam türleri şunları içerebilir:
+Bir AI ajanının yönetmesi gereken bağlam türleri şunları içerir:
 
-• **Talimatlar:** Bunlar, ajanın "kuralları" gibidir – istemler, sistem mesajları, birkaç örnekle gösterimler (AI'ya bir şeyi nasıl yapacağını gösterme) ve kullanabileceği araçların tanımları. Bu, istem mühendisliğinin bağlam mühendisliğiyle birleştiği yerdir.
+• **Talimatlar:** Bu, ajanın "kuralları" gibidir – ipuçları, sistem mesajları, az örnekli örnekler (yapay zekaya bir şeyin nasıl yapılacağını gösterir) ve kullanabileceği araçların açıklamaları. İpucu mühendisliğinin odağı burada bağlam mühendisliğiyle birleşir.
 
-• **Bilgi:** Veritabanlarından alınan gerçekler, bilgiler veya ajanın biriktirdiği uzun vadeli anılar. Bu, bir ajan farklı bilgi depolarına ve veritabanlarına erişim gerektiriyorsa, Bilgi Geri Çağırma Destekli Üretim (RAG) sistemini entegre etmeyi içerir.
+• **Bilgi:** Gerçekler, veri tabanlarından alınan bilgiler veya ajan tarafından biriktirilmiş uzun süreli anılar. Bir ajan farklı bilgi depolarına ve veri tabanlarına erişim ihtiyacı varsa, Birleştirilmiş Geri Getirmeli Üretim (RAG) sistemi bu noktada entegre edilir.
 
-• **Araçlar:** Bunlar, ajanın çağırabileceği harici işlevlerin, API'lerin ve MCP Sunucularının tanımları ve bunları kullanarak elde ettiği geri bildirimlerdir (sonuçlar).
+• **Araçlar:** Ajanın çağırabileceği dış fonksiyonların, API'ların ve MCP Sunucularının tanımları, ayrıca bunları kullanmaktan elde ettiği geri bildirimler (sonuçlar).
 
-• **Konuşma Geçmişi:** Kullanıcıyla devam eden diyalog. Zamanla bu konuşmalar uzar ve daha karmaşık hale gelir, bu da bağlam penceresinde yer kaplar.
+• **Konuşma Geçmişi:** Kullanıcıyla devam eden diyalog. Zamanla bu konuşmalar uzar ve karmaşıklaşır, böylece bağlam penceresinde yer kaplar.
 
-• **Kullanıcı Tercihleri:** Zamanla bir kullanıcının beğenileri veya beğenmedikleri hakkında öğrenilen bilgiler. Bu bilgiler, kullanıcıya yardımcı olmak için önemli kararlar alırken kullanılabilir.
+• **Kullanıcı Tercihleri:** Bir kullanıcının zaman içinde edindiği beğeni veya hoşlanmama bilgisi. Bunlar saklanabilir ve önemli kararlar alınırken kullanılabilir.
 
-## Etkili Bağlam Mühendisliği Stratejileri
+## Etkili Bağlam Mühendisliği İçin Stratejiler
 
 ### Planlama Stratejileri
 
 [![Bağlam Mühendisliği En İyi Uygulamaları](../../../translated_images/tr/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
 
-İyi bağlam mühendisliği, iyi bir planlamayla başlar. İşte bağlam mühendisliği kavramını nasıl uygulayacağınızı düşünmeye başlamanıza yardımcı olacak bir yaklaşım:
+İyi bağlam mühendisliği iyi planlamayla başlar. İşte bağlam mühendisliği kavramını nasıl uygulamaya başlayacağınıza yardımcı olacak bir yaklaşım:
 
-1. **Net Sonuçlar Tanımlayın** - AI ajanlarına atanacak görevlerin sonuçları açıkça tanımlanmalıdır. Şu soruyu yanıtlayın: "AI ajanı görevini tamamladığında dünya nasıl görünecek?" Başka bir deyişle, kullanıcı AI ajanıyla etkileşimde bulunduktan sonra hangi değişiklik, bilgi veya yanıtı almalıdır?
-
-2. **Bağlamı Haritalayın** - AI ajanının sonuçlarını tanımladıktan sonra, "AI ajanının bu görevi tamamlamak için hangi bilgilere ihtiyacı var?" sorusunu yanıtlamanız gerekir. Bu şekilde, bu bilginin nerede bulunabileceğini haritalamaya başlayabilirsiniz.
-
-3. **Bağlam Boru Hatları Oluşturun** - Artık bilginin nerede olduğunu bildiğinize göre, "Ajan bu bilgiyi nasıl alacak?" sorusunu yanıtlamanız gerekir. Bu, RAG, MCP sunucularının kullanımı ve diğer araçlar dahil olmak üzere çeşitli yollarla yapılabilir.
+1. **Net Sonuçları Tanımlayın** - Yapay Zeka Ajanlarına atanacak görevlerin sonuçları net biçimde tanımlanmalıdır. "Yapay Zeka Ajanı işini bitirdiğinde dünya nasıl görünecek?" sorusunu yanıtlayın. Başka bir deyişle, kullanıcı yapay zeka ajanıyla etkileşim sonrası ne değişmeli, hangi bilgi ya da yanıtı almalı.
+2. **Bağlamı Haritalayın** - Yapay Zeka Ajanının sonuçlarını tanımladıktan sonra "Bu görevi tamamlamak için yapay zeka ajanının hangi bilgiye ihtiyacı var?" sorusunu yanıtlamak gerekir. Böylece bu bilginin nerede bulunabileceğini haritalamaya başlayabilirsiniz.
+3. **Bağlam Boru Hatları Oluşturun** - Bilginin nerede olduğunu bildiğinize göre, "Ajan bu bilgiyi nasıl alacak?" sorusunu yanıtlamanız gerekir. Bu RAG, MCP sunucularının ve diğer araçların kullanımı gibi çeşitli yollarla yapılabilir.
 
 ### Pratik Stratejiler
 
-Planlama önemlidir, ancak bilgi ajanınızın bağlam penceresine akmaya başladığında, bunu yönetmek için pratik stratejilere ihtiyacımız vardır:
+Planlama önemli ama bilgi ajanımızın bağlam penceresine akmaya başlayınca, bunu yönetmek için pratik stratejilere ihtiyacımız var:
 
-#### Bağlamı Yönetme
+#### Bağlam Yönetimi
 
-Bazı bilgiler bağlam penceresine otomatik olarak eklenirken, bağlam mühendisliği bu bilgiyi daha aktif bir şekilde yönetmeyi içerir. Bu, birkaç stratejiyle yapılabilir:
+Bazı bilgiler bağlam penceresine otomatik eklenecekken, bağlam mühendisliği bu bilgiyi daha aktif şekilde yönetmekle ilgilidir, ki bu birkaç strateji ile yapılabilir:
 
-1. **Ajan Not Defteri**  
-   Bu, bir AI ajanının tek bir oturum sırasında mevcut görevler ve kullanıcı etkileşimleri hakkında ilgili bilgileri not almasını sağlar. Bu, bağlam penceresi dışında, bir dosyada veya çalışma zamanı nesnesinde bulunmalı ve gerekirse bu oturum sırasında geri çağrılabilir.
+ 1. **Ajan Not Defteri**
+ Bu, AI Ajanının tek bir oturumda mevcut görevler ve kullanıcı etkileşimleriyle ilgili önemli bilgileri not almasını sağlar. Bu, bağlam penceresi dışında ajan tarafından gerektiğinde erişilebilen bir dosya veya çalışma zamanı nesnesinde bulunmalıdır.
 
-2. **Anılar**  
-   Not defterleri, tek bir oturumun bağlam penceresi dışındaki bilgileri yönetmek için iyidir. Anılar, ajanların birden fazla oturum boyunca ilgili bilgileri saklamasına ve geri çağırmasına olanak tanır. Bu, özetleri, kullanıcı tercihlerini ve gelecekteki iyileştirmeler için geri bildirimleri içerebilir.
+ 2. **Anılar**
+ Not defterleri tek oturumun bağlam penceresi dışındaki bilgiyi yönetmek için iyiyken, anılar ajanların birden fazla oturum arası ilgili bilgiyi saklayıp geri çağırmasını sağlar. Bu özetler, kullanıcı tercihleri ve ileride yapılacak geliştirmeler için geri bildirimleri içerebilir.
 
-3. **Bağlamı Sıkıştırma**  
-   Bağlam penceresi büyüyüp sınırına yaklaştığında, özetleme ve kırpma gibi teknikler kullanılabilir. Bu, yalnızca en alakalı bilgilerin tutulmasını veya eski mesajların kaldırılmasını içerir.
+ 3. **Bağlamı Sıkıştırma**
+  Bağlam penceresi büyüyüp sınırına yaklaşınca özetleme ve budama gibi teknikler kullanılır. Bu yöntem, sadece en alakalı bilgilerin tutulması veya eski mesajların kaldırılması anlamına gelir.
+  
+ 4. **Çoklu Ajan Sistemleri**
+  Çoklu ajan sistemleri geliştirmek, her ajanın kendi bağlam penceresine sahip olması nedeniyle bağlam mühendisliği türüdür. Bu bağlamın nasıl paylaşılıp farklı ajanlara aktarıldığı, bu sistemler inşa edilirken planlanması gereken bir başka konudur.
+  
+ 5. **Sandbox Ortamları**
+  Bir ajanın kod çalıştırması veya bir belgede büyük miktarda bilgi işlemesi gerekiyorsa, sonuçları işlemek çok fazla token gerektirebilir. Bu tümünün bağlam penceresinde tutulması yerine, ajan kodu çalıştırabilen ve sadece sonuçları ve diğer ilgili bilgileri okuyabilen bir sandbox ortamı kullanabilir.
+  
+ 6. **Çalışma Zamanı Durum Nesneleri**
+   Bu, Ajanın belirli bilgiye erişmesi gereken durumları yönetmek için bilgi konteynerleri oluşturularak yapılır. Karmaşık bir görevde, her alt görevin sonuçlarını adım adım depolayarak bağlamın sadece o belirli alt görevle bağlantılı kalmasını sağlar.
 
-4. **Çoklu Ajan Sistemleri**  
-   Çoklu ajan sistemi geliştirmek, bir bağlam mühendisliği biçimidir çünkü her ajanın kendi bağlam penceresi vardır. Bu bağlamın nasıl paylaşıldığı ve farklı ajanlara nasıl aktarıldığı, bu sistemleri oluştururken planlanması gereken başka bir şeydir.
+#### Bağlamı İnceleme
 
-5. **Korumalı Alan Ortamları**  
-   Bir ajan, bir kod çalıştırması veya bir belgede büyük miktarda bilgiyi işlemesi gerektiğinde, bu sonuçları işlemek için büyük miktarda token gerekebilir. Bunun yerine, tüm bunların bağlam penceresinde saklanması yerine, ajan bu kodu çalıştırabilen ve yalnızca sonuçları ve diğer ilgili bilgileri okuyabilen bir korumalı alan ortamı kullanabilir.
+Bu stratejilerden birini uyguladıktan sonra, sonraki model çağrısının gerçekte ne aldığını kontrol etmek faydalıdır. Yararlı bir hata ayıklama sorusu şudur:
 
-6. **Çalışma Zamanı Durum Nesneleri**  
-   Bu, ajanın belirli bilgilere erişmesi gerektiğinde bilgi kapsayıcıları oluşturarak yapılır. Karmaşık bir görev için, bu, ajanın her bir alt görev adımının sonuçlarını adım adım saklamasına olanak tanır ve bağlamın yalnızca o belirli alt göreve bağlı kalmasını sağlar.
+> Ajan çok fazla bağlam mı yükledi, yanlış bağlam mı aldı yoksa ihtiyaç duyduğu bağlamı mı kaçırdı?
+
+Bu soruyu yanıtlamak için ham ipuçlarını, araç çıktılarını veya bellek içeriklerini kaydetmeniz gerekmez. Üretimde, sayı, kimlik, karma ve politika etiketlerini yakalayan küçük bağlam inceleme kayıtlarını tercih edin:
+
+- **Seçim:** Kaç tane aday parça, araç veya belleğin değerlendirildiğini, kaçının seçildiğini ve diğerlerinin filtrelenmesine hangi kural veya skorun neden olduğunu takip edin.
+- **Sıkıştırma:** Kaynak aralığı veya iz kimliği, özet kimliği, sıkıştırma öncesi ve sonrası tahmini token sayısı ve ham içeriğin sonraki çağrıda dışlanıp dışlanmadığını kaydedin.
+- **İzolasyon:** Ayrı bir ajan, oturum veya sandbox'ta hangi alt görevin çalıştığını, dönen sınırlı özeti ve büyük araç çıktısının ana ajan bağlamının dışında kalıp kalmadığını not edin.
+- **Bellek ve RAG:** Tam geri getirilen metin yerine geri getirme belge kimliklerini, bellek kimliklerini, puanları, seçilen kimlikleri ve sansür durumlarını saklayın.
+- **Güvenlik ve gizlilik:** Hassas ipucu metni, araç argümanları, araç sonuçları veya kullanıcı belleği gövdeleri yerine karma, kimlik, token kovaları ve politika etiketlerini tercih edin.
+
+Amaç daha fazla bağlam tutmak değil. Amaç geliştiricinin hangi bağlam stratejisinin çalıştığını ve bunun sonraki model çağrısını amaçlandığı gibi değiştirip değiştirmediğini anlayabileceği kadar kanıt bırakmaktır.
 
 ### Bağlam Mühendisliği Örneği
 
-Diyelim ki bir AI ajanından **"Bana Paris'e bir gezi ayarla."** demesini istiyorsunuz.
+Diyelim ki bir AI ajanından **"Bana Paris'e bir gezi ayarla."** demek istiyoruz.
 
-• Sadece istem mühendisliği kullanan basit bir ajan şu şekilde yanıt verebilir: **"Tamam, Paris'e ne zaman gitmek istersiniz?"**. Bu, yalnızca kullanıcının sorduğu anda doğrudan soruyu işler.
+• Sadece ipucu mühendisliği kullanan basit bir ajan şöyle yanıt verebilir: **"Tamam, Paris'e ne zaman gitmek istersiniz?"**. O, yalnızca kullanıcının o anda sorduğu doğrudan soruyu işledi.
 
-• Bağlam mühendisliği stratejilerini kullanan bir ajan ise çok daha fazlasını yapar. Yanıt vermeden önce, sistemi şunları yapabilir:
+• Bu derste ele alınan bağlam mühendisliği stratejilerini kullanan bir ajan çok daha fazlasını yapardı. Yanıt vermeden önce sistem şu işlemleri yapabilir:
 
-  ◦ **Takviminizi kontrol eder** ve uygun tarihleri bulur (gerçek zamanlı veri alımı).  
-  ◦ **Geçmiş seyahat tercihlerinizi hatırlar** (uzun vadeli hafızadan) – tercih ettiğiniz havayolu, bütçe veya direkt uçuşları tercih edip etmediğiniz gibi.  
-  ◦ **Uygun araçları belirler** – uçuş ve otel rezervasyonu için kullanılabilecek araçlar.  
+  ◦ Gerçek zamanlı verileri alarak **takviminizi kontrol etmek**.
 
-- Ardından, örnek bir yanıt şu şekilde olabilir: "Merhaba [Adınız]! İlk hafta ekim ayında müsait olduğunuzu görüyorum. [Tercih Edilen Havayolu] ile [Bütçe] dahilinde direkt uçuşlar aramamı ister misiniz?" Bu daha zengin, bağlam farkındalığına sahip yanıt, bağlam mühendisliğinin gücünü gösterir.
+ ◦ **Geçmiş seyahat tercihlerinizi hatırlamak** (uzun dönem belleğinden), örneğin tercih ettiğiniz havayolu, bütçe veya direkt uçuş tercih edip etmediğiniz.
+
+ ◦ Uçuş ve otel rezervasyonu için **kullanılabilir araçları belirlemek**.
+
+- Sonra örnek yanıt şöyle olabilir: "Hey [Adınız]! Ekim'in ilk haftası boş görünüyorsunuz. Alıştığınız bütçe içinde [Tercih Edilen Havayolu] ile Paris'e direkt uçuşlara bakmamı ister misiniz?". Bu daha zengin ve bağlam farkındalığı olan yanıt, bağlam mühendisliğinin gücünü gösterir.
 
 ## Yaygın Bağlam Hataları
 
 ### Bağlam Zehirlenmesi
 
-**Nedir:** LLM tarafından üretilen yanlış bilgi (halüsinasyon) veya bir hata bağlama girip tekrar tekrar referans alındığında, ajanın imkansız hedefler peşinde koşmasına veya saçma stratejiler geliştirmesine neden olur.
+**Nedir:** Bir halüsinasyonun (LLM tarafından üretilen yanlış bilgi) veya hatanın bağlama girmesi ve tekrar tekrar referans alınması sonucunda ajanın imkansız hedefler peşinde koşması veya alakasız stratejiler geliştirmesi.
 
-**Ne Yapmalı:** **Bağlam doğrulama** ve **karantina** uygulayın. Bilgi uzun vadeli hafızaya eklenmeden önce doğrulanmalıdır. Potansiyel bir zehirlenme tespit edilirse, kötü bilginin yayılmasını önlemek için yeni bağlam dizileri başlatın.
+**Ne yapılmalı:** **Bağlam doğrulaması** ve **karantina** uygulayın. Bilgiyi uzun dönem belleğe eklemeden önce doğrulayın. Olası zehirlenme saptanırsa, kötü bilginin yayılmasını önlemek için yeni bağlam dizileri başlatın.
 
-**Seyahat Rezervasyonu Örneği:** Ajanınız, **küçük bir yerel havaalanından uzak bir uluslararası şehre direkt uçuş** olduğunu hayal eder (aslında böyle bir uçuş yoktur). Bu var olmayan uçuş detayı bağlama kaydedilir. Daha sonra ajan, bu imkansız rotaya bilet bulmaya çalışır ve sürekli hatalar yapar.
+**Seyahat Rezervasyonu Örneği:** Ajan, gerçekten uluslararası uçuş sunmayan küçük bir yerel havaalanından uzak bir uluslararası şehre **direkt uçuş** varmış gibi hatalı bilgi üretir. Bu var olmayan uçuş detayı bağlama kaydedilir. Sonra rezervasyon istediğinizde, bu imkansız rotanın biletlerini bulmak için ısrar eder ve hatalar tekrar eder.
 
-**Çözüm:** **Uçuş varlığını ve rotalarını gerçek zamanlı bir API ile doğrulayan bir adım uygulayın**. Doğrulama başarısız olursa, yanlış bilgi "karantinaya alınır" ve daha fazla kullanılmaz.
+**Çözüm:** Uçuş detayını ajan bağlamına eklemeden _önce_ gerçek zamanlı bir API ile **uçuşun varlığını ve rotaları doğrulayan** bir adım uygulayın. Doğrulama başarısız olursa, hatalı bilgi "karantinaya" alınır ve kullanılmaz.
 
 ### Bağlam Dikkat Dağınıklığı
 
-**Nedir:** Bağlam o kadar büyür ki model, eğitim sırasında öğrendiklerini kullanmak yerine biriken geçmişe çok fazla odaklanır ve tekrarlayan veya yararsız eylemler yapar. Modeller, bağlam penceresi dolmadan önce bile hata yapmaya başlayabilir.
+**Nedir:** Bağlam o kadar büyür ki model, eğitim sırasında öğrendiklerini kullanmak yerine biriken geçmişe fazla odaklanır ve tekrarlayan ya da yararsız eylemler yapar. Modeller bağlam penceresi dolmadan da hata yapmaya başlayabilir.
 
-**Ne Yapmalı:** **Bağlam özetleme** kullanın. Biriken bilgileri periyodik olarak daha kısa özetlere sıkıştırarak önemli ayrıntıları koruyun ve gereksiz geçmişi kaldırın. Bu, odağı "sıfırlamaya" yardımcı olur.
+**Ne yapılmalı:** **Bağlam özetlemesi** kullanılır. Biriken bilgileri periyodik olarak kısa özetlere sıkıştırın, önemli detayları tutup gereksiz geçmişi kaldırın. Bu odaklanmayı "sıfırlamaya" yardımcı olur.
 
-**Seyahat Rezervasyonu Örneği:** Uzun bir süre boyunca çeşitli hayalinizdeki seyahat destinasyonlarını tartıştınız, iki yıl önceki sırt çantalı seyahatinizin ayrıntılı bir anlatımı da dahil. Sonunda **"gelecek ay için ucuz bir uçuş bul"** dediğinizde, ajan eski, alakasız ayrıntılara takılır ve sırt çantalı ekipmanınız veya önceki güzergahlarınız hakkında sorular sormaya devam eder, mevcut isteğinizi ihmal eder.
+**Seyahat Rezervasyonu Örneği:** Uzun süre hayalinizdeki çeşitli seyahat yerlerini konuştunuz, iki yıl önceki sırt çantalı yolculuğunuzun ayrıntılarını detaylıca anlattınız. Sonunda **"gelecek ay için ucuz bir uçuş bul"** dediğinizde, ajan eski ve alakasız ayrıntılarla saplanır, sırt çantanızı veya önceki seyahat programlarını sorar, mevcut isteğinizi görmezden gelir.
 
-**Çözüm:** Belirli bir dönüş sayısından sonra veya bağlam çok büyüdüğünde, ajan **en son ve en alakalı konuşma bölümlerini özetlemeli** – mevcut seyahat tarihleriniz ve destinasyonunuza odaklanarak – ve bu yoğunlaştırılmış özeti bir sonraki LLM çağrısı için kullanmalı, daha az alakalı geçmiş sohbeti atmalıdır.
+**Çözüm:** Belirli sayıda dönüşten sonra veya bağlam çok büyüyünce, ajan en güncel ve alakalı sohbet bölümlerini – mevcut seyahat tarihleri ve hedefe odaklanarak – özetleyip bu sıkıştırılmış özeti sonraki LLM çağrısında kullanmalı, daha az ilgili geçmiş sohbeti atmalıdır.
 
-### Bağlam Kafa Karışıklığı
+### Bağlam Karışıklığı
 
-**Nedir:** Çok fazla kullanılabilir araç olduğunda gereksiz bağlam, modelin kötü yanıtlar üretmesine veya alakasız araçları çağırmasına neden olur. Daha küçük modeller buna özellikle yatkındır.
+**Nedir:** Gereksiz bağlam (genellikle çok sayıda mevcut araç nedeniyle) modelin kötü yanıtlar üretmesine veya alakasız araç çağırmasına neden olur. Daha küçük modeller özellikle bu duruma eğilimlidir.
 
-**Ne Yapmalı:** **Araç yükü yönetimi** uygulayın ve RAG tekniklerini kullanın. Araç açıklamalarını bir vektör veritabanında saklayın ve her görev için yalnızca en alakalı araçları seçin. Araştırmalar, araç seçimlerini 30'dan azıyla sınırlamanın etkili olduğunu göstermektedir.
+**Ne yapılmalı:** RAG teknikleri kullanarak **araç yüklenme yönetimi** uygulanmalıdır. Araç açıklamaları vektör veri tabanında saklanmalı ve her görev için sadece en alakalı araçlar seçilmelidir. Araştırmalar araç seçimlerinin 30’dan az tutulmasının faydalı olduğunu gösterir.
 
-**Seyahat Rezervasyonu Örneği:** Ajanınızın onlarca araca erişimi var: `uçuş_rezervasyonu`, `otel_rezervasyonu`, `araba_kiralama`, `turlar_bulma`, `döviz_çevirici`, `hava_durumu_tahmini`, `restoran_rezervasyonları` vb. Siz, **"Paris'te nasıl dolaşabilirim?"** diye soruyorsunuz. Araçların çokluğu nedeniyle ajan kafası karışır ve Paris içinde `uçuş_rezervasyonu` yapmaya çalışır veya toplu taşımayı tercih etmenize rağmen `araba_kiralama`yı önerir, çünkü araç açıklamaları örtüşebilir veya en iyisini ayırt edemeyebilir.
+**Seyahat Rezervasyonu Örneği:** Ajanın `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations` gibi onlarca arac erişimi var. Siz **"Paris içinde dolaşmanın en iyi yolu nedir?"** diye soruyorsunuz. Araç sayısının fazlalığı nedeniyle ajan karışır ve Paris içinde `book_flight` çağırmaya veya siz toplu taşıma tercih ettiğiniz halde `rent_car` çağırmaya çalışır çünkü araç açıklamaları örtüşebilir ya da en iyisini ayırt edemez.
 
-**Çözüm:** **Araç açıklamaları üzerinde RAG kullanın.** Paris'te dolaşma hakkında sorduğunuzda, sistem sorgunuza göre dinamik olarak yalnızca en alakalı araçları (`araba_kiralama` veya `toplu_taşıma_bilgisi` gibi) alır ve LLM'ye odaklanmış bir "araç yükü" sunar.
+**Çözüm:** Araç açıklamaları üzerinde **RAG kullanın**. Paris’te dolaşma sorusu sorulduğunda, sistem sorgunuza göre sadece `rent_car` veya `public_transport_info` gibi en alakalı araçları dinamik olarak getirerek LLM’e odaklanmış bir "yükleme" sunar.
 
-### Bağlam Çakışması
+### Bağlam Çatışması
 
-**Nedir:** Bağlam içinde çelişkili bilgiler olduğunda, bu tutarsız akıl yürütmeye veya kötü nihai yanıtlara yol açar. Bu genellikle bilgiler aşamalı olarak geldiğinde ve erken, yanlış varsayımlar bağlamda kaldığında olur.
+**Nedir:** Bağlam içinde çelişkili bilgiler olduğunda tutarsız muhakemeye veya kötü son yanıtlara yol açar. Genellikle bilgi aşamalı geldiğinde ve erken yanlış varsayımlar bağlamda kalmaya devam ettiğinde ortaya çıkar.
 
-**Ne Yapmalı:** **Bağlam budama** ve **dışa aktarma** kullanın. Budama, yeni ayrıntılar geldikçe eski veya çelişkili bilgilerin kaldırılmasını ifade eder. Dışa aktarma, modelin ana bağlamı karıştırmadan bilgiyi işlemesi için ayrı bir "not defteri" çalışma alanı sağlar.
+**Ne yapılmalı:** **Bağlam budama** ve **yük boşaltma** kullanın. Budama, yeni detaylar gelirken eski veya çelişkili bilgilerin kaldırılmasıdır. Yük boşaltma, modele bilgiyi ana bağlamı karıştırmadan işlemek için ayrı bir "not defteri" çalışma alanı sağlar.
 
-**Seyahat Rezervasyonu Örneği:** Başlangıçta ajana, **"Ekonomi sınıfında uçmak istiyorum."** dediniz. Daha sonra fikrinizi değiştirip, **"Aslında, bu seyahat için business class tercih edelim."** dediniz. Her iki talimat bağlamda kalırsa, ajan çelişkili arama sonuçları alabilir veya hangi tercihi önceliklendireceği konusunda kafası karışabilir.
 
-**Çözüm:** **Bağlam budama** uygulayın. Yeni bir talimat eski bir talimatla çeliştiğinde, eski talimat bağlamdan kaldırılır veya açıkça geçersiz kılınır. Alternatif olarak, ajan çelişkili tercihleri uzlaştırmak için bir **not defteri** kullanabilir ve yalnızca nihai, tutarlı talimatların eylemlerini yönlendirmesini sağlar.
+**Seyahat Rezervasyonu Örneği:** Başlangıçta temsilcinize, **"Ekonomi sınıfında uçmak istiyorum."** dersiniz. Konuşmanın ilerleyen kısmında fikrinizi değiştirip, **"Aslında, bu seyahat için business sınıfını tercih edelim."** dersiniz. Her iki talep de bağlamda kalırsa, temsilci çelişkili arama sonuçları alabilir veya hangi tercihe öncelik vereceği konusunda karışıklık yaşayabilir.
+
+**Çözüm:** **bağlam budama** uygulayın. Yeni bir talep eski bir talebe aykırı olduğunda, eski talep bağlamdan kaldırılır veya açıkça geçersiz kılınır. Alternatif olarak, temsilci karar vermeden önce çelişen tercihleri uzlaştırmak için bir **not defteri** kullanabilir, böylece yalnızca son ve tutarlı talep hareketlerini yönlendirir.
 
 ## Bağlam Mühendisliği Hakkında Daha Fazla Sorunuz mu Var?
 
-[Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) topluluğuna katılın, diğer öğrenenlerle tanışın, ofis saatlerine katılın ve AI ajanlarıyla ilgili sorularınıza yanıt bulun.
+Diğer öğrenenlerle tanışmak, ofis saatlerine katılmak ve AI Temsilcisi sorularınızı sormak için [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) topluluğuna katılın.
+## Önceki Ders
+
+[Agentic Protocols](../11-agentic-protocols/README.md)
+
+## Sonraki Ders
+
+[Memory for AI Agents](../13-agent-memory/README.md)
 
 ---
 
-**Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı bir yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel bir insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalar için sorumluluk kabul etmiyoruz.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,188 +1,190 @@
-## Nama Acara: Bina aplikasi berasaskan kod anda dengan Azure AI Agent Service (Tawaran EMEA/US)
+## Nama Acara: Bina aplikasi code-first anda dengan Microsoft Foundry Agent Service (tawaran EMEA/AS)
 
 ## Penerangan
 
-Azure AI Agent Service adalah gabungan perkhidmatan dan SDK yang memudahkan pembangunan penyelesaian AI yang kukuh. Dalam sesi ini, anda akan belajar cara membina agen AI berasaskan kod anda sendiri dengan Azure yang boleh menjawab soalan, melakukan analisis data, dan mengintegrasikan sumber data luaran. Anda juga akan meneroka seni bina yang lebih kompleks, termasuk beberapa agen yang bekerjasama.
+Microsoft Foundry Agent Service adalah gabungan lancar perkhidmatan dan SDK yang memudahkan pembangunan penyelesaian berkuasa AI yang robust. Dalam sesi ini, anda akan belajar bagaimana membina ejen AI code-first anda sendiri dengan Azure yang boleh menjawab soalan, melakukan analisis data, dan mengintegrasi sumber data luaran. Anda juga akan meneroka seni bina yang lebih kompleks, termasuk beberapa ejen yang bekerja bersama.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25325/>
 
 ---
 
-## Nama Acara: Transformasi Proses Perniagaan dengan AI Multi-Agen menggunakan Semantic Kernel
+## Nama Acara: Mengubah Proses Perniagaan dengan AI Multi-Ejen menggunakan Semantic Kernel
 
 ## Penerangan
 
-Temui kekuatan sistem AI multi-agen melalui demonstrasi langsung dan pembelajaran praktikal dengan corak seperti sembang kumpulan, refleksi, pemilih, dan swarm. Manfaatkan Kerangka Proses Semantic Kernel untuk mengautomasi dan meningkatkan skala proses perniagaan kritikal, daripada sokongan pelanggan hingga pengurusan projek menggunakan Python.
+Temui kuasa sistem AI multi-ejen melalui demonstrasi langsung dan pembelajaran praktikal dengan corak termasuk chat-kumpulan, refleksi, pemilih, dan swarm. Manfaatkan Semantic Kernel Process Framework untuk mengautomasikan dan menskala proses perniagaan penting, dari sokongan pelanggan hingga pengurusan projek menggunakan Python
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25313/>
 
 ---
 
-## Nama Acara: Membina Aplikasi Agen dengan AutoGen v0.4
+## Nama Acara: Membangun Aplikasi Agensi dengan AutoGen v0.4
 
 ## Penerangan
 
-Mulakan untuk membina agen dan pasukan multi-agen menggunakan AutoGen v0.4. Kami akan memberikan gambaran keseluruhan seni bina AutoGen v0.4 yang baru dan membimbing anda cara membina pasukan multi-agen dengan antara muka pengguna berasaskan web.
+Memulakan untuk membina ejen dan pasukan multi-ejen menggunakan AutoGen v0.4. Kami akan merangkumi gambaran keseluruhan seni bina baru AutoGen v0.4 dan membimbing anda bagaimana membina pasukan multi-ejen dengan antaramuka pengguna berasaskan web.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25327/>
 
 ---
 
-## Nama Acara: Prototip Agen AI dengan Model GitHub
+## Nama Acara: Prototip Ejen AI dengan Model GitHub
 
 ## Penerangan
 
-Terima kasih kepada Model GitHub, semua yang anda perlukan untuk membina Agen AI pertama anda adalah akaun GitHub! Model GitHub termasuk model yang kuat seperti OpenAI gpt-4o, DeepSeek-R1, Llama-3.1, dan banyak lagi, sedia untuk dicuba di playground atau dalam kod anda.  
-Dalam sesi ini, kami akan menunjukkan cara menyambung ke Model GitHub dari Python, dan kemudian membina agen menggunakan pakej Python popular seperti PydanticAI, AutoGen, dan Semantic Kernel.  
-Anda boleh mengikuti secara langsung di GitHub Codespaces, atau mencuba contoh sendiri pada bila-bila masa selepas sesi.
+Terima kasih kepada Model GitHub, apa yang anda perlukan untuk membina Ejen AI pertama anda hanyalah akaun GitHub! Model GitHub merangkumi model berkuasa seperti OpenAI gpt-4.1, DeepSeek-R1, Llama-3.1, dan banyak lagi, sedia untuk dicuba di playground atau dalam kod anda.
+Dalam sesi ini, kami akan mempamerkan cara menghubungkan ke Model GitHub dari Python, dan kemudian membina ejen menggunakan pakej Python popular seperti PydanticAI, AutoGen, dan Semantic Kernel.
+Anda boleh mengikuti secara langsung di GitHub Codespaces, atau cuba contoh sendiri bila-bila selepas sesi.
+
+> **Nota:** Model GitHub sudah tidak digunakan (akan dihentikan Julai 2026). Jangan gunakan Model GitHub untuk projek baru — gunakan model **Microsoft Foundry** sebagai gantinya.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25481/>
 
 ---
 
-## Nama Acara: Membina agen dengan pelbagai model dari katalog model Azure AI
+## Nama Acara: Membina ejen dengan tentera model dari katalog model Azure AI
 
 ## Penerangan
 
-Katalog model Azure AI menawarkan pelbagai model dengan kemahiran dan keupayaan yang berbeza. Walaupun menggunakan model siap pakai untuk memulakan, apabila pembangun menggunakan aliran kerja yang lebih canggih, mereka boleh memanfaatkan model khusus untuk menyelesaikan tugas dalam kerangka pilihan mereka. Dalam pembentangan ini, kami akan membincangkan tawaran katalog model, dan cara anda boleh membina agen yang menggunakan pelbagai model - sambil memastikan kos tetap rendah.
+Katalog model Azure AI menawarkan pelbagai jenis model, dengan kemahiran dan keupayaan yang berbeza. Semasa menggunakan model siap guna untuk memulakan, apabila pembangun menggunakan alur kerja yang lebih sofistikated, mereka boleh memanfaatkan model khusus untuk memudahkan tugasan dalam kerangka pilihan mereka. Dalam pembentangan ini kami akan membincangkan tawaran katalog model, dan bagaimana anda boleh membina ejen yang duduk di atas tentera model - tanpa menelan kos yang besar.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25328/>
 
 ---
 
-## Nama Acara: API Multi-Agen dengan LangGraph dan Azure Cosmos DB
+## Nama Acara: API Multi-Ejen dengan LangGraph dan Azure Cosmos DB
 
 ## Penerangan
 
-Kebangkitan aplikasi AI multi-agen sedang mengubah cara kita membina sistem pintar - tetapi bagaimana anda merancangnya untuk skalabiliti dan prestasi dunia nyata? Dalam sesi ini, kami akan menyelami aplikasi multi-agen gred produksi yang dibina dengan LangGraph untuk orkestrasi agen, FastAPI untuk lapisan API, dan Azure Cosmos DB sebagai tulang belakang untuk pengurusan keadaan, penyimpanan vektor, dan data transaksi.  
+Kebangkitan aplikasi AI multi-ejen sedang mengubah cara kita membina sistem pintar - tetapi bagaimana anda mereka bentuknya untuk kebolehsambungan dan prestasi sebenar? Dalam sesi ini, kami akan menyelami aplikasi multi-ejen kelas produksi yang dibina dengan LangGraph untuk orkestrasi ejen, FastAPI untuk lapisan API, dan Azure Cosmos DB sebagai tulang belakang untuk pengurusan keadaan, penyimpanan vektor, dan data transaksi.
 
-Melalui panduan kod terperinci, anda akan melihat cara merancang dan melaksanakan aliran kerja yang didorong oleh agen yang mengintegrasikan penghasilan yang diperkaya dengan pengambilan (RAG), ketekalan memori, dan peralihan keadaan dinamik. Kami akan membincangkan:  
+Melalui pencerahan kod terperinci, anda akan melihat bagaimana mereka bentuk dan melaksanakan alur kerja yang dipacu ejen yang mengintegrasi generasi dipertingkatkan pengambilan (RAG), ketekalan memori, dan peralihan keadaan dinamik. Kami akan membincangkan:
 
-- Kerjasama agen dengan LangGraph untuk penaakulan berstruktur  
-- Penyimpanan sejarah sembang masa nyata menggunakan Azure Cosmos DB - pangkalan data yang sama yang menggerakkan sejarah sembang dalam ChatGPT, aplikasi agen AI yang paling pesat berkembang dalam sejarah  
-- Carian vektor untuk pengambilan pengetahuan dengan sokongan embedding asli Cosmos DB  
-- Keupayaan async FastAPI untuk memastikan interaksi responsif dan skalabel  
-
-Pada akhir sesi ini, anda akan mempunyai pelan tindakan yang jelas untuk membina dan melancarkan aplikasi multi-agen yang skalabel dan berasaskan awan yang memanfaatkan kuasa AI moden dan infrastruktur awan. Sama ada anda seorang jurutera AI, arkitek awan, atau pembangun Python, ceramah ini akan melengkapkan anda dengan pandangan praktikal dan corak yang telah diuji untuk membina aplikasi yang dikuasakan AI generasi seterusnya.
+Kerjasama ejen dengan LangGraph untuk pemikiran berstruktur
+Penyimpanan sejarah chat masa nyata menggunakan Azure Cosmos DB - pangkalan data yang sama yang menggerakkan sejarah chat dalam ChatGPT, aplikasi ejen AI yang berkembang paling pesat dalam sejarah
+Carian vektor untuk pengambilan pengetahuan dengan sokongan penyerapan asli Cosmos DB
+Keupayaan async FastAPI untuk menjadikan interaksi responsif dan boleh diskala
+Menjelang akhir sesi ini, anda akan memiliki pelan jelas untuk membina dan melancarkan aplikasi multi-ejen asli awan yang boleh diskala yang memanfaatkan kuasa AI moden dan infrastruktur awan. Sama ada anda jurutera AI, arkitek awan, atau pembangun Python, ceramah ini akan membekalkan anda dengan pandangan praktikal dan corak yang telah diuji untuk membina generasi seterusnya aplikasi kuasa AI
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25314/>
 
 ---
 
-## Nama Acara: Agen AI Pertama Anda dalam JS dengan Azure AI Agent Service
+## Nama Acara: Ejen AI Pertama anda dalam JS dengan Microsoft Foundry Agent Service
 
 ## Penerangan
 
-Belajar cara membina agen AI pertama anda menggunakan JavaScript SDK untuk Azure AI Agent Service, platform yang diurus sepenuhnya yang memudahkan pembangunan. Anda akan melihat cara menyediakannya, menyambungkan alat seperti Azure AI Search, dan melancarkan agen soal jawab yang ringkas. Dengan demo langsung, anda akan menemui cara pemanggilan alat automatik dan pengurusan keadaan mempermudahkan proses. Sesi ini sesuai untuk pemula, memberikan langkah praktikal dan petua untuk memulakan perjalanan agen AI anda dengan yakin.
+Belajar bagaimana membina ejen AI pertama anda menggunakan SDK JavaScript untuk Microsoft Foundry Agent Service, platform sepenuhnya diurus yang memudahkan pembangunan. Anda akan melihat bagaimana memasangnya, menghubungkan alat seperti Azure AI Search, dan melancarkan ejen soal jawab yang mudah. Dengan demo langsung, anda akan menemui bagaimana pemanggilan alat automatik dan keadaan yang diurus menyederhanakan proses. Sesuai untuk pemula, sesi ini memberikan anda langkah praktikal dan tip untuk memulakan perjalanan ejen AI anda dengan yakin.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25381/>
 
 ---
 
-## Nama Acara: Prompting adalah Skrip Baru: Temui GenAIScript
+## Nama Acara: Prompting adalah Scripting Baru: Temui GenAIScript
 
 ## Penerangan
 
-jQuery pernah memudahkan pembangunan web dengan mengabstrakkan kerumitan, membolehkan pembangun fokus pada pembangunan daripada bergelut dengan keanehan pelayar. Hari ini, pembangunan AI menghadapi cabaran yang serupa. Corak baru sentiasa muncul dan mengikuti perkembangan boleh menjadi membebankan, terutamanya apabila alat AI—terutamanya yang bersifat agen—menjadi lebih kuat dan kompleks. Bagaimana jika anda boleh memanfaatkan keupayaan AI terkini untuk mengautomasi tugas menggunakan abstraksi JavaScript yang mudah dan biasa?  
-Masukkan GenAIScript—cara untuk mengintegrasikan AI ke dalam aliran kerja anda dengan mudah, merawat prompt seperti potongan kod yang boleh digunakan semula. Dalam ceramah ini, kami akan meneroka bagaimana GenAIScript menjadikan agen automasi AI terasa semudah menulis JavaScript, membantu anda menyelaraskan kerja berulang tanpa memerlukan kepakaran AI yang mendalam.
+jQuery pernah menjadikan pembangunan web lebih mudah dengan mengabstrakkan kerumitan, membolehkan pembangun menumpukan pada pembinaan daripada bergelut dengan keanehan pelayar. Kini, pembangunan AI menghadapi cabaran serupa. Corak baru muncul sentiasa dan mengikutinya boleh menjadi membebankan, terutama apabila alat AI—terutama yang sifat ejen—menjadi lebih berkuasa dan kompleks. Bagaimana jika anda boleh memanfaatkan keupayaan AI terkini untuk mengautomasikan tugasan menggunakan abstraksi JavaScript yang mudah dan biasa? Masuk GenAIScript—cara mengintegrasi AI ke dalam alur kerja anda dengan mudah, memperlakukan prompt seperti potongan kod yang boleh digunakan semula. Dalam ceramah ini, kita akan meneroka bagaimana GenAIScript menjadikan ejen automasi AI terasa seintuitif menulis JavaScript, membantu anda memudahkan kerja berulang tanpa perlu kepakaran AI mendalam.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25441/>
 
 ---
 
-## Nama Acara: Agen yang diperkaya pengetahuan dengan LlamaIndex.TS
+## Nama Acara: Ejen dipertingkat pengetahuan dengan LlamaIndex.TS
 
 ## Penerangan
 
-LlamaIndex terkenal kerana memudahkan pembinaan Penghasilan yang Diperkaya dengan Pengambilan (RAG), tetapi kerangka kami juga memudahkan pembinaan agen dan sistem multi-agen! Dalam sesi ini, kami akan memperkenalkan Workflows, blok asas kami untuk membina sistem agen, dan membina agen yang menggunakan RAG dan alat lain.
+LlamaIndex dikenali kerana memudahkan pembinaan Retrieval-Augmented Generation (RAG), tetapi rangka kerja kami juga memudahkan pembinaan ejen dan sistem multi-ejen! Dalam sesi ini kami akan memperkenalkan Workflows, blok binaan asas kami untuk membina sistem berasaskan ejen, dan membina ejen yang menggunakan RAG dan alat lain.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25440/>
 
 ---
 
-## Nama Acara: Agen AI untuk Java menggunakan Azure AI Foundry dan GitHub Copilot
+## Nama Acara: Ejen AI untuk Java menggunakan Microsoft Foundry dan GitHub Copilot
 
 ## Penerangan
 
-Dalam sesi ini, kami akan menunjukkan cara menyematkan keupayaan Agen AI yang maju ke dalam aplikasi Java anda menggunakan Azure AI Foundry, termasuk menetapkan matlamat projek dan bereksperimen dengan model serta melancarkan penyelesaian siap produksi dengan selamat pada skala. Sepanjang perjalanan, anda akan belajar bagaimana GitHub Copilot (dalam IntelliJ, VS Code, dan Eclipse) dapat mempermudah penulisan kod dan penciptaan prompt, sementara amalan terbaik dalam pemilihan model, penalaan halus, dan aliran kerja agen memastikan pembangunan yang bertanggungjawab dan cekap. Sama ada anda baru dalam Agen AI atau mencari teknik pembangunan agen yang maju, sesi ini akan melengkapkan anda untuk memberikan pengalaman tahap seterusnya dengan alat yang sudah anda kenal.
+Dalam sesi ini kami akan menunjukkan bagaimana menyematkan keupayaan AI Agent maju ke dalam aplikasi Java anda menggunakan Microsoft Foundry, termasuk menetapkan matlamat projek dan bereksperimen dengan model serta melancarkan penyelesaian bersedia produksi dengan selamat dan pada skala. Sepanjang jalan, anda akan belajar bagaimana GitHub Copilot (dalam IntelliJ, VS Code, dan Eclipse) dapat memudahkan pengkodan dan penciptaan prompt, sementara amalan terbaik dalam pemilihan model, penyesuaian, dan alur kerja ejen memastikan pembangunan yang bertanggungjawab dan cekap. Sama ada anda baru dalam AI Agents atau mencari teknik bina ejen lanjutan, sesi ini akan melengkapi anda untuk menyediakan pengalaman tahap seterusnya dengan alat yang sudah anda ketahui.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25336/>
 
 ---
 
-## Nama Acara: Membina Agen AI Java menggunakan LangChain4j dan Sesi Dinamik
+## Nama Acara: Membina Ejen AI Java menggunakan LangChain4j dan Sesi Dinamik
 
 ## Penerangan
 
-Buka potensi Agen AI dalam aplikasi Java anda dengan menggabungkan LangChain4j dengan sesi dinamik Azure Container Apps (ACA) yang disambungkan ke perkhidmatan Azure AI. Sesi ini memaparkan contoh praktikal membina agen yang mampu berinteraksi dengan persekitaran jauh, termasuk pengurusan fail. Belajar cara menentukan alat khusus, mengintegrasikannya ke dalam aliran kerja agen, dan memanfaatkan infrastruktur Azure yang skalabel untuk melancarkan penyelesaian pintar dan dinamik.
+Buka potensi Ejen AI dalam aplikasi Java anda dengan menggabungkan LangChain4j dengan sesi dinamik Azure Container Apps (ACA) yang dihubungkan ke perkhidmatan Azure AI. Sesi ini memaparkan contoh praktikal membina ejen yang mampu berinteraksi dengan persekitaran jauh, termasuk pengurusan fail. Pelajari bagaimana mentakrifkan alat tersuai, mengintegrasikannya ke dalam alur kerja ejen, dan memanfaatkan infrastruktur Azure yang boleh diskala untuk melancarkan penyelesaian pintar dan dinamik.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25337/>
 
 ---
 
-## Nama Acara: Agen AI yang Tidak Bertanggungjawab
+## Nama Acara: Ejen AI Tidak Bertanggungjawab
 
 ## Penerangan
 
-Sertai kami semasa kami meneroka potensi risiko agen AI dan menangani cabaran menyematkan amalan AI yang boleh dipercayai ke dalam platform AI perbualan! Sesi ini menyelami contoh agen AI yang tidak bertanggungjawab—memaparkan contoh kegagalan model yang mengejutkan, jailbreak yang bersifat musuh, dan risiko lain yang merosakkan kepercayaan dan pematuhan.  
+Sertai kami semasa kami meneroka potensi risiko ejen AI dan mengatasi cabaran menyematkan amalan AI boleh dipercayai ke dalam platform AI perbualan! Sesi ini menyelami contoh ejen AI yang tidak bertanggungjawab—mempersembahkan contoh mengejutkan kegagalan model, jailbreak adversarial, dan risiko lain yang merosakkan kepercayaan dan pematuhan.
 
-Kami akan meneroka alat terkini Microsoft untuk AI yang boleh dipercayai, termasuk penapis kandungan, strategi red teaming, dan penilaian—menampilkan demo langsung agen AI yang berkelakuan secara bertanggungjawab dan tidak bertanggungjawab dengan cara yang tidak akan anda percaya.  
+Kami akan meneroka alat terkini Microsoft untuk AI boleh dipercayai, termasuk penapis kandungan, strategi red teaming, dan penilaian—menampilkan demo langsung ejen AI yang berkelakuan bertanggungjawab dan tidak bertanggungjawab dengan cara yang anda tidak akan percaya.
 
-🔥 Apa yang akan anda pelajari:  
-✅ Cara mengenal pasti dan mengurangkan risiko AI sebelum ia dieksploitasi  
-✅ Cara melancarkan Azure AI Content Safety untuk mengesan dan mengurangkan tingkah laku berisiko  
-✅ Rahsia untuk menjadikan agen AI boleh dipercayai  
+🔥 Apa yang anda akan peroleh:
+✅ Cara mengenalpasti dan mengurangkan risiko AI sebelum ia dieksploitasi
+✅ Cara melancarkan Azure AI Content Safety untuk mengesan dan mengurangkan tingkah laku berisiko
+✅ Rahsia untuk menjadikan ejen AI boleh dipercayai
 
-Bersiaplah untuk sesi yang penuh dengan drama AI berisiko tinggi, dan strategi penting untuk memastikan AI anda berada di sisi sejarah yang betul. Jangan hanya membina AI—bina AI yang bermakna!
+Bersiaplah untuk sesi penuh dengan keterujaan, drama AI berisiko tinggi, dan strategi wajib tahu untuk memastikan AI anda berada di sisi sejarah yang betul. Jangan sekadar bina AI—bina AI yang bermakna!
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25388/>
 
 ---
 
-## Nama Acara: Bina aplikasi berasaskan kod anda dengan Azure AI Agent Service (.NET)
+## Nama Acara: Bina aplikasi code-first anda dengan Microsoft Foundry Agent Service (.NET)
 
 ## Penerangan
 
-Azure AI Agent Service adalah gabungan perkhidmatan dan SDK yang memudahkan pembangunan penyelesaian AI yang kukuh. Dalam sesi ini, anda akan belajar cara membina agen AI berasaskan kod anda sendiri dengan Azure dan C# yang boleh menjawab soalan, melakukan analisis data, dan mengintegrasikan sumber data luaran. Anda juga akan meneroka seni bina yang lebih kompleks, termasuk beberapa agen yang bekerjasama.
+Microsoft Foundry Agent Service adalah gabungan lancar perkhidmatan dan SDK yang memudahkan pembangunan penyelesaian berkuasa AI yang robust. Dalam sesi ini, anda akan belajar bagaimana membina ejen AI code-first anda sendiri dengan Azure dan C# yang boleh menjawab soalan, melakukan analisis data, dan mengintegrasi sumber data luaran. Anda juga akan meneroka seni bina yang lebih kompleks, termasuk beberapa ejen yang bekerja bersama.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25370/>
 
 ---
 
-## Nama Acara: Agen AI + .NET Aspire
+## Nama Acara: Ejen AI + .NET Aspire
 
 ## Penerangan
 
-Dalam sesi ini, kami akan berkongsi beberapa perkembangan paling menarik pada platform .NET berkaitan Agen. Temui status semasa .NET, termasuk ciri dan peningkatan barunya. Terokai keupayaan Agen AI yang kuat. Dan kami akan melakukan penulisan kod langsung dengan Agen dan .NET Aspire.
+Dalam sesi ini kami akan berkongsi beberapa perkembangan paling menarik di platform .NET berkaitan Ejen. Terokai status terkini .NET, termasuk ciri-ciri dan penambahbaikan baru. Terokai keupayaan AI Agent yang berkuasa. Dan kami akan membuat beberapa pengkodan langsung dengan Ejen dan .NET Aspire.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25332/>
 
 ---
 
-## Nama Acara: Semantic Kernel dengan C# untuk membina aplikasi AI multi-agen yang dikuasakan oleh Azure Cosmos
+## Nama Acara: Semantic Kernel dengan C# untuk membina aplikasi AI multi-ejen dipacu oleh Azure Cosmos
 
 ## Penerangan
 
-Kami akan membimbing anda melalui aplikasi multi-agen dalam C# yang dibina di atas kerangka Semantic Kernel. Anda akan memahami konsep di sebalik aplikasi agen, memahami butiran dan nuansa pelaksanaan, dan belajar cara mengintegrasikan Azure Cosmos DB sebagai pangkalan data untuk pelbagai kegunaan.
+Kami akan membimbing anda melalui aplikasi multi-ejen dalam C# yang dibina di atas rangka kerja Semantic Kernel. Anda akan memahami konsep di sebalik aplikasi berasaskan ejen, memahami butiran implementasi dan selok-belok, dan belajar bagaimana untuk mengintegrasi Azure Cosmos DB sebagai pangkalan data untuk pelbagai kes penggunaan.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25455/>
 
 ---
 
-**Penafian**:  
-Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk memastikan ketepatan, sila ambil perhatian bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang berwibawa. Untuk maklumat yang kritikal, terjemahan manusia profesional adalah disyorkan. Kami tidak bertanggungjawab atas sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Penafian**:
+Dokumen ini telah diterjemahkan menggunakan perkhidmatan terjemahan AI [Co-op Translator](https://github.com/Azure/co-op-translator). Walaupun kami berusaha untuk ketepatan, sila ambil maklum bahawa terjemahan automatik mungkin mengandungi kesilapan atau ketidaktepatan. Dokumen asal dalam bahasa asalnya harus dianggap sebagai sumber yang sahih. Untuk maklumat penting, terjemahan oleh manusia profesional adalah disyorkan. Kami tidak bertanggungjawab terhadap sebarang salah faham atau salah tafsir yang timbul daripada penggunaan terjemahan ini.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

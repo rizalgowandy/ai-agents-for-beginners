@@ -1,55 +1,55 @@
 [![Planning Design Pattern](../../../translated_images/ja/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(上の画像をクリックすると、このレッスンの動画が視聴できます)_
+> _(上の画像をクリックするとこのレッスンのビデオを視聴できます)_
 
-# 計画設計
+# 計画デザイン
 
 ## はじめに
 
-このレッスンでは以下を学びます：
+このレッスンで扱う内容は
 
-* 明確な全体目標を定義し、複雑なタスクを管理可能なタスクに分解する方法。
-* 構造化された出力を活用して、より信頼性が高く機械で読み取り可能な応答を得る方法。
-* イベント駆動型アプローチを適用して、動的なタスクや予期しない入力に対応する方法。
+* 明確な全体目標を定義し、複雑なタスクを管理可能なタスクに分割する方法。
+* より信頼性があり機械が読み取りやすい応答のために構造化された出力を活用する方法。
+* 動的なタスクや予期しない入力を処理するためにイベント駆動型アプローチを適用する方法。
 
 ## 学習目標
 
-このレッスンを完了すると、以下について理解が深まります：
+このレッスンを修了すると、以下のことが理解できるようになります：
 
-* AIエージェントの全体目標を設定し、達成すべき内容を明確にする方法。
-* 複雑なタスクを管理可能なサブタスクに分解し、それらを論理的な順序で整理する方法。
-* エージェントに適切なツール（例：検索ツールやデータ分析ツール）を装備させ、それらをいつ、どのように使用するかを決定し、発生する予期しない状況に対応する方法。
-* サブタスクの結果を評価し、パフォーマンスを測定し、最終的な出力を改善するために行動を繰り返す方法。
+* AIエージェントのために全体目標を特定し設定し、何を達成すべきかを明確に認識させること。
+* 複雑なタスクを管理可能なサブタスクに分解し、それらを論理的な順序で整理すること。
+* エージェントに適切なツール（例：検索ツールやデータ分析ツール）を装備させ、それらをいつどのように使うかを決定し、発生する予期しない状況に対処すること。
+* サブタスクの結果を評価し、パフォーマンスを測定して、最終出力を改善するために行動を反復すること。
 
 ## 全体目標の定義とタスクの分解
 
-![目標とタスクの定義](../../../translated_images/ja/defining-goals-tasks.d70439e19e37c47a.webp)
+![Defining Goals and Tasks](../../../translated_images/ja/defining-goals-tasks.d70439e19e37c47a.webp)
 
-ほとんどの現実世界のタスクは、1ステップで解決するには複雑すぎます。AIエージェントには、計画と行動を導くための簡潔な目的が必要です。例えば、以下の目標を考えてみましょう：
+現実の多くのタスクは1ステップで解決するには複雑すぎます。AIエージェントは計画と行動を導く簡潔な目的が必要です。たとえば、次の目標を考えてみましょう：
 
-    "3日間の旅行プランを作成する。"
+    "3日間の旅行日程を作成する。"
 
-これは簡単に述べられていますが、まだ精緻化が必要です。目標が明確であればあるほど、エージェント（および人間の協力者）は、フライトオプション、ホテルのおすすめ、アクティビティの提案を含む包括的な旅程を作成するなど、適切な結果を達成することに集中できます。
+簡単に言えるものの、まだ精緻化が必要です。目標が明確であればあるほど、エージェント（および人間の協力者）はフライトの選択肢、ホテルの推薦、アクティビティの提案を含む包括的な日程表を作成するなど、正しい成果の達成に集中できます。
 
 ### タスクの分解
 
-大規模または複雑なタスクは、小さく目標指向のサブタスクに分割することで管理しやすくなります。
-旅行プランの例では、目標を以下のように分解できます：
+大きなまたは複雑なタスクは、より小さく目的指向のサブタスクに分割すると管理しやすくなります。
+旅行日程の例では、目標を以下のように分解できます：
 
 * フライト予約
 * ホテル予約
-* 車のレンタル
-* パーソナライズ
+* レンタカー手配
+* パーソナライゼーション
 
-各サブタスクは、専用のエージェントやプロセスによって処理されます。例えば、あるエージェントは最適なフライトの検索に特化し、別のエージェントはホテル予約に集中します。そして、調整役または「下流」のエージェントがこれらの結果をまとめて、最終的な旅程をユーザーに提供します。
+各サブタスクは専用のエージェントやプロセスによって処理できます。あるエージェントは最良のフライト情報の検索に特化し、別のエージェントはホテル予約を担当するなどです。調整役や「下流」エージェントはこれらの結果をまとめてユーザーに一体的な日程表として提供します。
 
-このモジュール型アプローチは、段階的な改善も可能にします。例えば、食事のおすすめや地元のアクティビティの提案に特化したエージェントを追加し、旅程を時間をかけて洗練させることができます。
+このモジュール式アプローチは段階的な改善も可能にします。例えば、食事の推薦や現地アクティビティの提案に特化したエージェントを追加し、日程表を時間をかけて洗練させることができます。
 
-### 構造化された出力
+### 構造化出力
 
-大規模言語モデル（LLM）は、下流のエージェントやサービスが解析・処理しやすい構造化された出力（例：JSON）を生成できます。これは特にマルチエージェント環境で有用であり、計画の出力を受け取った後にこれらのタスクを実行できます。簡単な概要は以下の通りです。
+大規模言語モデル（LLM）は、下流のエージェントやサービスが解析・処理しやすい構造化された出力（例：JSON）を生成できます。これは計画出力を受け取った後にタスクを実行可能なマルチエージェント環境で特に有効です。
 
-以下のPythonコードスニペットは、目標をサブタスクに分解し、構造化された計画を生成するシンプルな計画エージェントを示しています：
+以下のPythonコードスニペットは、単純な計画エージェントが目標をサブタスクに分解し、構造化された計画を生成する例を示しています：
 
 ```python
 from pydantic import BaseModel
@@ -59,9 +59,8 @@ import json
 import os
 from typing import Optional
 from pprint import pprint
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.azure import AzureAIChatCompletionClient
-from azure.core.credentials import AzureKeyCredential
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 class AgentEnum(str, Enum):
     FlightBooking = "flight_booking"
@@ -72,35 +71,26 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# 旅行サブタスクモデル
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # タスクをエージェントに割り当てたい
 
 class TravelPlan(BaseModel):
     main_task: str
     subtasks: List[TravelSubTask]
     is_greeting: bool
 
-client = AzureAIChatCompletionClient(
-    model="gpt-4o-mini",
-    endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-    credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
-    model_info={
-        "json_output": False,
-        "function_calling": True,
-        "vision": True,
-        "family": "unknown",
-    },
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
-# Define the user message
-messages = [
-    SystemMessage(content="""You are an planner agent.
+# ユーザーメッセージを定義する
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
-                      Provide your response in JSON format with the following structure:
+    Provide your response in JSON format with the following structure:
 {'main_task': 'Plan a family trip from Singapore to Melbourne.',
  'subtasks': [{'assigned_agent': 'flight_booking',
                'task_details': 'Book round-trip flights from Singapore to '
@@ -111,45 +101,27 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(
-        content="Create a travel plan for a family of 2 kids from Singapore to Melboune", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": 'json_object'})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-response_content: Optional[str] = response.content if isinstance(
-    response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string" )
+response = client.create_response(input=user_message, instructions=system_prompt)
 
+response_content = response.output_text
 pprint(json.loads(response_content))
-
-# # Ensure the response content is a valid JSON string before loading it
-# response_content: Optional[str] = response.content if isinstance(
-#     response.content, str) else None
-# if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
-
-# # Print the response content after loading it as JSON
-# pprint(json.loads(response_content))
-
-# Validate the response content with the MathReasoning model
-# TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### マルチエージェントオーケストレーションを備えた計画エージェント
+### マルチエージェントオーケストレーションを持つ計画エージェント
 
-この例では、Semantic Router Agentがユーザーのリクエスト（例：「旅行のためのホテルプランが必要です」）を受け取ります。
+この例では、セマンティックルーターエージェントがユーザーからのリクエスト（例：「旅行用のホテルプランが欲しい」）を受け取ります。
 
-プランナーは以下を行います：
+計画者は以下のように進めます：
 
-* ホテルプランの受信：プランナーはユーザーのメッセージを受け取り、システムプロンプト（利用可能なエージェントの詳細を含む）に基づいて構造化された旅行プランを生成します。
-* エージェントとそのツールのリスト化：エージェントレジストリには、フライト、ホテル、車のレンタル、アクティビティなどのエージェントのリストと、それらが提供する機能やツールが含まれています。
-* プランを該当するエージェントにルーティング：サブタスクの数に応じて、プランナーはメッセージを専用エージェントに直接送信（単一タスクの場合）するか、マルチエージェントコラボレーションのためにグループチャットマネージャーを介して調整します。
-* 結果の要約：最後に、プランナーは生成されたプランを明確に要約します。
-
-以下のPythonコードサンプルはこれらのステップを示しています：
+* ホテルプランを受け取る：システムプロンプト（利用可能なエージェントの詳細を含む）に基づき、ユーザーのメッセージから構造化された旅行計画を生成します。
+* エージェントとツールのリストアップ：エージェントレジストリにはフライト、ホテル、レンタカー、アクティビティ用のエージェントと、それぞれの機能・ツールが登録されています。
+* 計画を該当エージェントにルーティング：サブタスクの数に応じて、単一タスクの場合は専用エージェントに直接メッセージを送信し、マルチエージェントの場合はグループチャットマネージャー経由で調整します。
+* 結果の要約：最後に、生成された計画の内容を明確にまとめます。
+以下のPythonコード例がこれらのステップを示しています：
 
 ```python
 
@@ -167,11 +139,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# 旅行サブタスクモデル
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # エージェントにタスクを割り当てたい
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -181,25 +153,22 @@ import json
 import os
 from typing import Optional
 
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the client with type-checked environment variables
+# クライアントを作成する
 
-client = AzureOpenAIChatCompletionClient(
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
 from pprint import pprint
 
-# Define the user message
+# ユーザーメッセージを定義する
 
-messages = [
-    SystemMessage(content="""You are an planner agent.
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -207,24 +176,20 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-# Ensure the response content is a valid JSON string before loading it
+response = client.create_response(input=user_message, instructions=system_prompt)
 
-response_content: Optional[str] = response.content if isinstance(response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string")
+response_content = response.output_text
 
-# Print the response content after loading it as JSON
+# JSONとして読み込んだ後、レスポンス内容を表示する
 
 pprint(json.loads(response_content))
 ```
 
-前述のコードからの出力例を以下に示します。この構造化された出力を使用して`assigned_agent`にルーティングし、旅行プランをエンドユーザーに要約することができます。
+次に示すのは上記コードの出力例で、この構造化出力を使って`assigned_agent`へのルーティングや旅行計画の要約をユーザーに提供できます。
 
 ```json
 {
@@ -255,21 +220,23 @@ pprint(json.loads(response_content))
 }
 ```
 
-前述のコードサンプルを含むサンプルノートブックは[こちら](07-autogen.ipynb)で利用可能です。
+前述のコード例を含むノートブックは[こちら](./code_samples/07-python-agent-framework.ipynb)から入手可能です。
 
-### 繰り返し計画
+### 反復的な計画
 
-一部のタスクでは、結果が次のサブタスクに影響を与えるため、再計画ややり取りが必要です。例えば、エージェントがフライト予約中に予期しないデータ形式を発見した場合、ホテル予約に進む前に戦略を適応させる必要があるかもしれません。
+一部のタスクはやり取りや再計画が必要で、あるサブタスクの結果が次のサブタスクに影響を与えます。たとえば、フライト予約中に予期しないデータ形式が見つかった場合、その後のホテル予約に進む前に戦略を調整しなければならないかもしれません。
 
-さらに、ユーザーのフィードバック（例：ユーザーが早い時間のフライトを希望する場合）が部分的な再計画を引き起こすことがあります。この動的で反復的なアプローチにより、最終的な解決策が現実世界の制約や進化するユーザーの好みに合致することを保証します。
+また、ユーザーのフィードバック（例：人が早めのフライトを希望するなど）により部分的な再計画が開始されることもあります。この動的かつ反復的なアプローチにより、最終的なソリューションが現実の制約や変化するユーザーの好みに合致します。
 
 例：サンプルコード
 
 ```python
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
-messages = [
-    SystemMessage(content="""You are a planner agent to optimize the
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+#.. 前のコードと同様で、ユーザーの履歴と現在のプランを引き継ぐ
+
+system_prompt = """You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -277,28 +244,31 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-    AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
-]
-# .. re-plan and send the tasks to respective agents
+    - DefaultAgent: For handling general requests"""
+
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
+
+response = client.create_response(
+    input=user_message,
+    instructions=system_prompt,
+    context=f"Previous travel plan - {TravelPlan}",
+)
+# .. 再計画を行い、各エージェントにタスクを送信する
 ```
 
-より包括的な計画については、Magnetic Oneをご覧ください。複雑なタスクを解決するための包括的なアプローチを提供します。
+より包括的な計画には、複雑なタスクを解決するためのMagnetic Oneの<a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">ブログ記事</a>を参照してください。
 
 ## まとめ
 
-この記事では、利用可能なエージェントを動的に選択するプランナーを作成する方法の例を見てきました。プランナーの出力はタスクを分解し、エージェントに割り当てて実行できるようにします。エージェントがタスクを実行するために必要な機能やツールにアクセスできることが前提です。エージェントに加えて、リフレクション、要約、ラウンドロビンチャットなどのパターンを追加してさらにカスタマイズすることも可能です。
+この記事では、利用可能なエージェントを動的に選択できる計画者の作成例を示しました。計画者の出力はタスクを分解し、エージェントに割り当てて実行可能にします。エージェントはタスクを実行するために必要な機能やツールにアクセス可能と仮定しています。エージェントに加えて、リフレクション、要約器、ラウンドロビンチャットなどのパターンを組み込んでさらにカスタマイズ可能です。
 
 ## 追加リソース
 
-AutoGen Magnetic One - 複雑なタスクを解決するための汎用マルチエージェントシステムで、複数の難しいエージェントベンチマークで優れた結果を達成しています。参考：
+Magnetic One - 複雑なタスクを解決するジェネラリストのマルチエージェントシステムで、複数の難易度の高いエージェントベンチマークで優れた成果を上げています。参考：[Magentic One](https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks)。この実装ではオーケストレーターが特定タスク向けの計画を作成し、それらを利用可能なエージェントに委任します。計画に加えて、オーケストレーターはタスクの進捗を監視し必要に応じて再計画を行う追跡機構も活用します。
 
-この実装では、オーケストレーターがタスク固有の計画を作成し、これらのタスクを利用可能なエージェントに委任します。オーケストレーターは計画だけでなく、タスクの進捗を監視し、必要に応じて再計画を行う追跡メカニズムも採用しています。
+### 計画デザインパターンについてさらに質問がありますか？
 
-### 計画設計パターンについてさらに質問がありますか？
-
-[Azure AI Foundry Discord](https://aka.ms/ai-agents/discord)に参加して、他の学習者と交流したり、オフィスアワーに参加したり、AIエージェントに関する質問に答えてもらいましょう。
+[Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) に参加して、他の学習者と交流したり、オフィスアワーに参加してAIエージェントについての質問に答えてもらいましょう。
 
 ## 前のレッスン
 
@@ -310,5 +280,7 @@ AutoGen Magnetic One - 複雑なタスクを解決するための汎用マルチ
 
 ---
 
-**免責事項**:  
-この文書は、AI翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を追求しておりますが、自動翻訳には誤りや不正確な部分が含まれる可能性があります。元の言語で記載された文書が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。この翻訳の使用に起因する誤解や誤解釈について、当社は責任を負いません。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責事項**：
+本書類は AI 翻訳サービス [Co-op Translator](https://github.com/Azure/co-op-translator) を使用して翻訳されています。正確性を期していますが、自動翻訳には誤りや不正確な部分が含まれる可能性があることをご承知おきください。原文の原語版が正式な情報源とみなされるべきです。重要な情報については、専門の人間による翻訳を推奨します。本翻訳の利用により生じたいかなる誤解や解釈違いについても、当方は責任を負いかねます。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

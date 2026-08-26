@@ -1,164 +1,188 @@
-# Uhandisi wa Muktadha kwa Mawakala wa AI
+# Uhandisi wa Muktadha kwa Wakala wa AI
 
-[![Uhandisi wa Muktadha](../../../translated_images/sw/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
+[![Context Engineering](../../../translated_images/sw/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
 
-> _(Bofya picha hapo juu kutazama video ya somo hili)_
+> _(Bonyeza picha hapo juu kutazama video ya somo hili)_
 
-Kuelewa ugumu wa programu unayojenga wakala wa AI kwa ajili yake ni muhimu ili kuunda wakala wa kuaminika. Tunahitaji kujenga Mawakala wa AI ambao wanadhibiti taarifa kwa ufanisi ili kushughulikia mahitaji magumu zaidi ya uhandisi wa maelekezo.
+Kuelewa ugumu wa programu unayojenga wakala wa AI ni muhimu kwa kutengeneza mmoja anayeaminika. Tunahitaji kujenga Wakala wa AI ambao husimamia taarifa kwa ufanisi ili kutatua mahitaji magumu zaidi ya uhandisi wa maagizo.
 
-Katika somo hili, tutachunguza uhandisi wa muktadha ni nini na jukumu lake katika kujenga Mawakala wa AI.
+Katika somo hili, tutaangalia ni nini uhandisi wa muktadha ulivyo na jukumu lake katika ujenzi wa wakala wa AI.
 
 ## Utangulizi
 
 Somo hili litashughulikia:
 
-• **Uhandisi wa Muktadha ni nini** na kwa nini ni tofauti na uhandisi wa maelekezo.
+• **Uhandisi wa Muktadha ni Nini** na kwa nini ni tofauti na uhandisi wa maagizo.
 
-• **Mikakati ya Uhandisi wa Muktadha wa Ufanisi**, ikijumuisha jinsi ya kuandika, kuchagua, kubana, na kutenganisha taarifa.
+• **Mikakati ya Uhandisi wa Muktadha Inayofaa**, ikiwa ni pamoja na jinsi ya kuandika, kuchagua, kukandamiza, na kutenganisha taarifa.
 
-• **Mifumo ya Kushindwa kwa Muktadha** ambayo inaweza kuharibu wakala wako wa AI na jinsi ya kuirekebisha.
+• **Makosa ya Muktadha Yanayojirudia** ambayo yanaweza kuathiri wakala wa AI na jinsi ya kuyarekebisha.
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili, utajua jinsi ya:
+Baada ya kumaliza somo hili, utajua na kuelewa jinsi ya:
 
-• **Kufafanua uhandisi wa muktadha** na kutofautisha na uhandisi wa maelekezo.
+• **Kufafanua uhandisi wa muktadha** na kuutofautisha na uhandisi wa maagizo.
 
-• **Kutambua vipengele muhimu vya muktadha** katika programu za LLM (Large Language Model).
+• **Kubaini vipengele kuu vya muktadha** katika matumizi ya Modeli Kubwa za Lugha (LLM).
 
-• **Kutumia mikakati ya kuandika, kuchagua, kubana, na kutenganisha muktadha** ili kuboresha utendaji wa wakala.
+• **Kutumia mikakati ya kuandika, kuchagua, kukandamiza, na kutenganisha muktadha** ili kuboresha utendaji wa wakala.
 
-• **Kutambua mifumo ya kushindwa kwa muktadha** kama vile uchafuzi, usumbufu, mkanganyiko, na mgongano, na kutekeleza mbinu za kupunguza.
+• **Kutambua makosa ya kawaida ya muktadha** kama vile kuathiriwa, kutawazwa, kuchanganyikiwa, na mizozo, na kutekeleza mbinu za kuzuia.
 
 ## Uhandisi wa Muktadha ni Nini?
 
-Kwa Mawakala wa AI, muktadha ndio unaoendesha upangaji wa wakala wa AI kuchukua hatua fulani. Uhandisi wa Muktadha ni mazoezi ya kuhakikisha wakala wa AI ana taarifa sahihi za kukamilisha hatua inayofuata ya kazi. Dirisha la muktadha lina ukubwa mdogo, kwa hivyo kama wajenzi wa mawakala tunahitaji kuunda mifumo na michakato ya kudhibiti kuongeza, kuondoa, na kubana taarifa katika dirisha la muktadha.
+Kwa Wakala wa AI, muktadha ni kile kinachoendesha upangaji wa wakala wa AI kuchukua hatua fulani. Uhandisi wa Muktadha ni mazoezi ya kuhakikisha wakala wa AI ana taarifa sahihi za kumalizia hatua inayofuata ya kazi. Dirisha la muktadha lina ukubwa mdogo, hivyo kama waundaji wa wakala tunahitaji kujenga mfumo na michakato ya kusimamia kuongeza, kuondoa, na kupunguza taarifa ndani ya dirisha la muktadha.
 
-### Uhandisi wa Maelekezo vs Uhandisi wa Muktadha
+### Uhandisi wa Maagizo vs Uhandisi wa Muktadha
 
-Uhandisi wa maelekezo unazingatia seti moja ya maelekezo ya kudumu ili kuelekeza Mawakala wa AI kwa ufanisi kwa seti ya sheria. Uhandisi wa muktadha ni jinsi ya kudhibiti seti ya taarifa inayobadilika, ikijumuisha maelekezo ya awali, ili kuhakikisha wakala wa AI ana kile anachohitaji kwa muda. Wazo kuu la uhandisi wa muktadha ni kufanya mchakato huu uwe wa kurudiwa na wa kuaminika.
+Uhandisi wa maagizo unazingatia seti moja ya maagizo ya kudumu kuongoza Wakala wa AI kwa seti ya kanuni. Uhandisi wa muktadha ni jinsi ya kusimamia seti ya taarifa zinazobadilika, ikiwa ni pamoja na maelekezo ya awali, kuhakikisha wakala wa AI ana vile anavyohitaji kwa muda mrefu. Wazo kuu la uhandisi wa muktadha ni kufanya mchakato huu uwe wa kurudiwa na wa kuaminika.
 
 ### Aina za Muktadha
 
-[![Aina za Muktadha](../../../translated_images/sw/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
+[![Types of Context](../../../translated_images/sw/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
 
-Ni muhimu kukumbuka kuwa muktadha si kitu kimoja tu. Taarifa ambazo wakala wa AI anahitaji zinaweza kutoka kwa vyanzo mbalimbali, na ni jukumu letu kuhakikisha wakala anaweza kufikia vyanzo hivi:
+Ni muhimu kukumbuka kuwa muktadha si kitu kimoja tu. Taarifa zinazohitajika na wakala wa AI zinaweza kutoka kwa vyanzo mbalimbali na ni jukumu letu kuhakikisha wakala anapata ufikiaji wa vyanzo hivi:
 
-Aina za muktadha ambazo wakala wa AI anaweza kuhitaji kudhibiti ni pamoja na:
+Aina za muktadha ambazo wakala wa AI anaweza kuhitaji kusimamia ni pamoja na:
 
-• **Maelekezo:** Hizi ni kama "sheria" za wakala – maelekezo, ujumbe wa mfumo, mifano ya "few-shot" (kuonyesha AI jinsi ya kufanya kitu), na maelezo ya zana anazoweza kutumia. Hapa ndipo uhandisi wa maelekezo unachanganyika na uhandisi wa muktadha.
+• **Maagizo:** Hizi ni kama "kanuni" za wakala – maagizo, ujumbe wa mfumo, mifano michache (kuonyesha AI jinsi ya kufanya kitu), na maelezo ya zana anazoweza kutumia. Hapa ndipo mkazo wa uhandisi wa maagizo unajiunga na uhandisi wa muktadha.
 
-• **Maarifa:** Hii inajumuisha ukweli, taarifa zilizopatikana kutoka kwa hifadhidata, au kumbukumbu za muda mrefu ambazo wakala amekusanya. Hii inajumuisha kuunganisha mfumo wa RAG (Retrieval Augmented Generation) ikiwa wakala anahitaji kufikia hifadhi za maarifa na hifadhidata tofauti.
+• **Maarifa:** Hii inahusisha ukweli, taarifa zilizopatikana kutoka kwa hifadhidata, au kumbukumbu ndefu ambazo wakala ameziunda. Hii ni pamoja na kuingiza mfumo wa Retrieval Augmented Generation (RAG) ikiwa wakala anahitaji kupata ufikiaji wa hazina mbalimbali za maarifa na hifadhidata.
 
-• **Zana:** Hizi ni maelezo ya kazi za nje, API, na MCP Servers ambazo wakala anaweza kuita, pamoja na maoni (matokeo) anayopata kutoka kuzitumia.
+• **Zana:** Hizi ni ufafanuzi wa kazi za nje, API na MCP Servers ambazo wakala anaweza kuitumia, pamoja na mrejesho (matokeo) anayopata kutoka kwa matumizi yake.
 
-• **Historia ya Mazungumzo:** Mazungumzo yanayoendelea na mtumiaji. Kadri muda unavyopita, mazungumzo haya yanakuwa marefu na magumu zaidi, ambayo yanamaanisha yanachukua nafasi katika dirisha la muktadha.
+• **Historia ya Mazungumzo:** Mazungumzo yanayoendelea na mtumiaji. Kadri muda unavyopita, mazungumzo haya huongezeka kwa urefu na ugumu, hivyo kuchukua nafasi ndani ya dirisha la muktadha.
 
-• **Mapendeleo ya Mtumiaji:** Taarifa zilizojifunza kuhusu anachopenda au asichopenda mtumiaji kwa muda. Hizi zinaweza kuhifadhiwa na kuitwa wakati wa kufanya maamuzi muhimu ili kumsaidia mtumiaji.
+• **Upendeleo wa Mtumiaji:** Taarifa zilizojifunzwa kuhusu vitu anavyovipenda au visivyovipenda mtumiaji kwa muda. Hizi zinaweza kuhifadhiwa na kuitwa wakati wa kufanya maamuzi muhimu kusaidia mtumiaji.
 
-## Mikakati ya Uhandisi wa Muktadha wa Ufanisi
+## Mikakati ya Uhandisi wa Muktadha Inayofaa
 
-### Mikakati ya Mipango
+### Mikakati ya Kupanga
 
-[![Mikakati Bora ya Uhandisi wa Muktadha](../../../translated_images/sw/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
+[![Context Engineering Best Practices](../../../translated_images/sw/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
 
-Uhandisi mzuri wa muktadha huanza na mipango mizuri. Hapa kuna mbinu ambayo itakusaidia kuanza kufikiria jinsi ya kutumia dhana ya uhandisi wa muktadha:
+Uhandisi mzuri wa muktadha huanza na upangaji mzuri. Huu ni mbinu itakayokusaidia kuanza kufikiria jinsi ya kutumia dhana ya uhandisi wa muktadha:
 
-1. **Fafanua Matokeo Wazi** - Matokeo ya kazi ambazo Mawakala wa AI watapewa yanapaswa kufafanuliwa wazi. Jibu swali - "Dunia itakuwaje wakala wa AI akimaliza kazi yake?" Kwa maneno mengine, ni mabadiliko gani, taarifa, au majibu ambayo mtumiaji anapaswa kuwa nayo baada ya kuingiliana na wakala wa AI.
-
-2. **Ramani Muktadha** - Baada ya kufafanua matokeo ya wakala wa AI, unahitaji kujibu swali "Ni taarifa gani wakala wa AI anahitaji ili kukamilisha kazi hii?". Kwa njia hii unaweza kuanza kuratibu muktadha wa mahali ambapo taarifa hiyo inaweza kupatikana.
-
-3. **Unda Mifumo ya Muktadha** - Sasa kwa kuwa unajua mahali taarifa ilipo, unahitaji kujibu swali "Wakala atapataje taarifa hii?". Hii inaweza kufanywa kwa njia mbalimbali ikijumuisha RAG, matumizi ya MCP servers na zana nyingine.
+1. **Fafanua Matokeo Wazi** - Matokeo ya kazi ambazo Wakala wa AI atatekelezwa yanapaswa kufafanuliwa wazi. Jibu swali - "Ulimwengu utaonekana aje wakati Wakala wa AI atakapo maliza kazi yake?" Kwa maneno mengine, ni mabadiliko gani, taarifa, au jibu mtumiaji anapaswa kuwa nalo baada ya kuingiliana na Wakala wa AI.
+2. **Ramani ya Muktadha** - Mara tu unapofafanua matokeo ya Wakala wa AI, unahitaji kujibu swali la "Taarifa gani Wakala wa AI anahitaji ili kukamilisha kazi hii?". Hii itakuwezesha kuanza kupanga ramani ya muktadha ya mahali ambapo taarifa hiyo inaweza kupatikana.
+3. **Unda Mifumo ya Muktadha** - Sasa umejua mahali ambapo taarifa iko, unahitaji kujibu swali "Je, Wakala atapataje taarifa hii?". Hii inaweza kufanyika kwa njia mbalimbali ikiwa ni pamoja na RAG, matumizi ya seva za MCP na zana nyingine.
 
 ### Mikakati ya Kivitendo
 
-Mipango ni muhimu lakini mara taarifa zinapoanza kuingia katika dirisha la muktadha la wakala wetu, tunahitaji kuwa na mikakati ya kivitendo ya kuisimamia:
+Kupanga ni muhimu lakini mara tu taarifa zinapoanza kuingia kwenye dirisha la muktadha wa wakala wetu, tunahitaji mikakati ya kivitendo kusimamia:
 
-#### Kudhibiti Muktadha
+#### Kusimamia Muktadha
 
-Wakati taarifa fulani itaongezwa kwenye dirisha la muktadha kiotomatiki, uhandisi wa muktadha unahusu kuchukua jukumu la kazi zaidi ya taarifa hii, ambayo inaweza kufanywa kwa mikakati kadhaa:
+Wakati baadhi ya taarifa zitaongezwa kiotomatiki kwenye dirisha la muktadha, uhandisi wa muktadha unahusu kuchukua jukumu la moja kwa moja la taarifa hizi ambalo linaweza kufanywa kwa mikakati kadhaa:
 
-1. **Scratchpad ya Wakala**  
-Hii inaruhusu wakala wa AI kuchukua noti za taarifa muhimu kuhusu kazi za sasa na mwingiliano wa mtumiaji wakati wa kikao kimoja. Hii inapaswa kuwepo nje ya dirisha la muktadha katika faili au kitu cha runtime ambacho wakala anaweza kukipata baadaye wakati wa kikao hiki ikiwa inahitajika.
+ 1. **Karatasi ya Maandishi ya Wakala**
+ Hii inaruhusu Wakala wa AI kuandika maelezo muhimu kuhusu kazi za sasa na mwingiliano na mtumiaji katika kikao kimoja. Hii inapaswa kuwepo nje ya dirisha la muktadha katika faili au kipengee cha runtime ambacho wakala anaweza kukirejesha baadaye wakati wa kikao hiki ikiwa itahitajika.
 
-2. **Kumbukumbu**  
-Scratchpads ni nzuri kwa kudhibiti taarifa nje ya dirisha la muktadha la kikao kimoja. Kumbukumbu zinawezesha mawakala kuhifadhi na kupata taarifa muhimu katika vikao vingi. Hii inaweza kujumuisha muhtasari, mapendeleo ya mtumiaji, na maoni ya maboresho ya baadaye.
+ 2. **Kumbukumbu**
+ Karatasi za maandishi ni nzuri kusimamia taarifa nje ya dirisha la muktadha wa kikao kimoja. Kumbukumbu zinawawezesha wakala kuhifadhi na kurejesha taarifa muhimu katika vikao vingi. Hii inaweza kujumuisha muhtasari, upendeleo wa mtumiaji na mrejesho kwa maboresho ya baadaye.
 
-3. **Kubana Muktadha**  
-Wakati dirisha la muktadha linakua na linakaribia kikomo chake, mbinu kama muhtasari na kupunguza zinaweza kutumika. Hii inajumuisha ama kuhifadhi tu taarifa muhimu zaidi au kuondoa ujumbe wa zamani.
+ 3. **Kukandamiza Muktadha**
+  Mara dirisha la muktadha linapokua na kufikia kikomo chake, mbinu kama muhtasari na kukata zinaweza kutumika. Hii ni pamoja na kuweka tu taarifa muhimu zaidi au kuondoa ujumbe wa zamani.
+  
+ 4. **Mifumo ya Wakala Wengi**
+  Kuendeleza mifumo ya wakala wengi ni sehemu ya uhandisi wa muktadha kwani kila wakala ana dirisha lake la muktadha. Jinsi muktadha huo unavyo gawanywa na kupelekwa kwa wakala tofauti ni jambo jingine la kupanga wakati wa kujenga mifumo hii.
+  
+ 5. **Mazingira ya Sandbox**
+  Ikiwa wakala anahitaji kuendesha baadhi ya msimbo au kushughulikia kiasi kikubwa cha taarifa kwenye hati, hii inaweza kutumia tokeni nyingi kusindika matokeo. Badala ya kuhifadhi haya yote kwenye dirisha la muktadha, wakala anaweza kutumia mazingira ya sandbox yanayoweza kuendesha msimbo huu na kusoma tu matokeo na taarifa nyingine zinazohusiana.
+  
+ 6. **Viwango vya Hali ya Runtime**
+   Hili hufanyika kwa kuunda mifuko ya taarifa kusimamia hali ambapo Wakala anahitaji kupata taarifa fulani. Kwa kazi ngumu, hii itawezesha Wakala kuhifadhi matokeo ya kila hatua ndogo, kuruhusu muktadha kubaki umeunganishwa tu kwa kazi ndogo ile ile.
 
-4. **Mifumo ya Mawakala Wengi**  
-Kuunda mfumo wa mawakala wengi ni aina ya uhandisi wa muktadha kwa sababu kila wakala ana dirisha lake la muktadha. Jinsi muktadha huo unavyoshirikiwa na kupitishwa kwa mawakala tofauti ni jambo lingine la kupanga wakati wa kujenga mifumo hii.
+#### Kukagua Muktadha
 
-5. **Mazingira ya Sandbox**  
-Ikiwa wakala anahitaji kuendesha baadhi ya msimbo au kuchakata kiasi kikubwa cha taarifa katika hati, hii inaweza kuchukua idadi kubwa ya tokeni kuchakata matokeo. Badala ya kuwa na haya yote kuhifadhiwa katika dirisha la muktadha, wakala anaweza kutumia mazingira ya sandbox ambayo yanaweza kuendesha msimbo huu na kusoma tu matokeo na taarifa nyingine muhimu.
+Baada ya kutumia mojawapo ya mikakati hii, inafaa kuangalia kilichopokelewa kwenye simu ya mfano inayofuata. Swali bora la urekebishaji hitilafu ni:
 
-6. **Vitu vya Hali ya Runtime**  
-Hii inafanywa kwa kuunda vyombo vya taarifa ili kudhibiti hali ambapo wakala anahitaji kuwa na ufikiaji wa taarifa fulani. Kwa kazi ngumu, hii ingewezesha wakala kuhifadhi matokeo ya kila hatua ndogo ya kazi hatua kwa hatua, kuruhusu muktadha kubaki umeunganishwa tu na hatua ndogo husika.
+> Je, wakala alikuwa na muktadha mwingi mno, muktadha usio sahihi, au kukosa muktadha aliyehitaji?
+
+Huhitaji kuhifadhi maagizo ya asili, matokeo ya zana, au yaliyomo ya kumbukumbu kujibu swali hilo. Katika uzalishaji, chagua rekodi ndogo za ukaguzi wa muktadha zinazoweka hesabu, vitambulisho, hashi, na lebo za sera:
+
+- **Uchaguzi:** Rekodi ni zenye kuhesabu vipande vya chaguzi, zana, au kumbukumbu zilizochukuliwa, ngapi zilichaguliwa, na kanuni au alama iliyosababisha zingine kuchujwa.
+- **Kukandamiza:** Rekodi vyanzo vya awali au id ya ufuatiliaji, id ya muhtasari, makadirio ya idadi ya token kabla na baada ya kukandamiza, na kama yaliyomo halisi yalizuiwa kwa simu inayofuata.
+- **Kutenganisha:** Nota tsubtask gani ilifanyika katika wakala tofauti, kikao, au sandbox, muhtasari uliorejelewa, na kama matokeo makubwa ya zana yalibaki nje ya muktadha wa wakala mkuu.
+- **Kumbukumbu na RAG:** Hifadhi vitambulisho vya hati zinazorudishwa, id za kumbukumbu, alama, id zilizochaguliwa, na hali ya uhariri badala ya maandishi kamili yaliyopatikana.
+- **Usalama na faragha:** Tumia hashi, id, makopo ya token, na lebo za sera badala ya maandishi nyeti ya maagizo, hoja za zana, matokeo ya zana, au miili ya kumbukumbu ya mtumiaji.
+
+Lengo sio kuhifadhi muktadha zaidi. Ni kuacha ushahidi wa kutosha ili mtengenezaji aweze kusema ni mkakati upi wa muktadha ulio tumika na kama ulibadilisha simu ya mfano inayofuata kwa njia iliyokusudiwa.
 
 ### Mfano wa Uhandisi wa Muktadha
 
-Tuseme tunataka wakala wa AI **"Nipangie safari ya kwenda Paris."**
+Tuchukulie tunataka wakala wa AI **"Nifungie safari ya kwenda Paris."**
 
-• Wakala rahisi anayetumia uhandisi wa maelekezo pekee anaweza kujibu: **"Sawa, ungependa kwenda Paris lini?"**. Anachakata tu swali lako la moja kwa moja wakati ulipouliza.
+• Wakala rahisi anayejikita tu katika uhandisi wa maagizo anaweza kujibu: **"Sawa, ungependa kwenda Paris lini?**". Alishughulikia swali lako moja kwa moja wakati mtumiaji aliuliza.
 
-• Wakala anayezingatia mikakati ya uhandisi wa muktadha iliyofunikwa angefanya zaidi. Kabla ya kujibu, mfumo wake unaweza:
+• Wakala anayetumia mikakati ya uhandisi wa muktadha iliyojadiliwa angefanya zaidi. Kabla hata ya kujibu, mfumo wake unaweza:
 
-  ◦ **Kuangalia kalenda yako** kwa tarehe zinazopatikana (kupata data ya wakati halisi).
+  ◦ **Kagua kalenda yako** kwa tarehe zilizopo (kupata data ya wakati halisi).
 
- ◦ **Kukumbuka mapendeleo ya safari za zamani** (kutoka kumbukumbu za muda mrefu) kama shirika la ndege unalopendelea, bajeti, au kama unapendelea safari za moja kwa moja.
+ ◦ **Kumbuka upendeleo wa safari za zamani** (kutoka kumbukumbu za muda mrefu) kama shirika la ndege unalopendelea, bajeti, au kama unapendelea ndege za moja kwa moja.
 
- ◦ **Kutambua zana zinazopatikana** kwa uhifadhi wa ndege na hoteli.
+ ◦ **Tambua zana zinazopatikana** kwa ajili ya kuhifadhi tiketi za ndege na hoteli.
 
-- Kisha, jibu la mfano linaweza kuwa: **"Habari [Jina Lako]! Naona uko huru wiki ya kwanza ya Oktoba. Nianze kutafuta safari za moja kwa moja kwenda Paris na [Shirika la Ndege Unalopendelea] ndani ya bajeti yako ya kawaida ya [Bajeti]?"**. Jibu hili lenye muktadha mzuri linaonyesha nguvu ya uhandisi wa muktadha.
+- Kisha mfano wa jibu unaweza kuwa:  "Hey [Jina Lako]! Naona uko huru wiki ya kwanza ya Oktoba. Nitatafuta ndege za moja kwa moja kwenda Paris kwa [Shirika la Ndege Unalopendelea] katika bajeti yako ya kawaida ya [Bajeti]?". Jibu hili lenye muktadha unaoeleweka linaonyesha nguvu ya uhandisi wa muktadha.
 
-## Mifumo ya Kushindwa kwa Muktadha
+## Makosa ya Kawaida ya Muktadha
 
-### Uchafuzi wa Muktadha
+### Kuathiriwa kwa Muktadha
 
-**Ni nini:** Wakati halusination (taarifa ya uongo iliyotolewa na LLM) au kosa linaingia katika muktadha na linarejelewa mara kwa mara, likisababisha wakala kufuata malengo yasiyowezekana au kuunda mikakati ya kipuuzi.
+**Ni nini:** Wakati hali ya kuchelea (taarifa zisizo sahihi zinazotengenezwa na LLM) au kosa linaingia katika muktadha na kurudiwa kurejelezwa, kusababisha wakala kufuata malengo yasiyowezekana au kuanzisha mikakati isiyo na maana.
 
-**Cha kufanya:** Tekeleza **uthibitishaji wa muktadha** na **karantini**. Thibitisha taarifa kabla ya kuongezwa kwenye kumbukumbu za muda mrefu. Ikiwa uchafuzi unawezekana unagunduliwa, anza nyuzi mpya za muktadha ili kuzuia taarifa mbaya kuenea.
+**Kufanya nini:** Tekeleza **uthibitishaji wa muktadha** na **kushikilia wa karantini**. Thibitisha taarifa kabla ya kuongezwa kwenye kumbukumbu za muda mrefu. Ikiwa kuathiriwa kunaonekana, anza vijuzi safi vya muktadha kuzuia usambazaji wa taarifa mbaya.
 
-**Mfano wa Uhifadhi wa Safari:** Wakala wako anahusisha **safari ya moja kwa moja kutoka uwanja mdogo wa ndege wa ndani kwenda mji wa kimataifa wa mbali** ambao hauwezi kutoa safari za kimataifa. Maelezo haya ya safari yasiyokuwepo yanahifadhiwa katika muktadha. Baadaye, unapomwomba wakala kuhifadhi, anaendelea kujaribu kutafuta tiketi kwa njia hii isiyowezekana, na kusababisha makosa ya mara kwa mara.
+**Mfano wa Kuhifadhi Safari:** Wakala wako hutengeneza dhana ya **ndege moja kwa moja kutoka uwanja mdogo wa ndege wa mtaa kwenda mji mkubwa wa kimataifa** ambao hauwezi kuwapo. Maelezo haya ya ndege yasiyo ya halisi huhifadhiwa kwenye muktadha. Baadaye, unapomuomba wakala kuhifadhi, anaendelea kutafuta tiketi za njia hii isiyowezekana, ikisababisha makosa ya kurudiarudia.
 
-**Suluhisho:** Tekeleza hatua inayothibitisha **uwepo wa safari na njia kupitia API ya wakati halisi** _kabla_ ya kuongeza maelezo ya safari kwenye muktadha wa kazi wa wakala. Ikiwa uthibitishaji unashindwa, taarifa isiyo sahihi "inawekwa karantini" na haitumiki tena.
+**Suluhisho:** Tekeleza hatua ambayo **huthibitisha uwepo wa ndege na njia kwa API ya wakati halisi** _kabla_ ya kuongeza maelezo ya ndege katika muktadha wa wakala. Ikiwa uthibitishaji unashindwa, taarifa hiyo mbaya huwekwa "karantini" na haitumiki zaidi.
 
-### Usumbufu wa Muktadha
+### Kutawazwa kwa Muktadha
 
-**Ni nini:** Wakati muktadha unakuwa mkubwa sana kiasi kwamba modeli inazingatia sana historia iliyokusanywa badala ya kutumia kile ilichojifunza wakati wa mafunzo, na kusababisha vitendo vya kurudia au visivyo na msaada. Modeli zinaweza kuanza kufanya makosa hata kabla ya dirisha la muktadha kujaa.
+**Ni nini:** Wakati muktadha unakuwa mkubwa sana kiasi kwamba mfano unazingatia historia iliyokusanywa kwa zaidi badala ya kutumia kile alichojifunza wakati wa mafunzo, kusababisha hatua za kurudia au zisizosaidia. Mifano inaweza kuanza kufanya makosa hata kabla ya dirisha la muktadha kufikia kikomo.
 
-**Cha kufanya:** Tumia **muhtasari wa muktadha**. Mara kwa mara banisha taarifa iliyokusanywa katika muhtasari mfupi, ukihifadhi maelezo muhimu huku ukiondoa historia isiyohitajika. Hii husaidia "kuweka upya" umakini.
+**Kufanya nini:** Tumia **muhtasari wa muktadha**. Kila mara finyu taarifa zilizokusanywa kuwa muhtasari mfupi, ukihifadhi maelezo muhimu na kuondoa historia ya kurudia. Hii husaidia "kurejesha mkazo".
 
-**Mfano wa Uhifadhi wa Safari:** Umekuwa ukijadili maeneo mbalimbali ya ndoto ya kusafiri kwa muda mrefu, ikijumuisha maelezo ya kina ya safari yako ya kubeba mizigo kutoka miaka miwili iliyopita. Unapouliza hatimaye **"nipatie safari ya bei nafuu kwa mwezi ujao,"** wakala anazidiwa na maelezo ya zamani yasiyohusiana na anaendelea kuuliza kuhusu vifaa vyako vya kubeba mizigo au ratiba za zamani, akipuuza ombi lako la sasa.
+**Mfano wa Kuhifadhi Safari:** Umeshawahi kujadili maeneo mbalimbali ya ndoto zako za safari kwa muda mrefu, ikiwa ni pamoja na rekodi ya safari yako ya kusafiri kwa mabegi miaka miwili iliyopita. Unapomuomba hatimaye **"nitafutie ndege ya bei nafuu mwezi ujao,"** wakala anazidi kushughulikia maelezo ya zamani yasiyo muhimu na kuendelea kukuuliza kuhusu vifaa vyako vya kusafiri au ratiba za zamani, akipuuzia ombi lako la sasa.
 
-**Suluhisho:** Baada ya idadi fulani ya zamu au wakati muktadha unakua mkubwa sana, wakala anapaswa **kufupisha sehemu za hivi karibuni na muhimu za mazungumzo** – akizingatia tarehe zako za kusafiri za sasa na marudio – na kutumia muhtasari huo uliobanwa kwa simu inayofuata ya LLM, akiondoa mazungumzo ya kihistoria yasiyo muhimu.
+**Suluhisho:** Baada ya mizunguko fulani au wakati muktadha unakuwa mkubwa sana, wakala anapaswa **kutengeneza muhtasari wa sehemu za hivi karibuni na muhimu za mazungumzo** – ukizingatia tarehe za sasa za safari na sehemu unayotaka – na kutumia muhtasari huu uliosagwa kwa simu inayofuata ya LLM, akiondoa mazungumzo ya kihistoria yasiyohusiana.
 
-### Mkanganyiko wa Muktadha
+### Kuchanganyikiwa kwa Muktadha
 
-**Ni nini:** Wakati muktadha usio wa lazima, mara nyingi kwa njia ya zana nyingi zinazopatikana, unasababisha modeli kutoa majibu mabaya au kuita zana zisizohusiana. Modeli ndogo zinaathirika zaidi na hili.
+**Ni nini:** Wakati muktadha usiohitajika, mara nyingi kwa wingi wa zana zinazopatikana, husababisha mfano kutoa majibu mabaya au kuita zana zisizohusiana. Mifano midogo hasa ni rahisi kushikiliwa na hili.
 
-**Cha kufanya:** Tekeleza **usimamizi wa mzigo wa zana** kwa kutumia mbinu za RAG. Hifadhi maelezo ya zana katika hifadhidata ya vector na uchague _tu_ zana zinazohusiana zaidi kwa kila kazi maalum. Utafiti unaonyesha kupunguza uteuzi wa zana hadi chini ya 30.
+**Kufanya nini:** Tekeleza **usimamizi wa mzigo wa zana** kwa kutumia mbinu za RAG. Weka maelezo ya zana katika hifadhidata ya vekta na chagua _tu_ zana zinazohusiana zaidi kwa kazi fulani. Utafiti unaonyesha kupunguza uchaguzi wa zana hadi chini ya 30.
 
-**Mfano wa Uhifadhi wa Safari:** Wakala wako ana ufikiaji wa zana nyingi: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, nk. Unauliza, **"Njia bora ya kuzunguka Paris ni ipi?"** Kwa sababu ya idadi kubwa ya zana, wakala anachanganyikiwa na anajaribu kuita `book_flight` _ndani_ ya Paris, au `rent_car` ingawa unapendelea usafiri wa umma, kwa sababu maelezo ya zana yanaweza kuingiliana au hawezi kutambua bora zaidi.
+**Mfano wa Kuhifadhi Safari:** Wakala wako ana zana nyingi: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, n.k. Unauliza, **"Njia bora ya kusogea Paris ni ipi?"** Kwa sababu ya idadi kubwa ya zana, wakala anachanganyikiwa na kujaribu kuita `book_flight` _ndani_ ya Paris, au `rent_car` ingawa unapendelea usafiri wa umma, kwa sababu maelezo ya zana huenda yanavurugika au hawezi kutambua zana bora.
 
-**Suluhisho:** Tumia **RAG juu ya maelezo ya zana**. Unapouliza kuhusu kuzunguka Paris, mfumo unapata _tu_ zana zinazohusiana zaidi kama `rent_car` au `public_transport_info` kulingana na swali lako, na kuwasilisha "mzigo" wa zana uliozingatia kwa LLM.
+**Suluhisho:** Tumia **RAG juu ya maelezo ya zana**. Unapouliza kuhusu kusogea Paris, mfumo unatambua _tu_ zana zinazohusiana zaidi kama `rent_car` au `public_transport_info` kulingana na ombi lako, ukitoa orodha iliyolengwa ya zana kwa LLM.
 
 ### Mgongano wa Muktadha
 
-**Ni nini:** Wakati taarifa zinazokinzana zipo ndani ya muktadha, na kusababisha hoja zisizo thabiti au majibu mabaya ya mwisho. Hili mara nyingi hutokea wakati taarifa zinapofika kwa hatua, na dhana za awali zisizo sahihi zinabaki katika muktadha.
+**Ni nini:** Wakati taarifa zinazopingana zipo ndani ya muktadha, husababisha hoja zisizolingana au majibu mabaya ya mwisho. Hii mara nyingi hutokea taarifa zinapofika hatua kwa hatua, na dhana zisizo sahihi za awali kubaki katika muktadha.
 
-**Cha kufanya:** Tumia **kupunguza muktadha** na **kuondoa mzigo**. Kupunguza kunamaanisha kuondoa taarifa za zamani au zinazokinzana wakati maelezo mapya yanapofika. Kuondoa mzigo kunampa modeli "scratchpad" tofauti ya kuchakata taarifa bila kuchafua muktadha mkuu.
+**Kufanya nini:** Tumia **kupunguza muktadha** na **kuhamisha mzigo**. Kupunguza maana yake ni kuondoa taarifa za zamani au zinazopingana wakati maelezo mapya yanapofika. Kuhamisha mzigo kunampa mfano eneo la kazi la kipekee "scratchpad" kusindika taarifa bila kuchafua muktadha mkuu.
 
-**Mfano wa Uhifadhi wa Safari:** Awali unamwambia wakala wako, **"Nataka kusafiri daraja la uchumi."** Baadaye katika mazungumzo, unabadilisha mawazo yako na kusema, **"Kwa safari hii, hebu twende daraja la biashara."** Ikiwa maagizo yote mawili yanabaki katika muktadha, wakala anaweza kupokea matokeo ya utafutaji yanayokinzana au kuchanganyikiwa kuhusu ni upendeleo gani wa kuzingatia.
 
-**Suluhisho:** Tekeleza **kupunguza muktadha**. Wakati maagizo mapya yanapingana na ya zamani, agizo la zamani linaondolewa au linazidiwa waziwazi katika muktadha. Vinginevyo, wakala anaweza kutumia **scratchpad** kupatanisha mapendeleo yanayokinzana kabla ya kuamua, kuhakikisha tu agizo la mwisho, thabiti linaongoza vitendo vyake.
+**Mfano wa Kuresha Safari:** Awali unasema kwa wakala wako, **"Nataka kuruka daraja la uchumi."** Baadaye katika mazungumzo, unabadilisha mawazo na kusema, **"Kwa kweli, kwa safari hii, twende daraja la biashara."** Ikiwa maagizo yote mawili yatalala katika muktadha, wakala anaweza kupokea matokeo ya utafutaji yanayopingana au kuchanganyikiwa kuhusu ni upendeleo gani wa lazima kupewa kipaumbele.
+
+**Suluhisho:** Tekeleza **kukata muktadha**. Wakati agizo jipya linapingana na la zamani, agizo la zamani linaondolewa au linaangaziwa wazi katika muktadha. Vinginevyo, wakala anaweza kutumia **kumbukumbu ya maandishi** ili kutatua upendeleo zinazopingana kabla ya kuamua, kuhakikisha agizo la mwisho, linalolingana ndilo linaongoza hatua zake.
 
 ## Una Maswali Zaidi Kuhusu Uhandisi wa Muktadha?
 
-Jiunge na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ili kukutana na wanafunzi wengine, kuhudhuria masaa ya ofisi, na kupata majibu ya maswali yako kuhusu Mawakala wa AI.
+Jiunge na [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) kutana na wanaojifunza wengine, hudhuria saa za ofisi na pata majibu ya maswali yako kuhusu Wakala wa AI.
+## Somo lililopita
+
+[Agentic Protocols](../11-agentic-protocols/README.md)
+
+## Somo linalofuata
+
+[Memory for AI Agents](../13-agent-memory/README.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kuhakikisha usahihi, tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

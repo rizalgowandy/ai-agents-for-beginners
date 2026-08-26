@@ -1,110 +1,108 @@
 [![How to Design Good AI Agents](../../../translated_images/pcm/lesson-4-thumbnail.546162853cb3daff.webp)](https://youtu.be/vieRiPRx-gI?si=cEZ8ApnT6Sus9rhn)
 
-> _(Click di picture wey dey top na so to watch video for dis lesson)_
+> _(Click di picture wey dey above to watch video for dis lesson)_
 
 # Tool Use Design Pattern
 
-Tools dey interesting because dem dey allow AI agents to get beta range of things dem fit do. Instead make di agent get small small action dem fit do, if you add tool, di agent fit do plenty different actions. For dis chapter, we go look di Tool Use Design Pattern, wey dey talk how AI agents fit use specific tools to achieve dia goals.
+Tools interesting because dem allow AI agents to get wider range of skills. Instead make agent get small set of actions to do, if you add tool, agent fit do plenty actions. For dis chapter, we go see Tool Use Design Pattern wey dey explain how AI agents fit use certain tools to reach their goals.
 
 ## Introduction
 
-For dis lesson, we wan answer dis questions:
+For dis lesson, we wan find answer to dis questions dem:
 
-- Wetin be di tool use design pattern?
-- For which kain cases e fit apply?
-- Wetin be di elements/building blocks wey you need to take implement di design pattern?
-- Wetin be di special things wey you for consider when you dey use di Tool Use Design Pattern to build AI agents wey people fit trust?
+- Wetin be tool use design pattern?
+- Wetin be di kain cases wey e fit apply?
+- Wetin be di elements/building blocks wey dem need to use dis design pattern?
+- Wetin be di special tins wey we suppose consider wen we dey use Tool Use Design Pattern to build AI agents wey people fit trust?
 
 ## Learning Goals
 
 After you finish dis lesson, you go fit:
 
-- Define Wetin be di Tool Use Design Pattern and why e dey.
-- Identify cases wey you fit use di Tool Use Design Pattern.
-- Understand di main elements wey you go need to implement di design pattern.
-- Recognize wetin to consider to make sure AI agents wey use dis design pattern dey trustworthy.
+- Define Tool Use Design Pattern and why e dey important.
+- Identify di cases wey you fit use Tool Use Design Pattern.
+- Understand di important elements wey you need to put for place to use di design pattern.
+- Recognize wetin you suppose consider to make sure AI agents wey dey use dis design pattern go dey trustworthy.
 
-## Wetin be di Tool Use Design Pattern?
+## Wetin be Tool Use Design Pattern?
 
-Di **Tool Use Design Pattern** dey focus on how to give LLMs power to dey interact with external tools to make dem fit achieve specific goals. Tools na code wey agent fit run make e perform actions. Tool fit be simple function like calculator, or e fit be API call go third-party service like check stock price or weather forecast. For AI agents matter, tools dem dey designed to run when agents see **model-generated function calls**.
+Di **Tool Use Design Pattern** na to give LLMs power to interact with external tools to fit reach their specific goals. Tool na code wey agent fit run to do action. Tool fit be simple function like calculator, or API call to third-party service like checking stock price or checking weather report. For AI agents context, tools dem dey made to be run by agents based on **model-generated function calls**.
 
-## For which cases you fit use am?
+## Wetin be di use cases wey e fit apply?
 
-AI Agents fit use tools do complex work, find information, or make decisions. Di tool use design pattern dey popular for situations wey require to dey interact with external systems dynamically, like databases, web services, or code interpreters. Dis kind power useful for different cases like:
+AI Agents fit use tools to finish complex work, find information, or make decisions. Tool use design pattern dey often for scenarios wey need dynamic interaction with external systems, like databases, web services, or code interpreters. Dis power dey useful for plenty different cases like:
 
-- **Dynamic Information Retrieval:** Agents fit ask external APIs or databases to get current data (like SQLite database query for data, or check stock price or weather).
-- **Code Execution and Interpretation:** Agents fit run code or scripts to solve math wahala, generate reports, or run simulations.
-- **Workflow Automation:** Make repetitive or multi-step work automatically with tools like task schedulers, email services, or data pipelines.
-- **Customer Support:** Agents fit work with CRM systems, ticketing platforms, or knowledge bases to solve user questions.
-- **Content Generation and Editing:** Agents fit use tools like grammar checkers, text summarizers, or content safety evaluators to help create content.
+- **Dynamic Information Retrieval:** Agents fit ask external APIs or databases to collect up-to-date data (like, ask SQLite database to do data analysis, check stock prices or weather info).
+- **Code Execution and Interpretation:** Agents fit run code or scripts to solve math problems, make reports, or do simulations.
+- **Workflow Automation:** Automate repeating or multi-step workflow by linking tools like task schedulers, email services, or data pipelines.
+- **Customer Support:** Agents fit connect with CRM systems, ticketing platforms, or knowledge bases to solve user questions.
+- **Content Generation and Editing:** Agents fit use tools like grammar checker, text summarizer, or content safety checkers to help for content creation work.
 
-## Wetin be di elements/building blocks wey you go need for di tool use design pattern?
+## Wetin be di elements/building blocks wey dem need to use Tool Use Design Pattern?
 
-Dis building blocks go help AI agent perform plenty tasks. Make we check di main elements wey you go need for di Tool Use Design Pattern:
+These building blocks dey allow AI agent to do wide range of work. Make we look key elements wey person need to take put Tool Use Design Pattern for ground:
 
-- **Function/Tool Schemas**: Exact description of tools wey dey available, including function name, reason for am, parameters wey e need, and output wey people expect. Dis schemas dey help LLM sabi which tools dey and how to create correct requests.
+- **Function/Tool Schemas**: Detailed definitions of tools wey dey available, including function name, purpose, wetin parameters e need, and wetin output e go give. These schemas dey help LLM sabi wetin tools dey available and how e go form correct requests.
 
-- **Function Execution Logic**: How and when tools dey call based on wetin user want and conversation context. E fit get planner modules, routing systems, or conditional flows wey dey decide how tools go run dynamically.
+- **Function Execution Logic**: E dey control how and when tools go dey called based on wetin user want and conversation context. This fit get planner modules, routing ways, or conditional flows wey decide tool usage as e happen.
 
-- **Message Handling System**: Di parts wey manage conversation flow between user inputs, LLM responses, tool calls, and tool outputs.
+- **Message Handling System**: Components wey dey control conversation flow between user messages, LLM responses, tool calls, and tool outputs.
 
-- **Tool Integration Framework**: Infrastructure wey connect agent to different tools, whether na simple functions or big external services.
+- **Tool Integration Framework**: Infrastructure wey connect agent to different tools, whether na simple functions or complicated external services.
 
-- **Error Handling & Validation**: Ways to handle failure when tool no work, check parameters, and fix unexpected responses.
+- **Error Handling & Validation**: Ways to handle failures inside tool execution, check parameters, and manage unexpected responses.
 
-- **State Management**: E dey track conversation context, previous tool uses, and persistent data to make sure everything consistent for multi-turn interaction.
+- **State Management**: Dey track conversation context, previous tool uses, and persistent data to make sure say multiple turns of talk go consistent.
 
-Next, make we check Function/Tool Calling well well.
-
+Next, make we see Function/Tool Calling in more detail.
+ 
 ### Function/Tool Calling
 
-Function calling na di main way we dey enable Large Language Models (LLMs) to interact with tools. You go sabi see 'Function' and 'Tool' dey used like say dem be one because 'functions' (blocks of reusable code) na di 'tools' wey agents dey use to do things. For function code make e run, LLM must compare wetin user ask with how di function dey described. To take do dis, schema wey get all function description go send to LLM. LLM go then select di best function for di work, and e go return di function name and arguments. Di selected function go run, e reply go come back to di LLM, wey go use dat info settle user request.
+Function calling na main way we take allow Large Language Models (LLMs) dey interact with tools. You go often see 'Function' and 'Tool' dey used as same thing because 'functions' (blocks of reusable code) na di 'tools' wey agents dey use to do work. To run function code, LLM must compare wetin user request with function description. To do dis, schema wey get all function descriptions go send to LLM. LLM go choose the best function for di task and return the name plus arguments. Di chosen function go run, e response go come back to LLM, wey e go use the info to answer user request.
 
-For developers to implement function calling for agents, you need:
+For developers to make function calling work for agents, you go need:
 
-1. LLM model wey fit function calling
-2. Schema wey get function description
-3. Code wey fit run each function wey dem describe
+1. LLM model wey support function calling
+2. Schema wey get function descriptions
+3. Code for each function wey dem describe
 
-Make we use example of to get current time for one city to explain:
+Make we use example of getting current time for one city make we explain:
 
-1. **Initialize LLM wey support function calling:**
+1. **Initialize LLM wey fit do function calling:**
 
-    No all models support function calling, so e important to check say di LLM wey you dey use fit do am. <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling" target="_blank">Azure OpenAI</a> dey support function calling. We fit start by initializing di Azure OpenAI client.
+    Not all models fit function calling, so e important to check say di LLM wey you dey use fit do am.     <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling" target="_blank">Azure OpenAI</a> fit do function calling. We fit start by to turn on OpenAI client for Azure OpenAI **Responses API** (di stable `/openai/v1/` endpoint — no `api_version` needed). 
 
     ```python
-    # Start di Azure OpenAI client
-    client = AzureOpenAI(
-        azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT"), 
-        api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
-        api_version="2024-05-01-preview"
+    # Start di OpenAI client for Azure OpenAI (Responses API, v1 endpoint)
+    client = OpenAI(
+        base_url=f"{os.environ['AZURE_OPENAI_ENDPOINT'].rstrip('/')}/openai/v1/",
+        api_key=os.environ["AZURE_OPENAI_API_KEY"],
     )
+    deployment_name = os.environ["AZURE_OPENAI_DEPLOYMENT"]
     ```
 
-1. **Create Function Schema**:
+1. **Make Function Schema**:
 
-    Next we go define JSON schema wey get function name, function description, plus di names and descriptions of di function parameters.
-    Then we go send dis schema plus di user request to di client we don create before, like make we find time for San Francisco. Wetin important to know be say, di **tool call** na di thing wey go come back, **no be** di final answer to di question. Like we talk before, LLM go return function name wey e pick for di work, and di arguments wey e go pass.
+    Next, we go define JSON schema wey get function name, description of wetin function dey do, plus names and descriptions of function parameters.
+    We go carry dis schema pass to client wey we make before, with user request to find time for San Francisco. Wetin dey important to know na say **tool call** na wetin go return, **no** be final answer to the question. Like we talk before, LLM go return the function name wey e select for di task, plus arguments wey e go pass.
 
     ```python
-    # Function description wey di model go read
+    # Function description for di model to read (Responses API flat tool format)
     tools = [
         {
             "type": "function",
-            "function": {
-                "name": "get_current_time",
-                "description": "Get the current time in a given location",
-                "parameters": {
-                    "type": "object",
-                    "properties": {
-                        "location": {
-                            "type": "string",
-                            "description": "The city name, e.g. San Francisco",
-                        },
+            "name": "get_current_time",
+            "description": "Get the current time in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city name, e.g. San Francisco",
                     },
-                    "required": ["location"],
                 },
-            }
+                "required": ["location"],
+            },
         }
     ]
     ```
@@ -112,35 +110,35 @@ Make we use example of to get current time for one city to explain:
     ```python
   
     # Di first message wey user send
-    messages = [{"role": "user", "content": "What's the current time in San Francisco"}] 
-  
-    # First API call: Ask di model make e use di function
-      response = client.chat.completions.create(
-          model=deployment_name,
-          messages=messages,
-          tools=tools,
-          tool_choice="auto",
-      )
-  
-      # Process di response wey di model give
-      response_message = response.choices[0].message
-      messages.append(response_message)
-  
-      print("Model's response:")  
+    messages = [{"role": "user", "content": "What's the current time in San Francisco"}]
 
-      print(response_message)
+    # First time we dey call API: Make model use di function
+    response = client.responses.create(
+        model=deployment_name,
+        input=messages,
+        tools=tools,
+        tool_choice="auto",
+        store=False,
+    )
+
+    # Di Responses API go return tool calls as function_call tins for response.output.
+    # Add dem join di conversation make di model get full gist for di next turn.
+    messages += response.output
+
+    print("Model's response:")
+    print(response.output)
   
     ```
 
     ```bash
     Model's response:
-    ChatCompletionMessage(content=None, role='assistant', function_call=None, tool_calls=[ChatCompletionMessageToolCall(id='call_pOsKdUlqvdyttYB67MOj434b', function=Function(arguments='{"location":"San Francisco"}', name='get_current_time'), type='function')])
+    [ResponseFunctionToolCall(arguments='{"location":"San Francisco"}', call_id='call_pOsKdUlqvdyttYB67MOj434b', name='get_current_time', type='function_call')]
     ```
   
-1. **Function code wey go carry out di work:**
+1. **Di function code wey you need to carry out the task:**
 
-    Now wey LLM don select which function to run, di code wey go run di work must dey implemented and executed.
-    We fit write code to get current time for Python. We go also write code to extract function name and arguments from response_message to get final answer.
+    Now wey LLM don choose which function to run, di code wey go run di task need to dey implemented and executed.
+    We fit write code to get current time for Python. We also go need write code to pull name and arguments from response_message to get final answer.
 
     ```python
       def get_current_time(location):
@@ -162,33 +160,36 @@ Make we use example of to get current time for one city to explain:
     ```
 
      ```python
-     # Handle how una dey call function
-      if response_message.tool_calls:
-          for tool_call in response_message.tool_calls:
-              if tool_call.function.name == "get_current_time":
-     
-                  function_args = json.loads(tool_call.function.arguments)
-     
-                  time_response = get_current_time(
-                      location=function_args.get("location")
-                  )
-     
-                  messages.append({
-                      "tool_call_id": tool_call.id,
-                      "role": "tool",
-                      "name": "get_current_time",
-                      "content": time_response,
-                  })
-      else:
-          print("No tool calls were made by the model.")  
-  
-      # Second API call: Comot the last answer from the model
-      final_response = client.chat.completions.create(
-          model=deployment_name,
-          messages=messages,
-      )
-  
-      return final_response.choices[0].message.content
+    # Handle how di functions dem call
+    tool_calls = [item for item in response.output if item.type == "function_call"]
+    if tool_calls:
+        for tool_call in tool_calls:
+            if tool_call.name == "get_current_time":
+
+                function_args = json.loads(tool_call.arguments)
+
+                time_response = get_current_time(
+                    location=function_args.get("location")
+                )
+
+                # Return di tool result as one function_call_output item
+                messages.append({
+                    "type": "function_call_output",
+                    "call_id": tool_call.call_id,
+                    "output": time_response,
+                })
+    else:
+        print("No tool calls were made by the model.")
+
+    # Second API call: Make you get di final response from di model
+    final_response = client.responses.create(
+        model=deployment_name,
+        input=messages,
+        tools=tools,
+        store=False,
+    )
+
+    return final_response.output_text
      ```
 
      ```bash
@@ -197,62 +198,57 @@ Make we use example of to get current time for one city to explain:
       The current time in San Francisco is 09:24 AM.
      ```
 
-Function Calling na heart of most, if no be all agent tool use design, but sometimes to implement am from scratch fit hard.
-Like we learn for [Lesson 2](../../../02-explore-agentic-frameworks) agentic frameworks dey give us pre-built building blocks to implement tool use.
+Function Calling na di heart of most, if no be all, agent tool use design, but to build am from scratch fit sometimes hard.
+Like we learn for [Lesson 2](../../../02-explore-agentic-frameworks) agentic frameworks dey give us pre-built building blocks to put tool use for ground.
  
 ## Tool Use Examples with Agentic Frameworks
 
-Here some examples how you fit implement di Tool Use Design Pattern with different agentic frameworks:
+Here be some examples how you fit use Tool Use Design Pattern with different agentic frameworks:
 
-### Semantic Kernel
+### Microsoft Agent Framework
 
-<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Semantic Kernel</a> na open-source AI framework for .NET, Python, and Java developers wey dey work with Large Language Models (LLMs). E dey make function calling easy by automatically dey describe your functions and their parameters to di model via <a href="https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions" target="_blank">serializing</a>. E also dey manage di back-and-forth communication between di model and your code. Another advantages to use agentic framework like Semantic Kernel na say e allow you to use pre-built tools like <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step4_assistant_tool_file_search.py" target="_blank">File Search</a> and <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py" target="_blank">Code Interpreter</a>.
+<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Agent Framework</a> na open-source AI framework to build AI agents. E make am easy to use function calling by allowing you to define tools as Python functions with `@tool` decorator. Framework go handle communication between model and your code. E also provide access to pre-built tools like File Search and Code Interpreter through `FoundryChatClient`.
 
-Di diagram below dey show how function calling with Semantic Kernel dey go:
+Di diagram below show how function calling dey work for Microsoft Agent Framework:
 
 ![function calling](../../../translated_images/pcm/functioncalling-diagram.a84006fc287f6014.webp)
 
-For Semantic Kernel functions/tools na <a href="https://learn.microsoft.com/semantic-kernel/concepts/plugins/?pivots=programming-language-python" target="_blank">Plugins</a> dem dey call am. We fit change di `get_current_time` function wey we see before into plugin by turning am into class wey get di function inside. We fit also import di `kernel_function` decorator, wey dey take description of di function. When you create kernel with GetCurrentTimePlugin, di kernel go automatically serialize di function and parameters, for create schema to send go LLM.
+For Microsoft Agent Framework, tools na decorated functions. We fit convert di `get_current_time` function wey we see before to tool with `@tool` decorator. Framework go automatically serialize di function and parameters, and create schema to send to LLM.
 
 ```python
-from semantic_kernel.functions import kernel_function
+import os
+from agent_framework import tool
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-class GetCurrentTimePlugin:
-    async def __init__(self, location):
-        self.location = location
+@tool(approval_mode="never_require")
+def get_current_time(location: str) -> str:
+    """Get the current time for a given location"""
+    ...
 
-    @kernel_function(
-        description="Get the current time for a given location"
-    )
-    def get_current_time(location: str = ""):
-        ...
+# Make di client
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
 
-```
-
-```python 
-from semantic_kernel import Kernel
-
-# Make di kernel
-kernel = Kernel()
-
-# Make di plugin
-get_current_time_plugin = GetCurrentTimePlugin(location)
-
-# Add di plugin go inside di kernel
-kernel.add_plugin(get_current_time_plugin)
+# Make one agent an run am wit di tool
+agent = provider.as_agent(name="TimeAgent", instructions="Use available tools to answer questions.", tools=get_current_time)
+response = await agent.run("What time is it?")
 ```
   
-### Azure AI Agent Service
+### Microsoft Foundry Agent Service
 
-<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent Service</a> na new agentic framework wey design make developers fit build, deploy, and scale high-quality and extensible AI agents wey secure, without to worry about managing underlying compute and storage resources. E sef good wella for enterprise applications because na fully managed service with enterprise grade security.
+<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Foundry Agent Service</a> na new agentic framework wey dem design to help developers build, deploy, and scale AI agents wey get high quality and fit extend well without hassle of managing compute and storage resources. E good well well for enterprise applications because e get full managed service plus enterprise grade security.
 
-Compared to just developing with LLM API direct, Azure AI Agent Service get advantages like:
+Compared to developing with LLM API direct, Microsoft Foundry Agent Service get some better things like:
 
-- Automatic tool calling – you no need to parse tool call, run tool, and handle response; all these na server side dem dey do now
-- Securely managed data – instead make you manage your own conversation state, you fit use threads to store all info you need
-- Out-of-the-box tools – Tools wey you fit use to work with your data sources, like Bing, Azure AI Search, and Azure Functions.
+- Automatic tool calling – you no need parse tool call, call di tool, and handle response; all that one dem dey do inside server
+- Securely managed data – no need manage your own conversation state, you fit use threads to keep all info you need
+- Out-of-the-box tools – Tools you fit use to connect with your data sources, like Bing, Azure AI Search, and Azure Functions.
 
-Tools wey dey available for Azure AI Agent Service fit divided into two groups:
+Di tools wey dey Microsoft Foundry Agent Service fit divide into two kinds:
 
 1. Knowledge Tools:
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview" target="_blank">Grounding with Bing Search</a>
@@ -265,21 +261,21 @@ Tools wey dey available for Azure AI Agent Service fit divided into two groups:
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/openapi-spec?tabs=python&pivots=overview" target="_blank">OpenAPI defined tools</a>
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-functions?pivots=overview" target="_blank">Azure Functions</a>
 
-Agent Service allow us to fit use all these tools together as `toolset`. E also dey use `threads` to keep track of message history from one kain conversation.
+Di Agent Service dey allow us to use these tools together as `toolset`. E also dey use `threads` wey dey keep history of messages from one conversation.
 
-Imagine say you be sales agent for company wey dem call Contoso. You want create conversational agent wey fit answer questions about your sales data.
+Imagine say you be sales agent for company wey dem dey call Contoso. You wan build conversational agent wey fit answer questions about your sales data.
 
-Picture below explain how you fit use Azure AI Agent Service to analyze your sales data:
+Di image below show how you fit use Microsoft Foundry Agent Service to analyze your sales data:
 
 ![Agentic Service In Action](../../../translated_images/pcm/agent-service-in-action.34fb465c9a84659e.webp)
 
-To use any of dis tools with di service, we fit create client and define tool or toolset. For practical implementation we fit use this Python code. LLM go fit check di toolset make e decide whether to use user created function, `fetch_sales_data_using_sqlite_query`, or di pre-built Code Interpreter base on wetin user request.
+To use any tool for di service, we fit create client and define tool or toolset. To do dis for real, we fit use dis Python code. LLM go fit check the toolset and decide if e go use user created function, `fetch_sales_data_using_sqlite_query`, or pre-built Code Interpreter based on user request.
 
 ```python 
 import os
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
-from fetch_sales_data_functions import fetch_sales_data_using_sqlite_query # fetch_sales_data_using_sqlite_query function wey you fit find for fetch_sales_data_functions.py file.
+from fetch_sales_data_functions import fetch_sales_data_using_sqlite_query # fetch_sales_data_using_sqlite_query function wey you fit find for inside fetch_sales_data_functions.py file.
 from azure.ai.projects.models import ToolSet, FunctionTool, CodeInterpreterTool
 
 project_client = AIProjectClient.from_connection_string(
@@ -287,44 +283,47 @@ project_client = AIProjectClient.from_connection_string(
     conn_str=os.environ["PROJECT_CONNECTION_STRING"],
 )
 
-# Make toolset ready
+# Set up toolset
 toolset = ToolSet()
 
-# Make function calling agent ready wit the fetch_sales_data_using_sqlite_query function and join am for the toolset
+# Set up function calling agent with the fetch_sales_data_using_sqlite_query function and add am to the toolset
 fetch_data_function = FunctionTool(fetch_sales_data_using_sqlite_query)
 toolset.add(fetch_data_function)
 
-# Make Code Interpreter tool ready and join am for the toolset.
-code_interpreter = code_interpreter = CodeInterpreterTool()
-toolset.add(code_interpreter)
+# Set up Code Interpreter tool and add am to the toolset.
+code_interpreter = CodeInterpreterTool()toolset.add(code_interpreter)
 
 agent = project_client.agents.create_agent(
-    model="gpt-4o-mini", name="my-agent", instructions="You are helpful agent", 
+    model="gpt-5-mini", name="my-agent", instructions="You are helpful agent", 
     toolset=toolset
 )
 ```
 
-## Wetin be di special things to consider to build trustworthy AI agents using Tool Use Design Pattern?
+## Wetin be di special tins to consider when you dey use Tool Use Design Pattern to build AI agents wey people fit trust?
 
-One common worry about SQL wey LLMs generate dynamically na security, especially risk of SQL injection or bad bad actions like dropping or tampering database. Even though dis concerns dey real, dem fit reduce well well if database access permissions set well. For most databases, you fit set am as read-only. For database services like PostgreSQL or Azure SQL, app go get read-only (SELECT) role.
-Running di app for secure environment go make protection beta. For enterprise situations, dem dey usually comot and change data from operational systems put am inside read-only database or data warehouse wey get user-friendly schema. Dis method dey make sure say di data secure, e dey optimized for performance and accessibility, plus di app get limited, read-only access.
+One common worry with SQL wey LLMs dey dynamically create na security, especially threat of SQL injection or bad actions like to drop or damage database. Though these worries dey real, you fit reduce am well by to properly set database access permissions. For most databases, dis mean to set database as read-only. For database services like PostgreSQL or Azure SQL, app suppose get read-only (SELECT) role.
+
+To run the app for secure environment go still add more protection. For enterprise cases, data usually dey extracted and transformed from operational systems go read-only database or data warehouse with user-friendly schema. This method dey make sure say data dey secure, e fit perform well, and app get restricted read-only access.
 
 ## Sample Codes
 
 - Python: [Agent Framework](./code_samples/04-python-agent-framework.ipynb)
 - .NET: [Agent Framework](./code_samples/04-dotnet-agent-framework.md)
 
-## Got More Questions about the Tool Use Design Patterns?
+## You get more questions about Tool Use Design Patterns?
 
-Join di [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet other learners, attend office hours and get your AI Agents questions answered.
+Join [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) to meet other learners, attend office hours, and get your AI Agents questions answer.
 
 ## Additional Resources
 
 - <a href="https://microsoft.github.io/build-your-first-agent-with-azure-ai-agent-service-workshop/" target="_blank">Azure AI Agents Service Workshop</a>
 - <a href="https://github.com/Azure-Samples/contoso-creative-writer/tree/main/docs/workshop" target="_blank">Contoso Creative Writer Multi-Agent Workshop</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions" target="_blank">Semantic Kernel Function Calling Tutorial</a>
-- <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py" target="_blank">Semantic Kernel Code Interpreter</a>
-- <a href="https://microsoft.github.io/autogen/dev/user-guide/core-user-guide/components/tools.html" target="_blank">Autogen Tools</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Agent Framework Overview</a>
+
+
+## Smoke-Test Dis Agent (Optional)
+
+After you don sabi how to deploy agents for [Lesson 16](../16-deploying-scalable-agents/README.md), you fit smoke-test dis lesson `TravelToolAgent` (e still dey call im tools and answer?) wit [`tests/lesson-04-smoke-tests.json`](../../../tests/lesson-04-smoke-tests.json). See [`tests/README.md`](../tests/README.md) to know how to run am.
 
 ## Previous Lesson
 
@@ -338,5 +337,5 @@ Join di [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet oth
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
 **Disclaimer**:
-Dis document don translate wit AI translation service wey dem dey call [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you sabi say automated translation fit get some yawa or mistake inside. Di original document wey dem write for dia own language na im be di original true version. If na serious tin, make you find professional person wey sabi do human translation. We no go take any blame if person misunderstand or misinterpret anything because of dis translation.
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

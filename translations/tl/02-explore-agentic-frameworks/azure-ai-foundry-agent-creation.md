@@ -1,42 +1,42 @@
-# Azure AI Agent Service Development
+# Microsoft Foundry Agent Service Development
 
-Sa pagsasanay na ito, gagamitin mo ang mga tool ng Azure AI Agent service sa [Azure AI Foundry portal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) upang gumawa ng isang agent para sa Flight Booking. Ang agent ay makikipag-ugnayan sa mga user at magbibigay ng impormasyon tungkol sa mga flight.
+Sa pagsasanay na ito, gagamitin mo ang mga tool ng Microsoft Foundry Agent Service sa [Microsoft Foundry portal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) upang lumikha ng isang agent para sa Flight Booking. Magagawa ng agent na makipag-ugnayan sa mga user at magbigay ng impormasyon tungkol sa mga flight.
 
-## Prerequisites
+## Mga Kinakailangan
 
 Upang matapos ang pagsasanay na ito, kailangan mo ang mga sumusunod:
-1. Isang Azure account na may aktibong subscription. [Gumawa ng libreng account](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-2. Kailangan mo ng permiso upang makagawa ng Azure AI Foundry hub o mayroong isang ginawa para sa iyo.
+1. Isang Azure account na may aktibong subscription. [Gumawa ng account nang libre](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+2. Kailangan mo ng mga permiso upang lumikha ng Microsoft Foundry hub o mayroon nang nilikha para sa iyo.
     - Kung ang iyong role ay Contributor o Owner, maaari mong sundan ang mga hakbang sa tutorial na ito.
 
-## Create an Azure AI Foundry hub
+## Gumawa ng Microsoft Foundry hub
 
-> **Note:** Azure AI Foundry ay dating kilala bilang Azure AI Studio.
+> **Tandaan:** Ang Microsoft Foundry ay dating kilala bilang Azure AI Studio.
 
-1. Sundin ang mga gabay mula sa [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) blog post para sa paggawa ng Azure AI Foundry hub.
-2. Kapag nagawa na ang iyong proyekto, isara ang anumang tips na lumabas at tingnan ang pahina ng proyekto sa Azure AI Foundry portal, na dapat ay kahawig ng sumusunod na larawan:
+1. Sundin ang mga gabay mula sa [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) blog post para sa paggawa ng Microsoft Foundry hub.
+2. Kapag nalikha na ang iyong proyekto, isara ang mga tip na ipinapakita at suriin ang pahina ng proyekto sa Microsoft Foundry portal, na dapat ay katulad ng sumusunod na larawan:
 
-    ![Azure AI Foundry Project](../../../translated_images/tl/azure-ai-foundry.88d0c35298348c2f.webp)
+    ![Microsoft Foundry Project](../../../translated_images/tl/azure-ai-foundry.88d0c35298348c2f.webp)
 
-## Deploy a model
+## Mag-deploy ng model
 
-1. Sa pane sa kaliwa para sa iyong proyekto, sa seksyong **My assets**, piliin ang pahina ng **Models + endpoints**.
+1. Sa pane sa kaliwa ng iyong proyekto, sa seksyong **My assets**, piliin ang pahina ng **Models + endpoints**.
 2. Sa pahina ng **Models + endpoints**, sa tab na **Model deployments**, sa menu na **+ Deploy model**, piliin ang **Deploy base model**.
-3. Hanapin ang `gpt-4o-mini` na modelo sa listahan, pagkatapos ay piliin at kumpirmahin ito.
+3. Hanapin ang modelong `gpt-5-mini` sa listahan, pagkatapos piliin at kumpirmahin ito.
 
-    > **Note**: Ang pagbabawas ng TPM ay nakakatulong upang maiwasan ang labis na paggamit ng quota na available sa subscription na ginagamit mo.
+    > **Tandaan**: Ang pagbabawas ng TPM ay nakatutulong upang maiwasan ang labis na paggamit ng quota sa subscription na ginagamit mo.
 
     ![Model Deployed](../../../translated_images/tl/model-deployment.3749c53fb81e18fd.webp)
 
-## Create an agent
+## Gumawa ng agent
 
-Ngayon na na-deploy mo na ang modelo, maaari ka nang gumawa ng agent. Ang agent ay isang conversational AI model na maaaring gamitin upang makipag-ugnayan sa mga user.
+Ngayon na na-deploy mo na ang isang modelo, maaari kang gumawa ng isang agent. Ang agent ay isang conversational AI model na magagamit para makipag-ugnayan sa mga user.
 
-1. Sa pane sa kaliwa para sa iyong proyekto, sa seksyong **Build & Customize**, piliin ang pahina ng **Agents**.
-2. I-click ang **+ Create agent** upang gumawa ng bagong agent. Sa ilalim ng **Agent Setup** dialog box:
+1. Sa pane sa kaliwa ng iyong proyekto, sa seksyong **Build & Customize**, piliin ang pahina ng **Agents**.
+2. I-click ang **+ Create agent** upang gumawa ng bagong agent. Sa ilalim ng dialog box na **Agent Setup**:
     - Ilagay ang pangalan ng agent, tulad ng `FlightAgent`.
-    - Siguraduhing napili ang `gpt-4o-mini` model deployment na ginawa mo kanina.
-    - Itakda ang **Instructions** ayon sa prompt na gusto mong sundan ng agent. Narito ang isang halimbawa:
+    - Siguraduhing ang `gpt-5-mini` na model deployment na nilikha mo ay napili
+    - Itakda ang **Instructions** ayon sa prompt na nais mong sundin ng agent. Narito ang isang halimbawa:
     ```
     You are FlightAgent, a virtual assistant specialized in handling flight-related queries. Your role includes assisting users with searching for flights, retrieving flight details, checking seat availability, and providing real-time flight status. Follow the instructions below to ensure clarity and effectiveness in your responses:
 
@@ -66,39 +66,44 @@ Ngayon na na-deploy mo na ang modelo, maaari ka nang gumawa ng agent. Ang agent 
 > [!NOTE]
 > Para sa mas detalyadong prompt, maaari mong tingnan ang [repository na ito](https://github.com/ShivamGoyal03/RoamMind) para sa karagdagang impormasyon.
     
-> Bukod dito, maaari kang magdagdag ng **Knowledge Base** at **Actions** upang mapalawak ang kakayahan ng agent na magbigay ng mas maraming impormasyon at magsagawa ng mga automated na gawain base sa mga kahilingan ng user. Para sa pagsasanay na ito, maaari mong laktawan ang mga hakbang na ito.
+> Bukod dito, maaari kang magdagdag ng **Knowledge Base** at **Actions** upang mapalawak ang kakayahan ng agent na magbigay ng karagdagang impormasyon at magpatupad ng mga awtomatikong gawain base sa mga kahilingan ng user. Para sa pagsasanay na ito, maaari mong laktawan ang mga hakbang na ito.
     
 ![Agent Setup](../../../translated_images/tl/agent-setup.9bbb8755bf5df672.webp)
 
-3. Upang gumawa ng bagong multi-AI agent, i-click lamang ang **New Agent**. Ang bagong agent ay ipapakita sa pahina ng Agents.
+3. Upang gumawa ng bagong multi-AI agent, i-click lamang ang **New Agent**. Ang bagong gawa na agent ay ipapakita sa pahina ng Agents.
 
-## Test the agent
 
-Pagkatapos gawin ang agent, maaari mo itong subukan upang makita kung paano ito tumutugon sa mga tanong ng user sa Azure AI Foundry portal playground.
+## Subukan ang agent
+
+Pagkatapos malikha ang agent, maaari mo itong subukan upang makita kung paano ito tumutugon sa mga query ng user sa Microsoft Foundry portal playground.
 
 1. Sa itaas ng **Setup** pane para sa iyong agent, piliin ang **Try in playground**.
-2. Sa **Playground** pane, maaari kang makipag-ugnayan sa agent sa pamamagitan ng pag-type ng mga tanong sa chat window. Halimbawa, maaari mong tanungin ang agent na maghanap ng mga flight mula Seattle papuntang New York sa ika-28.
+2. Sa pane ng **Playground**, maaari kang makipag-ugnayan sa agent sa pamamagitan ng pag-type ng mga query sa chat window. Halimbawa, maaari mong hilingin sa agent na maghanap ng mga flight mula Seattle patungong New York sa ika-28.
 
-    > **Note**: Maaaring hindi magbigay ang agent ng eksaktong sagot, dahil walang real-time na data na ginagamit sa pagsasanay na ito. Layunin nito ay subukan ang kakayahan ng agent na maintindihan at tumugon sa mga tanong ng user base sa mga ibinigay na instruksyon.
+    > **Tandaan**: Maaaring hindi magbigay ng tumpak na sagot ang agent, dahil walang real-time na data ang ginagamit sa pagsasanay na ito. Ang layunin ay subukan ang kakayahan ng agent na intindihin at sagutin ang mga query ng user base sa mga ibinigay na instruksyon.
 
     ![Agent Playground](../../../translated_images/tl/agent-playground.dc146586de715010.webp)
 
-3. Pagkatapos subukan ang agent, maaari mo pa itong i-customize sa pamamagitan ng pagdagdag ng mas maraming intents, training data, at actions upang mapalawak ang kakayahan nito.
+3. Pagkatapos subukan ang agent, maaari mo pa itong i-customize sa pamamagitan ng pagdagdag ng mas maraming intents, training data, at actions upang mapahusay ang mga kakayahan nito.
 
-## Clean up resources
+## Linisin ang mga resources
 
-Kapag natapos mo na ang pagsubok sa agent, maaari mo itong tanggalin upang maiwasan ang karagdagang gastos.
+Kapag natapos mo nang subukan ang agent, maaari mo itong burahin upang maiwasan ang karagdagang gastos.
 1. Buksan ang [Azure portal](https://portal.azure.com) at tingnan ang laman ng resource group kung saan mo dineploy ang hub resources na ginamit sa pagsasanay na ito.
 2. Sa toolbar, piliin ang **Delete resource group**.
-3. Ilagay ang pangalan ng resource group at kumpirmahin na gusto mo itong tanggalin.
+3. I-type ang pangalan ng resource group at kumpirmahin na nais mong burahin ito.
 
-## Resources
+## Mga Resources
 
-- [Azure AI Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
-- [Azure AI Foundry portal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
-- [Getting Started with Azure AI Studio](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry portal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
+- [Getting Started with Microsoft Foundry](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
 - [Fundamentals of AI agents on Azure](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
 - [Azure AI Discord](https://aka.ms/AzureAI/Discord)
 
-**Paalala**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagamat nagsusumikap kami para sa katumpakan, pakatandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o di-tumpak na impormasyon. Ang orihinal na dokumento sa kanyang sariling wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na maaaring magmula sa paggamit ng pagsasaling ito.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Pagtatanggi**:
+Ang dokumentong ito ay isinalin gamit ang serbisyo ng AI translation na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang maling pagkakaintindi o maling interpretasyon na nagmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,54 +1,55 @@
-[![Planuojamo dizaino šablonas](../../../translated_images/lt/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Planavimo dizaino šablonas](../../../translated_images/lt/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
+> _(Spustelėkite aukščiau esantį paveikslėlį, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
 
-# Planuojamas dizainas
+# Planavimo dizainas
 
 ## Įvadas
 
-Šioje pamokoje aptarsime:
+Šioje pamokoje aptarsime
 
-* Aiškaus bendro tikslo nustatymą ir sudėtingos užduoties suskaidymą į valdomas dalis.
-* Struktūrizuoto išvesties panaudojimą patikimesniems ir mašinai suprantamiems atsakymams.
-* Įvykių valdymo metodikos taikymą dinamiškoms užduotims ir netikėtiems įvesties duomenims spręsti.
+* Aiškaus bendro tikslo apibrėžimą ir sudėtingos užduoties suskaidymą į valdomas užduotis.
+* Struktūruoto išvesties naudojimą patikimesnėms ir mašinai suprantamesnėms atsakymams.
+* Įvykiais grįsto požiūrio taikymą dinaminėms užduotims ir netikėtiems įvedimams valdyti.
 
 ## Mokymosi tikslai
 
-Baigę šią pamoką, suprasite:
+Baigę šią pamoką suprasite:
 
-* Kaip nustatyti ir apibrėžti bendrą AI agento tikslą, užtikrinant, kad jis aiškiai žinotų, ką reikia pasiekti.
-* Kaip suskaidyti sudėtingą užduotį į valdomas dalis ir organizuoti jas logine seka.
-* Kaip aprūpinti agentus tinkamais įrankiais (pvz., paieškos ar duomenų analizės įrankiais), nuspręsti, kada ir kaip juos naudoti, ir spręsti netikėtas situacijas.
-* Kaip įvertinti subtikslių rezultatus, matuoti našumą ir iteruoti veiksmus, kad pagerintumėte galutinį rezultatą.
+* Nustatyti ir apibrėžti bendrą tikslą AI agentui, užtikrinant, kad jis aiškiai žinotų, ką reikia pasiekti.
+* Suskaidyti sudėtingą užduotį į valdomas poskyrias ir juos organizuoti į logišką seką.
+* Aprūpinti agentus tinkamais įrankiais (pvz., paieškos ar duomenų analizės įrankiais), nuspręsti, kada ir kaip juos naudoti, bei valdyti netikėtas situacijas.
+* Įvertinti poskyrių rezultatus, matuoti našumą ir kartoti veiksmus, siekiant pagerinti galutinį rezultatą.
 
-## Bendro tikslo nustatymas ir užduoties suskaidymas
+## Bendro tikslo apibrėžimas ir užduoties suskaidymas
 
-![Tikslų ir užduočių nustatymas](../../../translated_images/lt/defining-goals-tasks.d70439e19e37c47a.webp)
+![Tikslų ir užduočių apibrėžimas](../../../translated_images/lt/defining-goals-tasks.d70439e19e37c47a.webp)
 
-Dauguma realaus pasaulio užduočių yra per sudėtingos, kad jas būtų galima atlikti vienu žingsniu. AI agentui reikia aiškaus tikslo, kuris vadovautų jo planavimui ir veiksmams. Pavyzdžiui, apsvarstykite tikslą:
+Daugelis realių užduočių yra pernelyg sudėtingos, kad jas būtų galima spręsti vienu žingsniu. AI agentui reikia glausto tikslo, kuris nukreiptų jo planavimą ir veiksmus. Pavyzdžiui, apsvarstykite tikslą:
 
-    "Sukurti 3 dienų kelionės maršrutą."
+    "Sukurti 3 dienų kelionės planą."
 
-Nors tai paprasta išsakyti, tikslas vis tiek reikalauja patikslinimo. Kuo aiškesnis tikslas, tuo geriau agentas (ir bet kuris žmogus bendradarbis) gali sutelkti dėmesį į tinkamo rezultato pasiekimą, pvz., sukurti išsamų maršrutą su skrydžių galimybėmis, viešbučių rekomendacijomis ir veiklos pasiūlymais.
+Nors tai paprasta išsakyti, vis tiek reikia jį patikslinti. Kuo aiškesnis tikslas, tuo geriau agentas (ir bet kurie žmonių bendradarbiai) gali susitelkti ties tinkamo rezultato pasiekimu, pvz., kurti išsamų maršrutą su skrydžių pasiūlymais, viešbučių rekomendacijomis ir veiklų pasiūlymais.
 
 ### Užduoties suskaidymas
 
-Didelės ar sudėtingos užduotys tampa lengviau valdomos, kai jos suskaidomos į mažesnes, tikslui orientuotas dalis. Kelionės maršruto pavyzdžiui, tikslą galima suskaidyti į:
+Didelės ar sudėtingos užduotys tampa valdomesnės, kai jos suskaidomos į mažesnes, tikslingas poskyrius.
+Kelionės plano pavyzdyje tikslą galima suskaidyti į:
 
-* Skrydžių rezervavimas
-* Viešbučių rezervavimas
-* Automobilių nuoma
-* Personalizavimas
+* Skrydžio rezervavimą
+* Viešbučio rezervavimą
+* Automobilio nuomą
+* Personalizavimą
 
-Kiekvieną subtikslį gali atlikti specializuoti agentai ar procesai. Vienas agentas gali specializuotis geriausių skrydžių pasiūlymų paieškoje, kitas – viešbučių rezervavime ir t. t. Koordinuojantis arba „žemyninis“ agentas gali sujungti šiuos rezultatus į vieną nuoseklų maršrutą galutiniam vartotojui.
+Kiekvieną poskyrį tuomet gali vykdyti atskiri agentai ar procesai. Vienas agentas gali specializuotis geriausių skrydžių pasiūlymų paieškoje, kitas – viešbučių rezervavimuose ir pan. Koordinuojantis arba „žemyn srautu“ esantis agentas gali surinkti šiuos rezultatus į vieną darnų maršrutą galutiniam naudotojui.
 
-Šis modulinis požiūris taip pat leidžia palaipsniui tobulinti. Pavyzdžiui, galite pridėti specializuotus agentus maisto rekomendacijoms ar vietinių veiklų pasiūlymams ir laikui bėgant patobulinti maršrutą.
+Šis modulinis požiūris leidžia ir nuosekliai tobulinti sistemą. Pavyzdžiui, galite pridėti specializuotus agentus maisto rekomendacijoms ar vietinėms veikloms ir laikui bėgant tobulinti maršrutą.
 
-### Struktūrizuota išvestis
+### Struktūruotas išvestis
 
-Dideli kalbos modeliai (LLM) gali generuoti struktūrizuotą išvestį (pvz., JSON), kurią lengviau analizuoti ir apdoroti žemyniniams agentams ar paslaugoms. Tai ypač naudinga daugiagentėje aplinkoje, kur užduotis galima vykdyti po to, kai gaunamas planavimo rezultatas. Žr. greitą apžvalgą.
+Dideli kalbos modeliai (LLM) gali generuoti struktūruotą išvestį (pvz., JSON), kurią lengviau apdoroti žemyn srauto agentams ar paslaugoms. Tai ypač naudinga daugiaagentinėje aplinkoje, kur po planavimo išvesties gavimo galima vykdyti užduotis.
 
-Toliau pateiktas Python kodas demonstruoja paprastą planavimo agentą, kuris suskaido tikslą į subtikslus ir generuoja struktūrizuotą planą:
+Toliau pateiktoje Python kodo ištraukoje paprastas planavimo agentas suskaido tikslą į poskyrius ir sugeneruoja struktūruotą planą:
 
 ```python
 from pydantic import BaseModel
@@ -58,9 +59,8 @@ import json
 import os
 from typing import Optional
 from pprint import pprint
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.azure import AzureAIChatCompletionClient
-from azure.core.credentials import AzureKeyCredential
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 class AgentEnum(str, Enum):
     FlightBooking = "flight_booking"
@@ -71,35 +71,26 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Kelionės posrities modelis
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # norime priskirti užduotį agentui
 
 class TravelPlan(BaseModel):
     main_task: str
     subtasks: List[TravelSubTask]
     is_greeting: bool
 
-client = AzureAIChatCompletionClient(
-    model="gpt-4o-mini",
-    endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-    credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
-    model_info={
-        "json_output": False,
-        "function_calling": True,
-        "vision": True,
-        "family": "unknown",
-    },
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
-# Define the user message
-messages = [
-    SystemMessage(content="""You are an planner agent.
+# Apibrėžti vartotojo žinutę
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
-                      Provide your response in JSON format with the following structure:
+    Provide your response in JSON format with the following structure:
 {'main_task': 'Plan a family trip from Singapore to Melbourne.',
  'subtasks': [{'assigned_agent': 'flight_booking',
                'task_details': 'Book round-trip flights from Singapore to '
@@ -110,45 +101,27 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(
-        content="Create a travel plan for a family of 2 kids from Singapore to Melboune", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": 'json_object'})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-response_content: Optional[str] = response.content if isinstance(
-    response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string" )
+response = client.create_response(input=user_message, instructions=system_prompt)
 
+response_content = response.output_text
 pprint(json.loads(response_content))
-
-# # Ensure the response content is a valid JSON string before loading it
-# response_content: Optional[str] = response.content if isinstance(
-#     response.content, str) else None
-# if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
-
-# # Print the response content after loading it as JSON
-# pprint(json.loads(response_content))
-
-# Validate the response content with the MathReasoning model
-# TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Planavimo agentas su daugiagentės koordinacija
+### Planavimo agentas su daugiaagentinė orkestracija
 
-Šiame pavyzdyje Semantinis maršrutizavimo agentas gauna vartotojo užklausą (pvz., „Man reikia viešbučio plano mano kelionei.“).
+Šiame pavyzdyje Semantic Router Agent gauna vartotojo užklausą (pvz., „Man reikia viešbučio plano mano kelionei.“).
 
-Planuotojas tada:
+Tuomet planuotojas:
 
-* Gautas viešbučio planas: Planuotojas paima vartotojo žinutę ir, remdamasis sistemos užklausa (įskaitant turimus agentų duomenis), generuoja struktūrizuotą kelionės planą.
-* Agentų ir jų įrankių sąrašas: Agentų registras saugo agentų sąrašą (pvz., skrydžių, viešbučių, automobilių nuomos ir veiklų) kartu su funkcijomis ar įrankiais, kuriuos jie siūlo.
-* Plano nukreipimas atitinkamiems agentams: Priklausomai nuo subtikslių skaičiaus, planuotojas arba tiesiogiai siunčia žinutę dedikuotam agentui (vienos užduoties scenarijams), arba koordinuoja per grupės pokalbių valdytoją daugiagentės bendradarbiavimo atveju.
-* Rezultato apibendrinimas: Galiausiai planuotojas apibendrina sugeneruotą planą, kad jis būtų aiškus.
-
-Toliau pateiktas Python kodas iliustruoja šiuos veiksmus:
+* Gauk viešbučių planą: planuotojas paima vartotojo žinutę ir, remdamasis sistemos užklausimu (įskaitant prieinamų agentų informaciją), sukuria struktūruotą kelionės planą.
+* Išvardina agentus ir jų įrankius: agentų registras laiko agentų sąrašą (pvz., skrydžio, viešbučio, automobilio nuomos ir veiklų agentus) kartu su jų funkcijomis ar įrankiais.
+* Nukreipia planą atitinkamiems agentams: priklausomai nuo poskyrių skaičiaus, planuotojas arba siunčia žinutę tiesiogiai skirto agento valdymui (vienos užduoties atvejais), arba koordinuoja per grupinio pokalbio valdytoją daugiaagentinei sąveikai.
+* Apibendrina rezultatą: galiausiai planuotojas pateikia sukurto plano santrauką aiškumui.
+Toliau pateiktas Python kodo pavyzdys iliustruoja šiuos žingsnius:
 
 ```python
 
@@ -166,11 +139,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Kelionės po užduotis modelis
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # mes norime priskirti užduotį agentui
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -180,25 +153,22 @@ import json
 import os
 from typing import Optional
 
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the client with type-checked environment variables
+# Sukurkite klientą
 
-client = AzureOpenAIChatCompletionClient(
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
 from pprint import pprint
 
-# Define the user message
+# Apibrėžkite vartotojo pranešimą
 
-messages = [
-    SystemMessage(content="""You are an planner agent.
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -206,24 +176,20 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-# Ensure the response content is a valid JSON string before loading it
+response = client.create_response(input=user_message, instructions=system_prompt)
 
-response_content: Optional[str] = response.content if isinstance(response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string")
+response_content = response.output_text
 
-# Print the response content after loading it as JSON
+# Atspausdinkite atsakymo turinį po jo užkrovimo kaip JSON
 
 pprint(json.loads(response_content))
 ```
 
-Toliau pateikiamas ankstesnio kodo rezultatas, kurį galite naudoti struktūrizuotai išvesčiai nukreipti į `assigned_agent` ir apibendrinti kelionės planą galutiniam vartotojui.
+Toliau pateikiama kodo išvestis, kurią galite naudoti norėdami nukreipti į `assigned_agent` ir apibendrinti kelionės planą galutiniam vartotojui.
 
 ```json
 {
@@ -254,21 +220,23 @@ Toliau pateikiamas ankstesnio kodo rezultatas, kurį galite naudoti struktūrizu
 }
 ```
 
-Pavyzdinis užrašų knygelė su ankstesniu kodo pavyzdžiu yra pasiekiama [čia](07-autogen.ipynb).
+Pavyzdinė užrašų knygelė su ankstesniu kodo pavyzdžiu yra prieinama [čia](./code_samples/07-python-agent-framework.ipynb).
 
-### Iteratyvus planavimas
+### Pasikartojantis planavimas
 
-Kai kurios užduotys reikalauja grįžtamojo ryšio arba perplanavimo, kai vieno subtikslo rezultatas daro įtaką kitam. Pavyzdžiui, jei agentas aptinka netikėtą duomenų formatą rezervuodamas skrydžius, jis gali tekti pritaikyti savo strategiją prieš pereinant prie viešbučių rezervavimo.
+Kai kurios užduotys reikalauja bendravimo pirmyn ir atgal arba perplanavimo, kai vienos poskyrio rezultatas įtakoja kitą. Pavyzdžiui, jei agentas aptinka netikėtą duomenų formatą skrydžių rezervavimo metu, jam gali tekti pakeisti strategiją prieš pereinant prie viešbučių rezervavimo.
 
-Be to, vartotojo atsiliepimai (pvz., žmogus nusprendžia, kad jam labiau patinka ankstesnis skrydis) gali sukelti dalinį perplanavimą. Šis dinamiškas, iteratyvus požiūris užtikrina, kad galutinis sprendimas atitiktų realaus pasaulio apribojimus ir besikeičiančius vartotojo pageidavimus.
+Be to, vartotojo atsiliepimai (pvz., žmogus nusprendžia, kad pageidauja ankstesnio skrydžio) gali inicijuoti dalinį perplanavimą. Šis dinamiškas, iteratyvus požiūris užtikrina, kad galutinis sprendimas atitiktų realaus pasaulio apribojimus ir besikeičiančius vartotojų pageidavimus.
 
-Pvz., pavyzdinis kodas:
+pvz. kodo pavyzdys
 
 ```python
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
-messages = [
-    SystemMessage(content="""You are a planner agent to optimize the
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+#.. tas pats kaip ankstesniame kode ir perduoti naudotojo istoriją, dabartinį planą
+
+system_prompt = """You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -276,38 +244,43 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-    AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
-]
-# .. re-plan and send the tasks to respective agents
+    - DefaultAgent: For handling general requests"""
+
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
+
+response = client.create_response(
+    input=user_message,
+    instructions=system_prompt,
+    context=f"Previous travel plan - {TravelPlan}",
+)
+# .. pertvarkyti planą ir siųsti užduotis atitinkamiems agentams
 ```
 
-Dėl išsamesnio planavimo peržiūrėkite Magnetic One sprendimą sudėtingoms užduotims.
+Daugiau išsamų planavimą rasite Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Blogposte</a>, skirtame sudėtingoms užduotims spręsti.
 
 ## Santrauka
 
-Šiame straipsnyje aptarėme pavyzdį, kaip sukurti planuotoją, kuris dinamiškai pasirenka apibrėžtus agentus. Planavimo išvestis suskaido užduotis ir priskiria agentus, kad jie galėtų būti vykdomi. Daroma prielaida, kad agentai turi prieigą prie funkcijų/įrankių, reikalingų užduočiai atlikti. Be agentų, galite įtraukti kitus šablonus, tokius kaip refleksija, apibendrintojas ir apvalus pokalbis, kad dar labiau pritaikytumėte.
+Šiame straipsnyje apžvelgėme pavyzdį, kaip sukurti planuotoją, kuris gali dinamiškai pasirinkti apibrėžtus prieinamus agentus. Planavimo išvestis suskaido užduotis ir priskiria agentams, kad jos būtų vykdomos. Laikoma, kad agentai turi prieigą prie reikalingų funkcijų/įrankių užduočiai atlikti. Be agentų galima įtraukti ir kitus modelius, tokius kaip refleksija, santrauka ir round robin pokalbis, siekiant dar labiau pritaikyti sistemą.
 
-## Papildomi ištekliai
+## Papildomi šaltiniai
 
-AutoGen Magnetic One - Bendroji daugiagentė sistema sudėtingoms užduotims spręsti, pasiekusi įspūdingų rezultatų daugybėje sudėtingų agentinių testų. Nuoroda:
+Magnetic One – daugiaagentė sistema, skirta sudėtingoms užduotims spręsti, kuri parodė įspūdingus rezultatus keliuose sudėtinguose agentic testuose. Nuoroda: <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Magnetic One</a>. Šioje įgyvendinimo versijoje orkestratorius kuria užduочiai specifinius planus ir deleguoja užduotis prieinamiems agentams. Be planavimo, orkestratorius taip pat naudoja sekimo mechanizmą stebėti užduoties pažangą ir perplanuoja, jei reikia.
 
-. Šioje įgyvendinimo versijoje koordinuojantis agentas sukuria užduočiai specifinį planą ir deleguoja šias užduotis turimiems agentams. Be planavimo, koordinuojantis agentas taip pat naudoja stebėjimo mechanizmą užduoties pažangai stebėti ir perplanuoti, kai to reikia.
+### Turite daugiau klausimų apie Planavimo dizaino šabloną?
 
-### Turite daugiau klausimų apie planavimo dizaino šabloną?
-
-Prisijunkite prie [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kad susitiktumėte su kitais besimokančiais, dalyvautumėte konsultacijose ir gautumėte atsakymus į savo AI agentų klausimus.
+Prisijunkite prie [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), susipažinkite su kitais besimokančiaisiais, dalyvaukite konsultacijose ir gaukite atsakymus į savo AI agentų klausimus.
 
 ## Ankstesnė pamoka
 
 [Patikimų AI agentų kūrimas](../06-building-trustworthy-agents/README.md)
 
-## Kita pamoka
+## Kitoji pamoka
 
-[Daugiagentės dizaino šablonas](../08-multi-agent/README.md)
+[Daugiaagentinis dizaino šablonas](../08-multi-agent/README.md)
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

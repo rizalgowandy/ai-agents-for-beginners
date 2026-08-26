@@ -1,76 +1,77 @@
-# استكشاف إطار عمل Microsoft Agent Framework
+# استكشاف إطار عمل Microsoft Agent
 
-![إطار العمل](../../../translated_images/ar/lesson-14-thumbnail.90df0065b9d234ee.webp)
+![Agent Framework](../../../translated_images/ar/lesson-14-thumbnail.90df0065b9d234ee.webp)
 
-### المقدمة
+### مقدمة
 
-ستتناول هذه الدرس:
+ستغطي هذه الدرس:
 
-- فهم إطار عمل Microsoft Agent Framework: الميزات الرئيسية والقيمة  
-- استكشاف المفاهيم الأساسية لإطار عمل Microsoft Agent Framework
-- مقارنة MAF مع Semantic Kernel و AutoGen: دليل الانتقال
+- فهم إطار عمل Microsoft Agent: الميزات الرئيسية والقيمة  
+- استكشاف المفاهيم الأساسية لإطار عمل Microsoft Agent
+- أنماط MAF المتقدمة: سير العمل، الوسائط الوسيطة، والذاكرة
 
 ## أهداف التعلم
 
-بعد إكمال هذا الدرس، ستتمكن من:
+بعد إكمال هذا الدرس، ستكون قادراً على:
 
-- بناء وكلاء ذكاء اصطناعي جاهزين للإنتاج باستخدام إطار عمل Microsoft Agent Framework
-- تطبيق الميزات الأساسية لإطار عمل Microsoft Agent Framework على حالات الاستخدام الخاصة بالوكالة
-- الانتقال ودمج الأطر والأدوات الوكالية الحالية  
+- بناء وكلاء ذكاء صناعي جاهزين للإنتاج باستخدام إطار عمل Microsoft Agent
+- تطبيق الميزات الأساسية لإطار عمل Microsoft Agent في حالات استخدامك الوكيلية
+- استخدام الأنماط المتقدمة بما في ذلك سير العمل، الوسائط الوسيطة، والمراقبة
 
-## عينات الكود
+## أمثلة الشفرة 
 
-يمكن العثور على عينات الكود الخاصة بـ [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) في هذا المستودع تحت ملفات `xx-python-agent-framework` و `xx-dotnet-agent-framework`.
+يمكن العثور على أمثلة الشفرة الخاصة بـ [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framework) في هذا المستودع ضمن الملفات `xx-python-agent-framework` و `xx-dotnet-agent-framework`.
 
-## فهم إطار عمل Microsoft Agent Framework
+## فهم إطار عمل Microsoft Agent
 
-![مقدمة الإطار](../../../translated_images/ar/framework-intro.077af16617cf130c.webp)
+![Framework Intro](../../../translated_images/ar/framework-intro.077af16617cf130c.webp)
 
-[إطار عمل Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) يعتمد على الخبرة والدروس المستفادة من Semantic Kernel و AutoGen. يوفر المرونة لمعالجة مجموعة واسعة من حالات الاستخدام الوكالية في بيئات الإنتاج والبحث، بما في ذلك:
+[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framework) هو الإطار الموحد من مايكروسوفت لبناء وكلاء الذكاء الاصطناعي. يقدم المرونة لمعالجة مجموعة واسعة من حالات الاستخدام الوكيلية التي تُرى في بيئات الإنتاج والبحث، بما في ذلك:
 
-- **تنسيق الوكلاء المتسلسل** في السيناريوهات التي تتطلب سير عمل خطوة بخطوة.
+- **تنسيق الوكيل المتسلسل** في السيناريوهات التي تتطلب سير عمل خطوة بخطوة.
 - **التنسيق المتزامن** في السيناريوهات التي يحتاج فيها الوكلاء إلى إكمال المهام في نفس الوقت.
-- **تنسيق الدردشة الجماعية** في السيناريوهات التي يمكن للوكلاء التعاون فيها معًا على مهمة واحدة.
-- **تنسيق التسليم** في السيناريوهات التي يقوم فيها الوكلاء بتسليم المهمة لبعضهم البعض عند اكتمال المهام الفرعية.
-- **التنسيق المغناطيسي** في السيناريوهات التي يقوم فيها وكيل المدير بإنشاء وتعديل قائمة المهام ويتولى تنسيق الوكلاء الفرعيين لإكمال المهمة.
+- **تنسيق المحادثة الجماعية** في السيناريوهات التي يمكن أن يتعاون فيها الوكلاء معاً على مهمة واحدة.
+- **تنسيق التسليم** في السيناريوهات التي يقوم فيها الوكلاء بتسليم المهمة إلى بعضهم البعض مع إكمال المهام الجزئية.
+- **التنسيق المغناطيسي** في السيناريوهات التي ينشئ فيها وكيل المدير ويعدل قائمة المهام ويتولى تنسيق الوكلاء الفرعيين لإكمال المهمة.
 
-لتقديم وكلاء ذكاء اصطناعي في الإنتاج، يتضمن MAF ميزات مثل:
+لتوفير وكلاء الذكاء الاصطناعي في الإنتاج، يتضمن MAF أيضاً ميزات لـ:
 
-- **الرصد** باستخدام OpenTelemetry حيث يتم تتبع كل إجراء يقوم به وكيل الذكاء الاصطناعي بما في ذلك استدعاء الأدوات، خطوات التنسيق، تدفقات التفكير ومراقبة الأداء عبر لوحات معلومات Azure AI Foundry.
-- **الأمان** من خلال استضافة الوكلاء محليًا على Azure AI Foundry الذي يتضمن ضوابط أمان مثل الوصول المستند إلى الأدوار، التعامل مع البيانات الخاصة وسلامة المحتوى المدمجة.
-- **الاستمرارية** حيث يمكن لوكلاء الذكاء الاصطناعي إيقاف واستئناف واسترداد الأخطاء مما يتيح عمليات طويلة الأمد.
-- **التحكم** حيث يتم دعم سير العمل الذي يتطلب تدخل الإنسان حيث يتم وضع علامة على المهام التي تحتاج إلى موافقة بشرية.
+- **المراقبة** من خلال استخدام OpenTelemetry حيث يتم تتبع كل فعل لوكيل الذكاء الاصطناعي بما في ذلك استدعاءات الأدوات، خطوات التنسيق، تدفقات التفكير، ومراقبة الأداء عبر لوحات معلومات Microsoft Foundry.
+- **الأمان** باستضافة الوكلاء أصلياً على Microsoft Foundry والتي تتضمن ضوابط أمان مثل الوصول المبني على الدور، معالجة البيانات الخاصة، والسلامة المضمنة للمحتوى.
+- **المتانة** حيث يمكن إيقاف واستئناف واسترداد خيوط وأعمال الوكلاء من الأخطاء مما يمكن العمليات طويلة الأمد.
+- **التحكم** حيث يتم دعم سير العمل بمشاركة الإنسان حيث تُعلَن المهام على أنها تتطلب موافقة بشرية.
 
-يركز إطار عمل Microsoft Agent Framework أيضًا على التوافق من خلال:
+يركز إطار عمل Microsoft Agent أيضاً على التوافقية من خلال:
 
-- **عدم الاعتماد على السحابة** - يمكن للوكلاء العمل في الحاويات، في بيئات محلية وعبر سحابات متعددة.
-- **عدم الاعتماد على المزود** - يمكن إنشاء الوكلاء باستخدام SDK المفضل لديك بما في ذلك Azure OpenAI و OpenAI.
-- **دمج المعايير المفتوحة** - يمكن للوكلاء استخدام بروتوكولات مثل Agent-to-Agent (A2A) و Model Context Protocol (MCP) لاكتشاف واستخدام وكلاء وأدوات أخرى.
-- **الإضافات والموصلات** - يمكن إنشاء اتصالات مع خدمات البيانات والذاكرة مثل Microsoft Fabric، SharePoint، Pinecone و Qdrant.
+- **كونه غير مرتبط بالسحابة** - يمكن تشغيل الوكلاء في الحاويات، على الأنظمة المحلية وعبر عدة سحب سحابية مختلفة.
+- **كونه غير مرتبط بالمزود** - يمكن إنشاء الوكلاء من خلال SDK المفضل لديك بما في ذلك Azure OpenAI وOpenAI
+- **تكامل المعايير المفتوحة** - يمكن للوكلاء استخدام بروتوكولات مثل Agent-to-Agent(A2A) وModel Context Protocol (MCP) لاكتشاف واستخدام وكلاء وأدوات أخرى.
+- **الإضافات والموصلات** - يمكن إجراء اتصالات مع خدمات البيانات والذاكرة مثل Microsoft Fabric وSharePoint وPinecone وQdrant.
 
-لنلقِ نظرة على كيفية تطبيق هذه الميزات على بعض المفاهيم الأساسية لإطار عمل Microsoft Agent Framework.
+لنلق نظرة على كيفية تطبيق هذه الميزات على بعض المفاهيم الأساسية لإطار عمل Microsoft Agent.
 
-## المفاهيم الأساسية لإطار عمل Microsoft Agent Framework
+## المفاهيم الأساسية لإطار عمل Microsoft Agent
 
 ### الوكلاء
 
-![إطار العمل](../../../translated_images/ar/agent-components.410a06daf87b4fef.webp)
+![Agent Framework](../../../translated_images/ar/agent-components.410a06daf87b4fef.webp)
 
 **إنشاء الوكلاء**
 
-يتم إنشاء الوكلاء من خلال تعريف خدمة الاستدلال (مزود LLM)، مجموعة من التعليمات التي يجب على وكيل الذكاء الاصطناعي اتباعها، واسم معين:
+يتم إنشاء الوكيل عن طريق تعريف خدمة الاستدلال (مزود LLM)، مجموعة التعليمات التي يجب على وكيل الذكاء الاصطناعي اتباعها، و`الاسم` المعين:
+
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at recommending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-يتم استخدام `Azure OpenAI` أعلاه، ولكن يمكن إنشاء الوكلاء باستخدام مجموعة متنوعة من الخدمات بما في ذلك `Azure AI Foundry Agent Service`:
+المثال أعلاه يستخدم `Azure OpenAI` لكن يمكن إنشاء الوكلاء باستخدام مجموعة متنوعة من الخدمات بما في ذلك `Microsoft Foundry Agent Service`:
 
 ```python
 AzureAIAgentClient(async_credential=credential).create_agent( name="HelperAgent", instructions="You are a helpful assistant." ) as agent
 ```
 
-واجهات برمجة التطبيقات `Responses` و `ChatCompletion` الخاصة بـ OpenAI
+OpenAI `Responses`، واجهات برمجة التطبيقات `ChatCompletion`
 
 ```python
 agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="You are a helpful weather assistant.", )
@@ -78,6 +79,12 @@ agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="Y
 
 ```python
 agent = OpenAIChatClient().create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
+```
+
+أو [MiniMax](https://platform.minimaxi.com/)، التي توفر واجهة برمجة تطبيقات متوافقة مع OpenAI مع نوافذ سياق كبيرة (حتى 204 ألف رمز):
+
+```python
+agent = OpenAIChatClient(base_url="https://api.minimax.io/v1", api_key=os.environ["MINIMAX_API_KEY"], model_id="MiniMax-M3").create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
 ```
 
 أو الوكلاء البعيدين باستخدام بروتوكول A2A:
@@ -88,7 +95,7 @@ agent = A2AAgent( name=agent_card.name, description=agent_card.description, agen
 
 **تشغيل الوكلاء**
 
-يتم تشغيل الوكلاء باستخدام الطرق `.run` أو `.run_stream` للحصول على استجابات غير متدفقة أو متدفقة.
+يتم تشغيل الوكلاء باستخدام طريقتي `.run` أو `.run_stream` للحصول على استجابات غير متدفقة أو متدفقة على التوالي.
 
 ```python
 result = await agent.run("What are good places to visit in Amsterdam?")
@@ -102,75 +109,75 @@ async for update in agent.run_stream("What are the good places to visit in Amste
 
 ```
 
-يمكن لكل تشغيل للوكيل أيضًا أن يحتوي على خيارات لتخصيص المعلمات مثل `max_tokens` التي يستخدمها الوكيل، `tools` التي يمكن للوكيل استدعاؤها، وحتى النموذج نفسه المستخدم للوكيل.
+يمكن أيضاً تخصيص خيارات لكل تشغيل للوكيل مثل `max_tokens` التي يستخدمها الوكيل، و`tools` التي يستطيع الوكيل استدعاؤها، وحتى `model` المستخدم للوكيل.
 
 هذا مفيد في الحالات التي تتطلب نماذج أو أدوات محددة لإكمال مهمة المستخدم.
 
 **الأدوات**
 
-يمكن تعريف الأدوات عند تعريف الوكيل:
+يمكن تعريف الأدوات أثناء تعريف الوكيل:
 
 ```python
 def get_attractions( location: Annotated[str, Field(description="The location to get the top tourist attractions for")], ) -> str: """Get the top tourist attractions for a given location.""" return f"The top attractions for {location} are." 
 
 
-# When creating a ChatAgent directly 
+# عند إنشاء ChatAgent مباشرةً
 
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
 
 ```
 
-وأيضًا عند تشغيل الوكيل:
+وأيضاً عند تشغيل الوكيل:
 
 ```python
 
-result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Tool provided for this run only )
+result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # الأداة المقدمة لهذا التشغيل فقط )
 ```
 
-**سلاسل الوكلاء**
+**خيوط الوكيل**
 
-تُستخدم سلاسل الوكلاء للتعامل مع المحادثات متعددة الأدوار. يمكن إنشاء السلاسل إما باستخدام:
+تُستخدم خيوط الوكيل للتعامل مع المحادثات متعددة الدوران. يمكن إنشاء الخيوط إما عن طريق:
 
-- `get_new_thread()` الذي يتيح حفظ السلسلة مع مرور الوقت
-- إنشاء سلسلة تلقائيًا عند تشغيل الوكيل وجعل السلسلة تستمر فقط أثناء التشغيل الحالي.
+- استخدام `get_new_thread()` والتي تمكن من حفظ الخيط مع مرور الوقت
+- إنشاء خيط تلقائياً عند تشغيل وكيل وبقاء الخيط فقط خلال التشغيل الحالي.
 
-لإنشاء سلسلة، يبدو الكود كما يلي:
+لإنشاء خيط، يبدو الكود كما يلي:
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# قم بإنشاء خيط جديد.
+thread = agent.get_new_thread() # شغّل الوكيل مع الخيط.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 
 ```
 
-يمكنك بعد ذلك تسلسل السلسلة لتخزينها للاستخدام لاحقًا:
+ثم يمكنك تسلسل الخيط ليُخزن للاستخدام لاحقاً:
 
 ```python
-# Create a new thread. 
+# إنشاء خيط جديد.
 thread = agent.get_new_thread() 
 
-# Run the agent with the thread. 
+# تشغيل الوكيل مع الخيط.
 
 response = await agent.run("Hello, how are you?", thread=thread) 
 
-# Serialize the thread for storage. 
+# تسلسل الخيط للتخزين.
 
 serialized_thread = await thread.serialize() 
 
-# Deserialize the thread state after loading from storage. 
+# فك تسلسل حالة الخيط بعد التحميل من التخزين.
 
 resumed_thread = await agent.deserialize_thread(serialized_thread)
 ```
 
-**وسيط الوكلاء**
+**الوسائط الوسيطة للوكيل**
 
-يتفاعل الوكلاء مع الأدوات و LLMs لإكمال مهام المستخدم. في بعض السيناريوهات، نريد تنفيذ أو تتبع بين هذه التفاعلات. يتيح لنا وسيط الوكلاء القيام بذلك من خلال:
+يتفاعل الوكلاء مع الأدوات وLLMs لإكمال مهام المستخدمين. في بعض السيناريوهات، نريد تنفيذ أو تتبع ما بين هذه التفاعلات. تتيح الوسائط الوسيطة للوكيل القيام بذلك من خلال:
 
-*وسيط الوظيفة*
+*وسائط الوظائف*
 
-يسمح هذا الوسيط بتنفيذ إجراء بين الوكيل والوظيفة/الأداة التي سيقوم باستدعائها. مثال على ذلك هو عندما ترغب في تسجيل استدعاء الوظيفة.
+تتيح هذه الوسائط تنفيذ إجراء بين الوكيل والوظيفة/الأداة التي سيستدعيها. مثال على ذلك هو عندما تريد تسجيل استدعاء الوظيفة.
 
-في الكود أدناه، يحدد `next` ما إذا كان يجب استدعاء الوسيط التالي أو الوظيفة الفعلية.
+في الكود أدناه، يحدد `next` إذا ما كان يجب استدعاء الوسيط التالي أو الوظيفة الفعلية.
 
 ```python
 async def logging_function_middleware(
@@ -178,21 +185,21 @@ async def logging_function_middleware(
     next: Callable[[FunctionInvocationContext], Awaitable[None]],
 ) -> None:
     """Function middleware that logs function execution."""
-    # Pre-processing: Log before function execution
+    # المعالجة المسبقة: تسجيل الدخول قبل تنفيذ الوظيفة
     print(f"[Function] Calling {context.function.name}")
 
-    # Continue to next middleware or function execution
+    # الاستمرار إلى الوسيط التالي أو تنفيذ الوظيفة
     await next(context)
 
-    # Post-processing: Log after function execution
+    # المعالجة اللاحقة: تسجيل الدخول بعد تنفيذ الوظيفة
     print(f"[Function] {context.function.name} completed")
 ```
 
-*وسيط الدردشة*
+*وسائط المحادثة*
 
-يسمح هذا الوسيط بتنفيذ أو تسجيل إجراء بين الوكيل والطلبات بين LLM.
+تسمح هذه الوسائط بتنفيذ أو تسجيل فعل بين الوكيل والطلبات بين LLM.
 
-يتضمن هذا معلومات مهمة مثل `messages` التي يتم إرسالها إلى خدمة الذكاء الاصطناعي.
+تحتوي على معلومات مهمة مثل `الرسائل` التي تُرسل إلى خدمة الذكاء الاصطناعي.
 
 ```python
 async def logging_chat_middleware(
@@ -200,39 +207,39 @@ async def logging_chat_middleware(
     next: Callable[[ChatContext], Awaitable[None]],
 ) -> None:
     """Chat middleware that logs AI interactions."""
-    # Pre-processing: Log before AI call
+    # المعالجة المسبقة: تسجيل قبل استدعاء الذكاء الاصطناعي
     print(f"[Chat] Sending {len(context.messages)} messages to AI")
 
-    # Continue to next middleware or AI service
+    # المتابعة إلى الوسيط التالي أو خدمة الذكاء الاصطناعي
     await next(context)
 
-    # Post-processing: Log after AI response
+    # المعالجة اللاحقة: تسجيل بعد استجابة الذكاء الاصطناعي
     print("[Chat] AI response received")
 
 ```
 
-**ذاكرة الوكلاء**
+**ذاكرة الوكيل**
 
-كما تم تغطيته في درس `Agentic Memory`، تعد الذاكرة عنصرًا مهمًا لتمكين الوكيل من العمل عبر سياقات مختلفة. يوفر MAF عدة أنواع مختلفة من الذكريات:
+كما تم تغطيته في درس `Agentic Memory`، تعد الذاكرة عنصراً هاماً لتمكين الوكيل من العمل عبر سياقات مختلفة. يقدم MAF عدة أنواع من الذاكرات:
 
 *التخزين في الذاكرة*
 
-هذه هي الذاكرة المخزنة في السلاسل أثناء وقت تشغيل التطبيق.
+هذه هي الذاكرة المخزنة في الخيوط أثناء وقت تشغيل التطبيق.
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# إنشاء مؤشر ترابط جديد.
+thread = agent.get_new_thread() # تشغيل الوكيل بالمؤشر الترابط.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 ```
 
 *الرسائل الدائمة*
 
-تُستخدم هذه الذاكرة عند تخزين تاريخ المحادثة عبر جلسات مختلفة. يتم تعريفها باستخدام `chat_message_store_factory`:
+تُستخدم هذه الذاكرة عند تخزين تاريخ المحادثة عبر جلسات مختلفة. يتم تعريفها باستخدام `chat_message_store_factory` :
 
 ```python
 from agent_framework import ChatMessageStore
 
-# Create a custom message store
+# إنشاء مخزن رسائل مخصص
 def create_message_store():
     return ChatMessageStore()
 
@@ -246,12 +253,12 @@ agent = ChatAgent(
 
 *الذاكرة الديناميكية*
 
-تُضاف هذه الذاكرة إلى السياق قبل تشغيل الوكلاء. يمكن تخزين هذه الذكريات في خدمات خارجية مثل mem0:
+تضاف هذه الذاكرة إلى السياق قبل تشغيل الوكلاء. يمكن تخزين هذه الذكريات في خدمات خارجية مثل mem0:
 
 ```python
 from agent_framework.mem0 import Mem0Provider
 
-# Using Mem0 for advanced memory capabilities
+# استخدام Mem0 لإمكانيات الذاكرة المتقدمة
 memory_provider = Mem0Provider(
     api_key="your-mem0-api-key",
     user_id="user_123",
@@ -266,9 +273,9 @@ agent = ChatAgent(
 
 ```
 
-**رصد الوكلاء**
+**مراقبة الوكيل**
 
-الرصد مهم لبناء أنظمة وكالية موثوقة وقابلة للصيانة. يدمج MAF مع OpenTelemetry لتوفير التتبع والمقاييس لتحسين الرصد.
+المراقبة مهمة لبناء أنظمة وكيلة موثوقة وسهلة الصيانة. يدمج MAF مع OpenTelemetry لتوفير التتبع والعدادات لمراقبة أفضل.
 
 ```python
 from agent_framework.observability import get_tracer, get_meter
@@ -276,7 +283,7 @@ from agent_framework.observability import get_tracer, get_meter
 tracer = get_tracer()
 meter = get_meter()
 with tracer.start_as_current_span("my_custom_span"):
-    # do something
+    # افعل شيئًا
     pass
 counter = meter.create_counter("my_custom_counter")
 counter.add(1, {"key": "value"})
@@ -284,21 +291,21 @@ counter.add(1, {"key": "value"})
 
 ### سير العمل
 
-يوفر MAF سير عمل يتكون من خطوات محددة مسبقًا لإكمال مهمة ويتضمن وكلاء الذكاء الاصطناعي كعناصر في تلك الخطوات.
+يقدم MAF سير عمل هي خطوات محددة مسبقًا لإكمال مهمة ويشمل وكلاء الذكاء الاصطناعي كعناصر في تلك الخطوات.
 
-يتكون سير العمل من مكونات مختلفة تتيح التحكم الأفضل في التدفق. كما يتيح سير العمل **تنسيق الوكلاء المتعددين** و **حفظ نقاط التحقق** لتخزين حالات سير العمل.
+تتكون سير العمل من مكونات مختلفة تسمح بتحكم أفضل في التدفق. تسمح سير العمل أيضاً بـ **تنسيق متعدد الوكلاء** و **التدقيق** لحفظ حالات سير العمل.
 
 المكونات الأساسية لسير العمل هي:
 
 **المنفذون**
 
-يتلقون رسائل الإدخال، ينفذون المهام الموكلة إليهم، ثم ينتجون رسالة إخراج. هذا يدفع سير العمل نحو إكمال المهمة الأكبر. يمكن أن يكون المنفذون وكلاء ذكاء اصطناعي أو منطق مخصص.
+يستقبل المنفذون الرسائل المدخلة، يؤدون المهام المعينة، ثم ينتجون رسالة إخراج. هذا يحرك سير العمل نحو إكمال المهمة الأكبر. يمكن أن يكون المنفذ وكيل ذكاء اصطناعي أو منطق مخصص.
 
 **الحواف**
 
-تُستخدم الحواف لتحديد تدفق الرسائل في سير العمل. يمكن أن تكون:
+تُستخدم الحواف لتعريف تدفق الرسائل في سير العمل. يمكن أن تكون:
 
-*الحواف المباشرة* - اتصالات بسيطة من واحد إلى واحد بين المنفذين:
+*حواف مباشرة* - اتصالات بسيطة من واحد لواحد بين المنفذين:
 
 ```python
 from agent_framework import WorkflowBuilder
@@ -309,76 +316,134 @@ builder.set_start_executor(source_executor)
 workflow = builder.build()
 ```
 
-*الحواف الشرطية* - يتم تفعيلها بعد استيفاء شرط معين. على سبيل المثال، عندما تكون غرف الفنادق غير متوفرة، يمكن للمنفذ اقتراح خيارات أخرى.
+*حواف مشروطة* - تُفعل بعد تحقق شرط معين. على سبيل المثال، عندما تكون غرف الفنادق غير متوفرة، يمكن للمنفذ اقتراح خيارات أخرى.
 
-*حواف التبديل* - توجيه الرسائل إلى منفذين مختلفين بناءً على شروط محددة. على سبيل المثال، إذا كان لدى العميل الأولوية، فستتم معالجة مهامه من خلال سير عمل آخر.
+*حواف تبديل-حالة* - توجيه الرسائل إلى منفذين مختلفين بناءً على شروط محددة. على سبيل المثال، إذا كان لدى العميل أولوية في السفر، فسيتم التعامل مع مهامه عبر سير عمل آخر.
 
-*حواف التوزيع* - إرسال رسالة واحدة إلى أهداف متعددة.
+*حواف التوزيع* - إرسال رسالة واحدة إلى عدة أهداف.
 
 *حواف التجميع* - جمع رسائل متعددة من منفذين مختلفين وإرسالها إلى هدف واحد.
 
 **الأحداث**
 
-لتوفير رصد أفضل لسير العمل، يقدم MAF أحداثًا مدمجة للتنفيذ بما في ذلك:
+لتوفير مراقبة أفضل على سير العمل، يقدم MAF أحداثاً مدمجة للتنفيذ تشمل:
 
-- `WorkflowStartedEvent` - بدء تنفيذ سير العمل
-- `WorkflowOutputEvent` - إنتاج سير العمل لمخرجات
-- `WorkflowErrorEvent` - مواجهة سير العمل لخطأ
-- `ExecutorInvokeEvent` - بدء معالجة المنفذ
-- `ExecutorCompleteEvent` - انتهاء معالجة المنفذ
+- `WorkflowStartedEvent`  - بدء تنفيذ سير العمل
+- `WorkflowOutputEvent` - إنتاج سير العمل لإخراج
+- `WorkflowErrorEvent` - حدوث خطأ أثناء سير العمل
+- `ExecutorInvokeEvent`  - بدء المنفذ في المعالجة
+- `ExecutorCompleteEvent`  -  انتهاء المنفذ من المعالجة
 - `RequestInfoEvent` - إصدار طلب
 
-## الانتقال من أطر أخرى (Semantic Kernel و AutoGen)
+## أنماط MAF المتقدمة
 
-### الفروقات بين MAF و Semantic Kernel
+تغطي الأقسام أعلاه المفاهيم الأساسية لإطار عمل Microsoft Agent. عند بناء وكلاء أكثر تعقيداً، إليك بعض الأنماط المتقدمة للنظر فيها:
 
-**إنشاء الوكلاء المبسط**
+- **تركيب الوسائط الوسيطة**: ربط عدة معالجات للوسائط الوسيطة (تسجيل الدخول، المصادقة، تحديد المعدل) باستخدام وسائط الوظائف والدردشة للتحكم الدقيق في سلوك الوكيل.
+- **تدقيق سير العمل**: استخدام أحداث سير العمل والتسلسل للحفظ والاستئناف في عمليات الوكيل طويلة الأمد.
+- **اختيار الأدوات الديناميكي**: دمج RAG عبر أوصاف الأدوات مع تسجيل الأدوات في MAF لعرض الأدوات ذات الصلة فقط لكل استعلام.
+- **التسليم متعدد الوكلاء**: استخدام حواف سير العمل والتوجيه الشرطي لتنسيق عمليات التسليم بين الوكلاء المتخصصين.
 
-يعتمد Semantic Kernel على إنشاء مثيل Kernel لكل وكيل. يستخدم MAF نهجًا مبسطًا باستخدام الامتدادات للمزودين الرئيسيين.
+## استضافة وكلاء LangChain / LangGraph على Microsoft Foundry
 
-```python
-agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at reccomending trips to customers based on their preferences.", name="TripRecommender" )
+إطار عمل Microsoft Agent هو **متوافق مع الأطر الأخرى** — لست محدوداً بالوكلاء المكتوبين باستخدام MAF. إذا كان لديك وكيل مُنشأ بـ **LangChain** أو **LangGraph**، يمكنك تشغيله كـ **وكيل مستضاف على Microsoft Foundry** بحيث تدير Foundry وقت التشغيل، الجلسات، التدرج، الهوية، ونقاط نهاية البروتوكول لك، بينما تبقى منطق وكيلك في LangGraph.
+
+يتم هذا باستخدام حزمة `langchain_azure_ai.agents.hosting`، التي تعرض رسم بياني مجمع من LangGraph على نفس البروتوكولات التي يستخدمها الوكلاء المستضافون في Foundry.
+
+**1. تثبيت الإضافة الخاصة بالاستضافة:**
+
+```bash
+pip install -U "langchain-azure-ai[hosting]>=1.2.4" azure-identity
 ```
 
-**إنشاء سلاسل الوكلاء**
+تقوم الإضافة `hosting` بتثبيت مكتبات بروتوكول Foundry: `azure-ai-agentserver-responses` (نقطة نهاية `/responses` المتوافقة مع OpenAI) و `azure-ai-agentserver-invocations` (نقطة نهاية `/invocations` العامة).
 
-يتطلب Semantic Kernel إنشاء السلاسل يدويًا. في MAF، يتم تعيين السلسلة مباشرة للوكيل.
+**2. اختر بروتوكول استضافة:**
 
-```python
-thread = agent.get_new_thread() # Run the agent with the thread. 
+| البروتوكول | فئة المضيف | نقطة النهاية | الاستخدام عند |
+|----------|-----------|----------|----------|
+| **Responses** | `ResponsesHostServer` | `/responses` | تريد دردشة متوافقة مع OpenAI، والبث، وتاريخ الردود، وربط المحادثات — الإعداد الافتراضي الموصى به للوكلاء الحواريين. |
+| **Invocations** | `InvocationsHostServer` | `/invocations` | تحتاج إلى شكل JSON مخصص، أو نقطة نهاية على شكل ويب هوك، أو معالجة غير حوارية. |
+
+نظرًا لأن **واجهة برمجة تطبيقات Responses هي الواجهة الأساسية لتطوير الوكلاء في Foundry**، ابدأ بـ `ResponsesHostServer` لمعظم الوكلاء.
+
+**3. تكوين متغيرات البيئة** (`az login` أولاً حتى يتمكن `DefaultAzureCredential` من المصادقة):
+
+```bash
+export FOUNDRY_PROJECT_ENDPOINT="https://<resource>.services.ai.azure.com/api/projects/<project>"
+export FOUNDRY_MODEL_NAME="gpt-5-mini"
 ```
 
-**تسجيل الأدوات**
+عندما يعمل الوكيل لاحقًا كوكيل مستضاف في Foundry، تقوم المنصة بحقن `FOUNDRY_PROJECT_ENDPOINT` تلقائيًا.
 
-في Semantic Kernel، يتم تسجيل الأدوات في Kernel ثم يتم تمرير Kernel إلى الوكيل. في MAF، يتم تسجيل الأدوات مباشرة أثناء عملية إنشاء الوكيل.
+**4. عرض وكيل LangGraph عبر بروتوكول Responses:**
 
 ```python
-agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
+import os
+
+from azure.ai.projects import AIProjectClient
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
+from langchain_azure_ai.agents.hosting import ResponsesHostServer
+
+_AZURE_AI_SCOPE = "https://ai.azure.com/.default"
+
+
+def build_chat_model() -> ChatOpenAI:
+    project_endpoint = os.environ["FOUNDRY_PROJECT_ENDPOINT"].rstrip("/")
+    deployment = os.environ.get("FOUNDRY_MODEL_NAME", "gpt-5-mini")
+    credential = DefaultAzureCredential()
+    project = AIProjectClient(endpoint=project_endpoint, credential=credential)
+    openai_client = project.get_openai_client()
+    token_provider = get_bearer_token_provider(credential, _AZURE_AI_SCOPE)
+
+    # هنا يستهدف ChatOpenAI نقطة النهاية المتوافقة مع OpenAI (الردود) لمشروع Foundry.
+    return ChatOpenAI(
+        model=deployment,
+        base_url=str(openai_client.base_url),
+        api_key=token_provider,
+    )
+
+
+def main() -> None:
+    graph = create_agent(build_chat_model(), tools=[])
+    port = int(os.environ.get("PORT", "8088"))
+    ResponsesHostServer(graph).run(port=port)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
-### الفروقات بين MAF و AutoGen
+قم بتشغيله محليًا باستخدام `python main.py`، ثم أرسل طلب Responses إلى `http://localhost:8088/responses`.
 
-**الفرق بين الفرق وسير العمل**
+**السلوكيات الرئيسية:**
 
-`Teams` هي هيكل الأحداث للنشاط المدفوع بالأحداث مع الوكلاء في AutoGen. يستخدم MAF `Workflows` التي توجه البيانات إلى المنفذين من خلال بنية تعتمد على الرسوم البيانية.
+- **المحادثات**: يستمر العملاء في المحادثة عن طريق تمرير `previous_response_id` أو معرف `conversation`. إذا تم تجميع الرسم البياني الخاص بك مع نقطة تحقق LangGraph، يقوم Foundry بمطابقة حالة المحادثة مع نقطة التحقق (استخدم نقطة تحقق متينة في الإنتاج؛ `MemorySaver` مناسب للاختبار المحلي).
+- **البشر في الحلقة**: إذا استخدم الرسم الخاص بك `interrupt()` في LangGraph، يعرض `ResponsesHostServer` المقاطعة المعلقة كعنصر `function_call` / `mcp_approval_request` في Responses، ويستأنف العملاء بـ `function_call_output` / `mcp_approval_response` المطابق.
+- **النشر على Foundry**: استخدم Azure Developer CLI — `azd ext install azure.ai.agents`، `azd ai agent init -m <manifest>`، `azd ai agent run` (محلي، يتطلب Docker)، ثم `azd provision` و `azd deploy`. يتطلب نشر الوكيل المستضاف دور **مدير مشروع Foundry**.
 
-**إنشاء الأدوات**
+نسخة قابلة للتشغيل من هذا المثال موجودة في [code-samples/14-langchain-hosted-agent.py](../../../14-microsoft-agent-framework/code-samples/14-langchain-hosted-agent.py). للشرح الكامل (بروتوكول Invocations، مخططات الطلب المخصصة، واستكشاف المشاكل)، راجع [استضافة وكلاء LangGraph كوكلاء مستضافين في Foundry](https://learn.microsoft.com/azure/foundry/how-to/develop/langchain-hosted-agents).
 
-يستخدم AutoGen `FunctionTool` لتغليف الوظائف التي يمكن للوكلاء استدعاؤها. يستخدم MAF @ai_function الذي يعمل بشكل مشابه ولكنه يستنتج المخططات تلقائيًا لكل وظيفة.
+## أمثلة الشفرة 
 
-**سلوك الوكلاء**
+يمكن العثور على أمثلة الشفرة لإطار عمل Microsoft Agent في هذا المستودع ضمن الملفات `xx-python-agent-framework` و `xx-dotnet-agent-framework`.
 
-الوكلاء في AutoGen هم وكلاء ذو دورة واحدة افتراضيًا ما لم يتم تعيين `max_tool_iterations` إلى قيمة أعلى. في MAF، يكون `ChatAgent` متعدد الأدوار افتراضيًا مما يعني أنه سيستمر في استدعاء الأدوات حتى يتم إكمال مهمة المستخدم.
+## هل لديك المزيد من الأسئلة حول إطار عمل Microsoft Agent؟
 
-## عينات الكود
+انضم إلى [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) لللقاء مع متعلمين آخرين، وحضور ساعات المكتب، والحصول على إجابات لأسئلتك حول وكلاء الذكاء الاصطناعي.
+## الدرس السابق
 
-يمكن العثور على عينات الكود الخاصة بـ Microsoft Agent Framework في هذا المستودع تحت ملفات `xx-python-agent-framework` و `xx-dotnet-agent-framework`.
+[الذاكرة لوكلاء الذكاء الاصطناعي](../13-agent-memory/README.md)
 
-## هل لديك المزيد من الأسئلة حول Microsoft Agent Framework؟
+## الدرس التالي
 
-انضم إلى [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) للتواصل مع متعلمين آخرين، حضور ساعات المكتب والحصول على إجابات لأسئلتك حول وكلاء الذكاء الاصطناعي.
+[بناء وكلاء استخدام الحاسوب (CUA)](../15-browser-use/README.md)
 
 ---
 
-**إخلاء المسؤولية**:  
-تم ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الرسمي. للحصول على معلومات حاسمة، يُوصى بالترجمة البشرية الاحترافية. نحن غير مسؤولين عن أي سوء فهم أو تفسيرات خاطئة ناتجة عن استخدام هذه الترجمة.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**تنويه**:
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى للدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الرسمي والمعتمد. للمعلومات الهامة، يُنصح بالاستعانة بترجمة بشرية محترفة. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

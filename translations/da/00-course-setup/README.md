@@ -2,29 +2,29 @@
 
 ## Introduktion
 
-Denne lektion vil dække, hvordan du kører kodeeksemplerne i dette kursus.
+Denne lektion vil dække, hvordan man kører kodeeksemplerne i dette kursus.
 
-## Deltag med andre deltagere og få hjælp
+## Deltag med andre lærende og få hjælp
 
-Før du begynder at klone dit repo, skal du tilmelde dig [AI Agents For Beginners Discord-kanalen](https://aka.ms/ai-agents/discord) for at få hjælp til opsætning, stille spørgsmål om kurset eller forbinde med andre deltagere.
+Før du begynder at klone dit repo, så deltag i [AI Agents For Beginners Discord-kanalen](https://aka.ms/ai-agents/discord) for at få hjælp til opsætning, stille spørgsmål om kurset eller forbinde dig med andre lærende.
 
-## Klon eller fork dette repo
+## Klon eller Fork dette Repo
 
-For at komme i gang skal du klone eller forke GitHub-repositoriet. Dette vil give dig din egen version af kursusmaterialet, så du kan køre, teste og tilpasse koden!
+For at komme i gang, skal du klone eller forke GitHub-repositoriet. Dette laver din egen version af kursusmaterialet, så du kan køre, teste og justere koden!
 
-Dette kan gøres ved at klikke på linket for at <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">forke repoet</a>.
+Dette kan gøres ved at klikke på linket til <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">at forke repoet</a>
 
-Du bør nu have din egen forkede version af dette kursus på følgende link:
+Du skulle nu have din egen forkede version af dette kursus på følgende link:
 
-![Forket Repo](../../../translated_images/da/forked-repo.33f27ca1901baa6a.webp)
+![Forked Repo](../../../translated_images/da/forked-repo.33f27ca1901baa6a.webp)
 
-### Shallow Clone (anbefales til workshop / Codespaces)
+### Shallow Clone (anbefalet til workshop / Codespaces)
 
-  >Det fulde repository kan være stort (~3 GB), når du downloader hele historikken og alle filer. Hvis du kun deltager i workshoppen eller kun har brug for nogle få lektionsmapper, undgår en shallow clone (eller en sparse clone) det meste af denne download ved at afkorte historikken og/eller springe blobs over.
+  >Det fulde repository kan være stort (~3 GB), når du downloader hele historikken og alle filer. Hvis du kun deltager i workshoppen eller kun har brug for nogle få lektionmapper, undgår en shallow clone (eller en sparse clone) det meste af denne download ved at forkorte historikken og/eller springe blobs over.
 
 #### Hurtig shallow clone — minimal historik, alle filer
 
-Erstat `<your-username>` i nedenstående kommandoer med din fork-URL (eller upstream-URL, hvis du foretrækker det).
+Erstat `<your-username>` i kommandoerne nedenfor med din fork URL (eller upstream URL hvis du foretrækker det).
 
 For kun at klone den seneste commit-historik (lille download):
 
@@ -32,33 +32,33 @@ For kun at klone den seneste commit-historik (lille download):
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-For at klone en specifik branch:
+For at klone en specifik gren:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### Delvis (sparse) clone — minimale blobs + kun udvalgte mapper
+#### Delvis (sparse) clone — minimale blobs + kun valgte mapper
 
-Dette bruger delvis kloning og sparse-checkout (kræver Git 2.25+ og anbefales moderne Git med delvis kloningssupport):
+Dette bruger partial clone og sparse-checkout (kræver Git 2.25+ og anbefalet moderne Git med partial clone support):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Gå ind i repo-mappen:
+Gå ind i repo mappen:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-Angiv derefter, hvilke mapper du vil have (eksemplet nedenfor viser to mapper):
+Angiv derefter hvilke mapper du ønsker (eksemplet nedenfor viser to mapper):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-Efter kloning og verificering af filerne, hvis du kun har brug for filerne og vil frigøre plads (ingen git-historik), skal du slette repository-metadata (💀irreversibelt — du mister al Git-funktionalitet: ingen commits, pulls, pushes eller adgang til historik).
+Efter kloning og verifikation af filerne, hvis du kun har brug for filerne og vil frigøre plads (ingen git-historik), slet da repository metadata (💀irreversibelt — du mister al Git funktionalitet: ingen commits, pulls, pushes eller historik adgang).
 
 ```bash
 # zsh/bash
@@ -70,52 +70,41 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### Brug af GitHub Codespaces (anbefales for at undgå store lokale downloads)
+#### Brug af GitHub Codespaces (anbefalet for at undgå store lokale downloads)
 
-- Opret en ny Codespace til dette repo via [GitHub UI](https://github.com/codespaces).  
+- Opret et nyt Codespace til dette repo via [GitHub UI](https://github.com/codespaces).  
 
-- I terminalen i den nyoprettede Codespace skal du køre en af shallow/sparse clone-kommandoerne ovenfor for kun at hente de lektionsmapper, du har brug for, ind i Codespace-arbejdsområdet.
-- Valgfrit: Efter kloning i Codespaces kan du fjerne .git for at frigøre ekstra plads (se fjernelseskommandoer ovenfor).
-- Bemærk: Hvis du foretrækker at åbne repoet direkte i Codespaces (uden en ekstra kloning), skal du være opmærksom på, at Codespaces vil oprette devcontainer-miljøet og muligvis stadig provisionere mere, end du har brug for. At klone en shallow kopi i en frisk Codespace giver dig mere kontrol over diskforbruget.
+- Kør i terminalen i det nyoprettede codespace en af shallow/sparse clone kommandoerne ovenfor for kun at få de lektionmapper, du har brug for ind i Codespace workspace.
+- Valgfrit: efter kloning inde i Codespaces, fjern .git for at få ekstra plads (se fjernelseskoder ovenfor).
+- Bemærk: Hvis du foretrækker at åbne repoet direkte i Codespaces (uden ekstra cloning), så vær opmærksom på, at Codespaces opretter devcontainer miljøet og kan stadig provisionere mere end du behøver. Ved at klone et shallow kopi inde i et frisk Codespace får du bedre kontrol over disk-forbruget.
 
 #### Tips
 
-- Erstat altid klon-URL'en med din fork, hvis du vil redigere/committe.
-- Hvis du senere har brug for mere historik eller flere filer, kan du hente dem eller justere sparse-checkout for at inkludere yderligere mapper.
+- Udskift altid clone URL med din fork, hvis du ønsker at redigere/committe.
+- Hvis du senere har brug for mere historik eller filer, kan du hente dem eller justere sparse-checkout til at inkludere yderligere mapper.
 
-## Kørsel af koden
+## Køre Koden
 
-Dette kursus tilbyder en række Jupyter Notebooks, som du kan køre for at få praktisk erfaring med at bygge AI-agenter.
+Dette kursus tilbyder en serie af Jupyter Notebooks, som du kan køre for at få praktisk erfaring med at bygge AI-agenter.
 
-Kodeeksemplerne bruger enten:
+Kodeeksemplerne bruger **Microsoft Agent Framework (MAF)** med `FoundryChatClient`, som forbinder til **Microsoft Foundry Agent Service V2** (Responses API) gennem **Microsoft Foundry**.
 
-**Kræver GitHub-konto - Gratis**:
-
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Mærket som (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. Mærket som (autogen.ipynb)
-
-**Kræver Azure-abonnement**:
-
-3) Azure AI Foundry + Azure AI Agent Service. Mærket som (azureaiagent.ipynb)
-
-Vi opfordrer dig til at prøve alle tre typer eksempler for at se, hvilken der fungerer bedst for dig.
-
-Uanset hvilken mulighed du vælger, vil det afgøre, hvilke opsætningsskridt du skal følge nedenfor:
+Alle Python notebooks er mærket `*-python-agent-framework.ipynb`.
 
 ## Krav
 
 - Python 3.12+
-  - **NOTE**: Hvis du ikke har Python3.12 installeret, skal du sørge for at installere det. Opret derefter din venv ved hjælp af python3.12 for at sikre, at de korrekte versioner installeres fra requirements.txt-filen.
+  - **NOTE**: Hvis du ikke har installeret Python3.12, så sørg for at installere det. Opret derefter dit venv ved hjælp af python3.12 for at sikre, at de korrekte versioner installeres fra requirements.txt filen.
   
     >Eksempel
 
-    Opret Python venv-mappe:
+    Opret Python venv mappe:
 
     ```bash|powershell
     python -m venv venv
     ```
 
-    Aktiver derefter venv-miljøet for:
+    Aktiver derefter venv miljøet for:
 
     ```bash
     # zsh/bash
@@ -127,17 +116,17 @@ Uanset hvilken mulighed du vælger, vil det afgøre, hvilke opsætningsskridt du
     venv\Scripts\activate
     ```
 
-- .NET 10+: For eksempel koder, der bruger .NET, skal du sørge for at installere [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) eller nyere. Tjek derefter din installerede .NET SDK-version:
+- .NET 10+: For eksempel koden der bruger .NET, sørg for at installere [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) eller nyere. Tjek derefter din installerede .NET SDK version:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- En GitHub-konto - For adgang til GitHub Models Marketplace
-- Azure-abonnement - For adgang til Azure AI Foundry
-- Azure AI Foundry-konto - For adgang til Azure AI Agent Service
+- **Azure CLI** — Krævet for autentificering. Installer fra [aka.ms/installazurecli](https://aka.ms/installazurecli).
+- **Azure Subscription** — For adgang til Microsoft Foundry og Microsoft Foundry Agent Service.
+- **Microsoft Foundry Projekt** — Et projekt med en implementeret model (f.eks. `gpt-5-mini`). Se [Trin 1](#trin-1-opret-et-microsoft-foundry-projekt) nedenfor.
 
-Vi har inkluderet en `requirements.txt`-fil i roden af dette repository, som indeholder alle de nødvendige Python-pakker for at køre kodeeksemplerne.
+Vi har inkluderet en `requirements.txt` fil i roden af dette repository, som indeholder alle nødvendige Python-pakker til at køre kodeeksemplerne.
 
 Du kan installere dem ved at køre følgende kommando i din terminal i roden af repositoryet:
 
@@ -145,7 +134,7 @@ Du kan installere dem ved at køre følgende kommando i din terminal i roden af 
 pip install -r requirements.txt
 ```
 
-Vi anbefaler at oprette et Python-virtuelt miljø for at undgå konflikter og problemer.
+Vi anbefaler at oprette et Python virtuelt miljø for at undgå konflikter og problemer.
 
 ## Opsætning af VSCode
 
@@ -153,87 +142,58 @@ Sørg for, at du bruger den rigtige version af Python i VSCode.
 
 ![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## Opsætning til eksempler, der bruger GitHub-modeller
+## Opsæt Microsoft Foundry og Microsoft Foundry Agent Service
 
-### Trin 1: Hent din GitHub Personal Access Token (PAT)
+### Trin 1: Opret et Microsoft Foundry Projekt
 
-Dette kursus udnytter GitHub Models Marketplace, som giver gratis adgang til Large Language Models (LLMs), som du vil bruge til at bygge AI-agenter.
+Du skal bruge et Microsoft Foundry **hub** og **projekt** med en implementeret model for at kunne køre notebooks.
 
-For at bruge GitHub-modellerne skal du oprette en [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+1. Gå til [ai.azure.com](https://ai.azure.com) og log ind med din Azure konto.
+2. Opret en **hub** (eller brug en eksisterende). Se: [Hub ressources oversigt](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources).
+3. Inde i hubben, opret et **projekt**.
+4. Implementer en model (f.eks. `gpt-5-mini`) fra **Models + Endpoints** → **Deploy model**.
 
-Dette kan gøres ved at gå til dine <a href="https://github.com/settings/personal-access-tokens" target="_blank">Indstillinger for personlige adgangstokens</a> i din GitHub-konto.
+### Trin 2: Hent dit projekt endpoint og modelimplementeringsnavn
 
-Følg venligst [Principle of Least Privilege](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely), når du opretter din token. Det betyder, at du kun skal give token de tilladelser, det har brug for til at køre kodeeksemplerne i dette kursus.
+Fra dit projekt i Microsoft Foundry portalen:
 
-1. Vælg `Fine-grained tokens`-muligheden i venstre side af din skærm ved at navigere til **Udviklerindstillinger**.
+- **Project Endpoint** — Gå til **Oversigt** siden og kopier endpoint URL'en.
 
-   ![Udviklerindstillinger](../../../translated_images/da/profile_developer_settings.410a859fe749c755.webp)
+![Project Connection String](../../../translated_images/da/project-endpoint.8cf04c9975bbfbf1.webp)
 
-   Vælg derefter `Generate new token`.
+- **Model Deployment Name** — Gå til **Models + Endpoints**, vælg din implementerede model, og noter **Deployment name** (f.eks. `gpt-5-mini`).
 
-   ![Generer Token](../../../translated_images/da/fga_new_token.1c1a234afe202ab3.webp)
+### Trin 3: Log ind på Azure med `az login`
 
-2. Indtast et beskrivende navn til din token, der afspejler dens formål, så det er nemt at identificere senere.
+Alle notebooks bruger **`AzureCliCredential`** til autentificering — ingen API-nøgler at administrere. Det kræver, at du er logget ind via Azure CLI.
 
-    🔐 Anbefaling for tokenvarighed
+1. **Installer Azure CLI** hvis du ikke allerede har det: [aka.ms/installazurecli](https://aka.ms/installazurecli)
 
-    Anbefalet varighed: 30 dage  
-    For en mere sikker tilgang kan du vælge en kortere periode—såsom 7 dage 🛡️  
-    Det er en god måde at sætte et personligt mål og gennemføre kurset, mens din læringsmotivation er høj 🚀.
+2. **Log ind** ved at køre:
 
-    ![Token Navn og Udløbsdato](../../../translated_images/da/token-name-expiry-date.a095fb0de6386864.webp)
+    ```bash|powershell
+    az login
+    ```
 
-3. Begræns tokenens rækkevidde til din fork af dette repository.
+    Eller hvis du er i et remote/Codespace miljø uden browser:
 
-    ![Begræns rækkevidde til fork-repository](../../../translated_images/da/token_repository_limit.924ade5e11d9d8bb.webp)
+    ```bash|powershell
+    az login --use-device-code
+    ```
 
-4. Begræns tokenens tilladelser: Under **Tilladelser**, klik på **Konto**-fanen, og klik på knappen "+ Tilføj tilladelser". En dropdown-menu vil dukke op. Søg efter **Models** og marker boksen for det.
+3. **Vælg dit abonnement** hvis du bliver bedt om det — vælg det, der indeholder dit Foundry projekt.
 
-    ![Tilføj Models Tilladelse](../../../translated_images/da/add_models_permissions.c0c44ed8b40fc143.webp)
+4. **Bekræft** du er logget ind:
 
-5. Bekræft de nødvendige tilladelser, før du genererer tokenet. ![Bekræft Tilladelser](../../../translated_images/da/verify_permissions.06bd9e43987a8b21.webp)
+    ```bash|powershell
+    az account show
+    ```
 
-6. Før du genererer tokenet, skal du sikre dig, at du er klar til at gemme tokenet et sikkert sted som en adgangskodehåndteringsboks, da det ikke vil blive vist igen efter oprettelsen. ![Gem Token Sikkert](../../../translated_images/da/store_token_securely.08ee2274c6ad6caf.webp)
+> **Hvorfor `az login`?** Notebooks autentificerer ved hjælp af `AzureCliCredential` fra `azure-identity` pakken. Det betyder, at din Azure CLI session leverer legitimationsoplysningerne — ingen API-nøgler eller hemmeligheder i din `.env` fil. Dette er en [bedste praksis for sikkerhed](https://learn.microsoft.com/azure/developer/ai/keyless-connections).
 
-Kopiér dit nye token, som du lige har oprettet. Du vil nu tilføje dette til din `.env`-fil, der er inkluderet i dette kursus.
+### Trin 4: Opret din `.env` fil
 
-### Trin 2: Opret din `.env`-fil
-
-For at oprette din `.env`-fil skal du køre følgende kommando i din terminal.
-
-```bash
-# zsh/bash
-cp .env.example .env
-```
-
-```powershell
-# PowerShell
-Copy-Item .env.example .env
-```
-
-Dette vil kopiere eksempel-filen og oprette en `.env` i din mappe, hvor du udfylder værdierne for miljøvariablerne.
-
-Med dit token kopieret, åbn `.env`-filen i din foretrukne teksteditor og indsæt dit token i `GITHUB_TOKEN`-feltet.
-
-![GitHub Token Felt](../../../translated_images/da/github_token_field.20491ed3224b5f4a.webp)
-
-Du bør nu kunne køre kodeeksemplerne i dette kursus.
-
-## Opsætning til eksempler, der bruger Azure AI Foundry og Azure AI Agent Service
-
-### Trin 1: Hent din Azure-projekt-endpoint
-
-Følg trinnene for at oprette en hub og et projekt i Azure AI Foundry, som findes her: [Hubressourcer oversigt](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-Når du har oprettet dit projekt, skal du hente forbindelsesstrengen til dit projekt.
-
-Dette kan gøres ved at gå til **Oversigt**-siden for dit projekt i Azure AI Foundry-portalen.
-
-![Projektforbindelsesstreng](../../../translated_images/da/project-endpoint.8cf04c9975bbfbf1.webp)
-
-### Trin 2: Opret din `.env`-fil
-
-For at oprette din `.env`-fil skal du køre følgende kommando i din terminal.
+Kopier eksempel-filen:
 
 ```bash
 # zsh/bash
@@ -245,79 +205,185 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Dette vil kopiere eksempel-filen og oprette en `.env` i din mappe, hvor du udfylder værdierne for miljøvariablerne.
+Åbn `.env` og udfyld disse to værdier:
 
-Med dit token kopieret, åbn `.env`-filen i din foretrukne teksteditor og indsæt dit token i `PROJECT_ENDPOINT`-feltet.
+```env
+AZURE_AI_PROJECT_ENDPOINT=https://<your-project>.services.ai.azure.com/api/projects/<your-project-id>
+AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-5-mini
+```
 
-### Trin 3: Log ind på Azure
+| Variabel | Hvor finder du den |
+|----------|-----------------|
+| `AZURE_AI_PROJECT_ENDPOINT` | Foundry portal → dit projekt → **Oversigt** siden |
+| `AZURE_AI_MODEL_DEPLOYMENT_NAME` | Foundry portal → **Models + Endpoints** → navnet på din implementerede model |
 
-Som en sikkerhedsbedste praksis vil vi bruge [nøglefri autentificering](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) til at autentificere til Azure OpenAI med Microsoft Entra ID. 
+Det var det for de fleste lektioner! Notebooks vil automatisk autentificere gennem din `az login` session.
 
-Åbn derefter en terminal og kør `az login --use-device-code` for at logge ind på din Azure-konto.
+### Trin 5: Installer Python-afhængigheder
 
-Når du er logget ind, skal du vælge dit abonnement i terminalen.
+```bash|powershell
+pip install -r requirements.txt
+```
 
-## Yderligere miljøvariabler - Azure Search og Azure OpenAI 
+Vi anbefaler at køre dette inde i det virtuelle miljø, du oprettede tidligere.
 
-Til Agentic RAG-lektionen - Lektion 5 - er der eksempler, der bruger Azure Search og Azure OpenAI.
+## Yderligere opsætning for Lektion 5 (Agentic RAG)
 
-Hvis du vil køre disse eksempler, skal du tilføje følgende miljøvariabler til din `.env`-fil:
+Lektion 5 bruger **Azure AI Search** til retrieval-augmenteret generering. Hvis du planlægger at køre den lektion, tilføj da disse variabler til din `.env` fil:
 
-### Oversigtsside (Projekt)
+| Variabel | Hvor finder du den |
+|----------|-----------------|
+| `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure-portalen → din **Azure AI Search** ressource → **Oversigt** → URL |
+| `AZURE_SEARCH_API_KEY` | Azure-portalen → din **Azure AI Search** ressource → **Indstillinger** → **Nøgler** → primær administrator nøgle |
 
-- `AZURE_SUBSCRIPTION_ID` - Tjek **Projektdetaljer** på **Oversigt**-siden for dit projekt.
+## Yderligere opsætning for lektioner der kalder Azure OpenAI direkte (lektioner 6 og 8)
 
-- `AZURE_AI_PROJECT_NAME` - Se øverst på **Oversigt**-siden for dit projekt.
+Nogle notebooks i lektion 6 og 8 kalder **Azure OpenAI** direkte (ved brug af **Responses API**) i stedet for at gå gennem et Microsoft Foundry projekt. Disse eksempler brugte tidligere GitHub Models, som er forældet (udfaset juli 2026) og understøtter ikke Responses API. Hvis du planlægger at køre disse eksempler, tilføj da disse variabler til din `.env` fil:
 
-- `AZURE_OPENAI_SERVICE` - Find dette i fanen **Inkluderede kapaciteter** for **Azure OpenAI Service** på **Oversigt**-siden.
+| Variabel | Hvor finder du den |
+|----------|-----------------|
+| `AZURE_OPENAI_ENDPOINT` | Azure-portalen → din **Azure OpenAI** ressource → **Nøgler og Endpoint** → Endpoint (f.eks. `https://<your-resource>.openai.azure.com`) |
+| `AZURE_OPENAI_DEPLOYMENT` | Navnet på din implementerede model (f.eks. `gpt-5-mini`) der understøtter Responses API |
+| `AZURE_OPENAI_API_KEY` | Valgfri — kun hvis du bruger nøglebaseret autentificering i stedet for `az login` / Entra ID |
 
-### Management Center
+> Responses API bruger den stabile `/openai/v1/` endpoint, så ingen `api-version` er nødvendig. Log ind med `az login` for at bruge nøglefri Entra ID autentificering.
 
-- `AZURE_OPENAI_RESOURCE_GROUP` - Gå til **Projektindstillinger** på **Oversigt**-siden for **Management Center**.
+## Alternativ udbyder: MiniMax (OpenAI-kompatibel)
 
-- `GLOBAL_LLM_SERVICE` - Under **Forbundne ressourcer**, find **Azure AI Services** forbindelsesnavnet. Hvis det ikke er angivet, skal du tjekke **Azure-portalen** under din ressourcegruppe for AI Services ressourcenavnet.
+[MiniMax](https://platform.minimaxi.com/) tilbyder modeller med stort kontekstvindue (op til 204K tokens) via en OpenAI-kompatibel API. Eftersom Microsoft Agent Framework's `OpenAIChatClient` fungerer med enhver OpenAI-kompatibel endpoint, kan du bruge MiniMax som et plug-and-play alternativ til Azure OpenAI eller OpenAI.
 
-### Models + Endpoints Side
+Tilføj disse variabler til din `.env` fil:
 
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Vælg din embedding-model (f.eks. `text-embedding-ada-002`) og noter **Deploymentsnavnet** fra modeldetaljerne.
+| Variabel | Hvor finder du den |
+|----------|-----------------|
+| `MINIMAX_API_KEY` | [MiniMax Platform](https://platform.minimaxi.com/) → API-nøgler |
+| `MINIMAX_BASE_URL` | Brug `https://api.minimax.io/v1` (standardværdi) |
+| `MINIMAX_MODEL_ID` | Modelnavnet der skal bruges (f.eks., `MiniMax-M3`) |
 
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Vælg din chat-model (f.eks. `gpt-4o-mini`) og noter **Deploymentsnavnet** fra modeldetaljerne.
+**Eksempelmodeller**: `MiniMax-M3` (anbefalet), `MiniMax-M2.7`, `MiniMax-M2.7-highspeed` (hurtigere svar). Modelnavne og tilgængelighed kan ændre sig over tid, og adgang til en given model kan afhænge af din konto eller region — tjek [MiniMax Platform](https://platform.minimaxi.com/) for den aktuelle liste. Hvis `MiniMax-M3` ikke er tilgængelig for din konto, sæt `MINIMAX_MODEL_ID` til en model du har adgang til (f.eks. `MiniMax-M2.7`).
 
-### Azure Portal
+Kodeeksemplerne der bruger `OpenAIChatClient` (f.eks. Lektion 14 hotel booking workflow) vil automatisk detektere og bruge din MiniMax-konfiguration når `MINIMAX_API_KEY` er sat.
 
-- `AZURE_OPENAI_ENDPOINT` - Se efter **Azure AI services**, klik på det, gå derefter til **Ressourcestyring**, **Nøgler og Endpoint**, rul ned til "Azure OpenAI endpoints", og kopier den, der siger "Language APIs".
+## Alternativ udbyder: Foundry Local (Kør modeller lokalt)
 
-- `AZURE_OPENAI_API_KEY` - Fra samme skærm, kopier NØGLE 1 eller NØGLE 2.
+[Foundry Local](https://foundrylocal.ai) er en letvægts runtime, der downloader, administrerer og tjener sprogmodeller **helt på din egen maskine** gennem en OpenAI-kompatibel API — ingen cloud, ingen Azure abonnement, og ingen API-nøgler. Det er et fremragende valg til offline-udvikling, eksperimenter uden cloud-omkostninger, eller at holde data på enheden.
 
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - Find din **Azure AI Search**-ressource, klik på den, og se **Oversigt**.
+Fordi Microsoft Agent Framework's `OpenAIChatClient` fungerer med enhver OpenAI-kompatibel endpoint, er Foundry Local et lokalt plug-and-play alternativ til Azure OpenAI.
 
-- `AZURE_SEARCH_API_KEY` - Gå derefter til **Indstillinger** og derefter **Nøgler** for at kopiere den primære eller sekundære admin-nøgle.
+**1. Installer Foundry Local**
 
-### Ekstern Webside
+```bash
+# Windows
+winget install Microsoft.FoundryLocal
 
-- `AZURE_OPENAI_API_VERSION` - Besøg siden [API-version livscyklus](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) under **Seneste GA API-udgivelse**.
+# macOS
+brew install foundrylocal
+```
 
-### Opsætning af nøglefri autentificering
+**2. Download og kør en model** (dette starter også den lokale service):
 
-I stedet for at hardkode dine legitimationsoplysninger, vil vi bruge en nøglefri forbindelse med Azure OpenAI. For at gøre dette vil vi importere `DefaultAzureCredential` og senere kalde funktionen `DefaultAzureCredential` for at få legitimationsoplysningerne.
+```bash
+foundry model list          # se tilgængelige modeller
+foundry model run phi-4-mini
+```
+
+**3. Installer Python SDK'en** brugt til at finde den lokale endpoint:
+
+```bash
+pip install foundry-local-sdk
+```
+
+**4. Peg Microsoft Agent Framework til din lokale model:**
 
 ```python
-# Python
-from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
+from foundry_local import FoundryLocalManager
+from agent_framework.openai import OpenAIChatClient
+
+# Downloader (om nødvendigt) og tjener modellen lokalt, derefter opdager endpoint/port.
+manager = FoundryLocalManager("phi-4-mini")
+
+chat_client = OpenAIChatClient(
+    base_url=manager.endpoint,      # f.eks. http://localhost:<port>/v1
+    api_key=manager.api_key,        # altid "not-required" for Foundry Local
+    model_id=manager.get_model_info("phi-4-mini").id,
+)
+
+agent = chat_client.as_agent(
+    name="LocalAgent",
+    instructions="You are a helpful assistant running fully on-device.",
+)
 ```
 
-## Sidder du fast et sted?
-Hvis du oplever problemer med at køre denne opsætning, så hop ind i vores <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> eller <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">opret en issue</a>.
+> **Bemærk:** Foundry Local udsætter en OpenAI-kompatibel **Chat Completions** endpoint. Brug den til lokal udvikling og offline scenarier. For det fulde **Responses API** funktionssæt (stateful samtaler, dyb værktøjsorkestrering og agent-stil udvikling), målret mod **Azure OpenAI** eller et **Microsoft Foundry** projekt som vist i lektionerne. Se [Foundry Local dokumentationen](https://foundrylocal.ai) for den aktuelle modelkatalog og platformunderstøttelse.
 
-## Næste Lektion
+## Yderligere opsætning for Lektion 8 (Bing Grounding Workflow)
 
-Du er nu klar til at køre koden for dette kursus. God fornøjelse med at lære mere om AI-agenter!
 
-[Introduktion til AI-agenter og anvendelsestilfælde](../01-intro-to-ai-agents/README.md)
+Det betingede workflow-notebook i lektion 8 bruger **Bing grounding** via Microsoft Foundry. Hvis du planlægger at køre det eksempel, skal du tilføje denne variabel til din `.env`-fil:
+
+| Variabel | Hvor du finder den |
+|----------|-------------------|
+| `BING_CONNECTION_ID` | Microsoft Foundry-portalen → dit projekt → **Management** → **Connected resources** → din Bing-forbindelse → kopier forbindelses-ID'et |
+
+## Fejlfinding
+
+### SSL-certifikatverifikationsfejl på macOS
+
+Hvis du er på macOS og støder på en fejl som:
+
+```plaintext
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
+```
+
+Dette er et kendt problem med Python på macOS, hvor systemets SSL-certifikater ikke automatisk godkendes. Prøv følgende løsninger i rækkefølge:
+
+**Mulighed 1: Kør Pythons Install Certificates-script (anbefalet)**
+
+```bash
+# Erstat 3.XX med din installerede Python-version (f.eks. 3.12 eller 3.13):
+/Applications/Python\ 3.XX/Install\ Certificates.command
+```
+
+**Mulighed 2: Brug `connection_verify=False` i din notebook (kun for GitHub Models-notebooks)**
+
+I Lektion 6-notebooken (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`) er en kommentar med en løsning allerede inkluderet. Fjern kommentaren på `connection_verify=False` når klienten oprettes:
+
+```python
+client = ChatCompletionsClient(
+    endpoint=endpoint,
+    credential=AzureKeyCredential(token),
+    connection_verify=False,  # Deaktiver SSL-verifikation, hvis du støder på certifikatfejl
+)
+```
+
+> **⚠️ Advarsel:** Deaktivering af SSL-verifikation (`connection_verify=False`) reducerer sikkerheden ved at springe certifikatvalidering over. Brug dette kun som en midlertidig løsning i udviklingsmiljøer, aldrig i produktion.
+
+**Mulighed 3: Installer og brug `truststore`**
+
+```bash
+pip install truststore
+```
+
+Tilføj derefter følgende øverst i din notebook eller script, før du foretager netværkskald:
+
+```python
+import truststore
+truststore.inject_into_ssl()
+```
+
+## Stuck et sted?
+
+Hvis du har problemer med at køre denne opsætning, kan du hoppe ind i vores <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> eller <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">oprette en issue</a>.
+
+## Næste lektion
+
+Du er nu klar til at køre koden til dette kursus. God fornøjelse med at lære mere om AI-agenternes verden! 
+
+[Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Ansvarsfraskrivelse**:  
-Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi er ikke ansvarlige for misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
+**Ansvarsfraskrivelse**:
+Dette dokument er blevet oversat ved hjælp af AI-oversættelsestjenesten [Co-op Translator](https://github.com/Azure/co-op-translator). Selvom vi bestræber os på nøjagtighed, skal du være opmærksom på, at automatiserede oversættelser kan indeholde fejl eller unøjagtigheder. Det originale dokument på dets oprindelige sprog bør betragtes som den autoritative kilde. For kritisk information anbefales professionel menneskelig oversættelse. Vi påtager os intet ansvar for misforståelser eller fejltolkninger, der opstår som følge af brugen af denne oversættelse.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

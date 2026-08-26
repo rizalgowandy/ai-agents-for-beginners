@@ -1,182 +1,200 @@
-[![Projektowanie wieloagentowe](../../../translated_images/pl/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
+[![Multi-Agent Design](../../../translated_images/pl/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
 
-> _(Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji)_
+> _(Kliknij obraz powyżej, aby obejrzeć film z tej lekcji)_
 
-# Wzorce projektowe dla systemów wieloagentowych
+# Wzorce projektowe wieloagentowe
 
-Gdy tylko zaczniesz pracować nad projektem obejmującym wielu agentów, będziesz musiał rozważyć zastosowanie wzorca projektowego dla systemów wieloagentowych. Jednak nie zawsze jest od razu jasne, kiedy należy przejść na system wieloagentowy i jakie są z tego korzyści.
+Gdy tylko zaczniesz pracować nad projektem, który obejmuje wielu agentów, będziesz musiał rozważyć wzorzec projektowy wieloagentowy. Jednak może nie być od razu jasne, kiedy przejść do wieloagentowości i jakie są jej zalety.
 
 ## Wprowadzenie
 
-W tej lekcji postaramy się odpowiedzieć na następujące pytania:
+W tej lekcji spróbujemy odpowiedzieć na następujące pytania:
 
-- W jakich scenariuszach można zastosować systemy wieloagentowe?
-- Jakie są zalety korzystania z systemów wieloagentowych w porównaniu z jednym agentem wykonującym wiele zadań?
-- Jakie są podstawowe elementy wdrażania wzorca projektowego dla systemów wieloagentowych?
-- Jak uzyskać wgląd w interakcje między wieloma agentami?
+- Do jakich scenariuszy nadają się systemy wieloagentowe?
+- Jakie są zalety używania wielu agentów zamiast pojedynczego wykonującego wiele zadań?
+- Jakie są elementy składowe implementacji wzorca projektowego wieloagentowego?
+- Jak mieć wgląd w to, jak agenci współdziałają ze sobą?
 
 ## Cele nauki
 
 Po tej lekcji powinieneś być w stanie:
 
-- Zidentyfikować scenariusze, w których systemy wieloagentowe są odpowiednie.
-- Rozpoznać zalety korzystania z systemów wieloagentowych w porównaniu z jednym agentem.
-- Zrozumieć podstawowe elementy wdrażania wzorca projektowego dla systemów wieloagentowych.
+- Zidentyfikować scenariusze, gdzie pasują systemy wieloagentowe
+- Dostrzec zalety stosowania wielu agentów zamiast pojedynczego.
+- Zrozumieć elementy składowe implementacji wzorca projektowego wieloagentowego.
 
-Jaki jest szerszy kontekst?
+Jaki jest szerszy obraz?
 
-*Systemy wieloagentowe to wzorzec projektowy, który pozwala wielu agentom współpracować w celu osiągnięcia wspólnego celu*.
+*Systemy wieloagentowe to wzorzec projektowy, który pozwala wielu agentom współpracować, aby osiągnąć wspólny cel*.
 
-Ten wzorzec jest szeroko stosowany w różnych dziedzinach, takich jak robotyka, systemy autonomiczne i obliczenia rozproszone.
+Wzorzec ten jest szeroko stosowany w różnych dziedzinach, w tym w robotyce, systemach autonomicznych i przetwarzaniu rozproszonym.
 
-## Scenariusze, w których systemy wieloagentowe są odpowiednie
+## Scenariusze, w których systemy wieloagentowe mają zastosowanie
 
-W jakich sytuacjach warto zastosować systemy wieloagentowe? Odpowiedź brzmi: istnieje wiele scenariuszy, w których wykorzystanie wielu agentów jest korzystne, szczególnie w następujących przypadkach:
+Jakie więc scenariusze są dobrym przypadkiem użycia systemów wieloagentowych? Odpowiedź brzmi, że istnieje wiele scenariuszy, w których zastosowanie wielu agentów jest korzystne, zwłaszcza w następujących przypadkach:
 
-- **Duże obciążenia pracą**: Duże zadania można podzielić na mniejsze i przypisać różnym agentom, co pozwala na przetwarzanie równoległe i szybsze ukończenie. Przykładem może być przetwarzanie dużych zbiorów danych.
-- **Złożone zadania**: Złożone zadania, podobnie jak duże obciążenia, można podzielić na mniejsze podzadania i przypisać różnym agentom, z których każdy specjalizuje się w określonym aspekcie zadania. Dobrym przykładem są pojazdy autonomiczne, gdzie różni agenci zarządzają nawigacją, wykrywaniem przeszkód i komunikacją z innymi pojazdami.
-- **Różnorodne kompetencje**: Różni agenci mogą mieć różne kompetencje, co pozwala im skuteczniej radzić sobie z różnymi aspektami zadania niż jeden agent. Przykładem może być opieka zdrowotna, gdzie agenci zarządzają diagnostyką, planami leczenia i monitorowaniem pacjentów.
+- **Duże obciążenia**: Duże obciążenia można podzielić na mniejsze zadania i przydzielić różnym agentom, co pozwala na przetwarzanie równoległe i szybsze ukończenie. Przykładem jest przetwarzanie dużych zbiorów danych.
+- **Złożone zadania**: Złożone zadania, podobnie jak duże obciążenia, można rozbić na mniejsze podzadania i przydzielić różnym agentom, z których każdy specjalizuje się w określonym aspekcie zadania. Dobrym przykładem są pojazdy autonomiczne, gdzie różni agenci zarządzają nawigacją, wykrywaniem przeszkód i komunikacją z innymi pojazdami.
+- **Różnorodne kompetencje**: Różni agenci mogą mieć różne kompetencje, co pozwala im efektywniej zarządzać różnymi aspektami zadania niż pojedynczy agent. Przykładem jest opieka zdrowotna, gdzie agenci mogą obsługiwać diagnostykę, plany leczenia i monitorowanie pacjenta.
 
-## Zalety korzystania z systemów wieloagentowych w porównaniu z jednym agentem
+## Zalety używania systemów wieloagentowych w porównaniu do pojedynczego agenta
 
-System z jednym agentem może dobrze działać w przypadku prostych zadań, ale w przypadku bardziej złożonych zadań zastosowanie wielu agentów może przynieść kilka korzyści:
+System z jednym agentem może sprawdzić się przy prostych zadaniach, ale przy bardziej złożonych zadaniach użycie wielu agentów daje kilka korzyści:
 
-- **Specjalizacja**: Każdy agent może być wyspecjalizowany w określonym zadaniu. Brak specjalizacji w przypadku jednego agenta oznacza, że agent może robić wszystko, ale może się pogubić, gdy stanie przed złożonym zadaniem. Może na przykład wykonać zadanie, do którego nie jest najlepiej przystosowany.
-- **Skalowalność**: Łatwiej jest skalować systemy, dodając więcej agentów, niż przeciążać jednego agenta.
-- **Odporność na błędy**: Jeśli jeden agent zawiedzie, inni mogą nadal działać, zapewniając niezawodność systemu.
+- **Specjalizacja**: Każdy agent może być wyspecjalizowany do konkretnego zadania. Brak specjalizacji w pojedynczym agencie oznacza, że agent potrafi wszystko, ale może być zdezorientowany przy złożonym zadaniu. Może np. wykonywać zadanie, do którego nie jest najlepiej przystosowany.
+- **Skalowalność**: Łatwiej jest skalować system, dodając kolejnych agentów niż przeciążając pojedynczego.
+- **Tolerancja na błędy**: Jeśli jeden agent zawiedzie, pozostałe mogą dalej działać, co zapewnia niezawodność systemu.
 
-Weźmy przykład rezerwacji podróży dla użytkownika. System z jednym agentem musiałby obsłużyć wszystkie aspekty procesu rezerwacji podróży, od wyszukiwania lotów po rezerwację hoteli i wynajem samochodów. Aby to osiągnąć, agent musiałby mieć narzędzia do obsługi wszystkich tych zadań. Mogłoby to prowadzić do powstania skomplikowanego i monolitycznego systemu, który trudno utrzymać i skalować. System wieloagentowy, z kolei, mógłby mieć różnych agentów wyspecjalizowanych w wyszukiwaniu lotów, rezerwacji hoteli i wynajmie samochodów. Dzięki temu system byłby bardziej modułowy, łatwiejszy w utrzymaniu i skalowalny.
+Weźmy przykład: zarezerwujmy wycieczkę dla użytkownika. System z jednym agentem musiałby obsłużyć wszystkie aspekty procesu rezerwacji, od wyszukiwania lotów po rezerwację hoteli i samochodów. Aby to osiągnąć za pomocą jednego agenta, musiałby on mieć narzędzia do realizacji wszystkich tych zadań. Mogłoby to prowadzić do skomplikowanego i monolitycznego systemu, trudnego w utrzymaniu i skalowaniu. System wieloagentowy mógłby z kolei mieć różnych agentów wyspecjalizowanych w wyszukiwaniu lotów, rezerwacji hoteli i samochodów. Dzięki temu system byłby bardziej modułowy, łatwiejszy w utrzymaniu i skalowalny.
 
-Porównaj to do biura podróży prowadzonego jako mały rodzinny biznes w porównaniu z biurem podróży działającym jako franczyza. W małym rodzinnym biznesie jeden agent obsługuje wszystkie aspekty procesu rezerwacji podróży, podczas gdy w franczyzie różni agenci zajmują się różnymi aspektami procesu rezerwacji.
+Porównaj to do biura podróży prowadzonym przez mały rodzinny biznes w porównaniu do biura działającego jako franczyza. Mały biznes miałby pojedynczego agenta obsługującego wszystkie aspekty rezerwacji, podczas gdy franczyza miałaby różnych agentów odpowiedzialnych za różne aspekty procesu rezerwacji.
 
-## Podstawowe elementy wdrażania wzorca projektowego dla systemów wieloagentowych
+## Elementy składowe implementacji wzorca projektowego wieloagentowego
 
-Zanim będziesz mógł wdrożyć wzorzec projektowy dla systemów wieloagentowych, musisz zrozumieć podstawowe elementy, które go tworzą.
+Zanim zaimplementujesz wzorzec wieloagentowy, musisz poznać elementy, które go tworzą.
 
-Przyjrzyjmy się temu na przykładzie rezerwacji podróży dla użytkownika. W tym przypadku podstawowe elementy obejmują:
+Uczyńmy to bardziej konkretnym, ponownie patrząc na przykład rezerwacji wycieczki dla użytkownika. W tym przypadku elementy składowe obejmują:
 
-- **Komunikacja między agentami**: Agenci odpowiedzialni za wyszukiwanie lotów, rezerwację hoteli i wynajem samochodów muszą się komunikować i wymieniać informacje o preferencjach i ograniczeniach użytkownika. Musisz zdecydować o protokołach i metodach tej komunikacji. Oznacza to na przykład, że agent odpowiedzialny za wyszukiwanie lotów musi komunikować się z agentem odpowiedzialnym za rezerwację hoteli, aby upewnić się, że hotel jest zarezerwowany na te same daty co lot. Oznacza to, że agenci muszą wymieniać informacje o datach podróży użytkownika, co oznacza, że musisz zdecydować *którzy agenci wymieniają informacje i w jaki sposób*.
-- **Mechanizmy koordynacji**: Agenci muszą koordynować swoje działania, aby zapewnić spełnienie preferencji i ograniczeń użytkownika. Preferencją użytkownika może być na przykład hotel blisko lotniska, podczas gdy ograniczeniem może być to, że samochody do wynajęcia są dostępne tylko na lotnisku. Oznacza to, że agent odpowiedzialny za rezerwację hoteli musi koordynować działania z agentem odpowiedzialnym za wynajem samochodów, aby zapewnić spełnienie preferencji i ograniczeń użytkownika. Oznacza to, że musisz zdecydować *jak agenci koordynują swoje działania*.
-- **Architektura agentów**: Agenci muszą mieć wewnętrzną strukturę umożliwiającą podejmowanie decyzji i uczenie się na podstawie interakcji z użytkownikiem. Oznacza to, że agent odpowiedzialny za wyszukiwanie lotów musi mieć wewnętrzną strukturę umożliwiającą podejmowanie decyzji o tym, które loty polecić użytkownikowi. Oznacza to, że musisz zdecydować *jak agenci podejmują decyzje i uczą się na podstawie interakcji z użytkownikiem*. Przykładem tego, jak agent się uczy i doskonali, może być agent odpowiedzialny za wyszukiwanie lotów, który wykorzystuje model uczenia maszynowego do rekomendowania lotów użytkownikowi na podstawie jego wcześniejszych preferencji.
-- **Widoczność interakcji między agentami**: Musisz mieć wgląd w to, jak agenci współdziałają ze sobą. Oznacza to, że musisz mieć narzędzia i techniki do śledzenia działań i interakcji agentów. Mogą to być narzędzia do logowania i monitorowania, narzędzia wizualizacyjne oraz metryki wydajności.
-- **Wzorce wieloagentowe**: Istnieją różne wzorce wdrażania systemów wieloagentowych, takie jak architektury scentralizowane, zdecentralizowane i hybrydowe. Musisz zdecydować, który wzorzec najlepiej pasuje do Twojego przypadku użycia.
-- **Człowiek w pętli**: W większości przypadków w procesie będzie uczestniczył człowiek i musisz poinstruować agentów, kiedy mają prosić o interwencję człowieka. Może to być na przykład sytuacja, w której użytkownik prosi o konkretny hotel lub lot, którego agenci nie zaproponowali, lub prosi o potwierdzenie przed dokonaniem rezerwacji.
+- **Komunikacja agentów**: Agenci zajmujący się wyszukiwaniem lotów, rezerwacją hoteli i samochodów muszą się komunikować i wymieniać informacjami o preferencjach i ograniczeniach użytkownika. Musisz zdecydować o protokołach i metodach tej komunikacji. Konkretnie oznacza to, że agent wyszukujący loty musi komunikować się z agentem rezerwującym hotele, by zapewnić, że hotel jest rezerwowany na te same daty co lot. Oznacza to, że agenci muszą dzielić się informacjami o datach podróży użytkownika, co wymaga zdecydowania *którzy agenci dzielą się informacjami i jak to robią*.
+- **Mechanizmy koordynacji**: Agenci muszą koordynować swoje działania, aby spełnić preferencje i ograniczenia użytkownika. Preferencja użytkownika może być taka, że chce hotel blisko lotniska, podczas gdy ograniczeniem jest, że auta z wypożyczalni są dostępne tylko na lotnisku. Oznacza to, że agent rezerwujący hotel musi się koordynować z agentem rezerwującym samochody, aby spełnić wymagania użytkownika. Musisz zdecydować *jak agenci koordynują swoje działania*.
+- **Architektura agentów**: Agenci muszą mieć wewnętrzną strukturę pozwalającą na podejmowanie decyzji i uczenie się z interakcji z użytkownikiem. Oznacza to, że agent wyszukujący loty musi mieć strukturę do podejmowania decyzji, które loty rekomendować użytkownikowi. Musisz zdecydować *jak agenci podejmują decyzje i uczą się z interakcji z użytkownikiem*. Przykładem nauki i poprawy działania agenta może być użycie modelu uczenia maszynowego do rekomendowania lotów na podstawie wcześniejszych preferencji użytkownika.
+- **Widoczność interakcji wieloagentowych**: Musisz mieć wgląd w to, jak agenci współdziałają. Potrzebujesz narzędzi i technik do śledzenia działań i interakcji agentów. Może to być w formie narzędzi do logowania i monitoringu, narzędzi wizualizacyjnych oraz mierników wydajności.
+- **Wzorce wieloagentowe**: Istnieją różne wzorce implementacji systemów wieloagentowych, takie jak architektury scentralizowane, zdecentralizowane i hybrydowe. Musisz wybrać wzorzec najlepiej pasujący do twojego przypadku użycia.
+- **Człowiek w pętli**: W większości przypadków w systemie znajduje się człowiek i musisz poinstruować agentów, kiedy mają prosić o interwencję człowieka. Może to mieć formę użytkownika żądającego konkretnego hotelu lub lotu, którego agenci nie zaproponowali, albo prośby o potwierdzenie przed dokonaniem rezerwacji.
 
-## Widoczność interakcji między agentami
+## Widoczność interakcji wieloagentowych
 
-Ważne jest, aby mieć wgląd w to, jak agenci współdziałają ze sobą. Taka widoczność jest kluczowa dla debugowania, optymalizacji i zapewnienia skuteczności całego systemu. Aby to osiągnąć, musisz mieć narzędzia i techniki do śledzenia działań i interakcji agentów. Mogą to być narzędzia do logowania i monitorowania, narzędzia wizualizacyjne oraz metryki wydajności.
+Ważne jest, aby mieć wgląd w to, jak agenci ze sobą współpracują. Ta widoczność jest niezbędna do debugowania, optymalizacji i zapewnienia efektywności całego systemu. Aby to osiągnąć, potrzebujesz narzędzi i technik do śledzenia działań i interakcji agentów. Mogą to być narzędzia do logowania i monitoringu, narzędzia wizualizacyjne oraz mierniki wydajności.
 
-Na przykład w przypadku rezerwacji podróży dla użytkownika możesz mieć pulpit nawigacyjny, który pokazuje status każdego agenta, preferencje i ograniczenia użytkownika oraz interakcje między agentami. Taki pulpit może pokazywać daty podróży użytkownika, loty polecane przez agenta lotów, hotele polecane przez agenta hoteli i samochody polecane przez agenta wynajmu samochodów. Dzięki temu będziesz mieć jasny obraz tego, jak agenci współdziałają ze sobą i czy preferencje oraz ograniczenia użytkownika są spełniane.
+Na przykład przy rezerwacji wycieczki dla użytkownika, możesz mieć panel pokazujący status każdego agenta, preferencje i ograniczenia użytkownika oraz interakcje między agentami. Panel może pokazywać daty podróży, loty rekomendowane przez agenta lotów, hotele rekomendowane przez agenta hotelowego oraz samochody przez agenta wypożyczalni. Pozwala to jasno zobaczyć, jak agenci współpracują i czy spełniane są preferencje i ograniczenia użytkownika.
 
-Przyjrzyjmy się bliżej każdemu z tych aspektów.
+Przyjrzyjmy się każdemu z tych aspektów bardziej szczegółowo.
 
-- **Narzędzia do logowania i monitorowania**: Chcesz rejestrować każdą akcję podjętą przez agenta. Wpis w dzienniku może zawierać informacje o agencie, który podjął akcję, podjętej akcji, czasie jej podjęcia i wyniku. Te informacje mogą być następnie wykorzystane do debugowania, optymalizacji i innych celów.
+- **Narzędzia do logowania i monitoringu**: Chcesz rejestrować każde działanie agenta. Wpis w logu może zawierać informacje o agencie podejmującym działanie, rodzaju działania, czasie wykonania oraz wyniku działania. Te informacje można potem wykorzystać do debugowania, optymalizacji i innych celów.
 
-- **Narzędzia wizualizacyjne**: Narzędzia wizualizacyjne mogą pomóc w intuicyjnym zobrazowaniu interakcji między agentami. Na przykład możesz mieć wykres pokazujący przepływ informacji między agentami. Może to pomóc w identyfikacji wąskich gardeł, nieefektywności i innych problemów w systemie.
+- **Narzędzia wizualizacyjne**: Narzędzia wizualizacyjne pomagają zobaczyć interakcje między agentami w sposób bardziej intuicyjny. Na przykład możesz mieć wykres pokazujący przepływ informacji między agentami. Pomaga to zidentyfikować wąskie gardła, nieefektywności i inne problemy w systemie.
 
-- **Metryki wydajności**: Metryki wydajności mogą pomóc w śledzeniu skuteczności systemu wieloagentowego. Na przykład możesz śledzić czas potrzebny na wykonanie zadania, liczbę zadań wykonanych w jednostce czasu oraz dokładność rekomendacji agentów. Te informacje mogą pomóc w identyfikacji obszarów wymagających poprawy i optymalizacji systemu.
+- **Mierniki wydajności**: Mierniki wydajności pomagają śledzić efektywność systemu wieloagentowego. Możesz np. monitorować czas potrzebny na ukończenie zadania, liczbę zadań wykonanych na jednostkę czasu oraz dokładność rekomendacji agentów. Te informacje pomagają w identyfikacji obszarów do poprawy i optymalizacji systemu.
 
-## Wzorce wieloagentowe
+## Wzorce dla systemów wieloagentowych
 
-Przyjrzyjmy się konkretnym wzorcom, które można wykorzystać do tworzenia aplikacji wieloagentowych. Oto kilka interesujących wzorców wartych rozważenia:
+Przeanalizujmy kilka konkretnych wzorców, które można zastosować do tworzenia aplikacji wieloagentowych. Oto kilka interesujących wzorców wartych rozważenia:
 
 ### Czat grupowy
 
-Ten wzorzec jest przydatny, gdy chcesz stworzyć aplikację czatu grupowego, w której wielu agentów może się ze sobą komunikować. Typowe przypadki użycia tego wzorca obejmują współpracę zespołową, obsługę klienta i sieci społecznościowe.
+Ten wzorzec jest przydatny, gdy chcesz stworzyć aplikację czatu grupowego, gdzie wielu agentów może się komunikować między sobą. Typowe zastosowania to współpraca zespołowa, wsparcie klienta i sieci społecznościowe.
 
-W tym wzorcu każdy agent reprezentuje użytkownika w czacie grupowym, a wiadomości są wymieniane między agentami za pomocą protokołu komunikacyjnego. Agenci mogą wysyłać wiadomości do czatu grupowego, odbierać wiadomości z czatu grupowego i odpowiadać na wiadomości od innych agentów.
+W tym wzorcu każdy agent reprezentuje użytkownika w czacie grupowym, a wiadomości są wymieniane między agentami z użyciem protokołu komunikacyjnego. Agenci mogą wysyłać wiadomości do grupy, odbierać je i odpowiadać na wiadomości innych agentów.
 
-Ten wzorzec można zaimplementować za pomocą architektury scentralizowanej, w której wszystkie wiadomości są przesyłane przez centralny serwer, lub architektury zdecentralizowanej, w której wiadomości są wymieniane bezpośrednio.
+Wzorzec można zaimplementować przy użyciu architektury scentralizowanej, gdzie wszystkie wiadomości są przekazywane przez serwer centralny, lub zdecentralizowanej, gdzie wiadomości wymieniane są bezpośrednio.
 
-![Czat grupowy](../../../translated_images/pl/multi-agent-group-chat.ec10f4cde556babd.webp)
+![Group chat](../../../translated_images/pl/multi-agent-group-chat.ec10f4cde556babd.webp)
 
-### Przekazywanie zadań
+### Przekazywanie zadania
 
-Ten wzorzec jest przydatny, gdy chcesz stworzyć aplikację, w której wielu agentów może przekazywać sobie zadania.
+Ten wzorzec jest użyteczny, gdy chcesz stworzyć aplikację, w której wielu agentów może przekazywać sobie nawzajem zadania.
 
-Typowe przypadki użycia tego wzorca obejmują obsługę klienta, zarządzanie zadaniami i automatyzację procesów.
+Typowe przypadki to wsparcie klienta, zarządzanie zadaniami i automatyzacja przepływu pracy.
 
-W tym wzorcu każdy agent reprezentuje zadanie lub krok w procesie, a agenci mogą przekazywać zadania innym agentom na podstawie wcześniej zdefiniowanych reguł.
+W tym wzorcu każdy agent reprezentuje zadanie lub etap w przepływie pracy, a agenci mogą przekazywać zadania innym agentom na podstawie wcześniej ustalonych reguł.
 
-![Przekazywanie zadań](../../../translated_images/pl/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
+![Hand off](../../../translated_images/pl/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
 
-### Filtracja współdzielona
+### Filtracja współpracująca
 
-Ten wzorzec jest przydatny, gdy chcesz stworzyć aplikację, w której wielu agentów może współpracować, aby rekomendować użytkownikom różne opcje.
+Ten wzorzec jest użyteczny, gdy chcesz stworzyć aplikację, w której wielu agentów współpracuje, by tworzyć rekomendacje dla użytkowników.
 
-Dlaczego warto, aby wielu agentów współpracowało? Ponieważ każdy agent może mieć różne kompetencje i wnosić różne perspektywy do procesu rekomendacji.
+Powodem, dla którego pożądana jest współpraca wielu agentów, jest to, że każdy agent ma inną specjalizację i może wnosić różne wkłady do procesu rekomendacji.
 
-Weźmy przykład, w którym użytkownik chce uzyskać rekomendację dotyczącą najlepszej akcji do zakupu na giełdzie.
+Weźmy przykład, gdzie użytkownik chce rekomendacji najlepszego akcji do kupienia na giełdzie.
 
 - **Ekspert branżowy**: Jeden agent może być ekspertem w konkretnej branży.
-- **Analiza techniczna**: Inny agent może być ekspertem w analizie technicznej.
-- **Analiza fundamentalna**: Jeszcze inny agent może być ekspertem w analizie fundamentalnej. Dzięki współpracy ci agenci mogą dostarczyć użytkownikowi bardziej kompleksową rekomendację.
+- **Analiza techniczna**: Inny agent może być ekspertem od analizy technicznej.
+- **Analiza fundamentalna**: A kolejny agent może być ekspertem od analizy fundamentalnej. Współpracując, agenci mogą dostarczyć użytkownikowi pełniejszą rekomendację.
 
-![Rekomendacja](../../../translated_images/pl/multi-agent-filtering.d959cb129dc9f608.webp)
+![Recommendation](../../../translated_images/pl/multi-agent-filtering.d959cb129dc9f608.webp)
 
-## Scenariusz: Proces zwrotu
+## Scenariusz: Proces zwrotu pieniędzy
 
-Rozważmy scenariusz, w którym klient próbuje uzyskać zwrot za produkt. W procesie tym może być zaangażowanych wielu agentów, ale podzielmy ich na agentów specyficznych dla tego procesu oraz agentów ogólnych, którzy mogą być używani w innych procesach.
+Weźmy scenariusz, gdzie klient stara się o zwrot pieniędzy za produkt – w tym procesie może być zaangażowanych wiele agentów, ale podzielmy ich na agentów specyficznych dla tego procesu oraz agentów ogólnych, używanych w innych procesach.
 
-**Agenci specyficzni dla procesu zwrotu**:
+**Agenci specyficzni dla procesu zwrotu:**
 
-Oto niektórzy agenci, którzy mogą być zaangażowani w proces zwrotu:
+Poniżej kilka agentów, którzy mogą być zaangażowani w proces zwrotu:
 
-- **Agent klienta**: Reprezentuje klienta i jest odpowiedzialny za inicjowanie procesu zwrotu.
-- **Agent sprzedawcy**: Reprezentuje sprzedawcę i jest odpowiedzialny za przetwarzanie zwrotu.
-- **Agent płatności**: Reprezentuje proces płatności i jest odpowiedzialny za zwrot pieniędzy klientowi.
-- **Agent rozwiązywania problemów**: Reprezentuje proces rozwiązywania problemów i jest odpowiedzialny za rozwiązywanie wszelkich problemów, które pojawią się podczas procesu zwrotu.
-- **Agent zgodności**: Reprezentuje proces zgodności i jest odpowiedzialny za zapewnienie, że proces zwrotu jest zgodny z przepisami i politykami.
+- **Agent klienta**: Reprezentuje klienta i odpowiada za inicjację procesu zwrotu.
+- **Agent sprzedawcy**: Reprezentuje sprzedawcę i odpowiada za przetwarzanie zwrotu.
+- **Agent płatności**: Reprezentuje proces płatności i odpowiada za zwrot pieniędzy klientowi.
+- **Agent rozstrzygający**: Odpowiada za rozwiązywanie problemów pojawiających się podczas procesu zwrotu.
+- **Agent zgodności**: Odpowiada za zapewnienie zgodności procesu zwrotu z regulacjami i politykami.
 
 **Agenci ogólni**:
 
-Ci agenci mogą być używani w innych częściach Twojego biznesu.
+Ci agenci mogą być używani przez inne części twojej działalności.
 
-- **Agent wysyłki**: Reprezentuje proces wysyłki i jest odpowiedzialny za wysyłkę produktu z powrotem do sprzedawcy. Może być używany zarówno w procesie zwrotu, jak i w ogólnej wysyłce produktu, na przykład przy zakupie.
-- **Agent opinii**: Reprezentuje proces zbierania opinii i jest odpowiedzialny za zbieranie opinii od klienta. Opinie mogą być zbierane w dowolnym momencie, nie tylko podczas procesu zwrotu.
-- **Agent eskalacji**: Reprezentuje proces eskalacji i jest odpowiedzialny za eskalowanie problemów na wyższy poziom wsparcia. Tego typu agent może być używany w każdym procesie, w którym konieczne jest eskalowanie problemu.
-- **Agent powiadomień**: Reprezentuje proces powiadomień i jest odpowiedzialny za wysyłanie powiadomień do klienta na różnych etapach procesu zwrotu.
-- **Agent analityki**: Reprezentuje proces analityki i jest odpowiedzialny za analizowanie danych związanych z procesem zwrotu.
-- **Agent audytu**: Reprezentuje proces audytu i jest odpowiedzialny za audyt procesu zwrotu, aby upewnić się, że jest on przeprowadzany poprawnie.
-- **Agent raportowania**: Reprezentuje proces raportowania i jest odpowiedzialny za generowanie raportów dotyczących procesu zwrotu.
-- **Agent wiedzy**: Reprezentuje proces zarządzania wiedzą i jest odpowiedzialny za utrzymywanie bazy wiedzy na temat procesu zwrotu. Ten agent może być kompetentny zarówno w zakresie zwrotów, jak i innych części Twojego biznesu.
-- **Agent bezpieczeństwa**: Reprezentuje proces bezpieczeństwa i jest odpowiedzialny za zapewnienie bezpieczeństwa procesu zwrotu.
-- **Agent jakości**: Reprezentuje proces zapewnienia jakości i jest odpowiedzialny za zapewnienie jakości procesu zwrotu.
+- **Agent wysyłki**: Reprezentuje proces wysyłki i odpowiada za odesłanie produktu do sprzedawcy. Ten agent może być używany zarówno w procesie zwrotu, jak i do ogólnej wysyłki produktów przy zakupach.
+- **Agent opinii**: Odpowiada za zbieranie opinii od klienta. Opinie mogą być zbierane w dowolnym czasie, nie tylko w trakcie procesu zwrotu.
+- **Agent eskalacji**: Odpowiada za eskalację problemów do wyższego poziomu wsparcia. Można go używać w dowolnym procesie wymagającym eskalacji.
+- **Agent powiadomień**: Odpowiada za wysyłanie powiadomień do klienta na różnych etapach procesu zwrotu.
+- **Agent analityczny**: Odpowiada za analizę danych związanych z procesem zwrotu.
+- **Agent audytu**: Odpowiada za audyt procesu zwrotu, by upewnić się, że przebiega prawidłowo.
+- **Agent raportów**: Odpowiada za tworzenie raportów dotyczących procesu zwrotu.
+- **Agent wiedzy**: Odpowiada za utrzymanie bazy wiedzy dotyczącej procesu zwrotu. Ten agent może posiadać wiedzę zarówno o zwrotach, jak i innych częściach działalności.
+- **Agent bezpieczeństwa**: Odpowiada za zapewnienie bezpieczeństwa procesu zwrotu.
+- **Agent jakości**: Odpowiada za zapewnienie jakości procesu zwrotu.
 
-Wymieniono tutaj wielu agentów, zarówno specyficznych dla procesu zwrotu, jak i ogólnych, którzy mogą być używani w innych częściach Twojego biznesu. Mamy nadzieję, że daje to wyobrażenie o tym, jak można zdecydować, których agentów użyć w swoim systemie
-Zaprojektuj system wieloagentowy dla procesu obsługi klienta. Zidentyfikuj agentów zaangażowanych w proces, ich role i obowiązki oraz sposób, w jaki współdziałają ze sobą. Rozważ zarówno agentów specyficznych dla procesu obsługi klienta, jak i ogólnych agentów, którzy mogą być używani w innych częściach Twojego biznesu.
+Wymieniono całkiem sporo agentów, zarówno specyficznych dla procesu zwrotu, jak i ogólnych używanych w innych częściach twojej działalności. Mam nadzieję, że daje to ci obraz, jak możesz zdecydować, których agentów użyć w swoim systemie wieloagentowym.
 
-> Zastanów się, zanim przeczytasz poniższe rozwiązanie, możesz potrzebować więcej agentów, niż Ci się wydaje.
+## Zadanie
 
-> TIP: Pomyśl o różnych etapach procesu obsługi klienta, a także rozważ agentów potrzebnych dla każdego systemu.
+Zaprojektuj system wieloagentowy dla procesu wsparcia klienta. Zidentyfikuj agentów zaangażowanych w proces, ich role i obowiązki oraz sposób, w jaki ze sobą współpracują. Weź pod uwagę zarówno agentów specyficznych dla procesu wsparcia klienta, jak i agentów ogólnych, którzy mogą być używani w innych częściach twojej działalności.
+
+
+> Zastanów się zanim przeczytasz poniższe rozwiązanie, może być potrzebnych więcej agentów, niż myślisz.
+
+> WSKAZÓWKA: Pomyśl o różnych etapach procesu obsługi klienta oraz rozważ agentów potrzebnych dla każdego systemu.
 
 ## Rozwiązanie
 
 [Rozwiązanie](./solution/solution.md)
 
-## Sprawdzenie wiedzy
+## Sprawdzian wiedzy
 
-Pytanie: Kiedy warto rozważyć użycie systemu wieloagentowego?
+### Pytanie 1
 
-- [ ] A1: Gdy masz małe obciążenie pracą i proste zadanie.
-- [ ] A2: Gdy masz duże obciążenie pracą.
-- [ ] A3: Gdy masz proste zadanie.
+Który scenariusz najlepiej pasuje do systemu wieloagentowego?
+
+- [ ] A1: Bot wsparcia odpowiada na często zadawane pytania korzystając z jednej bazy wiedzy i zestawu narzędzi.
+- [ ] A2: Proces zwrotów wymaga oddzielnych ról ds. oszustw, płatności i zgodności, każda z własnymi narzędziami, a ich wyniki muszą być skoordynowane.
+- [ ] A3: To samo proste zapytanie o klasyfikację pojawia się tysiące razy na godzinę.
+
+### Pytanie 2
+
+Kiedy pojedynczy agent jest zazwyczaj lepszym wyborem?
+
+- [ ] A1: Zadanie można obsłużyć przy pomocy jednego zestawu instrukcji i narzędzi, bez konieczności przekazywania specjalistom.
+- [ ] A2: Agent ma dostęp do więcej niż jednego narzędzia.
+- [ ] A3: Proces wymaga oddzielnych ról z różnymi uprawnieniami i niezależnymi ścieżkami audytu.
 
 [Rozwiązanie quizu](./solution/solution-quiz.md)
 
 ## Podsumowanie
 
-W tej lekcji omówiliśmy wzorzec projektowy wieloagentowy, w tym scenariusze, w których wieloagenty są stosowne, zalety korzystania z wieloagentów w porównaniu z pojedynczym agentem, podstawowe elementy wdrażania wzorca projektowego wieloagentowego oraz sposób uzyskania wglądu w interakcje między wieloma agentami.
+W tej lekcji omówiliśmy wzorzec projektowy wieloagentowy, w tym scenariusze, w których wieloagentowość jest stosowana, zalety używania wielu agentów zamiast pojedynczego, podstawowe elementy implementacji wzorca wieloagentowego oraz jak mieć wgląd w to, jak agenci wzajemnie się komunikują.
 
-### Masz więcej pytań dotyczących wzorca projektowego wieloagentowego?
+### Masz więcej pytań dotyczących wzorca wieloagentowego?
 
-Dołącz do [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), aby spotkać się z innymi uczącymi się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące AI Agentów.
+Dołącz do [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), aby spotkać się z innymi uczącymi się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące agentów AI.
 
 ## Dodatkowe zasoby
 
-- ## Poprzednia lekcja
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Dokumentacja Microsoft Agent Framework</a>
+- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Wzorce projektowe agentowe</a>
 
-[Projektowanie planowania](../07-planning-design/README.md)
+
+## Poprzednia lekcja
+
+[Planowanie projektu](../07-planning-design/README.md)
 
 ## Następna lekcja
 
@@ -184,5 +202,7 @@ Dołącz do [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), aby sp
 
 ---
 
-**Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z korzystania z tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Zastrzeżenie**:
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Choć dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub niedokładności. Oryginalny dokument w jego języku źródłowym należy uznawać za autorytatywne źródło. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

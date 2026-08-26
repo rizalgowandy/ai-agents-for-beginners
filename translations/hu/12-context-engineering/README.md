@@ -2,147 +2,187 @@
 
 [![Kontextusmérnökség](../../../translated_images/hu/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
 
-> _(Kattints a fenti képre a leckéhez tartozó videó megtekintéséhez)_
+> _(Kattints a fenti képre a lecke videójának megtekintéséhez)_
 
-Fontos, hogy megértsük annak az alkalmazásnak a komplexitását, amelyhez AI ügynököt építünk, hogy megbízható rendszert hozzunk létre. Olyan AI ügynököket kell építenünk, amelyek hatékonyan kezelik az információkat, hogy összetett igényeket tudjanak kielégíteni, túlmutatva a prompt mérnökségen.
+Fontos megérteni az alkalmazás összetettségét, amelyhez AI ügynököt építesz, ha megbízható ügynököt szeretnél készíteni. Olyan AI ügynököket kell alkotnunk, amelyek hatékonyan kezelik az információkat, hogy összetettebb igényeket is kielégítsenek a prompt-mérnökségen túl.
 
-Ebben a leckében megvizsgáljuk, mi is az a kontextusmérnökség, és milyen szerepet játszik az AI ügynökök építésében.
+Ebben a leckében megnézzük, mi az a kontextusmérnökség, és milyen szerepet tölt be az AI ügynökök építésében.
 
 ## Bevezetés
 
-A lecke az alábbiakat fogja tárgyalni:
+Ez a lecke az alábbiakat fogja lefedni:
 
-• **Mi az a kontextusmérnökség**, és miért különbözik a prompt mérnökségtől.
+• **Mi a kontextusmérnökség** és miben különbözik a prompt-mérnökségtől.
 
-• **Hatékony kontextusmérnökségi stratégiák**, beleértve az információk írását, kiválasztását, tömörítését és elkülönítését.
+• **Stratégiák a hatékony kontextusmérnökséghez**, beleértve az információ írását, kiválasztását, tömörítését és elkülönítését.
 
-• **Gyakori kontextushibák**, amelyek kisiklatják az AI ügynököt, és hogyan javíthatók.
+• **Gyakori kontextushibák**, amelyek meghiúsíthatják az AI ügynököd működését, és hogyan lehet ezeket orvosolni.
 
 ## Tanulási célok
 
-A lecke elvégzése után képes leszel:
+A lecke elvégzése után tudni fogod, hogyan:
 
-• **Meghatározni a kontextusmérnökséget**, és megkülönböztetni a prompt mérnökségtől.
+• **Határozd meg a kontextusmérnökséget** és különböztesd meg a prompt-mérnökségtől.
 
-• **Azonosítani a kontextus kulcselemeit** a Nagy Nyelvi Modell (LLM) alkalmazásokban.
+• **Azonosítsd a kontextus kulcselemeit** a Nagy Nyelvi Modell (LLM) alkalmazásokban.
 
-• **Alkalmazni stratégiákat a kontextus írására, kiválasztására, tömörítésére és elkülönítésére**, hogy javítsd az ügynök teljesítményét.
+• **Alkalmazz stratégiákat a kontextus írására, kiválasztására, tömörítésére és elkülönítésére**, hogy javítsd az ügynök teljesítményét.
 
-• **Felismerni a gyakori kontextushibákat**, mint például a mérgezés, zavarás, összezavarodás és ütközés, valamint megvalósítani a javító technikákat.
+• **Ismerd fel a gyakori kontextushibákat**, mint például mérgezés, elterelés, zavarodottság és összeütközés, valamint alkalmazz enyhítő technikákat.
 
 ## Mi az a kontextusmérnökség?
 
-Az AI ügynökök esetében a kontextus az, ami meghatározza, hogy az ügynök milyen lépéseket tesz a feladat elvégzése érdekében. A kontextusmérnökség annak biztosítását jelenti, hogy az AI ügynök rendelkezzen a megfelelő információval a következő lépés végrehajtásához. A kontextusablak mérete korlátozott, ezért az ügynöképítőknek rendszereket és folyamatokat kell létrehozniuk az információ hozzáadására, eltávolítására és tömörítésére.
+AI ügynökök esetén a kontextus az, ami vezérli az AI Ügynök tervét egy adott cselekvés végrehajtására. A kontextusmérnökség az a gyakorlat, amikor biztosítjuk, hogy az AI ügynök rendelkezzen a megfelelő információval a feladat következő lépésének végrehajtásához. A kontextusablak mérete korlátozott, így ügynöképítőként olyan rendszereket és folyamatokat kell kialakítanunk, amelyek kezelik az információ hozzáadását, eltávolítását és tömörítését a kontextusablakban.
 
-### Prompt mérnökség vs. Kontextusmérnökség
+### Prompt-mérnökség vs Kontextusmérnökség
 
-A prompt mérnökség egy statikus utasításhalmazra összpontosít, amely hatékonyan irányítja az AI ügynököket szabályokkal. A kontextusmérnökség viszont egy dinamikus információhalmaz kezeléséről szól, beleértve az eredeti promptot is, hogy az AI ügynök hosszú távon rendelkezzen a szükséges információkkal. A kontextusmérnökség fő célja, hogy ezt a folyamatot ismételhetővé és megbízhatóvá tegye.
+A prompt-mérnökség egyetlen statikus utasítássorozatra fókuszál, hogy hatékonyan vezérelje az AI ügynököket szabályok alkalmazásával. A kontextusmérnökség dinamikus információk halmazának kezelését jelenti, ideértve az eredeti promptot is, hogy az AI ügynök idővel rendelkezzen a szükséges információval. A kontextusmérnökség fő célja, hogy ez a folyamat ismételhető és megbízható legyen.
 
-### A kontextus típusai
+### Kontextustípusok
 
-[![A kontextus típusai](../../../translated_images/hu/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
+[![Kontextustípusok](../../../translated_images/hu/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
 
-Fontos megjegyezni, hogy a kontextus nem egyetlen dolog. Az információ, amelyre az AI ügynöknek szüksége van, különböző forrásokból származhat, és nekünk kell biztosítanunk, hogy az ügynök hozzáférjen ezekhez a forrásokhoz:
+Fontos megjegyezni, hogy a kontextus nem csupán egyetlen dolog. Az AI ügynök által szükséges információ különböző forrásokból származhat, és rajtunk múlik, hogy biztosítsuk ezekhez a forrásokhoz való hozzáférést:
 
-Az AI ügynök által kezelt kontextus típusai a következők lehetnek:
+A kontextus, amelyet egy AI ügynöknek kezelnie kell, az alábbiakat foglalhatja magában:
 
-• **Utasítások:** Ezek az ügynök "szabályai" – promptok, rendszerüzenetek, néhány példával bemutatott feladatok (hogyan kell valamit csinálni), és az általa használható eszközök leírásai. Itt találkozik a prompt mérnökség a kontextusmérnökséggel.
+• **Utasítások:** Ezek az ügynök „szabályai” – promptok, rendszerüzenetek, néhány példaként bemutatott eset (amikor megmutatják az AI-nak, hogyan kell valamit csinálni), valamint az általa használható eszközök leírása. Itt találkozik a prompt-mérnökség és a kontextusmérnökség fókusza.
 
-• **Tudás:** Ez magában foglalja a tényeket, adatbázisokból lekért információkat vagy az ügynök által hosszú távon felhalmozott emlékeket. Ide tartozik egy Retrieval Augmented Generation (RAG) rendszer integrálása, ha az ügynöknek különböző tudásbázisokhoz és adatbázisokhoz kell hozzáférnie.
+• **Tudás:** Tények, adatbázisokból lekért információk vagy az ügynök által felhalmozott hosszú távú emlékek. Ide tartozik a Retrieval Augmented Generation (RAG) rendszer integrálása, ha ügynöknek különféle tudásbázisokhoz és adatbázisokhoz kell hozzáférnie.
 
-• **Eszközök:** Ezek külső funkciók, API-k és MCP szerverek definíciói, amelyeket az ügynök hívhat, valamint az ezek használatából származó visszajelzések (eredmények).
+• **Eszközök:** Külső függvények, API-k és MCP szerverek definíciói, amelyeket az ügynök hívhat, valamint az ezek használatából származó visszacsatolások (eredmények).
 
-• **Beszélgetési előzmények:** A felhasználóval folytatott folyamatos párbeszéd. Idővel ezek a beszélgetések hosszabbá és összetettebbé válnak, ami helyet foglal a kontextusablakban.
+• **Beszélgetés Előzmények:** A felhasználóval folytatott folyamatban lévő párbeszéd. Az idő múlásával ezek egyre hosszabbak és összetettebbek lesznek, így egyre több helyet foglalnak el a kontextusablakban.
 
-• **Felhasználói preferenciák:** Információk, amelyeket az ügynök a felhasználó kedveléseiről vagy nem kedveléseiről tanul meg az idő múlásával. Ezeket kulcsfontosságú döntések meghozatalakor lehet előhívni, hogy segítsenek a felhasználónak.
+• **Felhasználói Preferenciák:** Az idővel megtanult információk a felhasználó kedveléseiről vagy nem kedveléseiről. Ezeket tárolni lehet, és előhívásuk segíthet fontos döntések meghozatalánál a felhasználó támogatására.
 
-## Hatékony kontextusmérnökségi stratégiák
+## Hatékony Kontextusmérnökség Stratégiái
 
-### Tervezési stratégiák
+### Tervezési Stratégiák
 
-[![Kontextusmérnökség legjobb gyakorlatai](../../../translated_images/hu/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
+[![Kontextusmérnökség Legjobb Gyakorlatai](../../../translated_images/hu/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
 
-A jó kontextusmérnökség jó tervezéssel kezdődik. Íme egy megközelítés, amely segít elkezdeni a kontextusmérnökség alkalmazását:
+A jó kontextusmérnökség jó tervezéssel kezdődik. Íme egy olyan megközelítés, amely segít elkezdeni gondolkodni a kontextusmérnökség alkalmazásáról:
 
-1. **Határozd meg az egyértelmű eredményeket** – Az AI ügynökök által elvégzendő feladatok eredményeit egyértelműen meg kell határozni. Válaszolj arra a kérdésre: "Hogyan fog kinézni a világ, amikor az AI ügynök befejezi a feladatát?" Más szóval, milyen változást, információt vagy választ kell kapnia a felhasználónak az AI ügynökkel való interakció után.
-
-2. **Térképezd fel a kontextust** – Miután meghatároztad az AI ügynök eredményeit, válaszolj arra a kérdésre: "Milyen információkra van szüksége az AI ügynöknek a feladat elvégzéséhez?" Így elkezdheted feltérképezni, hogy hol található meg az információ.
-
-3. **Hozz létre kontextuscsatornákat** – Most, hogy tudod, hol található az információ, válaszolj arra a kérdésre: "Hogyan fogja az ügynök megszerezni ezt az információt?" Ez különböző módokon történhet, például RAG, MCP szerverek és más eszközök használatával.
+1. **Határozd meg az egyértelmű eredményeket** – Az AI ügynöknek kiosztott feladatok eredményeit pontosan definiálni kell. Válaszolj a kérdésre: „Hogy fog kinézni a világ, amikor az AI ügynök befejezte feladatát?” Más szóval, milyen változást, információt vagy választ kell kapnia a felhasználónak az AI ügynökkel való interakció után.
+2. **Térképezd fel a kontextust** – Miután meghatároztad az AI ügynök eredményeit, meg kell válaszolnod a kérdést: „Milyen információra van szüksége az AI ügynöknek a feladat elvégzéséhez?” Így elkezdheted térképezni, hol található meg ez az információ.
+3. **Hozz létre kontextus csatornákat** – Mivel most már tudod, hol van az információ, válaszold meg a kérdést: „Hogyan fogja az ügynök ezt az információt megszerezni?” Ezt többféleképpen lehet megtenni, beleértve a RAG használatát, MCP szerverek és más eszközök alkalmazását.
 
 ### Gyakorlati stratégiák
 
-A tervezés fontos, de amikor az információ elkezd beáramlani az ügynök kontextusablakába, gyakorlati stratégiákra van szükség annak kezeléséhez:
+A tervezés fontos, de amikor az információ elkezd beáramlani az ügynök kontextusablakába, gyakorlati stratégiákra van szükség annak kezelésére:
 
 #### Kontextus kezelése
 
-Bár néhány információ automatikusan bekerül a kontextusablakba, a kontextusmérnökség aktívabb szerepet vállalhat az információ kezelésében, amelyet az alábbi stratégiák segítségével lehet megvalósítani:
+Bár egyes információk automatikusan kerülnek be a kontextusablakba, a kontextusmérnökség aktívabb szerepvállalást jelent az információval kapcsolatban, amit néhány stratégia segítségével meg lehet valósítani:
 
-1. **Ügynöki jegyzetfüzet**  
-Ez lehetővé teszi az AI ügynök számára, hogy jegyzeteket készítsen a releváns információkról az aktuális feladatokról és felhasználói interakciókról egyetlen munkamenet során. Ez a kontextusablakon kívül, egy fájlban vagy futásidejű objektumban létezhet, amelyet az ügynök később visszakereshet az adott munkamenet során.
+ 1. **Ügynök jegyzetfüzet**
+ Ez lehetővé teszi, hogy egy AI ügynök jegyzeteket készítsen az aktuális feladatokról és a felhasználóval folytatott interakciókról egy munkamenet során. Ez a jegyzetfüzet a kontextusablakon kívül kell, hogy legyen, például egy fájlban vagy futásidejű objektumban, amelyet az ügynök később előhívhat, ha szükséges.
 
-2. **Emlékek**  
-A jegyzetfüzetek jók az információk kezelésére egyetlen munkamenet kontextusablakán kívül. Az emlékek lehetővé teszik az ügynökök számára, hogy releváns információkat tároljanak és visszakeressenek több munkamenet során. Ez magában foglalhat összefoglalókat, felhasználói preferenciákat és visszajelzéseket a jövőbeli fejlesztésekhez.
+ 2. **Emlékek**
+ A jegyzetfüzetek jók az információk egy munkameneten túli kezelésére, a hosszabb távú emlékek pedig lehetővé teszik az ügynökök számára, hogy több munkameneten át releváns információkat tároljanak és előhívjanak. Ez magában foglalhat összefoglalókat, felhasználói preferenciákat és visszajelzéseket a jövőbeni fejlesztésekhez.
 
-3. **Kontextus tömörítése**  
-Amikor a kontextusablak megtelik, olyan technikák, mint az összefoglalás és a vágás alkalmazhatók. Ez magában foglalja a legrelevánsabb információk megtartását vagy a régebbi üzenetek eltávolítását.
+ 3. **Kontextus tömörítése**
+  Amint a kontextusablak nő és eléri a limitet, alkalmazhatók olyan technikák, mint az összefoglalás és a ritkítás. Ez jelentheti, hogy csak a legfontosabb információ marad meg, vagy a régebbi üzenetek eltávolítását.
+  
+ 4. **Többügynökös rendszerek**
+  Többügynökös rendszerek fejlesztése a kontextusmérnökség egyik formája, mivel minden ügynöknek megvan a saját kontextusablaka. Annak megtervezése, hogy hogyan történik a kontextus megosztása és átadása az egyes ügynökök között, további szempontot jelent ezeknek a rendszereknek az építésekor.
+  
+ 5. **Sandbox környezetek**
+  Ha egy ügynöknek kódot kell futtatnia vagy nagy mennyiségű információt kell feldolgoznia egy dokumentumban, ez sok token feldolgozását igényli. Ahelyett, hogy mindez a kontextusablakban tárolódna, az ügynök használhat egy sandbox környezetet, amely képes lefuttatni a kódot, és csak az eredményeket és a többi releváns információt olvassa be.
+  
+ 6. **Futásidejű állapot objektumok**
+   Ez úgy valósul meg, hogy információs tárolókat hozunk létre olyan helyzetek kezelésére, amikor az ügynöknek hozzáférést kell kapnia bizonyos információkhoz. Egy összetett feladat esetén ez lehetővé teszi az ügynök számára, hogy lépésről lépésre tárolja a részfeladatok eredményeit, így a kontextus csak az adott részfeladathoz kapcsolódik.
 
-4. **Több ügynökös rendszerek**  
-Több ügynökös rendszer fejlesztése a kontextusmérnökség egy formája, mivel minden ügynöknek megvan a saját kontextusablaka. Az, hogy ez a kontextus hogyan oszlik meg és kerül átadásra az ügynökök között, egy másik tervezési szempont ezeknek a rendszereknek az építésekor.
+#### Kontextus vizsgálata
 
-5. **Homokozó környezetek**  
-Ha egy ügynöknek kódot kell futtatnia vagy nagy mennyiségű információt kell feldolgoznia egy dokumentumban, ez jelentős mennyiségű token használatát igényelheti az eredmények feldolgozásához. Ehelyett az ügynök használhat egy homokozó környezetet, amely képes futtatni ezt a kódot, és csak az eredményeket és más releváns információkat olvassa be.
+Miután alkalmaztad valamelyik stratégiát, érdemes ellenőrizni, milyen kontextust kapott valójában a következő modellhívás. Egy hasznos hibakeresési kérdés:
 
-6. **Futásidejű állapotobjektumok**  
-Ez úgy valósítható meg, hogy információtárolókat hozunk létre, amelyek kezelik azokat a helyzeteket, amikor az ügynöknek hozzáférnie kell bizonyos információkhoz. Egy összetett feladat esetén ez lehetővé teszi az ügynök számára, hogy minden részfeladat eredményét lépésről lépésre tárolja, így a kontextus csak az adott részfeladathoz kapcsolódik.
+> Az ügynök túl sok kontextust töltött be, rossz kontextust, vagy hiányzott neki szükséges kontextus?
 
-### Kontextusmérnökség példája
+A kérdés megválaszolásához nem szükséges a nyers promptokat, eszköz kimeneteket vagy memória tartalmakat naplózni. A gyártásban előnyben részesítsd a kisebb kontextusvizsgálati rekordokat, amelyek számlálásokat, azonosítókat, hash-kódokat és szabályzati címkéket tartalmaznak:
 
-Tegyük fel, hogy azt szeretnénk, hogy egy AI ügynök **"Foglaljon nekem egy utat Párizsba."**
+- **Kiválasztás:** Kövesd nyomon, hány jelölt tömböt, eszközt vagy memóriát vizsgáltak meg, hányat választottak ki, és mely szabály vagy pontszám miatt szűrtek ki másokat.
+- **Tömörítés:** Rögzítsd a forrás tartományt vagy a nyomkövetési azonosítót, az összefoglaló azonosítóját, becsült token számot tömörítés előtt és után, valamint azt, hogy a nyers tartalom kizárásra került-e a következő hívásból.
+- **Elkülönítés:** Jegyezd fel, melyik részfeladat futott külön ügynökben, munkamenetben vagy sandboxban, milyen kötött összefoglaló tért vissza, és hogy a nagy eszközkimenet kívül maradt-e a fő ügynök kontextusán.
+- **Memória és RAG:** Tárold a lekért dokumentumazonosítókat, memóriaazonosítókat, pontszámokat, kiválasztott azonosítókat és az átfogalmazási státuszt a teljes lekért szöveg helyett.
+- **Biztonság és adatvédelem:** Előnyben részesítsd a hash-kódokat, azonosítókat, token-vödröket és szabályzati címkéket a kényes prompt szöveg, eszközargumentumok, eszközeredmények vagy felhasználói memória tartalmak helyett.
 
-• Egy egyszerű ügynök, amely csak prompt mérnökséget használ, így válaszolhat: **"Rendben, mikor szeretne Párizsba utazni?"**. Csak az aktuális kérdést dolgozza fel, amikor a felhasználó megkérdezi.
+A cél nem több kontextus tárolása, hanem elegendő bizonyíték hagyása, hogy a fejlesztő meg tudja mondani, melyik kontextusstratégia futott le és hogy az a következő modellhívást a szándékolt módon változtatta meg.
 
-• Egy ügynök, amely a kontextusmérnökségi stratégiákat alkalmazza, sokkal többet tesz. Mielőtt válaszolna, a rendszere például:
+### Kontextusmérnökség példa
 
-  ◦ **Ellenőrzi a naptáradat** a szabad időpontokért (valós idejű adatokat lekérve).
+Tegyük fel, hogy egy AI ügynököt szeretnénk arra kérni, hogy **"Foglaljon nekem egy utazást Párizsba."**
 
- ◦ **Felidézi korábbi utazási preferenciáidat** (hosszú távú memóriából), például kedvenc légitársaságodat, költségvetésedet vagy azt, hogy előnyben részesíted-e a közvetlen járatokat.
+• Egy egyszerű ügynök, amely csak prompt-mérnökséget használ, lehet, hogy csak azt válaszolja: **"Rendben, mikor szeretnél Párizsba utazni?"** Csak az adott pillanatban feltett kérdést dolgozza fel.
 
- ◦ **Azonosítja az elérhető eszközöket** repülőjegy- és szállásfoglaláshoz.
+• Egy ügynök, amely a kontextusmérnökségi stratégiákat alkalmazza, ennél sokkal többet tesz. Mielőtt válaszolna, a rendszere lehet, hogy:
 
-- Ezután egy példaválasz lehetne: **"Szia [Neved]! Látom, hogy szabad vagy október első hetében. Keressek közvetlen járatokat Párizsba a [Kedvenc légitársaságod] járataival, a szokásos [Költségvetésed] keretén belül?"**. Ez a gazdagabb, kontextus-tudatos válasz jól szemlélteti a kontextusmérnökség erejét.
+  ◦ **Ellenőrzi a naptáradat**, hogy szabad időpontokat találjon (valós idejű adatok lekérése).
+
+ ◦ **Felidézi a korábbi utazási preferenciáidat** (hosszú távú memóriából), mint például a kedvenc légitársaságod, költségvetésed vagy az, hogy közvetlen járatokat preferálsz-e.
+
+ ◦ **Azonosítja az elérhető eszközöket** a repülőjegy- és szállásfoglaláshoz.
+
+- Majd egy példa válasz lehet: "Szia [A te neved]! Látom, hogy az október első hetében szabad vagy. Keressek közvetlen járatokat Párizsba a [Kedvenc légitársaság]-nál a szokásos [Költségvetés] kereteden belül?" Ez a gazdagabb, kontextus-értő válasz jól szemlélteti a kontextusmérnökség erejét.
 
 ## Gyakori kontextushibák
 
-### Kontextus mérgezése
+### Kontextusmérgezés
 
-**Mi ez:** Amikor egy hallucináció (hamis információ, amelyet az LLM generál) vagy hiba bekerül a kontextusba, és ismételten hivatkoznak rá, az ügynök lehetetlen célokat követhet vagy értelmetlen stratégiákat alakíthat ki.
+**Mi ez:** Amikor egy hallucináció (hamis információ, amelyet az LLM generál) vagy hiba bekerül a kontextusba és ismételten hivatkoznak rá, az ügynök lehetetlen célokat tűz ki vagy értelmetlen stratégiákat dolgoz ki.
 
-**Mit tegyünk:** Valósíts meg **kontextus validálást** és **karantént**. Ellenőrizd az információt, mielőtt hosszú távú memóriába kerülne. Ha mérgezés gyanúja merül fel, indíts új kontextusszálakat, hogy megakadályozd a hibás információ terjedését.
+**Mit tegyél:** Vezess be **kontextus érvényesítést** és **karantént**. Érvényesítsd az információkat mielőtt azok bekerülnének a hosszú távú memóriába. Ha potenciális mérgezést észlelsz, indíts új kontextus-vonalakat, hogy megakadályozd a rossz információ terjedését.
 
-**Utazási foglalási példa:** Az ügynök hallucinál egy **közvetlen járatot egy kis helyi repülőtérről egy távoli nemzetközi városba**, amely valójában nem kínál nemzetközi járatokat. Ez a nem létező járat részlete bekerül a kontextusba. Később, amikor jegyet kérsz, az ügynök folyamatosan próbál jegyet találni erre a lehetetlen útvonalra, ami ismételt hibákhoz vezet.
+**Utazásfoglalási példa:** Az ügynököd hallucinál egy **közvetlen járatot egy kis helyi repülőtérről egy távoli nemzetközi városba**, amely valójában nem kínál nemzetközi járatokat. Ez a nem létező járat részlete bekerül a kontextusba. Később, amikor az ügynökhöz fordulsz foglalásért, állandóan próbál jegyeket találni erre a lehetetlen járatra, ami ismételt hibákhoz vezet.
 
-**Megoldás:** Valósíts meg egy lépést, amely **ellenőrzi a járatok létezését és útvonalait valós idejű API-val**, mielőtt a járat részlete bekerülne az ügynök munkakontextusába. Ha az ellenőrzés sikertelen, a hibás információt "karanténba" helyezik, és nem használják tovább.
+**Megoldás:** Vezess be egy lépést, amely **valós idejű API-val ellenőrzi a járat létezését és útvonalat** _mielőtt_ a járat részlet bekerül az ügynök működési kontextusába. Ha az ellenőrzés sikertelen, a hibás információ „karanténba” kerül, és nem használják tovább.
 
-### Kontextus zavarása
+### Kontextuselterelés
 
-**Mi ez:** Amikor a kontextus olyan nagyra nő, hogy a modell túlságosan az összegyűlt előzményekre koncentrál, ahelyett, hogy a tanulás során megszerzett tudást használná, ami ismétlődő vagy haszontalan cselekvésekhez vezet. A modellek hibákat kezdhetnek el követni, még mielőtt a kontextusablak megtelik.
+**Mi ez:** Amikor a kontextus olyan nagy lesz, hogy a modell túlzottan az összegyűjtött előzményekre koncentrál ahelyett, hogy a tanulás során szerzett ismereteket használná, ismétlődő vagy haszontalan cselekvésekhez vezetve. A modellek még a kontextusablak telítődése előtt hibázni kezdenek.
 
-**Mit tegyünk:** Használj **kontextus összefoglalást**. Időnként tömörítsd az összegyűlt információt rövidebb összefoglalókba, megtartva a fontos részleteket, miközben eltávolítod a redundáns előzményeket. Ez segít "újraindítani" a fókuszt.
+**Mit tegyél:** Használj **kontextus összefoglalást**. Időszakosan tömörítsd az összegyűlt információkat rövidebb összefoglalókba, megtartva a fontos részleteket, miközben eltávolítod a felesleges előzményeket. Ez segít „újraindítani” a fókuszt.
 
-**Utazási foglalási példa:** Hosszasan beszélgetsz különböző álomutazási célpontokról, beleértve egy részletes beszámolót a két évvel ezelőtti hátizsákos utazásodról. Amikor végül azt kéred, hogy **"keress nekem egy olcsó járatot a következő hónapra"**, az ügynök elmerül a régi, irreleváns részletekben, és folyamatosan a hátizsákos felszerelésedről vagy korábbi útvonalakról kérdez, elhanyagolva az aktuális kérésedet.
+**Utazásfoglalási példa:** Hosszú ideje beszélgetsz különböző álomutazási célokról, beleértve egy részletes beszámolót a két évvel ezelőtti hátizsákos utadról. Amikor végül arra kéred, hogy **„találj egy olcsó járatot a következő hónapra”**, az ügynök belebonyolódik a régi, relevánsatlan részletekbe, és folyton az utazófelszerelésed vagy korábbi útiterv részleteit kérdezi, figyelmen kívül hagyva a jelenlegi kérésedet.
 
-**Megoldás:** Egy bizonyos számú forduló után vagy amikor a kontextus túl nagyra nő, az ügynöknek **össze kell foglalnia a beszélgetés legfrissebb és legrelevánsabb részeit** – az aktuális utazási dátumokat és célpontot – és ezt a tömörített összefoglalót kell használnia a következő LLM híváshoz, elvetve a kevésbé releváns történelmi beszélgetést.
+**Megoldás:** Egy bizonyos mennyiségű forduló után vagy amikor a kontextus túl nagy lesz, az ügynöknek **összefoglalnia kell a beszélgetés legfrissebb és legfontosabb részeit** – a jelenlegi utazási dátumaidra és célpontodra koncentrálva –, és ezt a tömörített összefoglalót használnia a következő LLM híváshoz, miközben elveti a kevésbé releváns múltbeli beszélgetést.
 
-### Kontextus összezavarodása
+### Kontextuszavar
 
-**Mi ez:** Amikor a szükségtelen kontextus, gyakran túl sok elérhető eszköz formájában, arra készteti a modellt, hogy rossz válaszokat generáljon vagy irreleváns eszközöket hívjon meg. A kisebb modellek különösen hajlamosak erre.
+**Mi ez:** Amikor felesleges kontextus, gyakran túl sok elérhető eszköz formájában, rossz válaszokat generál vagy nem releváns eszközöket hív meg a modell. A kisebb modellek különösen hajlamosak erre.
 
-**Mit tegyünk:** Valósíts meg **eszközkezelést** RAG technikák segítségével. Tárold az eszközleírásokat egy vektorbázisban, és válaszd ki _csak_ a legrelevánsabb eszközöket az adott feladathoz. Kutatások szerint az eszközválasztást érdemes 30 alatt tartani.
+**Mit tegyél:** Vezess be **eszközök kiválasztásának kezelését** RAG technikák használatával. Tárold az eszközök leírását egy vektoriális adatbázisban, és válaszd ki _csak_ a legrelevánsabb eszközöket az adott feladathoz. Kutatások szerint 30 alatti eszközválasztás javasolt.
 
-**Utazási foglalási példa:** Az ügynök hozzáfér több tucat eszközhöz: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather
+**Utazásfoglalási példa:** Az ügynököd számos eszközhöz fér hozzá: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, stb. Megkérdezed: **„Mi a legjobb módja a közlekedésnek Párizsban?”** Az eszközök nagy száma miatt az ügynök zavarba jön, és megpróbálja hívni a `book_flight`-et _Párizson belül_, vagy a `rent_car`-t, holott te inkább tömegközlekedést preferálsz, mert az eszközleírások átfedik egymást, vagy nem tudja felismerni a legjobbat.
+
+**Megoldás:** Használj **RAG-et az eszközleírások fölött**. Amikor a közlekedést kérdezed Párizsban, a rendszer dinamikusan lekéri _csak_ a legrelevánsabb eszközöket, mint a `rent_car` vagy `public_transport_info`, kérésed alapján, így egy fókuszált eszközkészletet mutat az LLM-nek.
+
+### Kontextusütközés
+
+**Mi ez:** Amikor ellentmondásos információk vannak a kontextusban, ami következetlen érveléshez vagy rossz végső válaszokhoz vezet. Ez gyakran akkor fordul elő, amikor az információk fokozatosan érkeznek, és a korai, helytelen feltételezések még mindig benne maradnak a kontextusban.
+
+**Mit tegyél:** Használj **kontextus-ritkítást** és **átterhelést**. A ritkítás azt jelenti, hogy eltávolítod a régi vagy ellentmondásos információkat, amint új részletek érkeznek. Az átterhelés külön „jegyzetfüzetet” (scratchpad) ad a modellnek, hogy ott dolgozza fel az információkat a fő kontextus rendetlenítése nélkül.
+
+
+**Utazási foglalás példája:** Először az ügynöködnek azt mondod, **„Gazdaságos osztályon szeretnék repülni.”** Később a beszélgetés során meggondolod magad, és azt mondod, **„Valójában ezen az úton üzleti osztályra váltsunk.”** Ha mindkét utasítás megmarad a kontextusban, az ügynök ellentmondásos keresési eredményeket kaphat, vagy összezavarodhat, hogy melyik preferenciát helyezze előtérbe.
+
+**Megoldás:** Vezessük be a **kontextus lekicsinyítést**. Amikor egy új utasítás ellentmond a réginek, a régebbi utasítás eltávolításra kerül vagy kifejezetten felülírásra a kontextusban. Alternatívaként az ügynök használhat egy **vázlatfüzetet**, hogy egyeztesse az ellentmondó preferenciákat mielőtt döntést hoz, biztosítva, hogy csak a végleges, egységes utasítás irányítsa a cselekedeteit.
+
+## További kérdéseid vannak a kontextus kialakításáról?
+
+Csatlakozz a [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) közösséghez, hogy találkozz más tanulókkal, részt vegyél nyitott beszélgetéseken, és választ kapj az AI ügynökeiddel kapcsolatos kérdéseidre.
+## Előző Lecke
+
+[Agentikus protokollok](../11-agentic-protocols/README.md)
+
+## Következő Lecke
+
+[Memória az AI ügynökök számára](../13-agent-memory/README.md)
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Kritikus információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely ebből a fordításból ered.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

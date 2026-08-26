@@ -1,83 +1,89 @@
-# AI agentai gamyboje: stebėjimas ir vertinimas
+# Dirbtinio intelekto agentai gamyboje: stebėjimas ir vertinimas
 
-[![AI agentai gamyboje](../../../translated_images/lt/lesson-10-thumbnail.2b79a30773db093e.webp)](https://youtu.be/l4TP6IyJxmQ?si=reGOyeqjxFevyDq9)
+[![Dirbtinio intelekto agentai gamyboje](../../../translated_images/lt/lesson-10-thumbnail.2b79a30773db093e.webp)](https://youtu.be/l4TP6IyJxmQ?si=reGOyeqjxFevyDq9)
 
-Kai AI agentai pereina iš eksperimentinių prototipų į realias programas, tampa svarbu suprasti jų elgesį, stebėti jų veikimą ir sistemingai vertinti jų rezultatus.
+Kai dirbtinio intelekto agentai pereina nuo eksperimentinių prototipų prie realių pasaulio taikymų, būtina suprasti jų elgesį, stebėti jų veikimą ir sistemingai vertinti jų rezultatus.
 
 ## Mokymosi tikslai
 
-Baigę šią pamoką, jūs sužinosite, kaip:
-- Suprasti pagrindines agentų stebėjimo ir vertinimo sąvokas
-- Naudoti technikas, skirtas agentų veikimui, kaštams ir efektyvumui gerinti
-- Sistemingai vertinti savo AI agentus
-- Valdyti kaštus, diegiant AI agentus gamyboje
-- Instrumentuoti agentus, sukurtus naudojant AutoGen
+Baigę šią pamoką, jūs sužinosite kaip / suprasite:
+- Pagrindines agentų stebėjimo ir vertinimo sąvokas
+- Technikas agentų našumui, kaštams ir efektyvumui gerinti
+- Kaip sistemingai vertinti savo dirbtinio intelekto agentus
+- Kaip valdyti kaštus diegiant dirbtinio intelekto agentus gamyboje
+- Kaip instrumentuoti agentus, sukurtus naudojant Microsoft Agent Framework
 
-Tikslas – suteikti jums žinių, kaip paversti savo „juodosios dėžės“ agentus skaidriomis, valdomomis ir patikimomis sistemomis.
+Tikslas – suteikti jums žinių, kad savo „juodosios dėžės“ agentus paverstumėte skaidriomis, valdomomis ir patikimomis sistemomis.
 
-_**Pastaba:** Svarbu diegti saugius ir patikimus AI agentus. Peržiūrėkite pamoką [Kaip kurti patikimus AI agentus](./06-building-trustworthy-agents/README.md)._
+_**Pastaba:** Svarbu diegti saugius ir patikimus dirbtinio intelekto agentus. Taip pat peržiūrėkite pamoką [Building Trustworthy AI Agents](../06-building-trustworthy-agents/README.md)._
 
-## Traces ir Spans
+## Sekos ir apimtys
 
-Stebėjimo įrankiai, tokie kaip [Langfuse](https://langfuse.com/) ar [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-azure-ai-foundry), paprastai atvaizduoja agentų veikimą kaip traces ir spans.
+Stebėjimo įrankiai, tokie kaip [Langfuse](https://langfuse.com/) arba [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-azure-ai-foundry), dažniausiai vaizduoja agento paleidimus kaip sekas ir apimtis.
 
-- **Trace** reiškia visą agento užduotį nuo pradžios iki pabaigos (pvz., vartotojo užklausos apdorojimą).
-- **Spans** yra atskiri žingsniai trace viduje (pvz., kalbos modelio iškvietimas ar duomenų gavimas).
+- **Sekos** atspindi visą agento užduotį nuo pradžios iki pabaigos (pvz., vartotojo užklausos apdorojimą).
+- **Apimtys** yra atskiri sekos žingsniai (pvz., kalbos modelio kvietimas ar duomenų gavimas).
 
-![Trace medis Langfuse](https://langfuse.com/images/cookbook/example-autogen-evaluation/trace-tree.png)
+![Sekos medis Langfuse](https://langfuse.com/images/cookbook/example-autogen-evaluation/trace-tree.png)
+<!-- Image URL retained for illustration purposes -->
 
-Be stebėjimo, AI agentas gali atrodyti kaip „juodoji dėžė“ – jo vidinė būsena ir logika yra neaiškios, todėl sunku diagnozuoti problemas ar optimizuoti veikimą. Su stebėjimu agentai tampa „stiklinėmis dėžėmis“, suteikiančiomis skaidrumą, kuris yra būtinas pasitikėjimui kurti ir užtikrinti, kad jie veiktų taip, kaip numatyta.
+Be stebėjimo dirbtinio intelekto agentas gali jaustis kaip „juodoji dėžė“ – jo vidinė būsena ir argumentacija yra neaiškios, todėl sunku diagnozuoti problemas ar optimizuoti veikimą. Turint stebėjimą agentai tampa „stiklinėmis dėžėmis“, kurios siūlo skaidrumą, būtina pasitikėjimui kurti ir užtikrinti, kad jie veikia numatytu būdu.
 
-## Kodėl stebėjimas svarbus gamybos aplinkoje
+## Kodėl stebėjimas yra svarbus gamybos aplinkoje
 
-AI agentų perkėlimas į gamybos aplinką sukelia naujų iššūkių ir reikalavimų. Stebėjimas tampa nebe „maloniu priedu“, o būtina funkcija:
+Pereinant dirbtinio intelekto agentams į gamybos aplinką atsiranda naujų iššūkių ir reikalavimų. Stebėjimas nėra tik „gražus priedas“, o kritinė funkcija:
 
-*   **Derinimas ir priežasties analizė:** Kai agentas sugenda arba pateikia netikėtą rezultatą, stebėjimo įrankiai pateikia traces, leidžiančius nustatyti klaidos šaltinį. Tai ypač svarbu sudėtingiems agentams, kurie gali apimti kelis LLM iškvietimus, įrankių sąveikas ir sąlyginę logiką.
-*   **Vėlavimo ir kaštų valdymas:** AI agentai dažnai remiasi LLM ir kitomis išorinėmis API, kurios apmokestinamos už žodį ar iškvietimą. Stebėjimas leidžia tiksliai sekti šiuos iškvietimus, padedant nustatyti operacijas, kurios yra pernelyg lėtos ar brangios. Tai leidžia komandoms optimizuoti užklausas, pasirinkti efektyvesnius modelius ar pertvarkyti darbo eigas, kad būtų valdomi veiklos kaštai ir užtikrinta gera vartotojo patirtis.
-*   **Pasitikėjimas, saugumas ir atitiktis:** Daugelyje programų svarbu užtikrinti, kad agentai elgtųsi saugiai ir etiškai. Stebėjimas suteikia agentų veiksmų ir sprendimų audito pėdsaką. Tai gali būti naudojama aptikti ir spręsti tokias problemas kaip užklausų injekcija, žalingo turinio generavimas ar netinkamas asmens duomenų tvarkymas. Pavyzdžiui, galite peržiūrėti traces, kad suprastumėte, kodėl agentas pateikė tam tikrą atsakymą ar naudojo konkretų įrankį.
-*   **Nuolatinio tobulinimo ciklai:** Stebėjimo duomenys yra iteracinio kūrimo proceso pagrindas. Stebėdami, kaip agentai veikia realiame pasaulyje, komandos gali nustatyti tobulinimo sritis, surinkti duomenis modelių tobulinimui ir patikrinti pakeitimų poveikį. Tai sukuria grįžtamojo ryšio ciklą, kai gamybos įžvalgos iš internetinio vertinimo informuoja neprisijungus atliekamus eksperimentus ir tobulinimą, taip palaipsniui gerinant agentų veikimą.
+*   **Klaidų taisymas ir pagrindinės priežasties analizė**: kai agentas nepavyksta arba pateikia netikėtą rezultatą, stebėjimo įrankiai suteikia sekas, reikalingas klaidos šaltiniui nustatyti. Tai ypač svarbu sudėtinguose agentuose, kuriuose gali būti keli LLM kvietimai, įrankių sąveikos ir sąlyginė logika.
+*   **Vėlinimo ir kaštų valdymas**: dirbtinio intelekto agentai dažnai naudoja LLM ir kitas išorines API, kurios apmokestinamos už žodį ar kvietimą. Stebėjimas leidžia tiksliai sekti šiuos kvietimus, padedant nustatyti operacijas, kurios yra pernelyg lėtos arba brangios. Tai leidžia komandai optimizuoti užklausas, pasirinkti efektyvesnius modelius arba pertvarkyti darbo eigas, kad valdyti operacines išlaidas ir užtikrinti gerą vartotojo patirtį.
+*   **Pasitikėjimas, saugumas ir atitiktis**: daugelyje taikymų svarbu užtikrinti, kad agentai elgtųsi saugiai ir etiškai. Stebėjimas suteikia agentų veiksmų ir sprendimų audito įrašą. Tai gali būti naudojama atpažinti ir pašalinti problemas, tokias kaip užklausų inžinerija, žalingo turinio generavimas ar netinkamas asmeninės informacijos tvarkymas. Pavyzdžiui, galite peržiūrėti sekas, kad suprastumėte, kodėl agentas pateikė tam tikrą atsakymą arba panaudojo konkretų įrankį.
+*   **Nuolatinio tobulinimo ciklai**: stebėjimo duomenys yra iteratyvaus kūrimo proceso pagrindas. Stebėdami agentų veikimą realiame pasaulyje, komandos gali nustatyti tobulinimo sritis, rinkti duomenis modelių tobulinimui ir patvirtinti pakeitimų poveikį. Tai sukuria grįžtamojo ryšio ciklą, kuriame gamybos įžvalgos iš online vertinimo informuoja offline eksperimentavimą ir tobulinimą, vedantį prie vis geresnio agento veikimo.
 
-## Pagrindiniai stebimi rodikliai
+## Svarbiausi metrikų rodikliai
 
-Norint stebėti ir suprasti agentų elgesį, reikia sekti įvairius rodiklius ir signalus. Nors konkretūs rodikliai gali skirtis priklausomai nuo agento paskirties, kai kurie yra universaliai svarbūs.
+Norint stebėti ir suprasti agento elgesį, reikia sekti įvairias metrikas ir signalus. Nors konkretūs rodikliai gali skirtis priklausomai nuo agento paskirties, kai kurie yra universaliai svarbūs.
 
-Štai keletas dažniausiai stebimų rodiklių:
+Čia pateikiami kai kurie dažniausiai stebimi metrikų pavyzdžiai:
 
-**Vėlavimas:** Kaip greitai agentas reaguoja? Ilgi laukimo laikai neigiamai veikia vartotojo patirtį. Turėtumėte matuoti užduočių ir atskirų žingsnių vėlavimą, sekdami agentų veikimą. Pavyzdžiui, agentas, kuris užtrunka 20 sekundžių visiems modelio iškvietimams, galėtų būti pagreitintas naudojant greitesnį modelį arba vykdant modelio iškvietimus lygiagrečiai.
+**Vėlinimas:** Kaip greitai agentas reaguoja? Ilgi laukimo laikai neigiamai veikia vartotojo patirtį. Reikėtų matuoti vėlinimą užduotims ir atskiriems žingsniams sekant agento paleidimus. Pavyzdžiui, agentą, kuris visiems modeliavimo kvietimams skiria 20 sekundžių, galima paspartinti naudojant greitesnį modelį arba vykdant kvietimus lygiagrečiai.
 
-**Kaštai:** Kokia yra agento veikimo kaina? AI agentai remiasi LLM iškvietimais, apmokestinamais už žodį, arba išorinėmis API. Dažnas įrankių naudojimas ar keli užklausų rinkiniai gali greitai padidinti kaštus. Pavyzdžiui, jei agentas penkis kartus iškviečia LLM, kad šiek tiek pagerintų kokybę, turite įvertinti, ar kaštai yra pagrįsti, ar galite sumažinti iškvietimų skaičių arba naudoti pigesnį modelį. Realaus laiko stebėjimas taip pat padeda nustatyti netikėtus šuolius (pvz., klaidas, sukeliančias per daug API ciklų).
+**Kaštai:** Kokia bėgimo kaina vienam agento paleidimui? Dirbtinio intelekto agentai remiasi LLM kvietimais, kurie apmokestinami už žodį, arba išorinėmis API. Dažnas įrankių naudojimas ar keli užklausos kartojimai gali greitai padidinti kaštus. Pavyzdžiui, jei agentas penkis kartus kviečia LLM, kad nežymiai pagerintų kokybę, būtina įvertinti, ar kaštai yra pateisinami arba ar galima sumažinti kvietimų skaičių arba naudoti pigesnį modelį. Realaus laiko stebėjimas taip pat gali padėti atpažinti netikėtus šuolius (pvz., klaidas, sukylančias per daug API kvietimų ciklų).
 
-**Užklausų klaidos:** Kiek užklausų agentas nesugebėjo įvykdyti? Tai gali apimti API klaidas ar nepavykusius įrankių iškvietimus. Kad agentas būtų atsparesnis gamyboje, galite nustatyti atsarginius sprendimus ar pakartotinius bandymus. Pvz., jei LLM tiekėjas A neveikia, galite pereiti prie LLM tiekėjo B kaip atsarginio varianto.
+**Užklausų klaidos:** Kiek užklausų agentas neįvykdė? Tai gali būti API klaidos arba nepavykę įrankių kvietimai. Kad agentas taptų atsparesnis tokiems atvejams gamyboje, galite nustatyti atsarginį variantą arba pakartojimus, pvz., jei LLM tiekėjas A neveikia, pereiti prie LLM tiekėjo B kaip atsarginio.
 
-**Vartotojų atsiliepimai:** Tiesioginiai vartotojų vertinimai suteikia vertingų įžvalgų. Tai gali būti aiškūs įvertinimai (👍teigiamas/👎neigiamas, ⭐1-5 žvaigždutės) arba tekstiniai komentarai. Nuolatiniai neigiami atsiliepimai turėtų būti signalas, kad agentas neveikia taip, kaip tikėtasi.
+**Vartotojo atsiliepimai:** Tiesioginių vartotojo vertinimų įdiegimas teikia vertingas įžvalgas. Tai gali būti aiškūs įvertinimai (👍patinka/👎nepatinka, ⭐1-5 žvaigždutės) arba tekstiniai komentarai. Nuolatiniai neigiami atsiliepimai turi įspėti, nes tai ženklas, kad agentas neveikia kaip tikėtasi.
 
-**Netiesioginiai vartotojų atsiliepimai:** Vartotojų elgesys suteikia netiesioginių atsiliepimų net ir be aiškių vertinimų. Tai gali būti klausimų perrašymas, pakartotinės užklausos ar mygtuko „bandyti dar kartą“ paspaudimas. Pvz., jei matote, kad vartotojai nuolat užduoda tą patį klausimą, tai yra ženklas, kad agentas neveikia taip, kaip tikėtasi.
+**Netiesioginiai vartotojo atsiliepimai:** Vartotojo elgesys suteikia netiesioginį atsiliepimą, net jei nėra aiškių įvertinimų. Tai gali būti greitas klausimo pertvarkymas, pasikartojančios užklausos arba mygtuko „bandyti dar kartą“ paspaudimai. Pavyzdžiui, jei matote, kad vartotojai kartoja tą patį klausimą, tai rodo, kad agentas neveikia tinkamai.
 
-**Tikslumas:** Kaip dažnai agentas pateikia teisingus ar pageidaujamus rezultatus? Tikslumo apibrėžimai gali skirtis (pvz., problemų sprendimo tikslumas, informacijos paieškos tikslumas, vartotojų pasitenkinimas). Pirmas žingsnis – apibrėžti, kas yra sėkmė jūsų agentui. Tikslumą galite sekti naudodami automatinius patikrinimus, vertinimo balus ar užduočių užbaigimo žymes. Pavyzdžiui, traces gali būti pažymėtos kaip „pavyko“ arba „nepavyko“.
+**Tikslumas:** Kaip dažnai agentas pateikia teisingus ar pageidaujamus rezultatus? Tikslumo apibrėžimai skiriasi (pvz., problemų sprendimo teisingumas, informacijos gavimo tikslumas, vartotojo pasitenkinimas). Pirmas žingsnis – apibrėžti, ką reiškia sėkmė jūsų agentui. Tikslumą galite stebėti automatizuotų patikrų, vertinimo rezultatų ar užduočių įvykdymo žymių būdu. Pavyzdžiui, žymint sekas kaip „pavyko“ arba „nepavyko“.
 
-**Automatizuoti vertinimo rodikliai:** Taip pat galite nustatyti automatizuotus vertinimus. Pavyzdžiui, galite naudoti LLM, kad įvertintumėte agento išvestį, pvz., ar ji naudinga, tiksli ar ne. Taip pat yra keletas atvirojo kodo bibliotekų, kurios padeda įvertinti skirtingus agento aspektus, pvz., [RAGAS](https://docs.ragas.io/) RAG agentams arba [LLM Guard](https://llm-guard.com/) žalingos kalbos ar užklausų injekcijos aptikimui.
+**Automatizuotos vertinimo metrikos:** Taip pat galite nustatyti automatinius vertinimus. Pavyzdžiui, naudoti LLM agento rezultatui įvertinti, ar jis naudingas, tikslus ar ne. Yra keletas atvirojo kodo bibliotekų, kurios padeda įvertinti skirtingus agento aspektus, pvz., [RAGAS](https://docs.ragas.io/) RAG agentams arba [LLM Guard](https://llm-guard.com/), skirtą aptikti žalingą kalbą ar užklausų injekcijas.
 
-Praktiškai geriausią agento sveikatos stebėjimą užtikrina šių rodiklių derinys. Šio skyriaus [pavyzdžių užrašinėje](./code_samples/10_autogen_evaluation.ipynb) parodysime, kaip šie rodikliai atrodo realiuose pavyzdžiuose, tačiau pirmiausia išmoksime, kaip atrodo tipinis vertinimo darbo srautas.
+Praktikoje šių metrikų derinys suteikia geriausią dirbtinio intelekto agento būklės apžvalgą. Šio skyriaus [pavyzdinėje užrašų knygelėje](./code_samples/10-expense_claim-demo.ipynb) parodysime, kaip šios metrikos atrodo realiuose pavyzdžiuose, tačiau pirmiausia išmoksime, kaip atrodo tipinis vertinimo darbo procesas.
 
 ## Instrumentuokite savo agentą
 
-Norėdami surinkti traces duomenis, turėsite instrumentuoti savo kodą. Tikslas – priversti agento kodą generuoti traces ir rodiklius, kuriuos galima užfiksuoti, apdoroti ir vizualizuoti stebėjimo platformoje.
+Kad surinktumėte sekimo duomenis, turėsite instrumentuoti savo kodą. Tikslas – instrumentuoti agento kodą taip, kad jis transliuotų sekas ir metrikas, kurias galėtų fiksuoti, apdoroti ir vizualizuoti stebėjimo platforma.
 
-**OpenTelemetry (OTel):** [OpenTelemetry](https://opentelemetry.io/) tapo pramonės standartu LLM stebėjimui. Jis suteikia API, SDK ir įrankių rinkinį telemetrijos duomenims generuoti, rinkti ir eksportuoti.
+**OpenTelemetry (OTel):** [OpenTelemetry](https://opentelemetry.io/) tapo pramonės standartu LLM stebėjimui. Jis suteikia API, SDK ir įrankių rinkinį telemetrijos duomenų generavimui, kaupimui ir eksportui.
 
-Yra daug instrumentavimo bibliotekų, kurios apgaubia esamus agentų karkasus ir leidžia lengvai eksportuoti OpenTelemetry spans į stebėjimo įrankį. Žemiau pateiktas pavyzdys, kaip instrumentuoti AutoGen agentą naudojant [OpenLit instrumentavimo biblioteką](https://github.com/openlit/openlit):
+Yra daug instrumentavimo bibliotekų, kurios supakuoja esamus agentų karkasus ir palengvina OpenTelemetry apimčių eksportą į stebėjimo įrankį. Microsoft Agent Framework natūraliai integruojasi su OpenTelemetry. Žemiau pateiktas pavyzdys apie MAF agento instrumentaciją:
 
 ```python
-import openlit
+from agent_framework.observability import get_tracer, get_meter
 
-openlit.init(tracer = langfuse._otel_tracer, disable_batch = True)
+tracer = get_tracer()
+meter = get_meter()
+
+with tracer.start_as_current_span("agent_run"):
+    # Agentas vykdomas automatiškai ir yra fiksuojamas
+    pass
 ```
 
-Šio skyriaus [pavyzdžių užrašinėje](./code_samples/10_autogen_evaluation.ipynb) bus parodyta, kaip instrumentuoti savo AutoGen agentą.
+Šio skyriaus [pavyzdinė užrašų knygelė](./code_samples/10-expense_claim-demo.ipynb) parodys, kaip instrumentuoti savo MAF agentą.
 
-**Rankinis spans kūrimas:** Nors instrumentavimo bibliotekos suteikia gerą pagrindą, dažnai būna atvejų, kai reikia detalesnės ar pritaikytos informacijos. Galite rankiniu būdu kurti spans, kad pridėtumėte pritaikytą programos logiką. Dar svarbiau, kad jie gali praturtinti automatiškai ar rankiniu būdu sukurtus spans pritaikytais atributais (dar vadinamais žymėmis ar metaduomenimis). Šie atributai gali apimti verslo specifinius duomenis, tarpinius skaičiavimus ar bet kokį kontekstą, kuris gali būti naudingas derinimui ar analizei, pvz., `user_id`, `session_id` ar `model_version`.
+**Rankinis apimčių kūrimas:** nors instrumentavimo bibliotekos suteikia gerą pagrindą, dažnai reikalinga detalesnė ar pasirinktinė informacija. Galite rankiniu būdu kurti apimtis, kad pridėtumėte pasirinktą programos logiką. Svarbiausia, kad galima papildyti automatiškai arba rankiniu būdu sukurtas apimtis pasirinktiniais atributais (dar vadinamais žymomis arba meta duomenimis). Šie atributai gali apimti verslo specifinius duomenis, tarpinį skaičiavimą arba bet kokį kontekstą, naudingą derinimui ar analizei, pvz., `user_id`, `session_id` ar `model_version`.
 
-Pavyzdys, kaip rankiniu būdu kurti traces ir spans naudojant [Langfuse Python SDK](https://langfuse.com/docs/sdk/python/sdk-v3):
+Pavyzdys, kaip rankiniu būdu kurti sekas ir apimtis naudojant [Langfuse Python SDK](https://langfuse.com/docs/sdk/python/sdk-v3):
 
 ```python
 from langfuse import get_client
@@ -91,59 +97,72 @@ span.end()
 
 ## Agentų vertinimas
 
-Stebėjimas suteikia mums rodiklius, tačiau vertinimas yra procesas, kurio metu analizuojami tie duomenys (ir atliekami testai), siekiant nustatyti, kaip gerai veikia AI agentas ir kaip jį galima patobulinti. Kitaip tariant, kai jau turite traces ir rodiklius, kaip juos panaudoti agento vertinimui ir sprendimų priėmimui?
+Stebėjimas suteikia metrikas, bet vertinimas yra procesas, kurio metu analizuojame tuos duomenis (ir atliekame testus), kad nustatytume, kaip gerai veikia dirbtinio intelekto agentas ir kaip jį galima patobulinti. Kitaip tariant, kai turite sekas ir metrikas, kaip jas naudoti, kad įvertintumėte agentą ir priimtumėte sprendimus?
 
-Reguliarus vertinimas yra svarbus, nes AI agentai dažnai yra nedeterministiniai ir gali keistis (dėl atnaujinimų ar modelio elgsenos pokyčių) – be vertinimo jūs nežinotumėte, ar jūsų „protingas agentas“ iš tikrųjų gerai atlieka savo darbą, ar jis pablogėjo.
+Reguliarus vertinimas yra svarbus, nes dirbtinio intelekto agentai dažnai būna nedeterministiniai ir gali vystytis (per atnaujinimus ar modelio elgesio pokyčius) – be vertinimo nežinotumėte, ar jūsų „išmanusis agentas“ iš tiesų gerai atlieka savo darbą arba jei jis sugedo.
 
-Yra dvi AI agentų vertinimo kategorijos: **neprisijungus atliekamas vertinimas** ir **prisijungus atliekamas vertinimas**. Abi yra vertingos ir papildo viena kitą. Paprastai pradedame nuo neprisijungus atliekamo vertinimo, nes tai yra minimalus būtinas žingsnis prieš diegiant bet kurį agentą.
+Yra dvi ekspertų agentų vertinimo kategorijos: **online vertinimas** ir **offline vertinimas**. Abu yra vertingi ir papildomi. Dažniausiai pradedame nuo offline vertinimo, nes tai yra minimalus būtinas žingsnis prieš bet kokį agento diegimą.
 
-### Neprisijungus atliekamas vertinimas
+### Offline vertinimas
 
-![Duomenų rinkinio elementai Langfuse](https://langfuse.com/images/cookbook/example-autogen-evaluation/example-dataset.png)
+![Duomenų rinkinys Langfuse](https://langfuse.com/images/cookbook/example-autogen-evaluation/example-dataset.png)
 
-Tai apima agento vertinimą kontroliuojamoje aplinkoje, paprastai naudojant testų duomenų rinkinius, o ne tiesiogines vartotojų užklausas. Naudojate kruopščiai parinktus duomenų rinkinius, kuriuose žinote, koks yra tikėtinas rezultatas ar teisingas elgesys, ir tada paleidžiate savo agentą su jais.
+Tai reiškia agento vertinimą kontroliuojamoje aplinkoje, paprastai naudojant testinius duomenų rinkinius, o ne tiesiogines vartotojų užklausas. Jūs naudojate atrinktus duomenų rinkinius, kur žinote, koks yra numatomas rezultatas ar teisingas elgesys, ir tuomet paleidžiate agentą su jais.
 
-Pavyzdžiui, jei sukūrėte matematikos uždavinių agentą, galite turėti [testų duomenų rinkinį](https://huggingface.co/datasets/gsm8k) su 100 uždavinių ir žinomais atsakymais. Neprisijungus atliekamas vertinimas dažnai vykdomas kūrimo metu (ir gali būti CI/CD procesų dalis), siekiant patikrinti patobulinimus ar apsisaugoti nuo pablogėjimų. Privalumas yra tas, kad tai yra **kartotina, ir galite gauti aiškius tikslumo rodiklius, nes turite pagrindinę tiesą**. Taip pat galite imituoti vartotojų užklausas ir matuoti agento atsakymus pagal idealus atsakymus arba naudoti automatizuotus rodiklius, kaip aprašyta aukščiau.
+Pavyzdžiui, jei sukūrėte matematikos žodinių uždavinių agentą, galite turėti [testinį duomenų rinkinį](https://huggingface.co/datasets/gsm8k) su 100 problemų ir žinomais atsakymais. Offline vertinimas dažnai atliekamas vystymo metu (ir gali būti CI/CD procesuose), norint patikrinti patobulinimus arba apsaugoti nuo regresijos. Privalumas yra tas, kad tai **pavyzdinga ir jūs galite gauti aiškius tikslumo rodiklius, nes turite realius atsakymus**. Taip pat galite simuliuoti vartotojų užklausas ir matuoti agento atsakymus, palyginant su idealiais atsakymais, arba naudoti automatizuotas metrikas, kaip aprašyta anksčiau.
 
-Pagrindinis iššūkis atliekant neprisijungus vertinimą yra užtikrinti, kad jūsų testų duomenų rinkinys būtų išsamus ir išliktų aktualus – agentas gali gerai veikti su fiksuotu testų rinkiniu, tačiau susidurti su labai skirtingomis užklausomis gamyboje. Todėl turėtumėte nuolat atnaujinti testų rinkinius, įtraukdami naujus kraštutinius atvejus ir pavyzdžius, atspindinčius realias situacijas. Naudinga turėti mažų „dūmų testų“ atvejų ir didesnių vertinimo rinkinių derinį: mažus rinkinius greitiems patikrinimams ir didesnius – platesniems veikimo rodikliams.
+Pagrindinė offline vertinimo problema yra užtikrinti, kad jūsų testinis duomenų rinkinys būtų išsamus ir reikalingas – agentas gali gerai veikti fiksuotame rinkinyje, tačiau gamyboje susidurti su labai skirtingomis užklausomis. Todėl turėtumėte reguliariai atnaujinti testinius rinkinius naujais kraštutiniais atvejais ir pavyzdžiais, atspindinčiais realius scenarijus. Naudinga naudoti mažus „smoke test“ atvejus greitam patikrinimui ir didesnius vertinimo rinkinius platesnėms metrikoms.
 
-### Prisijungus atliekamas vertinimas
+### Online vertinimas
 
-![Stebėjimo rodiklių apžvalga](https://langfuse.com/images/cookbook/example-autogen-evaluation/dashboard.png)
+![Stebėjimo metrikų apžvalga](https://langfuse.com/images/cookbook/example-autogen-evaluation/dashboard.png)
 
-Tai reiškia agento vertinimą realioje, gyvoje aplinkoje, t. y. faktinio naudojimo gamyboje metu. Prisijungus atliekamas vertinimas apima agento veikimo stebėjimą realiose vartotojų sąveikose ir rezultatų analizę nuolat.
+Tai reiškia agento vertinimą gyvoje, realioje aplinkoje, t. y. tikroje gamybos aplinkoje naudojant. Online vertinimas reiškia agento veikimo stebėjimą tikrose vartotojų sąveikose ir nuolatinę rezultatų analizę.
 
-Pavyzdžiui, galite sekti sėkmės rodiklius, vartotojų pasitenkinimo balus ar kitus rodiklius tiesioginės srauto metu. Prisijungus atliekamo vertinimo privalumas yra tas, kad jis **užfiksuoja dalykus, kurių galbūt negalėtumėte numatyti laboratorinėje aplinkoje** – galite stebėti modelio pokyčius laikui bėgant (jei agento efektyvumas mažėja keičiantis įvesties modeliams) ir aptikti netikėtas užklausas ar situacijas, kurių nebuvo jūsų testų duomenyse. Tai suteikia tikrą vaizdą, kaip agentas elgiasi realiame pasaulyje.
+Pavyzdžiui, galite stebėti sėkmės rodiklius, vartotojų pasitenkinimo balus ar kitas metrikas gyvame sraute. Online vertinimo pranašumas yra tas, kad jis **fiksuoja dalykus, kurių galbūt nepastebėtumėte laboratorijoje** – galite stebėti modelio pakitimą laikui bėgant (jei agento efektyvumas blogėja, kai keičiami įvesties modeliai) ir užfiksuoti netikėtas užklausas ar situacijas, kurios nebuvo testų duomenyse. Tai suteikia tikrą vaizdą, kaip agentas veikia realiame pasaulyje.
 
-Prisijungus atliekamas vertinimas dažnai apima netiesioginių ir tiesioginių vartotojų atsiliepimų rinkimą, kaip aptarta, ir galbūt šešėlinių testų ar A/B testų vykdymą (kai nauja agento versija veikia lygiagrečiai, kad būtų galima palyginti su sena). Iššūkis yra tas, kad gali būti sudėtinga gauti patikimas etiketes ar balus už gyvas sąveikas – galite pasikliauti vartotojų atsiliepimais ar tolesniais rodikliais (pvz., ar vartotojas spustelėjo rezultatą).
+Online vertinimas dažnai apima netiesioginių ir tiesioginių vartotojų atsiliepimų rinkimą, kaip aprašyta, ir galbūt šešėlinių testų arba A/B testų vykdymą (kur naujoji agento versija veikia šalia senojo palyginimo). Iššūkis yra tai gauti patikimus žymėjimus ar balus gyvoms sąveikoms – gali tekti remtis vartotojų atsiliepimais arba posistemiais rodikliais (pvz., ar vartotojas paspaudė rezultatą).
 
 ### Abiejų derinimas
 
-Prisijungus ir neprisijungus atliekami vertinimai nėra tarpusavyje nesuderinami
+Online ir offline vertinimai nėra vienas kitam prieštaraujantys; jie yra labai papildantys. Įžvalgos iš online stebėjimo (pvz., naujų vartotojų užklausų tipai, kuriuose agentas veikia blogai) gali būti naudojamos offline testų duomenų rinkinių papildymui ir gerinimui. Atvirkščiai, agentai, kurie gerai veikia offline testuose, gali būti užtikrintai diegiami ir stebimi online režimu.
 
-- Dėl sudėtingų užduočių, kurioms reikia planavimo ir samprotavimo, naudokite didesnį modelį, pritaikytą samprotavimo užduotims. |
-| AI agento įrankių kvietimai neveikia gerai   | - Išbandykite ir patikrinkite įrankio rezultatą už agento sistemos ribų.<br>- Patobulinkite apibrėžtus parametrus, užklausas ir įrankių pavadinimus.  |
-| Daugiaagentė sistema neveikia nuosekliai | - Patobulinkite užklausas, pateiktas kiekvienam agentui, kad jos būtų konkrečios ir skirtingos viena nuo kitos.<br>- Sukurkite hierarchinę sistemą, naudodami „maršruto“ arba valdymo agentą, kuris nustatytų, kuris agentas yra tinkamiausias. |
+Iš tiesų, daugelis komandų naudoja ciklą:
 
-Daugelį šių problemų galima efektyviau nustatyti, jei yra stebėjimo priemonės. Anksčiau aptarti sekimo ir metrikos įrankiai padeda tiksliai nustatyti, kur agento darbo eigoje kyla problemų, todėl derinimas ir optimizavimas tampa daug efektyvesnis.
+_vertinti offline -> diegti -> stebėti online -> rinkti naujas nepavykusias atvejus -> pridėti į offline duomenų rinkinį -> tobulinti agentą -> kartoti_.
+
+## Dažnos problemos
+
+Diegiant dirbtinio intelekto agentus gamyboje galite susidurti su įvairiais iššūkiais. Štai keletas dažnų problemų ir galimi sprendimai:
+
+| **Problema**    | **Galimas sprendimas**   |
+| ------------- | ------------------ |
+| Dirbtinio intelekto agentas nesukuria užduočių nuosekliai | - Patikslinkite agentui skirtus užklausimus; aiškiai apibrėžkite tikslus.<br>- Nustatykite, kur užduotis galima suskirstyti į dalines užduotis ir jas vykdyti keliems agentams. |
+| Dirbtinio intelekto agentas įstringa nuolatiniuose cikluose  | - Užtikrinkite aiškias pabaigos sąlygas, kad agentas žinotų, kada sustabdyti procesą.<br>- Sudėtingoms užduotims, reikalaujančioms argumentavimo ir planavimo, naudokite didesnį modelį, sukurtą būtent tokioms užduotims. |
+| Dirbtinio intelekto agento įrankių kvietimai neveikia gerai   | - Išbandykite ir patvirtinkite įrankių išvestis už agento sistemos ribų.<br>- Patikslinkite parametrus, užklausimus ir įrankių pavadinimus.  |
+| Daugiagentinė sistema neveikia nuosekliai | - Patikslinkite užklausimus, skiriamus kiekvienam agentui, kad jie būtų aiškūs ir skirtingi.<br>- Sukurkite hierarchinę sistemą su „maršruto“ arba valdymo agentu, kuris nuspręstų, kuris agentas yra tinkamiausias. |
+
+Daugelį šių problemų galima nustatyti efektyviau įdiegus stebėjimą. Anksčiau minėtos sekos ir metrikos padeda tiksliai nustatyti, kur agente vykstančioje darbo eigoje kyla problemos, todėl klaidų taisymas ir optimizavimas tampa daug efektyvesni.
 
 ## Kaštų valdymas
 
-Štai keletas strategijų, kaip valdyti AI agentų diegimo į gamybą kaštus:
 
-**Naudojant mažesnius modelius:** Maži kalbos modeliai (SLM) gali gerai veikti tam tikrose agentinėse užduotyse ir žymiai sumažinti kaštus. Kaip minėta anksčiau, vertinimo sistemos sukūrimas, siekiant nustatyti ir palyginti našumą su didesniais modeliais, yra geriausias būdas suprasti, kaip gerai SLM veiks jūsų atveju. Apsvarstykite galimybę naudoti SLM paprastesnėms užduotims, tokioms kaip ketinimų klasifikavimas ar parametrų ištraukimas, o sudėtingam samprotavimui rezervuokite didesnius modelius.
+Štai keletas strategijų, kaip valdyti dirbtinio intelekto agentų diegimo į gamybą sąnaudas:
 
-**Naudojant maršruto modelį:** Panaši strategija yra naudoti įvairius modelius ir jų dydžius. Galite naudoti LLM/SLM arba serverless funkciją, kad nukreiptumėte užklausas pagal sudėtingumą į tinkamiausius modelius. Tai padės sumažinti kaštus, tuo pačiu užtikrinant tinkamą našumą konkrečioms užduotims. Pavyzdžiui, nukreipkite paprastas užklausas į mažesnius, greitesnius modelius, o sudėtingoms samprotavimo užduotims naudokite tik brangius didelius modelius.
+**Naudojant mažesnius modelius:** Maži kalbos modeliai (SLM) gali gerai veikti tam tikruose agenturos atvejais ir reikšmingai sumažins sąnaudas. Kaip minėta anksčiau, geriausias būdas suprasti, kaip gerai SLM veiks jūsų atveju – tai sukurti vertinimo sistemą, kuri nustatytų ir palygintų našumą su didesniais modeliais. Apsvarstykite galimybę naudoti SLM paprastesnėms užduotims, tokioms kaip ketinimų klasifikavimas arba parametrų išgavimas, o sudėtingam samprotavimui rezervuokite didesnius modelius.
 
-**Atsakymų talpyklos naudojimas:** Nustatant dažnas užklausas ir užduotis bei pateikiant atsakymus prieš jiems pereinant per agentinę sistemą, galima sumažinti panašių užklausų apimtį. Galite net įgyvendinti procesą, kuris nustatytų, kiek užklausa panaši į jūsų talpykloje esančias užklausas, naudodami paprastesnius AI modelius. Ši strategija gali žymiai sumažinti kaštus dažnai užduodamiems klausimams ar įprastoms darbo eigoms.
+**Naudojant maršrutizatoriaus modelį:** Panaši strategija yra naudoti įvairius modelius ir dydžius. Galite naudoti LLM/SLM arba serverless funkciją, kad maršrutizuotumėte užklausas pagal sudėtingumą į geriausiai tinkamus modelius. Tai taip pat padės sumažinti sąnaudas ir užtikrins našumą tinkamoms užduotims. Pavyzdžiui, maršrutizuokite paprastas užklausas į mažesnius, greitesnius modelius, o brangius didelius modelius naudokite tik sudėtingiems samprotavimo uždaviniams.
+
+**Atsakymų kešavimas:** Nustatyti dažnas užklausas ir užduotis bei pateikti atsakymus prieš jie pasiekia jūsų agentūros sistemą yra geras būdas sumažinti panašių užklausų apimtį. Galite net įgyvendinti srautą, nustatantį, kiek užklausa panaši į jūsų kešuotas užklausas, naudojant paprastesnius DI modelius. Ši strategija gali reikšmingai sumažinti sąnaudas dažnai užduodamiems klausimams arba įprastiems darbo eigų procesams.
 
 ## Pažiūrėkime, kaip tai veikia praktikoje
 
-Šiame [šios skilties pavyzdiniame užrašų knygelėje](./code_samples/10_autogen_evaluation.ipynb) pamatysime pavyzdžius, kaip galime naudoti stebėjimo įrankius agentų stebėjimui ir vertinimui.
+[Šio skyriaus pavyzdiniame užrašyne](./code_samples/10-expense_claim-demo.ipynb) pamatysime pavyzdžių, kaip galime naudoti stebėjimo įrankius mūsų agentui stebėti ir vertinti.
 
-### Turite daugiau klausimų apie AI agentus gamyboje?
 
-Prisijunkite prie [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kad susipažintumėte su kitais besimokančiais, dalyvautumėte konsultacijų valandose ir gautumėte atsakymus į savo klausimus apie AI agentus.
+### Turite daugiau klausimų apie DI agentus gamyboje?
+
+Prisijunkite prie [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), susipažinkite su kitais besimokančiais, dalyvaukite konsultačiuose ir gaukite atsakymus į savo DI agentų klausimus.
 
 ## Ankstesnė pamoka
 
@@ -151,9 +170,11 @@ Prisijunkite prie [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), 
 
 ## Kitoji pamoka
 
-[Agentiniai protokolai](../11-agentic-protocols/README.md)
+[Agentūros protokolai](../11-agentic-protocols/README.md)
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipiame dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, kylančius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,10 +1,10 @@
-[![Истраживање оквира за AI агенте](../../../translated_images/sr/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
+[![Истраживање AI оквира за агенте](../../../translated_images/sr/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
-> _(Кликните на слику изнад да бисте погледали видео лекције)_
+> _(Кликните на горњу слику да бисте погледали видео о овој лекцији)_
 
-# Истражите оквире за AI агенте
+# Истражите AI оквире за агенте
 
-Оквири за AI агенте су софтверске платформе осмишљене да олакшају креирање, примену и управљање AI агентима. Ови оквири пружају програмерима унапред припремљене компоненте, апстракције и алате који поједностављују развој сложених AI система.
+AI оквири за агенте су софтверске платформе дизајниране да поједноставе креирање, постављање и управљање AI агентима. Ови оквири обезбеђују програмерима унапред изграђене компоненте, апстракције и алате који убрзавају развој сложених AI система.
 
 Ови оквири помажу програмерима да се фокусирају на јединствене аспекте својих апликација пружајући стандардизоване приступе за уобичајене изазове у развоју AI агената. Они побољшавају скалабилност, приступачност и ефикасност у изградњи AI система.
 
@@ -12,480 +12,292 @@
 
 Ова лекција ће обухватити:
 
-- Шта су оквири за AI агенте и шта омогућавају програмерима да постигну?
-- Како тимови могу користити ове оквире за брзо прототипирање, итерацију и побољшање способности својих агената?
-- Које су разлике између оквира и алата које је креирао Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a> и <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
-- Могу ли интегрисати своје постојеће Azure алате директно или су ми потребна независна решења?
-- Шта је Azure AI Agents услуга и како ми она помаже?
+- Шта су AI оквири за агенте и шта омогућују програмерима да постигну?
+- Како тимови могу да их користе за брзо прототиповање, итерацију и побољшање капацитета свог агента?
+- Које су разлике између оквира и алата које су креирали Microsoft (<a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Microsoft Foundry Agent Service</a> и <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework</a>)?
+- Могу ли да интегришем своје постојеће алате Azure екосистема директно или ми требају самостална решења?
+- Шта је Microsoft Foundry Agent Service и како ми помаже?
 
 ## Циљеви учења
 
 Циљеви ове лекције су да вам помогну да разумете:
 
-- Улогу оквира за AI агенте у развоју AI.
-- Како искористити оквире за AI агенте за изградњу интелигентних агената.
-- Кључне способности које омогућавају оквири за AI агенте.
-- Разлике између AutoGen, Semantic Kernel и Azure AI Agent Service.
+- Улогу AI оквира за агенте у развоју AI.
+- Како искористити AI оквире за агенте да бисте изградили интелигентне агенте.
+- Кључне могућности које омогућавају AI оквири за агенте.
+- Разлике између Microsoft Agent Framework и Microsoft Foundry Agent Service.
 
-## Шта су оквири за AI агенте и шта омогућавају програмерима да ураде?
+## Шта су AI оквири за агенте и шта омогућавају програмерима?
 
-Традиционални AI оквири могу вам помоћи да интегришете AI у своје апликације и учините их бољим на следеће начине:
+Традиционални AI оквири вам могу помоћи да интегришете AI у своје апликације и учините их бољим на следеће начине:
 
-- **Персонализација**: AI може анализирати понашање корисника и преференције како би пружио персонализоване препоруке, садржај и искуства.  
-Пример: Стриминг услуге као што је Netflix користе AI за предлоге филмова и серија на основу историје гледања, чиме се повећава ангажовање и задовољство корисника.
-- **Аутоматизација и ефикасност**: AI може аутоматизовати поновљиве задатке, поједноставити радне токове и побољшати оперативну ефикасност.  
-Пример: Апликације за корисничку подршку користе AI-омогућене четботове за решавање уобичајених упита, смањујући време одговора и ослобађајући људске агенте за сложеније проблеме.
-- **Побољшано корисничко искуство**: AI може побољшати укупно корисничко искуство пружањем интелигентних функција као што су препознавање гласа, обрада природног језика и предиктивни текст.  
-Пример: Виртуелни асистенти као што су Siri и Google Assistant користе AI за разумевање и одговарање на гласовне команде, чинећи интеракцију са уређајима лакшом за кориснике.
+- **Персонализација**: AI може да анализира понашање и преференције корисника и пружи персонализоване препоруке, садржај и искуства.
+Пример: Услуге стриминга попут Netflix користе AI да предложе филмове и емисије на основу историје гледања, повећавајући ангажман и задовољство корисника.
+- **Аутоматизација и ефикасност**: AI може да аутоматизује понављајуће задатке, поједностави токове рада и побољша оперативну ефикасност.
+Пример: Апликације за корисничку подршку користе AI чатботове за обраду често постављаних упита, смањујући време одговора и ослобађајући људске агенте за сложеније проблеме.
+- **Побољшано корисничко искуство**: AI може побољшати укупно искуство корисника пружајући интелигентне функције као што су препознавање гласа, обрада природног језика и предиктивни текст.
+Пример: Виртуални асистенти као што су Siri и Google Assistant користе AI за разумевање и одговор на гласовне команде, олакшавајући корисницима интеракцију са уређајима.
 
-### Звучи одлично, зар не? Па зашто нам онда треба оквир за AI агенте?
+### Све то звучи одлично, зашто нам онда треба AI оквир за агенте?
 
-Оквири за AI агенте представљају нешто више од обичних AI оквира. Они су осмишљени да омогуће креирање интелигентних агената који могу да комуницирају са корисницима, другим агентима и окружењем како би постигли одређене циљеве. Ови агенти могу показати аутономно понашање, доносити одлуке и прилагођавати се променљивим условима. Погледајмо неке кључне способности које омогућавају оквири за AI агенте:
+AI оквири за агенте представљају нешто више од обичних AI оквира. Они су дизајнирани да омогуће креирање интелигентних агената који могу да интерагују са корисницима, другим агентима и окружењем како би остварили одређене циљеве. Ови агенти могу показивати аутономно понашање, доносити одлуке и прилагодити се променљивим условима. Погледајмо неке кључне могућности које омогућавају AI оквири за агенте:
 
-- **Сарадња и координација агената**: Омогућава креирање више AI агената који могу радити заједно, комуницирати и координирати се ради решавања сложених задатака.
-- **Аутоматизација и управљање задацима**: Пружа механизме за аутоматизацију радних токова у више корака, делегирање задатака и динамично управљање задацима међу агентима.
-- **Контекстуално разумевање и адаптација**: Опрема агенте способношћу да разумеју контекст, прилагођавају се променљивим окружењима и доносе одлуке на основу информација у реалном времену.
+- **Сарадња и координација агената**: Омогућавају креирање више AI агената који могу заједно радити, комуницирати и координисати се да реше сложене задатке.
+- **Аутоматизација и управљање задацима**: Обезбеђују механизме за аутоматизацију више корака у току рада, делегирање задатака и динамичко управљање задацима између агената.
+- **Контекстуално разумевање и прилагођавање**: Опремају агенте способношћу да разумеју контекст, прилагођавају се променљивом окружењу и доносе одлуке засноване на информацијама у реалном времену.
 
-Укратко, агенти вам омогућавају да урадите више, да подигнете аутоматизацију на виши ниво, да креирате интелигентније системе који могу да се прилагоде и уче из свог окружења.
+Дакле, у резимеу, агенти вам дозвољавају да урадите више, да подигнете аутоматизацију на виши ниво, да креирате интелигентније системе који се могу прилагодити и учити из свог окружења.
 
-## Како брзо прототипирати, итеративно радити и побољшати способности агента?
+## Како брзо прототиповати, итеративно унапређивати и побољшавати капацитете агента?
 
-Ово је брзо развијајући пејзаж, али постоје неке заједничке ствари код већине оквира за AI агенте које вам могу помоћи да брзо прототипирате и итеративно радите, а то су модуларне компоненте, алати за сарадњу и учење у реалном времену. Хајде да се удубимо у ово:
+Ово је брзо развијајући се простор, али постоје неке ствари заједничке за већину AI оквира за агенте које вам могу помоћи да брзо направите прототип и итерацију, а то су модуларне компоненте, колективни алати и учење у реалном времену. Хајде да их погледамо:
 
-- **Користите модуларне компоненте**: AI SDK-ови нуде унапред припремљене компоненте као што су AI и Memory конектори, позивање функција користећи природни језик или код плугине, шаблоне упита и друго.
-- **Искористите алате за сарадњу**: Дизајнирајте агенте са специфичним улогама и задацима, омогућавајући им тестирање и усавршавање сарадничких радних токова.
-- **Учите у реалном времену**: Примените повратне петље где агенти уче из интеракција и динамички прилагођавају своје понашање.
+- **Користите модуларне компоненте**: AI SDK-ови нуде унапред изграђене компоненте као што су AI и меморијски конектори, позив функција путем природног језика или додатака кода, шаблони упита и још много тога.
+- **Искоришћавајте колективне алате**: Дизајнирајте агенте са специфичним улогама и задацима, омогућавајући им да тестирају и унапређују колаборативне токове рада.
+- **Учите у реалном времену**: Имплементирајте петље повратних информација где агенти уче из интеракција и динамички прилагођавају своје понашање.
 
 ### Користите модуларне компоненте
 
-SDK-ови као што су Microsoft Semantic Kernel и LangChain нуде унапред припремљене компоненте као што су AI конектори, шаблони упита и управљање меморијом.
+SDK-ови као Microsoft Agent Framework нуде унапред изграђене компоненте као што су AI конектори, дефиниције алата и управљање агентима.
 
-**Како тимови могу користити ове компоненте**: Тимови могу брзо саставити ове компоненте како би креирали функционални прототип без почетка од нуле, омогућавајући брзо експериментисање и итерацију.
+**Како тимови могу користити ово**: Тимови могу брзо саставити ове компоненте да направе функционалан прототип без почињања од нуле, што омогућава брзо експериментисање и итерацију.
 
-**Како то функционише у пракси**: Можете користити унапред припремљени парсер за извлачење информација из корисничког уноса, модул меморије за складиштење и преузимање података, и генератор упита за интеракцију са корисницима, све без потребе да сами градите ове компоненте.
+**Како то функционише у пракси**: Можете користити унапред изграђени парсер за екстракцију информација из корисничког уноса, меморијски модул за чување и проналажење података, као и генератор упита за интеракцију са корисницима, све без потребе да градите ове компоненте од нуле.
 
-**Пример кода**. Погледајмо примере како можете користити унапред припремљени AI конектор са Semantic Kernel Python и .Net који користи аутоматско позивање функција да би модел одговорио на кориснички унос:
+**Пример кода**. Погледајмо пример како можете користити Microsoft Agent Framework са `FoundryChatClient` да модел одговара на кориснички унос позивајући алате:
 
 ``` python
-# Semantic Kernel Python Example
+# Пример Microsoft Agent Framework у Python-у
 
 import asyncio
-from typing import Annotated
+import os
 
-from semantic_kernel.connectors.ai import FunctionChoiceBehavior
-from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureChatPromptExecutionSettings
-from semantic_kernel.contents import ChatHistory
-from semantic_kernel.functions import kernel_function
-from semantic_kernel.kernel import Kernel
-
-# Define a ChatHistory object to hold the conversation's context
-chat_history = ChatHistory()
-chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
+from agent_framework import tool
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 
-# Define a sample plugin that contains the function to book travel
-class BookTravelPlugin:
-    """A Sample Book Travel Plugin"""
-
-    @kernel_function(name="book_flight", description="Book travel given location and date")
-    async def book_flight(
-        self, date: Annotated[str, "The date of travel"], location: Annotated[str, "The location to travel to"]
-    ) -> str:
-        return f"Travel was booked to {location} on {date}"
-
-# Create the Kernel
-kernel = Kernel()
-
-# Add the sample plugin to the Kernel object
-kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
-
-# Define the Azure OpenAI AI Connector
-chat_service = AzureChatCompletion(
-    deployment_name="YOUR_DEPLOYMENT_NAME", 
-    api_key="YOUR_API_KEY", 
-    endpoint="https://<your-resource>.azure.openai.com/",
-)
-
-# Define the request settings to configure the model with auto-function calling
-request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
+# Дефиниши пример функције алата за резервацију путовања
+@tool(approval_mode="never_require")
+def book_flight(date: str, location: str) -> str:
+    """Book travel given location and date."""
+    return f"Travel was booked to {location} on {date}"
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
-    response = await chat_service.get_chat_message_content(
-        chat_history=chat_history, settings=request_settings, kernel=kernel
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
     )
-    assert response is not None
+    agent = provider.as_agent(
+        name="travel_agent",
+        instructions="Help the user book travel. Use the book_flight tool when ready.",
+        tools=[book_flight],
+    )
 
-    """
-    Note: In the auto function calling process, the model determines it can invoke the 
-    `BookTravelPlugin` using the `book_flight` function, supplying the necessary arguments. 
-    
-    For example:
-
-    "tool_calls": [
-        {
-            "id": "call_abc123",
-            "type": "function",
-            "function": {
-                "name": "BookTravelPlugin-book_flight",
-                "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-            }
-        }
-    ]
-
-    Since the location and date arguments are required (as defined by the kernel function), if the 
-    model lacks either, it will prompt the user to provide them. For instance:
-
-    User: Book me a flight to New York.
-    Model: Sure, I'd love to help you book a flight. Could you please specify the date?
-    User: I want to travel on January 1, 2025.
-    Model: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels!
-    """
-
-    print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
-
-    # Add the model's response to our chat history context
-    chat_history.add_assistant_message(response.content)
+    response = await agent.run("I'd like to go to New York on January 1, 2025")
+    print(response)
+    # Пример излаза: Ваш лет за Њујорк 1. јануара 2025. је успешно резервисан. Срећан пут! ✈️🗽
 
 
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-```csharp
-// Semantic Kernel C# example
 
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.ChatCompletion;
-using System.ComponentModel;
-using Microsoft.SemanticKernel.Connectors.AzureOpenAI;
+Оно што из овог примера можете видети је како можете искористити унапред изграђени парсер да извучете кључне информације из корисничког уноса, као што су порекло, одредиште и датум захтева за резервацију лета. Овај модуларни приступ вам дозвољава да се фокусирате на логичку надоградњу.
 
-ChatHistory chatHistory = [];
-chatHistory.AddUserMessage("I'd like to go to New York on January 1, 2025");
+### Искоришћавајте колективне алате
 
-var kernelBuilder = Kernel.CreateBuilder();
-kernelBuilder.AddAzureOpenAIChatCompletion(
-    deploymentName: "NAME_OF_YOUR_DEPLOYMENT",
-    apiKey: "YOUR_API_KEY",
-    endpoint: "YOUR_AZURE_ENDPOINT"
-);
-kernelBuilder.Plugins.AddFromType<BookTravelPlugin>("BookTravel"); 
-var kernel = kernelBuilder.Build();
+Оквири као Microsoft Agent Framework олакшавају креирање више агената који могу радити заједно.
 
-var settings = new AzureOpenAIPromptExecutionSettings()
-{
-    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
-};
+**Како тимови могу користити ово**: Тимови могу дизајнирати агенте са специфичним улогама и задацима, омогућавајући им да тестирају и унапреде колаборативне токове рада и побољшају укупну ефикасност система.
 
-var chatCompletion = kernel.GetRequiredService<IChatCompletionService>();
+**Како то функционише у пракси**: Можете креирати тим агената где сваки агент има специјализовану функцију, као што су дохватање података, анализа или доношење одлука. Ови агенти могу комуницирати и делити информације да би постигли заједнички циљ, као што је одговор на кориснички упит или завршetak задатка.
 
-var response = await chatCompletion.GetChatMessageContentAsync(chatHistory, settings, kernel);
-
-/*
-Behind the scenes, the model recognizes the tool to call, what arguments it already has (location) and (date)
-{
-
-"tool_calls": [
-    {
-        "id": "call_abc123",
-        "type": "function",
-        "function": {
-            "name": "BookTravelPlugin-book_flight",
-            "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-        }
-    }
-]
-*/
-
-Console.WriteLine(response.Content);
-chatHistory.AddMessage(response!.Role, response!.Content!);
-
-// Example AI Model Response: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽
-
-// Define a plugin that contains the function to book travel
-public class BookTravelPlugin
-{
-    [KernelFunction("book_flight")]
-    [Description("Book travel given location and date")]
-    public async Task<string> BookFlight(DateTime date, string location)
-    {
-        return await Task.FromResult( $"Travel was booked to {location} on {date}");
-    }
-}
-```
-
-Из овог примера можете видети како можете искористити унапред припремљени парсер за извлачење кључних информација из корисничког уноса, као што су порекло, одредиште и датум захтева за резервацију лета. Овај модуларни приступ вам омогућава да се фокусирате на логичке аспекте.
-
-### Искористите алате за сарадњу
-
-Оквири као што су CrewAI, Microsoft AutoGen и Semantic Kernel олакшавају креирање више агената који могу радити заједно.
-
-**Како тимови могу користити ове алате**: Тимови могу дизајнирати агенте са специфичним улогама и задацима, омогућавајући им тестирање и усавршавање сарадничких радних токова и побољшање укупне ефикасности система.
-
-**Како то функционише у пракси**: Можете креирати тим агената где сваки агент има специјализовану функцију, као што су преузимање података, анализа или доношење одлука. Ови агенти могу комуницирати и делити информације како би постигли заједнички циљ, као што је одговарање на кориснички упит или завршавање задатка.
-
-**Пример кода (AutoGen)**:
+**Пример кода (Microsoft Agent Framework)**:
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# Креирање више агената који раде заједно користећи Microsoft Agent Framework
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-agent_retrieve = AssistantAgent(
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
+
+# Агента за преузимање података
+agent_retrieve = provider.as_agent(
     name="dataretrieval",
-    model_client=model_client,
+    instructions="Retrieve relevant data using available tools.",
     tools=[retrieve_tool],
-    system_message="Use tools to solve tasks."
 )
 
-agent_analyze = AssistantAgent(
+# Агента за анализу података
+agent_analyze = provider.as_agent(
     name="dataanalysis",
-    model_client=model_client,
+    instructions="Analyze the retrieved data and provide insights.",
     tools=[analyze_tool],
-    system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
-termination = TextMentionTermination("APPROVE")
-
-user_proxy = UserProxyAgent("user_proxy", input_func=input)
-
-team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
-
-stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
-await Console(stream)
+# Покрени агенте секвенцијално на задатку
+retrieval_result = await agent_retrieve.run("Retrieve sales data for Q4")
+analysis_result = await agent_analyze.run(f"Analyze this data: {retrieval_result}")
+print(analysis_result)
 ```
 
-У претходном коду видите како можете креирати задатак који укључује више агената који раде заједно на анализи података. Сваки агент обавља одређену функцију, а задатак се извршава координацијом агената како би се постигао жељени резултат. Креирањем посебних агената са специјализованим улогама можете побољшати ефикасност и перформансе задатка.
+У претходном коду видите како можете креирати задатак у коме више агената ради заједно на анализи података. Сваки агент обавља специфичну функцију, а задатак се извршава координацијом агената како би се постигао жељени резултат. Креирањем посвећених агената са специјализованим улогама, можете побољшати ефикасност и перформансе задатка.
 
-### Учите у реалном времену
+### Учење у реалном времену
 
-Напредни оквири пружају могућности за разумевање контекста у реалном времену и адаптацију.
+Напредни оквири пружају могућности за разумевање контекста и прилагођавање у реалном времену.
 
-**Како тимови могу користити ове могућности**: Тимови могу применити повратне петље где агенти уче из интеракција и динамички прилагођавају своје понашање, што доводи до континуираног побољшања и усавршавања способности.
+**Како тимови могу користити ово**: Тимови могу имплементирати петље повратних информација где агенти уче из интеракција и динамички прилагођавају своје понашање, што води ка континуираном унапређењу и дорађивању капацитета.
 
-**Како то функционише у пракси**: Агенти могу анализирати повратне информације корисника, податке из окружења и резултате задатака како би ажурирали своју базу знања, прилагодили алгоритме за доношење одлука и побољшали перформансе током времена. Овај итеративни процес учења омогућава агентима да се прилагоде променљивим условима и преференцијама корисника, побољшавајући укупну ефикасност система.
+**Како то функционише у пракси**: Агенти могу анализирати повратне информације корисника, податке из околине и резултате зададка да ажурирају своју базу знања, прилагођавају алгоритме доношења одлука и побољшавају перформансе током времена. Овај итеративни процес учења омогућава агентима да се прилагоде променљивим условима и преференцијама корисника, повећавајући укупну ефикасност система.
 
-## Које су разлике између оквира AutoGen, Semantic Kernel и Azure AI Agent Service?
+## Које су разлике између Microsoft Agent Framework и Microsoft Foundry Agent Service?
 
-Постоји много начина да се упореде ови оквири, али хајде да погледамо неке кључне разлике у погледу њиховог дизајна, способности и циљних случајева употребе:
+Постоји много начина за поређење ових приступа, али хајде да погледамо неке кључне разлике у погледу њиховог дизајна, могућности и циљних случајева употребе:
 
-## AutoGen
+## Microsoft Agent Framework (MAF)
 
-AutoGen је оквир отвореног кода који је развио Microsoft Research's AI Frontiers Lab. Фокусира се на апликације засноване на догађајима и дистрибуиране *агентске* апликације, омогућавајући више LLM-ова и SLM-ова, алата и напредних дизајнерских образаца за више агената.
+Microsoft Agent Framework пружа поједностављени SDK за изградњу AI агената користећи `FoundryChatClient`. Омогућава програмерима да креирају агенте који користе Azure OpenAI моделе са уграђеним позивом алата, управљањем разговором и сигурношћу на нивоу предузећа путем Azure идентитета.
 
-AutoGen је изграђен око основног концепта агената, који су аутономни ентитети који могу да перципирају своје окружење, доносе одлуке и предузимају акције како би постигли одређене циљеве. Агенти комуницирају путем асинхроних порука, омогућавајући им да раде независно и паралелно, чиме се побољшава скалабилност и одзивност система.
+**Примене**: Изградња AI агената спремних за производњу са употребом алата, више корака у токовима рада и сценарије интеграције на нивоу предузећа.
 
-<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Агенти су засновани на моделу актера</a>. Према Википедији, актер је _основни грађевински блок конкурентног рачунања. Као одговор на поруку коју прими, актер може: донети локалне одлуке, креирати више актера, послати више порука и одредити како ће одговорити на следећу примљену поруку_.
+Ево неких важних основних концепата Microsoft Agent Framework:
 
-**Случајеви употребе**: Аутоматизација генерисања кода, задаци анализе података и изградња прилагођених агената за функције планирања и истраживања.
+- **Агенти**. Агент се креира преко `FoundryChatClient` и конфигурише са именом, инструкцијама и алатима. Агент може:
+  - **Обрадити корисничке поруке** и генерисати одговоре користећи Azure OpenAI моделе.
+  - **Аутоматски позивати алате** на основу контекста разговора.
+  - **Одржавати стање разговора** кроз више интеракција.
 
-Ево неких важних основних концепата AutoGen-а:
-
-- **Агенти**. Агент је софтверски ентитет који:
-  - **Комуницира путем порука**, које могу бити синхроне или асинхроне.
-  - **Одржава своје стање**, које се може мењати долазним порукама.
-  - **Извршава акције** као одговор на примљене поруке или промене у свом стању. Ове акције могу мењати стање агента и производити спољашње ефекте, као што су ажурирање дневника порука, слање нових порука, извршавање кода или прављење API позива.
-
-  Ево кратког исечка кода у којем креирате сопственог агента са могућностима четовања:
+  Ево резјака кода који показује како креирати агента:
 
     ```python
-    from autogen_agentchat.agents import AssistantAgent
-    from autogen_agentchat.messages import TextMessage
-    from autogen_ext.models.openai import OpenAIChatCompletionClient
+    import os
+    from agent_framework.foundry import FoundryChatClient
+    from azure.identity import AzureCliCredential
 
-
-    class MyAgent(RoutedAgent):
-        def __init__(self, name: str) -> None:
-            super().__init__(name)
-            model_client = OpenAIChatCompletionClient(model="gpt-4o")
-            self._delegate = AssistantAgent(name, model_client=model_client)
-    
-        @message_handler
-        async def handle_my_message_type(self, message: MyMessageType, ctx: MessageContext) -> None:
-            print(f"{self.id.type} received message: {message.content}")
-            response = await self._delegate.on_messages(
-                [TextMessage(content=message.content, source="user")], ctx.cancellation_token
-            )
-            print(f"{self.id.type} responded: {response.chat_message.content}")
-    ```
-    
-    У претходном коду, `MyAgent` је креиран и наслеђује од `RoutedAgent`. Има обрађивач порука који штампа садржај поруке, а затим шаље одговор користећи делегат `AssistantAgent`. Посебно обратите пажњу на то како додељујемо `self._delegate` инстанцу `AssistantAgent`, који је унапред припремљен агент који може да обрађује завршетке четова.
-
-    Хајде да обавестимо AutoGen о овом типу агента и покренемо програм:
-
-    ```python
-    
-    # main.py
-    runtime = SingleThreadedAgentRuntime()
-    await MyAgent.register(runtime, "my_agent", lambda: MyAgent())
-
-    runtime.start()  # Start processing messages in the background.
-    await runtime.send_message(MyMessageType("Hello, World!"), AgentId("my_agent", "default"))
-    ```
-
-    У претходном коду агенти су регистровани у окружењу за извршавање, а затим је порука послата агенту, што резултира следећим излазом:
-
-    ```text
-    # Output from the console:
-    my_agent received message: Hello, World!
-    my_assistant received message: Hello, World!
-    my_assistant responded: Hello! How can I assist you today?
-    ```
-
-- **Више агената**. AutoGen подржава креирање више агената који могу радити заједно како би постигли сложене задатке. Агенти могу комуницирати, делити информације и координирати своје акције ради ефикаснијег решавања проблема. Да бисте креирали систем са више агената, можете дефинисати различите типове агената са специјализованим функцијама и улогама, као што су преузимање података, анализа, доношење одлука и интеракција са корисником. Хајде да видимо како изгледа таква креација:
-
-    ```python
-    editor_description = "Editor for planning and reviewing the content."
-
-    # Example of declaring an Agent
-    editor_agent_type = await EditorAgent.register(
-    runtime,
-    editor_topic_type,  # Using topic type as the agent type.
-    lambda: EditorAgent(
-        description=editor_description,
-        group_chat_topic_type=group_chat_topic_type,
-        model_client=OpenAIChatCompletionClient(
-            model="gpt-4o-2024-08-06",
-            # api_key="YOUR_API_KEY",
-        ),
-        ),
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
+    )
+    agent = provider.as_agent(
+        name="my_agent",
+        instructions="You are a helpful assistant.",
     )
 
-    # remaining declarations shortened for brevity
+    response = await agent.run("Hello, World!")
+    print(response)
+    ```
 
-    # Group chat
-    group_chat_manager_type = await GroupChatManager.register(
-    runtime,
-    "group_chat_manager",
-    lambda: GroupChatManager(
-        participant_topic_types=[writer_topic_type, illustrator_topic_type, editor_topic_type, user_topic_type],
-        model_client=OpenAIChatCompletionClient(
-            model="gpt-4o-2024-08-06",
-            # api_key="YOUR_API_KEY",
-        ),
-        participant_descriptions=[
-            writer_description, 
-            illustrator_description, 
-            editor_description, 
-            user_description
-        ],
-        ),
+- **Алате**. Оквир подржава дефинисање алата као Python функција које агент може аутоматски позивати. Алате се региструју приликом креирања агента:
+
+    ```python
+    def get_weather(location: str) -> str:
+        """Get the current weather for a location."""
+        return f"The weather in {location} is sunny, 72\u00b0F."
+
+    agent = provider.as_agent(
+        name="weather_agent",
+        instructions="Help users check the weather.",
+        tools=[get_weather],
     )
     ```
 
-    У претходном коду имамо `GroupChatManager` који је регистрован у окружењу за извршавање. Овај менаџер је одговоран за координацију интеракција између различитих типова агената, као што су писци, илустратори, уредници и корисници.
+- **Координација више агената**. Можете креирати више агената са различитим специјалностима и координисати њихов рад:
 
-- **Окружење за извршавање агената**. Оквир пружа окружење за извршавање, омогућава комуникацију између агената, управља њиховим идентитетима и животним циклусима и спроводи безбедносне и приватне границе. То значи да можете покренути своје агенте у безбедном и контролисаном окружењу, осигуравајући да могу безбедно и ефикасно комуницирати. Постоје два окружења за извршавање која су од интереса:
-  - **Самостално окружење за извршавање**. Ово је добар избор за апликације са једним процесом где су сви агенти имплементирани у истом програмском језику и раде у истом процесу. Ево илустрације како то функционише:
-  
-    <a href="https://microsoft.github.io/autogen/stable/_images/architecture-standalone.svg" target="_blank">Самостално окружење за извршавање</a>   
-Апликацијски стек
+    ```python
+    planner = provider.as_agent(
+        name="planner",
+        instructions="Break down complex tasks into steps.",
+    )
 
-    *агенти комуницирају путем порука кроз окружење за извршавање, а окружење управља животним циклусом агената*
+    executor = provider.as_agent(
+        name="executor",
+        instructions="Execute the planned steps using available tools.",
+        tools=[execute_tool],
+    )
 
-  - **Дистрибуира
-Ове чињенице се затим чувају у меморијској колекцији `SummarizedAzureDocs`. Ово је веома поједностављен пример, али можете видети како можете чувати информације у меморији за коришћење од стране LLM-а.
+    plan = await planner.run("Plan a trip to Paris")
+    result = await executor.run(f"Execute this plan: {plan}")
+    ```
 
-Дакле, то су основе Semantic Kernel оквира, а шта је са Agent Framework-ом?
+- **Интеграција Azure идентитета**. Оквир користи `AzureCliCredential` (или `DefaultAzureCredential`) за безбедну, безкључну аутентификацију, елиминишући потребу за директним управљањем API кључевима.
 
-## Azure AI Agent Service
+## Microsoft Foundry Agent Service
 
-Azure AI Agent Service је новији додатак, представљен на Microsoft Ignite 2024. Омогућава развој и примену AI агената са флексибилнијим моделима, као што је директно позивање open-source LLM-ова попут Llama 3, Mistral и Cohere.
+Microsoft Foundry Agent Service је новији додатак, представљен на Microsoft Ignite 2024. Омогућава развој и постављање AI агената са флексибилнијим моделима, као што је директан позив отворених LLM као што су Llama 3, Mistral и Cohere.
 
-Azure AI Agent Service пружа јаче механизме за безбедност у предузећима и методе за складиштење података, што га чини погодним за предузетничке апликације.
+Microsoft Foundry Agent Service пружа јаче механизме безбедности на нивоу предузећа и методе складиштења података, што га чини погодним за предузетничке апликације.
 
-Функционише одмах са мулти-агентским оркестрационим оквирима као што су AutoGen и Semantic Kernel.
+Ради одмах у складу са Microsoft Agent Framework за изградњу и постављање агената.
 
-Ова услуга је тренутно у Public Preview фази и подржава Python и C# за изградњу агената.
+Ова услуга је тренутно у Јавној претпреми и подржава Python и C# за изградњу агената.
 
-Користећи Semantic Kernel Python, можемо креирати Azure AI Agent са кориснички дефинисаним додатком:
+Користећи Microsoft Foundry Agent Service Python SDK, можемо креирати агента са алатом дефинисаним од стране корисника:
 
 ```python
 import asyncio
-from typing import Annotated
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
 
-from azure.identity.aio import DefaultAzureCredential
+# Дефиниши функције алата
+def get_specials() -> str:
+    """Provides a list of specials from the menu."""
+    return """
+    Special Soup: Clam Chowder
+    Special Salad: Cobb Salad
+    Special Drink: Chai Tea
+    """
 
-from semantic_kernel.agents import AzureAIAgent, AzureAIAgentSettings, AzureAIAgentThread
-from semantic_kernel.contents import ChatMessageContent
-from semantic_kernel.contents import AuthorRole
-from semantic_kernel.functions import kernel_function
-
-
-# Define a sample plugin for the sample
-class MenuPlugin:
-    """A sample Menu Plugin used for the concept sample."""
-
-    @kernel_function(description="Provides a list of specials from the menu.")
-    def get_specials(self) -> Annotated[str, "Returns the specials from the menu."]:
-        return """
-        Special Soup: Clam Chowder
-        Special Salad: Cobb Salad
-        Special Drink: Chai Tea
-        """
-
-    @kernel_function(description="Provides the price of the requested menu item.")
-    def get_item_price(
-        self, menu_item: Annotated[str, "The name of the menu item."]
-    ) -> Annotated[str, "Returns the price of the menu item."]:
-        return "$9.99"
+def get_item_price(menu_item: str) -> str:
+    """Provides the price of the requested menu item."""
+    return "$9.99"
 
 
 async def main() -> None:
-    ai_agent_settings = AzureAIAgentSettings.create()
+    credential = DefaultAzureCredential()
+    project_client = AIProjectClient.from_connection_string(
+        credential=credential,
+        conn_str="your-connection-string",
+    )
 
-    async with (
-        DefaultAzureCredential() as creds,
-        AzureAIAgent.create_client(
-            credential=creds,
-            conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
-        ) as client,
-    ):
-        # Create agent definition
-        agent_definition = await client.agents.create_agent(
-            model=ai_agent_settings.model_deployment_name,
-            name="Host",
-            instructions="Answer questions about the menu.",
+    agent = project_client.agents.create_agent(
+        model="gpt-5-mini",
+        name="Host",
+        instructions="Answer questions about the menu.",
+        tools=[get_specials, get_item_price],
+    )
+
+    thread = project_client.agents.create_thread()
+
+    user_inputs = [
+        "Hello",
+        "What is the special soup?",
+        "How much does that cost?",
+        "Thank you",
+    ]
+
+    for user_input in user_inputs:
+        print(f"# User: '{user_input}'")
+        message = project_client.agents.create_message(
+            thread_id=thread.id,
+            role="user",
+            content=user_input,
         )
-
-        # Create the AzureAI Agent using the defined client and agent definition
-        agent = AzureAIAgent(
-            client=client,
-            definition=agent_definition,
-            plugins=[MenuPlugin()],
+        run = project_client.agents.create_and_process_run(
+            thread_id=thread.id, agent_id=agent.id
         )
-
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
-        thread: AzureAIAgentThread | None = None
-
-        user_inputs = [
-            "Hello",
-            "What is the special soup?",
-            "How much does that cost?",
-            "Thank you",
-        ]
-
-        try:
-            for user_input in user_inputs:
-                print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
-                response = await agent.get_response(
-                    messages=user_input,
-                    thread_id=thread,
-                )
-                print(f"# {response.name}: {response.content}")
-                thread = response.thread
-        finally:
-            await thread.delete() if thread else None
-            await client.agents.delete_agent(agent.id)
+        messages = project_client.agents.list_messages(thread_id=thread.id)
+        print(f"# Agent: {messages.data[0].content[0].text.value}")
 
 
 if __name__ == "__main__":
@@ -494,13 +306,13 @@ if __name__ == "__main__":
 
 ### Основни концепти
 
-Azure AI Agent Service има следеће основне концепте:
+Microsoft Foundry Agent Service има следеће основне концепте:
 
-- **Агент**. Azure AI Agent Service се интегрише са Azure AI Foundry. Унутар AI Foundry-а, AI агент делује као "паметан" микросервис који се може користити за одговарање на питања (RAG), извршавање акција или потпуно аутоматизовање радних токова. Ово постиже комбиновањем моћи генеративних AI модела са алатима који му омогућавају приступ и интеракцију са изворима података из стварног света. Ево примера агента:
+- **Агент**. Microsoft Foundry Agent Service интегрише се са Microsoft Foundry. У оквиру Microsoft Foundry, AI агент делује као „паметна“ микросервисна јединица која може одговарати на питања (RAG), извршавати акције или у потпуности аутоматизовати токове рада. Постиже то комбинујући снагу генеративних AI модела са алатима који му омогућавају приступ и интеракцију са стварним изворима података. Ево примера агента:
 
     ```python
     agent = project_client.agents.create_agent(
-        model="gpt-4o-mini",
+        model="gpt-5-mini",
         name="my-agent",
         instructions="You are helpful agent",
         tools=code_interpreter.definitions,
@@ -508,9 +320,9 @@ Azure AI Agent Service има следеће основне концепте:
     )
     ```
 
-    У овом примеру, агент је креиран са моделом `gpt-4o-mini`, именом `my-agent` и инструкцијама `You are helpful agent`. Агент је опремљен алатима и ресурсима за извршавање задатака интерпретације кода.
+    У овом примеру агент је креиран са моделом `gpt-5-mini`, именом `my-agent` и упутствима `You are helpful agent`. Агент је опремљен алатима и ресурсима за обављање задатака тумачења кода.
 
-- **Ток и поруке**. Ток је још један важан концепт. Представља разговор или интеракцију између агента и корисника. Токови се могу користити за праћење напретка разговора, чување контекстуалних информација и управљање стањем интеракције. Ево примера тока:
+- **Нит и поруке**. Нит је још један важан концепт. Представља разговор или интеракцију између агента и корисника. Нити се могу користити за праћење напретка разговора, чување контекстуалних информација и управљање стањем интеракције. Ево примера нити:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -520,96 +332,87 @@ Azure AI Agent Service има следеће основне концепте:
         content="Could you please create a bar chart for the operating profit using the following data and provide the file to me? Company A: $1.2 million, Company B: $2.5 million, Company C: $3.0 million, Company D: $1.8 million",
     )
     
-    # Ask the agent to perform work on the thread
+    # Замолите агента да обави рад на нити
     run = project_client.agents.create_and_process_run(thread_id=thread.id, agent_id=agent.id)
     
-    # Fetch and log all messages to see the agent's response
+    # Преузмите и евидентирајте све поруке да бисте видели одговор агента
     messages = project_client.agents.list_messages(thread_id=thread.id)
     print(f"Messages: {messages}")
     ```
 
-    У претходном коду, креиран је ток. Након тога, порука је послата току. Позивањем `create_and_process_run`, агенту се тражи да обави рад на току. На крају, поруке се преузимају и бележе како би се видела реакција агента. Поруке указују на напредак разговора између корисника и агента. Такође је важно разумети да поруке могу бити различитих типова, као што су текст, слика или датотека, што значи да је рад агента резултирао, на пример, сликом или текстуалним одговором. Као програмер, можете користити ове информације за даљу обраду одговора или његово представљање кориснику.
+    У претходном коду креирана је нит. Након тога је послата порука нити. Позивањем `create_and_process_run`, агента се тражи да изврши рад на нитима. На крају се поруке преузимају и евидентирају како би се видели одговори агента. Поруке указују на напредак разговора између корисника и агента. Такође је важно разумети да поруке могу бити различитих типова као што су текст, слика или датотека, јер је рад агената резултирао, на пример, сликом или текстуалним одговором. Као програмер, затим можете користити те информације за даљу обраду одговора или његову презентацију кориснику.
 
-- **Интеграција са другим AI оквирима**. Azure AI Agent Service може да комуницира са другим оквирима као што су AutoGen и Semantic Kernel, што значи да можете изградити део своје апликације у једном од ових оквира, а на пример користити Agent Service као оркестратор или изградити све унутар Agent Service-а.
+- **Интеграција са Microsoft Agent Framework**. Microsoft Foundry Agent Service беспрекорно ради са Microsoft Agent Framework-ом, што значи да можете креирати агенте користећи `FoundryChatClient` и постављати их преко Agent Service за производне сценарије.
 
-**Случајеви употребе**: Azure AI Agent Service је дизајниран за предузетничке апликације које захтевају сигурну, скалабилну и флексибилну примену AI агената.
+**Примене**: Microsoft Foundry Agent Service је дизајниран за предузетничке апликације које захтевају сигурно, скалабилно и флексибилно постављање AI агената.
 
-## Која је разлика између ових оквира?
-
-Чини се да постоји доста преклапања између ових оквира, али постоје неке кључне разлике у погледу њиховог дизајна, могућности и циљаних случајева употребе:
-
-- **AutoGen**: Је експериментални оквир фокусиран на водећа истраживања о мулти-агентским системима. Најбоље место за експериментисање и прототипирање софистицираних мулти-агентских система.
-- **Semantic Kernel**: Је библиотека агената спремна за производњу за изградњу предузетничких агентских апликација. Фокусира се на апликације засноване на догађајима, дистрибуиране агентске апликације, омогућавајући више LLM-ова и SLM-ова, алата и једноструке/мулти-агентске дизајнерске обрасце.
-- **Azure AI Agent Service**: Је платформа и услуга примене у Azure Foundry-у за агенте. Нуди изградњу повезаности са услугама које подржава Azure, као што су Azure OpenAI, Azure AI Search, Bing Search и извршавање кода.
-
-Још увек нисте сигурни који да изаберете?
+## Која је разлика између ових приступа?
+ 
+Чини се да постоји преклапање, али постоје неке кључне разлике у погледу дизајна, могућности и циљних случајева употребе:
+ 
+- **Microsoft Agent Framework (MAF)**: Производно спреман SDK за изградњу AI агената. Пружа поједностављен API за креирање агената са позивом алата, управљањем разговором и интеграцијом Azure идентитета.
+- **Microsoft Foundry Agent Service**: Платформа и услуга за постављање у Microsoft Foundry за агенте. Пружа уграђену повезаност са услугама као што је Azure OpenAI, Azure AI Search, Bing Search и извршавање кода.
+ 
+Још увек нисте сигурни који да одаберете?
 
 ### Случајеви употребе
-
-Хајде да вам помогнемо проласком кроз неке уобичајене случајеве употребе:
-
-> П: Експериментишем, учим и градим proof-of-concept апликације агената, и желим да могу брзо да градим и експериментишем
+ 
+Погледајмо ако вам можемо помоћи проласком кроз неке уобичајене случајеве употребе:
+ 
+> П: Изградим производне AI агент апликације и желим да брзо почнем
 >
 
-> О: AutoGen би био добар избор за овај сценарио, јер се фокусира на апликације засноване на догађајима, дистрибуиране агентске апликације и подржава напредне мулти-агентске дизајнерске обрасце.
+>О: Microsoft Agent Framework је одличан избор. Пружа једноставан, питхонички API преко `FoundryChatClient` који вам омогућава да дефинишете агенте са алатима и упутствима у само неколико линија кода.
 
-> П: Шта чини AutoGen бољим избором од Semantic Kernel-а и Azure AI Agent Service-а за овај случај употребе?
+>П: Треба ми постављање на нивоу предузећа са Azure интеграцијама као што су Search и извршење кода
 >
-> О: AutoGen је посебно дизајниран за апликације засноване на догађајима, дистрибуиране агентске апликације, што га чини погодним за аутоматизацију задатака генерисања кода и анализе података. Пружа неопходне алате и могућности за ефикасну изградњу сложених мулти-агентских система.
-
-> П: Звучи као да би Azure AI Agent Service могао да ради овде такође, има алате за генерисање кода и више?
->
-> О: Да, Azure AI Agent Service је платформа за агенте и додаје уграђене могућности за више модела, Azure AI Search, Bing Search и Azure Functions. Олакшава изградњу ваших агената у Foundry порталу и њихову примену у великом обиму.
-
+> О: Microsoft Foundry Agent Service је најбољи избор. То је платформа која пружа уграђене могућности за више модела, Azure AI Search, Bing Search и Azure Functions. Лако је изградити ваше агенте у Foundry порталу и поставити их на скали.
+ 
 > П: Још увек сам збуњен, само ми дајте једну опцију
 >
-> О: Одличан избор је да прво изградите своју апликацију у Semantic Kernel-у, а затим користите Azure AI Agent Service за примену вашег агента. Овај приступ вам омогућава да лако сачувате своје агенте док користите моћ изградње мулти-агентских система у Semantic Kernel-у. Поред тога, Semantic Kernel има конектор у AutoGen-у, што олакшава коришћење оба оквира заједно.
-
-Хајде да сумирамо кључне разлике у табели:
+> О: Почните са Microsoft Agent Framework за изградњу агената, а затим користите Microsoft Foundry Agent Service када требате да их поставите и скалирате у производњи. Овај приступ вам омогућава брзу итерацију логике агената уз јасан пут ка постављању на нивоу предузећа.
+ 
+Хајде да резимирамо кључне разлике у табели:
 
 | Оквир | Фокус | Основни концепти | Случајеви употребе |
 | --- | --- | --- | --- |
-| AutoGen | Апликације засноване на догађајима, дистрибуиране агентске апликације | Агенти, Персоне, Функције, Подаци | Генерисање кода, задаци анализе података |
-| Semantic Kernel | Разумевање и генерисање текста сличног људском | Агенти, Модуларне компоненте, Сарадња | Разумевање природног језика, генерисање садржаја |
-| Azure AI Agent Service | Флексибилни модели, безбедност у предузећима, Генерисање кода, Позивање алата | Модуларност, Сарадња, Оркестрација процеса | Сигурна, скалабилна и флексибилна примена AI агената |
+| Microsoft Agent Framework | Пoједностављени SDK за агенте са позивом алата | Агенти, Алате, Azure идентитет | Изградња AI агената, коришћење алата, више корака у токовима рада |
+| Microsoft Foundry Agent Service | Флексибилни модели, безбедност на нивоу предузећа, генерисање кода, позив алата | Модуларност, сарадња, оркестрација процеса | Сигурно, скалабилно и флексибилно постављање AI агената |
 
-Који је идеалан случај употребе за сваки од ових оквира?
+## Могу ли да интегришем своје постојеће алате Azure екосистема директно или ми требају самостална решења?
 
-## Могу ли директно интегрисати своје постојеће Azure алате или су ми потребна самостална решења?
 
-Одговор је да, можете директно интегрисати своје постојеће Azure алате са Azure AI Agent Service-ом, посебно зато што је изграђен да ради беспрекорно са другим Azure услугама. На пример, могли бисте интегрисати Bing, Azure AI Search и Azure Functions. Постоји и дубока интеграција са Azure AI Foundry-ом.
+Одговор је да, можете интегрисати ваше постојеће Azure алате директно са Microsoft Foundry Agent Service, посебно јер је направљен да беспрекорно ради са другим Azure сервисима. На пример, могли бисте интегрисати Bing, Azure AI Search и Azure Functions. Постоји и дубока интеграција са Microsoft Foundry.
 
-За AutoGen и Semantic Kernel, такође можете интегрисати Azure услуге, али можда ће бити потребно да позовете Azure услуге из свог кода. Други начин интеграције је коришћење Azure SDK-ова за интеракцију са Azure услугама из ваших агената. Поред тога, као што је поменуто, можете користити Azure AI Agent Service као оркестратор за ваше агенте изграђене у AutoGen-у или Semantic Kernel-у, што би омогућило лак приступ Azure екосистему.
+Microsoft Agent Framework такође интегрише Azure сервисе преко `FoundryChatClient` и Azure идентификације, омогућавајући вам да позивате Azure сервисе директно из ваших агентских алата.
 
-## Пример кода
+## Примери кода
 
-- Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Microsoft Foundry)](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Azure OpenAI Responses API)](./code_samples/02-python-agent-framework-azure-openai.ipynb)
 - .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
 
-## Имате још питања о AI Agent Framework-овима?
+## Имате још питања о AI Agent Frameworks?
 
-Придружите се [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) за упознавање са другим учесницима, присуствовање радним сатима и добијање одговора на ваша питања о AI агентима.
+Придружите се [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) где можете упознати друге учеснике, присуствовати канцеларијским часовима и добити одговоре на ваша питања о AI агентима.
 
 ## Референце
 
 - <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Azure Agent Service</a>
-- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel и AutoGen</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent service</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Коришћење Azure AI Agent Service-а са AutoGen / Semantic Kernel-ом за изградњу мулти-агентског решења</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework - Azure OpenAI Responses</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Foundry Agent Service</a>
 
 ## Претходна лекција
 
-[Увод у AI агенте и случајеве употребе агената](../01-intro-to-ai-agents/README.md)
+[Увод у AI Агенте и употребу агената](../01-intro-to-ai-agents/README.md)
 
 ## Следећа лекција
 
-[Разумевање дизајнерских образаца агената](../03-agentic-design-patterns/README.md)
+[Разумевање агентских дизајн образаца](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Одрицање од одговорности**:  
-Овај документ је преведен помоћу услуге за превођење вештачке интелигенције [Co-op Translator](https://github.com/Azure/co-op-translator). Иако настојимо да обезбедимо тачност, молимо вас да имате у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални превод од стране људи. Не преузимамо одговорност за било каква погрешна тумачења или неспоразуме који могу настати услед коришћења овог превода.
+**Изјава о одрицању одговорности**:
+Овај документ је преведен коришћењем услуге за аутоматски превод [Co-op Translator](https://github.com/Azure/co-op-translator). Иако тежимо тачности, имајте у виду да аутоматски преводи могу садржати грешке или нетачности. Оригинални документ на његовом изворном језику треба сматрати ауторитативним извором. За критичне информације препоручује се професионални људски превод. Нисмо одговорни за било каква неспоразума или погрешна тумачења која произилазе из коришћења овог превода.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

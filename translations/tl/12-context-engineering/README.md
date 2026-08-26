@@ -1,164 +1,188 @@
-# Context Engineering para sa AI Agents
+# Inhenyeriya ng Konteksto para sa mga Ahente ng AI
 
-[![Context Engineering](../../../translated_images/tl/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
+[![Inhenyeriya ng Konteksto](../../../translated_images/tl/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
 
-> _(I-click ang imahe sa itaas para mapanood ang video ng araling ito)_
+> _(I-click ang larawan sa itaas upang mapanood ang video ng araling ito)_
 
-Mahalaga ang pag-unawa sa pagiging komplikado ng aplikasyon na ginagawa mo para sa isang AI agent upang makabuo ng maaasahang sistema. Kailangan nating bumuo ng AI Agents na epektibong namamahala ng impormasyon upang matugunan ang mas kumplikadong pangangailangan na lampas sa prompt engineering.
+Mahalaga ang pag-unawa sa pagiging kumplikado ng aplikasyon na iyong binubuo para sa isang AI agent upang makalikha ng maaasahan nito. Kailangan nating bumuo ng mga AI Agent na epektibong namamahala ng impormasyon upang matugunan ang mga kumplikadong pangangailangan lampas sa prompt engineering.
 
-Sa araling ito, tatalakayin natin kung ano ang context engineering at ang papel nito sa pagbuo ng AI agents.
+Sa araling ito, titingnan natin kung ano ang inhenyeriya ng konteksto at ang papel nito sa pagbuo ng mga AI agent.
 
 ## Panimula
 
 Saklaw ng araling ito ang:
 
-• **Ano ang Context Engineering** at bakit ito naiiba sa prompt engineering.
+• **Ano ang Inhenyeriya ng Konteksto** at bakit ito naiiba sa prompt engineering.
 
-• **Mga Estratehiya para sa Epektibong Context Engineering**, kabilang ang pagsusulat, pagpili, pag-compress, at pag-isolate ng impormasyon.
+• **Mga Estratehiya para sa epektibong Inhenyeriya ng Konteksto**, kabilang ang kung paano magsulat, pumili, mag-compress, at mag-isolate ng impormasyon.
 
-• **Karaniwang Pagkabigo sa Context** na maaaring makasira sa iyong AI agent at kung paano ito maaayos.
+• **Karaniwang Pagkabigo sa Konteksto** na maaaring makasagasa sa iyong AI agent at kung paano ito ayusin.
 
-## Mga Layunin sa Pag-aaral
+## Mga Layunin sa Pagkatuto
 
-Pagkatapos makumpleto ang araling ito, mauunawaan mo kung paano:
+Matapos makumpleto ang araling ito, mauunawaan mo kung paano:
 
-• **Ilarawan ang context engineering** at ihiwalay ito mula sa prompt engineering.
+• **Ilarawan ang inhenyeriya ng konteksto** at pag-iba nito sa prompt engineering.
 
-• **Kilalanin ang mga pangunahing bahagi ng context** sa mga aplikasyon ng Large Language Model (LLM).
+• **Kilalanin ang mga pangunahing bahagi ng konteksto** sa mga aplikasyon ng Large Language Model (LLM).
 
-• **Gamitin ang mga estratehiya sa pagsusulat, pagpili, pag-compress, at pag-isolate ng context** upang mapabuti ang performance ng agent.
+• **Ipatupad ang mga estratehiya para sa pagsusulat, pagpili, pag-compress, at pag-isolate ng konteksto** upang mapabuti ang pagganap ng agent.
 
-• **Kilalanin ang mga karaniwang pagkabigo sa context** tulad ng poisoning, distraction, confusion, at clash, at magpatupad ng mga teknik para maiwasan ito.
+• **Kilalanin ang mga karaniwang pagkabigo sa konteksto** tulad ng poisoning, distraction, confusion, at clash, at ipatupad ang mga teknik para sa paglutas nito.
 
-## Ano ang Context Engineering?
+## Ano ang Inhenyeriya ng Konteksto?
 
-Para sa AI Agents, ang context ang nagdidikta kung paano magplano ang AI Agent upang magsagawa ng mga partikular na aksyon. Ang Context Engineering ay ang pagsasanay ng pagtiyak na ang AI Agent ay may tamang impormasyon upang makumpleto ang susunod na hakbang ng gawain. Limitado ang laki ng context window, kaya bilang mga tagabuo ng agent, kailangan nating bumuo ng mga sistema at proseso upang pamahalaan ang pagdaragdag, pag-aalis, at pag-condense ng impormasyon sa context window.
+Para sa mga AI Agent, ang konteksto ang nagpapatakbo ng pagpaplano ng AI Agent upang isagawa ang mga tiyak na aksyon. Ang inhenyeriya ng konteksto ay ang pagsasanay upang matiyak na ang AI Agent ay may tamang impormasyon upang makumpleto ang susunod na hakbang ng gawain. May limitasyon sa laki ng konteksto na maaaring matanggap, kaya bilang mga tagagawa ng agent kailangan nating bumuo ng mga sistema at proseso para pangasiwaan ang pagdagdag, pagtanggal, at pagsasama-sama ng impormasyon sa konteksto.
 
-### Prompt Engineering vs Context Engineering
+### Prompt Engineering laban sa Context Engineering
 
-Ang prompt engineering ay nakatuon sa isang set ng static na mga instruksyon upang epektibong gabayan ang AI Agents gamit ang mga patakaran. Ang context engineering naman ay tungkol sa pamamahala ng dynamic na set ng impormasyon, kabilang ang paunang prompt, upang matiyak na ang AI Agent ay may kailangan nito sa paglipas ng panahon. Ang pangunahing ideya sa context engineering ay gawing maulit at maaasahan ang prosesong ito.
+Ang prompt engineering ay nakatuon sa isang set ng static na instruksyon upang epektibong gabayan ang mga AI Agent gamit ang mga patakaran. Ang inhenyeriya ng konteksto naman ay kung paano pamahalaan ang dynamic na set ng impormasyon, kabilang ang paunang prompt, upang matiyak na ang AI Agent ay may kinakailangan nito sa pagdaan ng panahon. Ang pangunahing ideya sa inhenyeriya ng konteksto ay gawing paulit-ulit at maaasahan ang prosesong ito.
 
-### Mga Uri ng Context
+### Mga Uri ng Konteksto
 
-[![Types of Context](../../../translated_images/tl/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
+[![Mga Uri ng Konteksto](../../../translated_images/tl/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
 
-Mahalagang tandaan na ang context ay hindi lamang isang bagay. Ang impormasyon na kailangan ng AI Agent ay maaaring magmula sa iba't ibang pinagmulan, at nasa atin ang responsibilidad na tiyakin na may access ang agent sa mga ito:
+Mahalaga tandaan na ang konteksto ay hindi lamang iisang bagay. Ang impormasyong kailangan ng AI Agent ay maaaring manggaling sa iba't ibang pinagkukunan at nasa atin ang responsibilidad na tiyakin na may access ang agent sa mga ito:
 
-Ang mga uri ng context na maaaring pamahalaan ng AI agent ay kinabibilangan ng:
+Ang mga uri ng konteksto na maaaring kailanganin ng isang AI agent na pamahalaan ay kinabibilangan ng:
 
-• **Mga Instruksyon:** Ito ang "mga patakaran" ng agent – prompts, system messages, few-shot examples (pagpapakita sa AI kung paano gawin ang isang bagay), at mga deskripsyon ng mga tool na maaari nitong gamitin. Dito nagtatagpo ang focus ng prompt engineering at context engineering.
+• **Instruksyon:** Ito ang mga "patakaran" ng agent – mga prompt, system message, few-shot examples (na naglalahad kung paano gagawin ng AI ang isang bagay), at mga paglalarawan ng mga kasangkapang maaaring gamitin. Dito nagsasama ang pokus ng prompt engineering at inhenyeriya ng konteksto.
 
-• **Kaalaman:** Saklaw nito ang mga katotohanan, impormasyon na nakuha mula sa mga database, o mga long-term memory na naipon ng agent. Kasama rito ang pag-integrate ng Retrieval Augmented Generation (RAG) system kung kailangan ng agent ng access sa iba't ibang knowledge stores at databases.
+• **Kaalaman:** Saklaw nito ang mga katotohanan, impormasyon mula sa mga database, o mga pangmatagalang alaala na naipon ng agent. Kasama dito ang pagsasama ng Retrieval Augmented Generation (RAG) system kung kailangan ng agent ng access sa iba't ibang tindahan ng kaalaman at database.
 
-• **Mga Tool:** Ito ang mga deskripsyon ng external functions, APIs, at MCP Servers na maaaring tawagin ng agent, kasama ang feedback (mga resulta) na nakukuha nito mula sa paggamit ng mga ito.
+• **Mga Kasangkapan:** Ito ang mga depinisyon ng mga panlabas na function, APIs, at MCP Servers na maaaring tawagan ng agent, kasama ang mga feedback (mga resulta) mula sa paggamit nito.
 
-• **Kasaysayan ng Usapan:** Ang patuloy na diyalogo sa isang user. Habang tumatagal, nagiging mas mahaba at mas kumplikado ang mga usapan, na nangangahulugang kumakain ito ng espasyo sa context window.
+• **Kasaysayan ng Usapan:** Ang patuloy na dayalogo sa isang user. Habang tumatagal, ang mga pag-uusap na ito ay lumalalim at nagiging mas kumplikado na nangangahulugang kumukuha ito ng puwang sa window ng konteksto.
 
-• **Mga Kagustuhan ng User:** Impormasyon na natutunan tungkol sa mga gusto o ayaw ng user sa paglipas ng panahon. Maaaring itago ang mga ito at tawagin kapag gumagawa ng mahahalagang desisyon upang matulungan ang user.
+• **Mga Kagustuhan ng User:** Impormasyon na natutunan tungkol sa mga gusto o ayaw ng user sa pagdaan ng panahon. Maaaring itago ito at tawagin sa paggawa ng mga mahahalagang desisyon upang makatulong sa user.
 
-## Mga Estratehiya para sa Epektibong Context Engineering
+## Mga Estratehiya para sa Epektibong Inhenyeriya ng Konteksto
 
 ### Mga Estratehiya sa Pagpaplano
 
-[![Context Engineering Best Practices](../../../translated_images/tl/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
+[![Pinakamahusay na Praktis sa Inhenyeriya ng Konteksto](../../../translated_images/tl/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
 
-Ang mahusay na context engineering ay nagsisimula sa mahusay na pagpaplano. Narito ang isang paraan upang simulan ang pag-iisip kung paano ilapat ang konsepto ng context engineering:
+Nagsisimula ang mahusay na inhenyeriya ng konteksto sa mahusay na pagpaplano. Narito ang isang paraan na makakatulong sa iyo upang magsimulang pag-isipan kung paano iapply ang konsepto ng inhenyeriya ng konteksto:
 
-1. **Tukuyin ang Malinaw na Resulta** - Ang mga resulta ng mga gawain na itatalaga sa AI Agents ay dapat malinaw na tukuyin. Sagutin ang tanong - "Ano ang magiging hitsura ng mundo kapag natapos na ng AI Agent ang gawain nito?" Sa madaling salita, anong pagbabago, impormasyon, o tugon ang dapat makuha ng user pagkatapos makipag-ugnayan sa AI Agent.
-
-2. **I-map ang Context** - Kapag natukoy mo na ang mga resulta ng AI Agent, kailangan mong sagutin ang tanong na "Anong impormasyon ang kailangan ng AI Agent upang makumpleto ang gawain na ito?" Sa ganitong paraan, maaari mong simulan ang pag-mapa ng context kung saan matatagpuan ang impormasyon.
-
-3. **Gumawa ng Context Pipelines** - Ngayon na alam mo kung saan matatagpuan ang impormasyon, kailangan mong sagutin ang tanong "Paano makukuha ng Agent ang impormasyong ito?" Maaari itong gawin sa iba't ibang paraan kabilang ang RAG, paggamit ng MCP servers, at iba pang tools.
+1. **Tukuyin ang Malinaw na Resulta** - Dapat malinaw na tukuyin ang mga resulta ng mga gawain na iaatas sa AI Agent. Sagutin ang tanong - "Ano ang magiging itsura ng mundo kapag natapos na ang AI Agent sa kanyang gawain?" Sa ibang salita, anong pagbabago, impormasyon, o tugon ang dapat matanggap ng user matapos makipag-ugnay sa AI Agent.
+2. **I-map ang Konteksto** - Kapag natukoy mo na ang mga resulta ng AI Agent, kailangan mong sagutin ang tanong na "Anong impormasyon ang kailangan ng AI Agent upang makumpleto ang gawain na ito?". Sa ganitong paraan makakapagsimula kang i-map ang konteksto kung saan matatagpuan ang impormasyong iyon.
+3. **Gumawa ng Mga Pipeline ng Konteksto** - Ngayon na alam mo kung saan ang impormasyon, kailangan mong sagutin ang tanong na "Paano makukuha ng Agent ang impormasyong ito?". Maaaring gawin ito sa iba't ibang paraan kabilang ang RAG, paggamit ng MCP servers at iba pang mga kasangkapan.
 
 ### Mga Praktikal na Estratehiya
 
-Mahalaga ang pagpaplano, ngunit kapag nagsimulang dumaloy ang impormasyon sa context window ng agent, kailangan nating magkaroon ng mga praktikal na estratehiya upang pamahalaan ito:
+Mahalaga ang pagpaplano pero kapag nagsimulang dumaloy ang impormasyon sa window ng konteksto ng ating agent, kailangan natin ng mga praktikal na estratehiya upang pamahalaan ito:
 
-#### Pamamahala ng Context
+#### Pamamahala ng Konteksto
 
-Habang ang ilang impormasyon ay awtomatikong idadagdag sa context window, ang context engineering ay tungkol sa mas aktibong pamamahala ng impormasyong ito na maaaring gawin sa pamamagitan ng ilang estratehiya:
+Habang ang ilang impormasyon ay awtomatikong idaragdag sa window ng konteksto, ang inhenyeriya ng konteksto ay tungkol sa pagiging mas aktibo sa pamamahala ng impormasyong ito na maaaring gawin gamit ang ilang mga estratehiya:
 
-1. **Agent Scratchpad**  
-Pinapayagan nito ang AI Agent na magtala ng mga mahalagang impormasyon tungkol sa kasalukuyang gawain at pakikipag-ugnayan sa user sa isang session. Dapat itong umiiral sa labas ng context window sa isang file o runtime object na maaaring kunin ng agent sa session na ito kung kinakailangan.
+ 1. **Agent Scratchpad**
+ Pinapayagan ang AI Agent na magtala ng mga mahalagang detalye tungkol sa kasalukuyang mga gawain at pakikipag-ugnayan sa user sa loob ng isang session. Dapat ito ay nasa labas ng window ng konteksto sa isang file o runtime na bagay na maaaring kunin muli ng agent habang tumatakbo ang session kung kinakailangan.
 
-2. **Mga Memorya**  
-Ang mga scratchpad ay maganda para sa pamamahala ng impormasyon sa labas ng context window ng isang session. Ang mga memorya ay nagbibigay-daan sa mga agent na mag-imbak at mag-retrieve ng mahalagang impormasyon sa maraming session. Kasama rito ang mga buod, kagustuhan ng user, at feedback para sa mga pagpapabuti sa hinaharap.
+ 2. **Mga Alaala**
+ Ang scratchpad ay maganda para sa pamamahala ng impormasyon sa labas ng window ng konteksto sa isang session. Pinapayagan ng mga alaala ang mga agent na itabi at bawiin ang mahalagang impormasyon sa maraming sesyon. Maaaring kabilang dito ang mga buod, mga kagustuhan ng user at feedback para sa mga pagpapabuti sa hinaharap.
 
-3. **Pag-compress ng Context**  
-Kapag lumalaki ang context window at malapit nang maabot ang limitasyon nito, maaaring gamitin ang mga teknik tulad ng summarization at trimming. Kasama rito ang pagpapanatili lamang ng pinaka-mahalagang impormasyon o pag-aalis ng mas lumang mga mensahe.
+ 3. **Pag-compress ng Konteksto**
+  Kapag lumalaki na ang window ng konteksto at papalapit na sa kanyang limitasyon, maaaring gamitin ang mga pamamaraan tulad ng pagbuod at pag-trim. Kasama dito ang pagpapanatili lamang ng pinakamahalagang impormasyon o pagtanggal ng mga lumang mensahe.
+  
+ 4. **Mga Multi-Agent Systems**
+  Ang pagbuo ng multi-agent system ay isang paraan ng inhenyeriya ng konteksto dahil bawat agent ay may sariling window ng konteksto. Kung paano ibinahagi at ipinasa ang konteksto sa iba't ibang agent ay isa pang bagay na dapat planuhin sa paggawa ng mga sistemang ito.
+  
+ 5. **Sandbox Environments**
+  Kung kailangang magpatakbo ng code ang agent o iproseso ang malaking dami ng impormasyon sa isang dokumento, maaari itong tumagal ng maraming tokens upang iproseso ang mga resulta. Sa halip na ito ay lahat ay nakaimbak sa window ng konteksto, maaaring gamitin ng agent ang isang sandbox environment na kayang patakbuhin ang code na ito at basahin lamang ang mga resulta at iba pang mahalagang impormasyon.
+  
+ 6. **Runtime State Objects**
+   Ginagawa ito sa pamamagitan ng paglikha ng mga lalagyan ng impormasyon upang pamahalaan ang mga sitwasyon kung kailangang ma-access ng Agent ang tiyak na impormasyon. Sa isang kumplikadong gawain, pinapayagan nito ang Agent na itago ang mga resulta ng bawat subtask hakbang-hakbang, na nagbibigay-daan sa konteksto na manatiling konektado lamang sa tiyak na subtask na iyon.
 
-4. **Multi-Agent Systems**  
-Ang pagbuo ng multi-agent system ay isang anyo ng context engineering dahil ang bawat agent ay may sariling context window. Ang paraan ng pagbabahagi at pagpapasa ng context sa iba't ibang agent ay isa pang bagay na dapat planuhin kapag bumubuo ng mga sistemang ito.
+#### Pag-inspeksyon ng Konteksto
 
-5. **Sandbox Environments**  
-Kung kailangan ng agent na magpatakbo ng code o magproseso ng malaking dami ng impormasyon sa isang dokumento, maaaring gumamit ng maraming tokens upang iproseso ang mga resulta. Sa halip na itago ang lahat ng ito sa context window, maaaring gumamit ang agent ng sandbox environment na kayang magpatakbo ng code at basahin lamang ang mga resulta at iba pang mahalagang impormasyon.
+Matapos ilapat ang isa sa mga estratehiyang ito, mahalagang suriin kung ano talaga ang natanggap ng susunod na tawag sa modelo. Isang kapaki-pakinabang na tanong para sa pag-debug ay:
 
-6. **Runtime State Objects**  
-Ginagawa ito sa pamamagitan ng paglikha ng mga container ng impormasyon upang pamahalaan ang mga sitwasyon kung saan kailangan ng Agent na magkaroon ng access sa partikular na impormasyon. Para sa isang komplikadong gawain, papayagan nito ang Agent na mag-imbak ng mga resulta ng bawat subtask step-by-step, na pinapanatili ang context na konektado lamang sa partikular na subtask.
+> Nag-load ba ang agent ng sobrang konteksto, maling konteksto, o may nawawalang konteksto na kailangan niya?
 
-### Halimbawa ng Context Engineering
+Hindi mo kailangang i-log ang mga raw prompt, output ng mga kasangkapan, o nilalaman ng memorya upang masagot ang tanong na iyon. Sa produksyon, mas mainam ang maliliit na rekord ng inspeksyon ng konteksto na kumukuha ng bilang, mga id, mga hash, at mga label ng patakaran:
 
-Halimbawa, gusto mong sabihin sa AI agent na **"Mag-book ng biyahe papuntang Paris."**
+- **Pagpili:** Subaybayan kung ilang kandidato chunk, tools, o alaala ang isinasaalang-alang, ilan ang napili, at aling patakaran o score ang nagresulta ng pagsasala sa iba.
+- **Pag-compress:** Itala ang pinagmulan ng saklaw o trace id, ang summary id, tinatayang bilang ng token bago at pagkatapos ng compression, at kung ang raw na nilalaman ay isinama o hindi sa susunod na tawag.
+- **Pag-isolate:** Tandaan kung aling subtask ang tumakbo sa hiwalay na agent, session, o sandbox, kung anong bounded summary ang ibinalik, at kung naka-stay sa labas ng konteksto ng parent agent ang malalaking output ng tool.
+- **Memorya at RAG:** Itago ang mga retrieval document id, memory id, mga score, napiling id, at estado ng redaction sa halip na buong retrieved na teksto.
+- **Kaligtasan at privacy:** Mas gusto ang mga hash, id, token buckets, at label ng patakaran kaysa sa sensitibong teksto ng prompt, argument ng tool, resulta ng tool, o katawan ng memorya ng user.
 
-• Ang isang simpleng agent na gumagamit lamang ng prompt engineering ay maaaring tumugon ng: **"Okay, kailan mo gustong pumunta sa Paris?"**. Pinroseso lamang nito ang direktang tanong mo sa oras na tinanong mo ito.
+Ang layunin ay hindi upang mag-imbak ng mas maraming konteksto. Ito ay upang mag-iwan ng sapat na ebidensya upang malaman ng developer kung aling estratehiya ng konteksto ang ginamit at kung ito ay nagbago ng susunod na tawag sa modelo sa tamang paraan.
 
-• Ang isang agent na gumagamit ng mga estratehiya sa context engineering na tinalakay ay gagawa ng mas marami pa. Bago pa man tumugon, maaaring:
+### Halimbawa ng Inhenyeriya ng Konteksto
 
-  ◦ **Suriin ang iyong kalendaryo** para sa mga available na petsa (pagkuha ng real-time na data).
+Sabihin nating gusto nating magkaroon ng AI agent na **"Mag-book ng biyahe papuntang Paris para sa akin."**
 
- ◦ **Alalahanin ang mga nakaraang kagustuhan sa paglalakbay** (mula sa long-term memory) tulad ng paborito mong airline, budget, o kung mas gusto mo ang direct flights.
+• Isang simpleng agent na gumagamit lamang ng prompt engineering ay maaaring sumagot ng: **"Sige, kailan mo gustong pumunta sa Paris?"** Pinroseso lamang nito ang direktang tanong mo sa oras ng pagtatanong.
 
- ◦ **Kilalanin ang mga available na tools** para sa pag-book ng flight at hotel.
+• Ang isang agent na gumagamit ng mga estratehiya ng inhenyeriya ng konteksto na tinatalakay ay gagawa ng mas marami pa. Bago sumagot, maaaring gawin ng kanyang sistema ang mga sumusunod:
 
-- Pagkatapos, ang isang halimbawa ng tugon ay maaaring: "Hi [Pangalan Mo]! Nakikita kong libre ka sa unang linggo ng Oktubre. Gusto mo bang maghanap ako ng direct flights papuntang Paris sa [Preferred Airline] na pasok sa karaniwang budget mo na [Budget]?" Ang mas mayaman at may context na tugon na ito ay nagpapakita ng kapangyarihan ng context engineering.
+  ◦ **Suriin ang iyong kalendaryo** para sa mga magagamit na petsa (nangongolekta ng real-time data).
 
-## Karaniwang Pagkabigo sa Context
+ ◦ **Alalahanin ang mga huling kagustuhan sa paglalakbay** (mula sa pangmatagalang memorya) tulad ng iyong paboritong airline, badyet, o kung mas gusto mo ang direct flights.
 
-### Context Poisoning
+ ◦ **Kilalanin ang mga magagamit na kasangkapan** para sa pag-book ng flight at hotel.
 
-**Ano ito:** Kapag ang isang hallucination (maling impormasyon na nabuo ng LLM) o error ay pumasok sa context at paulit-ulit na tinutukoy, nagiging sanhi ito ng agent na magpatuloy sa imposibleng layunin o bumuo ng walang kwentang estratehiya.
+- Pagkatapos, isang halimbawa ng tugon ay:  "Hi [Pangalan Mo]! Nakikita kong malaya ka sa unang linggo ng Oktubre. Hahanapin ko ba ang mga direct flights papuntang Paris gamit ang [Paboritong Airline] sa karaniwang badyet mo na [Badyet]?" Ipinapakita ng mas makahulugang tugon na ito na may kamalayan sa konteksto ang inhenyeriya ng konteksto.
 
-**Ano ang gagawin:** Magpatupad ng **context validation** at **quarantine**. I-validate ang impormasyon bago ito idagdag sa long-term memory. Kung may nakitang posibleng poisoning, magsimula ng bagong context threads upang maiwasan ang pagkalat ng maling impormasyon.
+## Karaniwang Pagkabigo sa Konteksto
 
-**Halimbawa sa Pag-book ng Biyahe:** Ang iyong agent ay nag-hallucinate ng **direct flight mula sa isang maliit na lokal na paliparan papunta sa isang malayong internasyonal na lungsod** na hindi naman talaga nag-aalok ng internasyonal na flights. Ang detalyeng ito ay nai-save sa context. Kapag humiling ka na mag-book, patuloy nitong hinahanap ang tiket para sa imposibleng ruta, na nagdudulot ng paulit-ulit na error.
+### Pagkalason ng Konteksto
 
-**Solusyon:** Magpatupad ng hakbang na **i-validate ang pagkakaroon ng flight at mga ruta gamit ang real-time API** _bago_ idagdag ang detalyeng ito sa working context ng agent. Kung nabigo ang validation, ang maling impormasyon ay "quarantined" at hindi na ginagamit pa.
+**Ano ito:** Kapag pumasok sa konteksto ang isang hallucination (maling impormasyon na ginawa ng LLM) o error at paulit-ulit na binabanggit, na nagdudulot na ang agent ay maghangad ng imposibleng mga layunin o bumuo ng mga walang katuturang stratehiya.
 
-### Context Distraction
+**Ano ang gagawin:** Magpatupad ng **pagpapatunay ng konteksto** at **quarantine**. Patunayan ang impormasyon bago ito idagdag sa pangmatagalang memorya. Kung may napansing posibleng pagkalason, magsimula ng mga bagong konteksto upang pigilan ang pagkalat ng maling impormasyon.
 
-**Ano ito:** Kapag ang context ay naging sobrang laki, ang modelo ay masyadong nakatuon sa naipon na kasaysayan sa halip na gamitin ang natutunan nito sa training, na nagdudulot ng paulit-ulit o hindi kapaki-pakinabang na aksyon. Ang mga modelo ay maaaring magsimulang magkamali kahit bago pa mapuno ang context window.
+**Halimbawa sa Pag-book ng Biyahe:** Ang iyong agent ay nagmulat ng isang **direct flight mula sa maliit na lokal na paliparan papunta sa malayong internasyonal na lungsod** na wala namang tunay na internasyonal na flight. Ang impormasyong flight na hindi totoo ay naiimbak sa konteksto. Pagkatapos, kapag humiling kang mag-book, patuloy itong naghahanap ng tiket para sa imposibleng ruta na ito, na nagdudulot ng paulit-ulit na mga error.
 
-**Ano ang gagawin:** Gumamit ng **context summarization**. Regular na i-compress ang naipon na impormasyon sa mas maikling buod, pinapanatili ang mahahalagang detalye habang inaalis ang mga redundant na kasaysayan. Nakakatulong ito na "i-reset" ang focus.
+**Solusyon:** Magpatupad ng hakbang na **pinapatunayan ang pag-iral ng flight at mga ruta gamit ang real-time na API** _bago_ idagdag ang detalye ng flight sa working context ng agent. Kung nabigo ang pagpapatunay, ang maling impormasyon ay "kini-quarantine" at hindi na gagamitin pa.
 
-**Halimbawa sa Pag-book ng Biyahe:** Matagal mo nang pinag-uusapan ang iba't ibang destinasyon sa paglalakbay, kabilang ang detalyadong kwento ng iyong backpacking trip mula dalawang taon na ang nakalipas. Kapag sa wakas ay humiling ka na **"hanapan mo ako ng murang flight para sa susunod na buwan,"** ang agent ay nalilito sa mga lumang, hindi mahalagang detalye at patuloy na nagtatanong tungkol sa iyong backpacking gear o nakaraang itinerary, sa halip na tumutok sa kasalukuyang kahilingan.
+### Pagdistract ng Konteksto
 
-**Solusyon:** Pagkatapos ng ilang turn o kapag lumaki na ang context, dapat ang agent ay **magbuod ng pinakabagong at mahalagang bahagi ng usapan** – tumutok sa iyong kasalukuyang petsa ng paglalakbay at destinasyon – at gamitin ang condensed summary na iyon para sa susunod na LLM call, inaalis ang hindi mahalagang kasaysayan ng chat.
+**Ano ito:** Kapag lumaki ang konteksto nang husto na masyado nang nakatuon ang modelo sa naipon na kasaysayan kaysa sa paggamit ng kanyang natutunan sa pagsasanay, na nagreresulta sa paulit-ulit o hindi kapaki-pakinabang na mga aksyon. Maaaring magsimulang magkamali ang mga modelo kahit bago pa mapuno ang konteksto.
 
-### Context Confusion
+**Ano ang gagawin:** Gamitin ang **pagbubuod ng konteksto**. Paminsan-minsang i-compress ang naipong impormasyon sa mas maiikling buod, pinananatili ang mahahalagang detalye habang tinatanggal ang sobrang kasaysayan. Nakakatulong ito upang "i-reset" ang pokus.
 
-**Ano ito:** Kapag ang hindi kinakailangang context, madalas sa anyo ng sobrang dami ng available na tools, ay nagdudulot sa modelo na bumuo ng maling tugon o tumawag ng hindi kaugnay na tools. Ang mas maliliit na modelo ay lalo nang madaling maapektuhan nito.
+**Halimbawa sa Pag-book ng Biyahe:** Matagal na ninyong pinag-uusapan ang iba't ibang dream travel destinations, kabilang ang detalyadong kwento ng backpacking trip mo dalawang taon na ang nakalilipas. Nang hilingin mo sa wakas na **"maghanap ng murang flight para sa susunod na buwan,"** nabibigo ang agent dahil sa mga lumang hindi mahalagang detalye at patuloy na tinatanong tungkol sa iyong backpacking gear o mga lumang itinerary, na nagpapabaya sa iyong kasalukuyang kahilingan.
 
-**Ano ang gagawin:** Magpatupad ng **tool loadout management** gamit ang RAG techniques. I-store ang mga deskripsyon ng tool sa isang vector database at piliin _lamang_ ang pinaka-kaugnay na tools para sa bawat partikular na gawain. Ipinapakita ng pananaliksik na ang limitasyon ng tool selections sa mas mababa sa 30 ay epektibo.
+**Solusyon:** Pagkatapos ng ilang mga turn o kapag lumaki nang husto ang konteksto, dapat **ibuod ng agent ang pinaka-kamakailan at mahalagang bahagi ng pag-uusap** – nakatuon sa iyong kasalukuyang mga petsa ng paglalakbay at destinasyon – at gamitin ang pinaikling buod na ito para sa susunod na tawag sa LLM, tinatanggal ang mga hindi gaanong mahalagang usapan ng nakaraan.
 
-**Halimbawa sa Pag-book ng Biyahe:** Ang iyong agent ay may access sa dose-dosenang tools: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, atbp. Humiling ka, **"Ano ang pinakamagandang paraan para makapaglibot sa Paris?"** Dahil sa dami ng tools, nalilito ang agent at sinusubukang tawagan ang `book_flight` _sa loob_ ng Paris, o `rent_car` kahit mas gusto mo ang pampublikong transportasyon, dahil maaaring mag-overlap ang mga deskripsyon ng tool o hindi nito ma-diskartehan ang pinakamahusay na gamitin.
+### Pagkalito sa Konteksto
 
-**Solusyon:** Gumamit ng **RAG sa mga deskripsyon ng tool**. Kapag humiling ka tungkol sa paglibot sa Paris, ang sistema ay dynamic na nagre-retrieve _lamang_ ng pinaka-kaugnay na tools tulad ng `rent_car` o `public_transport_info` batay sa iyong query, na nagpapakita ng mas nakatuon na "loadout" ng tools sa LLM.
+**Ano ito:** Kapag ang hindi kailangang konteksto, madalas sa anyo ng sobrang dami ng magagamit na kasangkapan, ay nagdudulot sa modelo na makagawa ng maling sagot o tumawag ng mga tool na hindi angkop. Mas madaling mangyari ito sa maliliit na modelo.
 
-### Context Clash
+**Ano ang gagawin:** Magpatupad ng **pamamahala ng tool loadout** gamit ang mga teknik sa RAG. Itago ang mga paglalarawan ng tool sa isang vector database at piliin _lamang_ ang pinaka-nauugnay na mga tool para sa bawat tiyak na gawain. Ipinapakita ng pananaliksik na mas mabuting limitahan ang pagpili ng tool sa mas mababa sa 30.
 
-**Ano ito:** Kapag may salungat na impormasyon sa loob ng context, nagdudulot ito ng hindi pare-parehong pangangatwiran o maling huling tugon. Madalas itong nangyayari kapag ang impormasyon ay dumarating sa mga yugto, at ang maagang maling assumptions ay nananatili sa context.
+**Halimbawa sa Pag-book ng Biyahe:** May access ang iyong agent sa dosenang mga kasangkapan: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, at iba pa. Tinanong mo, **"Ano ang pinakamagandang paraan upang maglibot sa Paris?"** Dahil sa dami ng mga tool, nalilito ang agent at sinusubukang tawagan ang `book_flight` _sa loob_ ng Paris, o `rent_car` kahit na mas gusto mo ang pampublikong transportasyon, dahil maaaring magkapatong-patong ang mga paglalarawan ng tool o hindi nito makilala ang pinakamainam na tool.
 
-**Ano ang gagawin:** Gumamit ng **context pruning** at **offloading**. Ang pruning ay nangangahulugan ng pag-aalis ng luma o salungat na impormasyon habang dumarating ang mga bagong detalye. Ang offloading ay nagbibigay sa modelo ng hiwalay na "scratchpad" workspace upang iproseso ang impormasyon nang hindi nakakalat ang pangunahing context.
+**Solusyon:** Gamitin ang **RAG sa mga paglalarawan ng tool**. Kapag tinanong mo tungkol sa paglibot sa Paris, ang sistema ay dinamiko na kukunin _lamang_ ang pinaka-nauugnay na mga tool tulad ng `rent_car` o `public_transport_info` batay sa iyong query, na nagpapakita ng nakatutok na "loadout" ng mga tool sa LLM.
 
-**Halimbawa sa Pag-book ng Biyahe:** Una mong sinabi sa iyong agent, **"Gusto kong mag-fly economy class."** Sa kalaunan ng usapan, binago mo ang isip mo at sinabi, **"Sa trip na ito, business class na lang."** Kung parehong instruksyon ay nananatili sa context, maaaring makakuha ang agent ng salungat na resulta ng paghahanap o malito kung aling kagustuhan ang uunahin.
+### Pagkakasalungat ng Konteksto
 
-**Solusyon:** Magpatupad ng **context pruning**. Kapag ang bagong instruksyon ay sumasalungat sa luma, ang lumang instruksyon ay inaalis o tahasang pinapalitan sa context. Bilang alternatibo, maaaring gumamit ang agent ng **scratchpad** upang pag-isahin ang salungat na mga kagustuhan bago magdesisyon, tinitiyak na ang huling, pare-parehong instruksyon ang gagabay sa mga aksyon nito.
+**Ano ito:** Kapag may salungatan sa impormasyon sa konteksto, na nagdudulot ng hindi magkakatugmang pangangatwiran o maling huling sagot. Mangyayari ito kapag dumadaloy ang impormasyon ng paunti-unti, at ang mga maagang maling hinuha ay nananatili sa konteksto.
 
-## May Karagdagang Tanong Tungkol sa Context Engineering?
+**Ano ang gagawin:** Gamitin ang **pag-puno ng konteksto** at **offloading**. Ang pruning ay ang pagtanggal ng lipas o salungat na impormasyon habang dumarating ang mga bagong detalye. Ang offloading ay nagbibigay sa modelo ng hiwalay na "scratchpad" na espasyo upang iproseso ang impormasyon nang hindi ginugulo ang pangunahing konteksto.
 
-Sumali sa [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) upang makipag-ugnayan sa iba pang mga nag-aaral, dumalo sa office hours, at makuha ang sagot sa iyong mga tanong tungkol sa AI Agents.
+
+**Halimbawa ng Pag-book ng Biyahe:** Sa simula, sinabi mo sa iyong ahente, **"Gusto kong lumipad sa economy class."** Sa kalaunan ng pag-uusap, nagbago ang iyong isip at sinabi, **"Sa katunayan, para sa biyahe na ito, pumunta tayo sa business class."** Kung nananatili sa konteksto ang parehong mga tagubilin, maaaring makatanggap ang ahente ng magkasalungat na mga resulta ng paghahanap o malito kung alin sa mga kagustuhan ang uuna.
+
+**Solusyon:** Ipatupad ang **context pruning**. Kapag ang bagong tagubilin ay salungat sa lumang tagubilin, ang mas dating tagubilin ay inaalis o tahasang nilalampasan sa konteksto. Bilang alternatibo, maaaring gumamit ang ahente ng **scratchpad** upang pag-isahin ang mga magkasalungat na kagustuhan bago magpasya, na tinitiyak na ang huling, pare-parehong tagubilin lamang ang gumabay sa kanyang mga aksyon.
+
+## May Iba Ka Pang Mga Tanong Tungkol sa Context Engineering?
+
+Sumali sa [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) upang makipagkita sa iba pang mga nag-aaral, dumalo sa mga oras ng opisina at masagot ang iyong mga tanong tungkol sa AI Agents.
+## Nakaraang Aralin
+
+[Agentic Protocols](../11-agentic-protocols/README.md)
+
+## Susunod na Aralin
+
+[Memory for AI Agents](../13-agent-memory/README.md)
 
 ---
 
-**Paunawa**:  
-Ang dokumentong ito ay isinalin gamit ang AI translation service na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't sinisikap naming maging tumpak, tandaan na ang mga awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa kanyang katutubong wika ang dapat ituring na opisyal na pinagmulan. Para sa mahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang hindi pagkakaunawaan o maling interpretasyon na dulot ng paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Pagtatanggi**:
+Ang dokumentong ito ay isinalin gamit ang serbisyo ng AI translation na [Co-op Translator](https://github.com/Azure/co-op-translator). Bagama't nagsusumikap kami para sa katumpakan, pakatandaan na ang awtomatikong pagsasalin ay maaaring maglaman ng mga pagkakamali o hindi pagkakatugma. Ang orihinal na dokumento sa orihinal nitong wika ang dapat ituring na pangunahing sanggunian. Para sa mahahalagang impormasyon, inirerekomenda ang propesyonal na pagsasalin ng tao. Hindi kami mananagot sa anumang maling pagkakaintindi o maling interpretasyon na nagmula sa paggamit ng pagsasaling ito.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

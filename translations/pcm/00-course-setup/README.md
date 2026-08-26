@@ -1,30 +1,30 @@
-# Course Setup
+# Setup Kọs
 
-## Introduction
+## Introdakshon
 
-Dis lesson go show how you fit run di code samples wey dey dis course.
+Dis lɛsɔn go tok how to run di kɔd sampl dem for dis kọs.
 
-## Join Other Learners and Get Help
+## Join Other Learna Dem and Get Help
 
-Before you start to clone your repo, join di [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) to get help for setup, ask any question about di course, or connect wit other learners.
+Befor you start to clone your repo, join di [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) to get any help with setup, any question about di kọs, or to connect wit other learners.
 
 ## Clone or Fork dis Repo
 
-To start, abeg clone or fork di GitHub Repository. Dis one go make you get your own version of di course material so you fit run, test, and change di code!
+To start, abeg clone or fork di GitHub Repository. Dis go make your own version of di kọs material so you fit run, test, and change di kɔd!
 
-You fit do am by clicking di link to <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">fork di repo</a>
+You fit do am by klik di link to <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">fork di repo</a>
 
-You suppose don get your own forked version of dis course for di following link:
+Now you for get your own forked version of dis kọs for di link wey follow:
 
 ![Forked Repo](../../../translated_images/pcm/forked-repo.33f27ca1901baa6a.webp)
 
-### Shallow Clone (e better for workshop / Codespaces)
+### Shallow Clone (wey dem dey recommend for workshop / Codespaces)
 
-  >Di full repository fit big (~3 GB) if you download di full history and all files. If na only workshop you dey attend or you need only few lesson folders, shallow clone (or sparse clone) go help you avoid di plenty download by cutting history and/or skipping blobs.
+  >Di full repository fit big (~3 GB) if you download full history and all files. If na only workshop you dey attend or na only some lesson folders you need, shallow clone (or sparse clone) go reduce di download by cutting history or skip blobs.
 
 #### Quick shallow clone — minimal history, all files
 
-Replace `<your-username>` for di commands below wit your fork URL (or di upstream URL if you prefer).
+Change `<your-username>` for di commands below wit your fork URL (or di upstream URL if you prefer).
 
 To clone only di latest commit history (small download):
 
@@ -32,7 +32,7 @@ To clone only di latest commit history (small download):
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-To clone one specific branch:
+To clone a specific branch:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
@@ -40,25 +40,25 @@ git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai
 
 #### Partial (sparse) clone — minimal blobs + only selected folders
 
-Dis one dey use partial clone and sparse-checkout (e need Git 2.25+ and e better make you use modern Git wey get partial clone support):
+Dis one dey use partial clone and sparse-checkout (you need Git 2.25+ and modern Git wey fit do partial clone):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Enter di repo folder:
+Go inside di repo folder:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-Then choose di folders wey you want (example below show two folders):
+Then tell wetin folders you want (example show two folders):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-After you don clone and confirm di files, if na only files you need and you wan free space (no git history), abeg delete di repository metadata (💀irreversible — you go lose all Git functionality: no commits, pulls, pushes, or history access).
+After you don clone and check di files, if na only di files you want and you want free space (no git history), abeg delete di repository metadata (💀no fit take back — you go lose all Git functionality: no commits, pulls, pushes, or history access).
 
 ```bash
 # zsh/bash
@@ -70,42 +70,31 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### Use GitHub Codespaces (e better to avoid local big downloads)
+#### Using GitHub Codespaces (dem recommend am to avoid big local downloads)
 
-- Create new Codespace for dis repo through di [GitHub UI](https://github.com/codespaces).  
+- Create new Codespace for dis repo via di [GitHub UI](https://github.com/codespaces).  
 
-- For di terminal of di new codespace wey you create, run one of di shallow/sparse clone commands above to bring only di lesson folders wey you need enter di Codespace workspace.
-- Optional: after you don clone inside Codespaces, remove .git to free extra space (check di removal commands above).
-- Note: If you prefer to open di repo directly for Codespaces (without extra clone), make you know say Codespaces go build di devcontainer environment and e fit still provision more than wetin you need. Cloning shallow copy inside fresh Codespace go give you more control over disk usage.
+- For terminal inside di new codespace, run one shallow/sparse clone command dem above to bring only di lesson folders you need inside di Codespace workspace.
+- Optional: after cloning inside Codespaces, remove .git to free more space (see removal commands above).
+- Note: If you prefer open di repo directly inside Codespaces (without extra clone), know say Codespaces go build di devcontainer environment and fit still provide more than you need. Cloning shallow copy inside fresh Codespace go give you more control on disk use.
 
 #### Tips
 
-- Always replace di clone URL wit your fork if you wan edit/commit.
-- If later you need more history or files, you fit fetch dem or adjust sparse-checkout to include extra folders.
+- Always use your fork clone URL if you want to edit/commit.
+- If you later want more history or files, you fit fetch them or adjust sparse-checkout to add more folders.
 
-## Running di Code
+## How to Run Di Kɔd
 
-Dis course get series of Jupyter Notebooks wey you fit run to get hands-on experience to build AI Agents.
+Dis kọs get series of Jupyter Notebooks wey you fit run to get hands-on experience to build AI Agents.
 
-Di code samples dey use either:
+Di kɔd samples dey use **Microsoft Agent Framework (MAF)** plus `FoundryChatClient`, wey connect to **Microsoft Foundry Agent Service V2** (di Responses API) through **Microsoft Foundry**.
 
-**GitHub Account - Free**:
+All Python notebooks get label `*-python-agent-framework.ipynb`.
 
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. E dey labelled as (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. E dey labelled as (autogen.ipynb)
-
-**Azure Subscription**:
-
-3) Azure AI Foundry + Azure AI Agent Service. E dey labelled as (azureaiagent.ipynb)
-
-We dey encourage you to try all three types of examples to see which one go work best for you.
-
-Any option wey you choose go determine di setup steps wey you need follow below:
-
-## Requirements
+## Wetin You Need
 
 - Python 3.12+
-  - **NOTE**: If Python3.12 no dey your system, make sure say you install am. Then create your venv using python3.12 to make sure say di correct versions dey installed from di requirements.txt file.
+  - **NOTE**: If you never install Python3.12, abeg install am. Then create your venv with python3.12 to make sure say correct versions dey from the requirements.txt file.
   
     >Example
 
@@ -127,113 +116,84 @@ Any option wey you choose go determine di setup steps wey you need follow below:
     venv\Scripts\activate
     ```
 
-- .NET 10+: For di sample codes wey dey use .NET, make sure say you install [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or later. Then, check di .NET SDK version wey you don install:
+- .NET 10+: For di sample codes dem wey dey use .NET, abeg install [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) or later. Then, check your installed .NET SDK version:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- GitHub Account - To Access di GitHub Models Marketplace
-- Azure Subscription - To Access di Azure AI Foundry
-- Azure AI Foundry Account - To Access di Azure AI Agent Service
+- **Azure CLI** — E dey necessary for authentication. Install from [aka.ms/installazurecli](https://aka.ms/installazurecli).
+- **Azure Subscription** — For access to Microsoft Foundry and Microsoft Foundry Agent Service.
+- **Microsoft Foundry Project** — Project with deployed model (e.g., `gpt-5-mini`). See [Step 1](#step-1-create-microsoft-foundry-project) below.
 
-We don include `requirements.txt` file for di root of dis repository wey get all di Python packages wey you need to run di code samples.
+We don put `requirements.txt` file for root of dis repository wey get all di necessary Python packages for run di kɔd samples.
 
-You fit install dem by running di command below for your terminal for di root of di repository:
+You fit install dem by running di command wey follow inside your terminal at root of di repository:
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
 
-We dey recommend make you create Python virtual environment to avoid any wahala or issues.
+We recommend say make you create Python virtual environment to avoid conflict and wahala.
 
 ## Setup VSCode
 
-Make sure say you dey use di correct version of Python for VSCode.
+Make sure say you dey use di right version of Python for VSCode.
 
 ![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## Set Up for Samples wey dey use GitHub Models 
+## Set Up Microsoft Foundry and Microsoft Foundry Agent Service
 
-### Step 1: Get Your GitHub Personal Access Token (PAT)
+### Step 1: Create Microsoft Foundry Project
 
-Dis course dey use di GitHub Models Marketplace, wey dey give free access to Large Language Models (LLMs) wey you go use to build AI Agents.
+You need Microsoft Foundry **hub** and **project** wey get deployed model to run di notebooks.
 
-To use di GitHub Models, you go need to create [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+1. Go [ai.azure.com](https://ai.azure.com) and sign in wit your Azure account.
+2. Create **hub** (or use existing one). See: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources).
+3. Inside di hub, create **project**.
+4. Deploy model (e.g., `gpt-5-mini`) from **Models + Endpoints** → **Deploy model**.
 
-You fit do am by going to your <a href="https://github.com/settings/personal-access-tokens" target="_blank">Personal Access Tokens settings</a> for your GitHub Account.
+### Step 2: Find Your Project Endpoint and Model Deployment Name
 
-Abeg follow di [Principle of Least Privilege](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) when you dey create your token. Dis mean say you go only give di token di permissions wey e need to run di code samples for dis course.
+From your project for Microsoft Foundry portal:
 
-1. Choose di `Fine-grained tokens` option for di left side of your screen by going to di **Developer settings**
-
-   ![Developer settings](../../../translated_images/pcm/profile_developer_settings.410a859fe749c755.webp)
-
-   Then choose `Generate new token`.
-
-   ![Generate Token](../../../translated_images/pcm/fga_new_token.1c1a234afe202ab3.webp)
-
-2. Enter one name wey go describe di token purpose, so e go easy to identify later.
-
-    🔐 Token Duration Recommendation
-
-    Recommended duration: 30 days
-    If you wan make e more secure, you fit choose shorter time—like 7 days 🛡️
-    E go help you set personal target and finish di course while your learning dey strong 🚀.
-
-    ![Token Name and Expiration](../../../translated_images/pcm/token-name-expiry-date.a095fb0de6386864.webp)
-
-3. Limit di token scope to your fork of dis repository.
-
-    ![Limit scope to fork repository](../../../translated_images/pcm/token_repository_limit.924ade5e11d9d8bb.webp)
-
-4. Restrict di token permissions: Under **Permissions**, click **Account** tab, and click di "+ Add permissions" button. Dropdown go show. Search for **Models** and check di box for am.
-
-    ![Add Models Permission](../../../translated_images/pcm/add_models_permissions.c0c44ed8b40fc143.webp)
-
-5. Confirm di permissions wey you need before you generate di token. ![Verify Permissions](../../../translated_images/pcm/verify_permissions.06bd9e43987a8b21.webp)
-
-6. Before you generate di token, make sure say you ready to store di token for safe place like password manager vault, because e no go show again after you create am. ![Store Token Securely](../../../translated_images/pcm/store_token_securely.08ee2274c6ad6caf.webp)
-
-Copy di new token wey you don create. You go now add am to your `.env` file wey dey dis course.
-
-### Step 2: Create Your `.env` File
-
-To create your `.env` file, run di command below for your terminal.
-
-```bash
-# zsh/bash
-cp .env.example .env
-```
-
-```powershell
-# PowerShell
-Copy-Item .env.example .env
-```
-
-Dis one go copy di example file and create `.env` for your directory where you go fill di values for di environment variables.
-
-With your token wey you don copy, open di `.env` file for your favorite text editor and paste di token inside di `GITHUB_TOKEN` field.
-
-![GitHub Token Field](../../../translated_images/pcm/github_token_field.20491ed3224b5f4a.webp)
-
-You suppose fit run di code samples for dis course now.
-
-## Set Up for Samples wey dey use Azure AI Foundry and Azure AI Agent Service
-
-### Step 1: Get Your Azure Project Endpoint
-
-Follow di steps to create hub and project for Azure AI Foundry wey dey here: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-After you don create your project, you go need to get di connection string for your project.
-
-You fit do am by going to di **Overview** page of your project for di Azure AI Foundry portal.
+- **Project Endpoint** — Go **Overview** page and copy the endpoint URL.
 
 ![Project Connection String](../../../translated_images/pcm/project-endpoint.8cf04c9975bbfbf1.webp)
 
-### Step 2: Create Your `.env` File
+- **Model Deployment Name** — Go **Models + Endpoints**, select your deployed model, and note **Deployment name** (e.g., `gpt-5-mini`).
 
-To create your `.env` file, run di command below for your terminal.
+### Step 3: Sign in to Azure with `az login`
+
+All notebooks dey use **`AzureCliCredential`** to authenticate — no API keys need to manage. You gats sign in via Azure CLI.
+
+1. **Install Azure CLI** if you never do am: [aka.ms/installazurecli](https://aka.ms/installazurecli)
+
+2. **Sign in** by running:
+
+    ```bash|powershell
+    az login
+    ```
+
+    Or if you dey remote/Codespace environment without browser:
+
+    ```bash|powershell
+    az login --use-device-code
+    ```
+
+3. **Select your subscription** if dem ask — pick di one wey get your Foundry project.
+
+4. **Check** say you sign in:
+
+    ```bash|powershell
+    az account show
+    ```
+
+> **Why `az login`?** Di notebooks dey authenticate with `AzureCliCredential` from `azure-identity` package. Dis mean say your Azure CLI session dey provide di creds — no API keys or secrets for your `.env` file. Na [security best practice](https://learn.microsoft.com/azure/developer/ai/keyless-connections).
+
+### Step 4: Create Your `.env` File
+
+Copy di example file:
 
 ```bash
 # zsh/bash
@@ -245,79 +205,185 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Dis one go copy di example file and create `.env` for your directory where you go fill di values for di environment variables.
+Open `.env` and fill these two values:
 
-With your token wey you don copy, open di `.env` file for your favorite text editor and paste di token inside di `PROJECT_ENDPOINT` field.
-
-### Step 3: Sign in to Azure
-
-As security best practice, we go use [keyless authentication](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) to authenticate to Azure OpenAI wit Microsoft Entra ID. 
-
-Next, open terminal and run `az login --use-device-code` to sign in to your Azure account.
-
-After you don log in, choose your subscription for di terminal.
-
-## Extra Environment Variables - Azure Search and Azure OpenAI 
-
-For di Agentic RAG Lesson - Lesson 5 - some samples dey wey dey use Azure Search and Azure OpenAI.
-
-If you wan run dis samples, you go need to add di following environment variables to your `.env` file:
-
-### Overview Page (Project)
-
-- `AZURE_SUBSCRIPTION_ID` - Check **Project details** for di **Overview** page of your project.
-
-- `AZURE_AI_PROJECT_NAME` - Look di top of di **Overview** page for your project.
-
-- `AZURE_OPENAI_SERVICE` - Find am for di **Included capabilities** tab for **Azure OpenAI Service** for di **Overview** page.
-
-### Management Center
-
-- `AZURE_OPENAI_RESOURCE_GROUP` - Go **Project properties** for di **Overview** page of di **Management Center**.
-
-- `GLOBAL_LLM_SERVICE` - Under **Connected resources**, find di **Azure AI Services** connection name. If e no dey listed, check di **Azure portal** under your resource group for di AI Services resource name.
-
-### Models + Endpoints Page
-
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Choose your embedding model (e.g., `text-embedding-ada-002`) and note di **Deployment name** from di model details.
-
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Choose your chat model (e.g., `gpt-4o-mini`) and note di **Deployment name** from di model details.
-
-### Azure Portal
-
-- `AZURE_OPENAI_ENDPOINT` - Look for **Azure AI services**, click am, then go **Resource Management**, **Keys and Endpoint**, scroll down to di "Azure OpenAI endpoints", and copy di one wey talk "Language APIs".
-
-- `AZURE_OPENAI_API_KEY` - From di same screen, copy KEY 1 or KEY 2.
-
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - Find your **Azure AI Search** resource, click am, and see **Overview**.
-
-- `AZURE_SEARCH_API_KEY` - Then go **Settings** and then **Keys** to copy di primary or secondary admin key.
-
-### External Webpage
-
-- `AZURE_OPENAI_API_VERSION` - Visit di [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) page under **Latest GA API release**.
-
-### Setup keyless authentication
-
-Instead of hardcode your credentials, we go use keyless connection wit Azure OpenAI. To do am, we go import `DefaultAzureCredential` and later call di `DefaultAzureCredential` function to get di credential.
-
-```python
-# Paiton
-from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
+```env
+AZURE_AI_PROJECT_ENDPOINT=https://<your-project>.services.ai.azure.com/api/projects/<your-project-id>
+AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-5-mini
 ```
 
-## You dey stuck somewhere?
-If you get any wahala to run dis setup, abeg join our <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> or <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">create one issue</a>.
+| Variable | Weh you fit find am |
+|----------|-----------------|
+| `AZURE_AI_PROJECT_ENDPOINT` | Foundry portal → your project → **Overview** page |
+| `AZURE_AI_MODEL_DEPLOYMENT_NAME` | Foundry portal → **Models + Endpoints** → your deployed model's name |
+
+Na so e be for most lessons! Di notebooks go authenticate automatically via your `az login` session.
+
+### Step 5: Install Python Dependencies
+
+```bash|powershell
+pip install -r requirements.txt
+```
+
+We recommend say make you run dis inside di virtual environment wey you create before.
+
+## Additional Setup for Lesson 5 (Agentic RAG)
+
+Lesson 5 dey use **Azure AI Search** for retrieval-augmented generation. If you want run dat lesson, add these variables for your `.env` file:
+
+| Variable | Weh you fit find am |
+|----------|-----------------|
+| `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure portal → your **Azure AI Search** resource → **Overview** → URL |
+| `AZURE_SEARCH_API_KEY` | Azure portal → your **Azure AI Search** resource → **Settings** → **Keys** → primary admin key |
+
+## Additional Setup for Lessons wey Call Azure OpenAI Directly (Lessons 6 and 8)
+
+Some notebooks for lessons 6 and 8 dey call **Azure OpenAI** directly (using **Responses API**) instead of using Microsoft Foundry project. Dem sampl dem bin dey use GitHub Models, wey dem stop (retiring July 2026) and e no support Responses API. If you wan run dem sampl dem, add these variables to your `.env` file:
+
+| Variable | Weh you fit find am |
+|----------|-----------------|
+| `AZURE_OPENAI_ENDPOINT` | Azure portal → your **Azure OpenAI** resource → **Keys and Endpoint** → Endpoint (e.g. `https://<your-resource>.openai.azure.com`) |
+| `AZURE_OPENAI_DEPLOYMENT` | Name of your deployed model (e.g. `gpt-5-mini`) wey support Responses API |
+| `AZURE_OPENAI_API_KEY` | Optional — only if you dey use key-based auth instead of `az login` / Entra ID |
+
+> Responses API dey use stable `/openai/v1/` endpoint, so no `api-version` need. Sign in with `az login` to use keyless Entra ID auth.
+
+## Alternative Provider: MiniMax (OpenAI-Compatible)
+
+[MiniMax](https://platform.minimaxi.com/) dey provide large-context models (up to 204K tokens) through OpenAI-compatible API. Since Microsoft Agent Framework's `OpenAIChatClient` dey work wit any OpenAI-compatible endpoint, you fit use MiniMax as drop-in alternative to Azure OpenAI or OpenAI.
+
+Add these variables to your `.env` file:
+
+| Variable | Weh you fit find am |
+|----------|-----------------|
+| `MINIMAX_API_KEY` | [MiniMax Platform](https://platform.minimaxi.com/) → API Keys |
+| `MINIMAX_BASE_URL` | Use `https://api.minimax.io/v1` (default value) |
+| `MINIMAX_MODEL_ID` | Model name to use (e.g., `MiniMax-M3`) |
+
+**Example models**: `MiniMax-M3` (recommend am), `MiniMax-M2.7`, `MiniMax-M2.7-highspeed` (faster responses). Model names and availability fit change over time, and access to model fit depend on your account or region — check [MiniMax Platform](https://platform.minimaxi.com/) for current list. If `MiniMax-M3` no dey your account, set `MINIMAX_MODEL_ID` to model wey you fit use (e.g. `MiniMax-M2.7`).
+
+Di kɔd samples wey use `OpenAIChatClient` (e.g., Lesson 14 hotel booking workflow) go automatically detect and use your MiniMax config when `MINIMAX_API_KEY` set.
+
+## Alternative Provider: Foundry Local (Run Models On-Device)
+
+[Foundry Local](https://foundrylocal.ai) na lightweight runtime wey go download, manage, and serve language models **entirely on your own machine** through OpenAI-compatible API — no cloud, no Azure subscription, no API keys. E good for offline development, experiment without cloud cost, or keep data for your device.
+
+Because Microsoft Agent Framework's `OpenAIChatClient` fit work wit any OpenAI-compatible endpoint, Foundry Local na local drop-in alternative to Azure OpenAI.
+
+**1. Install Foundry Local**
+
+```bash
+# Windows
+winget install Microsoft.FoundryLocal
+
+# macOS
+brew install foundrylocal
+```
+
+**2. Download and run model** (dis one go also start di local service):
+
+```bash
+foundry model list          # see di models wey dey available
+foundry model run phi-4-mini
+```
+
+**3. Install di Python SDK** wey dem dey use to find di local endpoint:
+
+```bash
+pip install foundry-local-sdk
+```
+
+**4. Point Microsoft Agent Framework to your local model:**
+
+```python
+from foundry_local import FoundryLocalManager
+from agent_framework.openai import OpenAIChatClient
+
+# Downloads (if e need am) and dey serve the model for inside machine, den e go find the endpoint/port.
+manager = FoundryLocalManager("phi-4-mini")
+
+chat_client = OpenAIChatClient(
+    base_url=manager.endpoint,      # e.g. http://localhost:<port>/v1
+    api_key=manager.api_key,        # always "not-required" for Foundry Local
+    model_id=manager.get_model_info("phi-4-mini").id,
+)
+
+agent = chat_client.as_agent(
+    name="LocalAgent",
+    instructions="You are a helpful assistant running fully on-device.",
+)
+```
+
+> **Note:** Foundry Local get OpenAI-compatible **Chat Completions** endpoint. Use am for local development and offline use. For full **Responses API** featureset (stateful conversations, deep tool orchestration, agent-style development), use **Azure OpenAI** or **Microsoft Foundry** project as dem show for lessons. See [Foundry Local documentation](https://foundrylocal.ai) for current model catalog and platform support.
+
+## Additional Setup for Lesson 8 (Bing Grounding Workflow)
+
+
+Di conditional workflow notebook for lesson 8 dey use **Bing grounding** thru Microsoft Foundry. If you wan run dat sample, add dis variable to your `.env` file:
+
+| Variable | Where to find am |
+|----------|-----------------|
+| `BING_CONNECTION_ID` | Microsoft Foundry portal → your project → **Management** → **Connected resources** → your Bing connection → copy di connection ID |
+
+## Troubleshooting
+
+### SSL Certificate Verification Errors on macOS
+
+If you dey use macOS and you see error like dis:
+
+```plaintext
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
+```
+
+Dis na known wahala with Python for macOS wey di system SSL certificates no dey automatically trusted. Try dis solutions for dis order:
+
+**Option 1: Run Python's Install Certificates script (na dis we recommend)**
+
+```bash
+# Change 3.XX to di Python version wey you don install (for example, 3.12 or 3.13):
+/Applications/Python\ 3.XX/Install\ Certificates.command
+```
+
+**Option 2: Use `connection_verify=False` for your notebook (na for GitHub Models notebooks only)**
+
+For the Lesson 6 notebook (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`), dem don put one commented-out workaround. Make you uncomment `connection_verify=False` when you dey create the client:
+
+```python
+client = ChatCompletionsClient(
+    endpoint=endpoint,
+    credential=AzureKeyCredential(token),
+    connection_verify=False,  # Turn off SSL check if you see trouble with certificate
+)
+```
+
+> **⚠️ Warning:** If you turn off SSL verification (`connection_verify=False`) e dey reduce security because e go skip certificate validation. Make you use am only as temporary workaround for development environment, no even try am for production.
+
+**Option 3: Install and use `truststore`**
+
+```bash
+pip install truststore
+```
+
+Then add dis one for top of your notebook or script before you begin make any network calls:
+
+```python
+import truststore
+truststore.inject_into_ssl()
+```
+
+## You Dey Stuck?
+
+If any issue dey try run dis setup, just jump into our <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> or <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">create issue</a>.
 
 ## Next Lesson
 
-You don ready now to run di code for dis course. Enjoy as you dey learn more about di world of AI Agents!
+You don ready to run di code for dis course. Happy to dey learn more about di world of AI Agents! 
 
 [Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis docu don dey translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even though we dey try make am accurate, abeg sabi say automatic translation fit get mistake or no correct well. Di original docu for im native language na di main correct source. For important information, e good make una use professional human translation. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because of dis translation.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

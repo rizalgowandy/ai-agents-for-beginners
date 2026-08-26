@@ -1,42 +1,42 @@
-# Azure AI Agent Service Development
+# Microsoft Foundry Agent -palvelun kehittäminen
 
-Tässä harjoituksessa käytät Azure AI Agent -palvelun työkaluja [Azure AI Foundry -portaalissa](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) luodaksesi agentin lentovarauksia varten. Agentti pystyy keskustelemaan käyttäjien kanssa ja tarjoamaan tietoa lennoista.
+Tässä harjoituksessa käytät Microsoft Foundry Agent -palvelun työkaluja [Microsoft Foundry -portaalissa](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) luodaksesi agentin lentovarauksia varten. Agentti pystyy keskustelemaan käyttäjien kanssa ja tarjoamaan tietoja lennoista.
 
-## Vaatimukset
+## Esivaatimukset
 
-Harjoituksen suorittamiseksi tarvitset seuraavat:
-1. Azure-tilin, jolla on aktiivinen tilaus. [Luo tili ilmaiseksi](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-2. Oikeudet luoda Azure AI Foundry -keskus tai sellainen on luotava puolestasi.
-    - Jos roolisi on Contributor tai Owner, voit seurata tämän opetusohjelman ohjeita.
+Tätä harjoitusta varten tarvitset seuraavat asiat:
+1. Azure-tilin, jossa on aktiivinen tilaus. [Luo tili ilmaiseksi](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+2. Sinulla tulee olla oikeudet luoda Microsoft Foundry -keskus tai sellainen on luotava sinulle.
+    - Jos roolisi on Avustaja (Contributor) tai Omistaja (Owner), voit seurata tämän opetusohjelman ohjeita.
 
-## Luo Azure AI Foundry -keskus
+## Luo Microsoft Foundry -keskus
 
-> **Note:** Azure AI Foundry tunnettiin aiemmin nimellä Azure AI Studio.
+> **Huom:** Microsoft Foundry tunnettiin aiemmin nimellä Azure AI Studio.
 
-1. Noudata näitä ohjeita [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) -blogikirjoituksesta Azure AI Foundry -keskuksen luomiseksi.
-2. Kun projektisi on luotu, sulje mahdolliset vinkit ja tarkastele projektisivua Azure AI Foundry -portaalissa, jonka pitäisi näyttää suunnilleen tältä:
+1. Noudata näitä ohjeita Microsoft Foundry -blogikirjoituksesta [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) luodaksesi Microsoft Foundry -keskuksen.
+2. Kun projektisi on luotu, sulje mahdolliset ohjevinkit ja tutustu Microsoft Foundry -portaalin projektisivuun, joka näyttää suunnilleen tältä:
 
-    ![Azure AI Foundry Project](../../../translated_images/fi/azure-ai-foundry.88d0c35298348c2f.webp)
+    ![Microsoft Foundry Project](../../../translated_images/fi/azure-ai-foundry.88d0c35298348c2f.webp)
 
 ## Ota malli käyttöön
 
-1. Projektisi vasemman reunan paneelissa, kohdassa **My assets**, valitse **Models + endpoints** -sivu.
-2. **Models + endpoints** -sivulla, **Model deployments** -välilehdellä, valitse **+ Deploy model** -valikosta **Deploy base model**.
-3. Etsi listalta `gpt-4o-mini` -malli, valitse se ja vahvista.
+1. Valitse projektisi vasemman puolen ruudusta **Omat omaisuudet** -osiossa **Mallit + päätelasemat** -sivu.
+2. Valitse **Mallit + päätelasemat** -sivulla **Mallin käyttöönotot** -välilehdeltä valikosta **+ Ota malli käyttöön** ja valitse **Ota perustamalli käyttöön**.
+3. Etsi listasta `gpt-5-mini`-malli, valitse se ja vahvista.
 
-    > **Note**: TPM:n alentaminen auttaa välttämään tilauksesi käytettävissä olevan kiintiön liiallista kulutusta.
+    > **Huom**: TPM-arvon pienentäminen auttaa välttämään tilauksessasi olevan kiintiön liiallista käyttöä.
 
     ![Model Deployed](../../../translated_images/fi/model-deployment.3749c53fb81e18fd.webp)
 
 ## Luo agentti
 
-Nyt kun olet ottanut mallin käyttöön, voit luoda agentin. Agentti on keskusteleva tekoälymalli, jota voidaan käyttää vuorovaikutukseen käyttäjien kanssa.
+Kun malli on otettu käyttöön, voit luoda agentin. Agentti on keskusteleva tekoälymalli, jota voidaan käyttää vuorovaikutuksessa käyttäjien kanssa.
 
-1. Projektisi vasemman reunan paneelissa, kohdassa **Build & Customize**, valitse **Agents** -sivu.
-2. Klikkaa **+ Create agent** luodaksesi uuden agentin. **Agent Setup** -valintaikkunassa:
+1. Valitse vasemman puolen ruudusta projektissasi **Rakenna ja mukauta** -osiosta **Agentit**-sivu.
+2. Klikkaa **+ Luo agentti** luodaksesi uuden agentin. Agentin asetukset -valintaikkunassa:
     - Anna agentille nimi, esimerkiksi `FlightAgent`.
-    - Varmista, että aiemmin luomasi `gpt-4o-mini` -mallin käyttöönotto on valittuna.
-    - Määritä **Instructions** haluamallasi ohjeistuksella agentille. Tässä esimerkki:
+    - Varmista, että aiemmin luomasi `gpt-5-mini` -mallin käyttöönotto on valittuna.
+    - Aseta **Ohjeet** sen kehotteen mukaan, jota haluat agentin noudattavan. Tässä on esimerkki:
     ```
     You are FlightAgent, a virtual assistant specialized in handling flight-related queries. Your role includes assisting users with searching for flights, retrieving flight details, checking seat availability, and providing real-time flight status. Follow the instructions below to ensure clarity and effectiveness in your responses:
 
@@ -64,41 +64,46 @@ Nyt kun olet ottanut mallin käyttöön, voit luoda agentin. Agentti on keskuste
     
     ```
 > [!NOTE]
-> Yksityiskohtaisempia ohjeita varten voit tutustua [tähän repositorioon](https://github.com/ShivamGoyal03/RoamMind).
-
-> Lisäksi voit lisätä **Knowledge Base** ja **Actions** parantaaksesi agentin kykyjä tarjota lisätietoa ja suorittaa automatisoituja tehtäviä käyttäjän pyyntöjen perusteella. Tässä harjoituksessa voit ohittaa nämä vaiheet.
-
+> Tarkemman kehotteen löydät [tästä arkistosta](https://github.com/ShivamGoyal03/RoamMind).
+    
+> Lisäksi voit lisätä **Tietopohjan** ja **Toiminnot** antaaksesi agentille lisää kykyjä tarjota tietoa ja suorittaa automaattisia tehtäviä käyttäjän pyyntöihin perustuen. Tässä harjoituksessa nämä vaiheet voi ohittaa.
+    
 ![Agent Setup](../../../translated_images/fi/agent-setup.9bbb8755bf5df672.webp)
 
-3. Uuden monitekoälyagentin luomiseksi klikkaa vain **New Agent**. Uusi agentti näkyy sitten Agents-sivulla.
+3. Luo uusi monitekoälyagentti napsauttamalla **Uusi agentti**. Uusi agentti näkyy sitten agenttisivulla.
+
 
 ## Testaa agenttia
 
-Agentin luomisen jälkeen voit testata sitä nähdäksesi, miten se vastaa käyttäjän kyselyihin Azure AI Foundry -portaalin leikkikentällä.
+Agentin luomisen jälkeen voit testata sitä nähdäksesi, miten se vastaa käyttäjän kyselyihin Microsoft Foundry -portaalin leikkikentällä.
 
-1. Agentin **Setup**-paneelin yläosassa valitse **Try in playground**.
-2. **Playground**-paneelissa voit keskustella agentin kanssa kirjoittamalla kysymyksiä chat-ikkunaan. Voit esimerkiksi pyytää agenttia etsimään lentoja Seattlesta New Yorkiin 28. päivälle.
+1. Valitse agentin **Asetukset**-ruudun yläosasta **Kokeile leikkikentässä**.
+2. Voit vuorovaikuttaa agentin kanssa **Leikkikenttä**-ruudussa kirjoittamalla kyselyjä chat-ikkunaan. Voit esimerkiksi pyytää agenttia etsimään lentoja Seattlesta New Yorkiin 28. päiväksi.
 
-    > **Note**: Agentti ei välttämättä anna tarkkoja vastauksia, koska tässä harjoituksessa ei käytetä reaaliaikaista dataa. Tarkoituksena on testata agentin kykyä ymmärtää ja vastata käyttäjän kyselyihin annettujen ohjeiden perusteella.
+    > **Huom**: Agentin vastaukset eivät välttämättä ole täysin tarkkoja, koska tässä harjoituksessa ei käytetä reaaliaikaista tietoa. Tavoitteena on testata, miten agentti ymmärtää ja vastaa käyttäjän pyyntöihin annettujen ohjeiden pohjalta.
 
     ![Agent Playground](../../../translated_images/fi/agent-playground.dc146586de715010.webp)
 
-3. Testauksen jälkeen voit räätälöidä agenttia lisäämällä siihen lisää intenttejä, koulutusdataa ja toimintoja sen kykyjen parantamiseksi.
+3. Testauksen jälkeen voit mukauttaa agenttia lisäämällä uusia tarkoituksia, koulutusdataa ja toimintoja, jotta sen kykyjä voidaan parantaa.
 
-## Siivoa resurssit
+## Poista resurssit
 
-Kun olet lopettanut agentin testaamisen, voit poistaa sen välttääksesi lisäkustannuksia.
-1. Avaa [Azure-portaali](https://portal.azure.com) ja tarkastele resurssiryhmää, johon olet ottanut käyttöön tässä harjoituksessa käytetyt keskuksen resurssit.
-2. Työkaluriviltä valitse **Delete resource group**.
-3. Kirjoita resurssiryhmän nimi ja vahvista, että haluat poistaa sen.
+Kun olet lopettanut agentin testaamisen, voit poistaa sen lisäkustannusten välttämiseksi.
+1. Avaa [Azure-portaali](https://portal.azure.com) ja tarkastele resurssiryhmän sisältöä, johon olet ottanut hubin resurssit käyttöön tässä harjoituksessa.
+2. Valitse työkaluriviltä **Poista resurssiryhmä**.
+3. Kirjoita resurssiryhmän nimi ja vahvista poisto.
 
 ## Resurssit
 
-- [Azure AI Foundry documentation](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
-- [Azure AI Foundry portal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
-- [Getting Started with Azure AI Studio](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
-- [Fundamentals of AI agents on Azure](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundryn dokumentaatio](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry -portaali](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
+- [Aloittaminen Microsoft Foundryn kanssa](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
+- [Azure AI -agenttien perusteet](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
 - [Azure AI Discord](https://aka.ms/AzureAI/Discord)
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattikäännöksissä saattaa esiintyä virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäiskielellä tulee pitää virallisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

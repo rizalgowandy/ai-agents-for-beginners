@@ -1,39 +1,39 @@
 [![الگوی طراحی برنامه‌ریزی](../../../translated_images/fa/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(برای مشاهده ویدئوی این درس، روی تصویر بالا کلیک کنید)_
+> _(برای مشاهده ویدیوی این درس روی تصویر بالا کلیک کنید)_
 
-# برنامه‌ریزی طراحی
+# طراحی برنامه‌ریزی
 
 ## مقدمه
 
-این درس شامل موارد زیر خواهد بود:
+این درس شامل موارد زیر است
 
-* تعریف یک هدف کلی واضح و تقسیم یک وظیفه پیچیده به وظایف قابل مدیریت.
-* استفاده از خروجی ساختاریافته برای پاسخ‌های قابل اعتمادتر و قابل خواندن توسط ماشین.
-* به‌کارگیری رویکرد مبتنی بر رویداد برای مدیریت وظایف پویا و ورودی‌های غیرمنتظره.
+* تعریف هدف کلی واضح و تقسیم یک کار پیچیده به کارهای قابل مدیریت.
+* بهره‌گیری از خروجی ساختاریافته برای پاسخ‌های قابل اطمینان‌تر و قابل خواندن توسط ماشین.
+* به‌کارگیری رویکرد رویداد-محور برای مدیریت کارهای پویا و ورودی‌های غیرمنتظره.
 
 ## اهداف یادگیری
 
-پس از تکمیل این درس، شما درک خواهید کرد که:
+پس از تکمیل این درس، شما درک خواهید داشت از:
 
-* یک هدف کلی برای یک عامل هوش مصنوعی تعیین کنید تا مطمئن شوید که دقیقاً می‌داند چه چیزی باید به دست آید.
-* یک وظیفه پیچیده را به وظایف قابل مدیریت تقسیم کنید و آن‌ها را به ترتیب منطقی سازماندهی کنید.
-* عوامل را با ابزارهای مناسب (مانند ابزارهای جستجو یا تحلیل داده‌ها) تجهیز کنید، تصمیم بگیرید که چه زمانی و چگونه از آن‌ها استفاده شود، و موقعیت‌های غیرمنتظره را مدیریت کنید.
-* نتایج وظایف فرعی را ارزیابی کنید، عملکرد را اندازه‌گیری کنید، و اقدامات را برای بهبود خروجی نهایی تکرار کنید.
+* شناسایی و تعیین هدف کلی برای یک عامل هوش مصنوعی، به گونه‌ای که به‌روشنی بداند چه چیزی باید به دست آید.
+* تجزیه یک کار پیچیده به زیرکارهای قابل مدیریت و سازماندهی آن‌ها در یک توالی منطقی.
+* تجهیز عوامل با ابزارهای مناسب (مثلاً ابزارهای جستجو یا ابزارهای تحلیل داده)، تصمیم‌گیری درباره زمان و نحوه استفاده از آن‌ها، و مدیریت موقعیت‌های غیرمنتظره که پیش می‌آید.
+* ارزیابی نتایج زیرکارها، اندازه‌گیری عملکرد و تکرار اقدامات برای بهبود خروجی نهایی.
 
-## تعریف هدف کلی و تقسیم وظیفه
+## تعریف هدف کلی و تجزیه یک کار
 
-![تعریف اهداف و وظایف](../../../translated_images/fa/defining-goals-tasks.d70439e19e37c47a.webp)
+![تعریف اهداف و کارها](../../../translated_images/fa/defining-goals-tasks.d70439e19e37c47a.webp)
 
-بیشتر وظایف دنیای واقعی برای انجام در یک مرحله بسیار پیچیده هستند. یک عامل هوش مصنوعی به یک هدف مختصر نیاز دارد تا برنامه‌ریزی و اقدامات خود را هدایت کند. به عنوان مثال، هدف زیر را در نظر بگیرید:
+بیشتر کارهای دنیای واقعی برای انجام در یک مرحله خیلی پیچیده هستند. یک عامل هوش مصنوعی نیازمند یک هدف مختصر است که برنامه‌ریزی و اقداماتش را هدایت کند. به عنوان مثال، هدف زیر را در نظر بگیرید:
 
-    "ایجاد یک برنامه سفر سه روزه."
+    "ایجاد یک برنامه سفر ۳ روزه."
 
-در حالی که بیان آن ساده است، هنوز نیاز به اصلاح دارد. هرچه هدف واضح‌تر باشد، عامل (و هر همکار انسانی) بهتر می‌تواند بر دستیابی به نتیجه درست تمرکز کند، مانند ایجاد یک برنامه جامع با گزینه‌های پرواز، توصیه‌های هتل، و پیشنهادات فعالیت.
+اگرچه بیان آن ساده است، اما هنوز نیاز به پالایش دارد. هرچه هدف واضح‌تر باشد، عامل (و هر همکار انسانی) بهتر می‌تواند بر رسیدن به نتیجه مناسب متمرکز شود، مثلاً ایجاد یک برنامه جامع با گزینه‌های پرواز، توصیه‌های هتل و پیشنهادهای فعالیت‌ها.
 
-### تقسیم وظیفه
+### تجزیه کار
 
-وظایف بزرگ یا پیچیده زمانی قابل مدیریت‌تر می‌شوند که به وظایف فرعی کوچک‌تر و هدف‌محور تقسیم شوند.
+کارهای بزرگ یا پیچیده وقتی به زیرکارهای کوچک‌تر و هدفمند تقسیم شوند، قابل مدیریت‌تر می‌شوند.
 برای مثال برنامه سفر، می‌توانید هدف را به موارد زیر تقسیم کنید:
 
 * رزرو پرواز
@@ -41,15 +41,15 @@
 * اجاره خودرو
 * شخصی‌سازی
 
-هر وظیفه فرعی سپس می‌تواند توسط عوامل یا فرآیندهای اختصاصی انجام شود. یک عامل ممکن است در جستجوی بهترین پیشنهادات پرواز تخصص داشته باشد، دیگری بر رزرو هتل تمرکز کند، و غیره. یک عامل هماهنگ‌کننده یا "پایین‌دستی" سپس می‌تواند این نتایج را به یک برنامه سفر منسجم برای کاربر نهایی ترکیب کند.
+سپس هر زیرکار می‌تواند توسط عوامل یا فرآیندهای اختصاصی انجام شود. یک عامل ممکن است در جستجوی بهترین قیمت‌های پرواز تخصص داشته باشد، دیگری بر رزرو هتل تمرکز کند و همین‌طور ادامه دهد. یک عامل هماهنگ‌کننده یا «پایینی» می‌تواند این نتایج را به یک برنامه منسجم برای کاربر نهایی ترکیب کند.
 
-این رویکرد ماژولار همچنین امکان بهبود تدریجی را فراهم می‌کند. به عنوان مثال، می‌توانید عوامل تخصصی برای توصیه‌های غذایی یا پیشنهادات فعالیت‌های محلی اضافه کنید و برنامه سفر را در طول زمان اصلاح کنید.
+این رویکرد ماژولار همچنین امکان بهبود تدریجی را فراهم می‌کند. برای مثال، می‌توانید عوامل تخصصی برای توصیه‌های غذایی یا پیشنهاد فعالیت‌های محلی اضافه کنید و برنامه سفر را به مرور زمان اصلاح کنید.
 
 ### خروجی ساختاریافته
 
-مدل‌های زبان بزرگ (LLMs) می‌توانند خروجی ساختاریافته (مانند JSON) تولید کنند که برای عوامل یا خدمات پایین‌دستی آسان‌تر قابل تجزیه و پردازش است. این امر به ویژه در یک زمینه چندعاملی مفید است، جایی که می‌توان این وظایف را پس از دریافت خروجی برنامه‌ریزی انجام داد. برای یک نمای کلی سریع، به اینجا مراجعه کنید.
+مدل‌های زبانی بزرگ (LLMs) می‌توانند خروجی ساختاریافته (مثلاً JSON) تولید کنند که برای عوامل یا خدمات پایین‌دستی راحت‌تر قابل تجزیه و پردازش است. این موضوع در محیط‌های چندعاملی مخصوصاً مفید است، جایی که می‌توانیم پس از دریافت خروجی برنامه‌ریزی، به این کارها عمل کنیم.
 
-کد پایتون زیر یک عامل برنامه‌ریزی ساده را نشان می‌دهد که هدف را به وظایف فرعی تقسیم می‌کند و یک برنامه ساختاریافته تولید می‌کند:
+قطعه کد پایتون زیر نمونه ساده‌ای از یک عامل برنامه‌ریز است که یک هدف را به زیرکارها تقسیم می‌کند و برنامه ساختاریافته‌ای تولید می‌کند:
 
 ```python
 from pydantic import BaseModel
@@ -59,9 +59,8 @@ import json
 import os
 from typing import Optional
 from pprint import pprint
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.azure import AzureAIChatCompletionClient
-from azure.core.credentials import AzureKeyCredential
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 class AgentEnum(str, Enum):
     FlightBooking = "flight_booking"
@@ -72,35 +71,26 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# مدل زیرکار سفر
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # ما می‌خواهیم وظیفه را به نماینده تخصیص دهیم
 
 class TravelPlan(BaseModel):
     main_task: str
     subtasks: List[TravelSubTask]
     is_greeting: bool
 
-client = AzureAIChatCompletionClient(
-    model="gpt-4o-mini",
-    endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-    credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
-    model_info={
-        "json_output": False,
-        "function_calling": True,
-        "vision": True,
-        "family": "unknown",
-    },
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
-# Define the user message
-messages = [
-    SystemMessage(content="""You are an planner agent.
+# تعریف پیام کاربر
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
-                      Provide your response in JSON format with the following structure:
+    Provide your response in JSON format with the following structure:
 {'main_task': 'Plan a family trip from Singapore to Melbourne.',
  'subtasks': [{'assigned_agent': 'flight_booking',
                'task_details': 'Book round-trip flights from Singapore to '
@@ -111,44 +101,27 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(
-        content="Create a travel plan for a family of 2 kids from Singapore to Melboune", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": 'json_object'})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-response_content: Optional[str] = response.content if isinstance(
-    response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string" )
+response = client.create_response(input=user_message, instructions=system_prompt)
 
+response_content = response.output_text
 pprint(json.loads(response_content))
-
-# # Ensure the response content is a valid JSON string before loading it
-# response_content: Optional[str] = response.content if isinstance(
-#     response.content, str) else None
-# if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
-
-# # Print the response content after loading it as JSON
-# pprint(json.loads(response_content))
-
-# Validate the response content with the MathReasoning model
-# TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### عامل برنامه‌ریزی با هماهنگی چندعاملی
+### عامل برنامه‌ریز با ارکستراسیون چندعاملی
 
-در این مثال، یک عامل مسیریاب معنایی درخواست کاربر را دریافت می‌کند (مانند "من به یک برنامه هتل برای سفرم نیاز دارم.").
+در این مثال، یک عامل مسیریابی معنایی درخواست کاربر را دریافت می‌کند (مثلاً "من به یک برنامه هتل برای سفرم نیاز دارم.").
 
 سپس برنامه‌ریز:
 
-* دریافت برنامه هتل: برنامه‌ریز پیام کاربر را دریافت می‌کند و بر اساس یک پیام سیستمی (شامل جزئیات عوامل موجود)، یک برنامه سفر ساختاریافته تولید می‌کند.
-* لیست عوامل و ابزارهای آن‌ها: رجیستری عامل شامل لیستی از عوامل (مانند پرواز، هتل، اجاره خودرو، و فعالیت‌ها) همراه با توابع یا ابزارهایی است که ارائه می‌دهند.
-* ارسال برنامه به عوامل مربوطه: بسته به تعداد وظایف فرعی، برنامه‌ریز یا پیام را مستقیماً به یک عامل اختصاصی (برای سناریوهای تک‌وظیفه‌ای) ارسال می‌کند یا از طریق یک مدیر چت گروهی برای همکاری چندعاملی هماهنگ می‌کند.
-* خلاصه‌سازی نتیجه: در نهایت، برنامه‌ریز برنامه تولید شده را برای وضوح خلاصه می‌کند.
-نمونه کد پایتون زیر این مراحل را نشان می‌دهد:
+* برنامه هتل را دریافت می‌کند: برنامه‌ریز پیام کاربر را گرفته و بر اساس یک هشدار سیستمی (شامل جزئیات عوامل در دسترس)، برنامه سفر ساختاریافته‌ای تولید می‌کند.
+* عوامل و ابزارهایشان را فهرست می‌کند: فهرست‌عامل‌ها شامل لیستی از عوامل (مثلاً برای پرواز، هتل، اجاره خودرو و فعالیت‌ها) به همراه عملکردها یا ابزارهایی است که ارائه می‌دهند.
+* برنامه را به عوامل مربوطه ارسال می‌کند: بسته به تعداد زیرکارها، برنامه‌ریز یا مستقیماً پیام را به عامل اختصاصی (برای سناریوهای تک‌کار) می‌فرستد یا از طریق مدیر گروه چت برای همکاری چندعاملی هماهنگی می‌کند.
+* نتیجه را خلاصه می‌کند: در نهایت برنامه‌ریز برنامه تولیدشده را برای وضوح خلاصه می‌کند.
+کد پایتون زیر این مراحل را نشان می‌دهد:
 
 ```python
 
@@ -166,11 +139,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# مدل زیرکار سفر
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # می‌خواهیم وظیفه را به نماینده اختصاص دهیم
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -180,25 +153,22 @@ import json
 import os
 from typing import Optional
 
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the client with type-checked environment variables
+# ایجاد کلاینت
 
-client = AzureOpenAIChatCompletionClient(
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
 from pprint import pprint
 
-# Define the user message
+# تعریف پیام کاربر
 
-messages = [
-    SystemMessage(content="""You are an planner agent.
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -206,24 +176,20 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-# Ensure the response content is a valid JSON string before loading it
+response = client.create_response(input=user_message, instructions=system_prompt)
 
-response_content: Optional[str] = response.content if isinstance(response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string")
+response_content = response.output_text
 
-# Print the response content after loading it as JSON
+# چاپ محتوای پاسخ بعد از بارگزاری آن به صورت JSON
 
 pprint(json.loads(response_content))
 ```
 
-آنچه در ادامه می‌آید خروجی کد قبلی است و سپس می‌توانید از این خروجی ساختاریافته برای ارسال به `assigned_agent` و خلاصه‌سازی برنامه سفر برای کاربر نهایی استفاده کنید.
+آنچه در ادامه می‌آید خروجی کد قبلی است و سپس می‌توانید از این خروجی ساختاریافته برای روت کردن به `assigned_agent` و خلاصه‌سازی برنامه سفر برای کاربر نهایی استفاده کنید.
 
 ```json
 {
@@ -254,21 +220,23 @@ pprint(json.loads(response_content))
 }
 ```
 
-یک دفترچه نمونه با کد قبلی [اینجا](07-autogen.ipynb) موجود است.
+یک دفترچه نمونه با کد قبلی در این آدرس موجود است [اینجا](./code_samples/07-python-agent-framework.ipynb).
 
 ### برنامه‌ریزی تکراری
 
-برخی وظایف نیاز به رفت و برگشت یا برنامه‌ریزی مجدد دارند، جایی که نتیجه یک وظیفه فرعی بر وظیفه بعدی تأثیر می‌گذارد. به عنوان مثال، اگر عامل یک فرمت داده غیرمنتظره را هنگام رزرو پرواز کشف کند، ممکن است نیاز به تطبیق استراتژی خود قبل از ادامه رزرو هتل داشته باشد.
+برخی کارها نیازمند رفت و برگشت یا برنامه‌ریزی مجدد هستند، طوری که نتیجه یک زیرکار روی بعدی تأثیر می‌گذارد. به عنوان مثال، اگر عامل در حین رزرو پرواز با یک فرمت داده غیرمنتظره مواجه شود، ممکن است نیاز به تعدیل استراتژی خود قبل از ادامه به رزرو هتل داشته باشد.
 
-علاوه بر این، بازخورد کاربر (مانند تصمیم‌گیری انسانی که ترجیح می‌دهد پرواز زودتری داشته باشد) می‌تواند یک برنامه‌ریزی جزئی را تحریک کند. این رویکرد پویا و تکراری تضمین می‌کند که راه‌حل نهایی با محدودیت‌های دنیای واقعی و ترجیحات در حال تغییر کاربر هماهنگ باشد.
+علاوه بر این، بازخورد کاربر (مثلاً تصمیم انسان به ترجیح یک پرواز زودتر) می‌تواند باعث برنامه‌ریزی مجدد جزئی شود. این رویکرد پویا و تکراری تضمین می‌کند که راه‌حل نهایی با محدودیت‌های دنیای واقعی و ترجیحات در حال تغییر کاربر هماهنگ باشد.
 
-نمونه کد:
+مثلاً کد نمونه
 
 ```python
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
-messages = [
-    SystemMessage(content="""You are a planner agent to optimize the
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+#.. همانند کد قبلی و ارسال تاریخچه کاربر، برنامه جاری
+
+system_prompt = """You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -276,28 +244,31 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-    AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
-]
-# .. re-plan and send the tasks to respective agents
+    - DefaultAgent: For handling general requests"""
+
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
+
+response = client.create_response(
+    input=user_message,
+    instructions=system_prompt,
+    context=f"Previous travel plan - {TravelPlan}",
+)
+# .. برنامه‌ریزی مجدد و ارسال وظایف به عامل‌های مربوطه
 ```
 
-برای برنامه‌ریزی جامع‌تر، حتماً Magnetic One را بررسی کنید برای حل وظایف پیچیده.
+برای برنامه‌ریزی جامع‌تر، پست بلاگ <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Magnetic One</a> را برای حل کارهای پیچیده بررسی کنید.
 
 ## خلاصه
 
-در این مقاله، ما به یک مثال نگاه کردیم که چگونه می‌توان یک برنامه‌ریز ایجاد کرد که بتواند عوامل موجود تعریف‌شده را به صورت پویا انتخاب کند. خروجی برنامه‌ریز وظایف را تجزیه می‌کند و عوامل را اختصاص می‌دهد تا بتوانند اجرا شوند. فرض بر این است که عوامل به توابع/ابزارهایی که برای انجام وظیفه لازم است دسترسی دارند. علاوه بر عوامل، می‌توانید الگوهای دیگری مانند بازتاب، خلاصه‌ساز، و چت چرخشی را برای سفارشی‌سازی بیشتر اضافه کنید.
+در این مقاله به مثالی نگاه کردیم درباره اینکه چگونه می‌توانیم برنامه‌ریزی‌کننده‌ای بسازیم که بتواند عوامل در دسترس تعریف‌شده را به‌صورت پویا انتخاب کند. خروجی برنامه‌ریز کارها را تجزیه می‌کند و عوامل را اختصاص می‌دهد تا بتوانند اجرا شوند. فرض بر این است که عوامل به عملکردها/ابزارهای مورد نیاز برای انجام کار دسترسی دارند. علاوه بر عوامل می‌توانید الگوهای دیگری مانند انعکاس، خلاصه‌کننده، و چت چرخشی را برای سفارشی‌سازی بیشتر اضافه کنید.
 
 ## منابع اضافی
 
-AutoGen Magnetic One - یک سیستم چندعاملی عمومی برای حل وظایف پیچیده که نتایج چشمگیری در چندین معیار چالش‌برانگیز عامل به دست آورده است. مرجع:
-
-. در این پیاده‌سازی، هماهنگ‌کننده یک برنامه خاص وظیفه ایجاد می‌کند و این وظایف را به عوامل موجود واگذار می‌کند. علاوه بر برنامه‌ریزی، هماهنگ‌کننده همچنین از یک مکانیزم ردیابی برای نظارت بر پیشرفت وظیفه و برنامه‌ریزی مجدد در صورت نیاز استفاده می‌کند.
+Magnetic One - یک سیستم چندعاملی عمومی برای حل کارهای پیچیده است و در چندین معیار عامل چالشی نتایج قابل توجهی کسب کرده است. مرجع: <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Magnetic One</a>. در این پیاده‌سازی، هماهنگ‌کننده برنامه‌های خاص کار ایجاد کرده و این کارها را به عوامل در دسترس واگذار می‌کند. علاوه بر برنامه‌ریزی، هماهنگ‌کننده از مکانیزم پیگیری برای نظارت بر پیشرفت کار و برنامه‌ریزی مجدد در صورت نیاز استفاده می‌کند.
 
 ### سوالات بیشتری درباره الگوی طراحی برنامه‌ریزی دارید؟
 
-به [دیسکورد Azure AI Foundry](https://aka.ms/ai-agents/discord) بپیوندید تا با سایر یادگیرندگان ملاقات کنید، در ساعات اداری شرکت کنید و سوالات خود درباره عوامل هوش مصنوعی را پاسخ دهید.
+به [Discord مایکروسافت Foundry](https://discord.com/invite/ATgtXmAS5D) بپیوندید تا با دیگر یادگیرندگان ملاقات کنید، در ساعات دفتر شرکت کنید و سوالات هوش مصنوعی عوامل خود را پاسخ بگیرید.
 
 ## درس قبلی
 
@@ -309,5 +280,7 @@ AutoGen Magnetic One - یک سیستم چندعاملی عمومی برای حل
 
 ---
 
-**سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما برای دقت تلاش می‌کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادقتی‌هایی باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما هیچ مسئولیتی در قبال سوءتفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**سلب مسئولیت**:
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌هایی باشند. سند اصلی به زبان مادری خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما در قبال هرگونه سوء تفاهم یا برداشت نادرست ناشی از استفاده از این ترجمه مسئولیتی نداریم.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

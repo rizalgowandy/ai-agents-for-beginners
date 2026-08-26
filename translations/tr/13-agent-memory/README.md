@@ -1,55 +1,55 @@
 # AI Ajanları için Bellek
-[![Ajan Belleği](../../../translated_images/tr/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
+[![Agent Memory](../../../translated_images/tr/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-AI ajanları oluşturmanın benzersiz faydalarını tartışırken, genellikle iki şey öne çıkar: görevleri tamamlamak için araçları çağırma yeteneği ve zamanla gelişme yeteneği. Bellek, kullanıcılarımıza daha iyi deneyimler sunabilecek kendini geliştiren ajanlar oluşturmanın temelinde yer alır.
+AI Ajanları oluşturmanın benzersiz faydaları tartışılırken, çoğunlukla iki şey ele alınır: görevleri tamamlamak için araç çağırabilme yeteneği ve zamanla gelişebilme yeteneği. Bellek, kullanıcılarımıza daha iyi deneyimler sunabilen kendini geliştiren ajanlar oluşturmanın temelidir.
 
-Bu derste, AI ajanları için belleğin ne olduğunu, nasıl yönetileceğini ve uygulamalarımızın yararına nasıl kullanılacağını inceleyeceğiz.
+Bu derste, AI Ajanlar için bellek nedir, nasıl yönetilir ve uygulamalarımızın faydası için nasıl kullanılır gibi konuları inceleyeceğiz.
 
 ## Giriş
 
-Bu derste şunlar ele alınacaktır:
+Bu ders şunları içerecektir:
 
 • **AI Ajan Belleğini Anlamak**: Belleğin ne olduğu ve ajanlar için neden önemli olduğu.
 
-• **Belleği Uygulama ve Depolama**: AI ajanlarınıza bellek özellikleri eklemek için pratik yöntemler, kısa vadeli ve uzun vadeli belleğe odaklanarak.
+• **Bellek Uygulama ve Depolama**: AI ajanlarınıza bellek yetenekleri eklemek için pratik yöntemler; kısa ve uzun süreli bellek odaklı.
 
-• **AI Ajanlarını Kendini Geliştiren Hale Getirmek**: Belleğin ajanların geçmiş etkileşimlerden öğrenmesini ve zamanla gelişmesini nasıl sağladığı.
+• **AI Ajanlarının Kendini Geliştirmesi**: Belleğin, ajanların geçmiş etkileşimlerden öğrenmesini ve zamanla gelişmesini nasıl sağladığı.
 
 ## Mevcut Uygulamalar
 
-Bu ders, iki kapsamlı notebook öğreticisini içerir:
+Bu ders iki kapsamlı not defteri eğitimini içerir:
 
-• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Belleği Mem0 ve Azure AI Search ile Semantic Kernel çerçevesi kullanarak uygular.
+• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Microsoft Agent Framework ile Mem0 ve Azure AI Search kullanarak belleği uygular
 
-• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Yapılandırılmış belleği Cognee kullanarak uygular, gömülü bilgilerle desteklenen bilgi grafiği oluşturur, grafiği görselleştirir ve akıllı sorgulama sağlar.
+• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Cognee kullanarak yapılandırılmış bellek uygular, gömülerle desteklenen bilgi grafiği otomatik olarak oluşturur, grafiği görselleştirir ve akıllı veri alma yapar
 
 ## Öğrenme Hedefleri
 
-Bu dersi tamamladıktan sonra şunları öğrenmiş olacaksınız:
+Bu dersi tamamladıktan sonra şunları bileceksiniz:
 
-• **AI ajan belleğinin farklı türlerini ayırt etmek**, çalışma belleği, kısa vadeli ve uzun vadeli bellek, ayrıca kişilik ve epizodik bellek gibi özel türler dahil.
+• **AI ajan bellek tipleri arasında ayrım yapabilme**, çalışma, kısa süreli ve uzun süreli belleklerin yanı sıra persona ve epizodik bellek gibi özel türler de dahil.
 
-• **AI ajanları için kısa vadeli ve uzun vadeli belleği uygulamak ve yönetmek**, Semantic Kernel çerçevesini kullanarak Mem0, Cognee, Beyaz Tahta belleği gibi araçlardan yararlanmak ve Azure AI Search ile entegrasyon sağlamak.
+• **Microsoft Agent Framework kullanarak kısa ve uzun süreli belleği uygulama ve yönetme**, Mem0, Cognee, Whiteboard belleği gibi araçları kullanma ve Azure AI Search ile entegrasyon.
 
-• **Kendini geliştiren AI ajanlarının arkasındaki prensipleri anlamak** ve sağlam bellek yönetim sistemlerinin sürekli öğrenme ve adaptasyona nasıl katkıda bulunduğunu görmek.
+• **Kendini geliştiren AI ajanlarının prensiplerini anlama** ve sağlam bellek yönetim sistemlerinin sürekli öğrenme ve uyuma nasıl katkı sağladığını kavrama.
 
 ## AI Ajan Belleğini Anlamak
 
-Temelde, **AI ajanları için bellek, bilgiyi saklama ve hatırlama mekanizmalarını ifade eder**. Bu bilgi, bir konuşma hakkında spesifik detaylar, kullanıcı tercihleri, geçmiş eylemler veya öğrenilen kalıplar olabilir.
+Temelde, **AI ajanları için bellek, bilgiyi saklamalarını ve hatırlamalarını sağlayan mekanizmalar anlamına gelir**. Bu bilgi, bir konuşma hakkındaki özel detaylar, kullanıcı tercihleri, geçmiş eylemler ya da öğrenilen kalıplar olabilir.
 
-Bellek olmadan, AI uygulamaları genellikle durumsuzdur, yani her etkileşim sıfırdan başlar. Bu, ajanın önceki bağlamı veya tercihleri "unutması" nedeniyle tekrarlayan ve hayal kırıklığı yaratan bir kullanıcı deneyimine yol açar.
+Bellek olmadan, AI uygulamaları genellikle durum bilgisi olmayan (state-less) olur, yani her etkileşim sıfırdan başlar. Bu durum, ajanın önceki bağlamı veya tercihleri "unutması" ile tekrarlayan ve kullanıcı için sinir bozucu deneyime yol açar.
 
 ### Bellek Neden Önemlidir?
 
-Bir ajanın zekası, geçmiş bilgileri hatırlama ve kullanma yeteneğiyle yakından ilişkilidir. Bellek, ajanların şu özelliklere sahip olmasını sağlar:
+Bir ajanın zekası, büyük ölçüde geçmiş bilgileri hatırlama ve kullanma becerisiyle bağlantılıdır. Bellek, ajanların:
 
-• **Düşünceli**: Geçmiş eylemlerden ve sonuçlardan öğrenme.
+• **Yansıtıcı** olmalarını sağlar: Geçmiş eylemlerden ve sonuçlardan öğrenme.
 
-• **Etkileşimli**: Süregelen bir konuşma boyunca bağlamı koruma.
+• **Etkileşimli** olmalarını sağlar: Devam eden bir konuşma boyunca bağlamı koruma.
 
-• **Proaktif ve Tepkisel**: Geçmiş verilere dayanarak ihtiyaçları tahmin etme veya uygun şekilde yanıt verme.
+• **Proaktif ve Reaktif** olmalarını sağlar: İhtiyaçları önceden tahmin etme veya tarihsel verilere dayanarak uygun tepki verme.
 
-• **Otonom**: Saklanan bilgileri kullanarak daha bağımsız çalışabilme.
+• **Özerk** olmalarını sağlar: Depolanmış bilgiden çekerek daha bağımsız hareket etme.
 
 Bellek uygulamanın amacı, ajanları daha **güvenilir ve yetenekli** hale getirmektir.
 
@@ -57,115 +57,123 @@ Bellek uygulamanın amacı, ajanları daha **güvenilir ve yetenekli** hale geti
 
 #### Çalışma Belleği
 
-Bunu, bir ajanın tek bir görev veya düşünce süreci sırasında kullandığı bir tür "karalama kağıdı" olarak düşünebilirsiniz. Bir sonraki adımı hesaplamak için gerekli olan anlık bilgileri tutar.
+Bunu, bir ajan tarafından tek bir devam eden görev veya düşünce süreci boyunca kullanılan bir taslak kağıdı gibi düşünebilirsiniz. Bir sonraki adımı hesaplamak için gereken anlık bilgiyi tutar.
 
-AI ajanları için çalışma belleği genellikle bir konuşmadan en alakalı bilgileri yakalar, tam sohbet geçmişi uzun veya kısaltılmış olsa bile. Gereksinimler, öneriler, kararlar ve eylemler gibi temel unsurları çıkarmaya odaklanır.
+AI ajanları için çalışma belleği genellikle bir konuşmanın en alakalı bilgilerini yakalar, sohbet geçmişi uzun veya kısaltılmış olsa bile. Gereksinimler, teklifler, kararlar ve eylemler gibi anahtar öğeleri çıkarma üzerine odaklanır.
 
 **Çalışma Belleği Örneği**
 
-Bir seyahat rezervasyon ajanında, çalışma belleği kullanıcının mevcut talebini, örneğin "Paris'e bir gezi rezervasyonu yapmak istiyorum" gibi, yakalayabilir. Bu spesifik gereklilik, mevcut etkileşimi yönlendirmek için ajanın anlık bağlamında tutulur.
+Bir seyahat rezervasyon ajanında, çalışma belleği kullanıcının mevcut isteğini yakalayabilir, örneğin "Paris'e bir gezi rezervasyonu yapmak istiyorum". Bu özel gereksinim, mevcut etkileşimi yönlendirmek için ajanın anlık bağlamında tutulur.
 
-#### Kısa Vadeli Bellek
+#### Kısa Süreli Bellek
 
-Bu tür bellek, tek bir konuşma veya oturum süresince bilgiyi tutar. Mevcut sohbetin bağlamıdır ve ajanın diyaloğun önceki dönüşlerine atıfta bulunmasını sağlar.
+Bu bellek türü, tek bir konuşma veya oturum süresince bilgiyi tutar. Şu anki sohbetin bağlamıdır ve ajanın diyaloğun önceki turlarına atıfta bulunmasını sağlar.
 
-**Kısa Vadeli Bellek Örneği**
+[Microsoft Agent Framework](https://github.com/microsoft/agent-framework) Python SDK örneklerinde bu, `AgentSession` ile eşleşir, `agent.create_session()` ile oluşturulur. Oturum, frameworkün yerleşik kısa süreli belleğidir: aynı oturum kullanıldığı sürece konuşma bağlamı erişilebilir tutulur, ancak oturum sona erdiğinde veya uygulama yeniden başlatıldığında bu bağlam kalıcı olmaz. Oturumlar arasında yaşamaları gereken gerçekler ve tercihler için genellikle bir veritabanı, vektör indeksi veya başka kalıcı bir depolama ile uzun süreli bellek kullanın.
 
-Bir kullanıcı "Paris'e bir uçuş ne kadar tutar?" diye sorar ve ardından "Oradaki konaklama ne kadar?" diye devam ederse, kısa vadeli bellek ajanın "orada" kelimesinin aynı konuşma içinde "Paris" anlamına geldiğini bilmesini sağlar.
+**Kısa Süreli Bellek Örneği**
 
-#### Uzun Vadeli Bellek
+Bir kullanıcı, "Paris'e uçak bileti ne kadar tutar?" diye sorarsa ve ardından "Orada konaklama nasıl?" diye devam ederse, kısa süreli bellek ajanın aynı konuşma içinde "orada" nın "Paris" anlamına geldiğini bilmesini sağlar.
 
-Bu, birden fazla konuşma veya oturum boyunca devam eden bilgidir. Ajanların kullanıcı tercihlerini, geçmiş etkileşimleri veya genel bilgileri uzun süre boyunca hatırlamasını sağlar. Kişiselleştirme için önemlidir.
+#### Uzun Süreli Bellek
 
-**Uzun Vadeli Bellek Örneği**
+Birden çok konuşma veya oturum boyunca kalan bilgidir. Ajanların kullanıcı tercihlerini, geçmiş etkileşimleri veya genel bilgileri uzun süre hatırlamasını sağlar. Bu kişiselleştirme için önemlidir.
 
-Uzun vadeli bellek, "Ben kayak yapmayı ve açık hava aktivitelerini seven, dağ manzaralı kahveyi tercih eden ve geçmişteki bir yaralanma nedeniyle ileri seviye kayak pistlerinden kaçınmak isteyen biri" gibi bilgileri saklayabilir. Bu bilgiler, önceki etkileşimlerden öğrenilir ve gelecekteki seyahat planlama oturumlarında önerileri son derece kişiselleştirilmiş hale getirir.
+**Uzun Süreli Bellek Örneği**
 
-#### Kişilik Belleği
+Uzun süreli bellek, "Ben kayak ve açık hava aktivitelerini sever, dağ manzaralı kahveyi tercih eder ve geçmişteki bir yaralanma nedeniyle ileri kayak pistlerinden kaçınır" bilgisini saklayabilir. Bu önceki etkileşimlerden öğrenilmiş bilgi, gelecekteki seyahat planlama oturumlarındaki önerileri son derece kişiselleştirir.
 
-Bu özel bellek türü, bir ajanın tutarlı bir "kişilik" veya "rol" geliştirmesine yardımcı olur. Ajana kendisi veya amaçlanan rolü hakkında detayları hatırlama imkanı verir, böylece etkileşimler daha akıcı ve odaklı hale gelir.
+#### Persona Belleği
 
-**Kişilik Belleği Örneği**
+Bu özelleşmiş bellek türü, bir ajanın tutarlı bir "kişilik" veya "persona" geliştirmesine yardımcı olur. Ajanın kendisi veya amacı hakkında detayları hatırlamasını sağlayarak, etkileşimleri daha akıcı ve odaklı hale getirir.
 
-Eğer seyahat ajanı "uzman bir kayak planlayıcısı" olarak tasarlanmışsa, kişilik belleği bu rolü güçlendirebilir ve yanıtlarının bir uzmanın tonu ve bilgisiyle uyumlu olmasını sağlayabilir.
+**Persona Belleği Örneği**
+Seyahat ajanı "uzman kayak planlayıcısı" olarak tasarlanmışsa, persona belleği bu rolü pekiştirir ve yanıtlarını bir uzman ton ve bilgi seviyesine uygun hale getirir.
 
 #### İş Akışı/Epizodik Bellek
 
-Bu bellek, bir ajanın karmaşık bir görev sırasında attığı adımların sırasını, başarılarını ve başarısızlıklarını saklar. Geçmiş "bölümleri" veya deneyimleri hatırlayarak öğrenmek gibidir.
+Bu bellek, bir ajanın karmaşık bir görev sırasında attığı adımların sırasını, başarılarını ve başarısızlıklarını saklar. Geçmiş deneyimler veya "epizodları" hatırlamak ve bunlardan öğrenmek gibidir.
 
 **Epizodik Bellek Örneği**
 
-Eğer ajan belirli bir uçuşu rezerve etmeye çalışmış ancak müsaitlik nedeniyle başarısız olmuşsa, epizodik bellek bu başarısızlığı kaydedebilir ve ajanın alternatif uçuşlar denemesine veya sonraki bir girişimde kullanıcıyı daha bilgilendirici bir şekilde bilgilendirmesine olanak tanır.
+Ajan belirli bir uçuşu rezerve etmeye çalıştı ancak müsaitlik olmadığı için başarısız olduysa, epizodik bellek bu hatayı kaydedebilir ve ajan sonraki denemede alternatif uçuşları deneyebilir ya da kullanıcıyı daha bilgili şekilde bilgilendirebilir.
 
 #### Varlık Belleği
 
-Bu, konuşmalardan belirli varlıkları (insanlar, yerler veya şeyler) ve olayları çıkarıp hatırlamayı içerir. Ajana tartışılan temel unsurların yapılandırılmış bir anlayışını oluşturma imkanı verir.
+Konuşmalardan belirli varlıklar (kişi, yer veya nesne gibi) ve olaylar çıkarma ve hatırlamayı içerir. Ajanın tartışılan önemli öğeler hakkında yapılandırılmış bir anlayış geliştirmesini sağlar.
 
 **Varlık Belleği Örneği**
 
-Geçmiş bir seyahat hakkında yapılan bir konuşmadan, ajan "Paris", "Eiffel Kulesi" ve "Le Chat Noir restoranında akşam yemeği" gibi varlıkları çıkarabilir. Gelecekteki bir etkileşimde, ajan "Le Chat Noir"i hatırlayabilir ve orada yeni bir rezervasyon yapmayı teklif edebilir.
+Geçmiş bir seyahat hakkındaki konuşmadan ajanın "Paris", "Eyfel Kulesi" ve "Le Chat Noir restoranında akşam yemeği" gibi varlıkları çıkarması mümkündür. Gelecekteki bir etkileşimde ajan "Le Chat Noir"u hatırlayarak orada yeni bir rezervasyon yapmayı teklif edebilir.
 
 #### Yapılandırılmış RAG (Retrieval Augmented Generation)
 
-RAG daha geniş bir teknik olsa da, "Yapılandırılmış RAG" güçlü bir bellek teknolojisi olarak öne çıkar. Konuşmalar, e-postalar, görüntüler gibi çeşitli kaynaklardan yoğun, yapılandırılmış bilgileri çıkarır ve yanıtların hassasiyetini, hatırlama yeteneğini ve hızını artırır. Klasik RAG yalnızca anlamsal benzerliğe dayanırken, Yapılandırılmış RAG bilgilerin iç yapısıyla çalışır.
+RAG daha geniş bir tekniktir, ancak "Yapılandırılmış RAG" güçlü bir bellek teknolojisi olarak öne çıkar. Konuşma, e-posta, resim gibi çeşitli kaynaklardan yoğun, yapılandırılmış bilgiyi çıkarır ve yanıtların doğruluğunu, hatırlanmasını ve hızını artırmak için kullanır. Klasik RAG'ın sadece anlamsal benzerliğe dayanmasının aksine, Yapılandırılmış RAG bilgilerin doğal yapısıyla çalışır.
 
 **Yapılandırılmış RAG Örneği**
 
-Sadece anahtar kelimeleri eşleştirmek yerine, Yapılandırılmış RAG bir e-postadan uçuş detaylarını (varış yeri, tarih, saat, havayolu) ayrıştırabilir ve yapılandırılmış bir şekilde saklayabilir. Bu, "Salı günü Paris'e hangi uçuşu rezerve ettim?" gibi kesin sorgulara olanak tanır.
+Anahtar kelime eşleştirmek yerine, Yapılandırılmış RAG bir e-posta içinden uçuş detaylarını (varış yeri, tarih, saat, havayolu) ayrıştırabilir ve yapılandırılmış şekilde depolayabilir. Böylece "Salı günü Paris'e hangi uçuşu ayırttım?" gibi kesin sorgular yapılabilir.
 
 ## Belleği Uygulama ve Depolama
 
-AI ajanları için bellek uygulamak, **bellek yönetimi** sürecini içerir. Bu süreç, bilgiyi oluşturma, depolama, geri çağırma, entegre etme, güncelleme ve hatta "unutma" (veya silme) işlemlerini kapsar. Geri çağırma özellikle kritik bir unsurdur.
+AI ajanları için bellek uygulamak, bilgi üretme, depolama, alma, bütünleştirme, güncelleme ve hatta "unutma" (veya silme) süreçlerini içeren sistematik bir **bellek yönetimi** sürecidir. Veri alma aşaması özellikle kritik bir unsurdur.
 
-### Özel Bellek Araçları
+### Özelleşmiş Bellek Araçları
 
 #### Mem0
 
-Ajan belleğini depolamak ve yönetmek için Mem0 gibi özel araçlar kullanılabilir. Mem0, ajanların ilgili etkileşimleri hatırlamasına, kullanıcı tercihlerini ve gerçek bağlamı saklamasına ve zamanla başarı ve başarısızlıklardan öğrenmesine olanak tanıyan kalıcı bir bellek katmanı olarak çalışır. Buradaki fikir, durumsuz ajanların durumlu hale gelmesidir.
+Ajan belleğini saklamanın ve yönetmenin bir yolu, Mem0 gibi özel araçlar kullanmaktır. Mem0, ajanların ilgili etkileşimleri hatırlamasına, kullanıcı tercihleri ve gerçekçi bağlamları depolamasına, başarı ve başarısızlıklardan zamanla öğrenmesine olanak tanıyan kalıcı bir bellek katmanı olarak çalışır. Amaç, durum bilgisiz ajanların durum bilgili hale gelmesidir.
 
-Mem0, **iki aşamalı bellek hattı: çıkarma ve güncelleme** ile çalışır. Öncelikle, bir ajanın dizisine eklenen mesajlar Mem0 hizmetine gönderilir, bu hizmet Büyük Dil Modeli (LLM) kullanarak sohbet geçmişini özetler ve yeni anıları çıkarır. Daha sonra, LLM destekli güncelleme aşaması bu anıları ekleyip eklememeye, değiştirmeye veya silmeye karar verir ve bunları vektör, grafik ve anahtar-değer veri tabanlarını içerebilen hibrit bir veri deposunda saklar. Bu sistem ayrıca çeşitli bellek türlerini destekler ve varlıklar arasındaki ilişkileri yönetmek için grafik belleği içerebilir.
+Bu, **iki aşamalı bir bellek iş akışı: çıkarma ve güncelleme** yoluyla işler. Önce, bir ajan sohbetine eklenen mesajlar Mem0 servisine gönderilir, burada Büyük Dil Modeli (LLM) konuşma geçmişini özetler ve yeni bellekleri çıkarır. Ardından LLM destekli güncelleme aşaması, bu bellekleri ekleyip değiştirme veya silme kararını verir, ve bunlar vektör, grafik ve anahtar-değer veritabanlarını içerebilen karma bir veri deposuna kaydedilir. Bu sistem farklı bellek türlerini destekler ve varlıklar arasındaki ilişkileri yönetmek için grafik belleği ekleyebilir.
 
 #### Cognee
 
-Bir diğer güçlü yaklaşım, **Cognee** kullanmaktır. Cognee, yapılandırılmış ve yapılandırılmamış verileri gömülü bilgilerle desteklenen sorgulanabilir bilgi grafiğine dönüştüren açık kaynaklı bir semantik bellek sistemidir. Cognee, vektör benzerlik aramasını grafik ilişkileriyle birleştiren **çift depolama mimarisi** sunar ve ajanların sadece hangi bilginin benzer olduğunu değil, kavramların birbirleriyle nasıl ilişkili olduğunu anlamasını sağlar.
+Diğer güçlü yaklaşım, yapılandırılmış ve yapılandırılmamış verileri gömülerle desteklenen sorgulanabilir bilgi grafiğine dönüştüren açık kaynak kodlu semantik bellek olan **Cognee** kullanmaktır. Cognee, vektörel benzerlik araması ile grafik ilişkilerini birleştiren **çift deposu mimarisine** sahiptir, böylece ajanlar sadece hangi bilgilerin benzer olduğunu değil, kavramların birbirleriyle nasıl ilişkili olduğunu da anlar.
 
-Cognee, **hibrit sorgulama** konusunda mükemmeldir; vektör benzerliği, grafik yapısı ve LLM akıl yürütmesini birleştirir - ham veri aramasından grafik farkındalıklı soru yanıtlamaya kadar. Sistem, kısa vadeli oturum bağlamını ve uzun vadeli kalıcı belleği destekleyen, tek bir bağlı grafik olarak sorgulanabilir bir şekilde evrimleşen ve büyüyen **canlı bellek** sağlar.
+Vektör benzerliği, grafik yapısı ve LLM mantığını harmanlayan **karma veri alma** konusunda üstündür - ham parça aramasından grafik-bilinçli soru yanıta kadar. Sistem, kısa süreli oturum bağlamı ve uzun süreli kalıcı belleği destekleyerek, bağlantılı tek bir grafik olarak sorgulanabilir şekilde gelişen ve büyüyen **yaşayan bellek** tutar.
 
-Cognee notebook öğreticisi ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)), bu birleşik bellek katmanını oluşturmayı, çeşitli veri kaynaklarını içermeyi, bilgi grafiğini görselleştirmeyi ve belirli ajan ihtiyaçlarına uygun farklı arama stratejileriyle sorgulamayı pratik örneklerle gösterir.
+Cognee not defteri eğitimi ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)), çeşitli veri kaynaklarını alma, bilgi grafiğini görselleştirme ve farklı arama stratejileriyle sorgulama örneklerini içeren bu birleşik bellek katmanını oluşturmayı gösterir.
 
-### RAG ile Bellek Depolama
+### Belleği RAG ile Depolama
 
-Mem0 gibi özel bellek araçlarının ötesinde, **Azure AI Search gibi güçlü arama hizmetlerini bellekleri depolamak ve geri çağırmak için bir arka uç olarak kullanabilirsiniz**, özellikle yapılandırılmış RAG için.
+Mem0 gibi özel bellek araçlarının ötesinde, özellikle yapılandırılmış RAG için, bellekleri depolamak ve almak için sağlam arama hizmetleri olarak **Azure AI Search** kullanılabilir.
 
-Bu, ajanın yanıtlarını kendi verilerinizle temellendirmenize olanak tanır, daha alakalı ve doğru cevaplar sağlar. Azure AI Search, kullanıcıya özel seyahat anılarını, ürün kataloglarını veya herhangi bir alanla ilgili bilgiyi depolamak için kullanılabilir.
+Bu, ajanınızın yanıtlarını kendi verilerinizle güçlendirmenizi sağlar ve daha alakalı ve doğru cevaplar sunar. Azure AI Search, kullanıcıya özgü seyahat anılarını, ürün kataloglarını veya herhangi bir başka alana özgü bilgileri depolamak için kullanılabilir.
 
-Azure AI Search, konuşma geçmişleri, e-postalar veya hatta görüntüler gibi büyük veri setlerinden yoğun, yapılandırılmış bilgileri çıkarma ve geri çağırma konusunda mükemmel olan **Yapılandırılmış RAG** gibi özellikleri destekler. Bu, geleneksel metin parçalama ve gömme yaklaşımlarına kıyasla "insanüstü hassasiyet ve hatırlama" sağlar.
+Azure AI Search, konuşma geçmişleri, e-postalar veya hatta görüntüler gibi büyük veri kümelerinden yoğun, yapılandırılmış bilgileri çıkarmada ve almadaki üstün özellikleriyle **Yapılandırılmış RAG**'yi destekler. Bu, geleneksel metin parçalayıcı ve gömme yaklaşımlarına kıyasla "insanüstü hassasiyet ve hatırlama" sağlar.
 
-## AI Ajanlarını Kendini Geliştiren Hale Getirmek
+## AI Ajanlarının Kendini Geliştirmesini Sağlama
 
-Kendini geliştiren ajanlar için yaygın bir model, bir **"bilgi ajanı"** tanıtmayı içerir. Bu ayrı ajan, kullanıcı ile birincil ajan arasındaki ana konuşmayı gözlemler. Rolü şunları içerir:
+Kendini geliştiren ajanlar için yaygın bir model, ayrı bir **"bilgi ajanı"** kullanmaktır. Bu ajan, kullanıcı ile birincil ajan arasındaki ana konuşmayı gözlemler. Rolü:
 
-1. **Değerli bilgiyi belirleme**: Konuşmanın herhangi bir kısmının genel bilgi veya belirli bir kullanıcı tercihi olarak kaydedilmeye değer olup olmadığını belirleme.
+1. **Değerli bilgiyi belirlemek**: Konuşmanın herhangi bir bölümünün genel bilgi veya özel kullanıcı tercihi olarak kaydedilmeye değer olup olmadığını anlamak.
 
-2. **Çıkarma ve özetleme**: Konuşmadan temel öğrenmeyi veya tercihi damıtma.
+2. **Çıkarma ve özetleme**: Konuşmadan temel öğrenmeyi veya tercihi özlü şekilde çıkarmak.
 
-3. **Bilgi tabanında saklama**: Çıkarılan bilgiyi, genellikle bir vektör veri tabanında, daha sonra geri çağırılabilmesi için kalıcı hale getirme.
+3. **Bilgi tabanına kaydetme**: Çıkarılan bu bilgiyi, genellikle bir vektör veritabanında kalıcı hale getirmek ve daha sonra erişilebilir kılmak.
 
-4. **Gelecek sorguları artırma**: Kullanıcı yeni bir sorgu başlattığında, bilgi ajanı ilgili saklanan bilgiyi geri çağırır ve kullanıcı istemine ekler, birincil ajana kritik bağlam sağlar (RAG'ye benzer şekilde).
+4. **Gelecekteki sorguları zenginleştirme**: Kullanıcı yeni bir sorgu başlattığında, bilgi ajanı ilgili kaydedilmiş bilgileri alır ve kullanıcının promptuna ekler, birincil ajan için kritik bağlam sağlar (RAG benzeri).
 
 ### Bellek için Optimizasyonlar
 
-• **Gecikme Yönetimi**: Kullanıcı etkileşimlerini yavaşlatmamak için, bilgilerin saklanmaya veya geri çağırılmaya değer olup olmadığını hızlıca kontrol etmek için daha ucuz ve hızlı bir model kullanılabilir, yalnızca daha karmaşık çıkarma/geri çağırma süreci gerektiğinde devreye girer.
+• **Gecikme Yönetimi**: Kullanıcı etkileşimlerini yavaşlatmamak için, önce daha ucuz ve hızlı bir model kullanılarak bilginin kaydedilmeye ya da alınmaya değer olup olmadığı hızlıca kontrol edilir, yalnızca gerektiğinde daha karmaşık çıkarma/geri alma süreçleri devreye sokulur.
 
-• **Bilgi Tabanı Bakımı**: Büyüyen bir bilgi tabanı için, daha az sıklıkla kullanılan bilgiler "soğuk depolama"ya taşınabilir, böylece maliyetler yönetilebilir.
+• **Bilgi Tabanı Bakımı**: Büyüyen bir bilgi tabanı için daha az kullanılan bilgiler maliyeti yönetmek adına "soğuk depolamaya" taşınabilir.
 
 ## Ajan Belleği Hakkında Daha Fazla Sorunuz mu Var?
 
-[Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) adresine katılarak diğer öğrenenlerle tanışabilir, ofis saatlerine katılabilir ve AI ajanlarıyla ilgili sorularınızı yanıtlayabilirsiniz.
+Diğer öğrenenlerle tanışmak, ofis saatlerine katılmak ve AI Ajanlar ile ilgili sorularınızı cevaplamak için [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) topluluğuna katılın.
+## Önceki Ders
+
+[AI Ajanlar için Bağlam Mühendisliği](../12-context-engineering/README.md)
+
+## Sonraki Ders
+
+[Microsoft Agent Framework'ü Keşfetmek](../14-microsoft-agent-framework/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çeviriler hata veya yanlışlıklar içerebilir. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlamalar veya yanlış yorumlamalardan sorumlu değiliz.
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,42 +1,42 @@
-# Azure AI Agent Hizmeti Geliştirme
+# Microsoft Foundry Ajan Hizmeti Geliştirme
 
-Bu alıştırmada, [Azure AI Foundry portalı](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) içindeki Azure AI Agent hizmet araçlarını kullanarak Uçuş Rezervasyonu için bir ajan oluşturacaksınız. Ajan, kullanıcılarla etkileşim kurabilecek ve uçuşlar hakkında bilgi sağlayabilecektir.
+Bu egzersizde, [Microsoft Foundry portalı](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) içindeki Microsoft Foundry Ajan Hizmeti araçlarını kullanarak Uçuş Rezervasyonu için bir ajan oluşturacaksınız. Ajan, kullanıcılarla etkileşim kurabilecek ve uçuşlar hakkında bilgi sağlayabilecektir.
 
-## Önkoşullar
+## Ön koşullar
 
-Bu alıştırmayı tamamlamak için aşağıdakilere ihtiyacınız var:
-1. Aktif aboneliğe sahip bir Azure hesabı. [Ücretsiz hesap oluşturun](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-2. Bir Azure AI Foundry hub oluşturma izninizin olması veya sizin için oluşturulmuş olması.
-    - Rolünüz Contributor veya Owner ise, bu öğreticideki adımları takip edebilirsiniz.
+Bu egzersizi tamamlamak için aşağıdaki gereksinimlere ihtiyacınız vardır:
+1. Aktif aboneliğe sahip bir Azure hesabı. [Ücretsiz bir hesap oluşturun](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+2. Bir Microsoft Foundry hub’ı oluşturmak için izinlere sahip olmanız ya da sizin için birinin oluşturmuş olması gerekir.
+    - Rolünüz Katkıda Bulunan veya Sahip ise, bu öğreticideki adımları takip edebilirsiniz.
 
-## Azure AI Foundry hub oluşturma
+## Microsoft Foundry hub oluşturun
 
-> **Note:** Azure AI Foundry önceden Azure AI Studio olarak bilinmekteydi.
+> **Not:** Microsoft Foundry önceden Azure AI Studio olarak bilinmekteydi.
 
-1. Azure AI Foundry hub oluşturmak için [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) blog yazısındaki yönergeleri izleyin.
-2. Projeniz oluşturulduğunda, gösterilen ipuçlarını kapatın ve Azure AI Foundry portalındaki proje sayfasını inceleyin. Sayfa aşağıdaki görsele benzer olmalıdır:
+1. Microsoft Foundry hub oluşturmak için [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) blog yazısındaki kılavuzları takip edin.
+2. Projeniz oluşturulduğunda, görüntülenen ipuçlarını kapatın ve Microsoft Foundry portalındaki proje sayfasını inceleyin; sayfa aşağıdaki görsele benzer olmalıdır:
 
-    ![Azure AI Foundry Project](../../../translated_images/tr/azure-ai-foundry.88d0c35298348c2f.webp)
+    ![Microsoft Foundry Project](../../../translated_images/tr/azure-ai-foundry.88d0c35298348c2f.webp)
 
-## Model dağıtma
+## Bir model dağıtın
 
-1. Projenizin sol panelinde, **My assets** bölümünde, **Models + endpoints** sayfasını seçin.
-2. **Models + endpoints** sayfasında, **Model deployments** sekmesinde, **+ Deploy model** menüsünden **Deploy base model** seçeneğini seçin.
-3. Listede `gpt-4o-mini` modelini arayın, seçin ve onaylayın.
+1. Projenizin sol panelinde, **Varlıklarım** bölümünde, **Modeller + uç noktalar** sayfasını seçin.
+2. **Modeller + uç noktalar** sayfasında, **Model dağıtımları** sekmesinde, **+ Model dağıt** menüsünden **Temel modeli dağıt** seçeneğini seçin.
+3. Listeden `gpt-5-mini` modelini arayın, sonra seçin ve onaylayın.
 
-    > **Note**: TPM değerini düşürmek, kullandığınız abonelikteki kota aşımını önlemeye yardımcı olur.
+    > **Not**: TPM'yi düşürmek, kullandığınız abonelikteki kota aşımını önlemeye yardımcı olur.
 
     ![Model Deployed](../../../translated_images/tr/model-deployment.3749c53fb81e18fd.webp)
 
-## Ajan oluşturma
+## Bir ajan oluşturun
 
-Modeli dağıttığınıza göre, artık bir ajan oluşturabilirsiniz. Ajan, kullanıcılarla etkileşim kurabilen bir sohbet AI modelidir.
+Model dağıttıktan sonra bir ajan oluşturabilirsiniz. Ajan, kullanıcılarla etkileşim kurmak için kullanılan konuşma tabanlı bir yapay zeka modelidir.
 
-1. Projenizin sol panelinde, **Build & Customize** bölümünde, **Agents** sayfasını seçin.
-2. Yeni bir ajan oluşturmak için **+ Create agent** butonuna tıklayın. **Agent Setup** iletişim kutusunda:
-    - Ajan için `FlightAgent` gibi bir isim girin.
-    - Daha önce oluşturduğunuz `gpt-4o-mini` model dağıtımının seçili olduğundan emin olun.
-    - Ajanın takip etmesini istediğiniz yönergelere göre **Instructions** bölümünü ayarlayın. İşte bir örnek:
+1. Projenizin sol panelinde, **Oluştur & Özelleştir** bölümünde, **Ajanlar** sayfasını seçin.
+2. Yeni bir ajan oluşturmak için **+ Ajan oluştur** butonuna tıklayın. **Ajan Kurulumu** iletişim kutusunda:
+    - Ajana bir ad girin, örneğin `FlightAgent`.
+    - Daha önce oluşturduğunuz `gpt-5-mini` model dağıtımının seçili olduğundan emin olun.
+    - Ajana uyulacak talimatları **Talimatlar** bölümüne girin. İşte bir örnek:
     ```
     You are FlightAgent, a virtual assistant specialized in handling flight-related queries. Your role includes assisting users with searching for flights, retrieving flight details, checking seat availability, and providing real-time flight status. Follow the instructions below to ensure clarity and effectiveness in your responses:
 
@@ -64,41 +64,46 @@ Modeli dağıttığınıza göre, artık bir ajan oluşturabilirsiniz. Ajan, kul
     
     ```
 > [!NOTE]
-> Detaylı bir prompt için, daha fazla bilgiye [bu depodan](https://github.com/ShivamGoyal03/RoamMind) ulaşabilirsiniz.
+> Daha detaylı bir talimat için, [bu depoyu](https://github.com/ShivamGoyal03/RoamMind) inceleyebilirsiniz.
     
-> Ayrıca, ajanınızın yeteneklerini artırmak ve kullanıcı taleplerine dayalı otomatik görevler gerçekleştirmek için **Knowledge Base** ve **Actions** ekleyebilirsiniz. Bu alıştırma için bu adımları atlayabilirsiniz.
+> Ayrıca, ajanın kullanıcı isteklerine göre daha fazla bilgi sunmasını ve otomatik görevler yapmasını sağlamak için **Bilgi Tabanı** ve **Eylemler** ekleyebilirsiniz. Bu egzersizde bu adımlar atlanabilir.
     
 ![Agent Setup](../../../translated_images/tr/agent-setup.9bbb8755bf5df672.webp)
 
-3. Yeni bir çoklu AI ajanı oluşturmak için sadece **New Agent** butonuna tıklayın. Oluşturulan ajan, Agents sayfasında görüntülenecektir.
+3. Yeni bir çoklu yapay zekâ ajanı oluşturmak için sadece **Yeni Ajan** butonuna tıklayın. Oluşturulan ajan Ajanlar sayfasında görünecektir.
 
-## Ajanı test etme
 
-Ajanı oluşturduktan sonra, Azure AI Foundry portalındaki oyun alanında kullanıcı sorgularına nasıl yanıt verdiğini test edebilirsiniz.
+## Ajanı test edin
 
-1. Ajanınızın **Setup** panelinin üst kısmında, **Try in playground** seçeneğini seçin.
-2. **Playground** panelinde, sohbet penceresine sorgular yazarak ajanla etkileşim kurabilirsiniz. Örneğin, ajana 28’inde Seattle’dan New York’a uçuş aramasını isteyebilirsiniz.
+Ajanı oluşturduktan sonra, Microsoft Foundry portalının oyun alanında kullanıcı sorgularına nasıl yanıt verdiğini test edebilirsiniz.
 
-    > **Note**: Bu alıştırmada gerçek zamanlı veri kullanılmadığı için ajan doğru yanıtlar vermeyebilir. Amaç, ajanın verilen yönergelere göre kullanıcı sorgularını anlama ve yanıt verme yeteneğini test etmektir.
+1. Ajanınız için **Kurulum** panelinin üstünde, **Oyun alanında dene** seçeneğini seçin.
+2. **Oyun alanı** panelinde, sohbet penceresine sorgular yazarak ajanla etkileşimde bulunabilirsiniz. Örneğin, ajan’dan 28’inde Seattle’dan New York’a uçuş aramasını isteyebilirsiniz.
+
+    > **Not**: Bu egzersizde gerçek zamanlı veri kullanılmadığından ajan doğru yanıtlar vermeyebilir. Amaç, ajanın verilen talimatlara dayanarak kullanıcı sorgularını anlayıp yanıt verme yeteneğini test etmektir.
 
     ![Agent Playground](../../../translated_images/tr/agent-playground.dc146586de715010.webp)
 
 3. Ajanı test ettikten sonra, daha fazla niyet, eğitim verisi ve eylem ekleyerek yeteneklerini geliştirebilirsiniz.
 
-## Kaynakları temizleme
+## Kaynakları temizleyin
 
-Ajanı test etmeyi bitirdiğinizde, ek maliyet oluşmaması için silebilirsiniz.
-1. [Azure portalını](https://portal.azure.com) açın ve bu alıştırmada kullandığınız hub kaynaklarının bulunduğu kaynak grubunu görüntüleyin.
-2. Araç çubuğunda **Delete resource group** seçeneğini seçin.
+Ajanı test etmeyi bitirdiğinizde, ek maliyetlerden kaçınmak için silebilirsiniz.
+1. [Azure portalını](https://portal.azure.com) açın ve bu egzersizde kullandığınız hub kaynaklarını dağıttığınız kaynak grubunun içeriğine bakın.
+2. Araç çubuğunda, **Kaynak grubunu sil** seçeneğini seçin.
 3. Kaynak grubu adını girin ve silmek istediğinizi onaylayın.
 
 ## Kaynaklar
 
-- [Azure AI Foundry dokümantasyonu](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
-- [Azure AI Foundry portalı](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
-- [Azure AI Studio ile Başlarken](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
-- [Azure'da AI ajanlarının temelleri](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry dokümantasyonu](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry portalı](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry ile Başlarken](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
+- [Azure’daki AI ajanlarının Temelleri](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
 - [Azure AI Discord](https://aka.ms/AzureAI/Discord)
 
-**Feragatname**:  
-Bu belge, AI çeviri servisi [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hatalar veya yanlışlıklar içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalar veya yorum hatalarından sorumlu değiliz.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

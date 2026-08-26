@@ -1,57 +1,55 @@
-[![योजना डिजाइन ढाँचा](../../../translated_images/ne/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Planning Design Pattern](../../../translated_images/ne/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(माथिको चित्रमा क्लिक गरेर यस पाठको भिडियो हेर्नुहोस्)_
+> _(यो पाठको भिडियो हेर्न माथिको तस्बिरमा क्लिक गर्नुहोस्)_
 
 # योजना डिजाइन
 
 ## परिचय
 
-यस पाठले समेट्नेछ:
+यो पाठले समेट्नेछ
 
-* स्पष्ट समग्र लक्ष्य परिभाषित गर्ने र जटिल कार्यलाई व्यवस्थापन गर्न मिल्ने कार्यहरूमा विभाजन गर्ने।
-* संरचित आउटपुटको उपयोग गरेर विश्वसनीय र मेसिन-पढ्न मिल्ने प्रतिक्रिया सुनिश्चित गर्ने।
-* गतिशील कार्यहरू र अप्रत्याशित इनपुटहरूलाई व्यवस्थापन गर्न घटनामा आधारित दृष्टिकोण लागू गर्ने।
+* स्पष्ट समग्र लक्ष्य परिभाषित गर्ने र एक जटिल कार्यलाई व्यवस्थापनयोग्य कार्यहरूमा विभाजन गर्ने।
+* अधिक विश्वसनीय र मेसिन-पठनीय प्रतिक्रिया को लागि संरचित आउटपुटको उपयोग गर्ने।
+* गतिशील कार्यहरू र अप्रत्याशित इनपुटहरू सामना गर्न घटना-चालित दृष्टिकोण लागू गर्ने।
 
 ## सिक्ने लक्ष्यहरू
 
-यस पाठ पूरा गरेपछि, तपाईंले निम्न कुराहरूको समझ पाउनुहुनेछ:
+यो पाठ पूरा गरेपछि तपाईंसँग निम्न कुराहरूको बुझाइ हुनेछ:
 
-* AI एजेन्टको लागि समग्र लक्ष्य पहिचान गर्ने र सेट गर्ने, जसले सुनिश्चित गर्दछ कि उसले के हासिल गर्नुपर्ने हो स्पष्ट रूपमा थाहा छ।
-* जटिल कार्यलाई व्यवस्थापन गर्न मिल्ने उपकार्यहरूमा विभाजन गर्ने र तिनीहरूलाई तार्किक क्रममा व्यवस्थित गर्ने।
-* एजेन्टहरूलाई सही उपकरणहरू (जस्तै, खोज उपकरण वा डेटा एनालिटिक्स उपकरण) प्रदान गर्ने, तिनीहरू कहिले र कसरी प्रयोग गरिन्छ भन्ने निर्णय गर्ने, र उत्पन्न हुने अप्रत्याशित परिस्थितिहरूलाई व्यवस्थापन गर्ने।
-* उपकार्यहरूको परिणाम मूल्याङ्कन गर्ने, प्रदर्शन मापन गर्ने, र अन्तिम आउटपुट सुधार गर्न कार्यहरूमा पुनरावृत्ति गर्ने।
+* AI एजेन्टको लागि समग्र लक्ष्य पहिचान गर्ने र सेट गर्ने, जसले के हासिल गर्नु पर्ने स्पष्ट रूपमा थाहा पाओस्।
+* जटिल कार्यलाई व्यवस्थापनयोग्य उपकार्यहरूमा विभाजन गर्ने र तिनीहरूलाई तार्किक अनुक्रममा व्यवस्थित गर्ने।
+* एजेन्टहरूलाई सही उपकरणहरू (जस्तै, खोज उपकरण वा डाटा विश्लेषण उपकरणहरू) द्वारा सुसज्जित गर्ने, कहिले र कसरी प्रयोग गर्ने निर्णय गर्ने, र उत्पन्न भएकाप अप्रत्याशित अवस्थाहरूलाई सामना गर्ने।
+* उपकार्यहरूको नतिजा मूल्याङ्कन गर्ने, प्रदर्शन मापन गर्ने, र अन्तिम आउटपुट सुधार गर्न कार्यहरू पुनरावृत्ति गर्ने।
 
 ## समग्र लक्ष्य परिभाषित गर्ने र कार्यलाई विभाजन गर्ने
 
-![लक्ष्य र कार्य परिभाषित गर्दै](../../../translated_images/ne/defining-goals-tasks.d70439e19e37c47a.webp)
+![Defining Goals and Tasks](../../../translated_images/ne/defining-goals-tasks.d70439e19e37c47a.webp)
 
-अधिकांश वास्तविक-विश्व कार्यहरू एक चरणमा समाधान गर्न धेरै जटिल हुन्छन्। AI एजेन्टलाई यसको योजना र कार्यहरूलाई मार्गदर्शन गर्न एक संक्षिप्त उद्देश्य आवश्यक हुन्छ। उदाहरणका लागि, निम्न लक्ष्यलाई विचार गर्नुहोस्:
+धेरै वास्तविक-विश्व कार्यहरू एकैचोटि समाधान गर्न धेरै जटिल हुन्छन्। AI एजेन्टलाई यसको योजना र कार्यहरूलाई मार्गदर्शन गर्न संक्षिप्त उद्देश्य आवश्यक हुन्छ। उदाहरणका लागि, लक्ष्य विचार गर्नुहोस्:
 
-    "३-दिनको यात्रा योजना तयार गर्नुहोस्।"
+    "एक ३-दिने यात्रा यात्रा तालिका तयार पार्नु।"
 
-यद्यपि यो भन्न सजिलो छ, यसलाई अझ स्पष्ट बनाउन आवश्यक छ। लक्ष्य जति स्पष्ट हुन्छ, एजेन्ट (र कुनै पनि मानव सहयोगी)ले सही परिणाम प्राप्त गर्न ध्यान केन्द्रित गर्न सक्दछ, जस्तै उडान विकल्पहरू, होटल सिफारिसहरू, र गतिविधि सुझावहरू सहितको विस्तृत यात्रा योजना बनाउने।
+यो सरल देखिए पनि यसलाई अझ स्पष्ट बनाउन आवश्यक छ। जब लक्ष्य स्पष्ट हुन्छ, एजेन्ट (र कुनै पनि मानव सहकर्मीहरू) उचित परिणाम हासिल गर्न बढी ध्यान केन्द्रित गर्न सक्छन्, जस्तै उडान विकल्प, होटल सिफारिसहरू र क्रियाकलाप सुझावहरू सहित एक समग्र यात्रा तालिका तयार पार्ने।
 
 ### कार्य विभाजन
 
-ठूलो वा जटिल कार्यहरूलाई साना, लक्ष्य-उन्मुख उपकार्यहरूमा विभाजन गर्दा व्यवस्थापन गर्न सजिलो हुन्छ। 
-यात्रा योजना उदाहरणको लागि, तपाईंले लक्ष्यलाई निम्नमा विभाजन गर्न सक्नुहुन्छ:
+ठूलो वा जटिल कार्यहरू साना, लक्ष्य-केंद्रित उपकार्यहरूमा विभाजन गर्दा थप व्यवस्थापनयोग्य हुन्छन्।
+यात्रा तालिका उदाहरणका लागि, तपाईँ लक्ष्यलाई यसरी विभाजन गर्न सक्नुहुन्छ:
 
 * उडान बुकिङ
 * होटल बुकिङ
-* कार भाडा
-* व्यक्तिगतकरण
+* कार भाडामा लिने
+* अनुकूलन
 
-प्रत्येक उपकार्यलाई समर्पित एजेन्टहरू वा प्रक्रियाहरूले समाधान गर्न सक्छ। एउटा एजेन्टले उत्कृष्ट उडान डिलहरू खोज्नमा विशेषज्ञता हासिल गर्न सक्छ, अर्कोले होटल बुकिङमा ध्यान केन्द्रित गर्न सक्छ, र यस्तै। समन्वय गर्ने वा "डाउनस्ट्रीम" एजेन्टले यी परिणामहरूलाई अन्तिम प्रयोगकर्ताको लागि एक सुसंगत यात्रा योजनामा संकलन गर्न सक्छ।
+प्रत्येक उपकार्यलाई समर्पित एजेन्टहरू वा प्रक्रियाहरूले समाधान गर्न सक्छन्। एउटा एजेन्टले सबैभन्दा राम्रो उडान सम्झौता खोज्नमा विशेषज्ञता राख्न सक्छ, अर्को होटल बुकिङमा केन्द्रित हुन्छ, र यस्तै। समन्वय गर्ने वा "डाउनस्ट्रीम" एजेन्टले यी नतिजाहरूलाई प्रयोगकर्ता अन्तिममा एक सुसंगत यात्रा तालिकामा संकलन गर्न सक्छ।
 
-यो मोड्युलर दृष्टिकोणले क्रमिक सुधारको लागि पनि अनुमति दिन्छ। उदाहरणका लागि, तपाईंले खाना सिफारिसहरू वा स्थानीय गतिविधि सुझावहरूको लागि विशेषज्ञ एजेन्टहरू थप्न सक्नुहुन्छ र समयसँगै यात्रा योजनालाई परिष्कृत गर्न सक्नुहुन्छ।
+यो मोड्युलर दृष्टिकोणले क्रमिक सुधारहरूको पनि अनुमति दिन्छ। उदाहरणका लागि, तपाईँ खाद्य सिफारिसहरू वा स्थानीय गतिविधि सुझावहरूको लागि विशेष एजेन्टहरू थप्न सक्नुहुन्छ र समयक्रमसँगै यात्रा तालिकालाई सुधार्न सक्नुहुन्छ।
 
 ### संरचित आउटपुट
 
-ठूलो भाषा मोडेलहरू (LLMs)ले संरचित आउटपुट (जस्तै JSON) उत्पन्न गर्न सक्छन्, जुन डाउनस्ट्रीम एजेन्टहरू वा सेवाहरूले पार्स र प्रक्रिया गर्न सजिलो हुन्छ। यो विशेष गरी बहु-एजेन्ट सन्दर्भमा उपयोगी छ, जहाँ हामी योजना आउटपुट प्राप्त भएपछि यी कार्यहरूलाई कार्यान्वयन गर्न सक्छौं। 
+ठूलो भाषा मोडेलहरू (LLMs) ले संरचित आउटपुट (जस्तो JSON) उत्पादन गर्न सक्छन् जुन डाउनस्ट्रीम एजेन्टहरू वा सेवाहरूले पार्स र प्रक्रिया गर्न सजिलो हुन्छ। यो विशेष गरी बहु-एजेन्ट सन्दर्भमा उपयोगी हुन्छ, जहाँ हामी योजना आउटपुट प्राप्त भएपछि यी कार्यहरू सञ्चालन गर्न सक्छौं।
 
-द्रुत अवलोकनको लागि:
-
-निम्न Python स्निपेटले एउटा साधारण योजना एजेन्टले लक्ष्यलाई उपकार्यहरूमा विभाजन गर्ने र संरचित योजना उत्पन्न गर्ने प्रक्रिया देखाउँछ:
+तलको Python स्निपेटले देखाउँछ कसरी एक साधारण योजना एजेन्टले लक्ष्यलाई उपकार्यहरूमा विभाजन गरी संरचित योजना बनाउँछ:
 
 ```python
 from pydantic import BaseModel
@@ -61,9 +59,8 @@ import json
 import os
 from typing import Optional
 from pprint import pprint
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.azure import AzureAIChatCompletionClient
-from azure.core.credentials import AzureKeyCredential
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 class AgentEnum(str, Enum):
     FlightBooking = "flight_booking"
@@ -74,35 +71,26 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# यात्रा उपकार्य मोडेल
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # हामी कार्य एजेन्टलाई दिन चाहन्छौं
 
 class TravelPlan(BaseModel):
     main_task: str
     subtasks: List[TravelSubTask]
     is_greeting: bool
 
-client = AzureAIChatCompletionClient(
-    model="gpt-4o-mini",
-    endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-    credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
-    model_info={
-        "json_output": False,
-        "function_calling": True,
-        "vision": True,
-        "family": "unknown",
-    },
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
-# Define the user message
-messages = [
-    SystemMessage(content="""You are an planner agent.
+# प्रयोगकर्ता सन्देश परिभाषित गर्नुहोस्
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
-                      Provide your response in JSON format with the following structure:
+    Provide your response in JSON format with the following structure:
 {'main_task': 'Plan a family trip from Singapore to Melbourne.',
  'subtasks': [{'assigned_agent': 'flight_booking',
                'task_details': 'Book round-trip flights from Singapore to '
@@ -113,45 +101,27 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(
-        content="Create a travel plan for a family of 2 kids from Singapore to Melboune", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": 'json_object'})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-response_content: Optional[str] = response.content if isinstance(
-    response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string" )
+response = client.create_response(input=user_message, instructions=system_prompt)
 
+response_content = response.output_text
 pprint(json.loads(response_content))
-
-# # Ensure the response content is a valid JSON string before loading it
-# response_content: Optional[str] = response.content if isinstance(
-#     response.content, str) else None
-# if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
-
-# # Print the response content after loading it as JSON
-# pprint(json.loads(response_content))
-
-# Validate the response content with the MathReasoning model
-# TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### बहु-एजेन्ट समन्वयसहितको योजना एजेन्ट
+### बहु-एजेन्ट समन्वयसहित योजना एजेन्ट
 
-यस उदाहरणमा, एक Semantic Router Agentले प्रयोगकर्ताको अनुरोध प्राप्त गर्दछ (जस्तै, "मेरो यात्राको लागि होटल योजना चाहिन्छ।")।
+यस उदाहरणमा, एक सेमेन्टिक राउटर एजेन्टले प्रयोगकर्ताको अनुरोध प्राप्त गर्छ (जस्तै, "म मेरो यात्राको लागि होटल योजना चाहन्छु।")।
 
-प्लानरले त्यसपछि:
+योजनाकार त्यसपछि:
 
-* होटल योजना प्राप्त गर्दछ: प्लानरले प्रयोगकर्ताको सन्देश लिन्छ र प्रणाली प्रम्प्ट (उपलब्ध एजेन्ट विवरणहरू सहित)को आधारमा संरचित यात्रा योजना उत्पन्न गर्दछ।
-* एजेन्टहरू र तिनीहरूको उपकरणहरूको सूची बनाउँछ: एजेन्ट रजिस्ट्रीले एजेन्टहरूको सूची (जस्तै, उडान, होटल, कार भाडा, र गतिविधिहरूको लागि) र तिनीहरूले प्रस्ताव गर्ने कार्यहरू वा उपकरणहरू समावेश गर्दछ।
-* योजना सम्बन्धित एजेन्टहरूमा पठाउँछ: उपकार्यहरूको संख्याको आधारमा, प्लानरले सन्देशलाई समर्पित एजेन्टमा (एकल-कार्य परिदृश्यहरूको लागि) वा बहु-एजेन्ट सहयोगको लागि समूह च्याट व्यवस्थापकमार्फत समन्वय गर्दछ।
-* परिणामको सारांश बनाउँछ: अन्ततः, प्लानरले उत्पन्न योजनालाई स्पष्टताको लागि सारांश बनाउँछ।
-
-निम्न Python कोड नमूनाले यी चरणहरूलाई चित्रण गर्दछ:
+* होटल योजना प्राप्त गर्छ: योजनाकारले प्रयोगकर्ताको सन्देशलाई लिन्छ र प्रणाली प्रॉम्प्ट (उपलब्ध एजेन्ट विवरण सहित) को आधारमा एक संरचित यात्रा योजना उत्पन्न गर्छ।
+* एजेन्टहरू र तिनका उपकरणहरूको सूची बनाउँछ: एजेन्ट रजिस्ट्रीमा एजेन्टहरूको सूची हुन्छ (जस्तै, उडान, होटल, कार भाडामा लिने, र क्रियाकलापहरूका लागि) र तिनीहरूले प्रस्ताव गर्ने कार्यहरू वा उपकरणहरू।
+* योजनालाई सम्बन्धित एजेन्टहरूतर्फ पठाउँछ: उपकार्यहरूको संख्याको आधारमा, योजनाकारले सन्देशलाई सिधै समर्पित एजेन्टलाई पठाउन सक्छ (एकल-कार्य परिस्थितिहरूमा) वा बहु-एजेन्ट सहकार्यका लागि समूह च्याट प्रबन्धक मार्फत समन्वय गर्छ।
+* परिणाम सारांश बनाउँछ: अन्ततः, योजनाकारले उत्पन्न योजनाको स्पष्टताको लागि सारांश बनाउँछ।
+तलको Python कोड उदाहरण यी चरणहरू देखाउँछ:
 
 ```python
 
@@ -169,11 +139,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# यात्रा सबटास्क मोडेल
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # हामी एजेन्टलाई काम असाइन गर्न चाहन्छौं
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -183,25 +153,22 @@ import json
 import os
 from typing import Optional
 
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the client with type-checked environment variables
+# क्लाइन्ट सिर्जना गर्नुहोस्
 
-client = AzureOpenAIChatCompletionClient(
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
 from pprint import pprint
 
-# Define the user message
+# प्रयोगकर्ता सन्देश परिभाषित गर्नुहोस्
 
-messages = [
-    SystemMessage(content="""You are an planner agent.
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -209,24 +176,20 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-# Ensure the response content is a valid JSON string before loading it
+response = client.create_response(input=user_message, instructions=system_prompt)
 
-response_content: Optional[str] = response.content if isinstance(response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string")
+response_content = response.output_text
 
-# Print the response content after loading it as JSON
+# JSON रूपमा लोड गरेपछि प्रतिक्रिया सामग्री प्रिन्ट गर्नुहोस्
 
 pprint(json.loads(response_content))
 ```
 
-पछिल्लो कोडबाट उत्पन्न आउटपुट निम्नानुसार छ, र तपाईंले यस संरचित आउटपुटलाई `assigned_agent`मा रुट गर्न र अन्तिम प्रयोगकर्तालाई यात्रा योजना सारांश गर्न प्रयोग गर्न सक्नुहुन्छ।
+यसपछि आउँने आउटपुट हो र तपाईं यस संरचित आउटपुटलाई `assigned_agent` मा मार्गदर्शन गर्न र अन्तिम प्रयोगकर्तालाई यात्रा योजना सारांशमा प्रयोग गर्न सक्नुहुन्छ।
 
 ```json
 {
@@ -257,21 +220,23 @@ pprint(json.loads(response_content))
 }
 ```
 
-पछिल्लो कोड नमूनासहितको उदाहरण नोटबुक [यहाँ](07-autogen.ipynb) उपलब्ध छ।
+पहिलेको कोड नमूना सहितको उदाहरण नोटबुक [यहाँ](./code_samples/07-python-agent-framework.ipynb) उपलब्ध छ।
 
 ### पुनरावृत्त योजना
 
-केही कार्यहरूलाई अगाडि-पछाडि वा पुनः योजना आवश्यक पर्छ, जहाँ एउटा उपकार्यको परिणामले अर्कोमा प्रभाव पार्छ। उदाहरणका लागि, यदि एजेन्टले उडान बुकिङ गर्दा अप्रत्याशित डेटा ढाँचा पत्ता लगाउँछ भने, उसले होटल बुकिङमा अघि बढ्नु अघि आफ्नो रणनीति अनुकूलन गर्न आवश्यक हुन सक्छ।
+केही कार्यहरूले पछाडि फिर्ता जान वा पुन: योजना बनाउने आवश्यकता पर्छ, जहाँ एउटा उपकार्यको परिणामले अर्कोमा प्रभाव पार्छ। उदाहरणका लागि, यदि एजेन्टले उडान बुकिङ गर्दा अप्रत्याशित डाटा ढाँचा पत्ता लगाउँछ भने, यसले होटल बुकिङ अघि आफ्नो रणनीति परिमार्जन गर्न सक्छ।
 
-थप रूपमा, प्रयोगकर्ताको प्रतिक्रिया (जस्तै, मानवले पहिलेको उडानलाई प्राथमिकता दिन निर्णय गर्ने)ले आंशिक पुनः योजना ट्रिगर गर्न सक्छ। यो गतिशील, पुनरावृत्त दृष्टिकोणले सुनिश्चित गर्दछ कि अन्तिम समाधान वास्तविक-विश्व बाधाहरू र विकसित प्रयोगकर्ता प्राथमिकताहरूको साथ मेल खान्छ।
+यसै गरी, प्रयोगकर्ता प्रतिक्रिया (जस्तै, मानिसले पहिलेको उडान रोज्न चाहन्छ) ले आंशिक पुन: योजनालाई ट्रिगर गर्न सक्छ। यो गतिशील, पुनरावृत्त दृष्टिकोणले अन्तिम समाधान वास्तविक-विश्व सीमा र विकासशील प्रयोगकर्ता प्राथमिकतासँग मेल खान्छ भन्ने सुनिश्चित गर्छ।
 
-उदाहरणका लागि कोड:
+जस्तै नमूना कोड
 
 ```python
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
-messages = [
-    SystemMessage(content="""You are a planner agent to optimize the
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+#.. पहिलेको कोड जस्तै र प्रयोगकर्ता इतिहास, वर्तमान योजना पठाउनुहोस्
+
+system_prompt = """You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -279,32 +244,35 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-    AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
-]
-# .. re-plan and send the tasks to respective agents
+    - DefaultAgent: For handling general requests"""
+
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
+
+response = client.create_response(
+    input=user_message,
+    instructions=system_prompt,
+    context=f"Previous travel plan - {TravelPlan}",
+)
+# .. पुन: योजना बनाउनुहोस् र कार्यहरू सम्बन्धित एजेन्टहरूलाई पठाउनुहोस्
 ```
 
-जटिल कार्यहरूको लागि व्यापक योजना गर्न Magnetic One अवश्य जाँच गर्नुहोस्।
+बढी व्यापक योजनाका लागि Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">ब्लगपोस्ट</a> हेर्नुहोस्, जसले जटिल कार्यहरू समाधान गर्दछ।
 
 ## सारांश
 
-यस लेखमा हामीले एउटा उदाहरण हेरेका छौं कि कसरी हामी एउटा प्लानर बनाउन सक्छौं जसले परिभाषित उपलब्ध एजेन्टहरूलाई गतिशील रूपमा चयन गर्न सक्छ। प्लानरको आउटपुटले कार्यहरूलाई विभाजन गर्छ र एजेन्टहरूलाई असाइन गर्छ ताकि तिनीहरू कार्यान्वयन गर्न सकिन्छ। मानिन्छ कि एजेन्टहरूले कार्य पूरा गर्न आवश्यक कार्यहरू/उपकरणहरूमा पहुँच राख्छन्। एजेन्टहरूका अतिरिक्त, तपाईंले अन्य ढाँचाहरू जस्तै रिफ्लेक्शन, सारांशकर्ता, र राउन्ड रोबिन च्याट समावेश गर्न सक्नुहुन्छ ताकि थप अनुकूलन गर्न सकियोस्।
+यस लेखमा हामीले कसरी एक योजना बनाउने जसले परिभाषित उपलब्ध एजेन्टहरूलाई गतिशील रूपमा चयन गर्न सक्छ भन्ने उदाहरण हेर्यौं। योजनाकारको आउटपुटले कार्यहरूलाई विभाजन गरी एजेन्टहरूलाई जिम्मेवारी दिनेछ ताकि ती कार्यहरू कार्यान्वयन गर्न सकियोस। एजेन्टहरूले कार्य गर्ने लागि आवश्यक कार्यहरू/उपकरणहरूमा पहुँच राख्छन् भन्ने मानिएको छ। एजेन्टहरूका साथै तपाईंले परावर्तन, सारांशकर्ता, र राउन्ड रोबिन च्याट जस्ता अन्य ढाँचाहरू पनि समावेश गर्न सक्नुहुन्छ।
 
 ## थप स्रोतहरू
 
-AutoGen Magnetic One - जटिल कार्यहरू समाधान गर्नको लागि एक सामान्य बहु-एजेन्ट प्रणाली हो र यसले धेरै चुनौतीपूर्ण एजेन्टिक बेंचमार्कहरूमा प्रभावशाली परिणाम प्राप्त गरेको छ। सन्दर्भ:
+Magentic One - जटिल कार्यहरू समाधान गर्न सामान्य बहु-एजेन्ट प्रणाली हो र यसले धेरै चुनौतीपूर्ण एजेन्टिक बेंचमार्कहरूमा प्रभावशाली परिणामहरू प्राप्त गरेको छ। सन्दर्भ: <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Magentic One</a>. यस कार्यान्वयनमा, समन्वयकर्ताले कार्य-विशिष्ट योजना बनाउन र ती कार्यहरू उपलब्ध एजेन्टहरूलाई दिन्छ। योजनाबद्ध नगरेर, समन्वयकर्ताले कार्यको प्रगति ट्रयाक गर्न र आवश्यक परे पुन: योजना बनाउने तरिका पनि प्रयोग गर्छ।
 
-. यस कार्यान्वयनमा, समन्वयकर्ताले कार्य-विशिष्ट योजना बनाउँछ र उपलब्ध एजेन्टहरूलाई यी कार्यहरू प्रतिनिधि बनाउँछ। योजना बनाउनुका साथै, समन्वयकर्ताले कार्यको प्रगति अनुगमन गर्न र आवश्यक परेमा पुनः योजना बनाउने ट्र्याकिङ मेकानिजम पनि प्रयोग गर्दछ।
+### योजना डिजाइन ढाँचाबारे थप प्रश्न छ?
 
-### योजना डिजाइन ढाँचाबारे थप प्रश्नहरू छन्?
-
-[Azure AI Foundry Discord](https://aka.ms/ai-agents/discord)मा सामेल हुनुहोस् ताकि अन्य सिक्नेहरूलाई भेट्न सकियोस्, कार्यालय समयमा सहभागी हुन सकियोस्, र तपाईंको AI एजेन्टहरू सम्बन्धी प्रश्नहरूको उत्तर प्राप्त गर्न सकियोस्।
+[Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) मा सहभागी हुनुहोस् अन्य सिक्नेहरूसँग भेट्न, कार्यालय समयहरूमा जान, र AI एजेन्टहरू सम्बन्धी प्रश्नहरूको उत्तर पाउन।
 
 ## अघिल्लो पाठ
 
-[विश्वसनीय AI एजेन्टहरू निर्माण गर्दै](../06-building-trustworthy-agents/README.md)
+[विश्वसनीय AI एजेन्टहरू निर्माण](../06-building-trustworthy-agents/README.md)
 
 ## अर्को पाठ
 
@@ -312,5 +280,7 @@ AutoGen Magnetic One - जटिल कार्यहरू समाधान 
 
 ---
 
-**अस्वीकरण**:  
-यो दस्तावेज़ AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) प्रयोग गरेर अनुवाद गरिएको छ। हामी शुद्धताको लागि प्रयास गर्छौं, तर कृपया ध्यान दिनुहोस् कि स्वचालित अनुवादहरूमा त्रुटिहरू वा अशुद्धताहरू हुन सक्छ। यसको मूल भाषा मा रहेको मूल दस्तावेज़लाई आधिकारिक स्रोत मानिनुपर्छ। महत्वपूर्ण जानकारीको लागि, व्यावसायिक मानव अनुवाद सिफारिस गरिन्छ। यस अनुवादको प्रयोगबाट उत्पन्न हुने कुनै पनि गलतफहमी वा गलत व्याख्याको लागि हामी जिम्मेवार हुने छैनौं।
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**अस्वीकरण**:
+यो दस्तावेज़ AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) प्रयोग गरेर अनुवाद गरिएको हो। हामी सही हुन प्रयास गर्छौं, तर कृपया जानकार हुनुस् कि स्वचालित अनुवादमा त्रुटिहरू वा अशुद्धताहरू हुन सक्छन्। मूल दस्तावेज़ यसको मूल भाषामा आधिकारिक स्रोत मानिनुपर्छ। महत्वपूर्ण जानकारीका लागि व्यावसायिक मानव अनुवाद सिफारिस गरिन्छ। यस अनुवादको प्रयोगबाट उत्पन्न कुनै पनि गलत बुझाइ वा त्रुटिको लागि हामी जिम्मेवार छैनौं।
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

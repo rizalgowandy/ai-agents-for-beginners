@@ -1,46 +1,46 @@
-# ਕੋਰਸ ਸੈਟਅਪ
+# ਕੋਰਸ ਸੈੱਟਅੱਪ
 
-## ਪਰਿਚਯ
+## ਜਾਣ ਪਹਚਾਣ
 
-ਇਸ ਪਾਠ ਵਿੱਚ ਤੁਸੀਂ ਸਿੱਖੋਗੇ ਕਿ ਇਸ ਕੋਰਸ ਦੇ ਕੋਡ ਨਮੂਨਿਆਂ ਨੂੰ ਕਿਵੇਂ ਚਲਾਇਆ ਜਾਵੇ।
+ਇਹ ਸਬਕ ਇਸ ਕੋਰਸ ਦੇ ਕੋਡ ਸੈਂਪਲ ਚਲਾਉਣ ਬਾਰੇ ਜਾਣਕਾਰੀ ਦੇਵੇਗਾ।
 
-## ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਜੁੜੋ ਅਤੇ ਮਦਦ ਪ੍ਰਾਪਤ ਕਰੋ
+## ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਜੁੜੋ ਅਤੇ ਮਦਦ ਲਵੋ
 
-ਆਪਣਾ ਰਿਪੋ ਕਲੋਨ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ, [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord) ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਜਾਓ ਤਾਂ ਜੋ ਸੈਟਅਪ ਵਿੱਚ ਮਦਦ ਲੈ ਸਕੋ, ਕੋਰਸ ਬਾਰੇ ਕੋਈ ਵੀ ਸਵਾਲ ਪੁੱਛ ਸਕੋ, ਜਾਂ ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਜੁੜ ਸਕੋ।
+ਆਪਣਾ ਰਿਪੋ ਕਲੋਨ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ, ਕਿਰਪਾ ਕਰਕੇ [AI Agents For Beginners Discord ਚੈਨਲ](https://aka.ms/ai-agents/discord) ਨਾਲ ਜੁੜੋ ਤਾਂ ਜੋ ਸੈੱਟਅੱਪ ਬਾਰੇ ਮਦਦ ਮਿਲੇ, ਕੋਰਸ ਬਾਰੇ ਕਿਸੇ ਵੀ ਸਵਾਲ ਦਾ ਜਵਾਬ ਮਿਲ ਸਕੇ ਜਾਂ ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਜੁੜ ਸਕੋ।
 
-## ਇਸ ਰਿਪੋ ਨੂੰ ਕਲੋਨ ਜਾਂ ਫੋਰਕ ਕਰੋ
+## ਇਹ ਰਿਪੋ ਕਲੋਨ ਜਾਂ ਫੋਰਕ ਕਰੋ
 
-ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ GitHub Repository ਨੂੰ ਕਲੋਨ ਜਾਂ ਫੋਰਕ ਕਰੋ। ਇਸ ਨਾਲ ਤੁਹਾਡੇ ਕੋਲ ਕੋਰਸ ਮਟੀਰੀਅਲ ਦਾ ਆਪਣਾ ਵਰਜਨ ਹੋਵੇਗਾ ਤਾਂ ਜੋ ਤੁਸੀਂ ਕੋਡ ਨੂੰ ਚਲਾ ਸਕੋ, ਟੈਸਟ ਕਰ ਸਕੋ, ਅਤੇ ਇਸ ਵਿੱਚ ਸੋਧ ਕਰ ਸਕੋ!
+ਸ਼ੁਰੂ ਕਰਨ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ GitHub ਰਿਪੋਜ਼ਟਰੀ ਨੂੰ ਕਲੋਨ ਜਾਂ ਫੋਰਕ ਕਰੋ। ਇਸ ਨਾਲ ਤੁਹਾਡੇ ਕੋਲ ਕੋਰਸ ਸਮੱਗਰੀ ਦਾ ਆਪਣਾ ਵਰਜਨ ਬਣ ਜਾਵੇਗਾ ਤਾਂ ਜੋ ਤੁਸੀਂ ਕੋਡ ਚਲਾ ਸਕੋ, ਟੈਸਟ ਕਰ ਸਕੋ ਅਤੇ ਸੁਧਾਰ ਕਰ ਸਕੋ!
 
-ਇਹ <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">ਰਿਪੋ ਨੂੰ ਫੋਰਕ ਕਰਨ</a> ਲਈ ਲਿੰਕ 'ਤੇ ਕਲਿੱਕ ਕਰਕੇ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
+ਇਹ ਕੰਮ ਦੇਣ ਲਈ <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">ਫੋਰਕ ਰਿਪੋ 'ਤੇ ਕਲਿੱਕ ਕਰੋ</a>
 
-ਹੁਣ ਤੁਹਾਡੇ ਕੋਲ ਇਸ ਕੋਰਸ ਦਾ ਆਪਣਾ ਫੋਰਕ ਕੀਤਾ ਵਰਜਨ ਹੇਠਾਂ ਦਿੱਤੇ ਲਿੰਕ ਵਿੱਚ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ:
+ਤੁਹਾਡੇ ਕੋਲ ਹੁਣ ਇਸ ਕੋਰਸ ਦਾ ਆਪਣਾ ਫੋਰਕ ਕੀਤਾ ਵਰਜਨ ਇਸ ਲਿੰਕ 'ਤੇ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ:
 
 ![Forked Repo](../../../translated_images/pa/forked-repo.33f27ca1901baa6a.webp)
 
-### ਸ਼ੈਲੋ ਕਲੋਨ (ਵਰਕਸ਼ਾਪ / ਕੋਡਸਪੇਸ ਲਈ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ)
+### ਸ਼ੈੱਲੋ ਕਲੋਨ (ਵਰਕਸ਼ਾਪ / ਕੋਡਸਪੇਸਜ਼ ਲਈ ਸਿਫਾਰਸੀ)
 
-  >ਪੂਰਾ ਰਿਪੋਜ਼ਟਰੀ ਡਾਊਨਲੋਡ ਕਰਨ ਸਮੇਂ ਵੱਡਾ (~3 GB) ਹੋ ਸਕਦਾ ਹੈ। ਜੇ ਤੁਸੀਂ ਸਿਰਫ ਵਰਕਸ਼ਾਪ ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਰਹੇ ਹੋ ਜਾਂ ਸਿਰਫ ਕੁਝ ਪਾਠ ਫੋਲਡਰਾਂ ਦੀ ਲੋੜ ਹੈ, ਤਾਂ ਸ਼ੈਲੋ ਕਲੋਨ (ਜਾਂ ਸਪਾਰਸ ਕਲੋਨ) ਇਤਿਹਾਸ ਨੂੰ ਛੋਟਾ ਕਰਕੇ ਅਤੇ/ਜਾਂ ਬਲੌਬਸ ਨੂੰ ਛੱਡ ਕੇ ਡਾਊਨਲੋਡ ਨੂੰ ਘਟਾਉਂਦਾ ਹੈ।
+  >ਜਦੋਂ ਤੁਸੀਂ ਪੂਰੀ ਇਤਿਹਾਸ ਅਤੇ ਸਾਰੇ ਫਾਈਲਾਂ ਡਾਊਨਲੋਡ ਕਰਦੇ ਹੋ ਤਾਂ ਪੂਰਾ ਰਿਪੋਜ਼ਟਰੀ ਵੱਡਾ (~3 GB) ਹੋ ਸਕਦਾ ਹੈ। ਜੇਕਰ ਤੁਸੀਂ ਸਿਰਫ ਵਰਕਸ਼ਾਪ ਵਿੱਚ ਸ਼ਾਮਿਲ ਹੋ ਰਹੇ ਹੋ ਜਾਂ ਸਿਰਫ ਕੁਝ ਸਬਕ ਦੇ ਫੋਲਡਰ ਚਾਹੀਦੇ ਹਨ, ਤਾਂ ਇੱਕ ਸ਼ੈੱਲੋ ਕਲੋਨ (ਜਾਂ ਸਪੈਰਸ ਕਲੋਨ) ਇਤਿਹਾਸ ਨੂੰ ਘਟਾ ਕੇ ਅਤੇ/ਜਾਂ ਬਲੌਬਸ ਨੂੰ ਛੱਡ ਕੇ ਜ਼ਿਆਦਾਤਰ ਡਾਊਨਲੋਡ ਤੋਂ ਬਚਾਅ ਕਰਦਾ ਹੈ।
 
-#### ਤੇਜ਼ ਸ਼ੈਲੋ ਕਲੋਨ — ਘੱਟ ਇਤਿਹਾਸ, ਸਾਰੇ ਫਾਈਲਾਂ
+#### ਤੇਜ਼ ਸ਼ੈੱਲੋ ਕਲੋਨ — ਘੱਟ ਇਤਿਹਾਸ, ਸਾਰੀਆਂ ਫਾਈਲਾਂ
 
-ਹੇਠਾਂ ਦਿੱਤੇ ਕਮਾਂਡਾਂ ਵਿੱਚ `<your-username>` ਨੂੰ ਆਪਣੇ ਫੋਰਕ URL ਨਾਲ ਬਦਲੋ (ਜਾਂ ਜੇ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਅੱਪਸਟ੍ਰੀਮ URL ਨਾਲ)।
+ਹੇਠਾਂ ਦਿੱਤੇ ਕਮਾਂਡਾਂ ਵਿੱਚ `<your-username>` ਨੂੰ ਆਪਣੇ ਫੋਰਕ URL (ਜਾਂ ਤੁਹਾਡੀ ਪਸੰਦ ਦੇ ਅਪਸਟਰੀਮ URL) ਨਾਲ ਬਦਲੋ।
 
-ਸਿਰਫ ਤਾਜ਼ਾ ਕਮਿਟ ਇਤਿਹਾਸ ਕਲੋਨ ਕਰਨ ਲਈ (ਛੋਟਾ ਡਾਊਨਲੋਡ):
+ਸਿਰਫ ਨਵੀਂ ਕਮਿੱਟ ਇਤਿਹਾਸ ਕਲੋਨ ਕਰਨ ਲਈ (ਛੋਟਾ ਡਾਊਨਲੋਡ):
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-ਇੱਕ ਵਿਸ਼ੇਸ਼ ਸ਼ਾਖਾ ਕਲੋਨ ਕਰਨ ਲਈ:
+ਕਿਸੇ ਖਾਸ ਬ੍ਰਾਂਚ ਨੂੰ ਕਲੋਨ ਕਰਨ ਲਈ:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### ਅੰਸ਼ਕ (ਸਪਾਰਸ) ਕਲੋਨ — ਘੱਟ ਬਲੌਬਸ + ਸਿਰਫ ਚੁਣੇ ਫੋਲਡਰ
+#### ਅੰਸ਼ਿਕ (ਸਪੈਰਸ) ਕਲੋਨ — ਘੱਟ ਬਲੌਬਸ + ਸਿਰਫ ਚੁਣੇ ਹੋਏ ਫੋਲਡਰ
 
-ਇਹ ਅੰਸ਼ਕ ਕਲੋਨ ਅਤੇ ਸਪਾਰਸ-ਚੈਕਆਉਟ ਵਰਤਦਾ ਹੈ (Git 2.25+ ਦੀ ਲੋੜ ਹੈ ਅਤੇ ਅੰਸ਼ਕ ਕਲੋਨ ਸਹਾਇਤਾ ਨਾਲ ਆਧੁਨਿਕ Git ਦੀ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ ਹੈ):
+ਇਹ ਅੰਸ਼ਿਕ ਕਲੋਨ ਅਤੇ ਸਪੈਰਸ-ਚੈਕਆਊਟ ਵਰਤਦਾ ਹੈ (ਜਿਸਨੂੰ Git 2.25+ ਅਤੇ ਅਧੁਨਿਕ Git ਨਾਲ ਅੰਸ਼ਿਕ ਕਲੋਨ ਸਪੋਰਟ ਦੀ ਸਿਫਾਰਸ ਕੀਤੀ ਜਾਂਦੀ ਹੈ):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
@@ -52,62 +52,51 @@ git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-usernam
 cd ai-agents-for-beginners
 ```
 
-ਫਿਰ ਇਹ ਨਿਰਧਾਰਤ ਕਰੋ ਕਿ ਤੁਹਾਨੂੰ ਕਿਹੜੇ ਫੋਲਡਰ ਚਾਹੀਦੇ ਹਨ (ਹੇਠਾਂ ਦਿੱਤੇ ਉਦਾਹਰਣ ਵਿੱਚ ਦੋ ਫੋਲਡਰ ਦਿਖਾਏ ਗਏ ਹਨ):
+ਫਿਰ ਉਹ ਫੋਲਡਰ ਸੂਚੀਬੱਧ ਕਰੋ ਜੋ ਤੁਸੀਂ ਚਾਹੁੰਦੇ ਹੋ (ਹੇਠਾਂ ਦਿੱਤਾ ਉਦਾਹਰਨ ਵਿੱਚ ਦੋ ਫੋਲਡਰ ਹਨ):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-ਕਲੋਨ ਕਰਨ ਅਤੇ ਫਾਈਲਾਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਜੇ ਤੁਹਾਨੂੰ ਸਿਰਫ ਫਾਈਲਾਂ ਦੀ ਲੋੜ ਹੈ ਅਤੇ ਜਗ੍ਹਾ ਖਾਲੀ ਕਰਨੀ ਹੈ (ਕੋਈ git ਇਤਿਹਾਸ ਨਹੀਂ), ਕਿਰਪਾ ਕਰਕੇ ਰਿਪੋਜ਼ਟਰੀ ਮੈਟਾਡੇਟਾ ਨੂੰ ਮਿਟਾ ਦਿਓ (💀ਅਣਰਿਵਰਸਿਬਲ — ਤੁਸੀਂ ਸਾਰੇ Git ਫੰਕਸ਼ਨਲਿਟੀ ਗੁਆ ਲਵੋਗੇ: ਕੋਈ ਕਮਿਟ, ਪੂਲ, ਪੁਸ਼, ਜਾਂ ਇਤਿਹਾਸ ਪਹੁੰਚ ਨਹੀਂ)।
+ਕਲੋਨ ਕਰਨ ਅਤੇ ਫਾਈਲਾਂ ਦੀ ਜਾਂਚ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਜੇ ਤੁਹਾਨੂੰ ਸਿਰਫ ਫਾਈਲਾਂ ਦੀ ਲੋੜ ਹੈ ਅਤੇ ਤੁਸੀਂ ਸਥਾਨ ਖਾਲੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ (ਕੋਈ ਗਿੱਟ ਇਤਿਹਾਸ ਨਹੀਂ), ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਰਿਪੋਜ਼ਟਰੀ ਮੈਟਾਡੇਟਾ ਹਟਾ ਦਿਓ (💀ਅਣਵਾਪਸੀਯੋਗ — ਤੁਸੀਂ ਸਾਰੀ Git ਫੰਕਸ਼ਨਾਲਟੀ ਨੂੰ ਗੁਆ ਦਿਓਗੇ: ਕੋਈ ਕਮਿੱਟ, ਪੁਲ, ਪੁਸ਼ ਜਾਂ ਇਤਿਹਾਸ ਐਕਸੈਸ ਨਹੀਂ)।
 
 ```bash
-# ਜੈਡਐਸਐਚ/ਬੈਸ਼
+# ਜ਼ੈਸ਼/ਬੈਸ਼
 rm -rf .git
 ```
 
 ```powershell
-# ਪਾਵਰਸ਼ੈਲ
+# ਪਾਵਰਸ਼ੈੱਲ
 Remove-Item -Recurse -Force .git
 ```
 
-#### GitHub Codespaces ਵਰਤਣਾ (ਸਥਾਨਕ ਵੱਡੇ ਡਾਊਨਲੋਡ ਤੋਂ ਬਚਣ ਲਈ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ)
+#### GitHub Codespaces ਵਰਤਣਾ (ਲੋਕਲ ਵੱਡੇ ਡਾਊਨਲੋਡ ਤੋਂ ਬਚਣ ਲਈ ਸਿਫਾਰਸੀ)
 
-- [GitHub UI](https://github.com/codespaces) ਰਾਹੀਂ ਇਸ ਰਿਪੋ ਲਈ ਨਵਾਂ Codespace ਬਣਾਓ।  
+- ਇਸ ਰਿਪੋ ਲਈ [GitHub UI](https://github.com/codespaces) ਜੀ ਤੁਹਾਡਾ ਨਵਾਂ Codespace ਬਣਾਓ।  
 
-- ਨਵੀਂ ਬਣਾਈ ਗਈ ਕੋਡਸਪੇਸ ਦੇ ਟਰਮੀਨਲ ਵਿੱਚ, ਉਪਰੋਕਤ ਸ਼ੈਲੋ/ਸਪਾਰਸ ਕਲੋਨ ਕਮਾਂਡਾਂ ਵਿੱਚੋਂ ਇੱਕ ਚਲਾਓ ਤਾਂ ਜੋ ਸਿਰਫ ਤੁਹਾਨੂੰ ਲੋੜੀਂਦੇ ਪਾਠ ਫੋਲਡਰਾਂ ਨੂੰ ਕੋਡਸਪੇਸ ਵਰਕਸਪੇਸ ਵਿੱਚ ਲਿਆ ਸਕੋ।
-- ਵਿਕਲਪਿਕ: ਕੋਡਸਪੇਸ ਵਿੱਚ ਕਲੋਨ ਕਰਨ ਤੋਂ ਬਾਅਦ, .git ਨੂੰ ਹਟਾਓ ਤਾਂ ਜੋ ਵਾਧੂ ਜਗ੍ਹਾ ਮੁੜ ਪ੍ਰਾਪਤ ਕੀਤੀ ਜਾ ਸਕੇ (ਉਪਰੋਕਤ ਹਟਾਉਣ ਕਮਾਂਡਾਂ ਵੇਖੋ)।
-- ਨੋਟ: ਜੇ ਤੁਸੀਂ ਰਿਪੋ ਨੂੰ ਸਿੱਧੇ ਕੋਡਸਪੇਸ ਵਿੱਚ ਖੋਲ੍ਹਣਾ ਪਸੰਦ ਕਰਦੇ ਹੋ (ਬਿਨਾਂ ਵਾਧੂ ਕਲੋਨ), ਤਾਂ ਧਿਆਨ ਦਿਓ ਕਿ ਕੋਡਸਪੇਸ devcontainer ਵਾਤਾਵਰਣ ਬਣਾਏਗਾ ਅਤੇ ਫਿਰ ਵੀ ਤੁਹਾਨੂੰ ਲੋੜ ਤੋਂ ਵੱਧ ਪ੍ਰੋਵਿਜ਼ਨ ਕਰ ਸਕਦਾ ਹੈ। ਇੱਕ ਤਾਜ਼ਾ ਕੋਡਸਪੇਸ ਵਿੱਚ ਸ਼ੈਲੋ ਕਾਪੀ ਕਲੋਨ ਕਰਨਾ ਤੁਹਾਨੂੰ ਡਿਸਕ ਦੀ ਵਰਤੋਂ 'ਤੇ ਵਧੇਰੇ ਕੰਟਰੋਲ ਦਿੰਦਾ ਹੈ।
+- ਨਵੇਂ ਬਣੇ Codespace ਦੇ ਟਰਮੀਨਲ ਵਿੱਚ, ਹੇਠਾਂ ਦਿੱਤੇ ਸ਼ੈੱਲੋ/ਸਪੈਰਸ ਕਲੋਨ ਕਮਾਂਡਾਂ ਵਿੱਚੋਂ ਇੱਕ ਚਲਾਓ ਜੋ ਸਿਰਫ ਤੁਹਾਡੇ ਚਾਹੀਦੇ ਸਬਕ ਫੋਲਡਰ Codespace ਵਰਕਸਪੇਸ ਵਿੱਚ ਲਿਆਉਂਦਾ ਹੈ।
+- ਵਿਕਲਪਿਕ: Codespaces ਵਿੱਚ ਕਲੋਨ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਵਾਧੂ ਸਥਾਨ ਵਾਪਸ ਲੈਣ ਲਈ .git ਹਟਾਓ (ਉੱਪਰ ਦਿੱਤੀਆਂ ਕਮਾਂਡਾਂ ਵੇਖੋ)।
+- ਧਿਆਨ ਦਿਓ: ਜੇ ਤੁਸੀਂ ਰਿਪੋ ਨੂੰ ਸਿੱਧਾ Codespaces ਵਿੱਚ ਖੋਲ੍ਹਣਾ ਚਾਹੁੰਦੇ ਹੋ (ਕੋਈ ਵਾਧੂ ਕਲੋਨ ਨਹੀਂ), ਤਾਂ ਜਾਣੋ ਕਿ Codespaces devcontainer ਵਾਤਾਵਰਣ ਬਣਾਏਗਾ ਅਤੇ ਸੰਭਵ ਹੈ ਉਹ ਤੁਹਾਡੀ ਲੋੜ ਤੋਂ ਵੱਧ ਪ੍ਰੋਵੀਜ਼ਨਵੇਂਸ਼ਨ ਕਰੇ। ਨਵੇਂ Codespace ਵਿੱਚ ਇੱਕ ਸ਼ੈੱਲੋ ਕਾਪੀ ਕਲੋਨ ਕਰਨਾ ਤੁਹਾਡੇ ਡਿਸਕ ਦੀ ਵਰਤੋਂ 'ਤੇ ਵਧੇਰੇ ਨਿਯੰਤ੍ਰਣ ਦਿੰਦਾ ਹੈ।
 
-#### ਸੁਝਾਅ
+#### ਸਲਾਹਾਂ
 
-- ਜੇ ਤੁਸੀਂ ਸੋਧ/ਕਮਿਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹਮੇਸ਼ਾ ਕਲੋਨ URL ਨੂੰ ਆਪਣੇ ਫੋਰਕ ਨਾਲ ਬਦਲੋ।
-- ਜੇ ਤੁਹਾਨੂੰ ਬਾਅਦ ਵਿੱਚ ਹੋਰ ਇਤਿਹਾਸ ਜਾਂ ਫਾਈਲਾਂ ਦੀ ਲੋੜ ਹੈ, ਤਾਂ ਤੁਸੀਂ ਉਹਨਾਂ ਨੂੰ ਫੈਚ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਸਪਾਰਸ-ਚੈਕਆਉਟ ਨੂੰ ਹੋਰ ਫੋਲਡਰ ਸ਼ਾਮਲ ਕਰਨ ਲਈ ਸਮਾਯੋਜਿਤ ਕਰ ਸਕਦੇ ਹੋ।
+- ਜੇ ਤੁਸੀਂ ਸੋਧ/ਕਮਿੱਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹਮੇਸ਼ਾ ਕਲੋਨ URL ਨੂੰ ਆਪਣੇ ਫੋਰਕ ਨਾਲ ਬਦਲੋ।
+- ਜੇ ਬਾਅਦ ਵਿੱਚ ਵੱਧ ਇਤਿਹਾਸ ਜਾਂ ਫਾਈਲਾਂ ਦੀ ਲੋੜ ਹੋਵੇ, ਤਾਂ ਤੁਸੀਂ ਉਨ੍ਹਾਂ ਨੂੰ ਫੈਚ ਕਰ ਸਕਦੇ ਹੋ ਜਾਂ ਸਪੈਰਸ-ਚੈਕਆਊਟ ਨੂੰ ਵੱਧ ਫੋਲਡਰ ਸ਼ਾਮਿਲ ਕਰਨ ਲਈ ਸੋਧ ਸਕਦੇ ਹੋ।
 
 ## ਕੋਡ ਚਲਾਉਣਾ
 
-ਇਹ ਕੋਰਸ Jupyter Notebooks ਦੀ ਇੱਕ ਲੜੀ ਪੇਸ਼ ਕਰਦਾ ਹੈ ਜਿਸ ਨਾਲ ਤੁਸੀਂ AI Agents ਬਣਾਉਣ ਦਾ ਹੱਥ-ਅਨੁਭਵ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ।
+ਇਹ ਕੋਰਸ ਤੁਹਾਨੂੰ AI ਏਜੰਟ ਬਣਾਉਣ ਦਾ ਪ੍ਰਯੋਗ ਕਰਨ ਲਈ ਕਈ Jupyter ਨੋਟਬੁੱਕਸ ਦਿੰਦਾ ਹੈ।
 
-ਕੋਡ ਨਮੂਨੇ ਹੇਠਾਂ ਦਿੱਤੇ ਵਿੱਚੋਂ ਕਿਸੇ ਇੱਕ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਨ:
+ਕੋਡ ਸੈਂਪਲ **Microsoft Agent Framework (MAF)** ਵਰਤਦੇ ਹਨ, `FoundryChatClient` ਨਾਲ ਜੋ **Microsoft Foundry** ਦੁਆਰਾ **Microsoft Foundry Agent Service V2** (Responses API) ਨਾਲ ਜੁੜਦਾ ਹੈ।
 
-**GitHub ਖਾਤਾ ਲੋੜੀਂਦਾ ਹੈ - ਮੁਫ਼ਤ**:
-
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. (semantic-kernel.ipynb) ਦੇ ਤੌਰ 'ਤੇ ਲੇਬਲ ਕੀਤਾ ਗਿਆ ਹੈ।
-2) AutoGen Framework + GitHub Models Marketplace. (autogen.ipynb) ਦੇ ਤੌਰ 'ਤੇ ਲੇਬਲ ਕੀਤਾ ਗਿਆ ਹੈ।
-
-**Azure Subscription ਲੋੜੀਂਦਾ ਹੈ**:
-
-3) Azure AI Foundry + Azure AI Agent Service. (azureaiagent.ipynb) ਦੇ ਤੌਰ 'ਤੇ ਲੇਬਲ ਕੀਤਾ ਗਿਆ ਹੈ।
-
-ਅਸੀਂ ਤੁਹਾਨੂੰ ਤਿੰਨ ਕਿਸਮਾਂ ਦੇ ਉਦਾਹਰਣਾਂ ਨੂੰ ਅਜ਼ਮਾਉਣ ਲਈ ਪ੍ਰੇਰਿਤ ਕਰਦੇ ਹਾਂ ਤਾਂ ਜੋ ਤੁਸੀਂ ਵੇਖ ਸਕੋ ਕਿ ਤੁਹਾਡੇ ਲਈ ਕਿਹੜਾ ਵਧੀਆ ਕੰਮ ਕਰਦਾ ਹੈ।
-
-ਤੁਹਾਡੇ ਦੁਆਰਾ ਚੁਣਿਆ ਗਿਆ ਵਿਕਲਪ ਇਹ ਨਿਰਧਾਰਤ ਕਰੇਗਾ ਕਿ ਹੇਠਾਂ ਦਿੱਤੇ ਸੈਟਅਪ ਕਦਮਾਂ ਵਿੱਚੋਂ ਕਿਹੜੇ ਦੀ ਲੋੜ ਹੈ:
+ਸਾਰੇ Python ਨੋਟਬੁੱਕਸ `*-python-agent-framework.ipynb` ਲੇਬਲ ਵਾਲੇ ਹਨ।
 
 ## ਲੋੜਾਂ
 
 - Python 3.12+
-  - **NOTE**: ਜੇ ਤੁਹਾਡੇ ਕੋਲ Python3.12 ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ, ਤਾਂ ਇਹ ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ ਇਸਨੂੰ ਇੰਸਟਾਲ ਕਰੋ। ਫਿਰ requirements.txt ਫਾਈਲ ਤੋਂ ਸਹੀ ਵਰਜਨ ਇੰਸਟਾਲ ਕਰਨ ਲਈ python3.12 ਵਰਤ ਕੇ ਆਪਣਾ venv ਬਣਾਓ।
+  - **ਟਿੱਪਣੀ**: ਜੇਕਰ ਤੁਹਾਡੇ ਕੋਲ Python3.12 ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ, ਤਾਂ ਕ੍ਰਿਪਾ ਕਰਕੇ ਇਹ ਇੰਸਟਾਲ ਕਰੋ। ਫਿਰ requirements.txt ਤੋਂ ਸਹੀ ਵਰਜਨ ਇੱਕਠੇ ਕਰਨ ਲਈ python3.12 ਨਾਲ ਆਪਣਾ venv ਬਣਾਓ।
   
-    >ਉਦਾਹਰਣ
+    >ਉਦਾਹਰਨ
 
     Python venv ਡਾਇਰੈਕਟਰੀ ਬਣਾਓ:
 
@@ -115,10 +104,10 @@ Remove-Item -Recurse -Force .git
     python -m venv venv
     ```
 
-    ਫਿਰ venv ਵਾਤਾਵਰਣ ਨੂੰ ਐਕਟੀਵੇਟ ਕਰੋ:
+    ਫਿਰ ਇਹਦਾ ਵਾਤਾਵਰਣ ਐਕਟੀਵੇਟ ਕਰੋ:
 
     ```bash
-    # ਜੈਡਐਸਐਚ/ਬੈਸ਼
+    # zsh/bash
     source venv/bin/activate
     ```
   
@@ -127,144 +116,274 @@ Remove-Item -Recurse -Force .git
     venv\Scripts\activate
     ```
 
-- .NET 10+: .NET ਵਰਤਣ ਵਾਲੇ ਨਮੂਨਾ ਕੋਡਾਂ ਲਈ, ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) ਜਾਂ ਇਸ ਤੋਂ ਬਾਅਦ ਦਾ ਵਰਜਨ ਇੰਸਟਾਲ ਕਰੋ। ਫਿਰ, ਆਪਣੇ ਇੰਸਟਾਲ ਕੀਤੇ .NET SDK ਵਰਜਨ ਦੀ ਜਾਂਚ ਕਰੋ:
+- .NET 10+: .NET ਵਰਤੀ ਜਾਣ ਵਾਲੇ ਨਮੂਨੇ ਲਈ, ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) ਜਾਂ ਇਸ ਤੋਂ ਬਾਅਦ ਦਾ ਵਰਜਨ ਇੰਸਟਾਲ ਕੀਤਾ ਹੋਵੇ। ਫਿਰ ਆਪਣੀ ਇੰਸਟਾਲ ਕੀਤੀ ਗਈ .NET SDK ਵਰਜਨ ਚੈੱਕ ਕਰੋ:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- GitHub ਖਾਤਾ - GitHub Models Marketplace ਤੱਕ ਪਹੁੰਚ ਲਈ
-- Azure Subscription - Azure AI Foundry ਤੱਕ ਪਹੁੰਚ ਲਈ
-- Azure AI Foundry ਖਾਤਾ - Azure AI Agent Service ਤੱਕ ਪਹੁੰਚ ਲਈ
+- **Azure CLI** — ਪ੍ਰਮਾਣਿਕਤਾ ਲਈ ਜ਼ਰੂਰੀ। ਇਹ [aka.ms/installazurecli](https://aka.ms/installazurecli) ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ।
+- **Azure Subscription** — Microsoft Foundry ਅਤੇ Microsoft Foundry Agent Service ਤੱਕ ਪਹੁੰਚ ਲਈ।
+- **Microsoft Foundry ਪ੍ਰੋਜੈਕਟ** — deployed ਮਾਡਲ ਵਾਲਾ ਪ੍ਰੋਜੈਕਟ (ਉਦਾਹਰਨ ਲਈ, `gpt-5-mini`)। ਵੇਖੋ [ਕਦਮ 1](#ਕਦਮ-1-ਇੱਕ-microsoft-foundry-ਪ੍ਰੋਜੈਕਟ-ਬਣਾਓ) ਹੇਠਾਂ।
 
-ਅਸੀਂ ਇਸ ਰਿਪੋਜ਼ਟਰੀ ਦੇ ਰੂਟ ਵਿੱਚ ਇੱਕ `requirements.txt` ਫਾਈਲ ਸ਼ਾਮਲ ਕੀਤੀ ਹੈ ਜਿਸ ਵਿੱਚ ਸਾਰੇ ਲੋੜੀਂਦੇ Python ਪੈਕੇਜ ਹਨ ਜੋ ਕੋਡ ਨਮੂਨਿਆਂ ਨੂੰ ਚਲਾਉਣ ਲਈ ਲੋੜੀਂਦੇ ਹਨ।
+ਇਸ ਰਿਪੋ ਦੇ ਰੂਟ ਵਿੱਚ ਇੱਕ `requirements.txt` ਫਾਈਲ ਸ਼ਾਮਲ ਕੀਤੀ ਗਈ ਹੈ ਜਿਸ ਵਿੱਚ ਸਾਰੀਆਂ ਲੋੜੀਂਦੀਆਂ Python ਪੈਕੇਜ ਹਨ ਜਿਨ੍ਹਾਂ ਨਾਲ ਕੋਡ ਸੈਂਪਲ ਚਲਾਏ ਜਾ ਸਕਦੇ ਹਨ।
 
-ਤੁਸੀਂ ਇਸਨੂੰ ਹੇਠਾਂ ਦਿੱਤੇ ਕਮਾਂਡ ਨੂੰ ਆਪਣੇ ਟਰਮੀਨਲ ਵਿੱਚ ਰਿਪੋਜ਼ਟਰੀ ਦੇ ਰੂਟ 'ਤੇ ਚਲਾਕੇ ਇੰਸਟਾਲ ਕਰ ਸਕਦੇ ਹੋ:
+ਤੁਸੀਂ ਇਹਨਾਂ ਪੈਕੇਜਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਹੇਠ ਲਿਖੀ ਕਮਾਂਡ ਟਰਮੀਨਲ ਵਿੱਚ ਰੂਟ ਫੋਲਡਰ ਤੋਂ ਚਲਾ ਸਕਦੇ ਹੋ:
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
 
-ਅਸੀਂ ਕਿਸੇ ਵੀ ਟਕਰਾਅ ਅਤੇ ਸਮੱਸਿਆਵਾਂ ਤੋਂ ਬਚਣ ਲਈ Python ਵਰਚੁਅਲ ਵਾਤਾਵਰਣ ਬਣਾਉਣ ਦੀ ਸਿਫਾਰਸ਼ ਕਰਦੇ ਹਾਂ।
+ਅਸੀਂ ਸਲਾਹ ਦਿੰਦੇ ਹਾਂ ਕਿ ਕੋਈ Python ਵਰਚੁਅਲ ਵਾਤਾਵਰਣ ਬਣਾਇਆ ਜਾਵੇ ਤਾਂ ਜੋ ਕੋਈ ਟੱਕਰ ਜਾਂ ਸਮੱਸਿਆ ਨਾ ਆਵੇ।
 
-## VSCode ਸੈਟਅਪ ਕਰੋ
+## VSCode ਸੈੱਟਅੱਪ
 
-ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ VSCode ਵਿੱਚ Python ਦਾ ਸਹੀ ਵਰਜਨ ਵਰਤ ਰਹੇ ਹੋ।
+ਸੁਰੱਖਿਅਤ ਕਰੋ ਕਿ ਤੁਸੀਂ VSCode ਵਿੱਚ ਸਹੀ Python ਵਰਜਨ ਵਰਤ ਰਹੇ ਹੋ।
 
 ![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## GitHub Models ਵਰਤਣ ਵਾਲੇ ਨਮੂਨਿਆਂ ਲਈ ਸੈਟਅਪ
+## Microsoft Foundry ਅਤੇ Microsoft Foundry Agent Service ਸੈੱਟਅੱਪ ਕਰੋ
 
-### ਕਦਮ 1: ਆਪਣਾ GitHub Personal Access Token (PAT) ਪ੍ਰਾਪਤ ਕਰੋ
+### ਕਦਮ 1: ਇੱਕ Microsoft Foundry ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ
 
-ਇਹ ਕੋਰਸ GitHub Models Marketplace ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ, ਜੋ ਤੁਹਾਨੂੰ ਵੱਡੇ ਭਾਸ਼ਾ ਮਾਡਲ (LLMs) ਤੱਕ ਮੁਫ਼ਤ ਪਹੁੰਚ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ ਜੋ ਤੁਸੀਂ AI Agents ਬਣਾਉਣ ਲਈ ਵਰਤੋਂ ਕਰੋਗੇ।
+ਤੁਹਾਨੂੰ ਨੋਟਬੁੱਕ ਚਲਾਉਣ ਲਈ ਇੱਕ Microsoft Foundry **ਹੱਬ** ਅਤੇ **ਪ੍ਰੋਜੈਕਟ** ਦੀ ਲੋੜ ਹੈ ਜਿਸ ਵਿੱਚ ਮਾਡਲ ਤੈਨਾਤ ਹੋਵੇ।
 
-GitHub Models ਦੀ ਵਰਤੋਂ ਕਰਨ ਲਈ, ਤੁਹਾਨੂੰ [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) ਬਣਾਉਣ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।
+1. [ai.azure.com](https://ai.azure.com) 'ਤੇ ਜਾਓ ਅਤੇ ਆਪਣੇ Azure ਖਾਤੇ ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ।
+2. ਇੱਕ **ਹੱਬ** ਬਣਾਓ (ਜਾਂ ਮੌਜੂਦਾ ਵਰਤੋਂ ਕਰੋ)। ਵੇਖੋ: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)।
+3. ਹੱਬ ਦੇ ਅੰਦਰ ਇੱਕ **ਪ੍ਰੋਜੈਕਟ** ਬਣਾਓ।
+4. **ਮਾਡਲ + ਐਂਡਪੌਇੰਟਸ** → **Deploy model** ਤੋਂ ਇੱਕ ਮਾਡਲ (ਉਦਾਹਰਨ ਲਈ, `gpt-5-mini`) ਤੈਨਾਤ ਕਰੋ।
 
-ਇਹ ਤੁਹਾਡੇ GitHub ਖਾਤੇ ਵਿੱਚ <a href="https://github.com/settings/personal-access-tokens" target="_blank">Personal Access Tokens settings</a> 'ਤੇ ਜਾ ਕੇ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
+### ਕਦਮ 2: ਆਪਣਾ ਪ੍ਰੋਜੈਕਟ ਐਂਡਪੌਇੰਟ ਅਤੇ ਮਾਡਲ ਡਿਪਲੋਇਮੈਂਟ ਨਾਮ ਪ੍ਰਾਪਤ ਕਰੋ
 
-ਕਿਰਪਾ ਕਰਕੇ [Principle of Least Privilege](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) ਦੀ ਪਾਲਣਾ ਕਰੋ ਜਦੋਂ ਤੁਸੀਂ ਆਪਣਾ ਟੋਕਨ ਬਣਾਉਂਦੇ ਹੋ। ਇਸਦਾ ਮਤਲਬ ਹੈ ਕਿ ਤੁਹਾਨੂੰ ਟੋਕਨ ਨੂੰ ਸਿਰਫ ਉਹ ਅਧਿਕਾਰ ਦੇਣੇ ਚਾਹੀਦੇ ਹਨ ਜੋ ਇਸ ਕੋਰਸ ਵਿੱਚ ਕੋਡ ਨਮੂਨਿਆਂ ਨੂੰ ਚਲਾਉਣ ਲਈ ਲੋੜੀਂਦੇ ਹਨ।
+Microsoft Foundry ਪੋਰਟਲ ਵਿੱਚ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਤੋਂ:
 
-1. **Developer settings** ਵਿੱਚ ਜਾ ਕੇ `Fine-grained tokens` ਵਿਕਲਪ ਚੁਣੋ।
-
-   ![Developer settings](../../../translated_images/pa/profile_developer_settings.410a859fe749c755.webp)
-
-   ਫਿਰ `Generate new token` ਚੁਣੋ।
-
-   ![Generate Token](../../../translated_images/pa/fga_new_token.1c1a234afe202ab3.webp)
-
-2. ਆਪਣੇ ਟੋਕਨ ਲਈ ਇੱਕ ਵਰਣਨਾਤਮਕ ਨਾਮ ਦਿਓ ਜੋ ਇਸਦੇ ਉਦੇਸ਼ ਨੂੰ ਦਰਸਾਉਂਦਾ ਹੋਵੇ, ਇਸਨੂੰ ਬਾਅਦ ਵਿੱਚ ਪਛਾਣਨਾ ਆਸਾਨ ਬਣਾਉਂਦਾ ਹੈ।
-
-    🔐 ਟੋਕਨ ਦੀ ਮਿਆਦ ਦੀ ਸਿਫਾਰਸ਼
-
-    ਸਿਫਾਰਸ਼ ਕੀਤੀ ਮਿਆਦ: 30 ਦਿਨ
-    ਜ਼ਿਆਦਾ ਸੁਰੱਖਿਅਤ ਰਵੱਈਏ ਲਈ, ਤੁਸੀਂ ਛੋਟੀ ਮਿਆਦ—ਜਿਵੇਂ 7 ਦਿਨ 🛡️ ਚੁਣ ਸਕਦੇ ਹੋ।
-    ਇਹ ਇੱਕ ਸ਼ਾਨਦਾਰ ਤਰੀਕਾ ਹੈ ਕਿ ਆਪਣਾ ਨਿੱਜੀ ਟੀਚਾ ਸੈਟ ਕਰੋ ਅਤੇ ਕੋਰਸ ਪੂਰਾ ਕਰੋ ਜਦੋਂ ਤੁਹਾਡਾ ਸਿੱਖਣ ਦਾ ਜ਼ੋਰ ਉੱਚਾ ਹੋਵੇ 🚀।
-
-    ![Token Name and Expiration](../../../translated_images/pa/token-name-expiry-date.a095fb0de6386864.webp)
-
-3. ਟੋਕਨ ਦੀ ਸਕੋਪ ਨੂੰ ਇਸ ਰਿਪੋਜ਼ਟਰੀ ਦੇ ਫੋਰਕ ਤੱਕ ਸੀਮਿਤ ਕਰੋ।
-
-    ![Limit scope to fork repository](../../../translated_images/pa/token_repository_limit.924ade5e11d9d8bb.webp)
-
-4. ਟੋਕਨ ਦੇ ਅਧਿਕਾਰਾਂ ਨੂੰ ਸੀਮਿਤ ਕਰੋ: **Permissions** ਦੇ ਅਧੀਨ, **Account** ਟੈਬ 'ਤੇ ਕਲਿੱਕ ਕਰੋ, ਅਤੇ "+ Add permissions" ਬਟਨ 'ਤੇ ਕਲਿੱਕ ਕਰੋ। ਇੱਕ ਡ੍ਰਾਪਡਾਊਨ ਪ੍ਰਗਟ ਹੋਵੇਗਾ। ਕਿਰਪਾ ਕਰਕੇ **Models** ਦੀ ਖੋਜ ਕਰੋ ਅਤੇ ਇਸਦੇ ਲਈ ਬਾਕਸ ਚੈੱਕ ਕਰੋ।
-
-    ![Add Models Permission](../../../translated_images/pa/add_models_permissions.c0c44ed8b40fc143.webp)
-
-5. ਟੋਕਨ ਬਣਾਉਣ ਤੋਂ ਪਹਿਲਾਂ ਲੋੜੀਂਦੇ ਅਧਿਕਾਰਾਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ। ![Verify Permissions](../../../translated_images/pa/verify_permissions.06bd9e43987a8b21.webp)
-
-6. ਟੋਕਨ ਬਣਾਉਣ ਤੋਂ ਪਹਿਲਾਂ, ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ ਟੋਕਨ ਨੂੰ ਸੁਰੱਖਿਅਤ ਜਗ੍ਹਾ ਜਿਵੇਂ ਕਿ ਪਾਸਵਰਡ ਮੈਨੇਜਰ ਵਾਲਟ ਵਿੱਚ ਸਟੋਰ ਕਰਨ ਲਈ ਤਿਆਰ ਹੋ, ਕਿਉਂਕਿ ਇਹ ਤੁਹਾਨੂੰ ਦੁਬਾਰਾ ਨਹੀਂ ਦਿਖਾਇਆ ਜਾਵੇਗਾ। ![Store Token Securely](../../../translated_images/pa/store_token_securely.08ee2274c6ad6caf.webp)
-
-ਆਪਣੇ ਨਵੇਂ ਬਣਾਏ ਟੋਕਨ ਨੂੰ ਕਾਪੀ ਕਰੋ। ਹੁਣ ਤੁਸੀਂ ਇਸਨੂੰ ਇਸ ਕੋਰਸ ਵਿੱਚ ਸ਼ਾਮਲ `.env` ਫਾਈਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋਗੇ।
-
-### ਕਦਮ 2: ਆਪਣੀ `.env` ਫਾਈਲ ਬਣਾਓ
-
-ਆਪਣੀ `.env` ਫਾਈਲ ਬਣਾਉਣ ਲਈ ਆਪਣੇ ਟਰਮੀਨਲ ਵਿੱਚ ਹੇਠਾਂ ਦਿੱਤਾ ਕਮਾਂਡ ਚਲਾਓ।
-
-```bash
-# ਜੈਡਐਸਐਚ/ਬੈਸ਼
-cp .env.example .env
-```
-
-```powershell
-# ਪਾਵਰਸ਼ੈਲ
-Copy-Item .env.example .env
-```
-
-ਇਹ ਉਦਾਹਰਣ ਫਾਈਲ ਨੂੰ ਕਾਪੀ ਕਰੇਗਾ ਅਤੇ `.env` ਤੁਹਾਡੇ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਬਣਾਏਗਾ ਜਿੱਥੇ ਤੁਸੀਂ ਵਾਤਾਵਰਣ ਚਰਾਂ ਦੀਆਂ ਮੁੱਲਾਂ ਭਰਦੇ ਹੋ।
-
-ਆਪਣੇ ਟੋਕਨ ਨੂੰ ਕਾਪੀ ਕਰਕੇ, `.env` ਫਾਈਲ ਨੂੰ ਆਪਣੇ ਮਨਪਸੰਦ ਟੈਕਸਟ ਐਡੀਟਰ ਵਿੱਚ ਖੋਲ੍ਹੋ ਅਤੇ ਆਪਣੇ ਟੋਕਨ ਨੂੰ `GITHUB_TOKEN` ਫੀਲਡ ਵਿੱਚ ਪੇਸਟ ਕਰੋ।
-
-![GitHub Token Field](../../../translated_images/pa/github_token_field.20491ed3224b5f4a.webp)
-
-ਹੁਣ ਤੁਸੀਂ ਇਸ ਕੋਰਸ ਦੇ ਕੋਡ ਨਮੂਨਿਆਂ ਨੂੰ ਚਲਾ ਸਕਦੇ ਹੋ।
-
-## Azure AI Foundry ਅਤੇ Azure AI Agent Service ਵਰਤਣ ਵਾਲੇ ਨਮੂਨਿਆਂ ਲਈ ਸੈਟਅਪ
-
-### ਕਦਮ 1: ਆਪਣਾ Azure ਪ੍ਰੋਜੈਕਟ ਐਂਡਪੌਇੰਟ ਪ੍ਰਾਪਤ ਕਰੋ
-
-Azure AI Foundry ਵਿੱਚ ਹੱਬ ਅਤੇ ਪ੍ਰੋਜੈਕਟ ਬਣਾਉਣ ਦੇ ਕਦਮਾਂ ਦੀ ਪਾਲਣਾ ਕਰੋ: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-ਜਦੋਂ ਤੁਸੀਂ ਆਪਣਾ ਪ੍ਰੋਜੈਕਟ ਬਣਾਉਂਦੇ ਹੋ, ਤੁਹਾਨੂੰ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਲਈ ਕਨੈਕਸ਼ਨ ਸਟ੍ਰਿੰਗ ਪ੍ਰਾਪਤ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇਗੀ।
-
-ਇਹ Azure AI Foundry ਪੋਰਟਲ ਵਿੱਚ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਦੇ **Overview** ਪੇਜ 'ਤੇ ਜਾ ਕੇ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।
+- **ਪ੍ਰੋਜੈਕਟ ਐਂਡਪੌਇੰਟ** — **Overview** ਪੇਜ਼ 'ਤੇ ਜਾ ਕੇ ਐਂਡਪੌਇੰਟ URL ਕਾਪੀ ਕਰੋ।
 
 ![Project Connection String](../../../translated_images/pa/project-endpoint.8cf04c9975bbfbf1.webp)
 
-### ਕਦਮ 2: ਆਪਣੀ `.env` ਫਾਈਲ ਬਣਾਓ
+- **ਮਾਡਲ ਡਿਪਲੋਇਮੈਂਟ ਨਾਮ** — **ਮਾਡਲ + ਐਂਡਪੌਇੰਟਸ** 'ਤੇ ਜਾ ਕੇ ਆਪਣਾ ਤੈਨਾਤ ਕੀਤਾ ਮਾਡਲ ਚੁਣੋ ਅਤੇ **ਡਿਪਲੋਇਮੈਂਟ ਨਾਮ** (ਉਦਾਹਰਨ ਲਈ, `gpt-5-mini`) ਨੋਟ ਕਰੋ।
 
-ਆਪਣੀ `.env` ਫਾਈਲ ਬਣਾਉਣ ਲਈ ਆਪਣੇ ਟਰਮੀਨਲ ਵਿੱਚ ਹੇਠਾਂ ਦਿੱਤਾ ਕਮਾਂਡ ਚਲਾਓ।
+### ਕਦਮ 3: `az login` ਨਾਲ Azure ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰੋ
+
+ਸਾਰੇ ਨੋਟਬੁੱਕ ਸਹੀ ਪ੍ਰਮਾਣਿਕਤਾ ਲਈ **`AzureCliCredential`** ਵਰਤਦੇ ਹਨ — ਕੋਈ API ਕੀਜ਼ ਦੀ ਲੋੜ ਨਹੀਂ। ਇਸ ਲਈ ਤੁਹਾਨੂੰ Azure CLI ਤੋਂ ਲਾੱਗ ਇਨ ਹੋਣਾ ਪੈਂਦਾ ਹੈ।
+
+1. **Azure CLI ਇੰਸਟਾਲ ਕਰੋ**, ਜੇ ਇੰਸਟਾਲ ਨਹੀਂ ਕੀਤਾ: [aka.ms/installazurecli](https://aka.ms/installazurecli)
+
+2. **ਸਾਈਨ ਇਨ** ਕਰਨ ਲਈ ਚਲਾਓ:
+
+    ```bash|powershell
+    az login
+    ```
+
+    ਜੇ ਤੁਸੀਂ ਕਿਸੇ ਰਿਮੋਟ/ਕੋਡਸਪੇਸ ਵਾਤਾਵਰਣ ਵਿੱਚ ਹੋ ਜਿੱਥੇ ਬ੍ਰਾਉਜ਼ਰ ਨਹੀਂ ਹੈ ਤਾਂ:
+
+    ```bash|powershell
+    az login --use-device-code
+    ```
+
+3. ਜੇ ਪੁੱਛਿਆ ਜਾਵੇ ਤਾਂ ਆਪਣੀ ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਚੁਣੋ — ਉਹ ਜਿੱਥੇ ਤੁਹਾਡਾ Foundry ਪ੍ਰੋਜੈਕਟ ਹੈ।
+
+4. ਯਕੀਨੀ ਬਣਾਓ ਕਿ ਤੁਸੀਂ ਲਾੱਗਡ ਇਨ ਹੋ:
+
+    ```bash|powershell
+    az account show
+    ```
+
+> **ਕੀ ਲਈ `az login`?** ਨੋਟਬੁੱਕ `AzureCliCredential` ਪੈਕੇਜ ਤੋਂ ਪ੍ਰਮਾਣਿਕਤਾ ਲਈ ਵਰਤਦੇ ਹਨ। ਇਸਦਾ ਮਤਲਬ ਤੁਹਾਡਾ Azure CLI ਸੈਸ਼ਨ ਪ੍ਰਮਾਣ ਪੱਤਰ ਮੁਹੱਈਆ ਕਰਦਾ ਹੈ — ਕੋਈ API ਕੀਜ਼ ਜਾਂ ਰਾਜ਼ `.env` ਫਾਈਲ ਵਿੱਚ ਨਹੀਂ। ਇਹ ਇੱਕ [ਸੁਰੱਖਿਆ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਅਭਿਆਸ](https://learn.microsoft.com/azure/developer/ai/keyless-connections) ਹੈ।
+
+### ਕਦਮ 4: ਆਪਣੀ `.env` ਫਾਈਲ ਬਣਾਓ
+
+ਉਦਾਹਰਨ ਫਾਈਲ ਨੂੰ ਕਾਪੀ ਕਰੋ:
 
 ```bash
-# ਜੈਡਐਸਐਚ/ਬੈਸ਼
+# zsh/bash
 cp .env.example .env
 ```
 
 ```powershell
-# ਪਾਵਰਸ਼ੈਲ
+# پاور شیل
 Copy-Item .env.example .env
 ```
 
-ਇਹ ਉਦਾਹਰਣ ਫਾਈਲ ਨੂੰ ਕਾਪੀ ਕਰੇਗਾ ਅਤੇ `.env` ਤੁਹਾਡੇ ਡਾਇਰੈਕਟਰੀ ਵਿੱਚ ਬਣਾਏਗਾ ਜਿੱਥੇ ਤੁਸੀਂ ਵਾਤਾਵਰਣ ਚਰਾਂ ਦੀਆਂ ਮੁੱਲਾਂ ਭਰਦੇ ਹੋ।
+`.env` کھولو ਅਤੇ ਇਹ ਦੋ ਮੁੱਲ ਭਰੋ:
 
-ਆਪਣੇ ਟੋਕਨ ਨੂੰ ਕਾਪੀ ਕਰਕੇ, `.env` ਫਾਈਲ ਨੂੰ ਆਪਣੇ ਮਨਪਸੰਦ ਟੈਕਸਟ ਐਡੀਟਰ ਵਿੱਚ ਖੋਲ੍ਹੋ ਅਤੇ ਆਪਣੇ ਟੋਕਨ ਨੂੰ `PROJECT_ENDPOINT` ਫੀਲਡ ਵਿੱਚ ਪੇਸਟ ਕਰੋ।
+```env
+AZURE_AI_PROJECT_ENDPOINT=https://<your-project>.services.ai.azure.com/api/projects/<your-project-id>
+AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-5-mini
+```
 
-### ਕਦਮ 3: Azure ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰੋ
+| ਵੈਰੀਏਬਲ | ਕਿੱਥੋਂ ਲੱਭਣਾ ਹੈ |
+|----------|-----------------|
+| `AZURE_AI_PROJECT_ENDPOINT` | Foundry ਪੋਰਟਲ → ਤੁਹਾਡਾ ਪ੍ਰੋਜੈਕਟ → **Overview** ਪੇਜ |
+| `AZURE_AI_MODEL_DEPLOYMENT_NAME` | Foundry ਪੋਰਟਲ → **ਮਾਡਲ + ਐਂਡਪੌਇੰਟਸ** → ਤੁਹਾਡਾ ਤੈਨਾਤ ਕੀਤਾ ਮਾਡਲ ਦਾ ਨਾਮ |
 
-ਸੁਰੱਖਿਆ ਦੇ ਸ੍ਰੇਸ਼ਠ ਅਭਿਆਸ ਦੇ ਤੌਰ 'ਤੇ, ਅਸੀਂ [keyless authentication](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) ਦੀ ਵਰਤੋਂ ਕਰਕੇ Microsoft Entra ID ਨਾਲ Azure OpenAI ਵਿੱਚ ਪ੍ਰਮਾਣਿਕਤਾ ਪ੍ਰਾਪਤ ਕਰਾਂਗੇ। 
+ਜ਼ਿਆਦਾਤਰ ਪਾਠਾਂ ਲਈ ਇਹੀ ਕਾਫੀ ਹੈ! ਨੋਟਬੁੱਕ ਆਪਣੇ ਆਪ ਤੁਹਾਡੇ `az login` ਸੈਸ਼ਨ ਰਾਹੀਂ ਪ੍ਰਮਾਣਿਕਤਾ ਪ੍ਰਾਪਤ ਕਰ ਲਵੇਗਾ।
 
-ਅਗਲੇ ਕਦਮ ਵਿੱਚ, ਟਰਮੀਨਲ ਖੋਲ੍ਹੋ ਅਤੇ `az login --use-device-code` ਚਲਾਓ ਤਾਂ ਜੋ ਆਪਣੇ Azure ਖ
-ਜੇ ਤੁਹਾਨੂੰ ਇਸ ਸੈਟਅੱਪ ਨੂੰ ਚਲਾਉਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਉਂਦੀ ਹੈ, ਤਾਂ ਸਾਡੇ <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ ਜਾਂ <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">ਇੱਕ ਸਮੱਸਿਆ ਬਣਾਓ</a>।
+### ਕਦਮ 5: Python ਡਿਪੈਂਡੈਂਸੀਜ਼ ਇੰਸਟਾਲ ਕਰੋ
+
+```bash|powershell
+pip install -r requirements.txt
+```
+
+ਅਸੀਂ ਸਿਫਾਰਸੀ ਕਰਦੇ ਹਾਂ ਕਿ ਤੁਸੀਂ ਪਹਿਲਾਂ ਬਣਾਏ ਗਏ ਵਰਚੁਅਲ ਵਾਤਾਵਰਣ ਵਿੱਚ ਇਹ ਚਲਾਓ।
+
+## ਪਾਠ 5 (Agentic RAG) ਲਈ ਵਾਧੂ ਸੈੱਟਅੱਪ
+
+ਪਾਠ 5 **Azure AI Search** ਵਰਤਦਾ ਹੈ ਰੀਟਰੀਵਲ-ਆਗਮੈਂਟਡ ਜਨਰੇਸ਼ਨ ਲਈ। ਜੇ ਤੁਸੀਂ ਉਹ ਪਾਠ ਚਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਇਹ ਵੈਰੀਏਬਲ ਆਪਣੀ `.env` ਫਾਈਲ ਵਿੱਚ ਸ਼ਾਮਲ ਕਰੋ:
+
+| ਵੈਰੀਏਬਲ | ਕਿੱਥੋਂ ਲੱਭਣਾ ਹੈ |
+|----------|-----------------|
+| `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure ਪੋਰਟਲ → ਤੁਹਾਡਾ **Azure AI Search** ਸਰੋਤ → **Overview** → URL |
+| `AZURE_SEARCH_API_KEY` | Azure ਪੋਰਟਲ → ਤੁਹਾਡਾ **Azure AI Search** ਸਰੋਤ → **ਸੈੱਟਿੰਗਜ਼** → **ਕੀਜ਼** → ਪ੍ਰਾਇਮਰੀ ਐਡਮਿਨ ਕੀ |
+
+## ਉਹ ਪਾਠ ਜੋ ਸਿੱਧਾ Azure OpenAI ਨੂੰ ਕਾਲ ਕਰਦੇ ਹਨ (ਪਾਠ 6 ਅਤੇ 8)
+
+ਕੁਝ ਨੋਟਬੁੱਕ ਪਾਠ 6 ਅਤੇ 8 ਵਿੱਚ ਸਿੱਧਾ **Azure OpenAI** (Responses API ਵਰਤਦਾ) ਨੂੰ ਕਾਲ ਕਰਦੇ ਹਨ, ਨਾ ਕਿ ਇੱਕ Microsoft Foundry ਪ੍ਰੋਜੈਕਟ ਰਾਹੀਂ। ਇਹ ਨਮੂਨੇ ਪਹਿਲਾਂ GitHub ਮਾਡਲ ਵਰਤਦੇ ਸਨ, ਜੋ ਹੁਣ ਬੰਦ ਹੋ ਰਿਹਾ ਹੈ (ਜੁਲਾਈ 2026 ਨੂੰ ਰਿਟਾਇਰ) ਅਤੇ Responses API ਨੂੰ ਸਹਾਇਤਾ ਨਹੀਂ ਦਿੰਦਾ। ਜੇ ਤੁਸੀਂ ਉਹ ਨਮੂਨੇ ਚਲਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਆਪਣੀ `.env` ਫਾਈਲ ਵਿੱਚ ਇਹ ਵੈਰੀਏਬਲ ਸ਼ਾਮਲ ਕਰੋ:
+
+| ਵੈਰੀਏਬਲ | ਕਿੱਥੋਂ ਲੱਭਣਾ ਹੈ |
+|----------|-----------------|
+| `AZURE_OPENAI_ENDPOINT` | Azure ਪੋਰਟਲ → ਤੁਹਾਡਾ **Azure OpenAI** ਸਰੋਤ → **ਕੀਜ਼ ਅਤੇ ਐਂਡਪੌਇੰਟ** → ਐਂਡਪੌਇੰਟ (ਜਿਵੇਂ `https://<your-resource>.openai.azure.com`) |
+| `AZURE_OPENAI_DEPLOYMENT` | ਤੁਹਾਡੇ ਤੈਨਾਤ ਮਾਡਲ ਦਾ ਨਾਮ (ਜਿਵੇਂ `gpt-5-mini`) ਜਿਸ ਨੂੰ Responses API ਸਹਾਇਤਾ ਦਿੰਦਾ ਹੈ |
+| `AZURE_OPENAI_API_KEY` | ਵਿਕਲਪਿਕ — ਜੇ ਤੁਸੀਂ `az login` / Entra ID ਦੀ ਥਾਂ ਕਿ ਕੁੰਜੀ-ਆਧਾਰਿਤ ਪ੍ਰਮਾਣੀਕਰਨ ਵਰਤਦੇ ਹੋ |
+
+> Responses API ਸਥਿਰ `/openai/v1/` ਐਂਡਪੌਇੰਟ ਨੂੰ ਵਰਤਦਾ ਹੈ, ਇਸ ਲਈ ਕੋਈ `api-version` ਦੀ ਲੋੜ ਨਹੀਂ। ਕੁੰਜੀ-ਰਹਿਤ Entra ID ਪ੍ਰਮਾਣਿਕਤਾ ਲਈ `az login` ਨਾਲ ਸਾਈਨ ਇਨ ਕਰੋ।
+
+## ਬਦਲੀ ਪ੍ਰਦਾਤਾ: MiniMax (OpenAI-ਅਨੁਕੂਲ)
+
+[MiniMax](https://platform.minimaxi.com/) ਵੱਡੇ-ਸੰਦੇਸ਼ ਕਾਂਟੈਕਸਟ ਮਾਡਲ (204K ਟੋਕੇਨ ਤੱਕ) OpenAI-ਅਨੁਕੂਲ API ਰਾਹੀਂ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ। Microsoft Agent Framework ਦੇ `OpenAIChatClient` ਕਿਸੇ ਵੀ OpenAI-ਅਨੁਕੂਲ ਐਂਡਪੌਇੰਟ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ, ਇਸ ਲਈ ਤੁਸੀਂ MiniMax ਨੂੰ Azure OpenAI ਜਾਂ OpenAI ਦੀ ਥਾਂ ਤੋਂ ਵਰਤ ਸਕਦੇ ਹੋ।
+
+ਆਪਣੀ `.env` ਫਾਈਲ ਵਿੱਚ ਇਹ ਵੈਰੀਏਬਲ ਸ਼ਾਮਲ ਕਰੋ:
+
+| ਵੈਰੀਏਬਲ | ਕਿੱਥੋਂ ਲੱਭਣਾ ਹੈ |
+|----------|-----------------|
+| `MINIMAX_API_KEY` | [MiniMax Platform](https://platform.minimaxi.com/) → API ਕੀਜ਼ |
+| `MINIMAX_BASE_URL` | `https://api.minimax.io/v1` (ਮੂਲ ਮੂਲ) |
+| `MINIMAX_MODEL_ID` | ਵਰਤਣ ਲਈ ਮਾਡਲ ਨਾਮ (ਜਿਵੇਂ `MiniMax-M3`) |
+
+**ਉਦਾਹਰਨ ਮਾਡਲ**: `MiniMax-M3` (ਸਿਫਾਰਸੀ), `MiniMax-M2.7`, `MiniMax-M2.7-highspeed` (ਤੇਜ਼ ਜਵਾਬ). ਮਾਡਲ ਦੇ ਨਾਮ ਅਤੇ ਉਪਲੱਬਧਤਾ ਸਮੇਂ ਦੇ ਨਾਲ ਬਦਲ ਸਕਦੀ ਹੈ, ਅਤੇ ਮਾਡਲ ਤੱਕ ਪਹੁੰਚ ਤੁਹਾਡੇ ਖਾਤੇ ਜਾਂ ਖੇਤਰ 'ਤੇ ਨਿਰਭਰ ਕਰ ਸਕਦੀ ਹੈ — ਮੌਜੂਦਾ ਸੂਚੀ ਲਈ [MiniMax Platform](https://platform.minimaxi.com/) ਵੇਖੋ। ਜੇ `MiniMax-M3` ਤੁਹਾਡੇ ਖਾਤੇ ਲਈ ਉਪਲਬਧ ਨਹੀਂ ਹੈ, ਤਾਂ `MINIMAX_MODEL_ID` ਵਿੱਚ ਕੋਈ ਹੋਰ ਮਾਡਲ ਸੈੱਟ ਕਰੋ (ਜਿਵੇਂ `MiniMax-M2.7`)।
+
+`OpenAIChatClient` ਵਰਤਣ ਵਾਲੇ ਕੋਡ ਸੈਂਪਲ (ਜਿਵੇਂ ਪਾਠ 14 ਹੋਟਲ ਬੁਕਿੰਗ ਵਰਕਫਲੋ) ਆਪਣੇ ਆਪ ਤੁਹਾਡੀ MiniMax ਸੰਰਚਨਾ ਦਾ ਪਤਾ ਲਗਾ ਕੇ ਵਰਤਣਗੇ ਜਦੋਂ `MINIMAX_API_KEY` ਸੈੱਟ ਹੋਵੇ।
+
+## ਬਦਲੀ ਪ੍ਰਦਾਤਾ: Foundry Local (ਡਿਵਾਈਸ ਤੇ ਮਾਡਲ ਚਲਾਓ)
+
+[Foundry Local](https://foundrylocal.ai) ਇੱਕ ਹਲਕਾ ਰਣਟਾਈਮ ਹੈ ਜੋ ਤੁਹਾਡੀ ਆਪਣੀ ਮਸ਼ੀਨ ਤੇ ਭਾਸ਼ਾ ਮਾਡਲਾਂ ਨੂੰ ਡਾਊਨਲੋਡ, ਪ੍ਰਬੰਧ ਅਤੇ ਸੇਵਾ ਕਰਦਾ ਹੈ, OpenAI-ਅਨੁਕੂਲ API ਰਾਹੀਂ — ਕੋਈ ਕਲਾਉਡ, ਕੋਈ Azure ਸਬਸਕ੍ਰਿਪਸ਼ਨ ਜਾਂ API ਕੀਜ਼ ਨਹੀਂ। ਇਹ ਆਫਲਾਈਨ ਵਿਕਾਸ, ਕਲਾਉਡ ਖਰਚ ਬਿਨਾਂ ਤਜਰਬੇ ਕਰਨ ਜਾਂ ਡੇਟਾ ਨੂੰ ਡਿਵਾਈਸ ਤੇ ਰੱਖਣ ਲਈ ਵਧੀਆ ਵਿਕਲਪ ਹੈ।
+
+ਕਿਉਂਕਿ Microsoft Agent Framework da `OpenAIChatClient` ਕਿਸੇ ਵੀ OpenAI-ਅਨੁਕੂਲ ਐਂਡਪੌਇੰਟ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ, Foundry Local Azure OpenAI ਦਾ ਸਥਾਨਕ ਵਿਕਲਪ ਹੈ।
+
+**1. Foundry Local ਇੰਸਟਾਲ ਕਰੋ**
+
+```bash
+# ਵਿਂਡੋਜ਼
+winget install Microsoft.FoundryLocal
+
+# ਮੈਕਓਐਸ
+brew install foundrylocal
+```
+
+**2. ਇੱਕ ਮਾਡਲ ਡਾਊਨਲੋਡ ਅਤੇ ਚਲਾਓ** (ਇਸ ਨਾਲ ਸਥਾਨਕ ਸੇਵਾ ਵੀ ਸ਼ੁਰੂ ਹੋ ਜਾਵੇਗੀ):
+
+```bash
+foundry model list          # ਉਪਲਬਧ ਮਾਡਲ ਵੇਖੋ
+foundry model run phi-4-mini
+```
+
+**3. ਸਥਾਨਕ ਐਂਡਪੌਇੰਟ ਲੱਭਣ ਲਈ Python SDK ਇੰਸਟਾਲ ਕਰੋ:**
+
+```bash
+pip install foundry-local-sdk
+```
+
+**4. Microsoft Agent Framework ਨੂੰ ਆਪਣੇ ਸਥਾਨਕ ਮਾਡਲ ਵੱਲ ਪਾਇੰਟ ਕਰੋ:**
+
+```python
+from foundry_local import FoundryLocalManager
+from agent_framework.openai import OpenAIChatClient
+
+# ਮਾਡਲ ਨੂੰ ਡਾਊਨਲੋਡ (ਜੇ ਲੋੜ ਹੋਵੇ) ਕਰਦਾ ਹੈ ਅਤੇ ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਸਰਵ ਕਰਦਾ ਹੈ, ਫਿਰ ਐਂਡਪੋਇੰਟ/ਪੋਰਟ ਦੀ ਖੋਜ ਕਰਦਾ ਹੈ।
+manager = FoundryLocalManager("phi-4-mini")
+
+chat_client = OpenAIChatClient(
+    base_url=manager.endpoint,      # ਉਦਾਹਰਣ ਲਈ http://localhost:<port>/v1
+    api_key=manager.api_key,        # Foundry Local ਲਈ ਹਮੇਸ਼ਾ "ਲੋੜ ਨਹੀਂ"
+    model_id=manager.get_model_info("phi-4-mini").id,
+)
+
+agent = chat_client.as_agent(
+    name="LocalAgent",
+    instructions="You are a helpful assistant running fully on-device.",
+)
+```
+
+> **ਨੋਟ:** Foundry Local ਇੱਕ OpenAI-ਅਨੁਕੂਲ **ਚੈਟ ਕਮਪਲੀਸ਼ਨਸ** ਐਂਡਪੌਇੰਟ ਦਿੰਦਾ ਹੈ। ਇਸਨੂੰ ਸਥਾਨਕ ਵਿਕਾਸ ਅਤੇ ਆਫਲਾਈਨ ਸੈਨਾਰਿਓਜ਼ ਲਈ ਵਰਤੋ। ਪੂਰੀ **Responses API** ਫੀਚਰ ਸੈੱਟ (ਸਟੇਟਫੁਲ ਗੱਲਬਾਤਾਂ, ਡੀਪ ਟੂਲ ਆਰਕੇਸ्ट्रੇਸ਼ਨ, ਅਤੇ ਏਜੰਟ-ਸ਼ੈਲੀ ਵਿਕਾਸ) ਲਈ **Azure OpenAI** ਜਾਂ **Microsoft Foundry** ਪ੍ਰੋਜੈਕਟ ਨਿਸ਼ਾਨਾ ਬਣਾਓ ਜਿਵੇਂ ਪਾਠਾਂ ਵਿੱਚ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਮੌਜੂਦਾ ਮਾਡਲ ਕੈਟਾਲਾਗ ਅਤੇ ਪਲੇਟਫਾਰਮ ਸਹਾਇਤਾ ਲਈ [Foundry Local ਦਸਤਾਵੇਜ਼](https://foundrylocal.ai) ਵੇਖੋ।
+
+## ਪਾਠ 8 (Bing Grounding Workflow) ਲਈ ਵਾਧੂ ਸੈੱਟਅੱਪ
+
+
+ਪਾਠ 8 ਵਿੱਚ ਸ਼ਰਤੀ ਵਰਕਫ਼ਲੋ ਨੋਟਬੁੱਕ ਮਾਈਕਰੋਸੋਫਟ ਫਾਊਂਡਰੀ ਰਾਹੀਂ **ਬਿੰਗ ਗ੍ਰਾਊਂਡਿੰਗ** ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ। ਜੇਕਰ ਤੁਸੀਂ ਉਹ ਨਮੂਨਾ ਚਲਾਉਣ ਦੀ ਯੋਜਨਾ ਬਣਾਉਂਦੇ ਹੋ, ਤਾਂ ਆਪਣੇ `.env` ਫਾਇਲ ਵਿੱਚ ਇਹ ਚਰ ਵਰਤੋਂ ਜੋੜੋ:
+
+| ਚਰ | ਇਹ ਕਿੱਥੋਂ ਲੱਭਣਾ ਹੈ |
+|----------|-----------------|
+| `BING_CONNECTION_ID` | ਮਾਈਕਰੋਸੋਫਟ ਫਾਊਂਡਰੀ ਪੋਰਟਲ → ਤੁਹਾਡਾ ਪ੍ਰੋਜੈਕਟ → **ਮੈਨੇਜਮੈਂਟ** → **ਕਨੈਕਟਿਡ ਰਿਸੋਰਸਿਜ਼** → ਤੁਹਾਡੀ ਬਿੰਗ ਕਨੈਕਸ਼ਨ → ਕਨੈਕਸ਼ਨ ਆਈਡੀ ਨਕਲ ਕਰੋ |
+
+## ਸਮੱਸਿਆ ਨਿਵਾਰਣ
+
+### macOS ਤੇ SSL ਸਰਟੀਫਿਕੇਟ ਜਾਂਚ ਦੀਆਂ ਫ਼ੇਲਾਂ
+
+ਜੇਕਰ ਤੁਸੀਂ macOS 'ਤੇ ਹੋ ਅਤੇ ਇਹ ਤਰ੍ਹਾਂ ਦੀ ਗਲਤੀ ਆਵੇ:
+
+```plaintext
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
+```
+
+ਇਹ macOS 'ਤੇ ਪਾਇਥਨ ਨਾਲ ਜਾਣੀ ਪਹਚਾਣੀ ਸਮੱਸਿਆ ਹੈ ਜਿੱਥੇ ਸਿਸਟਮ SSL ਸਰਟੀਫਿਕੇਟ ਆਪਣੇ ਆਪ ਭਰੋਸੇਯੋਗ ਨਹੀਂ ਹੋਦੇ। ਨਿਮਨਲਿਖਿਤ ਹੱਲਾਂ ਨੂੰ ਕ੍ਰਮ ਵਿੱਚ ਅਜ਼ਮਾਓ:
+
+**ਵਿਕਲਪ 1: ਪਾਇਥਨ ਦਾ Install Certificates ਸਕ੍ਰਿਪਟ ਚਲਾਓ (ਸਿਫਾਰਸ਼ੀ)**
+
+```bash
+# ਆਪਣੇ ਇੰਸਟਾਲ ਕੀਤੇ Python ਵਰਜ਼ਨ ਨਾਲ 3.XX ਨੂੰ ਬਦਲੋ (ਉਦਾਹਰਣ ਲਈ, 3.12 ਜਾਂ 3.13):
+/Applications/Python\ 3.XX/Install\ Certificates.command
+```
+
+**ਵਿਕਲਪ 2: ਆਪਣੇ ਨੋਟਬੁੱਕ ਵਿੱਚ `connection_verify=False` ਵਰਤੋਂ ਕਰੋ (ਸਿਰਫ GitHub ਮਾਡਲ ਨੋਟਬੁੱਕ ਲਈ)**
+
+ਲੈਸਨ 6 ਦੇ ਨੋਟਬੁੱਕ (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`) ਵਿਚ ਪਹਿਲਾਂ ਹੀ ਇੱਕ ਟਿੱਪਣੀ ਕਰਕੇ ਵਰਕਅਰਾਉਂਡ ਦਿੱਤਾ ਗਿਆ ਹੈ। ਕਲਾਇੰਟ ਬਣਾਉਂਦਿਆਂ `connection_verify=False` ਦੀ ਟਿੱਪਣੀ ਹਟਾਓ:
+
+```python
+client = ChatCompletionsClient(
+    endpoint=endpoint,
+    credential=AzureKeyCredential(token),
+    connection_verify=False,  # ਜੇ ਤੁਸੀਂ ਸਰਟੀਫਿਕੇਟ ਗਲਤੀਆਂ ਦਾ ਸਾਹਮਣਾ ਕਰਦੇ ਹੋ ਤਾਂ ਐਸਐਸਐਲ ਵੈਰੀਫਿਕੇਸ਼ਨ ਨੂੰ ਅਸਥਾਈ ਤੌਰ 'ਤੇ ਬੰਦ ਕਰੋ
+)
+```
+
+> **⚠️ ਚੇਤਾਵਨੀ:** SSL ਜਾਂਚ ਨੂੰ ਬੰਦ ਕਰਨਾ (`connection_verify=False`) ਸਰਟੀਫਿਕੇਟ ਪ੍ਰਮਾਣਿਕਤਾ ਨੂੰ ਛੱਡ ਕੇ ਸੁਰੱਖਿਆ ਘੱਟ ਕਰਦਾ ਹੈ। ਇਸਨੂੰ ਕੇਵਲ ਵਿਕਾਸ ਵਾਤਾਵਰਣਾਂ ਵਿੱਚ ਅਸਥਾਇਤ ਪੱਧਰ 'ਤੇ ਵਰਤੋਂ ਕਰੋ, ਉਤਪਾਦਨ ਵਿੱਚ ਕਦੇ ਵੀ ਨਾ ਕਰੋ।
+
+**ਵਿਕਲਪ 3: `truststore` ਸਥਾਪਿਤ ਕਰੋਂ ਅਤੇ ਵਰਤੋਂ ਕਰੋ**
+
+```bash
+pip install truststore
+```
+
+ਫਿਰ ਆਪਣੀ ਨੋਟਬੁੱਕ ਜਾਂ ਸਕ੍ਰਿਪਟ ਦੇ ਸ਼ੁਰੂਆਤ ਵਿੱਚ ਇਨ੍ਹਾਂ ਨੂੰ ਜੋੜੋ, ਕਿਸੇ ਵੀ ਨੈੱਟਵਰਕ ਕਾਲ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ:
+
+```python
+import truststore
+truststore.inject_into_ssl()
+```
+
+## ਕੋਈ ਪਰੇਸ਼ਾਨੀ ਹੈ?
+
+ਜੇਕਰ ਤੁਹਾਨੂੰ ਇਸ ਸੈਟਅਪ ਚਲਾਉਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਏ, ਤਾਂ ਸਾਡੇ <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ ਜਾਂ <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">ਇੱਕ ਮੁੱਦਾ ਬਣਾਓ</a>।
 
 ## ਅਗਲਾ ਪਾਠ
 
-ਹੁਣ ਤੁਸੀਂ ਇਸ ਕੋਰਸ ਲਈ ਕੋਡ ਚਲਾਉਣ ਲਈ ਤਿਆਰ ਹੋ। AI ਏਜੰਟਸ ਦੀ ਦੁਨੀਆ ਬਾਰੇ ਹੋਰ ਸਿੱਖਣ ਦਾ ਆਨੰਦ ਲਓ! 
+ਤੁਸੀਂ ਹੁਣ ਇਸ ਕੋਰਸ ਲਈ ਕੋਡ ਚਲਾਉਣ ਲਈ ਤਿਆਰ ਹੋ। ਏਆਈ ਏਜੰਟਸ ਦੀ ਦੁਨੀਆ ਬਾਰੇ ਹੋਰ ਸਿੱਖਦੇ ਰਹੋ! 
 
-[AI ਏਜੰਟਸ ਅਤੇ ਏਜੰਟ ਵਰਤੋਂ ਦੇ ਕੇਸਾਂ ਦਾ ਪਰਿਚਯ](../01-intro-to-ai-agents/README.md)
+[AI ਏਜੰਟਸ ਅਤੇ ਏਜੰਟ ਉਪਯੋਗ ਕੇਸਾਂ ਦਾ ਪਰਿਚਯ](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ਅਸਵੀਕਰਤੀ**:  
-ਇਹ ਦਸਤਾਵੇਜ਼ AI ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀ ਹੋਣ ਦਾ ਯਤਨ ਕਰਦੇ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ ਕਿ ਸਵੈਚਾਲਿਤ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸੁਚੱਜੇਪਣ ਹੋ ਸਕਦੇ ਹਨ। ਇਸ ਦੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਮੌਜੂਦ ਮੂਲ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਅਧਿਕਾਰਤ ਸਰੋਤ ਮੰਨਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਮਹੱਤਵਪੂਰਨ ਜਾਣਕਾਰੀ ਲਈ, ਪੇਸ਼ੇਵਰ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਅਸੀਂ ਇਸ ਅਨੁਵਾਦ ਦੀ ਵਰਤੋਂ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਗਲਤਫਹਿਮੀ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ।
+**ਅਸਵੀਕਾਰੋਪਣ**:
+ਇਸ ਦਸਤਾਵੇਜ਼ ਦਾ ਅਨੁਵਾਦ ਏਆਈ ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀਤਾਵਾਂ ਲਈ ਯਤਨਸ਼ੀਲ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਰੱਖੋ ਕਿ ਸਵੈਚਾਲਿਤ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸਮੱਤਿਆਵਾਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਮੂਲ ਦਸਤਾਵੇਜ਼ ਆਪਣੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਅਧਿਕਾਰਕ ਸਰੋਤ ਮੰਨਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਜਰੂਰੀ ਜਾਣਕਾਰੀ ਲਈ, ਪੇਸ਼ੇਵਰ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਅਸੀਂ ਇਸ ਅਨੁਵਾਦ ਦੇ ਉਪਯੋਗ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੀਆਂ ਕਿਸੇ ਵੀ ਗਲਤਫਹਿਮੀਆਂ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆਵਾਂ ਲਈ ਜਵਾਬਦੇਹ ਨਹੀਂ ਹਾਂ।
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,154 +1,158 @@
-[![Çoklu Ajan Tasarımı](../../../translated_images/tr/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
+[![Çoklu Temsilci Tasarımı](../../../translated_images/tr/lesson-8-thumbnail.278a3e4a59137d62.webp)](https://youtu.be/V6HpE9hZEx0?si=A7K44uMCqgvLQVCa)
 
-> _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
+> _(Dersi izlemek için yukarıdaki görsele tıklayın)_
 
-# Çoklu Ajan Tasarım Kalıpları
+# Çoklu Temsilci Tasarım Kalıpları
 
-Birden fazla ajanın yer aldığı bir projede çalışmaya başladığınızda, çoklu ajan tasarım kalıbını dikkate almanız gerekecektir. Ancak, çoklu ajanlara ne zaman geçmeniz gerektiği ve bunun avantajlarının neler olduğu hemen net olmayabilir.
+Birden çok temsilci içeren bir projede çalışmaya başlar başlamaz, çoklu temsilci tasarım kalıbını dikkate almanız gerekir. Ancak, ne zaman çoklu temsilcilere geçileceği ve avantajlarının neler olduğu hemen net olmayabilir.
 
 ## Giriş
 
 Bu derste şu sorulara cevap arıyoruz:
 
-- Çoklu ajanların uygulanabilir olduğu senaryolar nelerdir?
-- Çoklu ajanlar kullanmanın, birden fazla görevi yerine getiren tek bir ajan kullanmaya göre avantajları nelerdir?
-- Çoklu ajan tasarım kalıbını uygulamanın yapı taşları nelerdir?
-- Birden fazla ajanın birbirleriyle nasıl etkileşimde bulunduğunu nasıl görebiliriz?
+- Çoklu temsilcilerin uygulanabilir olduğu senaryolar nelerdir?
+- Tek bir temsilciye göre çoklu temsilci kullanmanın avantajları nelerdir?
+- Çoklu temsilci tasarım kalıbını uygulamanın yapı taşları nelerdir?
+- Birden çok temsilcinin nasıl birbirleriyle etkileşimde bulunduğunu nasıl görebiliriz?
 
 ## Öğrenme Hedefleri
 
-Bu dersin ardından şunları yapabileceksiniz:
+Bu dersten sonra şunları yapabilmelisiniz:
 
-- Çoklu ajanların uygulanabilir olduğu senaryoları belirlemek.
-- Çoklu ajanlar kullanmanın, tek bir ajana kıyasla avantajlarını tanımak.
-- Çoklu ajan tasarım kalıbını uygulamanın yapı taşlarını anlamak.
+- Çoklu temsilci uygulamalarının uygun olduğu senaryoları belirlemek
+- Tek bir temsilciye kıyasla çoklu temsilci kullanımının avantajlarını tanımak
+- Çoklu temsilci tasarım kalıbının yapı taşlarını kavramak
 
-Peki büyük resim nedir?
+Daha geniş resim nedir?
 
-*Çoklu ajanlar, birden fazla ajanın ortak bir hedefe ulaşmak için birlikte çalışmasını sağlayan bir tasarım kalıbıdır.*
+*Çoklu temsilciler, birden fazla temsilcinin ortak bir amacı gerçekleştirmek üzere birlikte çalışmasına olanak tanıyan bir tasarım kalıbıdır*.
 
-Bu kalıp, robotik, otonom sistemler ve dağıtık hesaplama gibi çeşitli alanlarda yaygın olarak kullanılmaktadır.
+Bu kalıp, robotik, otonom sistemler ve dağıtık bilişim gibi çeşitli alanlarda yaygın olarak kullanılmaktadır.
 
-## Çoklu Ajanların Uygulanabilir Olduğu Senaryolar
+## Çoklu Temsilcilerin Uygulanabilir Olduğu Senaryolar
 
-Peki, çoklu ajanların iyi bir kullanım alanı olduğu senaryolar nelerdir? Cevap, çok sayıda senaryonun olduğudur, özellikle şu durumlarda çoklu ajanlar kullanmak faydalıdır:
+Peki, çoklu temsilci kullanımı için iyi olan senaryolar nelerdir? Cevap, özellikle aşağıdaki durumlarda birden fazla temsilci kullanmanın faydalı olduğu pek çok senaryonun olduğudur:
 
-- **Büyük iş yükleri**: Büyük iş yükleri daha küçük görevlere bölünebilir ve farklı ajanlara atanabilir, bu da paralel işlemeyi ve daha hızlı tamamlamayı sağlar. Bunun bir örneği, büyük bir veri işleme görevidir.
-- **Karmaşık görevler**: Karmaşık görevler, büyük iş yükleri gibi, daha küçük alt görevlere bölünebilir ve her biri görevin belirli bir yönünde uzmanlaşmış farklı ajanlara atanabilir. Bunun iyi bir örneği, otonom araçlardır; burada farklı ajanlar navigasyonu, engel algılamayı ve diğer araçlarla iletişimi yönetir.
-- **Çeşitli uzmanlıklar**: Farklı ajanlar, bir görevin farklı yönlerini tek bir ajandan daha etkili bir şekilde ele alabilmelerini sağlayan çeşitli uzmanlıklara sahip olabilir. Bunun iyi bir örneği, sağlık sektörüdür; burada ajanlar teşhis, tedavi planları ve hasta takibini yönetebilir.
+- **Büyük iş yükleri**: Büyük iş yükleri daha küçük görevlere bölünüp farklı temsilcilere atanabilir; böylece paralel işlem yapılır ve tamamlanma daha hızlı olur. Bunu iyi örnekleyen durum büyük bir veri işleme görevidir.
+- **Karmaşık görevler**: Büyük iş yüklerinde olduğu gibi karmaşık görevler de daha küçük alt görevlere ayrılabilir ve her biri görevin belirli bir yönünde uzmanlaşmış temsilcilere atanabilir. Örneğin, otonom araçlarda farklı temsilciler navigasyon, engel tespiti ve araçlar arası iletişimi yönetir.
+- **Çeşitli uzmanlıklar**: Farklı temsilciler farklı uzmanlıklara sahip olabilir, böylece tek bir temsilciden daha etkili bir şekilde görevin farklı yönlerini ele alabilirler. Bu duruma iyi bir örnek sağlık sektöründe, temsilcilerin teşhis, tedavi planları ve hasta takibini yönetmesidir.
 
-## Çoklu Ajanlar Kullanmanın Tek Bir Ajana Göre Avantajları
+## Tek Bir Temsilciye Göre Çoklu Temsilci Kullanmanın Avantajları
 
-Tek bir ajan sistemi basit görevler için iyi çalışabilir, ancak daha karmaşık görevler için birden fazla ajan kullanmak birkaç avantaj sağlayabilir:
+Tek bir temsilci sistemi basit görevler için iyi çalışabilir, ancak daha karmaşık görevlerde çoklu temsilciler kullanmak çeşitli avantajlar sağlar:
 
-- **Uzmanlaşma**: Her ajan belirli bir görev için uzmanlaşabilir. Tek bir ajanın uzmanlaşmaması, her şeyi yapabilen ancak karmaşık bir görevle karşılaştığında ne yapacağını şaşırabilecek bir ajana sahip olmanız anlamına gelir. Örneğin, en iyi yapamayacağı bir görevi yerine getirmeye çalışabilir.
-- **Ölçeklenebilirlik**: Sistemleri, tek bir ajanı aşırı yüklemek yerine daha fazla ajan ekleyerek ölçeklendirmek daha kolaydır.
-- **Hata Toleransı**: Bir ajan başarısız olursa, diğerleri çalışmaya devam edebilir ve sistemin güvenilirliğini sağlar.
+- **Uzmanlaşma**: Her temsilci belirli bir görev için uzmanlaşabilir. Tek bir temsilcide uzmanlaşma eksikliği, temsilcinin her şeyi yapabilmesi ama karmaşık bir görevle karşılaştığında ne yapacağını karıştırabilmesi anlamına gelir. Örneğin, en uygun olmadığı bir görevi yapmak zorunda kalabilir.
+- **Ölçeklenebilirlik**: Tek bir temsilciyi aşırı yüklemek yerine daha fazla temsilci ekleyerek sistemleri ölçeklendirmek daha kolaydır.
+- **Hata Toleransı**: Bir temsilci arızalanırsa diğerleri çalışmaya devam edebilir; böylece sistem güvenilirliği sağlanır.
 
-Bir örnek üzerinden düşünelim: Bir kullanıcı için bir seyahat rezervasyonu yapalım. Tek bir ajan sistemi, seyahat rezervasyon sürecinin tüm yönlerini ele almak zorunda kalacaktır; uçuş bulmaktan otel ve araç kiralamaya kadar. Bunu tek bir ajanla başarmak için, ajanın tüm bu görevleri yerine getirebilecek araçlara sahip olması gerekir. Bu, bakımı ve ölçeklendirilmesi zor olan karmaşık ve tek parça bir sisteme yol açabilir. Öte yandan, çoklu ajan sistemi, uçuş bulma, otel rezervasyonu ve araç kiralama konusunda uzmanlaşmış farklı ajanlara sahip olabilir. Bu, sistemi daha modüler, bakımı daha kolay ve ölçeklenebilir hale getirir.
+Bir örnek alalım, bir kullanıcı için seyahat rezervasyonu yapalım. Tek bir temsilci sistemi, uçuş bulmaktan otel ve araç kiralama rezervasyonuna kadar seyahat rezervasyonu sürecinin tüm yönlerini ele almak zorunda kalır. Tek bir temsilcide tüm bu görevleri yönetmek için araçlar bulunmalıdır. Bu durum bakımı ve ölçeklendirmesi zor karmaşık ve tek parça bir sistem yaratabilir. Buna karşılık çoklu temsilci sisteminde, farklı temsilciler uçuş bulma, otel ve araç kiralama rezervasyonunda uzmanlaşabilir. Bu da sistemi daha modüler, bakımı kolay ve ölçeklenebilir yapar.
 
-Bunu, bir aile işletmesi olarak yönetilen bir seyahat bürosu ile bir franchise olarak yönetilen bir seyahat bürosu arasında karşılaştırabilirsiniz. Aile işletmesi, seyahat rezervasyon sürecinin tüm yönlerini ele alan tek bir ajana sahip olacaktır, oysa franchise, sürecin farklı yönlerini ele alan farklı ajanlara sahip olacaktır.
+Bunu, tek bir dükkan olarak işletilen bir seyahat bürosuyla, franchise olarak işletilen bir seyahat bürosunu karşılaştırmaya benzetebilirsiniz. Tek dükkanda bir temsilci seyahat rezervasyonunun tüm yönlerini yönetirken, franchise'da farklı temsilciler rezervasyon sürecinin farklı yönleriyle ilgilenir.
 
-## Çoklu Ajan Tasarım Kalıbını Uygulamanın Yapı Taşları
+## Çoklu Temsilci Tasarım Kalıbını Uygulamanın Yapı Taşları
 
-Çoklu ajan tasarım kalıbını uygulamadan önce, kalıbı oluşturan yapı taşlarını anlamanız gerekir.
+Çoklu temsilci tasarım kalıbını uygulamadan önce, kalıbı oluşturan yapı taşlarını anlamalısınız.
 
-Bir kullanıcı için seyahat rezervasyonu yapma örneğine tekrar bakarak bunu somutlaştıralım. Bu durumda, yapı taşları şunları içerecektir:
+Bunu daha somut hale getirmek için tekrar bir kullanıcının seyahat rezervasyon örneğine bakalım. Bu durumda yapı taşları şunları içerebilir:
 
-- **Ajan İletişimi**: Uçuş bulma, otel rezervasyonu ve araç kiralama ajanlarının, kullanıcının tercihleri ve kısıtlamaları hakkında bilgi paylaşması ve iletişim kurması gerekir. Bu iletişim için protokolleri ve yöntemleri belirlemeniz gerekir. Bu, uçuş bulma ajanın, otel rezervasyonu yapan ajanla iletişim kurarak otelin uçuşla aynı tarihlerde rezerve edilmesini sağlaması gerektiği anlamına gelir. Bu, ajanların kullanıcının seyahat tarihleri hakkında bilgi paylaşması gerektiği anlamına gelir; yani, *hangi ajanların bilgi paylaştığını ve nasıl paylaştığını* belirlemeniz gerekir.
-- **Koordinasyon Mekanizmaları**: Ajanların, kullanıcının tercihlerini ve kısıtlamalarını karşılamak için eylemlerini koordine etmesi gerekir. Bir kullanıcı tercihi, havaalanına yakın bir otel isteyebilirken, bir kısıtlama, araç kiralamanın yalnızca havaalanında mevcut olması olabilir. Bu, otel rezervasyonu yapan ajanın, kullanıcının tercihlerini ve kısıtlamalarını karşılamak için araç kiralama ajanı ile koordinasyon sağlaması gerektiği anlamına gelir. Bu, *ajanların eylemlerini nasıl koordine ettiğini* belirlemeniz gerektiği anlamına gelir.
-- **Ajan Mimarisi**: Ajanların, kullanıcıyla olan etkileşimlerinden öğrenmek ve kararlar almak için iç yapıya sahip olması gerekir. Örneğin, uçuş bulma ajanın, kullanıcıya hangi uçuşları önereceği konusunda kararlar almak için iç yapıya sahip olması gerekir. Bu, *ajanların kararları nasıl aldığı ve kullanıcıyla olan etkileşimlerinden nasıl öğrendiği* konusunda karar vermeniz gerektiği anlamına gelir. Bir ajanın nasıl öğrendiği ve geliştiğine dair örnekler, uçuş bulma ajanın, kullanıcının geçmiş tercihlerini temel alarak uçuşları önermek için bir makine öğrenimi modeli kullanması olabilir.
-- **Çoklu Ajan Etkileşimlerine Görünürlük**: Birden fazla ajanın birbirleriyle nasıl etkileşimde bulunduğunu görmeniz gerekir. Bu, hata ayıklama, optimizasyon ve genel sistemin etkinliğini sağlamak için gereklidir. Bunu başarmak için, ajan etkinliklerini ve etkileşimlerini izlemek için araçlara ve tekniklere sahip olmanız gerekir. Bu, günlük kaydı ve izleme araçları, görselleştirme araçları ve performans ölçütleri şeklinde olabilir.
-- **Çoklu Ajan Kalıpları**: Çoklu ajan sistemlerini uygulamak için merkezi, merkezi olmayan ve hibrit mimariler gibi farklı kalıplar vardır. Kullanım durumunuza en uygun kalıbı seçmeniz gerekir.
-- **İnsan Döngüde**: Çoğu durumda, döngüde bir insan bulunacaktır ve ajanlara ne zaman insan müdahalesi isteyeceklerini öğretmeniz gerekir. Bu, ajanların önermediği belirli bir otel veya uçuşu talep eden bir kullanıcı ya da bir uçuş veya otel rezervasyonu yapmadan önce onay isteyen bir kullanıcı şeklinde olabilir.
+- **Temsilciler Arası İletişim**: Uçuş arama, otel ve araç kiralama rezervasyonu temsilcileri, kullanıcının tercihleri ve kısıtlamaları hakkında bilgi paylaşmak için iletişim kurmalıdır. Bu iletişim protokolleri ve yöntemleri belirlenmelidir. Örneğin, uçuş arayan temsilci, otel rezervasyon temsilcisiyle aynı tarihlerde otel rezervasyonu yapılmasını sağlamak için iletişim kurmalıdır. Bu da temsilcilerin *hangi bilgileri paylaştığı ve nasıl paylaştığına* karar vermeniz gerektiği anlamına gelir.
+- **Koordinasyon Mekanizmaları**: Temsilciler, kullanıcının tercih ve kısıtlamalarının karşılandığından emin olmak için hareketlerini koordine etmelidir. Kullanıcının tercihi havaalanına yakın bir otel isterken, kısıtlama araba kiralama hizmetinin sadece havalimanında bulunması olabilir. Bu durumda otel rezervasyon temsilcisi, araba kiralama temsilcisiyle koordinasyon sağlamalıdır. Bu da temsilcilerin *nasıl koordinasyon sağladıklarını* belirlemeniz gerektiği anlamına gelir.
+- **Temsilci Mimarisi**: Temsilcilerin, kullanıcının tercihleriyle etkileşimlerinden öğrenmek ve karar vermek için iç yapıya sahip olmaları gerekir. Örneğin uçuş arama temsilcisi, kullanıcıya hangi uçuşları önereceğine karar vermek için iç yapıya sahip olmalıdır. Bu, temsilcilerin *kullanıcıyla etkileşimlerinden nasıl karar verdiklerini ve öğrendiklerini* belirlemeniz gerektiği anlamına gelir. Örneğin, geçmiş tercihlere dayanarak uçuşları önermek için makine öğrenimi modeli kullanılabilir.
+- **Çoklu Temsilci Etkileşimleri Görünürlüğü**: Birden çok temsilcinin nasıl etkileşimde bulunduğunu görebilmeniz gerekir. Bu, temsilci faaliyetlerini ve etkileşimlerini izlemek için araçlar ve teknikler gerektirir. Loglama, izleme araçları, görselleştirme araçları ve performans ölçütleri buna örnektir.
+- **Çoklu Temsilci Kalıpları**: Çoklu temsilci sistemler için merkezi, merkezi olmayan ve hibrit mimariler gibi farklı kalıplar vardır. Kullanım durumunuza en uygun kalıbı seçmelisiniz.
+- **İnsan döngüde**: Çoğu durumda, izne ihtiyaç duyulduğunda insan müdahalesinin ne zaman isteneceğine ilişkin talimat vermeniz gerekir. Bu, ajanların önermediği belirli bir otel veya uçuşun kullanıcının istemesi ya da rezervasyon öncesi onay talebi şeklinde olabilir.
 
-## Çoklu Ajan Etkileşimlerine Görünürlük
+## Çoklu Temsilci Etkileşimlerini Görme
 
-Birden fazla ajanın birbirleriyle nasıl etkileşimde bulunduğunu görmeniz önemlidir. Bu görünürlük, hata ayıklama, optimizasyon ve genel sistemin etkinliğini sağlamak için gereklidir. Bunu başarmak için, ajan etkinliklerini ve etkileşimlerini izlemek için araçlara ve tekniklere sahip olmanız gerekir. Bu, günlük kaydı ve izleme araçları, görselleştirme araçları ve performans ölçütleri şeklinde olabilir.
+Birden çok temsilcinin nasıl etkileşimde bulunduğunu görmeniz önemlidir. Bu görünürlük, hata ayıklama, optimizasyon ve genel sistem etkinliği için gereklidir. Bunu sağlamak için temsilci faaliyetleri ve etkileşimleri izlemek için araçlar ve tekniklere ihtiyacınız vardır. Bu, loglama ve izleme araçları, görselleştirme araçları ve performans ölçütleri şeklinde olabilir.
 
-Örneğin, bir kullanıcı için seyahat rezervasyonu yapma durumunda, her ajanın durumunu, kullanıcının tercihlerini ve kısıtlamalarını ve ajanlar arasındaki etkileşimleri gösteren bir kontrol paneline sahip olabilirsiniz. Bu kontrol paneli, kullanıcının seyahat tarihlerini, uçuş ajanının önerdiği uçuşları, otel ajanının önerdiği otelleri ve araç kiralama ajanının önerdiği araçları gösterebilir. Bu, ajanların birbirleriyle nasıl etkileşimde bulunduğunu ve kullanıcının tercihleri ve kısıtlamalarının karşılanıp karşılanmadığını net bir şekilde görmenizi sağlar.
+Örneğin, bir kullanıcının seyahat rezervasyonu durumunda, her temsilcinin durumu, kullanıcının tercih ve kısıtlamaları ile temsilciler arasındaki etkileşimleri gösteren bir kontrol paneli olabilir. Bu panel, kullanıcının seyahat tarihlerini, uçuş temsilcisinin önerdiği uçuşları, otel temsilcisinin önerdiği otelleri ve araç kiralama temsilcisinin önerdiği araçları gösterebilir. Böylece temsilcilerin nasıl etkileşimde bulunduğunu ve kullanıcının tercih ve kısıtlamalarının karşılanıp karşılanmadığını açıkça görebilirsiniz.
 
-Bu yönlere daha ayrıntılı bakalım:
+Bunların her bir yönüne daha detaylı bakalım.
 
-- **Günlük Kaydı ve İzleme Araçları**: Her ajanın gerçekleştirdiği eylemler için günlük kaydı yapmak istersiniz. Bir günlük kaydı girdisi, eylemi gerçekleştiren ajan, gerçekleştirilen eylem, eylemin gerçekleştirildiği zaman ve eylemin sonucu hakkında bilgi içerebilir. Bu bilgiler, hata ayıklama, optimizasyon ve daha fazlası için kullanılabilir.
-- **Görselleştirme Araçları**: Görselleştirme araçları, ajanlar arasındaki etkileşimleri daha sezgisel bir şekilde görmenize yardımcı olabilir. Örneğin, ajanlar arasındaki bilgi akışını gösteren bir grafik oluşturabilirsiniz. Bu, sistemdeki darboğazları, verimsizlikleri ve diğer sorunları belirlemenize yardımcı olabilir.
-- **Performans Ölçütleri**: Performans ölçütleri, çoklu ajan sisteminin etkinliğini izlemenize yardımcı olabilir. Örneğin, bir görevi tamamlama süresini, birim zaman başına tamamlanan görev sayısını ve ajanların yaptığı önerilerin doğruluğunu izleyebilirsiniz. Bu bilgiler, iyileştirme alanlarını belirlemenize ve sistemi optimize etmenize yardımcı olabilir.
+- **Loglama ve İzleme Araçları**: Her temsilcinin gerçekleştirdiği her eylemin loglanmasını istersiniz. Bir log kaydı, eylemi gerçekleştiren temsilci, yapılan eylem, eylemin gerçekleştiği zaman ve eylemin sonucu hakkında bilgiler içerebilir. Bu bilgiler hata ayıklama, optimizasyon ve diğer amaçlar için kullanılabilir.
 
-## Çoklu Ajan Kalıpları
+- **Görselleştirme Araçları**: Görselleştirme araçları, temsilciler arasındaki etkileşimleri daha sezgisel görmenize yardımcı olabilir. Örneğin, temsilciler arasındaki bilgi akışını gösteren bir grafik olabilirdi. Bu, sistemdeki darboğazlar, verimsizlikler ve diğer sorunları tespit etmeye yardımcı olabilir.
 
-Çoklu ajan uygulamaları oluşturmak için kullanabileceğimiz bazı somut kalıplara bakalım. İşte dikkate değer bazı ilginç kalıplar:
+- **Performans Ölçütleri**: Performans ölçütleri, çoklu temsilci sistemin etkinliğini izlemenize yardımcı olabilir. Örneğin, bir görevin tamamlanma süresi, birim zamanda tamamlanan görev sayısı ve temsilcilerin yaptığı önerilerin doğruluğu gibi. Bu bilgiler, iyileştirme alanlarını belirleyip sistemi optimize etmekte fayda sağlar.
 
-### Grup Sohbeti
+## Çoklu Temsilci Kalıpları
 
-Bu kalıp, birden fazla ajanın birbirleriyle iletişim kurabileceği bir grup sohbet uygulaması oluşturmak istediğinizde kullanışlıdır. Bu kalıbın tipik kullanım durumları arasında ekip iş birliği, müşteri desteği ve sosyal ağlar bulunur.
+Çoklu temsilci uygulamaları oluşturmak için kullanabileceğimiz bazı somut kalıplara bakalım. İşte dikkate alınmaya değer bazı ilginç kalıplar:
 
-Bu kalıpta, her ajan grup sohbetindeki bir kullanıcıyı temsil eder ve mesajlar bir mesajlaşma protokolü kullanılarak ajanlar arasında değiştirilir. Ajanlar grup sohbete mesaj gönderebilir, grup sohbetten mesaj alabilir ve diğer ajanlardan gelen mesajlara yanıt verebilir.
+### Grup sohbeti
 
-Bu kalıp, tüm mesajların merkezi bir sunucu üzerinden yönlendirildiği merkezi bir mimari veya mesajların doğrudan değiştirildiği merkezi olmayan bir mimari kullanılarak uygulanabilir.
+Bu kalıp, birden fazla temsilcinin birbirleriyle iletişim kurabildiği bir grup sohbet uygulaması oluşturmak istediğinizde kullanışlıdır. Tipik kullanım alanları takım işbirliği, müşteri desteği ve sosyal ağlardır.
 
-![Grup Sohbeti](../../../translated_images/tr/multi-agent-group-chat.ec10f4cde556babd.webp)
+Bu kalıpta, her temsilci grup sohbette bir kullanıcıyı temsil eder ve mesajlar mesajlaşma protokolü kullanılarak temsilciler arasında iletilir. Temsilciler grup sohbetine mesaj gönderebilir, grup sohbetinden mesaj alabilir ve diğer temsilcilerin mesajlarına yanıt verebilir.
 
-### Görev Devri
+Bu kalıp, tüm mesajların merkezi bir sunucu üzerinden yönlendirildiği merkezi mimari veya mesajların doğrudan alışverişi yapılan merkezi olmayan mimari ile uygulanabilir.
 
-Bu kalıp, birden fazla ajanın birbirlerine görev devredebileceği bir uygulama oluşturmak istediğinizde kullanışlıdır.
+![Grup sohbeti](../../../translated_images/tr/multi-agent-group-chat.ec10f4cde556babd.webp)
 
-Bu kalıbın tipik kullanım durumları arasında müşteri desteği, görev yönetimi ve iş akışı otomasyonu bulunur.
+### Görev devri
 
-Bu kalıpta, her ajan bir görevi veya bir iş akışındaki bir adımı temsil eder ve ajanlar, önceden tanımlanmış kurallara göre görevleri diğer ajanlara devredebilir.
+Bu kalıp, birden fazla temsilcinin görevleri birbirlerine devredebileceği bir uygulama oluşturmak istediğinizde kullanışlıdır.
 
-![Görev Devri](../../../translated_images/tr/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
+Bu kalıba tipik senaryolar müşteri desteği, görev yönetimi ve iş akışı otomasyonudur.
 
-### İş Birlikçi Filtreleme
+Bu kalıpta, her temsilci bir görev ya da iş akışındaki bir adımı temsil eder ve temsilciler önceden tanımlanmış kurallara göre görevleri diğer temsilcilere devredebilir.
 
-Bu kalıp, birden fazla ajanın kullanıcıya önerilerde bulunmak için iş birliği yapabileceği bir uygulama oluşturmak istediğinizde kullanışlıdır.
+![Görev devri](../../../translated_images/tr/multi-agent-hand-off.4c5fb00ba6f8750a.webp)
 
-Birden fazla ajanın iş birliği yapmasını istemenizin nedeni, her ajanın farklı bir uzmanlığa sahip olması ve öneri sürecine farklı şekillerde katkıda bulunabilmesidir.
+### İş birliğine dayalı filtreleme
 
-Örneğin, bir kullanıcının borsada satın alınacak en iyi hisse senedi hakkında bir öneri istediğini düşünelim.
+Bu kalıp, birden fazla temsilcinin iş birliği yaparak kullanıcılar için önerilerde bulunacağı bir uygulama oluşturmak istediğinizde kullanışlıdır.
 
-- **Sektör Uzmanı**: Bir ajan belirli bir sektörde uzman olabilir.
-- **Teknik Analiz**: Başka bir ajan teknik analizde uzman olabilir.
-- **Temel Analiz**: Ve başka bir ajan temel analizde uzman olabilir. Bu ajanlar iş birliği yaparak kullanıcıya daha kapsamlı bir öneri sunabilir.
+Çoklu temsilcilerin iş birliği yapmasının nedeni, her temsilcinin farklı uzmanlık alanlarına sahip olması ve öneri sürecine farklı şekillerde katkıda bulunabilmesidir.
+
+Örneğin, bir kullanıcının borsada en iyi hisse senedine yönelik öneri istediği duruma bakalım.
+
+- **Sektör uzmanı**: Bir temsilci belirli bir sektörde uzmandır.
+- **Teknik analiz**: Diğer bir temsilci teknik analiz konusunda uzmandır.
+- **Temel analiz**: Bir diğer temsilci ise temel analiz konusunda uzmandır. Bu temsilciler iş birliği yaparak kullanıcılara daha kapsamlı öneriler sunabilir.
 
 ![Öneri](../../../translated_images/tr/multi-agent-filtering.d959cb129dc9f608.webp)
 
-## Senaryo: İade Süreci
+## Senaryo: İade süreci
 
-Bir müşterinin bir ürün için iade almaya çalıştığı bir senaryoyu düşünelim; bu süreçte oldukça fazla ajan yer alabilir, ancak bunu bu sürece özgü ajanlar ve işinizin diğer bölümlerinde de kullanılabilecek genel ajanlar olarak ayıralım.
+Bir müşterinin ürün iadesi talebinde bulunduğu bir senaryoyu düşünün, bu süreçte pek çok temsilci yer alabilir ancak süreci, iade sürecine özgü temsilciler ve diğer süreçlerde de kullanılabilen genel temsilciler arasında bölelim.
 
-**İade Sürecine Özgü Ajanlar**:
+**İade sürecine özgü temsilciler**:
 
-İade sürecinde yer alabilecek bazı ajanlar şunlardır:
+İşte iade sürecinde yer alabilecek bazı temsilciler:
 
-- **Müşteri Ajanı**: Bu ajan müşteriyi temsil eder ve iade sürecini başlatmaktan sorumludur.
-- **Satıcı Ajanı**: Bu ajan satıcıyı temsil eder ve iade işlemini gerçekleştirmekten sorumludur.
-- **Ödeme Ajanı**: Bu ajan ödeme sürecini temsil eder ve müşterinin ödemesini iade etmekten sorumludur.
-- **Çözüm Ajanı**: Bu ajan çözüm sürecini temsil eder ve iade sürecinde ortaya çıkan sorunları çözmekten sorumludur.
-- **Uyum Ajanı**: Bu ajan uyum sürecini temsil eder ve iade sürecinin düzenlemelere ve politikalara uygun olmasını sağlamaktan sorumludur.
+- **Müşteri temsilcisi**: Bu temsilci müşteriyi temsil eder ve iade sürecini başlatmaktan sorumludur.
+- **Satıcı temsilcisi**: Bu temsilci satıcıyı temsil eder ve iadeyi işler.
+- **Ödeme temsilcisi**: Bu temsilci ödeme sürecini temsil eder ve müşterinin ödemesini iade etmekten sorumludur.
+- **Çözüm temsilcisi**: Bu temsilci çözüm sürecini temsil eder ve iade sürecinde ortaya çıkabilecek sorunları çözmekten sorumludur.
+- **Uyum temsilcisi**: Bu temsilci uyum sürecini temsil eder ve iade sürecinin düzenlemelere ve politikalara uygun olmasını sağlar.
 
-**Genel Ajanlar**:
+**Genel temsilciler**:
 
-Bu ajanlar işinizin diğer bölümlerinde de kullanılabilir.
+Bu temsilciler, işinizin diğer bölümlerinde de kullanılabilir.
 
-- **Kargo Ajanı**: Bu ajan kargo sürecini temsil eder ve ürünü satıcıya geri göndermekten sorumludur. Bu ajan hem iade süreci hem de örneğin bir satın alma yoluyla bir ürünün genel gönderimi için kullanılabilir.
-- **Geri Bildirim Ajanı**: Bu ajan geri bildirim sürecini temsil eder ve müşteriden geri bildirim toplamaktan sorumludur. Geri bildirim herhangi bir zamanda alınabilir ve yalnızca iade sürecinde değil.
-- **Yükseltme Ajanı**: Bu ajan yükseltme sürecini temsil eder ve sorunları daha üst bir destek seviyesine yükseltmekten sorumludur. Bu tür bir ajanı, bir sorunu yükseltmeniz gereken herhangi bir süreçte kullanabilirsiniz.
-- **Bildirim Ajanı**: Bu ajan bildirim sürecini temsil eder ve iade sürecinin çeşitli aşamalarında müşteriye bildirim göndermekten sorumludur.
-- **Analitik Ajanı**: Bu ajan analitik süreci temsil eder ve iade süreciyle ilgili verileri analiz etmekten sorumludur.
-- **Denetim Ajanı**: Bu ajan denetim sürecini temsil eder ve iade sürecinin doğru bir şekilde yürütüldüğünden emin olmak için denetim yapmaktan sorumludur.
-- **Raporlama Ajanı**: Bu ajan raporlama sürecini temsil eder ve iade süreciyle ilgili raporlar oluşturmaktan sorumludur.
-- **Bilgi Ajanı**: Bu ajan bilgi sürecini temsil eder ve iade süreciyle ilgili bir bilgi tabanını sürdürmekten sorumludur. Bu ajan hem iadeler hem de işinizin diğer bölümleri hakkında bilgi sahibi olabilir.
-- **Güvenlik Ajanı**: Bu ajan güvenlik sürecini temsil eder ve iade sürecinin güvenliğini sağlamaktan sorumludur.
-- **Kalite Ajanı**: Bu ajan kalite sürecini temsil eder ve iade sürecinin kalitesini sağlamaktan sorumludur.
+- **Nakliye temsilcisi**: Bu temsilci nakliye sürecini temsil eder ve ürünü satıcıya geri göndermekten sorumludur. Bu temsilci hem iade sürecinde hem de örneğin ürün satın alma durumundaki genel nakliyede kullanılabilir.
+- **Geri bildirim temsilcisi**: Bu temsilci geri bildirim sürecini temsil eder ve müşteriden geri bildirim toplamaktan sorumludur. Geri bildirim her zaman, sadece iade sürecinde değil, alınabilir.
+- **Yükseltme temsilcisi**: Bu temsilci yükseltme sürecini temsil eder ve destek sorunlarını daha üst seviyeye taşımakla sorumludur. Bu tür bir temsilci, herhangi bir süreçte sorun yükseltmeniz gerektiğinde kullanılabilir.
+- **Bildirim temsilcisi**: Bu temsilci bildirim sürecini temsil eder ve iade sürecinin çeşitli aşamalarında müşteriye bildirimler gönderir.
+- **Analitik temsilcisi**: Bu temsilci analitik süreci temsil eder ve iade süreciyle ilgili verileri analiz etmekten sorumludur.
+- **Denetim temsilcisi**: Bu temsilci denetim sürecini temsil eder ve iade sürecinin doğru şekilde yürütüldüğünden emin olmak için denetim yapar.
+- **Raporlama temsilcisi**: Bu temsilci raporlama sürecini temsil eder ve iade süreci hakkında raporlar hazırlar.
+- **Bilgi temsilcisi**: Bu temsilci bilgi sürecini temsil eder ve iade süreciyle ilgili bilgi tabanını yönetir. Bu temsilci hem iadeler hem de işinizin diğer bölümleri hakkında bilgi sahibi olabilir.
+- **Güvenlik temsilcisi**: Bu temsilci güvenlik sürecini temsil eder ve iade sürecinin güvenliğini sağlar.
+- **Kalite temsilcisi**: Bu temsilci kalite sürecini temsil eder ve iade sürecinin kalitesini sağlar.
 
-Yukarıda hem iade sürecine özgü hem de işinizin diğer bölümlerinde kullanılabilecek genel ajanlar listelenmiştir. Umarım bu, çoklu ajan sisteminizde hangi ajanları kullanacağınıza nasıl karar verebileceğiniz konusunda size bir fikir verir.
+Önceki satırlarda, hem iade sürecine özgü hem de işinizin diğer bölümlerinde kullanılabilen genel temsilciler için oldukça fazla temsilci listelenmiştir. Umarım bu, çoklu temsilci sisteminizde hangi temsilcileri kullanacağınıza karar vermeniz konusunda size bir fikir verir.
 
-## Görev
-Müşteri destek süreci için çoklu ajan sistemi tasarlayın. Süreçte yer alan ajanları, rollerini ve sorumluluklarını belirleyin ve birbirleriyle nasıl etkileşim kurduklarını açıklayın. Hem müşteri destek sürecine özgü ajanları hem de işinizin diğer bölümlerinde kullanılabilecek genel ajanları göz önünde bulundurun.
+## Ödev
 
-> Devam etmeden önce bir düşünün, ihtiyacınız olandan daha fazla ajana ihtiyaç duyabilirsiniz.
+Bir müşteri destek süreci için çoklu temsilci sistemi tasarlayın. Süreçte yer alan temsilcileri, rollerini ve sorumluluklarını ve birbirleriyle nasıl etkileşimde bulunduklarını belirleyin. Hem müşteri destek sürecine özgü temsilcileri hem de işinizin diğer bölümlerinde kullanılabilen genel temsilcileri göz önünde bulundurun.
 
-> İPUCU: Müşteri destek sürecinin farklı aşamalarını düşünün ve ayrıca herhangi bir sistem için gerekli ajanları göz önünde bulundurun.
+
+> Aşağıdaki çözümü okumadan önce bir düşünün, düşündüğünüzden daha fazla ajan gerekebilir.
+
+> İPUCU: Müşteri destek sürecinin farklı aşamalarını düşünün ve ayrıca herhangi bir sistem için gereken ajanları göz önünde bulundurun.
 
 ## Çözüm
 
@@ -156,25 +160,37 @@ Müşteri destek süreci için çoklu ajan sistemi tasarlayın. Süreçte yer al
 
 ## Bilgi Kontrolleri
 
-Soru: Çoklu ajanları ne zaman kullanmayı düşünmelisiniz?
+### Soru 1
 
-- [ ] A1: Küçük bir iş yükünüz ve basit bir göreviniz olduğunda.
-- [ ] A2: Büyük bir iş yükünüz olduğunda.
-- [ ] A3: Basit bir göreviniz olduğunda.
+Çok ajanlı sistem için en uygun senaryo hangisidir?
 
-[Çözüm testi](./solution/solution-quiz.md)
+- [ ] A1: Bir destek botu, tek bir bilgi tabanı ve küçük araç setiyle yaygın soruları yanıtlar.
+- [ ] A2: Bir geri ödeme iş akışı, her biri kendi araçlarına sahip ayrı sahtekarlık, ödeme ve uyumluluk rolleri gerektirir ve sonuçlar koordine edilmelidir.
+- [ ] A3: Aynı basit sınıflandırma isteği saatte binlerce kez gelmektedir.
+
+### Soru 2
+
+Tek bir ajan genellikle ne zaman daha iyi bir tercihtir?
+
+- [ ] A1: Görev, uzman geçişi olmadan bir talimat ve araç seti ile yönetilebilir.
+- [ ] A2: Ajanın birden fazla araca erişimi vardır.
+- [ ] A3: İş akışı, farklı izinlere ve bağımsız denetim izlerine sahip ayrı roller gerektirir.
+
+[Çözüm sınavı](./solution/solution-quiz.md)
 
 ## Özet
 
-Bu derste, çoklu ajan tasarım desenini ele aldık. Çoklu ajanların hangi senaryolarda uygulanabilir olduğunu, tek bir ajana kıyasla çoklu ajanların avantajlarını, çoklu ajan tasarım desenini uygulamanın yapı taşlarını ve birden fazla ajanın birbirleriyle nasıl etkileşimde bulunduğunu görselleştirmenin yollarını inceledik.
+Bu derste, çok ajanlı tasarım deseni, çok ajanların uygulanabilir olduğu senaryolar, tek bir ajana göre çok ajan kullanmanın avantajları, çok ajanlı tasarım deseninin kurucu blokları ve çoklu ajanların birbirleriyle nasıl etkileşime geçtiğine dair görünürlük sahibi olma konularını inceledik.
 
-### Çoklu Ajan Tasarım Deseni Hakkında Daha Fazla Sorunuz mu Var?
+### Çok Ajanlı Tasarım Deseni Hakkında Daha Fazla Sorunuz Mu Var?
 
-Diğer öğrenenlerle tanışmak, ofis saatlerine katılmak ve AI Ajanları hakkındaki sorularınıza yanıt almak için [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) sunucusuna katılın.
+Diğer öğrenenlerle tanışmak, danışma saatlerine katılmak ve AI Ajanları sorularınıza yanıt almak için [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) topluluğuna katılın.
 
 ## Ek Kaynaklar
 
-- 
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Agent Framework dokümantasyonu</a>
+- <a href="https://www.analyticsvidhya.com/blog/2024/10/agentic-design-patterns/" target="_blank">Agentic tasarım desenleri</a>
+
 
 ## Önceki Ders
 
@@ -186,5 +202,7 @@ Diğer öğrenenlerle tanışmak, ofis saatlerine katılmak ve AI Ajanları hakk
 
 ---
 
-**Feragatname**:  
-Bu belge, [Co-op Translator](https://github.com/Azure/co-op-translator) adlı yapay zeka çeviri hizmeti kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Orijinal belgenin kendi dilindeki hali, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

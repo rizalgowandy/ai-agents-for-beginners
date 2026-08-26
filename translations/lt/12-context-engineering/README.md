@@ -1,156 +1,188 @@
-# Kontekstų inžinerija dirbtinio intelekto agentams
+# Konteksto Inžinerija DI Agentams
 
-[![Kontekstų inžinerija](../../../translated_images/lt/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
+[![Konteksto Inžinerija](../../../translated_images/lt/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
 
-> _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
+> _(Spustelėkite aukščiau esantį paveikslėlį, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
 
-Suprasti sudėtingumą programos, kuriai kuriate dirbtinio intelekto agentą, yra svarbu norint sukurti patikimą sistemą. Turime kurti DI agentus, kurie efektyviai valdo informaciją, kad galėtų spręsti sudėtingus poreikius, viršijančius paprasto užklausų inžinerijos ribas.
+Svarbu suprasti programos, kuriai kuriate DI agentą, sudėtingumą, norint sukurti patikimą agentą. Turime kurti DI agentus, kurie efektyviai valdo informaciją, kad spręstų sudėtingus poreikius, viršijančius tik promptų inžineriją.
 
-Šioje pamokoje aptarsime, kas yra kontekstų inžinerija ir kokį vaidmenį ji atlieka kuriant DI agentus.
+Šioje pamokoje pažvelgsime, kas yra konteksto inžinerija ir kokį vaidmenį ji atlieka kuriant DI agentus.
 
 ## Įvadas
 
 Šioje pamokoje aptarsime:
 
-• **Kas yra kontekstų inžinerija** ir kuo ji skiriasi nuo užklausų inžinerijos.
+• **Kas yra konteksto inžinerija** ir kodėl ji skiriasi nuo promptų inžinerijos.
 
-• **Efektyvios kontekstų inžinerijos strategijas**, įskaitant informacijos rašymą, atranką, suspaudimą ir izoliavimą.
+• **Efektyvios konteksto inžinerijos strategijas**, įskaitant, kaip rašyti, pasirinkti, suspausti ir izoliuoti informaciją.
 
-• **Dažniausias konteksto klaidas**, kurios gali sutrikdyti DI agento veikimą, ir kaip jas ištaisyti.
+• **Dažnas konteksto klaidas**, kurios gali sugadinti DI agentą, ir kaip jas ištaisyti.
 
-## Mokymosi tikslai
+## Mokymosi Tikslai
 
-Baigę šią pamoką, jūs suprasite, kaip:
+Baigę šią pamoką suprasite, kaip:
 
-• **Apibrėžti kontekstų inžineriją** ir atskirti ją nuo užklausų inžinerijos.
+• **Apibrėžti konteksto inžineriją** ir atskirti ją nuo promptų inžinerijos.
 
-• **Identifikuoti pagrindinius konteksto komponentus** didelių kalbos modelių (LLM) programose.
+• **Nustatyti pagrindinius konteksto komponentus** Didelių Kalbinių Modelių (LLM) programose.
 
-• **Taikyti strategijas konteksto rašymui, atrankai, suspaudimui ir izoliavimui**, kad pagerintumėte agento veikimą.
+• **Taikyti strategijas rašant, pasirenkant, suspaudžiant ir izoliuojant kontekstą**, kad pagerintumėte agento veikimą.
 
-• **Atpažinti dažniausias konteksto klaidas**, tokias kaip užteršimas, išsiblaškymas, painiava ir konfliktai, bei įgyvendinti jų sprendimo būdus.
+• **Atpažinti dažnas konteksto klaidas**, tokias kaip užterštumas, atitraukimas, painiava ir konfliktas, bei įgyvendinti jų šalinimo metodus.
 
-## Kas yra kontekstų inžinerija?
+## Kas yra konteksto inžinerija?
 
-DI agentams kontekstas yra tai, kas lemia jų planavimą ir veiksmų pasirinkimą. Kontekstų inžinerija – tai praktika, užtikrinanti, kad DI agentas turėtų tinkamą informaciją, reikalingą atlikti kitą užduoties žingsnį. Konteksto langas yra riboto dydžio, todėl kaip agentų kūrėjai turime kurti sistemas ir procesus, kurie padėtų pridėti, pašalinti ir suspausti informaciją šiame lange.
+DI agentams kontekstas yra tai, kas lemia agento planavimą imtis tam tikrų veiksmų. Konteksto inžinerija - tai praktika užtikrinti, kad DI agentas turėtų tinkamą informaciją kitam užduoties žingsniui atlikti. Konteksto langas yra riboto dydžio, todėl kaip agentų kūrėjai turime kurti sistemas ir procesus, skirtus valdyti informacijos įtraukimą, pašalinimą ir suspaudimą konteksto lange.
 
-### Užklausų inžinerija vs Kontekstų inžinerija
+### Promptų inžinerija vs konteksto inžinerija
 
-Užklausų inžinerija orientuota į vieną statinių instrukcijų rinkinį, kuris efektyviai nukreipia DI agentus pagal taisykles. Kontekstų inžinerija apima dinamiškos informacijos valdymą, įskaitant pradinę užklausą, kad būtų užtikrinta, jog DI agentas ilgainiui turės reikiamą informaciją. Pagrindinė kontekstų inžinerijos idėja – padaryti šį procesą pakartojamą ir patikimą.
+Promptų inžinerija orientuota į vieną statinių nurodymų rinkinį, kuris efektyviai nukreipia DI agentus naudodamas taisyklių rinkinį. Konteksto inžinerija - tai dinamiškos informacijos valdymas, įskaitant pradinį promptą, siekiant užtikrinti, kad DI agentas turėtų reikiamą informaciją laikui bėgant. Pagrindinė konteksto inžinerijos mintis yra padaryti šį procesą pakartojamą ir patikimą.
 
 ### Konteksto tipai
 
 [![Konteksto tipai](../../../translated_images/lt/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
 
-Svarbu prisiminti, kad kontekstas nėra vienalytis. Informacija, kurios DI agentui reikia, gali būti gaunama iš įvairių šaltinių, ir mūsų užduotis yra užtikrinti, kad agentas turėtų prieigą prie šių šaltinių:
+Svarbu prisiminti, kad kontekstas nėra vienas dalykas. Informacija, kurios DI agentui reikia, gali kilti iš įvairių šaltinių, ir nuo mūsų priklauso užtikrinti, kad agentas turėtų prieigą prie šių šaltinių:
 
-DI agentui reikalingi konteksto tipai gali apimti:
+DI agentui gali reikėti valdyti šiuos konteksto tipus:
 
-• **Instrukcijas:** Tai tarsi agento „taisyklių rinkinys“ – užklausos, sistemos pranešimai, kelių pavyzdžių demonstracijos (parodant DI, kaip atlikti užduotį) ir įrankių aprašymai, kuriuos jis gali naudoti. Čia užklausų inžinerija susijungia su kontekstų inžinerija.
+• **Nurodymai:** Tai tarsi agento "taisyklių" rinkinys – promptai, sistemos pranešimai, kelių pavyzdžių rodymas (kaip DI daryti kažką) ir įrankių aprašymai, kuriuos agentas gali naudoti. Čia promptų inžinerija susilieja su konteksto inžinerija.
 
-• **Žinias:** Tai faktai, informacija, gauta iš duomenų bazių, arba ilgalaikės agento sukauptos atmintys. Tai apima RAG (Retrieval Augmented Generation) sistemos integravimą, jei agentui reikia prieigos prie skirtingų žinių saugyklų ir duomenų bazių.
+• **Žinios:** Tai faktai, informacija gauta iš duomenų bazių arba ilgalaikių prisiminimų, kuriuos agentas sukaupė. Tai apima ir Retrieval Augmented Generation (RAG) sistemos integravimą, jei agentui reikia prieigos prie skirtingų žinių kaupiklių ar duomenų bazių.
 
-• **Įrankius:** Tai išorinių funkcijų, API ir MCP serverių apibrėžimai, kuriuos agentas gali iškviesti, kartu su grįžtamuoju ryšiu (rezultatais), gautu juos naudojant.
+• **Įrankiai:** Tai apibrėžimai išorinių funkcijų, API ir MCP serverių, kuriuos agentas gali iškviesti, kartu su rezultatais, gautais juos naudojant.
 
-• **Pokalbių istoriją:** Vykstantį dialogą su vartotoju. Laikui bėgant šie pokalbiai tampa ilgesni ir sudėtingesni, todėl užima daugiau vietos konteksto lange.
+• **Pokalbių Istorija:** Nuolatinis dialogas su vartotoju. Laikui bėgant šie pokalbiai ilgėja ir komplikuojasi, todėl užima vietos konteksto lange.
 
-• **Vartotojo pageidavimus:** Informaciją apie vartotojo pomėgius ar nemėgstamus dalykus, sukauptą laikui bėgant. Tai gali būti saugoma ir naudojama priimant svarbius sprendimus, padedančius vartotojui.
+• **Vartotojo pageidavimai:** Informacija apie vartotojo pomėgius ar nepatinkančius dalykus, sužinoma laikui bėgant. Ši informacija gali būti saugoma ir naudojama priimant svarbius sprendimus, siekiant padėti vartotojui.
 
-## Efektyvios kontekstų inžinerijos strategijos
+## Efektyvios konteksto inžinerijos strategijos
 
 ### Planavimo strategijos
 
-[![Geriausios kontekstų inžinerijos praktikos](../../../translated_images/lt/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
+[![Konteksto inžinerijos gerosios praktikos](../../../translated_images/lt/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
 
-Gera kontekstų inžinerija prasideda nuo gero planavimo. Štai požiūris, kuris padės jums pradėti taikyti kontekstų inžinerijos koncepciją:
+Gera konteksto inžinerija prasideda nuo gero planavimo. Štai požiūris, kuris padės pradėti mąstyti, kaip taikyti konteksto inžinerijos koncepciją:
 
-1. **Aiškiai apibrėžkite rezultatus** – užduočių, kurias DI agentai atliks, rezultatai turėtų būti aiškiai apibrėžti. Atsakykite į klausimą – „Kaip pasaulis atrodys, kai DI agentas baigs savo užduotį?“ Kitaip tariant, kokį pokytį, informaciją ar atsakymą vartotojas turėtų gauti po sąveikos su DI agentu.
-
-2. **Sukurkite konteksto žemėlapį** – kai apibrėžėte DI agento užduoties rezultatus, turite atsakyti į klausimą „Kokią informaciją DI agentui reikia turėti, kad atliktų šią užduotį?“. Taip galite pradėti kurti konteksto žemėlapį, kuriame nurodoma, kur ta informacija gali būti randama.
-
-3. **Sukurkite konteksto kanalus** – dabar, kai žinote, kur yra informacija, turite atsakyti į klausimą „Kaip agentas gaus šią informaciją?“. Tai galima padaryti įvairiais būdais, įskaitant RAG, MCP serverių ir kitų įrankių naudojimą.
+1. **Aiškiai apibrėžti rezultatus** – Užduočių, kurias atliks DI agentai, rezultatai turi būti aiškiai apibrėžti. Atsakykite į klausimą – „Kaip atrodys pasaulis, kai DI agentas baigs savo užduotį?“ Kitaip tariant, kokį pokytį, informaciją ar atsakymą vartotojas turėtų gauti po sąveikos su DI agentu.
+2. **Žemėlapiuoti kontekstą** – Kai apibrėžiate DI agento rezultatus, turite atsakyti į klausimą „Kokią informaciją DI agentas turi turėti, kad įvykdytų šią užduotį?“. Taip galite pradėti žemėlapiuoti, kur ta informacija gali būti randama.
+3. **Kurti konteksto srautus** – Dabar, kai žinote, kur yra informacija, turite atsakyti į klausimą „Kaip agentas gaus šią informaciją?“. Tai galima atlikti įvairiais būdais, įskaitant RAG, MCP serverių ir kitų įrankių naudojimą.
 
 ### Praktinės strategijos
 
-Planavimas yra svarbus, tačiau kai informacija pradeda patekti į agento konteksto langą, turime taikyti praktines strategijas, kad ją valdytume:
+Planavimas svarbus, tačiau kai informacija pradeda tekėti į agento konteksto langą, turime turėti praktinių strategijų ją valdyti:
 
 #### Konteksto valdymas
 
-Nors dalis informacijos automatiškai bus pridėta į konteksto langą, kontekstų inžinerija apima aktyvesnį šios informacijos valdymą, kurį galima atlikti keliais būdais:
+Nors dalis informacijos į konteksto langą bus dedama automatiškai, konteksto inžinerija reiškia aktyvesnį požiūrį į šią informaciją, ką galima pasiekti keliais būdais:
 
-1. **Agentų užrašų knygelė**  
-Tai leidžia DI agentui užsirašyti svarbią informaciją apie dabartines užduotis ir vartotojo sąveikas per vieną sesiją. Tai turėtų egzistuoti už konteksto lango ribų, faile arba vykdymo objekte, kurį agentas vėliau galėtų pasiekti šios sesijos metu, jei reikia.
+ 1. **Agentų užrašų knygelė**
+ Tai leidžia DI agentui fiksuoti svarbią informaciją apie esamas užduotis ir vartotojo sąveikas per vieną sesiją. Ši informacija turėtų būti saugoma už konteksto lango ribų, pavyzdžiui, faile arba vykdymo objekte, kurį agentas vėliau gali pasiekti šios sesijos metu, jei reikės.
 
-2. **Atmintys**  
-Užrašų knygelės yra naudingos informacijai valdyti už vienos sesijos konteksto lango ribų. Atmintys leidžia agentams saugoti ir pasiekti svarbią informaciją per kelias sesijas. Tai gali apimti santraukas, vartotojo pageidavimus ir grįžtamąjį ryšį, kad ateityje būtų galima tobulėti.
+ 2. **Prisiminimai**
+ Užrašų knygelės tinka valdyti informaciją už vienos sesijos konteksto lango ribų. Prisiminimai leidžia agentams saugoti ir gauti svarbią informaciją per kelias sesijas. Tai gali apimti santraukas, vartotojo pageidavimus ir atsiliepimus dėl tobulinimų ateityje.
 
-3. **Konteksto suspaudimas**  
-Kai konteksto langas tampa pilnas, galima taikyti tokias technikas kaip santraukų sudarymas ir apkarpymas. Tai apima tik svarbiausios informacijos išsaugojimą arba senesnių pranešimų pašalinimą.
+ 3. **Konteksto suspaudimas**
+  Kai konteksto langas didėja ir artėja prie ribos, galima taikyti tokias technikas kaip santraukų sudarymas ir trynimas. Tai apima arba tik svarbiausios informacijos išlaikymą, arba senesnių pranešimų pašalinimą.
+  
+ 4. **Daugiagentinės sistemos**
+  Daugiagentinės sistemos kūrimas yra konteksto inžinerijos forma, nes kiekvienas agentas turi savo konteksto langą. Kaip šis kontekstas dalijamasi ir perduodamas įvairiems agentams – tai dar viena planavimo dalis kuriant šias sistemas.
+  
+ 5. **Sandbox aplinkos**
+  Jei agentui reikia vykdyti tam tikrą kodą arba apdoroti didelius informacijos kiekius dokumente, tai gali užimti daug tokenų rezultatams apdoroti. Užuot visa tai saugojus konteksto lange, agentas gali naudoti sandbox aplinką, kurioje galima vykdyti kodą ir tik perskaityti rezultatus bei kitą svarbią informaciją.
+  
+ 6. **Vykdymo laikotarpio būsenos objektai**
+   Tai vykdoma kuriant informacijos konteinerius, kad būtų valdomos situacijos, kai agentui reikia prieigos prie tam tikros informacijos. Sudėtingai užduočiai tai leistų agentui rezultatų saugojimą žingsnis po žingsnio, leidžiant kontekstui ateiti tik prie konkrečios užduoties dalies.
 
-4. **Daugiagentės sistemos**  
-Daugiagentės sistemos kūrimas yra kontekstų inžinerijos forma, nes kiekvienas agentas turi savo konteksto langą. Kaip tas kontekstas dalijamas ir perduodamas skirtingiems agentams, yra dar vienas aspektas, kurį reikia suplanuoti kuriant šias sistemas.
+#### Konteksto tikrinimas
 
-5. **Smėlio dėžės aplinkos**  
-Jei agentui reikia vykdyti kodą arba apdoroti didelius informacijos kiekius dokumente, tai gali užimti daug vietos konteksto lange. Vietoj to, kad visa tai būtų saugoma konteksto lange, agentas gali naudoti smėlio dėžės aplinką, kurioje vykdomas kodas, o agentas skaito tik rezultatus ir kitą svarbią informaciją.
+Pritaikius vieną iš šių strategijų verta patikrinti, ką iš tiesų gavo kitas modelio kvietimas. Naudingas derinimo klausimas yra:
 
-6. **Vykdymo būsenos objektai**  
-Tai atliekama sukuriant informacijos konteinerius, kurie padeda valdyti situacijas, kai agentui reikia prieigos prie tam tikros informacijos. Sudėtingai užduočiai tai leistų agentui saugoti kiekvieno subtikslo rezultatus žingsnis po žingsnio, leidžiant kontekstui išlikti susijusiam tik su konkrečiu subtikslu.
+> Ar agentas užkrautų per daug konteksto, netinkamą kontekstą ar praleistą reikalingą kontekstą?
 
-### Kontekstų inžinerijos pavyzdys
+Kad atsakytumėte į šį klausimą, nereikia registruoti žalių promptų, įrankių išvesties ar atminties turinio. Produkcijoje rekomenduojama naudoti mažus konteksto patikrinimo įrašus, apimančius kiekius, ID, hašus ir politikos etiketes:
 
-Tarkime, norime, kad DI agentas **„Užsakytų kelionę į Paryžių.“**
+- **Pasirinkimas:** Sekite, kiek kandidatų dalių, įrankių ar atminties buvo svarstyta, kiek iš jų buvo pasirinkta ir kuri taisyklė ar balas lėmė kitų filtravimą.
+- **Suspaudimas:** Užfiksuokite šaltinio diapazoną arba sekos ID, santraukos ID, įvertintą tokenų skaičių prieš ir po suspaudimo, bei ar žali turinys buvo pašalintas iš kito kvietimo.
+- **Izoliacija:** Užfiksuokite, kuri įmenama užduotis vyko atskirame agento, sesijos ar sandbox aplinkoje, kokia ribojanti santrauka buvo grąžinta, ir ar didelė įrankio išvestis liko už pagrindinio agento konteksto ribų.
+- **Atmintis ir RAG:** Saugo retrieval dokumentų ID, atminties ID, balus, pasirinktus ID ir redagavimo statusą vietoje viso gauto teksto.
+- **Saugumas ir privatumas:** Rinkitės hašus, ID, tokenų skaičių ir politikos etiketes vietoje jautrių promptų tekstų, įrankių argumentų, jų rezultatų ar vartotojo atminties turinio.
 
-• Paprastas agentas, naudojantis tik užklausų inžineriją, galėtų tiesiog atsakyti: **„Gerai, kada norėtumėte vykti į Paryžių?“**. Jis apdorotų tik jūsų tiesioginį klausimą tuo metu, kai vartotojas jį užduoda.
+Tikslas nėra saugoti daugiau konteksto. Tikslas – palikti pakankamai įrodymų, kad kūrėjas galėtų pasakyti, kokia konteksto strategija buvo vykdoma ir ar ji pakeitė kitą modelio kvietimą numatytu būdu.
 
-• Agentas, naudojantis kontekstų inžinerijos strategijas, padarytų daug daugiau. Prieš atsakydamas, jo sistema galėtų:
+### Konteksto inžinerijos pavyzdys
 
-  ◦ **Patikrinti jūsų kalendorių** dėl laisvų datų (realiojo laiko duomenų gavimas).
+Tarkime, norime, kad DI agentas **„užsakyčiau kelionę į Paryžių.“**
 
- ◦ **Prisiminti ankstesnius kelionių pageidavimus** (iš ilgalaikės atminties), pvz., jūsų mėgstamą oro liniją, biudžetą ar tai, ar teikiate pirmenybę tiesioginiams skrydžiams.
+• Paprastas agentas, naudojantis tik promptų inžineriją, gali atsakyti: **„Gerai, kada norėtumėte vykti į Paryžių?“** Jis apdorojęs tik jūsų tiesioginį klausimą tuo momentu, kai vartotojas uždavė.
 
- ◦ **Identifikuoti galimus įrankius** skrydžių ir viešbučių užsakymui.
+• Agentas, taikantis aptartas konteksto inžinerijos strategijas, padarytų daug daugiau. Net neatsakęs, jo sistema galėtų:
 
-- Tada atsakymas galėtų būti: **„Sveiki, [Jūsų vardas]! Matau, kad pirmąją spalio savaitę esate laisvas. Ar turėčiau ieškoti tiesioginių skrydžių į Paryžių su [Mėgstama oro linija] jūsų įprastame biudžete [Biudžetas]?“**. Šis turtingesnis, konteksto suvokimu pagrįstas atsakymas parodo kontekstų inžinerijos galią.
+  ◦ **Patikrinti jūsų kalendorių** dėl laisvų datų (gaunant realaus laiko duomenis).
 
-## Dažniausios konteksto klaidos
+ ◦ **Prisiminimų ištraukimą** apie ankstesnius kelionių pageidavimus (iš ilgalaikės atminties), pavyzdžiui, pageidaujamą oro liniją, biudžetą ar tiesioginius skrydžius.
 
-### Konteksto užteršimas
+ ◦ **Galimų įrankių** nustatymą, skirtą skrydžių ir viešbučių užsakymui.
 
-**Kas tai yra:** Kai haliucinacija (klaidinga informacija, sugeneruota LLM) arba klaida patenka į kontekstą ir nuolat cituojama, sukeldama agentui neįmanomus tikslus arba nesąmoningas strategijas.
+- Tada pavyzdinis atsakymas galėtų būti: „Sveikas, [Jūsų Vardas]! Matau, kad esate laisvas spalio pirmąją savaitę. Ar ieškoti tiesioginių skrydžių į Paryžių su [Pageidaujama oro linija] jūsų įprastame biudžete [Biudžetas]?“. Šis turiningas, kontekstą atsižvelgiantis atsakymas iliustruoja konteksto inžinerijos galią.
 
-**Ką daryti:** Įgyvendinkite **konteksto validaciją** ir **karantiną**. Patikrinkite informaciją prieš ją įtraukdami į ilgalaikę atmintį. Jei aptinkamas galimas užteršimas, pradėkite naujas konteksto gijas, kad bloga informacija neplistų.
+## Dažnos konteksto klaidos
 
-**Kelionių užsakymo pavyzdys:** Jūsų agentas haliucinuoja **tiesioginį skrydį iš mažo vietinio oro uosto į tolimą tarptautinį miestą**, kuris iš tikrųjų neteikia tarptautinių skrydžių. Ši neegzistuojanti skrydžio detalė išsaugoma kontekste. Vėliau, kai paprašote agento užsakyti, jis nuolat bando rasti bilietus šiam neįmanomam maršrutui, sukeldamas pasikartojančias klaidas.
+### Konteksto užterštumas
 
-**Sprendimas:** Įgyvendinkite žingsnį, kuris **patvirtina skrydžio egzistavimą ir maršrutus naudojant realiojo laiko API** _prieš_ įtraukiant skrydžio detalę į agento darbo kontekstą. Jei validacija nepavyksta, klaidinga informacija „karantinuojama“ ir toliau nenaudojama.
+**Kas tai yra:** Kai LLM sukurta haliucinacija (klaidinga informacija) arba klaida patenka į kontekstą ir yra nuolat cituojama, dėl ko agentas siekia neįmanomų tikslų arba kuria nesąmoningas strategijas.
 
-### Konteksto išsiblaškymas
+**Ką daryti:** Įgyvendinti **konteksto validaciją** ir **karantiną**. Patikrinti informaciją prieš ją pridedant prie ilgalaikės atminties. Jei įtariamas užterštumas, pradėti naujus švarius konteksto srautus, kad bloga informacija nesiplėstų.
 
-**Kas tai yra:** Kai kontekstas tampa toks didelis, kad modelis per daug susitelkia į sukauptą istoriją, užuot naudojęs tai, ką išmoko mokymo metu, sukeldamas pasikartojančius ar nenaudingus veiksmus. Modeliai gali pradėti daryti klaidas dar prieš užpildant konteksto langą.
+**Kelionių užsakymo pavyzdys:** Jūsų agentas sukuria haliucinaciją apie **tiesioginį skrydį iš mažo vietinio oro uosto į tolimą tarptautinį miestą**, kurio iš tiesų nėra. Ši neegzistuojanti skrydžio detalė įrašoma į kontekstą. Vėliau, kai prašote agento užsakyti bilietą, jis nuolat bando rasti bilietus šiam neįmanomam maršrutui, sukeldamas pasikartojančias klaidas.
 
-**Ką daryti:** Naudokite **konteksto santraukas**. Periodiškai suspauskite sukauptą informaciją į trumpesnes santraukas, išsaugodami svarbias detales ir pašalindami nereikalingą istoriją. Tai padeda „atnaujinti“ dėmesį.
+**Sprendimas:** Prieš pridedant skrydžio detalę į agento darbo kontekstą, įvykdyti žingsnį, kuris **valiuduoja skrydžio egzistavimą ir maršrutus su realaus laiko API**. Jei validacija nepavyksta, klaidinga informacija yra „karantinuojama“ ir toliau nenaudojama.
 
-**Kelionių užsakymo pavyzdys:** Jūs ilgai diskutavote apie įvairias svajonių kelionių vietas, įskaitant išsamų pasakojimą apie savo žygį prieš dvejus metus. Kai pagaliau paprašote **„surasti man pigų skrydį kitam mėnesiui“**, agentas pasimeta senose, nesvarbiose detalėse ir nuolat klausinėja apie jūsų žygio įrangą ar ankstesnius maršrutus, ignoruodamas jūsų dabartinį prašymą.
+### Konteksto atitraukimas
 
-**Sprendimas:** Po tam tikro pokalbio posūkių skaičiaus arba kai kontekstas tampa per didelis, agentas turėtų **sutrumpinti naujausią ir svarbiausią pokalbio dalį** – sutelkiant dėmesį į jūsų dabartines kelionės datas ir vietą – ir naudoti tą sutrumpintą santrauką kitam LLM kvietimui, atsisakant mažiau svarbios istorijos.
+**Kas tai yra:** Kai kontekstas tampa per didelis, modelis pernelyg daug dėmesio skiria sukauptai istorijai, o ne mokymosi laikotarpiu išmoktam žinių naudojimui, dėl ko pasikartoja nereikalingi ar beprasmiški veiksmai. Modeliai gali pradėti klysti dar prieš pasiekiant konteksto lango ribą.
+
+**Ką daryti:** Naudoti **konteksto santrauką**. Periodiškai suspausti sukauptą informaciją į trumpesnes santraukas, išlaikant svarbiausias detales ir pašalinant pasikartojančią istoriją. Tai padeda „atstatyti“ dėmesį.
+
+**Kelionių užsakymo pavyzdys:** Jūs ilgai kalbėjote apie svajonių kelionių vietas, įskaitant išsamų jūsų kuprinės kelionės prieš dvejus metus pasakojimą. Kai galiausiai klausi: **„rask man pigius skrydžius kitam mėnesiui“**, agentas įstringa senose, nereikšmingose detalėse ir nuolat klausia apie jūsų kuprinės įrangą ar ankstesnius maršrutus, nekreipdamas dėmesio į dabartinį prašymą.
+
+**Sprendimas:** Po tam tikro užduočių skaičiaus arba kai kontekstas tampa per didelis, agentas turėtų **apibendrinti naujausias ir svarbiausias pokalbio dalis** – koncentruodamasis į jūsų dabartines kelionės datas ir tikslą – ir naudoti tą suspaustą santrauką kitam LLM kvietimui, atsisakydamas mažiau svarbios istorinės diskusijos.
 
 ### Konteksto painiava
 
-**Kas tai yra:** Kai nereikalingas kontekstas, dažnai per daug prieinamų įrankių forma, sukelia modelio blogus atsakymus arba netinkamų įrankių naudojimą. Mažesni modeliai ypač linkę į tai.
+**Kas tai yra:** Kai nereikalingas kontekstas, dažnai per daug prieinamų įrankių forma, verčia modelį gaminti netinkamus atsakymus arba kviesti netinkamus įrankius. Mažesni modeliai ypač linkę į tai.
 
-**Ką daryti:** Įgyvendinkite **įrankių valdymą** naudojant RAG technikas. Įrankių aprašymus saugokite vektorinėje duomenų bazėje ir pasirinkite _tik_ svarbiausius įrankius kiekvienai konkrečiai užduočiai. Tyrimai rodo, kad įrankių pasirinkimą reikėtų apriboti iki mažiau nei 30.
+**Ką daryti:** Įgyvendinti **įrankių komplekto valdymą** naudojant RAG metodus. Aprašymus apie įrankius saugoti vektorinėje duomenų bazėje ir rinktis _tiktai_ svarbiausius įrankius konkrečiai užduočiai. Tyrimai rodo, kad verta riboti įrankių pasirinkimą iki mažiau nei 30.
 
-**Kelionių užsakymo pavyzdys:** Jūsų agentas turi prieigą prie daugybės įrankių: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations` ir kt. Jūs paklausiate, **„Koks geriausias būdas keliauti po Paryžių?“** Dėl daugybės įrankių agentas pasimeta ir bando iškviesti `book_flight` _Paryžiaus viduje_ arba `rent_car`, nors jūs teikiate pirmenybę viešajam transportui, nes įrankių aprašymai gali persidengti arba agentas tiesiog negali pasirinkti geriausio.
+**Kelionių užsakymo pavyzdys:** Jūsų agentas turi prieigą prie dešimčių įrankių: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations` ir kt. Jūs klausiate, **„Koks geriausias būdas judėti Paryžiuje?“** Dėl daugumos įrankių agentas supainioja ir bando išsinuomoti automobilį miesto viduje, nors jūs rinkotės viešąjį transportą, arba kviečia skrendimą Paryžiaus viduje, nes įrankių aprašymai gali dublikuotis arba jis tiesiog negali apsispręsti, kuris geriausias.
 
-**Sprendimas:** Naudokite **RAG įrankių aprašymams**. Kai paklausiate apie kelionę po Paryžių, sistema dinamiškai surenka _tik_ svarbiausius įrankius, pvz., `rent_car` arba `public_transport_info`, pagal jūsų užklausą, pateikdama sutelktą „įrankių rinkinį“ LLM.
+**Sprendimas:** Naudoti **RAG įrankių aprašymams**. Kai klausiate apie judėjimą Paryžiuje, sistema dinamiškai parenka _tiktai_ svarbiausius įrankius, tokius kaip `rent_car` arba `public_transport_info`, pristatydama LLM fokusuotą įrankių rinkinį.
 
 ### Konteksto konfliktas
 
-**Kas tai yra:** Kai kontekste egzistuoja prieštaringa informacija, sukelianti nenuoseklų mąstymą arba blogus galutinius atsakymus. Tai dažnai nutinka, kai informacija pateikiama etapais, o ankstyvos, neteisingos prielaidos lieka kontekste.
+**Kas tai yra:** Kai kontekste egzistuoja prieštaringa informacija, sukelianti prieštaringą mąstymą ar blogus galutinius atsakymus. Dažnai taip nutinka, kai informacija ateina etapais, o ankstesnės klaidingos prielaidos lieka kontekste.
 
-**Ką daryti:** Naudokite **konteksto apkarpymą** ir **perkėlimą**. Apkarpymas reiškia pasenusios arba prieštaringos informacijos pašalinimą, kai atsiranda naujų detalių. Perkėlimas suteikia modeliui atskirą „užrašų knygelės“ darbo vietą informacijai apdoroti, neapkraunant pagrindinio kontek
+**Ką daryti:** Naudoti **konteksto apkarpymą** ir **perkėlimą**. Apkarpymas reiškia pasenusių ar prieštaringų duomenų pašalinimą atvykstant naujiems duomenims. Perkėlimas suteikia modeliui atskirą „užrašų knygelės“ erdvę informacijai apdoroti, nekliudant pagrindiniam kontekstui.
+
+
+**Kelionės užsakymo pavyzdys:** Iš pradžių sakote savo agentui, **„Noriu skristi ekonomine klase.“** Vėliau pokalbio metu savo nuomonę pakeičiate ir sakote, **„Iš tiesų, šiai kelionei pasirinkime verslo klasę.“** Jei abi instrukcijos išlieka kontekste, agentas gali gauti prieštaringus paieškos rezultatus arba susipainioti, kurią nuostatą teikti pirmenybę.
+
+**Sprendimas:** Įgyvendinkite **konteksto apkarpymą**. Kai nauja instrukcija prieštarauja senajai, senoji instrukcija pašalinama arba aiškiai panaikinama kontekste. Alternatyviai agentas gali naudoti **užrašų knygelę** (scratchpad), kad suderintų prieštaringas nuostatas prieš priimdamas sprendimą, užtikrindamas, kad tik galutinė, nuosekli instrukcija nurodytų jo veiksmus.
+
+## Ar turite daugiau klausimų apie konteksto inžineriją?
+
+Prisijunkite prie [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), kad susitiktumėte su kitais besimokančiais, dalyvautumėte darbo valandose ir gautumėte atsakymus į savo AI agentų klausimus.
+## Ankstesnė pamoka
+
+[Agentų protokolai](../11-agentic-protocols/README.md)
+
+## Kita pamoka
+
+[Atmintis AI agentams](../13-agent-memory/README.md)
 
 ---
 
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, atkreipiame dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Dėl svarbios informacijos rekomenduojame kreiptis į profesionalius vertėjus. Mes neprisiimame atsakomybės už nesusipratimus ar klaidingus aiškinimus, kylančius dėl šio vertimo naudojimo.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

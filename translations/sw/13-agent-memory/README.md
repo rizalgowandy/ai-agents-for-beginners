@@ -1,170 +1,179 @@
-# Kumbukumbu kwa Mawakala wa AI
-[![Kumbukumbu ya Mawakala](../../../translated_images/sw/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
+# Kumbukumbu kwa Wakala za AI 
+[![Kumbukumbu ya Wakala](../../../translated_images/sw/lesson-13-thumbnail.959e3bc52d210c64.webp)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-Tunapozungumzia faida za kipekee za kuunda Mawakala wa AI, mambo mawili yanajadiliwa sana: uwezo wa kutumia zana kukamilisha majukumu na uwezo wa kuboresha kwa muda. Kumbukumbu ni msingi wa kuunda wakala anayejiboresha mwenyewe ili kutoa uzoefu bora kwa watumiaji wetu.
+Wakati tunajadili faida za kipekee za kuundwa kwa Wakala wa AI, mambo mawili hasa hujadiliwa: uwezo wa kuitisha zana ili kukamilisha kazi na uwezo wa kuboresha kwa muda. Kumbukumbu iko kwenye msingi wa kuunda wakala anayejiboresha mwenyewe ambaye anaweza kuunda uzoefu bora kwa watumiaji wetu.
 
-Katika somo hili, tutachunguza kumbukumbu ni nini kwa Mawakala wa AI na jinsi tunavyoweza kuisimamia na kuitumia kwa manufaa ya programu zetu.
+Katika somo hili, tutaangalia ni nini kumbukumbu kwa Wakala za AI na jinsi tunavyoweza kuisimamia na kuitumia kwa manufaa ya programu zetu.
 
 ## Utangulizi
 
 Somo hili litashughulikia:
 
-• **Kuelewa Kumbukumbu ya Mawakala wa AI**: Kumbukumbu ni nini na kwa nini ni muhimu kwa mawakala.
+• **Kuelewa Kumbukumbu ya Wakala wa AI**: Kumbukumbu ni nini na kwa nini ni muhimu kwa mawakala.
 
-• **Kutekeleza na Kuhifadhi Kumbukumbu**: Mbinu za vitendo za kuongeza uwezo wa kumbukumbu kwa Mawakala wa AI, kwa kuzingatia kumbukumbu ya muda mfupi na ya muda mrefu.
+• **Kutekeleza na Kuhifadhi Kumbukumbu**: Njia za vitendo za kuongeza uwezo wa kumbukumbu kwa mawakala wako wa AI, zikizingatia kumbukumbu ya muda mfupi na ya muda mrefu.
 
-• **Kufanya Mawakala wa AI Kujiboresha**: Jinsi kumbukumbu inavyowezesha mawakala kujifunza kutoka kwa mwingiliano wa awali na kuboresha kwa muda.
+• **Kufanya Wakala wa AI Kujiboresha**: Jinsi kumbukumbu inavyowawezesha mawakala kujifunza kutoka kwa mwingiliano wa zamani na kuboresha kwa muda.
 
-## Utekelezaji Unaopatikana
+## Utekelezaji Upo
 
-Somo hili linajumuisha mafunzo mawili ya kina ya daftari:
+Somo hili linajumuisha sehemu mbili za mafunzo kamili za daftari:
 
-• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Inatekeleza kumbukumbu kwa kutumia Mem0 na Azure AI Search na mfumo wa Semantic Kernel.
+• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Hutekeleza kumbukumbu kwa kutumia Mem0 na Azure AI Search na Microsoft Agent Framework
 
-• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Inatekeleza kumbukumbu iliyopangwa kwa kutumia Cognee, ikijenga kiotomatiki grafu ya maarifa inayoungwa mkono na embeddings, kuonyesha grafu, na urejeshaji wa akili.
+• **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Hutekeleza kumbukumbu yenye muundo kwa kutumia Cognee, kujenga moja kwa moja grafu ya maarifa inayotegemea embeddings, kuonyesha grafu, na upataji wa akili
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili, utajua jinsi ya:
+Baada ya kumaliza somo hili, utajua jinsi ya:
 
-• **Kutofautisha aina mbalimbali za kumbukumbu ya Mawakala wa AI**, ikiwa ni pamoja na kumbukumbu ya kazi, ya muda mfupi, na ya muda mrefu, pamoja na aina maalum kama kumbukumbu ya persona na ya episodic.
+• **Kutofautisha aina mbalimbali za kumbukumbu za wakala wa AI**, ikijumuisha kumbukumbu ya kazi, ya muda mfupi, na ya muda mrefu, pamoja na aina maalum kama kumbukumbu ya persona na ya matukio.
 
-• **Kutekeleza na kusimamia kumbukumbu ya muda mfupi na ya muda mrefu kwa Mawakala wa AI** kwa kutumia mfumo wa Semantic Kernel, ukitumia zana kama Mem0, Cognee, kumbukumbu ya Whiteboard, na kuunganisha na Azure AI Search.
+• **Kutekeleza na kusimamia kumbukumbu ya muda mfupi na ya muda mrefu kwa mawakala wa AI** kwa kutumia Microsoft Agent Framework, ukiweka mbinu kama Mem0, Cognee, kumbukumbu za Whiteboard, na kuunganishwa na Azure AI Search.
 
-• **Kuelewa kanuni za mawakala wa AI wanaojiboresha** na jinsi mifumo thabiti ya usimamizi wa kumbukumbu inavyosaidia kujifunza na kubadilika kwa kuendelea.
+• **Kuelewa misingi nyuma ya mawakala wa AI kujiboresha yenyewe** na jinsi mifumo imara ya usimamizi wa kumbukumbu inavyochangia kujifunza na kubadilika endelevu.
 
-## Kuelewa Kumbukumbu ya Mawakala wa AI
+## Kuelewa Kumbukumbu ya Wakala wa AI
 
-Kwa msingi wake, **kumbukumbu kwa Mawakala wa AI inahusu mifumo inayowawezesha kuhifadhi na kukumbuka taarifa**. Taarifa hizi zinaweza kuwa maelezo maalum kuhusu mazungumzo, mapendeleo ya mtumiaji, vitendo vya awali, au hata mifumo iliyojifunza.
+Kiini chake, **kumbukumbu kwa mawakala wa AI inahusu michakato inayowawezesha kuhifadhi na kukumbuka taarifa**. Taarifa hizi zinaweza kuwa maelezo maalum kuhusu mazungumzo, mapendeleo ya mtumiaji, matendo ya zamani, au hata mifumo iliyojifunza.
 
-Bila kumbukumbu, programu za AI mara nyingi hazina hali, ikimaanisha kila mwingiliano huanza upya. Hii husababisha uzoefu wa mtumiaji unaorudiwa na wa kukatisha tamaa ambapo wakala "anasahau" muktadha au mapendeleo ya awali.
+Bila kumbukumbu, programu za AI mara nyingi haziwezi kuhifadhi hali, maana ya kila mwingiliano huanza kutoka awali kabisa. Hii husababisha uzoefu wa mtumiaji unaorudiwa na kuchosha ambapo wakala "anasahau" muktadha wa awali au mapendelea.
 
-### Kwa Nini Kumbukumbu Ni Muhimu?
+### Kumbukumbu ni Muhimu Kwa Nini?
 
-Ujuzi wa wakala unahusiana sana na uwezo wake wa kukumbuka na kutumia taarifa za awali. Kumbukumbu inawawezesha mawakala kuwa:
+akili ya wakala imefungwa kwa undani na uwezo wake wa kukumbuka na kutumia taarifa za zamani. Kumbukumbu huwafanya mawakala kuwa:
 
-• **Wenye kutafakari**: Kujifunza kutoka kwa vitendo na matokeo ya awali.
+• **Kitekelezi**: Kujifunza kutoka kwa matendo na matokeo ya zamani.
 
-• **Wenye kuingiliana**: Kudumisha muktadha katika mazungumzo yanayoendelea.
+• **Mwingiliano**: Kudumisha muktadha katika mazungumzo yanayoendelea.
 
-• **Wenye kutabiri na kujibu**: Kutabiri mahitaji au kujibu ipasavyo kulingana na data ya kihistoria.
+• **Kinachochukua Hatua na Kijibu**: Kutegemea mahitaji au kujibu ipasavyo kulingana na data ya zamani.
 
-• **Wenye kujitegemea**: Kufanya kazi kwa uhuru zaidi kwa kutumia maarifa yaliyohifadhiwa.
+• **Huru**: Kufanya kazi kwa uhuru zaidi kwa kutumia maarifa yaliyohifadhiwa.
 
-Lengo la kutekeleza kumbukumbu ni kufanya mawakala kuwa **wa kuaminika na wenye uwezo zaidi**.
+Lengo la kutekeleza kumbukumbu ni kufanya mawakala wawe zaidi **waaminifu na wenye uwezo**.
 
 ### Aina za Kumbukumbu
 
 #### Kumbukumbu ya Kazi
 
-Fikiria hii kama karatasi ya kuandika ambayo wakala hutumia wakati wa kazi moja au mchakato wa mawazo unaoendelea. Inashikilia taarifa za haraka zinazohitajika kuhesabu hatua inayofuata.
+Fikiria hii kama kipande cha karatasi cha kuandika mawakala hutumia wakati wa kazi au mchakato wa kufikiria unaoendelea. Hushikilia taarifa za haraka zinazohitajika kwa hatua inayofuata.
 
-Kwa Mawakala wa AI, kumbukumbu ya kazi mara nyingi huchukua taarifa muhimu zaidi kutoka kwa mazungumzo, hata kama historia ya mazungumzo ni ndefu au imefupishwa. Inazingatia kutoa vipengele muhimu kama mahitaji, mapendekezo, maamuzi, na vitendo.
+Kwa mawakala wa AI, kumbukumbu ya kazi mara nyingi huchukua taarifa muhimu zaidi kutoka kwenye mazungumzo, hata kama historia kamili ya gumzo ni ndefu au imekatika. Inazingatia kutoa vipengele muhimu kama mahitaji, mapendekezo, maamuzi, na vitendo.
 
 **Mfano wa Kumbukumbu ya Kazi**
 
-Katika wakala wa uhifadhi wa safari, kumbukumbu ya kazi inaweza kushika ombi la sasa la mtumiaji, kama "Nataka kuhifadhi safari kwenda Paris". Mahitaji haya maalum yanashikiliwa katika muktadha wa wakala ili kuongoza mwingiliano wa sasa.
+Katika wakala wa kuhifadhi safari, kumbukumbu ya kazi inaweza kushikilia ombi la mtumiaji la sasa, kama "Nataka kuweka safari kwenda Paris". Mahitaji haya maalum hushikiliwa katika muktadha wa wakala wa sasa kuongoza mwingiliano huu.
 
 #### Kumbukumbu ya Muda Mfupi
 
-Aina hii ya kumbukumbu huhifadhi taarifa kwa muda wa mazungumzo au kikao kimoja. Ni muktadha wa mazungumzo ya sasa, unaomruhusu wakala kurejelea mizunguko ya awali ya mazungumzo.
+Aina hii ya kumbukumbu hushikilia taarifa kwa muda wa mazungumzo au kikao kimoja. Ni muktadha wa gumzo la sasa, kuruhusu wakala kurejelea zamu za awali katika mazungumzo.
+
+Katika mfano wa [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) wa Python SDK, hii inahusiana na `AgentSession`, iliyotengenezwa na `agent.create_session()`. Kikao hiki ndicho kumbukumbu ya muda mfupi ya mfumo huu: hudumisha muktadha wa mazungumzo inapatikana wakati kikao kimoja kinapotumika tena, lakini muktadha huo hauhifadhiwi wakati kikao kinapoisha au programu inapozimwa na kuzimwa tena. Tumia kumbukumbu ya muda mrefu kwa ukweli na mapendeleo yanayohitajika kuishi kwa vikao vingi, kawaida kupitia hifadhidata, kiashirio wa vector, au duka jingine la kudumu.
 
 **Mfano wa Kumbukumbu ya Muda Mfupi**
 
-Ikiwa mtumiaji anauliza, "Tiketi ya ndege kwenda Paris itagharimu kiasi gani?" na kisha anauliza, "Na kuhusu malazi huko?", kumbukumbu ya muda mfupi inahakikisha wakala anajua "huko" inahusu "Paris" ndani ya mazungumzo hayo hayo.
+Ikiwa mtumiaji atauliza, "Ndege ya kwenda Paris itagharimu kiasi gani?" na kisha aongeze na kuuliza "Na kuhusu malazi huko?", kumbukumbu ya muda mfupi huhakikisha wakala anajua "huko" linarejelea "Paris" ndani ya gumzo hilo hilo.
 
 #### Kumbukumbu ya Muda Mrefu
 
-Hii ni taarifa inayodumu katika mazungumzo au vikao vingi. Inawawezesha mawakala kukumbuka mapendeleo ya mtumiaji, mwingiliano wa kihistoria, au maarifa ya jumla kwa muda mrefu. Hii ni muhimu kwa ubinafsishaji.
+Hii ni taarifa zinazodumu kwa vikao au mazungumzo mengi. Inaruhusu mawakala kukumbuka mapendeleo ya mtumiaji, mwingiliano wa kihistoria, au maarifa ya jumla kwa vipindi virefu. Hii ni muhimu kwa ubinafsishaji.
 
 **Mfano wa Kumbukumbu ya Muda Mrefu**
 
-Kumbukumbu ya muda mrefu inaweza kuhifadhi kwamba "Ben anapenda skiing na shughuli za nje, anapenda kahawa na mandhari ya mlima, na anataka kuepuka miteremko ya skiing ya hali ya juu kutokana na jeraha la awali". Taarifa hii, iliyojifunza kutoka kwa mwingiliano wa awali, inaathiri mapendekezo katika vikao vya kupanga safari za baadaye, na kuyafanya kuwa ya kibinafsi sana.
+Kumbukumbu ya muda mrefu inaweza kuhifadhi kuwa "Ben anapenda skiing na shughuli za nje, anapenda kahawa akiwa na mtazamo wa mlima, na anataka kuepuka mwinuko wa ski wa hali ya juu kutokana na jeraha la zamani". Taarifa hii, iliyojifunza kutoka kwa mwingiliano wa awali, huathiri mapendekezo katika vikao vya kupanga safari vya baadaye, na kuifanya iwe binafsi sana.
 
 #### Kumbukumbu ya Persona
 
-Aina hii maalum ya kumbukumbu husaidia wakala kuendeleza "tabia" au "persona" thabiti. Inamruhusu wakala kukumbuka maelezo kuhusu yeye mwenyewe au jukumu lake lililokusudiwa, na kufanya mwingiliano kuwa rahisi na wa kuzingatia.
+Aina hii maalum ya kumbukumbu husaidia wakala kuendeleza "mwenendo wa mtu" au "persona" thabiti. Inamruhusu wakala kukumbuka maelezo kuhusu nafsi yake au jukumu lake linalokusudiwa, na kufanya mwingiliano kuwa wa mtiririko zaidi na wa umakini.
 
 **Mfano wa Kumbukumbu ya Persona**
-Ikiwa wakala wa safari ameundwa kuwa "mtaalamu wa kupanga safari za skiing," kumbukumbu ya persona inaweza kuimarisha jukumu hili, na kuathiri majibu yake ili yaendane na sauti na maarifa ya mtaalamu.
+Ikiwa wakala wa safari ameundwa kuwa "mpangaji mtaalamu wa skiing," kumbukumbu ya persona inaweza kuimarisha jukumu hili, kuathiri majibu yake kufanana na sauti na maarifa ya mtaalamu.
 
-#### Kumbukumbu ya Mtiririko/Episodic
+#### Kumbukumbu ya Mtiririko/Mitukio
 
-Kumbukumbu hii huhifadhi mlolongo wa hatua ambazo wakala huchukua wakati wa kazi ngumu, ikiwa ni pamoja na mafanikio na kushindwa. Ni kama kukumbuka "vipindi" maalum au uzoefu wa awali ili kujifunza kutoka kwao.
+Kumbukumbu hii huhifadhi mfuatano wa hatua ambazo wakala huchukua wakati wa kazi tata, ikiwa ni pamoja na mafanikio na kushindwa. Ni kama kukumbuka "vipindi" maalum au uzoefu wa zamani kujifunza kutoka kwao.
 
-**Mfano wa Kumbukumbu ya Episodic**
+**Mfano wa Kumbukumbu ya Mitukio**
 
-Ikiwa wakala alijaribu kuhifadhi tiketi maalum ya ndege lakini ilishindikana kutokana na kutokuwepo, kumbukumbu ya episodic inaweza kurekodi kushindwa huku, na kumruhusu wakala kujaribu tiketi mbadala au kumjulisha mtumiaji kuhusu tatizo kwa njia iliyo na taarifa zaidi wakati wa jaribio linalofuata.
+Ikiwa wakala alijaribu kuweka tiketi ya ndege maalum lakini ikashindwa kwa sababu ya ukosefu wa upatikanaji, kumbukumbu ya mitukio inaweza kurekodi kushindwa hii, kuruhusu wakala kujaribu ndege mbadala au kumjulisha mtumiaji kuhusu tatizo kwa njia iliyo na taarifa zaidi wakati wa jaribio lijalo.
 
-#### Kumbukumbu ya Vitu
+#### Kumbukumbu ya Kitu
 
-Hii inahusisha kutoa na kukumbuka vitu maalum (kama watu, maeneo, au vitu) na matukio kutoka kwa mazungumzo. Inamruhusu wakala kujenga uelewa ulioandaliwa wa vipengele muhimu vilivyojadiliwa.
+Hii inahusisha kutoa na kukumbuka vitu maalum (kama watu, maeneo, au vitu) na matukio kutoka kwa mazungumzo. Inamruhusu wakala kujenga uelewa wa muundo wa vipengele muhimu vilivyojadiliwa.
 
-**Mfano wa Kumbukumbu ya Vitu**
+**Mfano wa Kumbukumbu ya Kitu**
 
-Kutoka kwa mazungumzo kuhusu safari ya awali, wakala anaweza kutoa "Paris," "Mnara wa Eiffel," na "chakula cha jioni katika mgahawa wa Le Chat Noir" kama vitu. Katika mwingiliano wa baadaye, wakala anaweza kukumbuka "Le Chat Noir" na kutoa kuhifadhi tena huko.
+Kutoka kwa mazungumzo kuhusu safari ya zamani, wakala anaweza kutoa "Paris," "Mnara wa Eiffel," na "chakula cha jioni katika mgahawa wa Le Chat Noir" kama vitu. Katika mwingiliano wa baadaye, wakala anaweza kukumbuka "Le Chat Noir" na kutoa kuanzisha uhifadhi mpya huko.
 
-#### RAG Iliyopangwa (Retrieval Augmented Generation)
+#### RAG Yenye Muundo (Retrieval Augmented Generation)
 
-Wakati RAG ni mbinu pana, "RAG Iliyopangwa" inasisitizwa kama teknolojia yenye nguvu ya kumbukumbu. Inatoa taarifa nyingi, zilizopangwa kutoka kwa vyanzo mbalimbali (mazungumzo, barua pepe, picha) na kuitumia kuboresha usahihi, kumbukumbu, na kasi ya majibu. Tofauti na RAG ya kawaida inayotegemea tu kufanana kwa semantiki, RAG Iliyopangwa inafanya kazi na muundo wa asili wa taarifa.
+Ingawa RAG ni mbinu pana zaidi, "RAG Yenye Muundo" inazingatiwa kama teknolojia yenye nguvu ya kumbukumbu. Hutoa taarifa zilizo na muundo na zenye msongamano kutoka vyanzo mbalimbali (mazungumzo, barua pepe, picha) na kuzitumia kuboresha usahihi, upokeaji, na kasi ya majibu. Tofauti na RAG ya kawaida inayotegemea ufananishaji wa maana tu, RAG Yenye Muundo inafanya kazi na muundo wa taarifa ulio ndani yake.
 
-**Mfano wa RAG Iliyopangwa**
+**Mfano wa RAG Yenye Muundo**
 
-Badala ya kulinganisha tu maneno muhimu, RAG Iliyopangwa inaweza kuchambua maelezo ya tiketi ya ndege (mahali pa kwenda, tarehe, muda, shirika la ndege) kutoka kwa barua pepe na kuyahifadhi kwa njia iliyopangwa. Hii inaruhusu maswali sahihi kama "Ni tiketi gani ya ndege niliyohifadhi kwenda Paris siku ya Jumanne?"
+Badala ya kulinganisha maneno tu, RAG Yenye Muundo inaweza kuchambua maelezo ya ndege (mahali pa kwenda, tarehe, muda, shirika la ndege) kutoka kwa barua pepe na kuiyahifadhi kwa njia yenye muundo. Hii inaruhusu maswali sahihi kama "Ndege gani niliyoipanga kwenda Paris siku ya Jumanne?"
 
 ## Kutekeleza na Kuhifadhi Kumbukumbu
 
-Kutekeleza kumbukumbu kwa Mawakala wa AI kunahusisha mchakato wa kimfumo wa **usimamizi wa kumbukumbu**, ambao unajumuisha kuzalisha, kuhifadhi, kurejesha, kuunganisha, kusasisha, na hata "kusahau" (au kufuta) taarifa. Urejeshaji ni kipengele muhimu sana.
+Kutekeleza kumbukumbu kwa mawakala wa AI kunahusisha mchakato wa kimfumo wa **usimamizi wa kumbukumbu**, unaojumuisha kuzalisha, kuhifadhi, kupata, kuunganisha, kusasisha, na hata "kusahau" (au kufuta) taarifa. Upataji ni kipengele muhimu sana.
 
 ### Zana Maalum za Kumbukumbu
 
 #### Mem0
 
-Njia moja ya kuhifadhi na kusimamia kumbukumbu ya wakala ni kutumia zana maalum kama Mem0. Mem0 inafanya kazi kama safu ya kumbukumbu ya kudumu, ikiruhusu mawakala kukumbuka mwingiliano muhimu, kuhifadhi mapendeleo ya mtumiaji na muktadha wa ukweli, na kujifunza kutoka kwa mafanikio na kushindwa kwa muda. Wazo hapa ni kwamba mawakala wasio na hali wanageuka kuwa wenye hali.
+Njia moja ya kuhifadhi na kusimamia kumbukumbu ya wakala ni kutumia zana maalum kama Mem0. Mem0 hufanya kazi kama safu ya kumbukumbu ya kudumu, ikiruhusu mawakala kukumbuka mwingiliano muhimu, kuhifadhi mapendeleo ya mtumiaji na muktadha wa ukweli, na kujifunza kutoka kwa mafanikio na kushindwa kwa muda. Wazo hapa ni kwamba mawakala wasio na hali wanageuka kuwa wenye hali.
 
-Inafanya kazi kupitia **mchakato wa kumbukumbu wa awamu mbili: uchimbaji na sasisho**. Kwanza, ujumbe unaoongezwa kwenye mfululizo wa wakala hutumwa kwa huduma ya Mem0, ambayo hutumia Large Language Model (LLM) kufupisha historia ya mazungumzo na kutoa kumbukumbu mpya. Baadaye, awamu ya sasisho inayotumia LLM huamua ikiwa kuongeza, kurekebisha, au kufuta kumbukumbu hizi, na kuzihifadhi katika hifadhi ya data mseto inayoweza kujumuisha vector, grafu, na hifadhidata za thamani muhimu. Mfumo huu pia unasaidia aina mbalimbali za kumbukumbu na unaweza kujumuisha kumbukumbu ya grafu kwa kusimamia uhusiano kati ya vitu.
+Hufanya kazi kupitia **mchakato wa hatua mbili wa kumbukumbu: uchimbaji na sasisho**. Kwanza, ujumbe unaoongezwa kwenye mfululizo wa wakala hutumwa kwa huduma ya Mem0, ambayo hutumia Mfano Mkubwa wa Lugha (LLM) kufupisha historia ya mazungumzo na kutoa kumbukumbu mpya. Baadaye, hatua ya sasisho inayoungwa mkono na LLM hutoa uamuzi ikiwa kuongeza, kubadilisha, au kufuta kumbukumbu hizi, zikihifadhiwa katika duka la data la mseto ambalo linaweza kujumuisha hifadhidata za vector, grafu, na key-value. Mfumo huu pia unaunga mkono aina mbalimbali za kumbukumbu na unaweza kuingiza kumbukumbu za grafu kwa usimamizi wa uhusiano kati ya vitu.
 
 #### Cognee
 
-Njia nyingine yenye nguvu ni kutumia **Cognee**, kumbukumbu ya semantiki ya chanzo wazi kwa Mawakala wa AI inayogeuza data iliyopangwa na isiyopangwa kuwa grafu za maarifa zinazoweza kuulizwa zinazoungwa mkono na embeddings. Cognee hutoa **muundo wa hifadhi mbili** unaochanganya utafutaji wa kufanana kwa vector na uhusiano wa grafu, na kuwezesha mawakala kuelewa si tu taarifa gani ni sawa, bali jinsi dhana zinavyohusiana.
+Njia nyingine yenye nguvu ni kutumia **Cognee**, kumbukumbu ya semantiki ya wazi kwa mawakala wa AI inayobadilisha data zenye muundo na zisizo na muundo kuwa grafu za maarifa zinazoweza kuchunguzwa zinazotegemewa na embeddings. Cognee hutoa **miundo ya duka miwili** inayochanganya utafutaji wa ufananishaji wa vector na uhusiano wa grafu, ikiruhusu mawakala kuelewa si tu ni taarifa gani zimefanana, bali jinsi dhana zinavyohusiana.
 
-Inafanikiwa katika **urejeshaji mseto** unaochanganya kufanana kwa vector, muundo wa grafu, na uamuzi wa LLM - kutoka kwa utafutaji wa vipande ghafi hadi kujibu maswali yanayojua grafu. Mfumo unadumisha **kumbukumbu hai** inayobadilika na kukua huku ikibaki kuwa grafu moja iliyounganishwa inayoweza kuulizwa, ikisaidia muktadha wa kikao cha muda mfupi na kumbukumbu ya kudumu ya muda mrefu.
+Inatazama kwa ufanisi **upataji mseto** unaochanganya ufananishaji wa vector, muundo wa grafu, na mantiki ya LLM - kutoka kwenye kutafuta kipande cha taarifa hadi majibu yanayojua grafu. Mfumo huu huweka kumbukumbu "hai" inayobadilika na kukua huku ikibaki inaweza kuchunguzwa kama grafu moja iliyounganishwa, ikisaidia muktadha wa kikao cha muda mfupi na kumbukumbu ya kudumu ya muda mrefu.
 
-Mafunzo ya daftari ya Cognee ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) yanaonyesha jinsi ya kujenga safu hii ya kumbukumbu iliyounganishwa, na mifano ya vitendo ya kuingiza vyanzo mbalimbali vya data, kuonyesha grafu ya maarifa, na kuuliza kwa mikakati tofauti ya utafutaji inayolingana na mahitaji maalum ya wakala.
+Mafunzo ya daftari ya Cognee ([13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)) yanaonyesha jinsi ya kujenga safu hii moja ya kumbukumbu, pamoja na mifano ya vitendo ya kuingiza vyanzo mbalimbali vya data, kuona grafu ya maarifa, na kuuliza maswali kwa mikakati tofauti ya utafutaji iliyobinafsishwa kwa mahitaji maalum ya wakala.
 
-### Kuhifadhi Kumbukumbu na RAG
+### Kuhifadhi Kumbukumbu kwa RAG
 
-Zaidi ya zana maalum za kumbukumbu kama Mem0, unaweza kutumia huduma za utafutaji thabiti kama **Azure AI Search kama sehemu ya nyuma ya kuhifadhi na kurejesha kumbukumbu**, hasa kwa RAG Iliyopangwa.
+Zaidi ya zana maalum za kumbukumbu kama Mem0, unaweza kutumia huduma imara za utafutaji kama **Azure AI Search kama sehemu ya nyuma ya kuhifadhi na kupata kumbukumbu**, hasa kwa RAG Yenye Muundo.
 
-Hii inakuwezesha kuimarisha majibu ya wakala wako kwa data yako mwenyewe, kuhakikisha majibu yanayofaa zaidi na sahihi. Azure AI Search inaweza kutumika kuhifadhi kumbukumbu za safari za mtumiaji, katalogi za bidhaa, au maarifa yoyote maalum ya kikoa.
+Hii inakuwezesha kuweka majibu ya wakala wako kwenye data yako mwenyewe, kuhakikisha majibu yanayofaa zaidi na sahihi zaidi. Azure AI Search inaweza kutumika kuhifadhi kumbukumbu za safari za mtumiaji, orodha za bidhaa, au maarifa mengine yoyote maalum ya eneo fulani.
 
-Azure AI Search inasaidia uwezo kama **RAG Iliyopangwa**, ambayo inafanikiwa katika kutoa na kurejesha taarifa nyingi, zilizopangwa kutoka kwa seti kubwa za data kama historia za mazungumzo, barua pepe, au hata picha. Hii inatoa "usahihi na kumbukumbu ya kibinadamu" ikilinganishwa na mbinu za kawaida za kugawanya maandishi na embeddings.
+Azure AI Search inaunga mkono uwezo kama **RAG Yenye Muundo**, ambayo inajivunia kutoa na kupata taarifa zilizo na muundo na msongamano kutoka kwa data kubwa kama historia za mazungumzo, barua pepe, au hata picha. Hii hutoa "usahihi na upokeaji wa kiwango cha juu zaidi" ikilinganishwa na mbinu za kawaida za kugawanya maandishi na embeddings.
 
-## Kufanya Mawakala wa AI Kujiboresha
+## Kufanya Wakala wa AI Kujiboresha
 
-Mfumo wa kawaida wa mawakala wanaojiboresha unahusisha kuanzisha **"wakala wa maarifa"**. Wakala huyu tofauti huchunguza mazungumzo kuu kati ya mtumiaji na wakala mkuu. Jukumu lake ni:
+Mchoro wa kawaida wa mawakala kujiboresha wenyewe unahusisha kuanzisha **"wakala wa maarifa"**. Wakala huyu tofauti hudhibiti mazungumzo kuu kati ya mtumiaji na wakala mkuu. Njia yake ni:
 
-1. **Kutambua taarifa muhimu**: Kuamua ikiwa sehemu yoyote ya mazungumzo inafaa kuhifadhi kama maarifa ya jumla au mapendeleo maalum ya mtumiaji.
+1. **Kutambua taarifa za thamani**: Kuamua kama sehemu yoyote ya mazungumzo ni muhimu kuhifadhiwa kama maarifa ya jumla au upendeleo wa mtumiaji maalum.
 
-2. **Kutoa na kufupisha**: Kuchambua mafunzo muhimu au mapendeleo kutoka kwa mazungumzo.
+2. **Kutoa na kufupisha**: Kuchambua mafunzo muhimu au upendeleo kutoka kwa mazungumzo.
 
-3. **Kuhifadhi katika hifadhidata ya maarifa**: Kudumisha taarifa iliyotolewa, mara nyingi katika hifadhidata ya vector, ili iweze kurejeshwa baadaye.
+3. **Kuhifadhi katika msingi wa maarifa**: Kuhifadhi taarifa hii iliyotolewa, mara nyingi katika hifadhidata ya vector, ili iweze kupatikana baadaye.
 
-4. **Kuongeza maswali ya baadaye**: Wakati mtumiaji anaanzisha swali jipya, wakala wa maarifa hurejesha taarifa muhimu iliyohifadhiwa na kuiongeza kwenye ombi la mtumiaji, ikitoa muktadha muhimu kwa wakala mkuu (sawa na RAG).
+4. **Kuongeza maswali ya baadaye**: Mtumiaji anapoanzisha swali jipya, wakala wa maarifa huchukua taarifa zilizo hifadhiwa na kuziambatanisha kwenye ombi la mtumiaji, kutoa muktadha muhimu kwa wakala mkuu (kama RAG).
 
-### Uboreshaji wa Kumbukumbu
+### Ubunifu wa Kumbukumbu
 
-• **Usimamizi wa Muda wa Kujibu**: Ili kuepuka kuchelewesha mwingiliano wa mtumiaji, modeli ya bei nafuu na ya haraka inaweza kutumika awali kuangalia haraka ikiwa taarifa ni muhimu kuhifadhi au kurejesha, na kutumia mchakato wa uchimbaji/urejeshaji wa kina tu inapohitajika.
+• **Usimamizi wa Wakati wa Mwitikio**: Ili kuepuka kuchelewesha mwingiliano wa mtumiaji, mfano rahisi na wa haraka unaweza kutumiwa awali kuangalia haraka kama taarifa ni muhimu kuhifadhiwa au kupatikana, na kisha kutumia mchakato mgumu wa uchimbaji/upataji tu inapobidi.
 
-• **Matengenezo ya Hifadhidata ya Maarifa**: Kwa hifadhidata ya maarifa inayokua, taarifa zinazotumika mara chache zinaweza kuhamishwa kwenye "hifadhi baridi" ili kudhibiti gharama.
+• **Matengenezo ya Msingi wa Maarifa**: Kwa msingi unaoendelea kukua wa maarifa, taarifa zisizotumika mara kwa mara zinaweza kuhamishiwa "hifadhi baridi" ili kudhibiti gharama.
 
-## Una Maswali Zaidi Kuhusu Kumbukumbu ya Mawakala?
+## Una Maswali Zaidi Kuhusu Kumbukumbu ya Wakala?
 
-Jiunge na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ili kukutana na wanafunzi wengine, kuhudhuria masaa ya ofisi, na kupata majibu ya maswali yako kuhusu Mawakala wa AI.
+Jiunge na [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) kukutana na waendeshaji wengine wa kujifunza, kuhudhuria saa za ofisi na kupata majibu ya maswali yako kuhusu Wakala wa AI.
+## Somo Lililotangulia
+
+[Uhandisi wa Muktadha kwa Wakala wa AI](../12-context-engineering/README.md)
+
+## Somo Linalofuata
+
+[Kuchunguza Microsoft Agent Framework](../14-microsoft-agent-framework/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya kiasili inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

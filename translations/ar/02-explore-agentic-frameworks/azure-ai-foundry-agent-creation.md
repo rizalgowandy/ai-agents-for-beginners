@@ -1,42 +1,42 @@
-# تطوير خدمة وكيل Azure AI
+# تطوير خدمة وكيل Microsoft Foundry
 
-في هذا التمرين، ستستخدم أدوات خدمة Azure AI Agent في [بوابة Azure AI Foundry](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) لإنشاء وكيل لحجز الرحلات. سيكون الوكيل قادرًا على التفاعل مع المستخدمين وتقديم معلومات حول الرحلات.
+في هذا التمرين، تستخدم أدوات خدمة وكيل Microsoft Foundry في [بوابة Microsoft Foundry](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst) لإنشاء وكيل لحجز الرحلات الجوية. سيتمكن الوكيل من التفاعل مع المستخدمين وتزويدهم بمعلومات حول الرحلات.
 
 ## المتطلبات الأساسية
 
 لإكمال هذا التمرين، تحتاج إلى ما يلي:
-1. حساب Azure مع اشتراك نشط. [أنشئ حسابًا مجانًا](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-2. تحتاج إلى أذونات لإنشاء مركز Azure AI Foundry أو أن يكون لديك واحد تم إنشاؤه لك.
-    - إذا كان دورك هو Contributor أو Owner، يمكنك اتباع الخطوات في هذا الدليل.
+1. حساب Azure مع اشتراك نشط. [إنشاء حساب مجانًا](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+2. تحتاج إلى أذونات لإنشاء محور Microsoft Foundry أو أن يكون لديك واحد تم إنشاؤه لك.
+    - إذا كان دورك هو المساهم أو المالك، يمكنك اتباع الخطوات في هذا البرنامج التعليمي.
 
-## إنشاء مركز Azure AI Foundry
+## إنشاء محور Microsoft Foundry
 
-> **Note:** كان يُعرف Azure AI Foundry سابقًا باسم Azure AI Studio.
+> **ملاحظة:** كان يُعرف Microsoft Foundry سابقًا باسم Azure AI Studio.
 
-1. اتبع هذه الإرشادات من منشور مدونة [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) لإنشاء مركز Azure AI Foundry.
-2. عند إنشاء مشروعك، أغلق أي نصائح تظهر وراجع صفحة المشروع في بوابة Azure AI Foundry، والتي يجب أن تبدو مشابهة للصورة التالية:
+1. اتبع هذه الإرشادات من منشور مدونة [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) لإنشاء محور Microsoft Foundry.
+2. عندما يتم إنشاء مشروعك، أغلق أي نصائح معروضة وراجع صفحة المشروع في بوابة Microsoft Foundry، والتي يجب أن تبدو مشابهة للصورة التالية:
 
-    ![مشروع Azure AI Foundry](../../../translated_images/ar/azure-ai-foundry.88d0c35298348c2f.webp)
+    ![Microsoft Foundry Project](../../../translated_images/ar/azure-ai-foundry.88d0c35298348c2f.webp)
 
 ## نشر نموذج
 
-1. في اللوحة اليسرى لمشروعك، في قسم **My assets**، اختر صفحة **Models + endpoints**.
-2. في صفحة **Models + endpoints**، في علامة تبويب **Model deployments**، من قائمة **+ Deploy model**، اختر **Deploy base model**.
-3. ابحث عن نموذج `gpt-4o-mini` في القائمة، ثم حدده وقم بتأكيده.
+1. في الجزء الأيسر الخاص بمشروعك، في قسم **الأصول الخاصة بي**، حدد صفحة **النماذج + نقاط النهاية**.
+2. في صفحة **النماذج + نقاط النهاية**، في علامة التبويب **نشر النماذج**، في قائمة **+ نشر نموذج**، اختر **نشر نموذج أساسي**.
+3. ابحث عن نموذج `gpt-5-mini` في القائمة، ثم حدده وأكد عليه.
 
-    > **Note**: تقليل TPM يساعد على تجنب استهلاك الحصة المتاحة في الاشتراك الذي تستخدمه بشكل مفرط.
+    > **ملاحظة**: تقليل TPM يساعد في تجنب الإفراط في استخدام الحصة المتاحة في الاشتراك الذي تستخدمه.
 
-    ![نموذج تم نشره](../../../translated_images/ar/model-deployment.3749c53fb81e18fd.webp)
+    ![Model Deployed](../../../translated_images/ar/model-deployment.3749c53fb81e18fd.webp)
 
 ## إنشاء وكيل
 
 الآن بعد أن نشرت نموذجًا، يمكنك إنشاء وكيل. الوكيل هو نموذج ذكاء اصطناعي محادثي يمكن استخدامه للتفاعل مع المستخدمين.
 
-1. في اللوحة اليسرى لمشروعك، في قسم **Build & Customize**، اختر صفحة **Agents**.
-2. انقر على **+ Create agent** لإنشاء وكيل جديد. ضمن مربع الحوار **Agent Setup**:
+1. في الجزء الأيسر الخاص بمشروعك، في قسم **البناء والتخصيص**، حدد صفحة **الوكلاء**.
+2. انقر فوق **+ إنشاء وكيل** لإنشاء وكيل جديد. ضمن مربع الحوار **إعداد الوكيل**:
     - أدخل اسمًا للوكيل، مثل `FlightAgent`.
-    - تأكد من اختيار نشر نموذج `gpt-4o-mini` الذي أنشأته سابقًا.
-    - اضبط **Instructions** حسب التعليمات التي تريد أن يتبعها الوكيل. إليك مثالًا:
+    - تأكد من تحديد نشر نموذج `gpt-5-mini` الذي أنشأته سابقًا
+    - قم بتعيين **التعليمات** حسب الموجه الذي تريد أن يتبعه الوكيل. إليك مثالًا:
     ```
     You are FlightAgent, a virtual assistant specialized in handling flight-related queries. Your role includes assisting users with searching for flights, retrieving flight details, checking seat availability, and providing real-time flight status. Follow the instructions below to ensure clarity and effectiveness in your responses:
 
@@ -64,41 +64,46 @@
     
     ```
 > [!NOTE]
-> للحصول على تعليمات مفصلة، يمكنك الاطلاع على [هذا المستودع](https://github.com/ShivamGoyal03/RoamMind) لمزيد من المعلومات.
+> لموجه تفصيلي، يمكنك مراجعة [هذا المستودع](https://github.com/ShivamGoyal03/RoamMind) لمزيد من المعلومات.
     
-> بالإضافة إلى ذلك، يمكنك إضافة **قاعدة المعرفة** و**الإجراءات** لتعزيز قدرات الوكيل لتقديم مزيد من المعلومات وأداء مهام تلقائية بناءً على طلبات المستخدم. في هذا التمرين، يمكنك تخطي هذه الخطوات.
+> علاوة على ذلك، يمكنك إضافة **قاعدة المعرفة** و **الإجراءات** لتعزيز قدرات الوكيل لتقديم المزيد من المعلومات وأداء المهام الآلية بناءً على طلبات المستخدم. بالنسبة لهذا التمرين، يمكنك تخطي هذه الخطوات.
     
-![إعداد الوكيل](../../../translated_images/ar/agent-setup.9bbb8755bf5df672.webp)
+![Agent Setup](../../../translated_images/ar/agent-setup.9bbb8755bf5df672.webp)
 
-3. لإنشاء وكيل متعدد الذكاء الاصطناعي جديد، فقط انقر على **New Agent**. سيتم عرض الوكيل الجديد بعد ذلك في صفحة الوكلاء.
+3. لإنشاء وكيل متعدد الذكاء الاصطناعي جديد، ببساطة انقر فوق **وكيل جديد**. ثم سيتم عرض الوكيل الجديد في صفحة الوكلاء.
+
 
 ## اختبار الوكيل
 
-بعد إنشاء الوكيل، يمكنك اختباره لمعرفة كيفية استجابته لاستفسارات المستخدمين في ملعب بوابة Azure AI Foundry.
+بعد إنشاء الوكيل، يمكنك اختباره لمعرفة كيف يرد على استفسارات المستخدمين في ساحة تجربة بوابة Microsoft Foundry.
 
-1. في أعلى لوحة **Setup** الخاصة بوكيلك، اختر **Try in playground**.
-2. في لوحة **Playground**، يمكنك التفاعل مع الوكيل بكتابة الاستفسارات في نافذة الدردشة. على سبيل المثال، يمكنك طلب من الوكيل البحث عن رحلات من سياتل إلى نيويورك في 28 من الشهر.
+1. في أعلى لوحة **الإعداد** الخاصة بوكيلك، اختر **التجريب في الساحة**.
+2. في لوحة **الساحة**، يمكنك التفاعل مع الوكيل عن طريق كتابة الاستفسارات في نافذة الدردشة. على سبيل المثال، يمكنك طلب من الوكيل البحث عن رحلات من سياتل إلى نيويورك في اليوم الثامن والعشرين.
 
-    > **Note**: قد لا يقدم الوكيل ردودًا دقيقة، حيث لا يتم استخدام بيانات حية في هذا التمرين. الهدف هو اختبار قدرة الوكيل على فهم والرد على استفسارات المستخدم بناءً على التعليمات المقدمة.
+    > **ملاحظة**: قد لا يقدم الوكيل ردودًا دقيقة، لأن هذا التمرين لا يستخدم بيانات في الوقت الحقيقي. الغرض هو اختبار قدرة الوكيل على فهم والرد على استفسارات المستخدم بناءً على التعليمات المقدمة.
 
-    ![ملعب الوكيل](../../../translated_images/ar/agent-playground.dc146586de715010.webp)
+    ![Agent Playground](../../../translated_images/ar/agent-playground.dc146586de715010.webp)
 
-3. بعد اختبار الوكيل، يمكنك تخصيصه أكثر بإضافة المزيد من النوايا، وبيانات التدريب، والإجراءات لتعزيز قدراته.
+3. بعد اختبار الوكيل، يمكنك تخصيصه بشكل أكبر عن طريق إضافة المزيد من النوايا وبيانات التدريب والإجراءات لتعزيز قدراته.
 
 ## تنظيف الموارد
 
 عند الانتهاء من اختبار الوكيل، يمكنك حذفه لتجنب تكبد تكاليف إضافية.
-1. افتح [بوابة Azure](https://portal.azure.com) واطلع على محتويات مجموعة الموارد التي نشرت فيها موارد المركز المستخدمة في هذا التمرين.
-2. في شريط الأدوات، اختر **Delete resource group**.
-3. أدخل اسم مجموعة الموارد ووافق على رغبتك في حذفها.
+1. افتح [بوابة Azure](https://portal.azure.com) وعرض محتويات مجموعة الموارد حيث نشرت الموارد الخاصة بالمحور المستخدم في هذا التمرين.
+2. في شريط الأدوات، اختر **حذف مجموعة الموارد**.
+3. أدخل اسم مجموعة الموارد وأكد رغبتك في حذفها.
 
 ## الموارد
 
-- [توثيق Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
-- [بوابة Azure AI Foundry](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
-- [البدء مع Azure AI Studio](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
+- [توثيق Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
+- [بوابة Microsoft Foundry](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
+- [البدء مع Microsoft Foundry](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
 - [أساسيات وكلاء الذكاء الاصطناعي على Azure](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
 - [Azure AI Discord](https://aka.ms/AzureAI/Discord)
 
-**إخلاء المسؤولية**:  
-تمت ترجمة هذا المستند باستخدام خدمة الترجمة الآلية [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى لتحقيق الدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الموثوق به. للمعلومات الهامة، يُنصح بالاعتماد على الترجمة البشرية المهنية. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.
+---
+
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**تنويه**:
+تمت ترجمة هذا المستند باستخدام خدمة الترجمة بالذكاء الاصطناعي [Co-op Translator](https://github.com/Azure/co-op-translator). بينما نسعى للدقة، يرجى العلم أن الترجمات الآلية قد تحتوي على أخطاء أو عدم دقة. يجب اعتبار المستند الأصلي بلغته الأصلية المصدر الرسمي والمعتمد. للمعلومات الهامة، يُنصح بالاستعانة بترجمة بشرية محترفة. نحن غير مسؤولين عن أي سوء فهم أو تفسير ناتج عن استخدام هذه الترجمة.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,623 +1,303 @@
-[![AI Agentūrų Kūrimo Sistemų Tyrinėjimas](../../../translated_images/lt/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
+[![AI agentų karkasų tyrinėjimas](../../../translated_images/lt/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
 > _(Spustelėkite aukščiau esančią nuotrauką, kad peržiūrėtumėte šios pamokos vaizdo įrašą)_
 
-# AI Agentūrų Kūrimo Sistemų Tyrinėjimas
+# AI agentų karkasų tyrinėjimas
 
-AI agentūrų kūrimo sistemos yra programinės įrangos platformos, skirtos supaprastinti AI agentų kūrimą, diegimą ir valdymą. Šios sistemos suteikia kūrėjams iš anksto sukurtus komponentus, abstrakcijas ir įrankius, kurie palengvina sudėtingų AI sistemų kūrimą.
+AI agentų karkasai yra programinės įrangos platformos, sukurtos supaprastinti AI agentų kūrimą, diegimą ir valdymą. Šie karkasai suteikia kūrėjams iš anksto paruoštus komponentus, abstrakcijas ir įrankius, kurie palengvina sudėtingų AI sistemų kūrimą.
 
-Šios sistemos padeda kūrėjams susitelkti į unikalius jų programų aspektus, pateikdamos standartizuotus sprendimus dažniausiai pasitaikantiems AI agentų kūrimo iššūkiams. Jos didina AI sistemų mastelį, prieinamumą ir efektyvumą.
+Šie karkasai padeda kūrėjams sutelkti dėmesį į jų programų unikalumą, teikdami standartizuotus požiūrius į įprastus AI agentų kūrimo iššūkius. Jie didina mastelį, prieinamumą ir efektyvumą kuriant AI sistemas.
 
 ## Įvadas
 
 Šioje pamokoje aptarsime:
 
-- Kas yra AI agentūrų kūrimo sistemos ir ką jos leidžia pasiekti kūrėjams?
-- Kaip komandos gali naudoti šias sistemas greitam prototipų kūrimui, iteracijai ir agentų galimybių tobulinimui?
-- Kokie yra skirtumai tarp Microsoft sukurtų sistemų <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a> ir <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>?
-- Ar galiu tiesiogiai integruoti savo esamus Azure ekosistemos įrankius, ar man reikia atskirų sprendimų?
-- Kas yra Azure AI Agents paslauga ir kaip ji man padeda?
+- Kas yra AI agentų karkasai ir ką jie leidžia kūrėjams pasiekti?
+- Kaip komandos gali greitai kurti prototipus, iteruoti ir gerinti savo agentų galimybes?
+- Kokie yra skirtumai tarp Microsoft sukurtų karkasų ir įrankių (<a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Microsoft Foundry Agent Service</a> ir <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework</a>)?
+- Ar galiu tiesiogiai integruoti savo esamus Azure ekosistemos įrankius, arba man reikalingi savarankiški sprendimai?
+- Kas yra Microsoft Foundry Agent Service ir kaip tai padeda man?
 
 ## Mokymosi tikslai
 
-Šios pamokos tikslai yra padėti jums suprasti:
+Šios pamokos tikslas – padėti jums suprasti:
 
-- AI agentūrų kūrimo sistemų vaidmenį AI kūrime.
-- Kaip pasinaudoti AI agentūrų kūrimo sistemomis kuriant intelektualius agentus.
-- Pagrindines galimybes, kurias suteikia AI agentūrų kūrimo sistemos.
-- Skirtumus tarp AutoGen, Semantic Kernel ir Azure AI Agent Service.
+- AI agentų karkasų vaidmenį AI kūrime.
+- Kaip panaudoti AI agentų karkasus kuriant intelektualius agentus.
+- Pagrindines galimybes, kurias suteikia AI agentų karkasai.
+- Skirtumus tarp Microsoft Agent Framework ir Microsoft Foundry Agent Service.
 
-## Kas yra AI agentūrų kūrimo sistemos ir ką jos leidžia pasiekti kūrėjams?
+## Kas yra AI agentų karkasai ir ką jie leidžia kūrėjams daryti?
 
-Tradicinės AI kūrimo sistemos gali padėti integruoti AI į jūsų programas ir pagerinti jas šiais būdais:
+Tradiciniai AI karkasai gali padėti integruoti AI į savo programėles ir pagerinti jas šiais būdais:
 
-- **Personalizacija**: AI gali analizuoti vartotojų elgesį ir pageidavimus, kad pateiktų suasmenintas rekomendacijas, turinį ir patirtis.  
-Pavyzdys: Transliacijos paslaugos, tokios kaip Netflix, naudoja AI, kad pasiūlytų filmus ir laidas pagal peržiūrų istoriją, taip didindamos vartotojų įsitraukimą ir pasitenkinimą.
-- **Automatizavimas ir efektyvumas**: AI gali automatizuoti pasikartojančias užduotis, optimizuoti darbo eigas ir pagerinti operacinį efektyvumą.  
-Pavyzdys: Klientų aptarnavimo programos naudoja AI valdomus pokalbių robotus, kad atsakytų į dažniausiai užduodamus klausimus, sumažindamos atsakymo laiką ir leisdamos žmonėms spręsti sudėtingesnes problemas.
-- **Patobulinta vartotojo patirtis**: AI gali pagerinti bendrą vartotojo patirtį, suteikdama intelektualias funkcijas, tokias kaip balso atpažinimas, natūralios kalbos apdorojimas ir prognozuojantis tekstas.  
-Pavyzdys: Virtualūs asistentai, tokie kaip Siri ir Google Assistant, naudoja AI, kad suprastų ir atsakytų į balso komandas, palengvindami vartotojams sąveiką su jų įrenginiais.
+- **Personalizacija**: AI gali analizuoti vartotojo elgseną ir pageidavimus, kad pateiktų suasmenintus pasiūlymus, turinį ir patirtį.
+Pavyzdys: Transliavimo paslaugos, tokios kaip Netflix, naudoja AI siūlydamos filmus ir laidas pagal peržiūrų istoriją, didindamos vartotojų įsitraukimą ir pasitenkinimą.
+- **Automatizavimas ir efektyvumas**: AI gali automatizuoti pasikartojančias užduotis, optimizuoti darbo procesus ir gerinti veiklos efektyvumą.
+Pavyzdys: Klientų aptarnavimo programėlės naudoja AI pagrįstus pokalbių robotus dažniems užklausimams aptarnauti, trumpindamos atsakymo laiką ir atlaisvindamos žmonių agentus sudėtingesniems klausimams.
+- **Pagerinta naudotojo patirtis**: AI gali pagerinti bendrą naudotojo patirtį teikdama išmanias funkcijas, tokias kaip balso atpažinimas, natūralios kalbos apdorojimas ir prognozuojamas tekstas.
+Pavyzdys: Virtualūs asistentai, tokie kaip Siri ir Google Assistant, naudoja AI suprasti ir atsakyti į balso komandas, palengvindami naudotojų sąveiką su įrenginiais.
 
-### Skamba puikiai, tiesa? Tai kodėl mums reikia AI agentūrų kūrimo sistemų?
+### Viskas skamba puikiai, todėl kodėl mums reikia AI agentų karkaso?
 
-AI agentūrų kūrimo sistemos yra daugiau nei tik AI kūrimo sistemos. Jos skirtos kurti intelektualius agentus, kurie gali sąveikauti su vartotojais, kitais agentais ir aplinka, siekdami konkrečių tikslų. Šie agentai gali demonstruoti autonominį elgesį, priimti sprendimus ir prisitaikyti prie besikeičiančių sąlygų. Pažvelkime į pagrindines galimybes, kurias suteikia AI agentūrų kūrimo sistemos:
+AI agentų karkasai yra daugiau nei tik AI karkasai. Jie skirti leisti kurti intelektualius agentus, kurie gali bendrauti su vartotojais, kitais agentais ir aplinka, siekiant konkrečių tikslų. Šie agentai gali demonstruoti autonominį elgesį, priimti sprendimus ir prisitaikyti prie besikeičiančių sąlygų. Pažiūrėkime į pagrindines AI agentų karkasų suteikiamas galimybes:
 
-- **Agentų bendradarbiavimas ir koordinavimas**: Leidžia kurti kelis AI agentus, kurie gali dirbti kartu, bendrauti ir koordinuoti veiksmus, kad išspręstų sudėtingas užduotis.
-- **Užduočių automatizavimas ir valdymas**: Suteikia mechanizmus, skirtus automatizuoti daugiapakopes darbo eigas, užduočių delegavimą ir dinaminį užduočių valdymą tarp agentų.
+- **Agentų bendradarbiavimas ir koordinacija**: Leidžia kurti kelis AI agentus, kurie gali dirbti kartu, bendrauti ir koordinuotis sprendžiant sudėtingas užduotis.
+- **Užduočių automatizavimas ir valdymas**: Teikia mechanizmus daugiažingsniams darbo eigos automatizavimui, užduočių delegavimui ir dinamiškam užduočių valdymui agentų tarpe.
 - **Kontekstinis supratimas ir prisitaikymas**: Aprūpina agentus gebėjimu suprasti kontekstą, prisitaikyti prie besikeičiančios aplinkos ir priimti sprendimus remiantis realaus laiko informacija.
 
-Apibendrinant, agentai leidžia jums pasiekti daugiau, perkelti automatizavimą į kitą lygį, kurti intelektualesnes sistemas, kurios gali prisitaikyti ir mokytis iš savo aplinkos.
+Taigi apibendrinant, agentai leidžia jums daugiau, pakelia automatizavimą į aukštesnį lygį, kuria protingesnes sistemas, kurios gali prisitaikyti ir mokytis iš savo aplinkos.
 
-## Kaip greitai kurti prototipus, iteruoti ir tobulinti agentų galimybes?
+## Kaip greitai kurti prototipus, iteruoti ir gerinti agentų galimybes?
 
-Tai sparčiai besikeičianti sritis, tačiau yra keletas bendrų dalykų daugelyje AI agentūrų kūrimo sistemų, kurie gali padėti greitai kurti prototipus ir iteruoti, būtent modulinių komponentų naudojimas, bendradarbiavimo įrankiai ir mokymasis realiuoju laiku. Pažvelkime į tai detaliau:
+Tai sparčiai kintanti sritis, bet daugelyje AI agentų karkasų yra bendrų elementų, kurie padeda greitai kurti prototipus ir iteruoti, tai yra moduliniai komponentai, bendradarbiavimo įrankiai ir realaus laiko mokymasis. Pažiūrėkime į juos:
 
-- **Naudokite modulinius komponentus**: AI SDK siūlo iš anksto sukurtus komponentus, tokius kaip AI ir atminties jungtys, funkcijų kvietimas naudojant natūralią kalbą ar kodo papildinius, šablonus ir kt.
-- **Pasinaudokite bendradarbiavimo įrankiais**: Kurkite agentus su konkrečiais vaidmenimis ir užduotimis, leidžiančiais testuoti ir tobulinti bendradarbiavimo darbo eigas.
-- **Mokykitės realiuoju laiku**: Įgyvendinkite grįžtamojo ryšio ciklus, kuriuose agentai mokosi iš sąveikų ir dinamiškai koreguoja savo elgesį.
+- **Naudokite moduliarius komponentus**: AI SDK siūlo iš anksto paruoštus komponentus, tokius kaip AI ir atminties jungtys, funkcijų iškvietimas naudojant natūralią kalbą arba kodo papildinius, užklausų šablonus ir daugiau.
+- **Išnaudokite bendradarbiavimo įrankius**: Kurkite agentus su konkrečiomis rolėmis ir užduotimis, leidžiančiais testuoti ir tobulinti bendradarbiavimo darbo eigas.
+- **Mokykitės realiu laiku**: Įgyvendinkite atsiliepimų ciklus, kur agentai mokosi iš sąveikų ir dinamiškai keičia elgesį.
 
-### Naudokite modulinius komponentus
+### Naudokite moduliarius komponentus
 
-Tokie SDK kaip Microsoft Semantic Kernel ir LangChain siūlo iš anksto sukurtus komponentus, tokius kaip AI jungtys, šablonai ir atminties valdymas.
+Tokie SDK kaip Microsoft Agent Framework siūlo iš anksto paruoštus komponentus, pvz., AI jungtis, įrankių apibrėžimus ir agentų valdymą.
 
-**Kaip komandos gali tai naudoti**: Komandos gali greitai surinkti šiuos komponentus, kad sukurtų veikiantį prototipą, nepradėdamos nuo nulio, leidžiant greitai eksperimentuoti ir iteruoti.
+**Kaip komandos gali tai panaudoti**: Komandos gali greitai surinkti šiuos komponentus, kad sukurtų funkcionalų prototipą nepradėdamos nuo nulio, leidžiant greitai eksperimentuoti ir iteruoti.
 
-**Kaip tai veikia praktikoje**: Galite naudoti iš anksto sukurtą analizatorių, kad išgautumėte informaciją iš vartotojo įvesties, atminties modulį duomenims saugoti ir atkurti, bei šablonų generatorių sąveikai su vartotojais, viso to nereikėdami kurti nuo nulio.
+**Kaip tai veikia praktikoje**: Galite naudoti iš anksto paruoštą analizatorių informacijai iš vartotojo įvesties išgauti, atminties modulį duomenims saugoti ir atkurti, bei užklausų generatorių, kad bendrautumėte su vartotojais, visa tai neteikdami šių komponentų patys.
 
-**Kodo pavyzdys**. Pažvelkime į pavyzdžius, kaip galite naudoti iš anksto sukurtą AI jungtį su Semantic Kernel Python ir .Net, kuris naudoja automatinį funkcijų kvietimą, kad modelis atsakytų į vartotojo įvestį:
+**Kodo pavyzdys**. Pažiūrėkime, kaip naudoti Microsoft Agent Framework su `FoundryChatClient`, kad modelis atsakytų į vartotojo įvestį įrankių iškvietimu:
 
 ``` python
-# Semantic Kernel Python Example
+# Microsoft Agent Framework Python Pavyzdys
 
 import asyncio
-from typing import Annotated
+import os
 
-from semantic_kernel.connectors.ai import FunctionChoiceBehavior
-from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureChatPromptExecutionSettings
-from semantic_kernel.contents import ChatHistory
-from semantic_kernel.functions import kernel_function
-from semantic_kernel.kernel import Kernel
-
-# Define a ChatHistory object to hold the conversation's context
-chat_history = ChatHistory()
-chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
+from agent_framework import tool
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 
-# Define a sample plugin that contains the function to book travel
-class BookTravelPlugin:
-    """A Sample Book Travel Plugin"""
-
-    @kernel_function(name="book_flight", description="Book travel given location and date")
-    async def book_flight(
-        self, date: Annotated[str, "The date of travel"], location: Annotated[str, "The location to travel to"]
-    ) -> str:
-        return f"Travel was booked to {location} on {date}"
-
-# Create the Kernel
-kernel = Kernel()
-
-# Add the sample plugin to the Kernel object
-kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
-
-# Define the Azure OpenAI AI Connector
-chat_service = AzureChatCompletion(
-    deployment_name="YOUR_DEPLOYMENT_NAME", 
-    api_key="YOUR_API_KEY", 
-    endpoint="https://<your-resource>.azure.openai.com/",
-)
-
-# Define the request settings to configure the model with auto-function calling
-request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
+# Apibrėžkite pavyzdinę įrankio funkciją kelionės užsakymui
+@tool(approval_mode="never_require")
+def book_flight(date: str, location: str) -> str:
+    """Book travel given location and date."""
+    return f"Travel was booked to {location} on {date}"
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
-    response = await chat_service.get_chat_message_content(
-        chat_history=chat_history, settings=request_settings, kernel=kernel
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
     )
-    assert response is not None
+    agent = provider.as_agent(
+        name="travel_agent",
+        instructions="Help the user book travel. Use the book_flight tool when ready.",
+        tools=[book_flight],
+    )
 
-    """
-    Note: In the auto function calling process, the model determines it can invoke the 
-    `BookTravelPlugin` using the `book_flight` function, supplying the necessary arguments. 
-    
-    For example:
-
-    "tool_calls": [
-        {
-            "id": "call_abc123",
-            "type": "function",
-            "function": {
-                "name": "BookTravelPlugin-book_flight",
-                "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-            }
-        }
-    ]
-
-    Since the location and date arguments are required (as defined by the kernel function), if the 
-    model lacks either, it will prompt the user to provide them. For instance:
-
-    User: Book me a flight to New York.
-    Model: Sure, I'd love to help you book a flight. Could you please specify the date?
-    User: I want to travel on January 1, 2025.
-    Model: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels!
-    """
-
-    print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
-
-    # Add the model's response to our chat history context
-    chat_history.add_assistant_message(response.content)
+    response = await agent.run("I'd like to go to New York on January 1, 2025")
+    print(response)
+    # Pavyzdinis išvestis: Jūsų skrydis į Niujorką 2025 m. sausio 1 d. sėkmingai užsakytas. Linkime saugios kelionės! ✈️🗽
 
 
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-```csharp
-// Semantic Kernel C# example
 
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.ChatCompletion;
-using System.ComponentModel;
-using Microsoft.SemanticKernel.Connectors.AzureOpenAI;
+Iš šio pavyzdžio matyti, kaip galite panaudoti iš anksto paruoštą analizatorių, kad iš vartotojo įvesties išgautumėte pagrindinę informaciją, pvz., kilmę, paskirties vietą ir skrydžio užsakymo datą. Šis modulinis požiūris leidžia sutelkti dėmesį į aukšto lygio logiką.
 
-ChatHistory chatHistory = [];
-chatHistory.AddUserMessage("I'd like to go to New York on January 1, 2025");
+### Išnaudokite bendradarbiavimo įrankius
 
-var kernelBuilder = Kernel.CreateBuilder();
-kernelBuilder.AddAzureOpenAIChatCompletion(
-    deploymentName: "NAME_OF_YOUR_DEPLOYMENT",
-    apiKey: "YOUR_API_KEY",
-    endpoint: "YOUR_AZURE_ENDPOINT"
-);
-kernelBuilder.Plugins.AddFromType<BookTravelPlugin>("BookTravel"); 
-var kernel = kernelBuilder.Build();
+Tokie karkasai kaip Microsoft Agent Framework palengvina kelių agentų, kurie gali dirbti kartu, kūrimą.
 
-var settings = new AzureOpenAIPromptExecutionSettings()
-{
-    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
-};
+**Kaip komandos gali tai panaudoti**: Komandos gali kurti agentus su konkrečiomis rolėmis ir užduotimis, leidžiančiais testuoti ir tobulinti bendradarbiavimo darbo procesus bei gerinti bendrą sistemos efektyvumą.
 
-var chatCompletion = kernel.GetRequiredService<IChatCompletionService>();
+**Kaip tai veikia praktikoje**: Galite sukurti agentų komandą, kur kiekvienas agentas turi specializuotą funkciją, pvz., duomenų gavimą, analizę ar sprendimų priėmimą. Šie agentai gali bendrauti ir dalytis informacija, siekdami bendro tikslo, pvz., atsakyti į vartotojo užklausą ar atlikti užduotį.
 
-var response = await chatCompletion.GetChatMessageContentAsync(chatHistory, settings, kernel);
-
-/*
-Behind the scenes, the model recognizes the tool to call, what arguments it already has (location) and (date)
-{
-
-"tool_calls": [
-    {
-        "id": "call_abc123",
-        "type": "function",
-        "function": {
-            "name": "BookTravelPlugin-book_flight",
-            "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-        }
-    }
-]
-*/
-
-Console.WriteLine(response.Content);
-chatHistory.AddMessage(response!.Role, response!.Content!);
-
-// Example AI Model Response: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽
-
-// Define a plugin that contains the function to book travel
-public class BookTravelPlugin
-{
-    [KernelFunction("book_flight")]
-    [Description("Book travel given location and date")]
-    public async Task<string> BookFlight(DateTime date, string location)
-    {
-        return await Task.FromResult( $"Travel was booked to {location} on {date}");
-    }
-}
-```
-
-Iš šio pavyzdžio matote, kaip galite pasinaudoti iš anksto sukurtu analizatoriumi, kad išgautumėte pagrindinę informaciją iš vartotojo įvesties, pvz., skrydžio užsakymo užklausos kilmę, paskirties vietą ir datą. Šis modulinis požiūris leidžia jums susitelkti į aukšto lygio logiką.
-
-### Pasinaudokite bendradarbiavimo įrankiais
-
-Tokios sistemos kaip CrewAI, Microsoft AutoGen ir Semantic Kernel palengvina kelių agentų, galinčių dirbti kartu, kūrimą.
-
-**Kaip komandos gali tai naudoti**: Komandos gali kurti agentus su konkrečiais vaidmenimis ir užduotimis, leidžiančiais testuoti ir tobulinti bendradarbiavimo darbo eigas bei pagerinti bendrą sistemos efektyvumą.
-
-**Kaip tai veikia praktikoje**: Galite sukurti agentų komandą, kur kiekvienas agentas turi specializuotą funkciją, pvz., duomenų gavimą, analizę ar sprendimų priėmimą. Šie agentai gali bendrauti ir dalintis informacija, kad pasiektų bendrą tikslą, pvz., atsakytų į vartotojo užklausą ar atliktų užduotį.
-
-**Kodo pavyzdys (AutoGen)**:
+**Kodo pavyzdys (Microsoft Agent Framework)**:
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# Sukuriant kelis agentus, kurie dirba kartu, naudojant Microsoft Agent Framework
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-agent_retrieve = AssistantAgent(
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
+
+# Duomenų gavimo agentas
+agent_retrieve = provider.as_agent(
     name="dataretrieval",
-    model_client=model_client,
+    instructions="Retrieve relevant data using available tools.",
     tools=[retrieve_tool],
-    system_message="Use tools to solve tasks."
 )
 
-agent_analyze = AssistantAgent(
+# Duomenų analizės agentas
+agent_analyze = provider.as_agent(
     name="dataanalysis",
-    model_client=model_client,
+    instructions="Analyze the retrieved data and provide insights.",
     tools=[analyze_tool],
-    system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
-termination = TextMentionTermination("APPROVE")
-
-user_proxy = UserProxyAgent("user_proxy", input_func=input)
-
-team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
-
-stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
-await Console(stream)
+# Paleisti agentus iš eilės atliekant užduotį
+retrieval_result = await agent_retrieve.run("Retrieve sales data for Q4")
+analysis_result = await agent_analyze.run(f"Analyze this data: {retrieval_result}")
+print(analysis_result)
 ```
 
-Ankstesniame kode matote, kaip galite sukurti užduotį, kurioje dalyvauja keli agentai, dirbantys kartu analizuoti duomenis. Kiekvienas agentas atlieka konkrečią funkciją, o užduotis vykdoma koordinuojant agentus, kad būtų pasiektas norimas rezultatas. Kurdami specializuotus agentus su konkrečiais vaidmenimis, galite pagerinti užduočių efektyvumą ir našumą.
+Ankstesniame kode matote, kaip sukurti užduotį, kurioje keli agentai dirba kartu analizuodami duomenis. Kiekvienas agentas atlieka konkrečią funkciją, o užduotis vykdoma koordinuojant agentų darbą siekiant norimo rezultato. Kurdamas agentus su specializuotomis rolėmis galite pagerinti užduočių efektyvumą ir našumą.
 
-### Mokykitės realiuoju laiku
+### Mokykitės realiu laiku
 
-Pažangios sistemos suteikia galimybes realiuoju laiku suprasti kontekstą ir prisitaikyti.
+Pažangūs karkasai suteikia galimybes realiu laiku suprasti kontekstą ir prisitaikyti.
 
-**Kaip komandos gali tai naudoti**: Komandos gali įgyvendinti grįžtamojo ryšio ciklus, kuriuose agentai mokosi iš sąveikų ir dinamiškai koreguoja savo elgesį, taip nuolat tobulindami ir tobulindami savo galimybes.
+**Kaip komandos gali tai panaudoti**: Komandos gali įgyvendinti atsiliepimų ciklus, kuriuose agentai mokosi iš sąveikų ir dinamiškai koreguoja savo elgesį, taip nuolat gerindami ir tobulindami savo galimybes.
 
-**Kaip tai veikia praktikoje**: Agentai gali analizuoti vartotojų atsiliepimus, aplinkos duomenis ir užduočių rezultatus, kad atnaujintų savo žinių bazę, koreguotų sprendimų priėmimo algoritmus ir laikui bėgant pagerintų našumą. Šis iteracinis mokymosi procesas leidžia agentams prisitaikyti prie besikeičiančių sąlygų ir vartotojų pageidavimų, didinant bendrą sistemos efektyvumą.
+**Kaip tai veikia praktikoje**: Agentai gali analizuoti vartotojų atsiliepimus, aplinkos duomenis ir užduočių rezultatus, atnaujinti savo žinių bazę, koreguoti sprendimų algoritmus ir gerinti veikimą laikui bėgant. Šis iteratyvus mokymosi procesas leidžia agentams prisitaikyti prie kintančių sąlygų ir vartotojų pageidavimų, didinant bendrą sistemos efektyvumą.
 
-## Kokie yra skirtumai tarp AutoGen, Semantic Kernel ir Azure AI Agent Service sistemų?
+## Kokie skirtumai tarp Microsoft Agent Framework ir Microsoft Foundry Agent Service?
 
-Yra daug būdų palyginti šias sistemas, tačiau pažvelkime į pagrindinius skirtumus jų dizaino, galimybių ir tikslinių naudojimo atvejų atžvilgiu:
+Yra daug būdų palyginti šiuos požiūrius, bet pažvelkime į pagrindinius skirtumus jų dizaino, galimybių ir tikslinių panaudojimo atvejų atžvilgiu:
 
-## AutoGen
+## Microsoft Agent Framework (MAF)
 
-AutoGen yra atvirojo kodo sistema, sukurta Microsoft Research AI Frontiers Lab. Ji orientuota į įvykių valdomas, paskirstytas *agentines* programas, leidžiančias naudoti kelis LLM ir SLM, įrankius bei pažangius kelių agentų dizaino modelius.
+Microsoft Agent Framework suteikia supaprastintą SDK AI agentų kūrimui naudojant `FoundryChatClient`. Jis leidžia kūrėjams kurti agentus, kurie naudoja Azure OpenAI modelius su įmontuotu įrankių iškvietimu, pokalbių valdymu ir įmonės lygio saugumu per Azure identifikaciją.
 
-AutoGen pagrindas yra agentų koncepcija – autonominiai vienetai, galintys suvokti savo aplinką, priimti sprendimus ir imtis veiksmų, siekdami konkrečių tikslų. Agentai bendrauja asinchroniniais pranešimais, leidžiančiais jiems dirbti nepriklausomai ir lygiagrečiai, didinant sistemos mastelį ir atsaką.
+**Panaudojimo atvejai**: Gamybai paruoštų AI agentų kūrimas su įrankių naudojimu, daugiažingsniais darbo srautais ir įmonės integracijos scenarijais.
 
-<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Agentai yra pagrįsti aktoriaus modeliu</a>. Pagal Vikipediją, aktorius yra _pagrindinis lygiagrečios skaičiavimo vienetas. Atsakydamas į gautą pranešimą, aktorius gali: priimti vietinius sprendimus, sukurti daugiau aktorių, siųsti daugiau pranešimų ir nustatyti, kaip reaguoti į kitą gautą pranešimą_.
+Štai keletas svarbių Microsoft Agent Framework pagrindinių konceptų:
 
-**Naudojimo atvejai**: Kodo generavimo automatizavimas, duomenų analizės užduotys ir individualių agentų kūrimas planavimo bei tyrimų funkcijoms.
+- **Agentai**. Agentas sukuriamas per `FoundryChatClient` ir konfigūruojamas su pavadinimu, instrukcijomis ir įrankiais. Agentas gali:
+  - **Apdoroti vartotojo žinutes** ir generuoti atsakymus naudodamas Azure OpenAI modelius.
+  - **Automatiškai iškviesti įrankius** pagal pokalbio kontekstą.
+  - **Išlaikyti pokalbio būseną** per kelias sąveikas.
 
-Štai keletas svarbių AutoGen pagrindinių koncepcijų:
-
-- **Agentai**. Agentas yra programinės įrangos vienetas, kuris:
-  - **Bendrauja per pranešimus**, kurie gali būti sinchroniniai arba asinchroniniai.
-  - **Palaiko savo būseną**, kurią gali keisti gaunami pranešimai.
-  - **Atlieka veiksmus** reaguodamas į gautus pranešimus ar būsenos pokyčius. Šie veiksmai gali keisti agento būseną ir sukelti išorinius efektus, pvz., atnaujinti pranešimų žurnalus, siųsti naujus pranešimus, vykdyti kodą ar atlikti API užklausas.
+  Štai kodo fragmentas, rodantis, kaip sukurti agentą:
 
     ```python
-    from autogen_agentchat.agents import AssistantAgent
-    from autogen_agentchat.messages import TextMessage
-    from autogen_ext.models.openai import OpenAIChatCompletionClient
+    import os
+    from agent_framework.foundry import FoundryChatClient
+    from azure.identity import AzureCliCredential
 
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
+    )
+    agent = provider.as_agent(
+        name="my_agent",
+        instructions="You are a helpful assistant.",
+    )
 
-    class MyAgent(RoutedAgent):
-        def __init__(self, name: str) -> None:
-            super().__init__(name)
-            model_client = OpenAIChatCompletionClient(model="gpt-4o")
-            self._delegate = AssistantAgent(name, model_client=model_client)
-    
-        @message_handler
-        async def handle_my_message_type(self, message: MyMessageType, ctx: MessageContext) -> None:
-            print(f"{self.id.type} received message: {message.content}")
-            response = await self._delegate.on_messages(
-                [TextMessage(content=message.content, source="user")], ctx.cancellation_token
-            )
-            print(f"{self.id.type} responded: {response.chat_message.content}")
+    response = await agent.run("Hello, World!")
+    print(response)
     ```
-  
+
+- **Įrankiai**. Framework palaiko įrankių apibrėžimą kaip Python funkcijas, kurias agentas gali automatiškai kvieti. Įrankiai registruojami agento kūrimo metu:
+
     ```python
-    
-    # main.py
-    runtime = SingleThreadedAgentRuntime()
-    await MyAgent.register(runtime, "my_agent", lambda: MyAgent())
+    def get_weather(location: str) -> str:
+        """Get the current weather for a location."""
+        return f"The weather in {location} is sunny, 72\u00b0F."
 
-    runtime.start()  # Start processing messages in the background.
-    await runtime.send_message(MyMessageType("Hello, World!"), AgentId("my_agent", "default"))
+    agent = provider.as_agent(
+        name="weather_agent",
+        instructions="Help users check the weather.",
+        tools=[get_weather],
+    )
     ```
-  
-    ```text
-    # Output from the console:
-    my_agent received message: Hello, World!
-    my_assistant received message: Hello, World!
-    my_assistant responded: Hello! How can I assist you today?
-    ```
-  
+
+- **Daugiagentų koordinacija**. Galite kurti kelis agentus su skirtingomis specializacijomis ir koordinuoti jų darbą:
+
     ```python
-    editor_description = "Editor for planning and reviewing the content."
-
-    # Example of declaring an Agent
-    editor_agent_type = await EditorAgent.register(
-    runtime,
-    editor_topic_type,  # Using topic type as the agent type.
-    lambda: EditorAgent(
-        description=editor_description,
-        group_chat_topic_type=group_chat_topic_type,
-        model_client=OpenAIChatCompletionClient(
-            model="gpt-4o-2024-08-06",
-            # api_key="YOUR_API_KEY",
-        ),
-        ),
+    planner = provider.as_agent(
+        name="planner",
+        instructions="Break down complex tasks into steps.",
     )
 
-    # remaining declarations shortened for brevity
-
-    # Group chat
-    group_chat_manager_type = await GroupChatManager.register(
-    runtime,
-    "group_chat_manager",
-    lambda: GroupChatManager(
-        participant_topic_types=[writer_topic_type, illustrator_topic_type, editor_topic_type, user_topic_type],
-        model_client=OpenAIChatCompletionClient(
-            model="gpt-4o-2024-08-06",
-            # api_key="YOUR_API_KEY",
-        ),
-        participant_descriptions=[
-            writer_description, 
-            illustrator_description, 
-            editor_description, 
-            user_description
-        ],
-        ),
+    executor = provider.as_agent(
+        name="executor",
+        instructions="Execute the planned steps using available tools.",
+        tools=[execute_tool],
     )
+
+    plan = await planner.run("Plan a trip to Paris")
+    result = await executor.run(f"Execute this plan: {plan}")
     ```
-  
 
-## Semantic Kernel + Agent Framework
+- **Azure identifikacijos integracija**. Framework naudoja `AzureCliCredential` (arba `DefaultAzureCredential`) saugiam autentifikavimui be raktų valdymo, pašalindamas poreikį tiesiogiai tvarkyti API raktus.
 
-Semantic Kernel yra įmonėms pritaikytas AI orkestravimo SDK. Jį sudaro AI ir atminties jungtys bei Agent Framework.
+## Microsoft Foundry Agent Service
 
-Pirmiausia aptarkime pagrindinius komponentus:
+Microsoft Foundry Agent Service yra naujesnis sprendimas, pristatytas Microsoft Ignite 2024 renginyje. Jis leidžia kurti ir diegti AI agentus su lankstesniais modeliais, pavyzdžiui, tiesiogiai kviečiant atvirojo kodo LLM, tokius kaip Llama 3, Mistral ir Cohere.
 
-- **AI jungtys**: Sąsaja su išorinėmis AI paslaugomis ir duomenų šaltiniais Python ir C# kalbomis.
+Microsoft Foundry Agent Service suteikia griežtesnes įmonių saugumo priemones ir duomenų saugojimo metodus, todėl tinka įmonių programėlėms.
 
-  ```python
-  # Semantic Kernel Python
-  from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion
-  from semantic_kernel.kernel import Kernel
+Jis veikia be papildomų konfigūracijų kartu su Microsoft Agent Framework agentų kūrimui ir diegimui.
 
-  kernel = Kernel()
-  kernel.add_service(
-    AzureChatCompletion(
-        deployment_name="your-deployment-name",
-        api_key="your-api-key",
-        endpoint="your-endpoint",
-    )
-  )
-  ```  
-  
-    ```csharp
-    // Semantic Kernel C#
-    using Microsoft.SemanticKernel;
+Ši paslauga šiuo metu yra viešojo peržiūros (Public Preview) stadijoje ir palaiko Python bei C# agentų kūrimui.
 
-    // Create kernel
-    var builder = Kernel.CreateBuilder();
-    
-    // Add a chat completion service:
-    builder.Services.AddAzureOpenAIChatCompletion(
-        "your-resource-name",
-        "your-endpoint",
-        "your-resource-key",
-        "deployment-model");
-    var kernel = builder.Build();
-    ```
-  
-
-- **Papildiniai**: Apima funkcijas, kurias gali naudoti programa. Yra tiek paruoštų papildinių, tiek galimybė kurti savo.  
-
-  ```python
-  from semantic_kernel.connectors.ai.open_ai.services.azure_chat_completion import AzureChatCompletion
-
-
-  async def main():
-      from semantic_kernel.functions import KernelFunctionFromPrompt
-      from semantic_kernel.kernel import Kernel
-
-      kernel = Kernel()
-      kernel.add_service(AzureChatCompletion())
-
-      user_input = input("User Input:> ")
-
-      kernel_function = KernelFunctionFromPrompt(
-          function_name="SummarizeText",
-          prompt="""
-          Summarize the provided unstructured text in a sentence that is easy to understand.
-          Text to summarize: {{$user_input}}
-          """,
-      )
-
-      response = await kernel_function.invoke(kernel=kernel, user_input=user_input)
-      print(f"Model Response: {response}")
-
-      """
-      Sample Console Output:
-
-      User Input:> I like dogs
-      Model Response: The text expresses a preference for dogs.
-      """
-
-
-  if __name__ == "__main__":
-    import asyncio
-    asyncio.run(main())
-  ```
-  
-    ```csharp
-    var userInput = Console.ReadLine();
-
-    // Define semantic function inline.
-    string skPrompt = @"Summarize the provided unstructured text in a sentence that is easy to understand.
-                        Text to summarize: {{$userInput}}";
-    
-    // create the function from the prompt
-    KernelFunction summarizeFunc = kernel.CreateFunctionFromPrompt(
-        promptTemplate: skPrompt,
-        functionName: "SummarizeText"
-    );
-
-    //then import into the current kernel
-    kernel.ImportPluginFromFunctions("SemanticFunctions", [summarizeFunc]);
-
-    ```
-  
-
-- **Natūralios funkcijos**: Framework gali tiesiogiai kviesti funkcijas užduotims atlikti.  
-
-    ```csharp
-    public class NativeFunctions {
-
-        [SKFunction, Description("Retrieve content from local file")]
-        public async Task<string> RetrieveLocalFile(string fileName, int maxSize = 5000)
-        {
-            string content = await File.ReadAllTextAsync(fileName);
-            if (content.Length <= maxSize) return content;
-            return content.Substring(0, maxSize);
-        }
-    }
-    
-    //Import native function
-    string plugInName = "NativeFunction";
-    string functionName = "RetrieveLocalFile";
-
-   //To add the functions to a kernel use the following function
-    kernel.ImportPluginFromType<NativeFunctions>();
-
-    ```
-  
-
-- **Atmintis**: Supaprastina konteksto valdymą AI programoms.  
-
-    ```csharp
-    var facts = new Dictionary<string,string>();
-    facts.Add(
-        "Azure Machine Learning; https://learn.microsoft.com/azure/machine-learning/",
-        @"Azure Machine Learning is a cloud service for accelerating and
-        managing the machine learning project lifecycle. Machine learning professionals,
-        data scientists, and engineers can use it in their day-to-day workflows"
-    );
-    
-    facts.Add(
-        "Azure SQL Service; https://learn.microsoft.com/azure/azure-sql/",
-        @"Azure SQL is a family of managed, secure, and intelligent products
-        that use the SQL Server database engine in the Azure cloud."
-    );
-    
-    string memoryCollectionName = "SummarizedAzureDocs";
-    
-    foreach (var fact in facts) {
-        await memoryBuilder.SaveReferenceAsync(
-            collection: memoryCollectionName,
-            description: fact.Key.Split(";")[1].Trim(),
-            text: fact.Value,
-            externalId: fact.Key.Split(";")[2].Trim(),
-            externalSourceName: "Azure Documentation"
-        );
-    }
-    ```
-  
-Šie faktai tada saugomi atminties kolekcijoje `SummarizedAzureDocs`. Tai labai supaprastintas pavyzdys, bet galite matyti, kaip galima saugoti informaciją atmintyje, kad LLM galėtų ją naudoti.
-
-Tai yra pagrindai apie Semantic Kernel sistemą, o kaip dėl Agent Framework?
-
-## Azure AI Agent Service
-
-Azure AI Agent Service yra naujesnis papildymas, pristatytas Microsoft Ignite 2024 renginyje. Jis leidžia kurti ir diegti AI agentus su lankstesniais modeliais, pavyzdžiui, tiesiogiai naudojant atvirojo kodo LLM, tokius kaip Llama 3, Mistral ir Cohere.
-
-Azure AI Agent Service suteikia stipresnius įmonės saugumo mechanizmus ir duomenų saugojimo metodus, todėl jis tinkamas naudoti įmonių programose.
-
-Jis veikia iš karto su kelių agentų orkestravimo sistemomis, tokiomis kaip AutoGen ir Semantic Kernel.
-
-Ši paslauga šiuo metu yra viešojoje peržiūroje ir palaiko Python bei C# agentų kūrimui.
-
-Naudodami Semantic Kernel Python, galime sukurti Azure AI Agent su vartotojo apibrėžtu įskiepiu:
+Naudodami Microsoft Foundry Agent Service Python SDK galime sukurti agentą su vartotojo apibrėžtu įrankiu:
 
 ```python
 import asyncio
-from typing import Annotated
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
 
-from azure.identity.aio import DefaultAzureCredential
+# Apibrėžkite įrankių funkcijas
+def get_specials() -> str:
+    """Provides a list of specials from the menu."""
+    return """
+    Special Soup: Clam Chowder
+    Special Salad: Cobb Salad
+    Special Drink: Chai Tea
+    """
 
-from semantic_kernel.agents import AzureAIAgent, AzureAIAgentSettings, AzureAIAgentThread
-from semantic_kernel.contents import ChatMessageContent
-from semantic_kernel.contents import AuthorRole
-from semantic_kernel.functions import kernel_function
-
-
-# Define a sample plugin for the sample
-class MenuPlugin:
-    """A sample Menu Plugin used for the concept sample."""
-
-    @kernel_function(description="Provides a list of specials from the menu.")
-    def get_specials(self) -> Annotated[str, "Returns the specials from the menu."]:
-        return """
-        Special Soup: Clam Chowder
-        Special Salad: Cobb Salad
-        Special Drink: Chai Tea
-        """
-
-    @kernel_function(description="Provides the price of the requested menu item.")
-    def get_item_price(
-        self, menu_item: Annotated[str, "The name of the menu item."]
-    ) -> Annotated[str, "Returns the price of the menu item."]:
-        return "$9.99"
+def get_item_price(menu_item: str) -> str:
+    """Provides the price of the requested menu item."""
+    return "$9.99"
 
 
 async def main() -> None:
-    ai_agent_settings = AzureAIAgentSettings.create()
+    credential = DefaultAzureCredential()
+    project_client = AIProjectClient.from_connection_string(
+        credential=credential,
+        conn_str="your-connection-string",
+    )
 
-    async with (
-        DefaultAzureCredential() as creds,
-        AzureAIAgent.create_client(
-            credential=creds,
-            conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
-        ) as client,
-    ):
-        # Create agent definition
-        agent_definition = await client.agents.create_agent(
-            model=ai_agent_settings.model_deployment_name,
-            name="Host",
-            instructions="Answer questions about the menu.",
+    agent = project_client.agents.create_agent(
+        model="gpt-5-mini",
+        name="Host",
+        instructions="Answer questions about the menu.",
+        tools=[get_specials, get_item_price],
+    )
+
+    thread = project_client.agents.create_thread()
+
+    user_inputs = [
+        "Hello",
+        "What is the special soup?",
+        "How much does that cost?",
+        "Thank you",
+    ]
+
+    for user_input in user_inputs:
+        print(f"# User: '{user_input}'")
+        message = project_client.agents.create_message(
+            thread_id=thread.id,
+            role="user",
+            content=user_input,
         )
-
-        # Create the AzureAI Agent using the defined client and agent definition
-        agent = AzureAIAgent(
-            client=client,
-            definition=agent_definition,
-            plugins=[MenuPlugin()],
+        run = project_client.agents.create_and_process_run(
+            thread_id=thread.id, agent_id=agent.id
         )
-
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
-        thread: AzureAIAgentThread | None = None
-
-        user_inputs = [
-            "Hello",
-            "What is the special soup?",
-            "How much does that cost?",
-            "Thank you",
-        ]
-
-        try:
-            for user_input in user_inputs:
-                print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
-                response = await agent.get_response(
-                    messages=user_input,
-                    thread_id=thread,
-                )
-                print(f"# {response.name}: {response.content}")
-                thread = response.thread
-        finally:
-            await thread.delete() if thread else None
-            await client.agents.delete_agent(agent.id)
+        messages = project_client.agents.list_messages(thread_id=thread.id)
+        print(f"# Agent: {messages.data[0].content[0].text.value}")
 
 
 if __name__ == "__main__":
@@ -626,13 +306,13 @@ if __name__ == "__main__":
 
 ### Pagrindinės sąvokos
 
-Azure AI Agent Service turi šias pagrindines sąvokas:
+Microsoft Foundry Agent Service apima šias pagrindines sąvokas:
 
-- **Agentas**. Azure AI Agent Service integruojasi su Azure AI Foundry. AI Foundry viduje AI agentas veikia kaip „protinga“ mikropaslauga, kuri gali atsakyti į klausimus (RAG), atlikti veiksmus arba visiškai automatizuoti darbo eigas. Tai pasiekiama derinant generatyvinių AI modelių galią su įrankiais, leidžiančiais pasiekti ir sąveikauti su realaus pasaulio duomenų šaltiniais. Štai agento pavyzdys:
+- **Agentas**. Microsoft Foundry Agent Service integruojasi su Microsoft Foundry. Žmogaus agentas Microsoft Foundry veikia kaip "išmanioji" mikroserviso funkcija, kuri gali atsakyti į klausimus (RAG), atlikti veiksmus arba visiškai automatizuoti darbo eigas. Tai įgyvendinama derinant generatyviųjų AI modelių galybę su įrankiais, leidžiančiais prieiti ir bendrauti su realaus pasaulio duomenų šaltiniais. Štai agento pavyzdys:
 
     ```python
     agent = project_client.agents.create_agent(
-        model="gpt-4o-mini",
+        model="gpt-5-mini",
         name="my-agent",
         instructions="You are helpful agent",
         tools=code_interpreter.definitions,
@@ -640,9 +320,9 @@ Azure AI Agent Service turi šias pagrindines sąvokas:
     )
     ```
 
-    Šiame pavyzdyje sukuriamas agentas su modeliu `gpt-4o-mini`, pavadinimu `my-agent` ir instrukcijomis `You are helpful agent`. Agentas aprūpintas įrankiais ir ištekliais, kad galėtų atlikti kodo interpretavimo užduotis.
+    Šiame pavyzdyje agentas sukurtas su modeliu `gpt-5-mini`, pavadinimu `my-agent`, ir instrukcijomis `You are helpful agent`. Agentui suteikti įrankiai ir ištekliai, kad atliktų kodo interpretavimo užduotis.
 
-- **Gija ir žinutės**. Gija yra dar viena svarbi sąvoka. Ji atspindi pokalbį ar sąveiką tarp agento ir vartotojo. Gijos gali būti naudojamos pokalbio eigai sekti, konteksto informacijai saugoti ir sąveikos būsenai valdyti. Štai gijos pavyzdys:
+- **Pokalbio gija ir žinutės**. Gija yra dar vienas svarbus konceptas. Ji atspindi pokalbį arba sąveiką tarp agento ir vartotojo. Gijos gali būti naudojamos sekti pokalbio eigą, saugoti kontekstinę informaciją ir valdyti sąveikos būseną. Štai gijos pavyzdys:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -652,96 +332,87 @@ Azure AI Agent Service turi šias pagrindines sąvokas:
         content="Could you please create a bar chart for the operating profit using the following data and provide the file to me? Company A: $1.2 million, Company B: $2.5 million, Company C: $3.0 million, Company D: $1.8 million",
     )
     
-    # Ask the agent to perform work on the thread
+    # Paprašykite agento atlikti darbą su gija
     run = project_client.agents.create_and_process_run(thread_id=thread.id, agent_id=agent.id)
     
-    # Fetch and log all messages to see the agent's response
+    # Gaukite ir užfiksuokite visus pranešimus, kad pamatytumėte agento atsakymą
     messages = project_client.agents.list_messages(thread_id=thread.id)
     print(f"Messages: {messages}")
     ```
 
-    Ankstesniame kode sukuriama gija. Po to į giją siunčiama žinutė. Iškvietus `create_and_process_run`, agentas prašomas atlikti darbą gijoje. Galiausiai žinutės yra gaunamos ir registruojamos, kad būtų matomas agento atsakymas. Žinutės rodo pokalbio eigą tarp vartotojo ir agento. Taip pat svarbu suprasti, kad žinutės gali būti skirtingų tipų, pavyzdžiui, tekstas, vaizdas ar failas, tai yra, agento darbas gali sukurti, pavyzdžiui, vaizdą ar teksto atsakymą. Kaip kūrėjas, galite naudoti šią informaciją tolesniam atsakymo apdorojimui ar pateikimui vartotojui.
+    Ankstesniame kode sukurta gija, tada į ją išsiųsta žinutė. Iškvietus `create_and_process_run` agentas paprašomas atlikti darbą gijoje. Galiausiai gaunamos žinutės, kurios užregistruojamos norint pamatyti agento atsakymą. Žinutės rodo pokalbio eigą tarp vartotojo ir agento. Taip pat svarbu suprasti, kad žinutės gali būti įvairių tipų, pavyzdžiui, tekstinės, vaizdinės ar failų tipo – tai reiškia, kad agentų darbas galėjo rezultatuoti pavyzdžiui į vaizdą arba tekstinį atsakymą. Kaip kūrėjas, galite toliau apdoroti šią informaciją arba pateikti ją vartotojui.
 
-- **Integracija su kitomis AI sistemomis**. Azure AI Agent Service gali sąveikauti su kitomis sistemomis, tokiomis kaip AutoGen ir Semantic Kernel, tai reiškia, kad galite dalį savo programos kurti vienoje iš šių sistemų, o, pavyzdžiui, naudoti Agent Service kaip orkestratorių arba viską kurti Agent Service.
+- **Integracija su Microsoft Agent Framework**. Microsoft Foundry Agent Service sklandžiai veikia su Microsoft Agent Framework, tai reiškia, kad galite kurti agentus naudodami `FoundryChatClient` ir diegti juos per Agent Service gamybos scenarijose.
 
-**Naudojimo atvejai**: Azure AI Agent Service yra skirtas įmonių programoms, kurioms reikalingas saugus, mastelio keičiamas ir lankstus AI agentų diegimas.
+**Panaudojimo atvejai**: Microsoft Foundry Agent Service skirta įmonių programėlėms, reikalaujančioms saugaus, mastelio ir lankstaus AI agentų diegimo.
 
-## Kuo skiriasi šios sistemos?
+## Kuo skiriasi šie požiūriai?
+ 
+Nors atrodo, kad yra persidengimų, tačiau yra svarbių skirtumų dizaino, galimybių ir panaudojimo atvejų požiūriu:
+ 
+- **Microsoft Agent Framework (MAF)**: Produkcijai paruoštas SDK AI agentų kūrimui. Suteikia supaprastintą API agentų kūrimui su įrankių iškvietimu, pokalbių valdymu ir Azure tapatybės integracija.
+- **Microsoft Foundry Agent Service**: Platforma ir diegimo paslauga Microsoft Foundry agentams. Siūlo įmontuotą jungtį su paslaugomis kaip Azure OpenAI, Azure AI Search, Bing Search ir kodo vykdymą.
+ 
+Vis dar nežinote, ką pasirinkti?
 
-Atrodo, kad šios sistemos turi daug bendro, tačiau yra keletas pagrindinių skirtumų jų dizaino, galimybių ir tikslinių naudojimo atvejų atžvilgiu:
-
-- **AutoGen**: Tai eksperimentinė sistema, orientuota į pažangius tyrimus apie kelių agentų sistemas. Tai geriausia vieta eksperimentuoti ir kurti sudėtingas kelių agentų sistemas.
-- **Semantic Kernel**: Tai gamybai paruošta agentų biblioteka, skirta kurti įmonių agentines programas. Ji orientuota į įvykių valdomas, paskirstytas agentines programas, leidžiančias naudoti kelis LLM ir SLM, įrankius bei vieno/daugelio agentų dizaino modelius.
-- **Azure AI Agent Service**: Tai platforma ir diegimo paslauga Azure Foundry agentams. Ji siūlo ryšio su Azure paslaugomis, tokiomis kaip Azure OpenAI, Azure AI Search, Bing Search ir kodo vykdymas, galimybes.
-
-Vis dar nežinote, kurią pasirinkti?
-
-### Naudojimo atvejai
-
-Pažiūrėkime, ar galime jums padėti, peržiūrėdami keletą dažnų naudojimo atvejų:
-
-> K: Eksperimentuoju, mokausi ir kuriu koncepcijos įrodymo agentų programas, ir noriu greitai kurti bei eksperimentuoti.
+### Panaudojimo atvejai
+ 
+Peržvelkime keletą dažnų panaudojimo atvejų ir pažiūrėkime, ar galime jums padėti:
+ 
+> K: Kuriu gamybinius AI agentų sprendimus ir noriu greitai pradėti
 >
 
->A: AutoGen būtų geras pasirinkimas šiam scenarijui, nes jis orientuotas į įvykių valdomas, paskirstytas agentines programas ir palaiko pažangius kelių agentų dizaino modelius.
+>A: Microsoft Agent Framework yra puikus pasirinkimas. Jis suteikia paprastą, Python stiliaus API per `FoundryChatClient`, leidžiančią apibrėžti agentus su įrankiais ir instrukcijomis vos keliais kodo eilutėmis.
 
-> K: Kodėl AutoGen yra geresnis pasirinkimas nei Semantic Kernel ir Azure AI Agent Service šiam naudojimo atvejui?
+>K: Man reikia įmonių lygio diegimo su Azure integracijomis, tokiomis kaip Search ir kodo vykdymas
 >
-> A: AutoGen yra specialiai sukurtas įvykių valdomoms, paskirstytoms agentinėms programoms, todėl jis puikiai tinka automatizuoti kodo generavimo ir duomenų analizės užduotis. Jis suteikia reikalingus įrankius ir galimybes efektyviai kurti sudėtingas kelių agentų sistemas.
-
-> K: Atrodo, kad Azure AI Agent Service taip pat galėtų čia veikti, jis turi įrankius kodo generavimui ir daugiau?
+> A: Microsoft Foundry Agent Service yra geriausias pasirinkimas. Tai platformos paslauga, suteikianti įmontuotas galimybes keliems modeliams, Azure AI Search, Bing Search ir Azure Functions. Su ja galima lengvai kurti agentus Foundry portale ir diegti juos mastu.
+ 
+> K: Dar nesu tikras, tiesiog duokite vieną pasirinkimą
 >
-> A: Taip, Azure AI Agent Service yra platformos paslauga agentams ir turi įmontuotas galimybes keliems modeliams, Azure AI Search, Bing Search ir Azure Functions. Tai leidžia lengvai kurti agentus Foundry portale ir diegti juos masteliu.
-
-> K: Vis dar nesuprantu, tiesiog duokite vieną pasirinkimą.
->
-> A: Puikus pasirinkimas yra pirmiausia kurti savo programą Semantic Kernel, o tada naudoti Azure AI Agent Service agentui diegti. Šis požiūris leidžia lengvai išsaugoti savo agentus, tuo pačiu pasinaudojant galimybe kurti kelių agentų sistemas Semantic Kernel. Be to, Semantic Kernel turi jungtį AutoGen, todėl lengva naudoti abi sistemas kartu.
-
+> A: Pradėkite nuo Microsoft Agent Framework agentų kūrimui, o kai reikės gamybos diegimo ir mastelio, naudokite Microsoft Foundry Agent Service. Šis požiūris leidžia greitai iteruoti agentų logiką ir turėti aiškų kelią į įmonių diegimą.
+ 
 Apibendrinkime pagrindinius skirtumus lentelėje:
 
-| Sistema | Fokusas | Pagrindinės sąvokos | Naudojimo atvejai |
+| Framework | Dėmesys | Pagrindinės sąvokos | Panaudojimo atvejai |
 | --- | --- | --- | --- |
-| AutoGen | Įvykių valdomos, paskirstytos agentinės programos | Agentai, Personos, Funkcijos, Duomenys | Kodo generavimas, duomenų analizės užduotys |
-| Semantic Kernel | Žmogaus kalbos supratimas ir generavimas | Agentai, Moduliniai komponentai, Bendradarbiavimas | Natūralios kalbos supratimas, turinio generavimas |
-| Azure AI Agent Service | Lankstūs modeliai, įmonės saugumas, Kodo generavimas, Įrankių naudojimas | Modularumas, Bendradarbiavimas, Procesų orkestracija | Saugus, mastelio keičiamas ir lankstus AI agentų diegimas |
+| Microsoft Agent Framework | Supaprastintas agentų SDK su įrankių iškvietimu | Agentai, Įrankiai, Azure tapatybė | AI agentų kūrimas, įrankių naudojimas, daugiažingsnės darbo eigos |
+| Microsoft Foundry Agent Service | Lankstūs modeliai, įmonių saugumas, kodo generavimas, įrankių iškvietimas | Moduliarumas, Bendradarbiavimas, Procesų orkestravimas | Saugus, mastomas ir lankstus AI agentų diegimas |
 
-Koks yra idealus kiekvienos iš šių sistemų naudojimo atvejis?
+## Ar galiu tiesiogiai integruoti savo esamus Azure ekosistemos įrankius, ar man reikia savarankiškų sprendimų?
 
-## Ar galiu tiesiogiai integruoti savo esamus Azure ekosistemos įrankius, ar man reikia atskirų sprendimų?
 
-Atsakymas yra taip, galite tiesiogiai integruoti savo esamus Azure ekosistemos įrankius su Azure AI Agent Service, ypač todėl, kad jis buvo sukurtas veikti sklandžiai su kitomis Azure paslaugomis. Pavyzdžiui, galite integruoti Bing, Azure AI Search ir Azure Functions. Taip pat yra gilios integracijos su Azure AI Foundry.
+Atsakymas yra taip, savo esamus Azure ekosistemos įrankius galite tiesiogiai integruoti su Microsoft Foundry Agent Service, ypač kadangi jis buvo sukurtas sklandžiai veikti su kitomis Azure paslaugomis. Pavyzdžiui, galite integruoti Bing, Azure AI Search ir Azure Functions. Taip pat yra gilus integravimas su Microsoft Foundry.
 
-AutoGen ir Semantic Kernel taip pat galite integruoti su Azure paslaugomis, tačiau gali reikėti iškviesti Azure paslaugas iš savo kodo. Kitas būdas integruoti yra naudoti Azure SDK, kad sąveikautumėte su Azure paslaugomis iš savo agentų. Be to, kaip jau buvo minėta, galite naudoti Azure AI Agent Service kaip orkestratorių savo agentams, sukurtiems AutoGen ar Semantic Kernel, kas suteiktų lengvą prieigą prie Azure ekosistemos.
+Microsoft Agent Framework taip pat integruojasi su Azure paslaugomis per `FoundryChatClient` ir Azure tapatybę, leidžiant jums tiesiogiai kviesti Azure paslaugas iš savo agentų įrankių.
 
 ## Pavyzdiniai kodai
 
-- Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Microsoft Foundry)](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Azure OpenAI Responses API)](./code_samples/02-python-agent-framework-azure-openai.ipynb)
 - .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
 
-## Turite daugiau klausimų apie AI Agent Frameworks?
+## Turite daugiau klausimų apie AI agentų karkasus?
 
-Prisijunkite prie [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kad susitiktumėte su kitais besimokančiais, dalyvautumėte konsultacijose ir gautumėte atsakymus į savo klausimus apie AI agentus.
+Prisijunkite prie [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), kad susitiktumėte su kitais mokytojais, dalyvautumėte konsultacijose ir gautumėte atsakymus į savo AI agentų klausimus.
 
 ## Nuorodos
 
 - <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Azure Agent Service</a>
-- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel ir AutoGen</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent Service</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Naudojant Azure AI Agent Service su AutoGen / Semantic Kernel kuriant kelių agentų sprendimą</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework - Azure OpenAI Responses</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Foundry Agent Service</a>
 
 ## Ankstesnė pamoka
 
-[Įvadas į AI agentus ir jų naudojimo atvejus](../01-intro-to-ai-agents/README.md)
+[Įvadas į AI agentus ir agentų naudojimo atvejus](../01-intro-to-ai-agents/README.md)
 
-## Kita pamoka
+## Kitoji pamoka
 
-[Agentinio dizaino modelių supratimas](../03-agentic-design-patterns/README.md)
+[Agentinės dizaino šablonų supratimas](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus aiškinimus, atsiradusius dėl šio vertimo naudojimo.
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

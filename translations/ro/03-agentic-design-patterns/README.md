@@ -1,105 +1,106 @@
 [![Cum să proiectezi agenți AI buni](../../../translated_images/ro/lesson-3-thumbnail.1092dd7a8f1074a5.webp)](https://youtu.be/m9lM8qqoOEA?si=4KimounNKvArQQ0K)
 
-> _(Faceți clic pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
-# Principii de Design pentru Agenți AI
+> _(Click pe imaginea de mai sus pentru a viziona videoclipul acestei lecții)_
+# Principiile de Design pentru Agenți AI
 
 ## Introducere
 
-Există multe moduri de a gândi construirea Sistemelor Agentice AI. Având în vedere că ambiguitatea este o caracteristică și nu un defect în designul AI Generativ, uneori este dificil pentru ingineri să știe de unde să înceapă. Am creat un set de Principii de Design UX centrate pe oameni pentru a permite dezvoltatorilor să construiască sisteme agentice centrate pe client, care să răspundă nevoilor lor de afaceri. Aceste principii de design nu reprezintă o arhitectură prescriptivă, ci mai degrabă un punct de plecare pentru echipele care definesc și dezvoltă experiențe cu agenți.
+Există multe moduri de a gândi construcția Sistemelor Agentice AI. Având în vedere că ambiguitatea este o caracteristică și nu o eroare în designul AI Generativ, este uneori dificil pentru ingineri să decidă de unde să înceapă. Am creat un set de Principii de Design UX centrate pe om pentru a permite dezvoltatorilor să construiască sisteme agentice centrate pe client pentru a rezolva nevoile lor de afaceri. Aceste principii de design nu reprezintă o arhitectură prescriptivă, ci mai degrabă un punct de plecare pentru echipele care definesc și construiesc experiențe agentice.
 
 În general, agenții ar trebui să:
 
-- Extindă și scaleze capacitățile umane (brainstorming, rezolvarea problemelor, automatizare etc.)
-- Completeze lacunele de cunoștințe (aducerea la zi în domenii de cunoștințe, traducere etc.)
-- Faciliteze și sprijine colaborarea în modurile în care preferăm să lucrăm cu alții
-- Ne facă versiuni mai bune ale noastre (de exemplu, antrenor de viață/manager de sarcini, ajutându-ne să învățăm abilități de reglare emoțională și mindfulness, construind reziliență etc.)
+- Extindă și să scaleze capacitățile umane (generare de idei, rezolvare de probleme, automatizare etc.)
+- Completeze golurile de cunoștințe (să mă pună la curent cu domeniile de cunoștințe, traduceri etc.)
+- Faciliteze și să susțină colaborarea în modurile în care noi, ca indivizi, preferăm să lucrăm cu alții
+- Să ne facă versiuni mai bune ale noastre înșine (ex. antrenor de viață/stăpân al sarcinilor, ajutându-ne să învățăm reglarea emoțională și abilitățile de mindfulness, să construim reziliență etc.)
 
-## Această lecție va acoperi
+## Ce va acoperi această lecție
 
-- Ce sunt Principiile de Design Agentic
-- Care sunt câteva linii directoare de urmat în implementarea acestor principii de design
-- Exemple de utilizare a principiilor de design
+- Care sunt Principiile de Design Agentice
+- Care sunt câteva linii directoare de urmat implementând aceste principii de design
+- Care sunt câteva exemple de utilizare a principiilor de design
 
-## Obiective de învățare
+## Obiectivele de învățare
 
-După finalizarea acestei lecții, veți putea:
+După ce completați această lecție, veți putea:
 
-1. Explica ce sunt Principiile de Design Agentic
-2. Explica liniile directoare pentru utilizarea Principiilor de Design Agentic
-3. Înțelege cum să construiți un agent folosind Principiile de Design Agentic
+1. Explica ce sunt Principiile de Design Agentice
+2. Explica liniile directoare pentru utilizarea Principiilor de Design Agentice
+3. Înțelege cum să construiți un agent folosind Principiile de Design Agentice
 
-## Principiile de Design Agentic
+## Principiile de Design Agentice
 
-![Principiile de Design Agentic](../../../translated_images/ro/agentic-design-principles.1cfdf8b6d3cc73c2.webp)
+![Principiile de Design Agentice](../../../translated_images/ro/agentic-design-principles.1cfdf8b6d3cc73c2.webp)
 
 ### Agent (Spațiu)
 
 Acesta este mediul în care agentul operează. Aceste principii informează modul în care proiectăm agenți pentru a interacționa în lumi fizice și digitale.
 
-- **Conectare, nu colapsare** – ajută la conectarea oamenilor cu alți oameni, evenimente și cunoștințe acționabile pentru a permite colaborarea și conexiunea.
+- **Conectarea, nu colapsarea** – ajută la conectarea oamenilor între ei, cu evenimente și cunoștințe acționabile pentru a permite colaborarea și conexiunea.
 - Agenții ajută la conectarea evenimentelor, cunoștințelor și oamenilor.
-- Agenții aduc oamenii mai aproape unii de alții. Nu sunt proiectați să înlocuiască sau să minimalizeze oamenii.
-- **Ușor accesibil, dar ocazional invizibil** – agentul operează în mare parte în fundal și ne atenționează doar când este relevant și adecvat.
+- Agenții apropie oamenii. Nu sunt proiectați să înlocuiască sau să umbrească oamenii.
+- **Ușor accesibil, dar ocazional invizibil** – agentul operează în general în fundal și ne împinge ușor doar când este relevant și potrivit.
   - Agentul este ușor de descoperit și accesibil pentru utilizatorii autorizați pe orice dispozitiv sau platformă.
   - Agentul suportă intrări și ieșiri multimodale (sunet, voce, text etc.).
-  - Agentul poate trece fără probleme între prim-plan și fundal; între proactiv și reactiv, în funcție de nevoile utilizatorului.
-  - Agentul poate opera într-o formă invizibilă, dar procesul său de fundal și colaborarea cu alți agenți sunt transparente și controlabile de utilizator.
+  - Agentul poate trece fără întrerupere între prim-plan și fundal; între proactiv și reactiv, în funcție de percepția nevoilor utilizatorului.
+  - Agentul poate opera în formă invizibilă, dar procesul său de fundal și colaborarea cu alți Agenți sunt transparente și controlabile de către utilizator.
 
 ### Agent (Timp)
 
-Acesta este modul în care agentul operează în timp. Aceste principii informează modul în care proiectăm agenți care interacționează în trecut, prezent și viitor.
+Acesta este modul în care agentul operează în timp. Aceste principii informează modul în care proiectăm agenții care interacționează în trecut, prezent și viitor.
 
-- **Trecut**: Reflectarea asupra istoriei care include atât starea, cât și contextul.
-  - Agentul oferă rezultate mai relevante pe baza analizei unor date istorice mai bogate, dincolo de eveniment, oameni sau stări.
-  - Agentul creează conexiuni din evenimentele trecute și reflectă activ asupra memoriei pentru a interacționa cu situațiile actuale.
-- **Acum**: Împingere mai degrabă decât notificare.
-  - Agentul încorporează o abordare cuprinzătoare pentru a interacționa cu oamenii. Când are loc un eveniment, agentul merge dincolo de notificarea statică sau alte formalități statice. Agentul poate simplifica fluxurile sau genera dinamic indicii pentru a direcționa atenția utilizatorului la momentul potrivit.
+- **Trecut**: Reflectare asupra istoriei care include atât starea, cât și contextul.
+  - Agentul oferă rezultate mai relevante bazate pe analiza datelor istorice mai bogate dincolo de eveniment, oameni sau stări.
+  - Agentul creează conexiuni din evenimentele trecute și reflectă activ asupra memoriei pentru a se angaja în situațiile actuale.
+- **Acum**: Împingând mai mult decât notificând.
+  - Agentul întruchipează o abordare cuprinzătoare pentru interacțiunea cu oamenii. Când se întâmplă un eveniment, agentul depășește notificarea statică sau alte formalități statice. Agentul poate simplifica fluxurile sau genera dinamic indicii pentru a direcționa atenția utilizatorului în momentul potrivit.
   - Agentul livrează informații bazate pe mediul contextual, schimbările sociale și culturale și adaptate intenției utilizatorului.
-  - Interacțiunea cu agentul poate fi graduală, evoluând/creând complexitate pentru a împuternici utilizatorii pe termen lung.
+  - Interacțiunea cu agentul poate fi graduală, evoluând/creșterea în complexitate pentru a împuternici utilizatorii pe termen lung.
 - **Viitor**: Adaptare și evoluție.
-  - Agentul se adaptează la diverse dispozitive, platforme și modalități.
-  - Agentul se adaptează comportamentului utilizatorului, nevoilor de accesibilitate și este personalizabil liber.
-  - Agentul este modelat și evoluează prin interacțiunea continuă cu utilizatorul.
+  - Agentul se adaptează la diferite dispozitive, platforme și modalități.
+  - Agentul se adaptează la comportamentul utilizatorului, nevoile de accesibilitate și este liber personalizabil.
+  - Agentul este modelat de și evoluează prin interacțiune continuă cu utilizatorul.
 
 ### Agent (Nucleu)
 
-Acestea sunt elementele cheie din nucleul designului unui agent.
+Acestea sunt elementele cheie în nucleul designului unui agent.
 
-- **Acceptarea incertitudinii, dar stabilirea încrederii**.
-  - Un anumit nivel de incertitudine a agentului este de așteptat. Incertitudinea este un element cheie al designului agentului.
-  - Încrederea și transparența sunt straturi fundamentale ale designului agentului.
-  - Oamenii controlează când agentul este pornit/oprit, iar starea agentului este clar vizibilă în orice moment.
+- **Acceptă incertitudinea, dar stabilește încrederea**.
+  - Un anumit nivel de incertitudine a agentului este așteptat. Incertitudinea este un element cheie în designul agentului.
+  - Încrederea și transparența sunt straturi fundamentale în designul agentului.
+  - Oamenii controlează când agentul este pornit/oprit și starea agentului este clar vizibilă în orice moment.
 
-## Liniile directoare pentru implementarea acestor principii
+## Liniile Directoare pentru implementarea acestor principii
 
-Când utilizați principiile de design menționate anterior, urmați următoarele linii directoare:
+Când folosiți principiile de design de mai sus, utilizați următoarele linii directoare:
 
 1. **Transparență**: Informați utilizatorul că AI este implicată, cum funcționează (inclusiv acțiunile trecute) și cum să ofere feedback și să modifice sistemul.
-2. **Control**: Permiteți utilizatorului să personalizeze, să specifice preferințe și să personalizeze, și să aibă control asupra sistemului și atributelor sale (inclusiv capacitatea de a uita).
-3. **Consistență**: Tindeți spre experiențe consistente, multimodale, pe dispozitive și puncte de acces. Utilizați elemente UI/UX familiare acolo unde este posibil (de exemplu, pictograma microfon pentru interacțiunea vocală) și reduceți cât mai mult sarcina cognitivă a clientului (de exemplu, răspunsuri concise, ajutoare vizuale și conținut „Află mai multe”).
+2. **Control**: Permiteți utilizatorului să personalizeze, să specifice preferințe și să personalizeze, și să aibă control asupra sistemului și a atributelor sale (inclusiv posibilitatea de a uita).
+3. **Consistență**: Vizând experiențe consistente, multimodale, pe dispozitive și puncte finale. Folosiți elemente UI/UX familiare unde este posibil (ex. pictograma microfon pentru interacțiunea vocală) și reduceți încărcătura cognitivă a clientului cât mai mult posibil (ex. răspunsuri concise, ajutoare vizuale și conținut „Află mai multe”).
 
-## Cum să proiectați un agent de călătorie folosind aceste principii și linii directoare
+## Cum să proiectezi un Agent de Călătorii folosind aceste Principii și Linii Directoare
 
-Imaginați-vă că proiectați un agent de călătorie, iată cum ați putea gândi utilizarea Principiilor de Design și a Liniilor Directoare:
+Imaginați-vă că proiectați un Agent de Călătorii, iată cum ați putea gândi utilizarea Principiilor și Liniilor Directoare de Design:
 
-1. **Transparență** – Informați utilizatorul că agentul de călătorie este un agent activat de AI. Oferiți câteva instrucțiuni de bază despre cum să înceapă (de exemplu, un mesaj „Bună”, exemple de solicitări). Documentați clar acest lucru pe pagina produsului. Arătați lista de solicitări pe care utilizatorul le-a adresat în trecut. Faceți clar cum să oferiți feedback (de exemplu, butoane de tip „thumbs up” și „thumbs down”, buton „Trimite feedback” etc.). Articulați clar dacă agentul are restricții de utilizare sau subiect.
-2. **Control** – Asigurați-vă că este clar cum utilizatorul poate modifica agentul după ce a fost creat, cu lucruri precum Promptul Sistemului. Permiteți utilizatorului să aleagă cât de detaliat este agentul, stilul său de scriere și orice limitări asupra subiectelor despre care agentul nu ar trebui să vorbească. Permiteți utilizatorului să vizualizeze și să șteargă orice fișiere sau date asociate, solicitări și conversații anterioare.
-3. **Consistență** – Asigurați-vă că pictogramele pentru „Distribuie solicitare”, „adaugă un fișier sau o fotografie” și „etichetează pe cineva sau ceva” sunt standard și ușor de recunoscut. Utilizați pictograma agrafă pentru a indica încărcarea/partajarea fișierelor cu agentul și o pictogramă imagine pentru a indica încărcarea graficelor.
+1. **Transparență** – Informați utilizatorul că Agentul de Călătorii este un agent AI. Oferiți câteva indicații de bază pentru începere (ex. un mesaj „Bună”, invitație pentru prompturi). Documentați clar acest lucru pe pagina produsului. Arătați lista prompturilor pe care utilizatorul le-a cerut anterior. Faceți clar cum să oferi feedback (deget în sus și în jos, butonul Trimite Feedback etc.). Precizați clar dacă agentul are restricții de utilizare sau de subiect.
+2. **Control** – Asigurați-vă că este clar cum utilizatorul poate modifica agentul după ce a fost creat cu lucruri precum Promptul Sistemului. Permiteți utilizatorului să aleagă cât de detaliat este agentul, stilul său de scriere și orice avertismente despre ce să nu discute agentul. Permiteți utilizatorului să vizualizeze și să șteargă orice fișiere sau date asociate, prompturi și conversații anterioare.
+3. **Consistență** – Asigurați-vă că pictogramele pentru Partajare Prompt, adăugarea unui fișier sau fotografie și etichetarea cuiva sau a ceva sunt standard și recunoscute. Folosiți pictograma agrafă pentru încărcarea/partajarea fișierelor cu agentul și o pictogramă imagine pentru încărcarea graficelor.
 
 ## Exemple de coduri
 
 - Python: [Agent Framework](./code_samples/03-python-agent-framework.ipynb)
 - .NET: [Agent Framework](./code_samples/03-dotnet-agent-framework.md)
 
-## Aveți mai multe întrebări despre Modelele de Design Agentic AI?
 
-Alăturați-vă [Discordului Azure AI Foundry](https://aka.ms/ai-agents/discord) pentru a întâlni alți cursanți, a participa la ore de consultanță și a obține răspunsuri la întrebările despre agenții AI.
+## Aveți întrebări suplimentare despre modelele de design pentru agenții AI?
+
+Alăturați-vă [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) pentru a întâlni alți cursanți, a participa la orele de consultanță și a obține răspunsuri la întrebările despre Agenții AI.
 
 ## Resurse suplimentare
 
-- <a href="https://openai.com" target="_blank">Practici pentru guvernarea sistemelor AI agentice | OpenAI</a>
+- <a href="https://openai.com" target="_blank">Practici pentru Guvernarea Sistemelor Agentice AI | OpenAI</a>
 - <a href="https://microsoft.com" target="_blank">Proiectul HAX Toolkit - Microsoft Research</a>
-- <a href="https://responsibleaitoolbox.ai" target="_blank">Responsible AI Toolbox</a>
+- <a href="https://responsibleaitoolbox.ai" target="_blank">Cutia de unelte pentru AI responsabil</a>
 
 ## Lecția anterioară
 
@@ -107,11 +108,11 @@ Alăturați-vă [Discordului Azure AI Foundry](https://aka.ms/ai-agents/discord)
 
 ## Lecția următoare
 
-[Modelul de Design pentru Utilizarea Uneltelor](../04-tool-use/README.md)
+[Modelul de Design pentru Utilizarea Instrumentelor](../04-tool-use/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Declinare de responsabilitate**:  
-Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). Deși ne străduim să asigurăm acuratețea, vă rugăm să fiți conștienți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa maternă ar trebui considerat sursa autoritară. Pentru informații critice, se recomandă traducerea profesională realizată de oameni. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care pot apărea din utilizarea acestei traduceri.
+**Declinare a responsabilității**:
+Acest document a fost tradus folosind serviciul de traducere AI [Co-op Translator](https://github.com/Azure/co-op-translator). În timp ce ne străduim pentru acuratețe, vă rugăm să rețineți că traducerile automate pot conține erori sau inexactități. Documentul original în limba sa nativă trebuie considerat sursa autorizată. Pentru informații critice, se recomandă traducerea profesională realizată de un om. Nu ne asumăm responsabilitatea pentru eventualele neînțelegeri sau interpretări greșite care decurg din utilizarea acestei traduceri.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

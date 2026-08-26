@@ -1,111 +1,143 @@
-[![Johdanto tekoälyagentteihin](../../../translated_images/fi/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
+[![Intro to AI Agents](../../../translated_images/fi/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
 
-> _(Klikkaa yllä olevaa kuvaa nähdäksesi tämän oppitunnin videon)_
+> _(Klikkaa yllä olevaa kuvaa katsoaksesi tämän oppitunnin videon)_
 
-# Johdanto tekoälyagentteihin ja niiden käyttötapauksiin
+# Johdanto tekoälyagentteihin ja agenttien käyttötapauksiin
 
-Tervetuloa "Tekoälyagentit aloittelijoille" -kurssille! Tämä kurssi tarjoaa perustiedot ja käytännön esimerkkejä tekoälyagenttien rakentamiseen.
+Tervetuloa **AI Agents for Beginners** -kurssille! Tämä kurssi antaa sinulle perustiedot — ja oikeaa toimivaa koodia — aloittaaksesi tekoälyagenttien rakentamisen alusta alkaen.
 
-Liity <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Discord -yhteisöön</a>, jossa voit tavata muita oppijoita ja tekoälyagenttien kehittäjiä sekä esittää kysymyksiä kurssista.
+Tule sanomaan hei <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Discord -yhteisöön</a> — siellä on paljon oppijoita ja tekoälyn rakentajia, jotka mielellään vastaavat kysymyksiin.
 
-Kurssin aluksi tutustumme siihen, mitä tekoälyagentit ovat ja miten voimme hyödyntää niitä rakentamissamme sovelluksissa ja työnkuluissa.
+Ennen kuin ryhdymme rakentamaan, varmistetaan, että ymmärrämme oikeasti, mitä tekoälyagentti *on* ja milloin sen käyttö on järkevää.
+
+---
 
 ## Johdanto
 
-Tämä oppitunti käsittelee:
+Tässä oppitunnissa käsittelemme:
 
-- Mitä tekoälyagentit ovat ja mitkä ovat niiden eri tyypit?
-- Mitkä käyttötapaukset sopivat parhaiten tekoälyagenteille ja miten ne voivat auttaa meitä?
-- Mitkä ovat agenttiratkaisujen suunnittelun peruspalikat?
+- Mitä tekoälyagentit ovat ja erilaiset olemassa olevat tyypit
+- Minkälaisissa tehtävissä tekoälyagentit sopivat parhaiten käytettäväksi
+- Keskeiset rakennuspalikat, joita käytät agenttiratkaisua suunnitellessasi
 
 ## Oppimistavoitteet
-Oppitunnin jälkeen sinun pitäisi pystyä:
 
-- Ymmärtämään tekoälyagenttien käsitteet ja miten ne eroavat muista tekoälyratkaisuista.
-- Käyttämään tekoälyagentteja tehokkaasti.
-- Suunnittelemaan agenttiratkaisuja tuottavasti sekä käyttäjille että asiakkaille.
+Tämän oppitunnin lopussa sinun tulisi osata:
 
-## Tekoälyagenttien määrittely ja tyypit
+- Selittää, mitä tekoälyagentti on ja miten se eroaa tavallisesta tekoälyratkaisusta
+- Tietää, milloin kannattaa käyttää tekoälyagenttia (ja milloin ei)
+- Laatia perussuunnitelma agenttiratkaisulle todelliseen ongelmaan
+
+---
+
+## Tekoälyagenttien määrittely ja tekoälyagenttien tyypit
 
 ### Mitä tekoälyagentit ovat?
 
-Tekoälyagentit ovat **järjestelmiä**, jotka mahdollistavat **suuret kielimallit (LLM)** **toimimaan** laajentamalla niiden kykyjä antamalla LLM:ille **pääsyn työkaluihin** ja **tietoon**.
+Tässä yksinkertainen tapa ajatella asiaa:
 
-Puretaan tämä määritelmä pienempiin osiin:
+> **Tekoälyagentit ovat järjestelmiä, jotka antavat suurille kielimalleille (LLM) mahdollisuuden *toimia* — tarjoamalla niille työkaluja ja tietoa toimia maailman kanssa, eivät vain vastata kehotteisiin.**
 
-- **Järjestelmä** - On tärkeää ajatella agentteja ei vain yksittäisenä komponenttina, vaan monien komponenttien järjestelmänä. Perustasolla tekoälyagentin komponentit ovat:
-  - **Ympäristö** - Määritelty tila, jossa tekoälyagentti toimii. Esimerkiksi matkavarauksen tekoälyagentin ympäristö voisi olla matkavarausjärjestelmä, jota agentti käyttää tehtävien suorittamiseen.
-  - **Anturit** - Ympäristöt sisältävät tietoa ja antavat palautetta. Tekoälyagentit käyttävät antureita kerätäkseen ja tulkitakseen tietoa ympäristön nykytilasta. Matkavarausagentin tapauksessa varaussysteemi voi antaa tietoa, kuten hotellien saatavuuden tai lentojen hinnat.
-  - **Toimilaitteet** - Kun tekoälyagentti saa ympäristön nykytilan, se määrittää tehtävän perusteella, mitä toimia tarvitaan ympäristön muuttamiseksi. Matkavarausagentin tapauksessa tämä voisi olla huoneen varaaminen käyttäjälle.
+Puretaanpa tätä hieman:
 
-![Mitä ovat tekoälyagentit?](../../../translated_images/fi/what-are-ai-agents.1ec8c4d548af601a.webp)
+- **Järjestelmä** — Tekoälyagentti ei ole vain yksi asia. Se on useiden osien kokonaisuus, joka työskentelee yhdessä. Jokaisella agentilla on ytimessään kolme osaa:
+  - **Ympäristö** — Se tila, jossa agentti toimii. Matkavarauksen agentille tämä olisi itse varausalusta.
+  - **Sensorit** — Kuinka agentti lukee ympäristönsä nykytilanteen. Matka-agentti voisi tarkistaa hotellien saatavuuden tai lentojen hinnat.
+  - **Toimijat** — Kuinka agentti ottaa toimenpiteitä. Matka-agentti voisi varata huoneen, lähettää vahvistuksen tai peruuttaa varauksen.
 
-**Suuret kielimallit** - Agenttien käsite oli olemassa jo ennen LLM:ien luomista. Tekoälyagenttien rakentamisen etu LLM:ien avulla on niiden kyky tulkita ihmiskieltä ja dataa. Tämä kyky mahdollistaa LLM:ien ympäristötiedon tulkinnan ja suunnitelman laatimisen ympäristön muuttamiseksi.
+![What Are AI Agents?](../../../translated_images/fi/what-are-ai-agents.1ec8c4d548af601a.webp)
 
-**Toimien suorittaminen** - Tekoälyagenttijärjestelmien ulkopuolella LLM:ien toiminta rajoittuu tilanteisiin, joissa ne tuottavat sisältöä tai tietoa käyttäjän antaman kehotteen perusteella. Tekoälyagenttijärjestelmissä LLM:t voivat suorittaa tehtäviä tulkitsemalla käyttäjän pyynnön ja käyttämällä ympäristössä saatavilla olevia työkaluja.
+- **Suuret kielimallit** — Agentit ovat olleet olemassa ennen LLM:iä, mutta LLM:t tekevät nykyaikaisista agenteista niin tehokkaita. Ne voivat ymmärtää luonnollista kieltä, tehdä johtopäätöksiä kontekstista ja muuttaa epämääräisen käyttäjäpyynnön konkreettiseksi toimintasuunnitelmaksi.
 
-**Pääsy työkaluihin** - Mitä työkaluja LLM:illä on käytettävissään, määritellään 1) ympäristön perusteella, jossa se toimii, ja 2) tekoälyagentin kehittäjän toimesta. Matkavarausagentin tapauksessa agentin työkalut rajoittuvat varaussysteemin tarjoamiin toimintoihin, ja/tai kehittäjä voi rajoittaa agentin työkalujen käyttöä esimerkiksi vain lentojen varaamiseen.
+- **Toimien suorittaminen** — Ilman agenttijärjestelmää LLM vain tuottaa tekstiä. Agenttijärjestelmässä LLM voi todella *suorittaa* toimenpiteitä — kuten hakea tietokannasta, kutsua API:a, lähettää viestin.
 
-**Muisti + Tieto** - Muisti voi olla lyhytaikaista käyttäjän ja agentin välisen keskustelun kontekstissa. Pitkällä aikavälillä, ympäristön tarjoaman tiedon lisäksi, tekoälyagentit voivat myös hakea tietoa muista järjestelmistä, palveluista, työkaluista ja jopa muilta agenteilta. Matkavarausagentin tapauksessa tämä tieto voisi olla käyttäjän matkustustottumuksia koskeva tieto asiakasrekisteristä.
+- **Työkalujen käyttö** — Mitä työkaluja agentti voi käyttää riippuu (1) ympäristöstä, jossa se toimii ja (2) mitä kehittäjä päättää sille antaa. Matka-agentti saattaa pystyä hakemaan lentoja, mutta ei muokkaamaan asiakastietoja — kaikki riippuu siitä, miten sen yhdistät.
 
-### Eri agenttityypit
+- **Muisti ja tieto** — Agentit voivat omata sekä lyhytaikaisen muistin (käynnissä oleva keskustelu) että pitkäaikaisen muistin (asiakastietokanta, aiemmat vuorovaikutukset). Matka-agentti voi "muistaa", että suosittelet ikkunapaikkoja lennolla.
 
-Nyt kun meillä on yleinen määritelmä tekoälyagenteista, tarkastellaan joitakin erityisiä agenttityyppejä ja miten niitä voitaisiin soveltaa matkavarausagenttiin.
+---
 
-| **Agenttityyppi**             | **Kuvaus**                                                                                                                            | **Esimerkki**                                                                                                                                                                                                                   |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Yksinkertaiset refleksiagentit** | Suorittavat välittömiä toimia ennalta määriteltyjen sääntöjen perusteella.                                                                 | Matkavarausagentti tulkitsee sähköpostin kontekstin ja ohjaa matkustusvalitukset asiakaspalveluun.                                                                                                                          |
-| **Mallipohjaiset refleksiagentit** | Suorittavat toimia maailman mallin ja sen muutosten perusteella.                                                                      | Matkavarausagentti priorisoi reitit, joilla on merkittäviä hintamuutoksia, perustuen pääsyyn historiallisiin hintatietoihin.                                                                                                             |
-| **Tavoitepohjaiset agentit**   | Laativat suunnitelmia tiettyjen tavoitteiden saavuttamiseksi tulkitsemalla tavoitteen ja määrittämällä tarvittavat toimet sen saavuttamiseksi.                                  | Matkavarausagentti varaa matkan määrittämällä tarvittavat matkajärjestelyt (auto, julkinen liikenne, lennot) nykyisestä sijainnista määränpäähän.                                                                                |
-| **Hyötypohjaiset agentit**     | Ottavat huomioon mieltymykset ja punnitsevat kompromisseja numeerisesti määrittääkseen, miten tavoitteet saavutetaan.                                               | Matkavarausagentti maksimoi hyötyä punnitsemalla mukavuuden ja kustannukset matkavarauksessa.                                                                                                                                          |
-| **Oppivat agentit**            | Parantavat toimintaansa ajan myötä reagoimalla palautteeseen ja säätämällä toimiaan sen mukaisesti.                                                        | Matkavarausagentti parantaa toimintaansa käyttämällä asiakaspalautetta matkan jälkeisistä kyselyistä tehdäkseen muutoksia tuleviin varauksiin.                                                                                                               |
-| **Hierarkkiset agentit**       | Sisältävät useita agentteja kerrostetussa järjestelmässä, jossa ylemmän tason agentit jakavat tehtävät alemman tason agenteille suoritettaviksi. | Matkavarausagentti peruuttaa matkan jakamalla tehtävän osatehtäviin (esimerkiksi tiettyjen varausten peruuttaminen) ja antaa alemman tason agenttien suorittaa ne, raportoiden takaisin ylemmän tason agentille.                                     |
-| **Moniagenttijärjestelmät (MAS)** | Agentit suorittavat tehtäviä itsenäisesti, joko yhteistyössä tai kilpailullisesti.                                                           | Yhteistyö: Useat agentit varaavat tiettyjä matkustuspalveluja, kuten hotelleja, lentoja ja viihdettä. Kilpailu: Useat agentit hallinnoivat ja kilpailevat jaetusta hotellivarauskalenterista varatakseen asiakkaita hotelliin. |
+### Tekoälyagenttien eri tyypit
+
+Kaikki agentit eivät ole samanlaisia. Tässä on päätyyppien erittely käyttäen matkavarauksen agenttia esimerkkinä:
+
+| **Agenttityyppi** | **Mitä se tekee** | **Matka-agentin esimerkki** |
+|---|---|---|
+| **Yksinkertaiset refleksiagentit** | Seuraa kovakoodattuja sääntöjä — ei muistia, ei suunnittelua. | Näkee valituskirjeen → välittää sen asiakaspalveluun. Siinä kaikki. |
+| **Mallipohjaiset refleksiagentit** | Pitää sisäistä mallia maailmasta ja päivittää sitä muutosten mukaan. | Seuraa historiallisia lentohintoja ja merkitsee reitit, jotka yhtäkkiä kallistuivat. |
+| **Tavoitepohjaiset agentit** | Omistaa tavoitteen ja päättää miten saavuttaa sen askel askeleelta. | Varataa koko matkan (lennot, auto, hotelli) nykyisestä sijainnistasi määränpäähäsi. |
+| **Hyötyarvopohjaiset agentit** | Ei löydä vain *yhtä* ratkaisua — etsii *parhaan* punnitsemalla vaihtoehtojen hyvät ja huonot puolet. | Tasapainottaa kustannukset ja mukavuuden löytääkseen matkan, joka parhaiten sopii preferensseihisi. |
+| **Oppivat agentit** | Paranee ajan myötä oppimalla palautteesta. | Säätää tulevia varausehdotuksia matkan jälkeisen kyselyn tulosten perusteella. |
+| **Hierarkkiset agentit** | Korkeamman tason agentti jakaa työn osa-tehtäviin ja delegoi alemmille agenteille. | "Peruuta matka" -pyyntö jaetaan: peruuta lento, peruuta hotelli, peruuta autonvuokraus — kukin hoidetaan alagentilla. |
+| **Moniagenttijärjestelmät (MAS)** | Useita itsenäisiä agentteja, jotka työskentelevät yhdessä (tai kilpaillen). | Yhteistyö: eri agentit vastaavat hotelleista, lennoista ja viihteestä. Kilpailu: useat agentit kilpailevat hotellihuoneiden täyttämisestä parhaaseen hintaan. |
+
+---
 
 ## Milloin käyttää tekoälyagentteja
 
-Edellisessä osiossa käytimme matkavarausagenttia esimerkkinä selittääksemme, miten eri agenttityyppejä voidaan käyttää matkavarauksen eri tilanteissa. Käytämme tätä sovellusta läpi kurssin.
+Pelkkä mahdollisuus käyttää tekoälyagenttia ei tarkoita, että tulisi aina käyttää. Tässä tilanteet, joissa agentit todella loistavat:
 
-Tarkastellaan nyt, millaisiin käyttötapauksiin tekoälyagentit sopivat parhaiten:
+![When to use AI Agents?](../../../translated_images/fi/when-to-use-ai-agents.54becb3bed74a479.webp)
 
-![Milloin käyttää tekoälyagentteja?](../../../translated_images/fi/when-to-use-ai-agents.54becb3bed74a479.webp)
+- **Avoimet ongelmat** — Kun ongelman ratkaisemisen vaiheet eivät ole ennalta ohjelmoitavissa. Tarvitset LLM:n ratkaisemaan polun dynaamisesti.
+- **Monivaiheiset prosessit** — Tehtävät, jotka vaativat työkalujen käyttöä useissa vaiheissa, eivät pelkästään yhdessä haussa tai tuotannossa.
+- **Parantuminen ajan myötä** — Kun haluat järjestelmän oppivan käyttäjäpalautteen tai ympäristön signaalien perusteella.
 
-- **Avoimet ongelmat** - LLM:n salliminen määrittää tarvittavat askeleet tehtävän suorittamiseksi, koska niitä ei aina voida kovakoodata työnkulkuun.
-- **Monivaiheiset prosessit** - Tehtävät, jotka vaativat tiettyä monimutkaisuutta, jossa tekoälyagentin täytyy käyttää työkaluja tai tietoa useiden vuorovaikutusten aikana yhden hakukerran sijaan.  
-- **Parantuminen ajan myötä** - Tehtävät, joissa agentti voi parantaa toimintaansa ajan myötä saamalla palautetta joko ympäristöltään tai käyttäjiltä tarjotakseen parempaa hyötyä.
+Perehdymme tarkemmin siihen, milloin (ja milloin *ei*) käyttää tekoälyagentteja **Luotettavien tekoälyagenttien rakentaminen** -oppitunnissa myöhemmin kurssilla.
 
-Käsittelemme lisää tekoälyagenttien käyttöön liittyviä näkökohtia luotettavien tekoälyagenttien rakentamista käsittelevässä oppitunnissa.
+---
 
 ## Agenttiratkaisujen perusteet
 
-### Agenttien kehittäminen
+### Agentin kehitys
 
-Ensimmäinen askel tekoälyagenttijärjestelmän suunnittelussa on määritellä työkalut, toimet ja käyttäytymiset. Tässä kurssissa keskitymme käyttämään **Azure AI Agent Service** -palvelua agenttien määrittelyyn. Se tarjoaa ominaisuuksia, kuten:
+Ensimmäinen vaihe agenttia rakennettaessa on määritellä *mitä se osaa tehdä* — sen työkalut, toiminnot ja käyttäytymismallit.
 
-- Avoimien mallien valinta, kuten OpenAI, Mistral ja Llama
-- Lisensoidun datan käyttö palveluntarjoajien, kuten Tripadvisorin, kautta
-- Standardoitujen OpenAPI 3.0 -työkalujen käyttö
+Tässä kurssissa käytämme pääalustana **Microsoft Foundry Agent Serviceä**. Se tukee:
 
-### Agenttimallit
+- Tarjoajien kuten OpenAI, Mistral ja Meta (Llama) malleja
+- Lisensoitua dataa tarjoajilta kuten Tripadvisor
+- Standardoituja OpenAPI 3.0 -työkalumääritelmiä
 
-Vuorovaikutus LLM:ien kanssa tapahtuu kehotteiden avulla. Tekoälyagenttien puoliksi autonomisen luonteen vuoksi ei aina ole mahdollista tai tarpeellista kehottaa LLM:ää manuaalisesti ympäristön muutoksen jälkeen. Käytämme **agenttimalleja**, jotka mahdollistavat LLM:n kehotteiden käytön useiden vaiheiden aikana skaalautuvammalla tavalla.
+### Agenttityylit
 
-Tämä kurssi on jaettu joihinkin nykyisin suosittuihin agenttimalleihin.
+Kommunikoit LLM:ien kanssa kehotteiden avulla. Agenttien kanssa kaikkia kehotteita ei voi aina tehdä käsityönä — agentin täytyy toimia monissa vaiheissa. Tässä **Agenttityylit** ovat hyödyllisiä. Ne ovat uudelleenkäytettäviä strategioita kehotteiden ja LLM:ien orkestrointiin skaalautuvalla ja luotettavalla tavalla.
 
-### Agenttikehykset
+Tämä kurssi rakentuu yleisimpien ja hyödyllisimpien agenttityylien ympärille.
 
-Agenttikehykset mahdollistavat kehittäjille agenttimallien toteuttamisen koodin avulla. Nämä kehykset tarjoavat malleja, laajennuksia ja työkaluja parempaan tekoälyagenttien yhteistyöhön. Näiden etujen avulla voidaan parantaa tekoälyagenttijärjestelmien havaittavuutta ja vianetsintää.
+### Agenttikehikot
 
-Tässä kurssissa tutkimme tutkimuslähtöistä AutoGen-kehystä ja tuotantovalmiita Semantic Kernelin Agent-kehystä.
+Agenttikehikot tarjoavat kehittäjille valmiita malleja, työkaluja ja infrastruktuuria agenttien rakentamiseen. Ne helpottavat:
 
-## Esimerkkikoodit
+- Työkalujen ja kykyjen yhdistämistä
+- Havainnointia, mitä agentti tekee (ja virheenkorjausta, jos jokin menee pieleen)
+- Yhteistyötä monen agentin välillä
 
-- Python: [Agent Framework](./code_samples/01-python-agent-framework.ipynb)
-- .NET: [Agent Framework](./code_samples/01-dotnet-agent-framework.md)
+Tässä kurssissa keskitymme **Microsoft Agent Frameworkiin (MAF)** tuotantovalmiiden agenttien rakentamisessa.
 
-## Onko sinulla lisää kysymyksiä tekoälyagenteista?
+---
 
-Liity [Azure AI Foundry Discordiin](https://aka.ms/ai-agents/discord), jossa voit tavata muita oppijoita, osallistua toimistoaikoihin ja saada vastauksia tekoälyagentteihin liittyviin kysymyksiisi.
+## Koodiesimerkit
+
+Valmiina näkemään toimintaa? Tässä ovat tämän oppitunnin koodiesimerkit:
+
+- 🐍 Python: [Agent Framework](./code_samples/01-python-agent-framework.ipynb)
+- 🔷 .NET: [Agent Framework](./code_samples/01-dotnet-agent-framework.md)
+
+---
+
+## Onko sinulla kysyttävää?
+
+Liity [Microsoft Foundry Discordiin](https://discord.com/invite/ATgtXmAS5D) yhdistääksesi muihin oppijoihin, osallistuaksesi toimistoaikoihin ja saadaksesi tekoälyagenttiisi liittyviä vastauksia yhteisöltä.
+
+
+---
+
+## Agentin savutestaus (valinnainen)
+
+Kun opit ottamaan agentteja käyttöön [Oppitunnissa 16](../16-deploying-scalable-agents/README.md), voit lisätä nopean jälkiasennustarkastuksen tälle oppitunnin `TravelAgent` -agentille valmiin katalogin [`tests/lesson-01-smoke-tests.json`](../../../tests/lesson-01-smoke-tests.json) avulla. Katso [`tests/README.md`](../tests/README.md) ohjeet sen suorittamiseen.
+
+---
 
 ## Edellinen oppitunti
 
@@ -113,11 +145,11 @@ Liity [Azure AI Foundry Discordiin](https://aka.ms/ai-agents/discord), jossa voi
 
 ## Seuraava oppitunti
 
-[Agenttikehysten tutkiminen](../02-explore-agentic-frameworks/README.md)
+[Agenttikehikkojen tutkiminen](../02-explore-agentic-frameworks/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Tärkeissä tiedoissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

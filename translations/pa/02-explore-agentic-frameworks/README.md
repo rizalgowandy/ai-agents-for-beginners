@@ -1,379 +1,303 @@
 [![AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਦੀ ਖੋਜ](../../../translated_images/pa/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
-> _(ਉਪਰ ਦਿੱਤੀ ਤਸਵੀਰ 'ਤੇ ਕਲਿੱਕ ਕਰਕੇ ਇਸ ਪਾਠ ਦਾ ਵੀਡੀਓ ਵੇਖੋ)_
+> _(ਇਸ ਪਾਠ ਦੀ ਵੀਡੀਓ ਨੂੰ ਦੇਖਣ ਲਈ ਉੱਪਰ ਦਿੱਤੀ ਤਸਵੀਰ 'ਤੇ ਕਲਿੱਕ ਕਰੋ)_
 
-# AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਦੀ ਖੋਜ
+# AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਦੀ ਖੋਜ ਕਰੋ
 
-AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਸੌਫਟਵੇਅਰ ਪਲੇਟਫਾਰਮ ਹਨ ਜੋ AI ਏਜੰਟਸ ਦੀ ਰਚਨਾ, ਤੈਨਾਤੀ ਅਤੇ ਪ੍ਰਬੰਧਨ ਨੂੰ ਆਸਾਨ ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਕੀਤੇ ਗਏ ਹਨ। ਇਹ ਫਰੇਮਵਰਕਸ ਡਿਵੈਲਪਰਾਂ ਨੂੰ ਪੂਰਵ-ਤਿਆਰ ਕੀਤੇ ਗਏ ਕੰਪੋਨੈਂਟਸ, ਐਬਸਟਰੈਕਸ਼ਨ ਅਤੇ ਟੂਲ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ ਜੋ ਜਟਿਲ AI ਸਿਸਟਮਾਂ ਦੇ ਵਿਕਾਸ ਨੂੰ ਸਧਾਰਨ ਬਣਾਉਂਦੇ ਹਨ।
+AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਸਾਫਟਵੇਅਰ ਮੰਚ ਹਨ ਜੋ AI ਏਜੰਟਾਂ ਦੇ ਬਣਾਉਣ, ਤੈਨਾਤ ਕਰਨ ਅਤੇ ਪ੍ਰਬੰਧਨ ਨੂੰ ਆਸਾਨ ਬਣਾਉਣ ਲਈ ਡਿਜ਼ਾਈਨ ਕੀਤੇ ਗਏ ਹਨ। ਇਹ ਫਰੇਮਵਰਕ ਵਿਕਾਸਕਾਰਾਂ ਨੂੰ ਪ੍ਰੀ-ਬਿਲਟ ਭਾਗ, абਸਟ੍ਰੈਕਸ਼ਨ ਅਤੇ ਉਪਕਰਨ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ ਜੋ ਜਟਿਲ AI ਸਿਸਟਮਾਂ ਦੇ ਵਿਕਾਸ ਨੂੰ ਸਧਾਰਨ ਬਣਾਉਂਦੇ ਹਨ।
 
-ਇਹ ਫਰੇਮਵਰਕਸ ਡਿਵੈਲਪਰਾਂ ਨੂੰ AI ਏਜੰਟ ਵਿਕਾਸ ਵਿੱਚ ਆਮ ਚੁਣੌਤੀਆਂ ਲਈ ਮਿਆਰੀ ਪਹੁੰਚਾਂ ਪ੍ਰਦਾਨ ਕਰਕੇ ਆਪਣੇ ਐਪਲੀਕੇਸ਼ਨ ਦੇ ਵਿਲੱਖਣ ਪੱਖਾਂ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ। ਇਹ AI ਸਿਸਟਮਾਂ ਦੇ ਨਿਰਮਾਣ ਵਿੱਚ ਸਕੇਲਬਿਲਟੀ, ਪਹੁੰਚਯੋਗਤਾ ਅਤੇ ਕੁਸ਼ਲਤਾ ਨੂੰ ਵਧਾਉਂਦੇ ਹਨ।
+ਇਹ ਫਰੇਮਵਰਕ ਵਿਕਾਸਕਾਰਾਂ ਨੂੰ ਆਪਣੇ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦੇ ਵਿਲੱਖਣ ਪੱਖਾਂ 'ਤੇ ਧਿਆਨ ਕేందਰਿਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੇ ਹਨ ਕਿਉਂਕਿ ਇਹ AI ਏਜੰਟ ਵਿਕਾਸ ਵਿੱਚ ਆਮ ਚੁਣੌਤੀਆਂ ਲਈ ਮਿਆਰੀਕ੍ਰਿਤ ਪਹੁੰਚਾਂ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ। ਇਹ AI ਸਿਸਟਮਾਂ ਨੂੰ ਬਣਾਉਣ ਵਿੱਚ ਸਕੇਲਬਿਲਿਟੀ, ਉਪਲਬਧਤਾ ਅਤੇ ਕੁਸ਼ਲਤਾ ਵਧਾਉਂਦੇ ਹਨ।
 
-## ਪਰਚੇ
+## ਪਰਚય
 
-ਇਸ ਪਾਠ ਵਿੱਚ ਤੁਸੀਂ ਸਿੱਖੋਗੇ:
+ਇਸ ਪਾਠ ਵਿੱਚ ਕਵਰ ਕੀਤਾ ਜਾਵੇਗਾ:
 
-- AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਕੀ ਹਨ ਅਤੇ ਇਹ ਡਿਵੈਲਪਰਾਂ ਨੂੰ ਕੀ ਹਾਸਲ ਕਰਨ ਯੋਗ ਬਣਾਉਂਦੇ ਹਨ?
-- ਟੀਮਾਂ ਇਹਨਾਂ ਨੂੰ ਕਿਵੇਂ ਵਰਤ ਸਕਦੀਆਂ ਹਨ ਆਪਣੇ ਏਜੰਟ ਦੀਆਂ ਸਮਰੱਥਾਵਾਂ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਪ੍ਰੋਟੋਟਾਈਪ, ਦੁਹਰਾਉਣ ਅਤੇ ਸੁਧਾਰਨ ਲਈ?
-- ਮਾਈਕਰੋਸਾਫਟ <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a>, ਅਤੇ <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a> ਦੁਆਰਾ ਬਣਾਏ ਗਏ ਫਰੇਮਵਰਕਸ ਅਤੇ ਟੂਲਾਂ ਵਿੱਚ ਕੀ ਅੰਤਰ ਹੈ?
-- ਕੀ ਮੈਂ ਆਪਣੇ ਮੌਜੂਦਾ Azure ਇਕੋਸਿਸਟਮ ਟੂਲਾਂ ਨੂੰ ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਇੰਟੀਗ੍ਰੇਟ ਕਰ ਸਕਦਾ ਹਾਂ ਜਾਂ ਮੈਨੂੰ ਵੱਖਰੇ ਹੱਲਾਂ ਦੀ ਲੋੜ ਹੈ?
-- Azure AI Agents ਸੇਵਾ ਕੀ ਹੈ ਅਤੇ ਇਹ ਮੈਨੂੰ ਕਿਵੇਂ ਮਦਦ ਕਰ ਰਹੀ ਹੈ?
+- AI ਏਜੰਟ ਫਰੇਮਵਰਕ ਕੀ ਹਨ ਅਤੇ ਇਹ ਵਿਕਾਸਕਾਰਾਂ ਨੂੰ ਕੀ ਪ੍ਰਾਪਤ ਕਰਨ ਦੇ ਯੋਗ ਬਣਾਉਂਦੇ ਹਨ?
+- ਟੀਮਾਂ ਇਨ੍ਹਾਂ ਨੂੰ ਕਿਵੇਂ ਤੇਜ਼ੀ ਨਾਲ ਪ੍ਰੋਟੋਟਾਈਪ, ਸੁਧਾਰ ਅਤੇ ਆਪਣੇ ਏਜੰਟ ਦੀਆਂ صلاحਤਾਂ ਨੂੰ ਵਧਾ ਸਕਦੀਆਂ ਹਨ?
+- ਮਾਇਕ੍ਰੋਸੌਫਟ ਦੁਆਰਾ ਬਣਾਏ ਗਏ ਫਰੇਮਵਰਕ ਅਤੇ ਉਪਕਰਨਾਂ ਵਿਚ ਕੀ ਫਰਕ ਹਨ (<a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Microsoft Foundry Agent Service</a> ਅਤੇ <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework</a>)?
+- ਕੀ ਮੈਂ ਆਪਣੇ ਮੌਜੂਦਾ Azure ਇਕੋਸਿਸਟਮ ਟੂਲਜ਼ ਨੂੰ ਸਿੱਧਾ ਜੋੜ ਸਕਦਾ ਹਾਂ, ਜਾਂ ਕੀ ਮੈਨੂੰ ਅਲੱਗ ਸਟੈਂਡਅਲੋਨ ਹੱਲਾਂ ਦੀ ਲੋੜ ਹੈ?
+- Microsoft Foundry Agent Service ਕੀ ਹੈ ਅਤੇ ਇਹ ਮੇਰੀ ਮਦਦ ਕਿਵੇਂ ਕਰ ਰਿਹਾ ਹੈ?
 
-## ਸਿੱਖਣ ਦੇ ਲਕਸ਼
+## ਸਿੱਖਣ ਦੇ ਲੱਖੜੇ
 
-ਇਸ ਪਾਠ ਦੇ ਲਕਸ਼ ਹਨ:
+ਇਸ ਪਾਠ ਦਾ ਉਦੇਸ਼ ਤੁਹਾਨੂੰ ਸਹਾਇਤਾ ਕਰਨਾ ਹੈ ਕਿ:
 
-- AI ਵਿਕਾਸ ਵਿੱਚ AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਦੀ ਭੂਮਿਕਾ ਨੂੰ ਸਮਝਣਾ।
-- ਬੁੱਧੀਮਾਨ ਏਜੰਟਸ ਬਣਾਉਣ ਲਈ AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਦਾ ਲਾਭ ਲੈਣਾ।
-- AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਦੁਆਰਾ ਯੋਗ ਕੀਤੀਆਂ ਮੁੱਖ ਸਮਰੱਥਾਵਾਂ।
-- AutoGen, Semantic Kernel, ਅਤੇ Azure AI Agent Service ਦੇ ਅੰਤਰ।
+- AI Agent Frameworks ਦਾ AI ਵਿਕਾਸ ਵਿੱਚ ਭੂਮਿਕਾ ਸਮਝੋ।
+- ਕਿਵੇਂ AI Agent Frameworks ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਬੁੱਧਿਮਾਨ ਏਜੰਟ ਬਣਾਏ ਜਾ ਸਕਦੇ ਹਨ।
+- AI Agent Frameworks ਦੁਆਰਾ ਚਾਲੂ ਕੀਤੀਆਂ ਮੁੱਖ صلاحਤਾਂ।
+- Microsoft Agent Framework ਅਤੇ Microsoft Foundry Agent Service ਵਿਚਕਾਰ ਦੇ ਫਰਕਾਂ ਦੀ ਜਾਣਕਾਰੀ।
 
-## AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਕੀ ਹਨ ਅਤੇ ਇਹ ਡਿਵੈਲਪਰਾਂ ਨੂੰ ਕੀ ਕਰਨ ਯੋਗ ਬਣਾਉਂਦੇ ਹਨ?
+## AI Agent Frameworks ਕੀ ਹਨ ਅਤੇ ਇਹ ਵਿਕਾਸਕਾਰਾਂ ਨੂੰ ਕੀ ਕਰਨ ਦੇ ਯੋਗ ਬਨਾਉਂਦੇ ਹਨ?
 
-ਪਾਰੰਪਰਿਕ AI ਫਰੇਮਵਰਕਸ ਤੁਹਾਨੂੰ ਆਪਣੇ ਐਪਸ ਵਿੱਚ AI ਨੂੰ ਸ਼ਾਮਲ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੇ ਹਨ ਅਤੇ ਇਹ ਐਪਸ ਹੇਠ ਲਿਖੇ ਤਰੀਕਿਆਂ ਵਿੱਚ ਬਿਹਤਰ ਬਣਾਉਂਦੇ ਹਨ:
+ਪਰੰਪਰਾਤਮਕ AI ਫਰੇਮਵਰਕ ਤੁਹਾਡੇ ਐਪਾਂ ਵਿੱਚ AI ਨੂੰ ਜੋੜਨ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੇ ਹਨ ਅਤੇ ਇਹਨਾਂ ਐਪਾਂ ਨੂੰ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਤਰੀਕਿਆਂ ਨਾਲ ਬਿਹਤਰ ਬਣਾਉਂਦੇ ਹਨ:
 
-- **ਪ੍ਰਸੋਨਲਾਈਜ਼ੇਸ਼ਨ**: AI ਯੂਜ਼ਰ ਦੇ ਵਿਵਹਾਰ ਅਤੇ ਪਸੰਦਾਂ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰ ਸਕਦਾ ਹੈ ਅਤੇ ਨਿੱਜੀ ਸਿਫਾਰਸ਼ਾਂ, ਸਮੱਗਰੀ ਅਤੇ ਤਜਰਬੇ ਪ੍ਰਦਾਨ ਕਰ ਸਕਦਾ ਹੈ।  
-ਉਦਾਹਰਣ: Netflix ਵਰਗੀਆਂ ਸਟ੍ਰੀਮਿੰਗ ਸੇਵਾਵਾਂ AI ਦੀ ਵਰਤੋਂ ਕਰਦੀਆਂ ਹਨ ਫਿਲਮਾਂ ਅਤੇ ਸ਼ੋਅਜ਼ ਦੀ ਸਿਫਾਰਸ਼ ਕਰਨ ਲਈ ਜੋ ਦੇਖਣ ਦੇ ਇਤਿਹਾਸ 'ਤੇ ਆਧਾਰਿਤ ਹੁੰਦੀਆਂ ਹਨ, ਜਿਸ ਨਾਲ ਯੂਜ਼ਰ ਦੀ ਸਹਿਭਾਗਤਾ ਅਤੇ ਸੰਤੁਸ਼ਟੀ ਵਧਦੀ ਹੈ।  
-- **ਆਟੋਮੇਸ਼ਨ ਅਤੇ ਕੁਸ਼ਲਤਾ**: AI ਦੁਹਰਾਏ ਜਾਣ ਵਾਲੇ ਕੰਮਾਂ ਨੂੰ ਆਟੋਮੇਟ ਕਰ ਸਕਦਾ ਹੈ, ਵਰਕਫਲੋਜ਼ ਨੂੰ ਸਧਾਰਨ ਕਰ ਸਕਦਾ ਹੈ, ਅਤੇ ਓਪਰੇਸ਼ਨਲ ਕੁਸ਼ਲਤਾ ਵਿੱਚ ਸੁਧਾਰ ਕਰ ਸਕਦਾ ਹੈ।  
-ਉਦਾਹਰਣ: ਗਾਹਕ ਸੇਵਾ ਐਪਸ ਆਮ ਪੁੱਛਗਿੱਛਾਂ ਨੂੰ ਸੰਭਾਲਣ ਲਈ AI-ਚਲਿਤ ਚੈਟਬੋਟਸ ਦੀ ਵਰਤੋਂ ਕਰਦੀਆਂ ਹਨ, ਜਿਹੜੇ ਜਵਾਬ ਦੇ ਸਮੇਂ ਨੂੰ ਘਟਾਉਂਦੀਆਂ ਹਨ ਅਤੇ ਜਟਿਲ ਮੁੱਦਿਆਂ ਲਈ ਮਨੁੱਖੀ ਏਜੰਟਾਂ ਨੂੰ ਖਾਲੀ ਕਰਦੀਆਂ ਹਨ।  
-- **ਵਧੀਆ ਯੂਜ਼ਰ ਅਨੁਭਵ**: AI ਆਵਾਜ਼ ਪਛਾਣ, ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਪ੍ਰੋਸੈਸਿੰਗ, ਅਤੇ ਭਵਿੱਖਬਾਣੀ ਟੈਕਸਟ ਵਰਗੀਆਂ ਬੁੱਧੀਮਾਨ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਕੇ ਸਮੁੱਚੇ ਯੂਜ਼ਰ ਅਨੁਭਵ ਵਿੱਚ ਸੁਧਾਰ ਕਰ ਸਕਦਾ ਹੈ।  
-ਉਦਾਹਰਣ: Siri ਅਤੇ Google Assistant ਵਰਗੇ ਵਰਚੁਅਲ ਸਹਾਇਕ AI ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਨ ਆਵਾਜ਼ ਕਮਾਂਡਾਂ ਨੂੰ ਸਮਝਣ ਅਤੇ ਜਵਾਬ ਦੇਣ ਲਈ, ਜਿਸ ਨਾਲ ਯੂਜ਼ਰਾਂ ਲਈ ਆਪਣੇ ਡਿਵਾਈਸਾਂ ਨਾਲ ਸੰਚਾਰ ਕਰਨਾ ਆਸਾਨ ਹੋ ਜਾਂਦਾ ਹੈ।
+- **ਪર્સਨਲਾਈਜੇਸ਼ਨ**: AI ਉਪਭੋਗਤਾ ਦੇ ਵਿਹਾਰ ਅਤੇ ਪਸੰਦਾਂ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਦਾ ਹੈ ਅਤੇ ਵਿਅਕਤੀਗਤ ਸਿਫਾਰਸ਼ਾਂ, ਸਮੱਗਰੀ ਅਤੇ ਅਨੁਭਵ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ।
+ਉਦਾਹਰਨ: Netflix ਵਰਗੀਆਂ ਸਟ੍ਰੀਮਿੰਗ ਸੇਵਾਵਾਂ AI ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਦੇਖਣ ਦੇ ਇਤਿਹਾਸ ਦੇ ਆਧਾਰ 'ਤੇ ਫਿਲਮਾਂ ਅਤੇ ਸ਼ੋਅਜ਼ ਸੁਝਾਉਂਦੀਆਂ ਹਨ, ਜਿਸ ਨਾਲ ਉਪਭੋਗਤਾ ਦੀ ਭਾਗੀਦਾਰੀ ਅਤੇ ਸੰਤੁਸ਼ਟੀ ਵਧਦੀ ਹੈ।
+- **ਆਟੋਮੇਸ਼ਨ ਅਤੇ ਕੁਸ਼ਲਤਾ**: AI ਦੁਹਰਾਵੇ ਕੰਮਾਂ ਨੂੰ ਆਟੋਮੇਟ ਕਰ ਸਕਦਾ ਹੈ, ਵਰਕਫਲੋਜ਼ ਨੂੰ ਸਧਾਰਨ ਕਰਦਾ ਹੈ ਅਤੇ ਆਪਰੇਸ਼ਨਲ ਕੁਸ਼ਲਤਾ ਨੂੰ ਸੁਧਾਰਦਾ ਹੈ।
+ਉਦਾਹਰਨ: ਗਾਹਕ ਸੇਵਾ ਐਪਾਂ AI ਚੈਟਬੌਟਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦੀਆਂ ਹਨ ਜੋ ਆਮ ਪੁੱਛਗਿੱਛਾਂ ਨੂੰ ਸੰਭਾਲਦੀਆਂ ਹਨ, ਜਿਵੇਂ ਕਿ ਜਵਾਬ ਦੇਣ ਦਾ ਸਮਾਂ ਘਟਾਉਂਦਾ ਹੈ ਅਤੇ ਗੁੰਝਲਦਾਰ ਮੁੱਦੇ ਲਈ ਮਨੁੱਖੀ ਏਜੰਟਾਂ ਨੂੰ ਖਾਲੀ ਕਰਦਾ ਹੈ।
+- **ਵਧੀਆ ਉਪਭੋਗਤਾ ਅਨੁਭਵ**: AI ਸਮਾਰਟ ਫੀਚਰ ਜਿਵੇਂ ਵੋਇਸ ਪਛਾਣ, ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਪ੍ਰੋਸੈਸਿੰਗ ਅਤੇ ਅਨੁਮਾਨੀ ਟੈਕਸਟ ਪ੍ਰਦਾਨ ਕਰਕੇ ਸਮੁੱਚੇ ਉਪਭੋਗਤਾ ਅਨੁਭਵ ਨੂੰ ਸੁਧਾਰਦਾ ਹੈ।
+ਉਦਾਹਰਨ: Siri ਅਤੇ Google Assistant ਵਰਗੇ ਵਰਚੁਅਲ ਸਹਾਇਕ AI ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਵੋਇਸ ਕਮਾਂਡ ਨੂੰ ਸਮਝਦੇ ਅਤੇ ਜਵਾਬ ਦੇਂਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਉਪਭੋਗਤਾਵਾਂ ਲਈ ਉਪਕਰਨਾਂ ਨਾਲ ਗੱਲਬਾਤ ਕਰਨਾ ਆਸਾਨ ਹੋ ਜਾਂਦਾ ਹੈ।
 
-### ਇਹ ਸਭ ਕੁਝ ਵਧੀਆ ਲੱਗਦਾ ਹੈ, ਤਾਂ ਫਿਰ ਸਾਨੂੰ AI ਏਜੰਟ ਫਰੇਮਵਰਕ ਦੀ ਲੋੜ ਕਿਉਂ ਹੈ?
+### ਇਹ ਸਭ ਵਧੀਆ ਲੱਗਦਾ ਹੈ, ਤਾਂ ਫਿਰ ਸਾਨੂੰ AI Agent Framework ਦੀ ਲੋੜ ਕਿਉਂ ਹੈ?
 
-AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਸਿਰਫ AI ਫਰੇਮਵਰਕਸ ਤੋਂ ਵੱਧ ਕੁਝ ਪ੍ਰਸਤਾਵਿਤ ਕਰਦੇ ਹਨ। ਇਹ ਬੁੱਧੀਮਾਨ ਏਜੰਟਸ ਦੀ ਰਚਨਾ ਯੋਗ ਬਣਾਉਣ ਲਈ ਤਿਆਰ ਕੀਤੇ ਗਏ ਹਨ ਜੋ ਯੂਜ਼ਰਾਂ, ਹੋਰ ਏਜੰਟਾਂ ਅਤੇ ਵਾਤਾਵਰਣ ਨਾਲ ਸੰਚਾਰ ਕਰ ਸਕਦੇ ਹਨ ਅਤੇ ਖਾਸ ਲਕਸ਼ਾਂ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹਨ। ਇਹ ਏਜੰਟਸ ਸਵੈਚਾਲਕ ਵਿਵਹਾਰ ਦਿਖਾ ਸਕਦੇ ਹਨ, ਫੈਸਲੇ ਲੈ ਸਕਦੇ ਹਨ, ਅਤੇ ਬਦਲਦੇ ਹਾਲਾਤਾਂ ਅਨੁਸਾਰ ਅਨੁਕੂਲ ਹੋ ਸਕਦੇ ਹਨ। ਆਓ ਕੁਝ ਮੁੱਖ ਸਮਰੱਥਾਵਾਂ ਦੇਖੀਏ ਜੋ AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਦੁਆਰਾ ਯੋਗ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ:
+AI Agent ਫਰੇਮਵਰਕ ਸਿਰਫ AI ਫਰੇਮਵਰਕ ਤੋਂ ਵੱਧ ਚੀਜ਼ ਪ੍ਰਤੀਨਿਧਤ ਕਰਦੇ ਹਨ। ਇਹ ਇੰਟੈਲੀਜੈਂਟ ਏਜੰਟ ਬਣਾਉਣ ਲਈ ਡਿਜ਼ਾਈਨ ਕੀਤੇ ਗਏ ਹਨ ਜੋ ਉਪਭੋਗਤਾਵਾਂ, ਹੋਰ ਏਜੰਟਾਂ ਅਤੇ ਵਾਤਾਵਰਨ ਨਾਲ ਅੰਤਰਕਿਰਿਆ ਕਰ ਸਕਦੇ ਹਨ ਤਾਂ ਜੋ ਨਿੱਜੀ ਲਕੜੇ ਪ੍ਰਾਪਤ ਕਰ ਸਕਣ। ਇਹ ਏਜੰਟ ਸੁਤੰਤਰ ਵਰਤਾਰਾ ਦਿਖਾ ਸਕਦੇ ਹਨ, ਫੈਸਲੇ ਕਰ ਸਕਦੇ ਹਨ ਅਤੇ ਬਦਲ ਰਹੇ ਹਾਲਾਤ ਦੇ ਅਨੁਕੂਲ ਹੋ ਸਕਦੇ ਹਨ। ਚਲੋ ਕੁਝ ਮੁੱਖ صلاحਤਾਂ ਵੇਖੀਏ ਜੋ AI Agent Frameworks ਦੁਆਰਾ ਕਾਇਮ ਕੀਤੀਆਂ ਗਈਆਂ ਹਨ:
 
-- **ਏਜੰਟ ਸਹਿਯੋਗ ਅਤੇ ਸਹਿਕਾਰਤਾ**: ਕਈ AI ਏਜੰਟਸ ਦੀ ਰਚਨਾ ਯੋਗ ਬਣਾਉਣਾ ਜੋ ਇਕੱਠੇ ਕੰਮ ਕਰ ਸਕਦੇ ਹਨ, ਸੰਚਾਰ ਕਰ ਸਕਦੇ ਹਨ, ਅਤੇ ਜਟਿਲ ਕੰਮਾਂ ਨੂੰ ਹੱਲ ਕਰਨ ਲਈ ਸਹਿਕਾਰ ਕਰ ਸਕਦੇ ਹਨ।  
-- **ਕੰਮ ਆਟੋਮੇਸ਼ਨ ਅਤੇ ਪ੍ਰਬੰਧਨ**: ਬਹੁ-ਕਦਮ ਵਰਕਫਲੋਜ਼, ਕੰਮ ਸੌਂਪਣ, ਅਤੇ ਏਜੰਟਾਂ ਵਿੱਚ ਗਤੀਸ਼ੀਲ ਕੰਮ ਪ੍ਰਬੰਧਨ ਲਈ ਮਕੈਨਿਜ਼ਮ ਪ੍ਰਦਾਨ ਕਰਨਾ।  
-- **ਸੰਦਰਭੀ ਸਮਝ ਅਤੇ ਅਨੁਕੂਲਤਾ**: ਏਜੰਟਾਂ ਨੂੰ ਸੰਦਰਭ ਨੂੰ ਸਮਝਣ, ਬਦਲਦੇ ਵਾਤਾਵਰਣਾਂ ਅਨੁਸਾਰ ਅਨੁਕੂਲ ਹੋਣ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਜਾਣਕਾਰੀ ਦੇ ਆਧਾਰ 'ਤੇ ਫੈਸਲੇ ਲੈਣ ਦੀ ਸਮਰੱਥਾ ਨਾਲ ਸਜਾਉਣਾ।
+- **ਏਜੰਟ ਸਹਿਯੋਗ ਅਤੇ ਸੰਯੋਜਨ**: ਵੱਖ-ਵੱਖ AI ਏਜੰਟ ਬਣਾਉਣ ਯੋਗ ਜੋ ਮਿਲ ਕੇ ਕੰਮ ਕਰ ਸਕਣ, ਗੱਲਬਾਤ ਕਰ ਸਕਣ ਅਤੇ ਪੇਚੀਦਾ ਕੰਮ ਹੱਲ ਕਰਨ ਲਈ ਸੰਯੋਜਿਤ ਹੋ ਸਕਣ।
+- **ਟਾਸਕ ਆਟੋਮੇਸ਼ਨ ਅਤੇ ਪ੍ਰਬੰਧਨ**: ਬਹੁ-ਕਦਮੀ ਵਰਕਫਲੋਜ਼, ਟਾਸਕ ਸੌਂਪਣਾ ਅਤੇ ਏਜੰਟਾਂ ਵਿੱਚ ਗਤੀਸ਼ੀਲ ਟਾਸਕ ਪ੍ਰਬੰਧਨ ਦੇ ਆਟੋਮੇਸ਼ਨ ਲਈ ਮਕੈਨਜ਼ਮ ਪ੍ਰਦਾਨ ਕਰਨਾ।
+- **ਪ੍ਰਸੰਗਤ ਸਮਝ ਅਤੇ ਅਨੁਕੂਲਤਾ**: ਏਜੰਟਾਂ ਨੂੰ ਸਮੱਗਰੀ ਨੂੰ ਸਮਝਣ, ਬਦਲਦੇ ਵਾਤਾਵਰਨ ਦੇ ਅਨੁਕੂਲ ਬਣਨ ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਜਾਣਕਾਰੀ ਦੇ ਆਧਾਰ 'ਤੇ ਫੈਸਲੇ ਕਰਨ ਯੋਗ ਬਨਾਉਣਾ।
 
-ਸਾਰ ਵਿੱਚ, ਏਜੰਟ ਤੁਹਾਨੂੰ ਹੋਰ ਕੁਝ ਕਰਨ ਦੀ ਯੋਗਤਾ ਦਿੰਦੇ ਹਨ, ਆਟੋਮੇਸ਼ਨ ਨੂੰ ਅਗਲੇ ਪੱਧਰ 'ਤੇ ਲੈ ਜਾਂਦੇ ਹਨ, ਅਤੇ ਹੋਰ ਬੁੱਧੀਮਾਨ ਸਿਸਟਮ ਬਣਾਉਣ ਦੀ ਯੋਗਤਾ ਦਿੰਦੇ ਹਨ ਜੋ ਆਪਣੇ ਵਾਤਾਵਰਣ ਤੋਂ ਸਿੱਖ ਸਕਦੇ ਹਨ ਅਤੇ ਅਨੁਕੂਲ ਹੋ ਸਕਦੇ ਹਨ।
+ਇਸ ਲਈ ਸੰਖੇਪ ਵਿੱਚ, ਏਜੰਟ ਤੁਹਾਨੂੰ ਹੋਰ ਕਰਨ ਯੋਗ ਬਣਾਉਂਦੇ ਹਨ, ਆਟੋਮੇਸ਼ਨ ਨੂੰ ਅਗਲੇ ਪੱਧਰ 'ਤੇ ਲੈ ਜਾਂਦੇ ਹਨ, ਅਤੇ ਹੋਰ ਬੁੱਧਿਮਾਨ ਸਿਸਟਮ ਬਣਾਉਂਦੇ ਹਨ ਜੋ ਆਪਣੇ ਵਾਤਾਵਰਨ ਤੋਂ ਸਿੱਖ ਸਕਦੇ ਅਤੇ ਅਨੁਕੂਲ ਹੋ ਸਕਦੇ ਹਨ।
 
-## ਏਜੰਟ ਦੀਆਂ ਸਮਰੱਥਾਵਾਂ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਪ੍ਰੋਟੋਟਾਈਪ, ਦੁਹਰਾਉਣ ਅਤੇ ਸੁਧਾਰਨ ਲਈ ਕਿਵੇਂ?
+## ਏਜੰਟ ਦੀਆਂ صلاحਤਾਂ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਪ੍ਰੋਟੋਟਾਈਪ, ਸੁਧਾਰ ਅਤੇ ਵਧਾਉਣ ਦਾ ਤਰੀਕਾ?
 
-ਇਹ ਇੱਕ ਤੇਜ਼ੀ ਨਾਲ ਬਦਲਦਾ ਖੇਤਰ ਹੈ, ਪਰ ਜ਼ਿਆਦਾਤਰ AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਵਿੱਚ ਕੁਝ ਆਮ ਚੀਜ਼ਾਂ ਹਨ ਜੋ ਤੁਹਾਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਪ੍ਰੋਟੋਟਾਈਪ ਅਤੇ ਦੁਹਰਾਉਣ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੀਆਂ ਹਨ, ਜਿਵੇਂ ਕਿ ਮਾਡਿਊਲਰ ਕੰਪੋਨੈਂਟਸ, ਸਹਿਕਾਰਕ ਟੂਲ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਲਰਨਿੰਗ। ਆਓ ਇਹਨਾਂ ਵਿੱਚ ਡੁੱਬੀਏ:
+ਇਹ ਇੱਕ ਤੇਜ਼ੀ ਨਾਲ ਬਦਲਦਾ ਖੇਤਰ ਹੈ, ਪਰ ਜ਼ਿਆਦਾਤਰ AI Agent Frameworks ਵਿੱਚ ਕੁਝ ਸਾਂਝੇ ਤੱਤ ਹਨ ਜੋ ਤੁਹਾਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਪ੍ਰੋਟੋਟਾਈਪ ਅਤੇ ਸੁਧਾਰ ਵਿੱਚ ਮਦਦ ਕਰ ਸਕਦੇ ਹਨ, ਜਿਵੇਂ ਕਿ ਮੋਡੀਊਲ ਭਾਗ, ਸਹਿਯੋਗੀ ਉਪਕਰਨ, ਅਤੇ ਰੀਅਲ-ਟਾਈਮ ਸਿੱਖਣਾ। ਚਲੋ ਇਨ੍ਹਾਂ ਵਿੱਚ ਡੁੱਬਕੀ ਮਾਰਦੇ ਹਾਂ:
 
-- **ਮਾਡਿਊਲਰ ਕੰਪੋਨੈਂਟਸ ਦੀ ਵਰਤੋਂ ਕਰੋ**: AI SDKs ਪੂਰਵ-ਤਿਆਰ ਕੀਤੇ ਕੰਪੋਨੈਂਟਸ ਜਿਵੇਂ ਕਿ AI ਅਤੇ ਮੈਮੋਰੀ ਕਨੈਕਟਰ, ਕੁਦਰਤੀ ਭਾਸ਼ਾ ਜਾਂ ਕੋਡ ਪਲੱਗਇਨ ਵਰਤ ਕੇ ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ, ਪ੍ਰੌਮਪਟ ਟੈਂਪਲੇਟਸ ਆਦਿ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ।  
-- **ਸਹਿਕਾਰਕ ਟੂਲਾਂ ਦਾ ਲਾਭ ਲਵੋ**: ਖਾਸ ਭੂਮਿਕਾਵਾਂ ਅਤੇ ਕੰਮਾਂ ਨਾਲ ਏਜੰਟਾਂ ਨੂੰ ਡਿਜ਼ਾਈਨ ਕਰੋ, ਜੋ ਸਹਿਕਾਰਕ ਵਰਕਫਲੋਜ਼ ਦੀ ਜਾਂਚ ਅਤੇ ਸੁਧਾਰ ਕਰਨ ਯੋਗ ਬਣਾਉਂਦੇ ਹਨ।  
-- **ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਸਿੱਖੋ**: ਫੀਡਬੈਕ ਲੂਪ ਲਾਗੂ ਕਰੋ ਜਿੱਥੇ ਏਜੰਟ ਸੰਚਾਰਾਂ ਤੋਂ ਸਿੱਖਦੇ ਹਨ ਅਤੇ ਆਪਣੇ ਵਿਵਹਾਰ ਨੂੰ ਗਤੀਸ਼ੀਲ ਤੌਰ 'ਤੇ ਅਨੁਕੂਲ ਕਰਦੇ ਹਨ।  
+- **ਮੋਡੀਊਲ ਭਾਗਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ**: AI SDK ਪ੍ਰੀ-ਬਿਲਟ ਭਾਗ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ ਜਿਵੇਂ AI ਅਤੇ ਮੈਮੋਰੀ ਕਨੈਕਟਰ, ਪ੍ਰਾਕ੍ਰਿਤਿਕ ਭਾਸ਼ਾ ਜਾਂ ਕੋਡ ਪਲੱਗਇਨਜ਼ ਨਾਲ ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ, ਪ੍ਰਾਂਪਟ ਟੈਮਪਲੇਟ ਆਦਿ।
+- **ਸਹਿਯੋਗੀ ਉਪਕਰਨ ਲਾਭ**: ਵਿਸ਼ੇਸ਼ ਭੂਮਿਕਾਵਾਂ ਅਤੇ ਟਾਸਕਾਂ ਵਾਲੇ ਏਜੰਟ ਤਿਆਰ ਕਰੋ, ਜੋ ਮਿਲ ਕੇ ਕੰਮ ਕਰਣ ਅਤੇ ਸਹਿਯੋਗੀ ਵਰਕਫਲੋਜ਼ ਟੈਸਟ ਅਤੇ ਸੁਧਾਰ ਕਰਨ ਦੀ ਯੋਗਤਾ ਰੱਖਦੇ ਹਨ।
+- **ਰੀਅਲ-ਟਾਈਮ ਸਿੱਖੋ**: ਫੀਡਬੈਕ ਲੂਪ ਲਾਗੂ ਕਰੋ ਜਿੱਥੇ ਏਜੰਟ ਇੰਟਰਐਕਸ਼ਨ ਤੋਂ ਸਿੱਖਦੇ ਹਨ ਅਤੇ ਆਪਣਾ ਵਰਤਾਰਾ ਗਤੀਸ਼ੀਲ ਤੌਰ 'ਤੇ ਢਾਲਦੇ ਹਨ।
 
-### ਮਾਡਿਊਲਰ ਕੰਪੋਨੈਂਟਸ ਦੀ ਵਰਤੋਂ ਕਰੋ
+### ਮੋਡੀਊਲ ਭਾਗਾਂ ਦੀ ਵਰਤੋਂ ਕਰੋ
 
-Microsoft Semantic Kernel ਅਤੇ LangChain ਵਰਗੇ SDKs ਪੂਰਵ-ਤਿਆਰ ਕੀਤੇ ਕੰਪੋਨੈਂਟਸ ਜਿਵੇਂ ਕਿ AI ਕਨੈਕਟਰ, ਪ੍ਰੌਮਪਟ ਟੈਂਪਲੇਟਸ, ਅਤੇ ਮੈਮੋਰੀ ਪ੍ਰਬੰਧਨ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ।
+ਮਾਇਕ੍ਰੋਸੌਫਟ ਏਜੰਟ ਫਰੇਮਵਰਕ ਵਰਗੇ SDK ਮੋਡੀਊਲ ਭਾਗ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ ਜਿਵੇਂ AI ਕਨੈਕਟਰ, ਟੂਲ ਡਿਫਿਨੀਸ਼ਨ, ਅਤੇ ਏਜੰਟ ਪ੍ਰਬੰਧਨ।
 
-**ਟੀਮਾਂ ਇਹਨਾਂ ਨੂੰ ਕਿਵੇਂ ਵਰਤ ਸਕਦੀਆਂ ਹਨ**: ਟੀਮਾਂ ਇਹ ਕੰਪੋਨੈਂਟਸ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਇਕੱਠਾ ਕਰ ਸਕਦੀਆਂ ਹਨ ਇੱਕ ਕਾਰਗਰ ਪ੍ਰੋਟੋਟਾਈਪ ਬਣਾਉਣ ਲਈ ਬਿਨਾਂ ਸ਼ੁਰੂ ਤੋਂ ਸ਼ੁਰੂ ਕੀਤੇ, ਜਿਸ ਨਾਲ ਤੇਜ਼ੀ ਨਾਲ ਪ੍ਰਯੋਗ ਅਤੇ ਦੁਹਰਾਉਣ ਸੰਭਵ ਹੁੰਦਾ ਹੈ।  
+**ਟੀਮ ਇਹਨਾਂ ਨੂੰ ਕਿਵੇਂ ਵਰਤ ਸਕਦੀਆਂ ਹਨ**: ਟੀਮਾਂ ਇਨ੍ਹਾਂ ਭਾਗਾਂ ਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਜੋੜ੍ਹ ਕੇ ਇੱਕ ਕਾਰਗਰ ਪ੍ਰੋਟੋਟਾਈਪ ਤਿਆਰ ਕਰ ਸਕਦੀਆਂ ਹਨ, ਜਿਸ ਨਾਲ ਯੋਗਤਮ ਪ੍ਰਯੋਗ ਅਤੇ ਸੁਧਾਰ ਸੰਭਵ ਹੁੰਦਾ ਹੈ।
 
-**ਇਹ ਅਮਲ ਵਿੱਚ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ**: ਤੁਸੀਂ ਇੱਕ ਪੂਰਵ-ਤਿਆਰ ਕੀਤੇ ਪਾਰਸਰ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ ਯੂਜ਼ਰ ਇਨਪੁਟ ਤੋਂ ਜਾਣਕਾਰੀ ਕੱਢਣ ਲਈ, ਇੱਕ ਮੈਮੋਰੀ ਮਾਡਿਊਲ ਡਾਟਾ ਸਟੋਰ ਅਤੇ ਰੀਟ੍ਰੀਵ ਕਰਨ ਲਈ, ਅਤੇ ਇੱਕ ਪ੍ਰੌਮਪਟ ਜਨਰੇਟਰ ਯੂਜ਼ਰਾਂ ਨਾਲ ਸੰਚਾਰ ਕਰਨ ਲਈ, ਇਹ ਸਭ ਬਿਨਾਂ ਇਹ ਕੰਪੋਨੈਂਟਸ ਸ਼ੁਰੂ ਤੋਂ ਬਣਾਉਣ ਦੀ ਲੋੜ ਤੋਂ।  
+**ਅਮਲੀ ਤੌਰ 'ਤੇ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ**: ਤੁਸੀਂ ਇੱਕ ਪ੍ਰੀ-ਬਿਲਟ ਪਾਰਸਰ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਯੂਜ਼ਰ ਇਨਪੁਟ ਤੋਂ ਜਾਣਕਾਰੀ ਮਿਲਾ ਸਕਦੇ ਹੋ, ਇਕ ਮੈਮੋਰੀ ਮੋਡੀਊਲ ਵਿੱਚ ਡੇਟਾ ਸਟੋਰ ਅਤੇ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ, ਅਤੇ ਇੱਕ ਪ੍ਰਾਂਪਟ ਜਨਰੇਟਰ ਨਾਲ ਇੰਟਰਐਕਟ ਕਰ ਸਕਦੇ ਹੋ, ਬਿਨਾਂ ਇਨ੍ਹਾਂ ਭਾਗਾਂ ਨੂੰ ਸਿਰੇ ਤੋਂ ਬਣਾਉਣ ਦੀ ਲੋੜ ਹੈ।
 
-**ਉਦਾਹਰਣ ਕੋਡ**. ਆਓ ਕੁਝ ਉਦਾਹਰਣਾਂ ਦੇਖੀਏ ਕਿ ਤੁਸੀਂ ਕਿਵੇਂ Semantic Kernel Python ਅਤੇ .Net ਨਾਲ ਇੱਕ ਪੂਰਵ-ਤਿਆਰ ਕੀਤੇ AI ਕਨੈਕਟਰ ਦੀ ਵਰਤੋਂ ਕਰ ਸਕਦੇ ਹੋ ਜੋ ਮਾਡਲ ਨੂੰ ਯੂਜ਼ਰ ਇਨਪੁਟ ਦਾ ਜਵਾਬ ਦੇਣ ਲਈ ਆਟੋ-ਫੰਕਸ਼ਨ ਕਾਲਿੰਗ ਵਰਤਦਾ ਹੈ:
+**ਕੋਡ ਦਾ ਉਦਾਹਰਨ**: ਚਲੋ ਦੇਖੀਏ ਕਿ ਤੁਸੀਂ Microsoft Agent Framework ਨੂੰ `FoundryChatClient` ਨਾਲ ਕਿਵੇਂ ਵਰਤ ਕੇ ਮਾਡਲ ਨੂੰ ਯੂਜ਼ਰ ਇਨਪੁਟ ਤੇ ਟੂਲ ਕਾਲਿੰਗ ਨਾਲ ਜਵਾਬ ਦੇਣ ਲਈ ਕਿਵੇਂ ਬਣਾ ਸਕਦੇ ਹੋ:
 
 ``` python
-# Semantic Kernel Python Example
+# ਮਾਇਕ੍ਰੋਸਾਫਟ ਏਜੰਟ ਫਰੇਮਵਰਕ ਪਾਇਥਨ ਉਦਾਹਰਣ
 
 import asyncio
-from typing import Annotated
+import os
 
-from semantic_kernel.connectors.ai import FunctionChoiceBehavior
-from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureChatPromptExecutionSettings
-from semantic_kernel.contents import ChatHistory
-from semantic_kernel.functions import kernel_function
-from semantic_kernel.kernel import Kernel
-
-# Define a ChatHistory object to hold the conversation's context
-chat_history = ChatHistory()
-chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
+from agent_framework import tool
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 
-# Define a sample plugin that contains the function to book travel
-class BookTravelPlugin:
-    """A Sample Book Travel Plugin"""
-
-    @kernel_function(name="book_flight", description="Book travel given location and date")
-    async def book_flight(
-        self, date: Annotated[str, "The date of travel"], location: Annotated[str, "The location to travel to"]
-    ) -> str:
-        return f"Travel was booked to {location} on {date}"
-
-# Create the Kernel
-kernel = Kernel()
-
-# Add the sample plugin to the Kernel object
-kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
-
-# Define the Azure OpenAI AI Connector
-chat_service = AzureChatCompletion(
-    deployment_name="YOUR_DEPLOYMENT_NAME", 
-    api_key="YOUR_API_KEY", 
-    endpoint="https://<your-resource>.azure.openai.com/",
-)
-
-# Define the request settings to configure the model with auto-function calling
-request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
+# ਯਾਤਰਾ ਬੁੱਕ ਕਰਨ ਲਈ ਇੱਕ ਨਮੂਨਾ ਟੂਲ ਫੰਕਸ਼ਨ ਪਰਿਭਾਸ਼ਿਤ ਕਰੋ
+@tool(approval_mode="never_require")
+def book_flight(date: str, location: str) -> str:
+    """Book travel given location and date."""
+    return f"Travel was booked to {location} on {date}"
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
-    response = await chat_service.get_chat_message_content(
-        chat_history=chat_history, settings=request_settings, kernel=kernel
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
     )
-    assert response is not None
+    agent = provider.as_agent(
+        name="travel_agent",
+        instructions="Help the user book travel. Use the book_flight tool when ready.",
+        tools=[book_flight],
+    )
 
-    """
-    Note: In the auto function calling process, the model determines it can invoke the 
-    `BookTravelPlugin` using the `book_flight` function, supplying the necessary arguments. 
-    
-    For example:
-
-    "tool_calls": [
-        {
-            "id": "call_abc123",
-            "type": "function",
-            "function": {
-                "name": "BookTravelPlugin-book_flight",
-                "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-            }
-        }
-    ]
-
-    Since the location and date arguments are required (as defined by the kernel function), if the 
-    model lacks either, it will prompt the user to provide them. For instance:
-
-    User: Book me a flight to New York.
-    Model: Sure, I'd love to help you book a flight. Could you please specify the date?
-    User: I want to travel on January 1, 2025.
-    Model: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels!
-    """
-
-    print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
-
-    # Add the model's response to our chat history context
-    chat_history.add_assistant_message(response.content)
+    response = await agent.run("I'd like to go to New York on January 1, 2025")
+    print(response)
+    # ਉਦਾਹਰਣ ਨਤੀਜਾ: ਤੁਹਾਡੀ 1 ਜਨਵਰੀ 2025 ਨੂੰ ਨਿਊਯਾਰਕ ਲਈ ਉਡਾਣ ਸਫਲਤਾਪੂਰਵਕ ਬੁੱਕ ਹੋ ਚੁੱਕੀ ਹੈ। ਸੁਰੱਖਿਅਤ ਯਾਤਰਾ! ✈️🗽
 
 
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-```csharp
-// Semantic Kernel C# example
 
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.ChatCompletion;
-using System.ComponentModel;
-using Microsoft.SemanticKernel.Connectors.AzureOpenAI;
+ਇਸ ਉਦਾਹਰਨ ਤੋਂ ਤੁਸੀਂ ਦੇਖ ਸਕਦੇ ਹੋ ਕਿ ਤੁਸੀਂ ਕਿਸ ਤਰ੍ਹਾਂ ਪ੍ਰੀ-ਬਿਲਟ ਪਾਰਸਰ ਦੀ ਵਰਤੋਂ ਕਰ ਕੇ ਯੂਜ਼ਰ ਇਨਪੁਟ ਤੋਂ ਮੁੱਖ ਜਾਣਕਾਰੀ, ਜਿਵੇਂ ਕਿ ਉਤਪੱਤੀ, ਮੰਜ਼ਿਲ, ਅਤੇ ਉਡਾਣ ਦੀ ਮਿਤੀ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹੋ। ਇਹ ਮੋਡੀਊਲਰ ਪਹੁੰਚ ਤੁਹਾਨੂੰ ਉੱਚ-ਸਤਰ ਦੀ ਲਾਜ਼ਿਕ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ ਦਿੰਦੀ ਹੈ।
 
-ChatHistory chatHistory = [];
-chatHistory.AddUserMessage("I'd like to go to New York on January 1, 2025");
+### ਸਹਿਯੋਗੀ ਉਪਕਰਨ ਲਾਭ
 
-var kernelBuilder = Kernel.CreateBuilder();
-kernelBuilder.AddAzureOpenAIChatCompletion(
-    deploymentName: "NAME_OF_YOUR_DEPLOYMENT",
-    apiKey: "YOUR_API_KEY",
-    endpoint: "YOUR_AZURE_ENDPOINT"
-);
-kernelBuilder.Plugins.AddFromType<BookTravelPlugin>("BookTravel"); 
-var kernel = kernelBuilder.Build();
+Microsoft Agent Framework ਵਰਗੇ ਫਰੇਮਵਰਕ ਵੱਖ-ਵੱਖ ਏਜੰਟਾਂ ਨੂੰ ਮਿਲ ਕੇ ਕੰਮ ਕਰਨ ਦੀ ਸਮਰਥਾ ਦਿੱਦੇ ਹਨ।
 
-var settings = new AzureOpenAIPromptExecutionSettings()
-{
-    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
-};
+**ਟੀਮ ਇਹਨਾਂ ਨੂੰ ਕਿਵੇਂ ਵਰਤ ਸਕਦੀਆਂ ਹਨ**: ਟੀਮਾਂ ਵਿਸ਼ੇਸ਼ ਭੂਮਿਕਾਵਾਂ ਅਤੇ ਟਾਸਕਾਂ ਵਾਲੇ ਏਜੰਟ ਡਿਜ਼ਾਈਨ ਕਰ ਸਕਦੀਆਂ ਹਨ, ਜੋ ਸਹਿਯੋਗੀ ਵਰਕਫਲੋਜ਼ ਦੀ ਟੈਸਟਿੰਗ ਅਤੇ ਸੁਧਾਰ ਵੱਲ ਮਦਦ ਕਰਦਾ ਹੈ ਅਤੇ ਸਿਸਟਮ ਦੀ ਕੁੱਲ ਕੁਸ਼ਲਤਾ ਵਧਾਉਂਦਾ ਹੈ।
 
-var chatCompletion = kernel.GetRequiredService<IChatCompletionService>();
+**ਅਮਲੀ ਤੌਰ 'ਤੇ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ**: ਤੁਸੀਂ ਏਜੰਟਾਂ ਦੀ ਟੀਮ ਬਣਾ ਸਕਦੇ ਹੋ ਜਿੱਥੇ ਹਰ ਏਜੰਟ ਦੀ ਇਕ ਵਿਸ਼ੇਸ਼ ਕਿਰਦਾਰ ਹੁੰਦੀ ਹੈ, ਜਿਵੇਂ ਡੇਟਾ ਪ੍ਰਾਪਤੀ, ਵਿਸ਼ਲੇਸ਼ਣ ਜਾਂ ਫੈਸਲਾਬੰਦੀ। ਇਹ ਏਜੰਟ ਇੱਕਠੇ ਗੱਲਬਾਤ ਕਰ ਸਕਦੇ ਹਨ ਅਤੇ ਜਾਣਕਾਰੀ ਸਾਂਝੀ ਕਰਕੇ ਇੱਕ ਸਾਂਝਾ ਲਕੜਾ ਪ੍ਰਾਪਤ ਕਰ ਸਕਦੇ ਹਨ, ਜਿਵੇਂ ਕਿ ਇੱਕ ਉਪਭੋਗਤਾ ਦੇ ਸਵਾਲ ਦਾ ਜਵਾਬ ਦੇਣਾ ਜਾਂ ਕਿਸੇ ਟਾਸਕ ਨੂੰ ਪੂਰਾ ਕਰਨਾ।
 
-var response = await chatCompletion.GetChatMessageContentAsync(chatHistory, settings, kernel);
-
-/*
-Behind the scenes, the model recognizes the tool to call, what arguments it already has (location) and (date)
-{
-
-"tool_calls": [
-    {
-        "id": "call_abc123",
-        "type": "function",
-        "function": {
-            "name": "BookTravelPlugin-book_flight",
-            "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-        }
-    }
-]
-*/
-
-Console.WriteLine(response.Content);
-chatHistory.AddMessage(response!.Role, response!.Content!);
-
-// Example AI Model Response: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽
-
-// Define a plugin that contains the function to book travel
-public class BookTravelPlugin
-{
-    [KernelFunction("book_flight")]
-    [Description("Book travel given location and date")]
-    public async Task<string> BookFlight(DateTime date, string location)
-    {
-        return await Task.FromResult( $"Travel was booked to {location} on {date}");
-    }
-}
-```
-  
-ਤੁਸੀਂ ਇਸ ਉਦਾਹਰਣ ਤੋਂ ਦੇਖ ਸਕਦੇ ਹੋ ਕਿ ਤੁਸੀਂ ਕਿਵੇਂ ਯੂਜ਼ਰ ਇਨਪੁਟ ਤੋਂ ਮੁੱਖ ਜਾਣਕਾਰੀ ਕੱਢਣ ਲਈ ਇੱਕ ਪੂਰਵ-ਤਿਆਰ ਕੀਤੇ ਪਾਰਸਰ ਦਾ ਲਾਭ ਲੈ ਸਕਦੇ ਹੋ, ਜਿਵੇਂ ਕਿ ਉਡਾਣ ਬੁਕਿੰਗ ਬੇਨਤੀ ਦੇ ਮੂਲ, ਮੰਜ਼ਿਲ, ਅਤੇ ਮਿਤੀ। ਇਹ ਮਾਡਿਊਲਰ ਪਹੁੰਚ ਤੁਹਾਨੂੰ ਉੱਚ-ਪੱਧਰ ਦੇ ਤਰਕ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਨ ਦੀ ਆਜ਼ਾਦੀ ਦਿੰਦੀ ਹੈ।  
-
-### ਸਹਿਕਾਰਕ ਟੂਲਾਂ ਦਾ ਲਾਭ ਲਵੋ
-
-CrewAI, Microsoft AutoGen, ਅਤੇ Semantic Kernel ਵਰਗੇ ਫਰੇਮਵਰਕਸ ਕਈ ਏਜੰਟਾਂ ਦੀ ਰਚਨਾ ਨੂੰ ਆਸਾਨ ਬਣਾਉਂਦੇ ਹਨ ਜੋ ਇਕੱਠੇ ਕੰਮ ਕਰ ਸਕਦੇ ਹਨ।  
-
-**ਟੀਮਾਂ ਇਹਨਾਂ ਨੂੰ ਕਿਵੇਂ ਵਰਤ ਸਕਦੀਆਂ ਹਨ**: ਟੀਮਾਂ ਖਾਸ ਭੂਮਿਕਾਵਾਂ ਅਤੇ ਕੰਮਾਂ ਨਾਲ ਏਜੰਟਾਂ ਨੂੰ ਡਿਜ਼ਾਈਨ ਕਰ ਸਕਦੀਆਂ ਹਨ, ਜੋ ਸਹਿਕਾਰਕ ਵਰਕਫਲੋਜ਼ ਦੀ ਜਾਂਚ ਅਤੇ ਸੁਧਾਰ ਕਰਨ ਅਤੇ ਸਮੁੱਚੇ ਸਿਸਟਮ ਦੀ ਕੁਸ਼ਲਤਾ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨ ਯੋਗ ਬਣਾਉਂਦੇ ਹਨ।  
-
-**ਇਹ ਅਮਲ ਵਿੱਚ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ**: ਤੁਸੀਂ ਏਜੰਟਾਂ ਦੀ ਇੱਕ ਟੀਮ ਬਣਾ ਸਕਦੇ ਹੋ ਜਿੱਥੇ ਹਰ ਏਜੰਟ ਦਾ ਇੱਕ ਵਿਸ਼ੇਸ਼ਤ ਫੰਕਸ਼ਨ ਹੁੰਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਡਾਟਾ ਰੀਟ੍ਰੀਵਲ, ਵਿਸ਼ਲੇਸ਼ਣ, ਜਾਂ ਫੈਸਲਾ-ਲੈਣਾ। ਇਹ ਏਜੰਟ ਜਾਣਕਾਰੀ ਸਾਂਝੀ ਕਰਨ ਅਤੇ ਸੰਚਾਰ ਕਰਨ ਦੇ ਯੋਗ ਹਨ ਇੱਕ ਸਾਂਝੇ ਲਕਸ਼ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ, ਜਿਵੇਂ ਕਿ ਯੂਜ਼ਰ ਦੀ ਪੁੱਛਗਿੱਛ ਦਾ ਜਵਾਬ ਦੇਣਾ ਜਾਂ ਇੱਕ ਕੰਮ ਪੂਰਾ ਕਰਨਾ।  
-
-**ਉਦਾਹਰਣ ਕੋਡ (AutoGen)**:
+**ਕੋਡ ਦਾ ਉਦਾਹਰਨ (Microsoft Agent Framework)**:
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# ਮਾਈਕਰੋਸਾਫਟ ਏਜੈਂਟ ਫਰੇਮਵਰਕ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋਏ ਇਕੱਠੇ ਕੰਮ ਕਰਨ ਵਾਲੇ ਕਈ ਏਜੈਂਟ ਬਣਾਉਣਾ
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-agent_retrieve = AssistantAgent(
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
+
+# ਡਾਟਾ ਪ੍ਰਾਪਤੀ ਏਜੈਂਟ
+agent_retrieve = provider.as_agent(
     name="dataretrieval",
-    model_client=model_client,
+    instructions="Retrieve relevant data using available tools.",
     tools=[retrieve_tool],
-    system_message="Use tools to solve tasks."
 )
 
-agent_analyze = AssistantAgent(
+# ਡਾਟਾ ਵਿਸ਼ਲੇਸ਼ਣ ਏਜੈਂਟ
+agent_analyze = provider.as_agent(
     name="dataanalysis",
-    model_client=model_client,
+    instructions="Analyze the retrieved data and provide insights.",
     tools=[analyze_tool],
-    system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
-termination = TextMentionTermination("APPROVE")
-
-user_proxy = UserProxyAgent("user_proxy", input_func=input)
-
-team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
-
-stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
-await Console(stream)
+# ਇੱਕ ਟਾਸਕ 'ਤੇ ਕਰਮਬੱਧਤਾ ਨਾਲ ਏਜੈਂਟ ਚਲਾਓ
+retrieval_result = await agent_retrieve.run("Retrieve sales data for Q4")
+analysis_result = await agent_analyze.run(f"Analyze this data: {retrieval_result}")
+print(analysis_result)
 ```
-  
-ਪਿਛਲੇ ਕੋਡ ਵਿੱਚ ਤੁਸੀਂ ਦੇਖਦੇ ਹੋ ਕਿ ਕਿਵੇਂ ਤੁਸੀਂ ਇੱਕ ਕੰਮ ਬਣਾ ਸਕਦੇ ਹੋ ਜਿਸ ਵਿੱਚ ਕਈ ਏਜੰਟ ਡਾਟਾ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਲਈ ਇਕੱਠੇ ਕੰਮ ਕਰਦੇ ਹਨ। ਹਰ ਏਜੰਟ ਇੱਕ ਵਿਸ਼ੇਸ਼ ਫੰਕਸ਼ਨ ਪੂਰਾ ਕਰਦਾ ਹੈ, ਅਤੇ ਕੰਮ ਨੂੰ ਚਾਹੇ ਗਏ ਨਤੀਜੇ ਨੂੰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਏਜੰਟਾਂ ਨੂੰ ਸਹਿਕਾਰ ਕਰਕੇ ਅੰਜ਼ਾਮ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ। ਖਾਸ ਭੂਮਿਕਾਵਾਂ ਨਾਲ ਸਮਰਪਿਤ ਏਜੰਟ ਬਣਾਉਣ ਦੁਆਰਾ, ਤੁਸੀਂ ਕੰਮ ਦੀ ਕੁਸ਼ਲਤਾ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਵਿੱਚ ਸੁਧਾਰ ਕਰ ਸਕਦੇ ਹੋ।  
 
-### ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਸਿੱਖੋ
+ਤੁਹਾਨੂੰ ਪਿਛਲੇ ਕੋਡ ਵਿੱਚ ਦਿੱਸ ਰਹੀ ਹੈ ਕਿ ਤੁਸੀਂ ਕਿਵੇਂ ਵੱਖ-ਵੱਖ ਵਿਸ਼ੇਸ਼ਤਾ ਵਾਲੇ ਕਈ ਏਜੰਟਾਂ ਦੀ ਟੀਮ ਬਣਾਕੇ ਡਾਟਾ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਨ ਲਈ ਟਾਸਕ ਸਿਰਜ ਸਕਦੇ ਹੋ। ਹਰ ਏਜੰਟ ਇਕ ਨਿਰਧਾਰਤ ਫੰਕਸ਼ਨ ਕਰਦਾ ਹੈ, ਅਤੇ ਟਾਸਕ ਉਹਨਾਂ ਏਜੰਟਾਂ ਦਾ ਸਹਿਯੋਗ ਕਰਕੇ ਲਕੜਾ ਪ੍ਰਾਪਤ ਕਰਦਾ ਹੈ। ਮਖ਼ਸੂਸ ਭੂਮਿਕਾ ਵਾਲੇ ਸਮਰਪਿਤ ਏਜੰਟਾਂ ਦੀ ਰਚਨਾ ਨਾਲ ਤੁਸੀਂ ਟਾਸਕ ਦੀ ਕੁਸ਼ਲਤਾ ਅਤੇ ਪ੍ਰਦਰਸ਼ਨ ਨੂੰ ਵਧਾ ਸਕਦੇ ਹੋ।
 
-ਉੱਨਤ ਫਰੇਮਵਰਕਸ ਰੀਅਲ-ਟਾਈਮ ਸੰਦਰਭ ਸਮਝ ਅਤੇ ਅਨੁਕੂਲਤਾ ਲਈ ਸਮਰੱਥਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ।  
+### ਰੀਅਲ-ਟਾਈਮ ਵਿੱਚ ਸਿੱਖਣਾ
 
-**ਟੀਮਾਂ ਇਹਨਾਂ ਨੂੰ ਕਿਵੇਂ ਵਰਤ ਸਕਦੀਆਂ ਹਨ**: ਟੀਮਾਂ ਫੀਡਬੈਕ ਲੂਪ ਲਾਗੂ ਕਰ ਸਕਦੀਆਂ ਹਨ ਜਿੱਥੇ ਏਜੰਟ ਸੰਚਾਰਾਂ ਤੋਂ ਸਿੱਖਦੇ ਹਨ ਅਤੇ ਆਪਣੇ ਵਿਵਹਾਰ ਨੂੰ ਗਤੀਸ਼ੀਲ ਤੌਰ 'ਤੇ ਅਨੁਕੂਲ ਕਰਦੇ ਹਨ, ਜਿਸ ਨਾਲ ਸਮਰੱਥਾਵਾਂ ਦੀ ਲਗਾਤਾਰ ਸੁਧਾਰ ਅਤੇ ਸੁਧਾਰ ਹੁੰਦਾ ਹੈ।  
+ਅੱਗੇ ਵਧੇ ਹੋਏ ਫਰੇਮਵਰਕਸ ਰੀਅਲ-ਟਾਈਮ ਸਮੱਗਰੀ ਸਮਝਣ ਅਤੇ ਅਨੁਕੂਲਤਾ ਦੀਆਂ صلاحਤਾਂ ਪ੍ਰਦਾਨ ਕਰਦੇ ਹਨ।
 
-**ਇਹ ਅਮਲ ਵਿੱਚ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ**: ਏਜੰਟ ਯੂਜ਼ਰ ਫੀਡਬੈਕ, ਵਾਤਾਵਰਣ ਡਾਟਾ, ਅਤੇ ਕੰਮ ਦੇ ਨਤੀਜਿਆਂ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰ ਸਕਦੇ ਹਨ ਆਪਣੇ ਗਿਆਨ ਅਧਾਰ ਨੂੰ ਅਪਡੇਟ ਕਰਨ ਲਈ, ਫੈਸਲਾ-ਲੈਣ ਵਾਲੇ ਐਲਗੋਰਿਥਮਾਂ ਨੂੰ ਅਨੁਕੂਲ ਕਰਨ ਲਈ, ਅਤੇ ਸਮੇਂ ਦੇ ਨਾਲ ਪ੍ਰਦਰਸ਼ਨ ਵਿੱਚ ਸੁਧਾਰ ਕਰਨ ਲਈ। ਇਹ ਦੁਹਰਾਉਣ ਵਾਲੀ ਸਿੱਖਣ ਪ੍ਰਕਿਰਿਆ ਏਜੰਟਾਂ ਨੂੰ ਬਦਲਦੇ ਹਾਲਾਤਾਂ ਅਤੇ ਯੂਜ਼ਰ ਪਸੰਦਾਂ ਅਨੁਸਾਰ ਅਨੁਕੂਲ ਹੋਣ ਯੋਗ ਬਣਾਉਂਦੀ ਹੈ, ਜਿਸ ਨਾਲ ਸਮੁੱਚੇ ਸਿਸਟਮ ਦੀ ਪ੍ਰਭਾਵਸ਼ੀਲਤਾ ਵਿੱਚ ਸੁਧਾਰ ਹੁੰਦਾ ਹੈ।  
+**ਟੀਮ ਇਹਨਾਂ ਨੂੰ ਕਿਵੇਂ ਵਰਤ ਸਕਦੀਆਂ ਹਨ**: ਟੀਮਾਂ ਫੀਡਬੈਕ ਲੂਪ ਲਾਗੂ ਕਰ ਸਕਦੀਆਂ ਹਨ ਜਿੱਥੇ ਏਜੰਟ ਇੰਟਰਐਕਸ਼ਨਾਂ ਤੋਂ ਸਿੱਖਦੇ ਹਨ ਅਤੇ ਆਪਣਾ ਵਰਤਾਰਾ ਗਤੀਸ਼ੀਲ ਤੌਰ 'ਤੇ ਢਾਲਦੇ ਹਨ, ਜਿਸ ਨਾਲ صلاحਤਾਂ ਦਾ ਲਗਾਤਾਰ ਸੁਧਾਰ ਅਤੇ ਸੰਵਰਧਨ ਹੁੰਦਾ ਹੈ।
 
-## AutoGen, Semantic Kernel ਅਤੇ Azure AI Agent Service ਵਿੱਚ ਕੀ ਅੰਤਰ ਹੈ?
+**ਅਮਲੀ ਤੌਰ 'ਤੇ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ**: ਏਜੰਟ ਉਪਭੋਗਤਾ ਫੀਡਬੈਕ, ਵਾਤਾਵਰਨ ਡੇਟਾ ਅਤੇ ਟਾਸਕ ਨਤੀਜੇ ਦਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਰਦੇ ਹਨ ਤਾਂ ਜੋ ਉਹਨਾਂ ਦਾ ਗਿਆਨ ਬੇਸ ਅਪਡੇਟ ਹੋਵੇ, ਫੈਸਲਾ ਕਰਨ ਵਾਲੇ ਅਲਗੋਰਿਦਮ ਢਾਲੇ ਜਾਣ ਅਤੇ ਸਮੇਂ ਨਾਲ ਪ੍ਰਦਰਸ਼ਨ ਸੁਧਰੇ। ਇਹ ਦੋਹਰਾਇਆ ਜਾਣ ਵਾਲਾ ਸਿੱਖਣ ਵਾਲਾ ਪ੍ਰਕ੍ਰਿਆ ਏਜੰਟਾਂ ਨੂੰ ਬਦਲ ਰਹੀਆਂ ਸਥਿਤੀਆਂ ਅਤੇ ਉਪਭੋਗਤਾ ਦੀਆਂ ਪਸੰਦਾਂ ਦੇ ਅਨੁਕੂਲ ਬਣਾਉਂਦਾ ਹੈ, ਜੋ ਸਮੁੱਚੇ ਸਿਸਟਮ ਦੀ ਪ੍ਰਭਾਵਸ਼ੀਲਤਾ ਵਧਾਉਂਦਾ ਹੈ।
 
-ਇਹਨਾਂ ਫਰੇਮਵਰਕਸ ਦੀ ਤੁਲਨਾ ਕਰਨ ਦੇ ਕਈ ਤਰੀਕੇ ਹਨ, ਪਰ ਆਓ ਇਹਨਾਂ ਦੇ ਡਿਜ਼ਾਈਨ, ਸਮਰੱਥਾਵਾਂ, ਅਤੇ ਟਾਰਗਟ ਯੂਜ਼ ਕੇਸਾਂ ਦੇ ਹਿਸਾਬ ਨਾਲ ਕੁਝ ਮੁੱਖ ਅੰਤਰਾਂ ਨੂੰ ਵੇਖੀਏ:  
+## Microsoft Agent Framework ਅਤੇ Microsoft Foundry Agent Service ਵਿਚਕਾਰ ਕੀ ਫਰਕ ਹਨ?
 
-## AutoGen
+ਇਨ੍ਹਾਂ ਪਹੁੰਚਾਂ ਦੀ ਤੁਲਨਾ ਕਰਨ ਦੇ ਕਈ ਤਰੀਕੇ ਹਨ, ਪਰ ਆਓ ਕੁਝ ਮੁੱਖ ਫਰਕਾਂ ਨੂੰ ਡਿਜ਼ਾਈਨ, صلاحਤਾਂ ਅਤੇ ਲਕੜਾ ਵਰਤੋਂ ਮਾਮਲਿਆਂ ਦੇ ਮੂਡ ਵਿੱਚ ਵੇਖੀਏ:
 
-AutoGen ਮਾਈਕਰੋਸਾਫਟ ਰਿਸਰਚ ਦੇ AI ਫਰੰਟੀਅਰਜ਼ ਲੈਬ ਦੁਆਰਾ ਵਿਕਸਿਤ ਇੱਕ ਖੁੱਲ੍ਹਾ-ਸਰੋਤ ਫਰੇਮਵਰਕ ਹੈ। ਇਹ ਇਵੈਂਟ-ਡ੍ਰਿਵਨ, ਵੰਡੇ ਹੋਏ *agentic* ਐਪਲੀਕੇਸ਼ਨਜ਼ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਦਾ ਹੈ
-ਇਹ ਤੱਥਾਂ ਫਿਰ ਮੈਮੋਰੀ ਕਲੈਕਸ਼ਨ `SummarizedAzureDocs` ਵਿੱਚ ਸਟੋਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ। ਇਹ ਇੱਕ ਬਹੁਤ ਹੀ ਸਧਾਰਨ ਉਦਾਹਰਨ ਹੈ, ਪਰ ਤੁਸੀਂ ਦੇਖ ਸਕਦੇ ਹੋ ਕਿ ਕਿਵੇਂ LLM ਲਈ ਜਾਣਕਾਰੀ ਮੈਮੋਰੀ ਵਿੱਚ ਸਟੋਰ ਕੀਤੀ ਜਾ ਸਕਦੀ ਹੈ।
+## Microsoft Agent Framework (MAF)
 
-ਤਾਂ ਇਹ ਸੀਮੈਂਟਿਕ Kernel ਫਰੇਮਵਰਕ ਦੇ ਬੁਨਿਆਦੀ ਅੰਸ਼ ਹਨ, ਪਰ Agent Framework ਬਾਰੇ ਕੀ?
+Microsoft Agent Framework ਇੱਕ ਸੁਧਾਰਿਆ ਹੋਇਆ SDK ਮੁਹੱਈਆ ਕਰਦਾ ਹੈ ਜੋ `FoundryChatClient` ਦੀ ਵਰਤੋਂ ਕਰਕੇ AI ਏਜੰਟ ਬਣਾਉਂਦਾ ਹੈ। ਇਹ ਵਿਕਾਸਕਾਰਾਂ ਨੂੰ Azure OpenAI ਮਾਡਲਾਂ ਦੀ ਵਰਤੋਂ ਨਾਲ ਟੂਲ ਕਾਲਿੰਗ, ਗੱਲਬਾਤ ਪ੍ਰਬੰਧਨ ਅਤੇ ਐਜ਼ਯੂਰ ਆਈਡੈਂਟਿਟੀ ਦੁਆਰਾ ਏਜੰਟ ਬਣਾਉਣ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ।
 
-## Azure AI Agent Service
+**ਵਰਤੋਂ ਮਾਮਲੇ**: ਟੂਲ ਯੂਜ਼, ਬਹੁ-ਕਦਮੀ ਵਰਕਫਲੋਜ਼, ਅਤੇ ਇੰਟਰਪਰਾਈਜ਼ ਏਕਤਾ ਸਥਿਤੀਆਂ ਨਾਲ ਪ੍ਰੋਡਕਸ਼ਨ ਯੋਗ AI ਏਜੰਟ ਬਣਾਉਣਾ।
 
-Azure AI Agent Service ਇੱਕ ਹਾਲ ਹੀ ਵਿੱਚ ਸ਼ਾਮਲ ਕੀਤੀ ਗਈ ਸੇਵਾ ਹੈ, ਜੋ Microsoft Ignite 2024 ਵਿੱਚ ਪੇਸ਼ ਕੀਤੀ ਗਈ। ਇਹ AI ਏਜੰਟਾਂ ਨੂੰ ਵਿਕਸਿਤ ਅਤੇ ਤੈਨਾਤ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦੀ ਹੈ, ਜਿਵੇਂ ਕਿ Llama 3, Mistral, ਅਤੇ Cohere ਵਰਗੇ ਖੁੱਲੇ-ਸਰੋਤ LLM ਨੂੰ ਸਿੱਧੇ ਕਾਲ ਕਰਨਾ।
+Microsoft Agent Framework ਦੇ ਕੁਝ ਮੁੱਖ ਮੂਲ ਧਾਰਨਾ ਇਹ ਹਨ:
 
-Azure AI Agent Service ਮਜ਼ਬੂਤ ਕਾਰੋਬਾਰੀ ਸੁਰੱਖਿਆ ਮਕੈਨਿਜ਼ਮ ਅਤੇ ਡਾਟਾ ਸਟੋਰੇਜ ਤਰੀਕੇ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ, ਜਿਸ ਨਾਲ ਇਹ ਕਾਰੋਬਾਰੀ ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਉਚਿਤ ਬਣਦੀ ਹੈ।
+- **ਏਜੰਟ**: ਏਜੰਟ `FoundryChatClient` ਰਾਹੀਂ ਬਣਾਇਆ ਜਾਂਦਾ ਹੈ ਅਤੇ ਨਾਮ, ਨਿਰਦੇਸ਼ਾਂ ਅਤੇ ਟੂਲਾਂ ਨਾਲ ਸੰਰਚਿਤ ਹੁੰਦਾ ਹੈ। ਏਜੰਟ ਕਰ ਸਕਦਾ ਹੈ:
+  - **ਯੂਜ਼ਰ ਸੁਨੇਹਿਆਂ ਨੂੰ ਪ੍ਰੋਸੈਸ ਕਰਨਾ** ਅਤੇ Azure OpenAI ਮਾਡਲਾਂ ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਜਵਾਬ ਤਿਆਰ ਕਰਨਾ।
+  - **ਕੰਵਰਸੇਸ਼ਨ ਸੰਦਰਭ ਦੇ ਅਧਾਰ 'ਤੇ ਟੂਲ ਕਾਲ ਕਰਨਾ**।
+  - **ਮੁਲਾਕਾਤਾਂ ਦੇ ਦੌਰਾਨ ਗੱਲਬਾਤ ਦੀ ਸਥਿਤੀ ਬਣਾਈ ਰੱਖਣਾ**।
 
-ਇਹ AutoGen ਅਤੇ Semantic Kernel ਵਰਗੇ ਬਹੁ-ਏਜੰਟ orchestration frameworks ਨਾਲ ਸਿੱਧੇ ਕੰਮ ਕਰਦੀ ਹੈ।
+  ਇੱਥੇ ਇੱਕ ਕੋਡ ਸਨਿੱਪੇਟ ਦਿੱਤਾ ਹੈ ਜੋ ਏਜੰਟ ਬਣਾਉਣ ਦਾ ਪ੍ਰਦਰਸ਼ਨ ਕਰਦਾ ਹੈ:
 
-ਇਹ ਸੇਵਾ ਇਸ ਸਮੇਂ Public Preview ਵਿੱਚ ਹੈ ਅਤੇ Python ਅਤੇ C# ਨੂੰ ਏਜੰਟ ਬਣਾਉਣ ਲਈ ਸਹਾਇਕ ਹੈ।
+    ```python
+    import os
+    from agent_framework.foundry import FoundryChatClient
+    from azure.identity import AzureCliCredential
 
-Semantic Kernel Python ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਅਸੀਂ ਇੱਕ ਵਰਤੋਂਕਾਰ-ਪਰਿਭਾਸ਼ਿਤ ਪਲੱਗਇਨ ਨਾਲ Azure AI Agent ਬਣਾਉਣ ਦੇ ਯੋਗ ਹਾਂ:
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
+    )
+    agent = provider.as_agent(
+        name="my_agent",
+        instructions="You are a helpful assistant.",
+    )
+
+    response = await agent.run("Hello, World!")
+    print(response)
+    ```
+
+- **ਟੂਲ**: ਫਰੇਮਵਰਕ Python ਫੰਕਸ਼ਨਾਂ ਵਜੋਂ ਟੂਲ ਪਰਿਭਾਸ਼ਿਤ ਕਰਨ ਲਈ ਸਹਿਯੋਗ ਦਿੰਦਾ ਹੈ ਜੋ ਏਜੰਟ ਆਟੋਮੈਟਿਕ ਤੌਰ 'ਤੇ ਕਾਲ ਕਰ ਸਕਦਾ ਹੈ। ਟੂਲ ਏਜੰਟ ਬਣਾਉਂਦੇ ਸਮੇਂ ਰਜਿਸਟਰ ਕੀਤੇ ਜਾਂਦੇ ਹਨ:
+
+    ```python
+    def get_weather(location: str) -> str:
+        """Get the current weather for a location."""
+        return f"The weather in {location} is sunny, 72\u00b0F."
+
+    agent = provider.as_agent(
+        name="weather_agent",
+        instructions="Help users check the weather.",
+        tools=[get_weather],
+    )
+    ```
+
+- **ਬਹੁ-ਏਜੰਟ ਸੰਯੋਜਨ**: ਤੁਸੀਂ ਵੱਖ-ਵੱਖ ਖੇਤਰਾਂ ਵਿੱਚ ਵਿਸ਼ੇਸ਼ਤਾ ਰੱਖਣ ਵਾਲੇ ਕਈ ਏਜੰਟ ਬਣਾ ਸਕਦੇ ਹੋ ਅਤੇ ਉਹਨਾਂ ਦਾ ਕੰਮ ਸੰਯੋਜਿਤ ਕਰ ਸਕਦੇ ਹੋ:
+
+    ```python
+    planner = provider.as_agent(
+        name="planner",
+        instructions="Break down complex tasks into steps.",
+    )
+
+    executor = provider.as_agent(
+        name="executor",
+        instructions="Execute the planned steps using available tools.",
+        tools=[execute_tool],
+    )
+
+    plan = await planner.run("Plan a trip to Paris")
+    result = await executor.run(f"Execute this plan: {plan}")
+    ```
+
+- **ਐਜ਼ਯੂਰ ਆਈਡੈਂਟਿਟੀ ਇੰਟੀਗ੍ਰੇਸ਼ਨ**: ਫਰੇਮਵਰਕ `AzureCliCredential` (ਜਾਂ `DefaultAzureCredential`) ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ ਜੋ ਸੁਰੱਖਿਅਤ, ਕੀਲੇਸ ਪ੍ਰਮਾਣੀਕਰਨ ਮੁਹੱਈਆ ਕਰਦਾ ਹੈ ਅਤੇ API ਕੀਜ਼ ਨੂੰ ਸਿੱਧਾ ਸੰਭਾਲਣ ਦੀ ਲੋੜ ਨੂੰ ਖਤਮ ਕਰਦਾ ਹੈ।
+
+## Microsoft Foundry Agent Service
+
+Microsoft Foundry Agent Service ਮਾਇਕ੍ਰੋਸੌਫਟ Ignite 2024 ਵਿੱਚ ਪੇਸ਼ ਕੀਤਾ ਗਿਆ ਇੱਕ ਨਵਾਂ ਐਡ-ਆਨ ਹੈ। ਇਹ AI ਏਜੰਟਾਂ ਦਾ ਵਿਕਾਸ ਅਤੇ ਤੈਨਾਤ ਕਰਨ ਲਈ ਵਧੇਰੇ ਲਚਕੀਲੇ ਮਾਡਲ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ, ਜਿਵੇਂ ਕਿ ਆਪਣੇ ਆਪ Llama 3, Mistral, ਅਤੇ Cohere ਵਰਗੇ ਖੁੱਲ੍ਹਾ ਸਰੋਤ LLMs ਨੂੰ ਸਿੱਧਾ ਕਾਲ ਕਰਨਾ।
+
+Microsoft Foundry Agent Service ਵਧੀਆ ਇੰਟਰਪਰਾਈਜ਼ ਸੁਰੱਖਿਆ ਮਕੈਨਜ਼ਮ ਅਤੇ ਡੇਟਾ ਸਟੋਰੇਜ਼ ਤਰੀਕੇ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ, ਜਿਸ ਨਾਲ ਇਹ ਇੰਟਰਪਰਾਈਜ਼ ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਉਚਿਤ ਹੋ ਜਾਂਦਾ ਹੈ।
+
+ਇਹ Microsoft Agent Framework ਦੇ ਨਾਲ ਬਿਨਾਂ ਕਿਸੇ ਰੁਕਾਵਟ ਦੇ ਕੰਮ ਕਰਦਾ ਹੈ ਤਾਂ ਜੋ ਏਜੰਟ ਬਿਲਡਿੰਗ ਅਤੇ ਤੈਨਾਤ ਕਰਨ ਵਿੱਚ ਮਦਦ ਮਿਲੇ।
+
+ਇਹ ਸੇਵਾ ਅਜੇ ਜਨਤਾ ਲਈ ਪ੍ਰੀਵੀਊ ਵਿੱਚ ਹੈ ਅਤੇ ਏਜੰਟ ਬਿਲਡਿੰਗ ਲਈ Python ਅਤੇ C# ਲੈਂਗਵੇਜ ਸਹਾਇਤਾ ਕਰਦੀ ਹੈ।
+
+Microsoft Foundry Agent Service Python SDK ਦੀ ਵਰਤੋਂ ਕਰਕੇ, ਅਸੀਂ ਇੱਕ ਯੂਜ਼ਰ-ਡਿਫਾਈਨਡ ਟੂਲ ਨਾਲ ਏਜੰਟ ਤਿਆਰ ਕਰ ਸਕਦੇ ਹਾਂ:
 
 ```python
 import asyncio
-from typing import Annotated
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
 
-from azure.identity.aio import DefaultAzureCredential
+# ਟੂਲ ਫੰਕਸ਼ਨਾਂ ਦੀ ਪਰਿਭਾਸ਼ਾ ਕਰੋ
+def get_specials() -> str:
+    """Provides a list of specials from the menu."""
+    return """
+    Special Soup: Clam Chowder
+    Special Salad: Cobb Salad
+    Special Drink: Chai Tea
+    """
 
-from semantic_kernel.agents import AzureAIAgent, AzureAIAgentSettings, AzureAIAgentThread
-from semantic_kernel.contents import ChatMessageContent
-from semantic_kernel.contents import AuthorRole
-from semantic_kernel.functions import kernel_function
-
-
-# Define a sample plugin for the sample
-class MenuPlugin:
-    """A sample Menu Plugin used for the concept sample."""
-
-    @kernel_function(description="Provides a list of specials from the menu.")
-    def get_specials(self) -> Annotated[str, "Returns the specials from the menu."]:
-        return """
-        Special Soup: Clam Chowder
-        Special Salad: Cobb Salad
-        Special Drink: Chai Tea
-        """
-
-    @kernel_function(description="Provides the price of the requested menu item.")
-    def get_item_price(
-        self, menu_item: Annotated[str, "The name of the menu item."]
-    ) -> Annotated[str, "Returns the price of the menu item."]:
-        return "$9.99"
+def get_item_price(menu_item: str) -> str:
+    """Provides the price of the requested menu item."""
+    return "$9.99"
 
 
 async def main() -> None:
-    ai_agent_settings = AzureAIAgentSettings.create()
+    credential = DefaultAzureCredential()
+    project_client = AIProjectClient.from_connection_string(
+        credential=credential,
+        conn_str="your-connection-string",
+    )
 
-    async with (
-        DefaultAzureCredential() as creds,
-        AzureAIAgent.create_client(
-            credential=creds,
-            conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
-        ) as client,
-    ):
-        # Create agent definition
-        agent_definition = await client.agents.create_agent(
-            model=ai_agent_settings.model_deployment_name,
-            name="Host",
-            instructions="Answer questions about the menu.",
+    agent = project_client.agents.create_agent(
+        model="gpt-5-mini",
+        name="Host",
+        instructions="Answer questions about the menu.",
+        tools=[get_specials, get_item_price],
+    )
+
+    thread = project_client.agents.create_thread()
+
+    user_inputs = [
+        "Hello",
+        "What is the special soup?",
+        "How much does that cost?",
+        "Thank you",
+    ]
+
+    for user_input in user_inputs:
+        print(f"# User: '{user_input}'")
+        message = project_client.agents.create_message(
+            thread_id=thread.id,
+            role="user",
+            content=user_input,
         )
-
-        # Create the AzureAI Agent using the defined client and agent definition
-        agent = AzureAIAgent(
-            client=client,
-            definition=agent_definition,
-            plugins=[MenuPlugin()],
+        run = project_client.agents.create_and_process_run(
+            thread_id=thread.id, agent_id=agent.id
         )
-
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
-        thread: AzureAIAgentThread | None = None
-
-        user_inputs = [
-            "Hello",
-            "What is the special soup?",
-            "How much does that cost?",
-            "Thank you",
-        ]
-
-        try:
-            for user_input in user_inputs:
-                print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
-                response = await agent.get_response(
-                    messages=user_input,
-                    thread_id=thread,
-                )
-                print(f"# {response.name}: {response.content}")
-                thread = response.thread
-        finally:
-            await thread.delete() if thread else None
-            await client.agents.delete_agent(agent.id)
+        messages = project_client.agents.list_messages(thread_id=thread.id)
+        print(f"# Agent: {messages.data[0].content[0].text.value}")
 
 
 if __name__ == "__main__":
@@ -382,13 +306,13 @@ if __name__ == "__main__":
 
 ### ਮੁੱਖ ਧਾਰਨਾਵਾਂ
 
-Azure AI Agent Service ਵਿੱਚ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਮੁੱਖ ਧਾਰਨਾਵਾਂ ਹਨ:
+Microsoft Foundry Agent Service ਦੇ ਕੁਝ ਮੁੱਖ ਧਾਰਨਾ ਇਹ ਹਨ:
 
-- **Agent**. Azure AI Agent Service Azure AI Foundry ਨਾਲ ਇੰਟੀਗਰੇਟ ਹੁੰਦੀ ਹੈ। AI Foundry ਵਿੱਚ, ਇੱਕ AI Agent "ਸਮਝਦਾਰ" ਮਾਈਕ੍ਰੋਸਰਵਿਸ ਵਜੋਂ ਕੰਮ ਕਰਦਾ ਹੈ ਜੋ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਦੇਣ (RAG), ਕਾਰਵਾਈ ਕਰਨ ਜਾਂ workflows ਨੂੰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਆਟੋਮੈਟ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਜਨਰੇਟਿਵ AI ਮਾਡਲਾਂ ਦੀ ਸ਼ਕਤੀ ਨੂੰ ਅਸਲ-ਦੁਨੀਆ ਡਾਟਾ ਸਰੋਤਾਂ ਨਾਲ ਇੰਟਰੈਕਟ ਕਰਨ ਦੀ ਯੋਗਤਾ ਨਾਲ ਜੋੜ ਕੇ ਇਹ ਹਾਸਲ ਕਰਦਾ ਹੈ। ਇੱਥੇ ਇੱਕ ਏਜੰਟ ਦਾ ਉਦਾਹਰਨ ਹੈ:
+- **ਏਜੰਟ**: Microsoft Foundry Agent Service Microsoft Foundry ਨਾਲ ਮਿਲ ਕੇ ਕੰਮ ਕਰਦਾ ਹੈ। Microsoft Foundry ਵਿੱਚ AI ਏਜੰਟ 'ਸਮਾਰਟ' ਮਾਈਕ੍ਰੋਸਰਵਿਸ ਵਜੋਂ ਕੰਮ ਕਰਦਾ ਹੈ ਜੋ ਸਵਾਲਾਂ (RAG), ਕਾਰਵਾਈਆਂ ਜਾਂ ਵਰਕਫਲੋਜ਼ ਨੂੰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਆਟੋਮੇਟ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ। ਇਹ ਜੇਨੇਰੇਟਿਵ AI ਮਾਡਲਾਂ ਦੀ ਤਾਕਤ ਅਤੇ ਉਪਕਰਨਾਂ ਨੂੰ ਮਿਲਾ ਕੇ ਹਕੀਕਤੀ ਡੇਟਾ ਸਰੋਤਾਂ ਨਾਲ ਪਹੁੰਚ ਅਤੇ ਅੰਤਰਕਿਰਿਆ ਕਰਨ ਯੋਗ ਬਨਾਉਂਦਾ ਹੈ। ਇੱਥੇ ਇੱਕ ਏਜੰਟ ਦਾ ਉਦਾਹਰਨ ਦਿੱਤਾ ਗਿਆ ਹੈ:
 
     ```python
     agent = project_client.agents.create_agent(
-        model="gpt-4o-mini",
+        model="gpt-5-mini",
         name="my-agent",
         instructions="You are helpful agent",
         tools=code_interpreter.definitions,
@@ -396,9 +320,9 @@ Azure AI Agent Service ਵਿੱਚ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਮੁ
     )
     ```
 
-    ਇਸ ਉਦਾਹਰਨ ਵਿੱਚ, `gpt-4o-mini` ਮਾਡਲ, `my-agent` ਨਾਮ, ਅਤੇ `You are helpful agent` ਹਦਾਇਤਾਂ ਨਾਲ ਇੱਕ ਏਜੰਟ ਬਣਾਇਆ ਗਿਆ ਹੈ। ਏਜੰਟ ਕੋਡ ਵਿਆਖਿਆਤਮਕ ਕਾਰਜਾਂ ਨੂੰ ਕਰਨ ਲਈ ਸੰਦਾਂ ਅਤੇ ਸਰੋਤਾਂ ਨਾਲ ਸਜਾਇਆ ਗਿਆ ਹੈ।
+    ਇਸ ਉਦਾਹਰਨ ਵਿੱਚ, ਇੱਕ ਏਜੰਟ ਮਾਡਲ `gpt-5-mini` ਨਾਲ ਬਣਾਇਆ ਗਿਆ ਹੈ, ਨਾਮ `my-agent`, ਅਤੇ ਨਿਰਦੇਸ਼ਾਂ `ਤੁਸੀਂ ਮਦਦਗਾਰ ਏਜੰਟ ਹੋ`. ਇਹ ਏਜੰਟ ਕੋਡ ਵਿਆਖਿਆ ਕਰਨ ਵਾਲੇ ਕੰਮਾਂ ਨੂੰ ਕਰਨ ਲਈ ਟੂਲਾਂ ਅਤੇ ਸਰੋਤਾਂ ਨਾਲ ਸਜਿਆ ਹੋਇਆ ਹੈ।
 
-- **Thread ਅਤੇ messages**. Thread ਇੱਕ ਹੋਰ ਮਹੱਤਵਪੂਰਨ ਧਾਰਨਾ ਹੈ। ਇਹ ਇੱਕ ਏਜੰਟ ਅਤੇ ਵਰਤੋਂਕਾਰ ਦੇ ਵਿਚਕਾਰ ਗੱਲਬਾਤ ਜਾਂ ਇੰਟਰੈਕਸ਼ਨ ਨੂੰ ਦਰਸਾਉਂਦੀ ਹੈ। Threads ਗੱਲਬਾਤ ਦੀ ਪ੍ਰਗਤੀ ਨੂੰ ਟ੍ਰੈਕ ਕਰਨ, ਸੰਦਰਭ ਜਾਣਕਾਰੀ ਸਟੋਰ ਕਰਨ, ਅਤੇ ਇੰਟਰੈਕਸ਼ਨ ਦੀ ਸਥਿਤੀ ਨੂੰ ਪ੍ਰਬੰਧਿਤ ਕਰਨ ਲਈ ਵਰਤੀ ਜਾ ਸਕਦੀ ਹੈ। ਇੱਥੇ ਇੱਕ Thread ਦਾ ਉਦਾਹਰਨ ਹੈ:
+- **ਥ੍ਰੈਡ ਅਤੇ ਸੁਨੇਹੇ**: ਥ੍ਰੈਡ ਇੱਕ ਹੋਰ ਮਹੱਤਵਪੂਰਨ ਧਾਰਨਾ ਹੈ। ਇਹ ਇੱਕ ਗੱਲਬਾਤ ਜਾਂ ਉਪਭੋਗਤਾ ਅਤੇ ਏਜੰਟ ਵਿਚਕਾਰ ਇੰਟਰਐਕਸ਼ਨ ਪ੍ਰਦਰਸ਼ਿਤ ਕਰਦਾ ਹੈ। ਥ੍ਰੈਡਾਂ ਗੱਲਬਾਤ ਦੀ ਪ੍ਰਗਤੀ ਟਰੈਕ ਕਰਨ, ਸੰਦਰਭ ਜਾਣਕਾਰੀ ਸਟੋਰ ਕਰਨ ਅਤੇ ਅੰਤਰਕਿਰਿਆ ਦੀ ਸਥਿਤੀ ਪ੍ਰਬੰਧਤ ਕਰ ਸਕਦੀਆਂ ਹਨ। ਇੱਥੇ ਇੱਕ ਥ੍ਰੈਡ ਦਾ ਉਦਾਹਰਨ ਦਿੱਤਾ ਗਿਆ ਹੈ:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -408,83 +332,87 @@ Azure AI Agent Service ਵਿੱਚ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਮੁ
         content="Could you please create a bar chart for the operating profit using the following data and provide the file to me? Company A: $1.2 million, Company B: $2.5 million, Company C: $3.0 million, Company D: $1.8 million",
     )
     
-    # Ask the agent to perform work on the thread
+    # ਏਜੰਟ ਨੂੰ ਥ੍ਰੇਡ ਤੇ ਕੰਮ ਕਰਨ ਲਈ ਕਹੋ
     run = project_client.agents.create_and_process_run(thread_id=thread.id, agent_id=agent.id)
     
-    # Fetch and log all messages to see the agent's response
+    # ਏਜੰਟ ਦੀ ਪ੍ਰਤੀਕਿਰਿਆ ਵੇਖਣ ਲਈ ਸਾਰੇ ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਕਰੋ ਅਤੇ ਲਾਗ ਕਰੋ
     messages = project_client.agents.list_messages(thread_id=thread.id)
     print(f"Messages: {messages}")
     ```
 
-    ਪਿਛਲੇ ਕੋਡ ਵਿੱਚ, ਇੱਕ Thread ਬਣਾਈ ਗਈ। ਇਸ ਤੋਂ ਬਾਅਦ, Thread ਨੂੰ ਇੱਕ ਸੁਨੇਹਾ ਭੇਜਿਆ ਗਿਆ। `create_and_process_run` ਨੂੰ ਕਾਲ ਕਰਕੇ, ਏਜੰਟ ਨੂੰ Thread 'ਤੇ ਕੰਮ ਕਰਨ ਲਈ ਕਿਹਾ ਗਿਆ। ਆਖਿਰਕਾਰ, ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਕੀਤੇ ਜਾਂਦੇ ਹਨ ਅਤੇ ਏਜੰਟ ਦੇ ਜਵਾਬ ਨੂੰ ਦੇਖਣ ਲਈ ਲੌਗ ਕੀਤੇ ਜਾਂਦੇ ਹਨ। ਸੁਨੇਹੇ ਵਰਤੋਂਕਾਰ ਅਤੇ ਏਜੰਟ ਦੇ ਵਿਚਕਾਰ ਗੱਲਬਾਤ ਦੀ ਪ੍ਰਗਤੀ ਨੂੰ ਦਰਸਾਉਂਦੇ ਹਨ। ਇਹ ਵੀ ਮਹੱਤਵਪੂਰਨ ਹੈ ਕਿ ਸੁਨੇਹੇ ਵੱਖ-ਵੱਖ ਕਿਸਮਾਂ ਦੇ ਹੋ ਸਕਦੇ ਹਨ ਜਿਵੇਂ ਕਿ ਟੈਕਸਟ, ਚਿੱਤਰ, ਜਾਂ ਫਾਈਲ, ਜੋ ਕਿ ਏਜੰਟ ਦੇ ਕੰਮ ਦਾ ਨਤੀਜਾ ਹੈ। ਇੱਕ ਡਿਵੈਲਪਰ ਵਜੋਂ, ਤੁਸੀਂ ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਅੱਗੇ ਪ੍ਰਕਿਰਿਆ ਕਰਨ ਜਾਂ ਵਰਤੋਂਕਾਰ ਨੂੰ ਪੇਸ਼ ਕਰਨ ਲਈ ਵਰਤ ਸਕਦੇ ਹੋ।
+    ਪਿਛਲੇ ਕੋਡ ਵਿੱਚ, ਇੱਕ ਥ੍ਰੈਡ ਬਣਾਇਆ ਗਿਆ ਹੈ। ਫਿਰ ਥ੍ਰੈਡ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜਿਆ ਗਿਆ। `create_and_process_run` ਕਾਲ ਕਰਕੇ, ਏਜੰਟ ਨੂੰ ਥ੍ਰੈਡ 'ਤੇ ਕੰਮ ਕਰਨ ਨੂੰ ਕਿਹਾ ਗਿਆ। ਆਖ਼ਿਰ ਵਿੱਚ, ਸੁਨੇਹੇ ਪ੍ਰਾਪਤ ਕੀਤੇ ਗਏ ਅਤੇ ਏਜੰਟ ਦੇ ਜਵਾਬ ਨੂੰ ਲੌਗ ਕੀਤਾ ਗਿਆ। ਸੁਨੇਹੇ ਗੱਲਬਾਤ ਦੀ ਪ੍ਰਗਤੀ ਦਰਸਾਉਂਦੇ ਹਨ। ਇਹ ਸਮਝਣਾ ਮਹੱਤਵਪੂਰਨ ਹੈ ਕਿ ਸੁਨੇਹੇ ਵੱਖ-ਵੱਖ ਕਿਸਮਾਂ ਦੇ ਹੋ ਸਕਦੇ ਹਨ ਜਿਵੇਂ ਕਿ ਟੈਕਸਟ, ਤਸਵੀਰ ਜਾਂ ਫਾਈਲ, ਮਤਲਬ ਏਜੰਟ ਦਾ ਕੰਮ ਜਿਵੇਂ ਕਿ ਇੱਕ ਤਸਵੀਰ ਜਾਂ ਇੱਕ ਟੈਕਸਟ ਜਵਾਬ ਹੈ। ਇੱਕ ਵਿਕਾਸਕਾਰ ਵਜੋਂ, ਤੁਸੀਂ ਇਸ ਜਾਣਕਾਰੀ ਨੂੰ ਜਵਾਬ ਨੂੰ ਅਗਲੇ ਪ੍ਰਕਿਰਿਆ ਜਾਂ ਯੂਜ਼ਰ ਨੂੰ ਦਰਸਾਉਣ ਲਈ ਵਰਤ ਸਕਦੇ ਹੋ।
 
-- **ਹੋਰ AI frameworks ਨਾਲ ਇੰਟੀਗਰੇਟ ਕਰਦਾ ਹੈ**. Azure AI Agent Service AutoGen ਅਤੇ Semantic Kernel ਵਰਗੇ frameworks ਨਾਲ ਇੰਟਰੈਕਟ ਕਰ ਸਕਦਾ ਹੈ, ਜਿਸਦਾ ਮਤਲਬ ਹੈ ਕਿ ਤੁਸੀਂ ਆਪਣੇ ਐਪ ਦਾ ਕੁਝ ਹਿੱਸਾ ਇਨ੍ਹਾਂ frameworks ਵਿੱਚ ਬਣਾਉਣ ਲਈ ਵਰਤ ਸਕਦੇ ਹੋ ਅਤੇ ਉਦਾਹਰਨ ਵਜੋਂ Agent Service ਨੂੰ orchestrator ਵਜੋਂ ਵਰਤ ਸਕਦੇ ਹੋ ਜਾਂ ਤੁਸੀਂ ਸਾਰਾ ਕੁਝ Agent Service ਵਿੱਚ ਬਣਾਉਣ ਲਈ ਵਰਤ ਸਕਦੇ ਹੋ।
+- **Microsoft Agent Framework ਨਾਲ ਇੰਟੈਗਰੇਸ਼ਨ**: Microsoft Foundry Agent Service Microsoft Agent Framework ਨਾਲ ਬਿਨਾਂ ਰੁਕਾਵਟ ਦੇ ਨਾਲ ਕੰਮ ਕਰਦਾ ਹੈ, ਜਿਸਦਾ ਅਰਥ ਹੈ ਕਿ ਤੁਸੀਂ `FoundryChatClient` ਦੀ ਵਰਤੋਂ ਕਰ ਕੇ ਏਜੰਟ ਬਣਾ ਸਕਦੇ ਹੋ ਅਤੇ ਉਹਨਾਂ ਨੂੰ Agent Service ਰਾਹੀਂ ਪ੍ਰੋਡਕਸ਼ਨ ਲਈ ਤੈਨਾਤ ਕਰ ਸਕਦੇ ਹੋ।
 
-**ਵਰਤੋਂ ਦੇ ਕੇਸ**: Azure AI Agent Service ਕਾਰੋਬਾਰੀ ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਡਿਜ਼ਾਈਨ ਕੀਤੀ ਗਈ ਹੈ ਜੋ ਸੁਰੱਖਿਅਤ, ਸਕੇਲਯੋਗ, ਅਤੇ ਲਚਕਦਾਰ AI ਏਜੰਟ ਤੈਨਾਤ ਕਰਨ ਦੀ ਲੋੜ ਰੱਖਦੀ ਹੈ।
+**ਵਰਤੋਂ ਮਾਮਲੇ**: Microsoft Foundry Agent Service ਉਹਨਾਂ ਇੰਟਰਪਰਾਈਜ਼ ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ ਜਿਹੜੇ ਸੁਰੱਖਿਅਤ, ਸਕੇਲਯੋਗ ਅਤੇ ਲਚਕੀਲੀ AI ਏਜੰਟ ਤੈਨਾਤੀ ਦੀ ਲੋੜ ਰੱਖਦੇ ਹਨ।
 
-## ਇਨ੍ਹਾਂ frameworks ਵਿੱਚ ਕੀ ਅੰਤਰ ਹੈ?
+## ਇਹਨਾਂ ਪਹੁੰਚਾਂ ਵਿਚਕਾਰ ਕੀ ਫਰਕ ਹੈ?
+ 
+ਇਹ ਸਚ ਹੈ ਕਿ ਇਨ੍ਹਾਂ ਵਿੱਚ ਕੁਝ ਓਵਰਲੈਪ ਹੈ, ਪਰ ਡਿਜ਼ਾਈਨ, صلاحਤਾਂ ਅਤੇ ਲਕੜਾ ਵਰਤੋਂ ਮਾਮਲਿਆਂ ਵਿੱਚ ਕੁਝ ਮੁੱਖ ਫਰਕ ਹਨ:
+ 
+- **Microsoft Agent Framework (MAF)**: ਇੱਕ ਪ੍ਰੋਡਕਸ਼ਨ-ਯੋਗ SDK ਹੈ ਜੋ AI ਏਜੰਟ ਬਣਾਉਂਦਾ ਹੈ। ਇਹ ਟੂਲ ਕਾਲਿੰਗ, ਗੱਲਬਾਤ ਪ੍ਰਬੰਧਨ ਅਤੇ Azure ਆਈਡੈਂਟਿਟੀ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਲਈ ਇੱਕ ਸਧਾਰਨ API ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ।
+- **Microsoft Foundry Agent Service**: Microsoft Foundry ਵਿੱਚ ਇੱਕ ਪਲੇਟਫਾਰਮ ਅਤੇ ਤੈਨਾਤੀ ਸੇਵਾ ਹੈ। ਇਹ Azure OpenAI, Azure AI Search, Bing Search ਅਤੇ ਕੋਡ ਚਲਾਉਣ ਵਰਗੀਆਂ ਸੇਵਾਵਾਂ ਨਾਲ ਇੰਬਿਲਟ ਕਨੈਕਟੀਵਟੀ ਮੁਹੱਈਆ ਕਰਵਾਉਂਦੀ ਹੈ।
+ 
+ਅਜੇ ਵੀ ਇਹ ਪਤਾ ਨਹੀਂ ਕਿ ਕਿਹੜਾ ਚੁਣਨਾ ਹੈ?
 
-ਇਹ frameworks ਵਿੱਚ ਕਾਫ਼ੀ ਸਾਰੀਆਂ ਸਮਾਨਤਾਵਾਂ ਲੱਗਦੀਆਂ ਹਨ, ਪਰ ਉਨ੍ਹਾਂ ਦੇ ਡਿਜ਼ਾਈਨ, ਯੋਗਤਾਵਾਂ, ਅਤੇ ਟਾਰਗਟ ਵਰਤੋਂ ਦੇ ਕੇਸਾਂ ਦੇ ਹਿਸਾਬ ਨਾਲ ਕੁਝ ਮੁੱਖ ਅੰਤਰ ਹਨ:
+### ਵਰਤੋਂ ਮਾਮਲੇ
+ 
+ਆਓ ਕੁਝ ਆਮ ਵਰਤੋਂ ਮਾਮਲਿਆਂ 'ਚੋਂ ਤੁਹਾਡੇ ਲਈ ਮਦਦ ਕਰੀਏ:
+ 
+> ਸਵਾਲ: ਮੈਂ ਪ੍ਰੋਡਕਸ਼ਨ AI ਏਜੰਟ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦਾ ਵਿਕਾਸ ਕਰ ਰਿਹਾ ਹਾਂ ਅਤੇ ਤੇਜ਼ੀ ਨਾਲ ਸ਼ੁਰੂਆਤ ਕਰਨੀ ਚਾਹੁੰਦਾ ਹਾਂ
+>
 
-- **AutoGen**: ਇਹ ਬਹੁ-ਏਜੰਟ ਸਿਸਟਮਾਂ 'ਤੇ ਅਗੇਤਮ ਗਹਿਰਾਈ ਨਾਲ ਖੋਜ ਕਰਨ ਲਈ ਇੱਕ ਪ੍ਰਯੋਗਾਤਮਕ framework ਹੈ। ਇਹ ਜਟਿਲ ਬਹੁ-ਏਜੰਟ ਸਿਸਟਮਾਂ ਨੂੰ ਪ੍ਰੋਟੋਟਾਈਪ ਕਰਨ ਅਤੇ ਪ੍ਰਯੋਗ ਕਰਨ ਲਈ ਸਭ ਤੋਂ ਵਧੀਆ ਥਾਂ ਹੈ।
-- **Semantic Kernel**: ਇਹ ਕਾਰੋਬਾਰੀ agentic ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਲਈ production-ready agent ਲਾਇਬ੍ਰੇਰੀ ਹੈ। ਇਹ ਘਟਨਾ-ਚਲਿਤ, ਵੰਡੇ agentic ਐਪਲੀਕੇਸ਼ਨਾਂ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਦਾ ਹੈ, ਜੋ ਕਈ LLMs ਅਤੇ SLMs, ਸੰਦਾਂ, ਅਤੇ ਸਿੰਗਲ/ਮਲਟੀ-ਏਜੰਟ ਡਿਜ਼ਾਈਨ ਪੈਟਰਨ ਨੂੰ ਯੋਗ ਬਣਾਉਂਦਾ ਹੈ।
-- **Azure AI Agent Service**: ਇਹ Azure Foundry ਵਿੱਚ ਏਜੰਟਾਂ ਲਈ ਇੱਕ ਪਲੇਟਫਾਰਮ ਅਤੇ ਤੈਨਾਤ ਸੇਵਾ ਹੈ। ਇਹ Azure Foundry ਦੁਆਰਾ ਸਹਾਇਕ ਸੇਵਾਵਾਂ ਨਾਲ ਕਨੈਕਟਿਵਿਟੀ ਬਣਾਉਣ ਦੀ ਪੇਸ਼ਕਸ਼ ਕਰਦਾ ਹੈ ਜਿਵੇਂ ਕਿ Azure OpenAI, Azure AI Search, Bing Search ਅਤੇ ਕੋਡ ਐਗਜ਼ਿਕਿਊਸ਼ਨ।
+>ਜਵਾਬ: Microsoft Agent Framework ਇੱਕ ਵਧੀਆ ਚੋਣ ਹੈ। ਇਹ `FoundryChatClient` ਰਾਹੀਂ ਇੱਕ ਸਧਾਰਨ, Python ਪ੍ਰਕਾਰ ਦਾ API ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ ਜੋ ਤੁਹਾਨੂੰ ਕੁਝ ਲਾਈਨਾਂ ਕੋਡ ਨਾਲ ਟੂਲਾਂ ਅਤੇ ਨਿਰਦੇਸ਼ਾਂ ਵਾਲੇ ਏਜੰਟ ਤਿਆਰ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦਾ ਹੈ।
 
-## ਵਰਤੋਂ ਦੇ ਕੇਸ
+>ਸਵਾਲ: ਮੈਨੂੰ ਇੰਟਰਪਰਾਈਜ਼-ਗ੍ਰੇਡ ਤੈਨਾਤੀ ਦੀ ਜ਼ਰੂਰਤ ਹੈ ਜਿਸ ਵਿੱਚ Azure ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਜਿਵੇਂ Search ਅਤੇ ਕੋਡ ਚਲਾਉਣਾ ਸ਼ਾਮਲ ਹਨ
+>
+>ਜਵਾਬ: Microsoft Foundry Agent Service ਸਭ ਤੋਂ ਉਚਿਤ ਹੈ। ਇਹ ਪਲੇਟਫਾਰਮ ਸੇਵਾ ਹੈ ਜੋ ਕਈ ਮਾਡਲ, Azure AI Search, Bing Search ਅਤੇ Azure Functions ਲਈ ਇੰਬਿਲਟ صلاحਤਾਂ ਮੁਹੱਈਆ ਕਰਵਾਉਂਦੀ ਹੈ। ਇਹ Foundry ਪੋਰਟਲ ਵਿੱਚ ਤੁਹਾਡੇ ਏਜੰਟ ਬਨਾਉਣ ਅਤੇ ਸਕੇਲ ਤੇ ਤੈਨਾਤ ਕਰਨ ਨੂੰ ਆਸਾਨ ਬਣਾਉਂਦਾ ਹੈ।
+ 
+> ਸਵਾਲ: ਮੈਂ ਹੁਣ ਵੀ ਗੁੰਝਲ ਵਿੱਚ ਹਾਂ, ਸਿਰਫ ਇੱਕ ਵਿਕਲਪ ਦਿਓ
+>
+>ਜਵਾਬ: ਆਪਣੇ ਏਜੰਟ ਬਣਾਉਣ ਲਈ Microsoft Agent Framework ਨਾਲ ਸ਼ੁਰੂਆਤ ਕਰੋ, ਅਤੇ ਜਦੋਂ ਤੁਹਾਨੂੰ ਉਨ੍ਹਾਂ ਨੂੰ ਪ੍ਰੋਡਕਸ਼ਨ ਵਿੱਚ ਤੈਨਾਤ ਅਤੇ ਸਕੇਲ ਕਰਨ ਦੀ ਲੋੜ ਹੋਵੇ ਤਾਂ Microsoft Foundry Agent Service ਦੀ ਵਰਤੋਂ ਕਰੋ। ਇਹ ਪਹੁੰਚ ਤੁਹਾਨੂੰ ਤੇਜ਼ੀ ਨਾਲ ਆਪਣੀ ਏਜੰਟ ਲਾਜਿਕ 'ਤੇ ਕੰਮ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦੀ ਹੈ ਅਤੇ ਇੰਟਰਪਰਾਈਜ਼ ਤੈਨਾਤੀ ਲਈ ਇੱਕ ਸਾਫ ਰਸਤਾ ਪ੍ਰਦਾਨ ਕਰਦੀ ਹੈ।
+ 
+ਆਓ ਕੁਝ ਮੁੱਖ ਫਰਕਾਂ ਬਾਰੇ ਇੱਕ ਟੇਬਲ ਵਿੱਚ ਸੰਖੇਪ ਕਰੀਏ:
 
-ਆਓ ਕੁਝ ਆਮ ਵਰਤੋਂ ਦੇ ਕੇਸਾਂ ਦੇ ਜ਼ਰੀਏ ਤੁਹਾਡੀ ਮਦਦ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੀਏ:
+| ਫਰੇਮਵਰਕ | ਧਿਆਨ | ਮੁੱਖ ਧਾਰਨਾ | ਵਰਤੋਂ ਮਾਮਲੇ |
+| --- | --- | --- | --- |
+| Microsoft Agent Framework | ਟੂਲ ਕਾਲਿੰਗ ਨਾਲ ਸੁਧਾਰਿਆ ਗਿਆ ਏਜੰਟ SDK | ਏਜੰਟ, ਟੂਲਜ਼, Azure ਆਈਡੈਂਟਿਟੀ | AI ਏਜੰਟ ਬਣਾਉਣਾ, ਟੂਲ ਵਰਤੋਂ, ਬਹੁ-ਕਦਮੀ ਵਰਕਫਲੋਜ਼ |
+| Microsoft Foundry Agent Service | ਲਚਕੀਲੇ ਮਾਡਲ, ਇੰਟਰਪਰਾਈਜ਼ ਸੁਰੱਖਿਆ, ਕੋਡ ਜਨਰੇਸ਼ਨ, ਟੂਲ ਕਾਲਿੰਗ | ਮੋਡੀਊਲਰਿਟੀ, ਸਹਿਯੋਗ, ਪ੍ਰਕਿਰਿਆ ਆਰਕੀਸਟ੍ਰੇਸ਼ਨ | ਸੁਰੱਖਿਅਤ, ਸਕੇਲਯੋਗ, ਅਤੇ ਲਚਕੀਲੀ AI ਏਜੰਟ ਤੈਨਾਤੀ |
 
-> Q: ਮੈਂ ਪ੍ਰਯੋਗ ਕਰ ਰਿਹਾ ਹਾਂ, ਸਿੱਖ ਰਿਹਾ ਹਾਂ ਅਤੇ proof-of-concept agent ਐਪਲੀਕੇਸ਼ਨਾਂ ਬਣਾਉਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਿਹਾ ਹਾਂ, ਅਤੇ ਮੈਂ ਤੇਜ਼ੀ ਨਾਲ ਬਣਾਉਣ ਅਤੇ ਪ੍ਰਯੋਗ ਕਰਨ ਦੇ ਯੋਗ ਹੋਣਾ ਚਾਹੁੰਦਾ ਹਾਂ।
+## ਕੀ ਮੈਂ ਆਪਣੇ ਮੌਜੂਦਾ Azure ਇਕੋਸਿਸਟਮ ਟੂਲਜ਼ ਨੂੰ ਸਿੱਧਾ ਜੋੜ ਸਕਦਾ ਹਾਂ, ਜਾਂ ਕੀ ਮੈਨੂੰ ਅਲੱਗ ਸਟੈਂਡਅਲੋਨ ਹੱਲਾਂ ਦੀ ਲੋੜ ਹੈ?
 
-> A: AutoGen ਇਸ ਸਥਿਤੀ ਲਈ ਇੱਕ ਵਧੀਆ ਚੋਣ ਹੋਵੇਗੀ, ਕਿਉਂਕਿ ਇਹ ਘਟਨਾ-ਚਲਿਤ, ਵੰਡੇ agentic ਐਪਲੀਕੇਸ਼ਨਾਂ 'ਤੇ ਧਿਆਨ ਕੇਂਦਰਿਤ ਕਰਦਾ ਹੈ ਅਤੇ ਉੱਚ-ਤਕਨੀਕੀ ਬਹੁ-ਏਜੰਟ ਡਿਜ਼ਾਈਨ ਪੈਟਰਨਾਂ ਨੂੰ ਸਹਾਇਕ ਕਰਦਾ ਹੈ।
 
-> Q: AutoGen Semantic Kernel ਅਤੇ Azure AI Agent Service ਨਾਲੋਂ ਇਸ ਵਰਤੋਂ ਦੇ ਕੇਸ ਲਈ ਵਧੀਆ ਚੋਣ ਕਿਉਂ ਹੈ?
+ਜਵਾਬ ਹਾਂ ਹੈ, ਤੁਸੀਂ ਆਪਣੇ ਮੌਜੂਦਾ Azure ਇੱਕੋਸਿਸਟਮ ਟੂਲਜ਼ ਨੂੰ Microsoft Foundry Agent Service ਨਾਲ ਸਿੱਧਾ ਇੰਟੀਗ੍ਰੇਟ ਕਰ ਸਕਦੇ ਹੋ, ਖਾਸ ਤੌਰ 'ਤੇ ਕਿਉਂਕਿ ਇਹ ਹੋਰ Azure ਸੇਵਾਵਾਂ ਨਾਲ ਬਿਨਾ ਰੁਕਾਵਟ ਕੰਮ ਕਰਨ ਲਈ ਤਿਆਰ ਕੀਤਾ ਗਿਆ ਹੈ। ਤੁਸੀਂ ਉਦਾਹਰਨ ਵਜੋਂ Bing, Azure AI Search, ਅਤੇ Azure Functions ਨੂੰ ਇੰਟੀਗ੍ਰੇਟ ਕਰ ਸਕਦੇ ਹੋ। Microsoft Foundry ਨਾਲ ਵੀ ਗਹਿਰਾ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਹੈ।
 
-> A: AutoGen ਖਾਸ ਤੌਰ 'ਤੇ ਘਟਨਾ-ਚਲਿਤ, ਵੰਡੇ agentic ਐਪਲੀਕੇਸ਼ਨਾਂ ਲਈ ਡਿਜ਼ਾਈਨ ਕੀਤਾ ਗਿਆ ਹੈ, ਜਿਸ ਨਾਲ ਇਹ ਕੋਡ ਜਨਰੇਸ਼ਨ ਅਤੇ ਡਾਟਾ ਵਿਸ਼ਲੇਸ਼ਣ ਕਾਰਜਾਂ ਨੂੰ ਆਟੋਮੈਟ ਕਰਨ ਲਈ ਬਹੁਤ ਹੀ ਉਚਿਤ ਬਣਦਾ ਹੈ। ਇਹ ਜਟਿਲ ਬਹੁ-ਏਜੰਟ ਸਿਸਟਮਾਂ ਨੂੰ ਕੁਸ਼ਲਤਾਪੂਰਵਕ ਬਣਾਉਣ ਲਈ ਜ਼ਰੂਰੀ ਸੰਦ ਅਤੇ ਯੋਗਤਾਵਾਂ ਪ੍ਰਦਾਨ ਕਰਦਾ ਹੈ।
+Microsoft Agent Framework ਵੀ `FoundryChatClient` ਅਤੇ Azure ਪਹਚਾਣ ਰਾਹੀਂ Azure ਸੇਵਾਵਾਂ ਨਾਲ ਇੰਟੀਗ੍ਰੇਟ ਹੁੰਦਾ ਹੈ, ਇਸ ਨਾਲ ਤੁਸੀਂ ਆਪਣੇ ਏਜੰਟ ਟੂਲਜ਼ ਤੋਂ ਸਿੱਧਾ Azure ਸੇਵਾਵਾਂ ਨੂੰ ਕਾਲ ਕਰ ਸਕਦੇ ਹੋ।
 
-> Q: ਲੱਗਦਾ ਹੈ ਕਿ Azure AI Agent Service ਇੱਥੇ ਵੀ ਕੰਮ ਕਰ ਸਕਦਾ ਹੈ, ਇਸ ਵਿੱਚ ਕੋਡ ਜਨਰੇਸ਼ਨ ਅਤੇ ਹੋਰ ਲਈ ਸੰਦ ਹਨ?
+## ਨਮੂਨਾ ਕੋਡ
 
-> A: ਹਾਂ, Azure AI Agent Service ਏਜੰਟਾਂ ਲਈ ਇੱਕ ਪਲੇਟਫਾਰਮ ਸੇਵਾ ਹੈ ਅਤੇ ਕਈ ਮਾਡਲਾਂ, Azure AI Search, Bing Search ਅਤੇ Azure Functions ਲਈ ਬਣਾਈ ਗਈ ਯੋਗਤਾਵਾਂ ਸ਼ਾਮਲ ਕਰਦਾ ਹੈ। ਇਹ Foundry Portal ਵਿੱਚ ਆਪਣੇ ਏਜੰਟਾਂ ਨੂੰ ਬਣਾਉਣ ਅਤੇ ਵੱਡੇ ਪੱਧਰ 'ਤੇ ਤੈਨਾਤ ਕਰਨ ਨੂੰ ਆਸਾਨ ਬਣਾਉਂਦਾ ਹੈ।
-
-> Q: ਮੈਂ ਅਜੇ ਵੀ ਗੁੰਝਲ ਵਿੱਚ ਹਾਂ, ਮੈਨੂੰ ਸਿਰਫ਼ ਇੱਕ ਵਿਕਲਪ ਦਿਓ।
-
-> A: ਇੱਕ ਵਧੀਆ ਚੋਣ ਹੈ ਕਿ ਪਹਿਲਾਂ Semantic Kernel ਵਿੱਚ ਆਪਣੀ ਐਪਲੀਕੇਸ਼ਨ ਬਣਾਓ ਅਤੇ ਫਿਰ Azure AI Agent Service ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਆਪਣੇ ਏਜੰਟ ਨੂੰ ਤੈਨਾਤ ਕਰੋ। ਇਹ ਪਹੁੰਚ ਤੁਹਾਨੂੰ ਆਪਣੇ ਏਜੰਟਾਂ ਨੂੰ ਆਸਾਨੀ ਨਾਲ ਸਟੋਰ ਕਰਨ ਦੀ ਆਗਿਆ ਦਿੰਦੀ ਹੈ ਜਦੋਂ ਕਿ Semantic Kernel ਵਿੱਚ ਬਹੁ-ਏਜੰਟ ਸਿਸਟਮਾਂ ਬਣਾਉਣ ਦੀ ਸ਼ਕਤੀ ਦਾ ਲਾਭ ਲੈਂਦੀ ਹੈ। ਇਸ ਤੋਂ ਇਲਾਵਾ, Semantic Kernel ਵਿੱਚ AutoGen ਵਿੱਚ ਇੱਕ ਕਨੈਕਟਰ ਹੈ, ਜਿਸ ਨਾਲ ਦੋ frameworks ਨੂੰ ਇਕੱਠੇ ਵਰਤਣਾ ਆਸਾਨ ਬਣ ਜਾਂਦਾ ਹੈ।
-
-## ਕੀ ਮੈਂ ਆਪਣੇ ਮੌਜੂਦਾ Azure ecosystem ਸੰਦਾਂ ਨੂੰ ਸਿੱਧੇ ਤੌਰ 'ਤੇ ਇੰਟੀਗਰੇਟ ਕਰ ਸਕਦਾ ਹਾਂ, ਜਾਂ ਮੈਨੂੰ standalone solutions ਦੀ ਲੋੜ ਹੈ?
-
-ਜਵਾਬ ਹੈ ਹਾਂ, ਤੁਸੀਂ ਆਪਣੇ ਮੌਜੂਦਾ Azure ecosystem ਸੰਦਾਂ ਨੂੰ ਸਿੱਧੇ Azure AI Agent Service ਨਾਲ ਇੰਟੀਗਰੇਟ ਕਰ ਸਕਦੇ ਹੋ, ਖਾਸ ਕਰਕੇ ਕਿਉਂਕਿ ਇਹ ਹੋਰ Azure ਸੇਵਾਵਾਂ ਨਾਲ ਬੇਹਤਰੀਨ ਤਰੀਕੇ ਨਾਲ ਕੰਮ ਕਰਨ ਲਈ ਬਣਾਇਆ ਗਿਆ ਹੈ। ਤੁਸੀਂ ਉਦਾਹਰਨ ਵਜੋਂ Bing, Azure AI Search, ਅਤੇ Azure Functions ਨੂੰ ਇੰਟੀਗਰੇਟ ਕਰ ਸਕਦੇ ਹੋ। ਇਸ ਵਿੱਚ Azure AI Foundry ਨਾਲ ਡੂੰਘੀ ਇੰਟੀਗ੍ਰੇਸ਼ਨ ਵੀ ਹੈ।
-
-AutoGen ਅਤੇ Semantic Kernel ਲਈ, ਤੁਸੀਂ Azure ਸੇਵਾਵਾਂ ਨਾਲ ਇੰਟੀਗਰੇਟ ਕਰ ਸਕਦੇ ਹੋ, ਪਰ ਇਹ ਤੁਹਾਨੂੰ ਆਪਣੇ ਕੋਡ ਤੋਂ Azure ਸੇਵਾਵਾਂ ਨੂੰ ਕਾਲ ਕਰਨ ਦੀ ਲੋੜ ਪੈ ਸਕਦੀ ਹੈ। ਇੱਕ ਹੋਰ ਤਰੀਕਾ ਹੈ Azure SDKs ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਆਪਣੇ ਏਜੰਟਾਂ ਤੋਂ Azure ਸੇਵਾਵਾਂ ਨਾਲ ਇੰਟਰੈਕਟ ਕਰਨਾ। ਇਸ ਤੋਂ ਇਲਾਵਾ, ਜਿਵੇਂ ਕਿ ਦੱਸਿਆ ਗਿਆ ਸੀ, ਤੁਸੀਂ AutoGen ਜਾਂ Semantic Kernel ਵਿੱਚ ਬਣਾਏ ਆਪਣੇ ਏਜੰਟਾਂ ਲਈ Azure AI Agent Service ਨੂੰ orchestrator ਵਜੋਂ ਵਰਤ ਸਕਦੇ ਹੋ, ਜਿਸ ਨਾਲ Azure ecosystem ਤੱਕ ਆਸਾਨ ਪਹੁੰਚ ਮਿਲਦੀ ਹੈ।
-
-## ਸੈਂਪਲ ਕੋਡ
-
-- Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Microsoft Foundry)](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Azure OpenAI Responses API)](./code_samples/02-python-agent-framework-azure-openai.ipynb)
 - .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
 
-## AI Agent Frameworks ਬਾਰੇ ਹੋਰ ਸਵਾਲ ਹਨ?
+## AI ਏਜੰਟ ਫਰੇਮਵਰਕਸ ਬਾਰੇ ਹੋਰ ਸਵਾਲ ਹਨ?
 
-[Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ਵਿੱਚ ਸ਼ਾਮਲ ਹੋਵੋ, ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਮਿਲੋ, office hours ਵਿੱਚ ਸ਼ਿਰਕਤ ਕਰੋ ਅਤੇ ਆਪਣੇ AI Agents ਸਬੰਧੀ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਪ੍ਰਾਪਤ ਕਰੋ।
+ਹੋਰ ਸਿੱਖਣ ਵਾਲਿਆਂ ਨਾਲ ਮਿਲਣ ਲਈ, ਦਫ਼ਤਰ ਦੇ ਘੰਟਿਆਂ ਵਿੱਚ ਸ਼ਮੂਲੀਅਤ ਲਈ ਅਤੇ ਆਪਣੇ AI ਏਜੰਟਸ ਸਵਾਲਾਂ ਦੇ ਜਵਾਬ ਲੈਣ ਲਈ [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) ਵਿੱਚ ਸ਼ਾਮਿਲ ਹੋਵੋ।
 
-## ਸੰਦਰਭ
+## ਰੇਫਰੰਸز
 
 - <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Azure Agent Service</a>
-- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel ਅਤੇ AutoGen</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent service</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">AutoGen / Semantic Kernel ਨਾਲ Azure AI Agent Service ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਬਹੁ-ਏਜੰਟ ਹੱਲ ਬਣਾਉਣਾ</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework - Azure OpenAI Responses</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Foundry Agent Service</a>
 
 ## ਪਿਛਲਾ ਪਾਠ
 
-[AI Agents ਅਤੇ Agent ਵਰਤੋਂ ਦੇ ਕੇਸਾਂ ਦਾ ਪਰਿਚਯ](../01-intro-to-ai-agents/README.md)
+[Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)
 
 ## ਅਗਲਾ ਪਾਠ
 
-[Agentic Design Patterns ਨੂੰ ਸਮਝਣਾ](../03-agentic-design-patterns/README.md)
+[Understanding Agentic Design Patterns](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**ਅਸਵੀਕਰਤੀ**:  
-ਇਹ ਦਸਤਾਵੇਜ਼ AI ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀ ਹੋਣ ਦਾ ਯਤਨ ਕਰਦੇ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਦਿਓ ਕਿ ਸਵੈਚਾਲਿਤ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸੁਚੱਜੇਪਣ ਹੋ ਸਕਦੇ ਹਨ। ਇਸ ਦੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਮੌਜੂਦ ਮੂਲ ਦਸਤਾਵੇਜ਼ ਨੂੰ ਅਧਿਕਾਰਕ ਸਰੋਤ ਮੰਨਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਮਹੱਤਵਪੂਰਨ ਜਾਣਕਾਰੀ ਲਈ, ਪੇਸ਼ੇਵਰ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਅਸੀਂ ਇਸ ਅਨੁਵਾਦ ਦੀ ਵਰਤੋਂ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੇ ਕਿਸੇ ਵੀ ਗਲਤਫਹਿਮੀ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆ ਲਈ ਜ਼ਿੰਮੇਵਾਰ ਨਹੀਂ ਹਾਂ।
+**ਅਸਵੀਕਾਰੋਪਣ**:
+ਇਸ ਦਸਤਾਵੇਜ਼ ਦਾ ਅਨੁਵਾਦ ਏਆਈ ਅਨੁਵਾਦ ਸੇਵਾ [Co-op Translator](https://github.com/Azure/co-op-translator) ਦੀ ਵਰਤੋਂ ਕਰਕੇ ਕੀਤਾ ਗਿਆ ਹੈ। ਜਦੋਂ ਕਿ ਅਸੀਂ ਸਹੀਤਾਵਾਂ ਲਈ ਯਤਨਸ਼ੀਲ ਹਾਂ, ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਰੱਖੋ ਕਿ ਸਵੈਚਾਲਿਤ ਅਨੁਵਾਦਾਂ ਵਿੱਚ ਗਲਤੀਆਂ ਜਾਂ ਅਸਮੱਤਿਆਵਾਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਮੂਲ ਦਸਤਾਵੇਜ਼ ਆਪਣੀ ਮੂਲ ਭਾਸ਼ਾ ਵਿੱਚ ਅਧਿਕਾਰਕ ਸਰੋਤ ਮੰਨਿਆ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ। ਜਰੂਰੀ ਜਾਣਕਾਰੀ ਲਈ, ਪੇਸ਼ੇਵਰ ਮਨੁੱਖੀ ਅਨੁਵਾਦ ਦੀ ਸਿਫ਼ਾਰਸ਼ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ਅਸੀਂ ਇਸ ਅਨੁਵਾਦ ਦੇ ਉਪਯੋਗ ਤੋਂ ਪੈਦਾ ਹੋਣ ਵਾਲੀਆਂ ਕਿਸੇ ਵੀ ਗਲਤਫਹਿਮੀਆਂ ਜਾਂ ਗਲਤ ਵਿਆਖਿਆਵਾਂ ਲਈ ਜਵਾਬਦੇਹ ਨਹੀਂ ਹਾਂ।
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

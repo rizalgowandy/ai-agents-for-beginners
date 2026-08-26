@@ -1,185 +1,190 @@
-## Esemény neve: Kód-alapú alkalmazás építése az Azure AI Agent Service segítségével (EMEA/US ajánlat)
+## Esemény neve: Kód alapú alkalmazás építése a Microsoft Foundry Agent Service segítségével (EMEA/US ajánlat)
 
 ## Leírás
 
-Az Azure AI Agent Service egy szolgáltatás és SDK tökéletes kombinációja, amely leegyszerűsíti a robusztus AI-alapú megoldások fejlesztését. Ebben az előadásban megtanulhatod, hogyan építsd meg saját kód-alapú AI ügynöködet az Azure segítségével, amely képes kérdések megválaszolására, adat-elemzésre és külső adatforrások integrálására. Emellett összetettebb architektúrákat is felfedezhetsz, beleértve több ügynök együttműködését.
+A Microsoft Foundry Agent Service egy zökkenőmentes szolgáltatás és SDK ötvözete, amely leegyszerűsíti az erős, MI-alapú megoldások fejlesztését. Ebben az ülésben megtanulhatod, hogyan építs saját kód alapú MI-ügynököt az Azure-rel, amely képes kérdésekre válaszolni, adatokat elemezni és külső adatforrásokat integrálni. Emellett megismerhetsz bonyolultabb architektúrákat is, beleértve több ügynök együttműködését.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25325/>
 
 ---
 
-## Esemény neve: Üzleti folyamatok átalakítása több ügynökös AI segítségével a Semantic Kernel használatával
+## Esemény neve: Üzleti folyamatok átalakítása többügynökös MI-vel a Semantic Kernel segítségével
 
 ## Leírás
 
-Ismerd meg a több ügynökös AI rendszerek erejét élő bemutatók és gyakorlati tanulás révén, olyan minták használatával, mint a csoportos chat, reflexió, választó és raj. Használd a Semantic Kernel Process Framework-et kritikus üzleti folyamatok automatizálására és skálázására, az ügyfélszolgálattól a projektmenedzsmentig, Python segítségével.
+Ismerd meg a többügynökös MI rendszerek erejét élő bemutatók és gyakorlati tanulás segítségével olyan mintákkal, mint a csoportos csevegés, reflexió, választó és raj. Használd a Semantic Kernel Process Framework-öt az kritikus üzleti folyamatok automatizálására és skálázására, az ügyféltámogatástól a projektmenedzsmentig Python használatával.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25313/>
 
 ---
 
-## Esemény neve: Ügynöki alkalmazások építése az AutoGen v0.4 segítségével
+## Esemény neve: Ügynöki alkalmazások építése AutoGen v0.4 segítségével
 
 ## Leírás
 
-Ismerkedj meg az ügynökök és több ügynökből álló csapatok építésének alapjaival az AutoGen v0.4 használatával. Áttekintjük az új AutoGen v0.4 architektúrát, és bemutatjuk, hogyan építs egy több ügynökből álló csapatot web-alapú felhasználói felülettel.
+Kezdő lépések ügynökök és többügynökös csapatok építéséhez az AutoGen v0.4 használatával. Áttekintjük az új AutoGen v0.4 architektúrát és végigvezetünk, hogyan építhetsz többügynökös csapatot web-alapú felhasználói felülettel.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25327/>
 
 ---
 
-## Esemény neve: AI ügynökök prototípusának készítése GitHub Modellek segítségével
+## Esemény neve: MI ügynökök prototípusa GitHub modellekkel
 
 ## Leírás
 
-A GitHub Modelleknek köszönhetően mindössze egy GitHub fiókra van szükséged az első AI ügynököd megépítéséhez! A GitHub Modellek olyan erőteljes modelleket tartalmaznak, mint az OpenAI gpt-4o, DeepSeek-R1, Llama-3.1 és még sok más, amelyeket kipróbálhatsz a playgroundban vagy a kódodban. Ebben az előadásban bemutatjuk, hogyan csatlakozz a GitHub Modellekhez Pythonból, majd hogyan építs ügynököket népszerű Python csomagok, például a PydanticAI, AutoGen és Semantic Kernel segítségével. Élőben követheted a bemutatót a GitHub Codespaces-ben, vagy bármikor kipróbálhatod az példákat az előadás után.
+A GitHub modelleknek köszönhetően az első MI ügynököd építéséhez csak egy GitHub fiókra van szükséged! A GitHub modellek erőteljes modelleket tartalmaznak, mint például az OpenAI gpt-4.1, DeepSeek-R1, Llama-3.1 és még sok más, készen arra, hogy kipróbáld őket a játéktéren vagy a kódban.
+Ebben az ülésben bemutatjuk, hogyan csatlakozhatsz a GitHub modellekhez Pythonból, majd hogyan építhetsz ügynököket népszerű Python csomagokkal, például PydanticAI, AutoGen és Semantic Kernel segítségével.
+Az élő GitHub Codespaces során is követheted, vagy bármikor otthon is kipróbálhatod a példákat az ülés után.
+
+> **Megjegyzés:** A GitHub modellek elavultak (2026 júliusában megszűnnek). Ne használd a GitHub modelleket új projektekhez — helyette használd a **Microsoft Foundry** modelleket.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25481/>
 
 ---
 
-## Esemény neve: Ügynökök építése az Azure AI modellkatalógus modelljeinek hadseregével
+## Esemény neve: Ügynökök építése az Azure AI modell katalógus modelljeinek hadával
 
 ## Leírás
 
-Az Azure AI modellkatalógus széles választékot kínál különböző képességekkel rendelkező modellekből. Bár egy kész modell használata jó kiindulópont lehet, a fejlesztők összetettebb munkafolyamatok során speciális modelleket is alkalmazhatnak, hogy a választott keretrendszerükben hatékonyan dolgozzanak. Ebben az előadásban áttekintjük a modellkatalógus kínálatát, és bemutatjuk, hogyan építhetsz ügynököket, amelyek a modellek hadseregére épülnek – mindezt költséghatékonyan.
+Az Azure AI modell katalógus sokféle modellt kínál, különböző képességekkel és erősségekkel. Alapból egy kész modellt használva indulsz, de ahogy a fejlesztők egyre kifinomultabb munkafolyamatokat használnak, szakosodott modelleket is alkalmazhatnak a választott keretrendszerükben. Ebben az előadásban áttekintjük a modell katalógus kínálatát, és megmutatjuk, hogyan építhetsz olyan ügynököket, amelyek egy egész modell had állnak szolgálatodra – miközben nem kerül egy vagyont.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25328/>
 
 ---
 
-## Esemény neve: Több ügynökös API LangGraph és Azure Cosmos DB segítségével
+## Esemény neve: Többügynökös API LangGraph és Azure Cosmos DB használatával
 
 ## Leírás
 
-A több ügynökös AI alkalmazások térnyerése átalakítja az intelligens rendszerek építésének módját – de hogyan tervezhetjük meg őket valós méretezhetőségre és teljesítményre? Ebben az előadásban mélyrehatóan bemutatunk egy gyártásra kész több ügynökös alkalmazást, amely LangGraph-ot használ az ügynökök összehangolására, FastAPI-t az API réteghez, és Azure Cosmos DB-t az állapotkezelés, vektortárolás és tranzakciós adatok háttereként.
+A többügynökös MI alkalmazások felemelkedése átalakítja az intelligens rendszerek építésének módját – de hogyan tervezzük meg őket a valódi világban szükséges skálázhatóság és teljesítmény érdekében? Ebben az ülésben mélyen belemerülünk egy produkcióképes többügynökös alkalmazásba, amely LangGraph segítségével koordinálja az ügynököket, FastAPI-val szolgáltat egy API réteget, és Azure Cosmos DB-t használ állapotkezeléshez, vektor tároláshoz és tranzakciós adatokhoz.
 
-Részletes kódismertetés során megmutatjuk, hogyan tervezhetsz és valósíthatsz meg egy ügynök-alapú munkafolyamatot, amely zökkenőmentesen integrálja a visszakeresés-alapú generálást (RAG), memória-megőrzést és dinamikus állapotátmeneteket. Témák:
+Egy részletes kódbemutatón keresztül megtekinted, hogyan tervezhetsz és valósíthatsz meg egy ügynök-vezérelt munkafolyamatot, amely zökkenőmentesen integrálja a lekérdezés-alapú generálást (RAG), memória megtartást, és dinamikus állapotátmeneteket. Áttekintjük:
 
-- Ügynökök együttműködése LangGraph segítségével strukturált érveléshez
-- Valós idejű chat történet tárolása Azure Cosmos DB-ben – ugyanaz az adatbázis, amely a ChatGPT chat történetét kezeli, a történelem leggyorsabban növekvő AI ügynök alkalmazása
-- Vektorkeresés tudás-visszakereséshez a Cosmos DB natív beágyazási támogatásával
-- FastAPI aszinkron képességei a válaszok gyors és skálázható kezeléséhez
-
-Az előadás végére világos tervet kapsz saját skálázható, felhő-alapú több ügynökös alkalmazások építéséhez és telepítéséhez, amelyek kihasználják a modern AI és felhő infrastruktúra erejét. Legyél AI mérnök, felhő architekt vagy Python fejlesztő, ez az előadás gyakorlati betekintést és kipróbált mintákat kínál a következő generációs AI-alapú alkalmazások építéséhez.
+Ügynök együttműködés LangGraph segítségével strukturált érveléshez
+Valós idejű csevegéstörténet tárolás Azure Cosmos DB-ben – ugyanabban az adatbázisban, amely a ChatGPT leggyorsabban növekvő MI-ügynök alkalmazás csevegéstörténetét támogatja
+Vektorkeresés tudás visszakereséshez a Cosmos DB natív beágyazási támogatásával
+FastAPI aszinkron képességei az interakciók gyors és skálázható fenntartásához
+Az ülés végére egy tiszta tervet kapsz saját, skálázható, felhőalapú többügynökös alkalmazások építéséhez és bevezetéséhez, amelyek kihasználják a modern MI és felhő infrastruktúra erejét. Legyél MI mérnök, felhő építész vagy Python fejlesztő, az előadás gyakorlati betekintést és kipróbált mintákat nyújt a következő generációs MI-alapú alkalmazások építéséhez.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25314/>
 
 ---
 
-## Esemény neve: Az első AI ügynök JS-ben az Azure AI Agent Service segítségével
+## Esemény neve: Az első AI ügynököd JS-ben a Microsoft Foundry Agent Service segítségével
 
 ## Leírás
 
-Tanuld meg, hogyan építsd meg az első AI ügynöködet az Azure AI Agent Service JavaScript SDK-jával, egy teljesen menedzselt platformmal, amely megkönnyíti a fejlesztést. Megmutatjuk, hogyan állítsd be, csatlakoztass eszközöket, például az Azure AI Search-t, és telepíts egy egyszerű kérdés-válasz ügynököt. Egy élő bemutató során felfedezheted, hogyan egyszerűsíti az automatikus eszköz-hívás és a menedzselt állapot a folyamatot. Tökéletes kezdőknek, ez az előadás gyakorlati lépéseket és tippeket ad, hogy magabiztosan kezdhesd AI ügynököddel.
+Tanuld meg, hogyan építheted meg az első MI ügynöködet a Microsoft Foundry Agent Service JavaScript SDK-jával, egy teljesen menedzselt platformmal, amely megkönnyíti a fejlesztést. Megmutatjuk, hogyan állítsd be, csatlakoztass olyan eszközöket, mint az Azure AI Search, és hogyan telepíts egyszerű kérdés-válasz ügynököt. Egy élő bemutató során felfedezheted, hogyan könnyíti meg az automatikus eszközhívás és a menedzselt állapot a folyamatot. Kezdőknek tökéletes, ez az ülés gyakorlati lépéseket és tippeket ad, hogy magabiztosan indulj el az MI ügynököd útján.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25381/>
 
 ---
 
-## Esemény neve: A promptolás az új szkriptezés: Ismerd meg a GenAIScript-et
+## Esemény neve: A promptolás az új szkriptelés: Ismerd meg a GenAIScript-et
 
 ## Leírás
 
-A jQuery egykor megkönnyítette a webfejlesztést azáltal, hogy elrejtette a bonyodalmakat, lehetővé téve a fejlesztőknek, hogy az építésre koncentráljanak a böngészőhibák helyett. Ma az AI fejlesztés hasonló kihívásokkal néz szembe. Új minták folyamatosan jelennek meg, és nehéz lépést tartani, különösen, ahogy az AI eszközök – különösen az ügynöki eszközök – egyre erősebbé és összetettebbé válnak. Mi lenne, ha a legmodernebb AI képességeket egyszerű, ismerős JavaScript absztrakciók segítségével automatizálhatnád? Bemutatjuk a GenAIScript-et – egy módot arra, hogy az AI-t könnyedén integráld a munkafolyamatodba, a promptokat újrahasznosítható kódrészletekként kezelve. Ebben az előadásban megvizsgáljuk, hogyan teszi a GenAIScript az AI automatizálási ügynököket olyan intuitívvá, mint a JavaScript írása, segítve a monoton munka egyszerűsítését mély AI szakértelem nélkül.
+A jQuery egykor megkönnyítette a webfejlesztést azzal, hogy elvonta a bonyodalmakat, lehetővé téve a fejlesztőknek, hogy az építésre koncentráljanak ahelyett, hogy a böngésző furcsaságaival küzdenének. Ma az MI fejlesztése hasonló kihívással néz szembe. Új minták folyamatosan jelennek meg, és lépést tartani velük túlterhelő lehet, különösen ahogy az MI-eszközök, főleg az ügynök alapúak, egyre erősebbé és bonyolultabbá válnak. Mi lenne, ha élvonalbeli MI képességeket használhatnál fel egyszerű, ismerős JavaScript absztrakciókon keresztül a feladatok automatizálásához? Íme a GenAIScript – egy módja annak, hogy könnyedén integráld az MI-t a munkafolyamataidba, kezelve a promptokat újrahasznosítható kódrészletekként. Ebben az előadásban megvizsgáljuk, hogyan teszi a GenAIScript az MI automatizációs ügynököket ugyanolyan intuitívvá, mint a JavaScript írását, segítve téged az ismétlődő feladatok egyszerűsítésében anélkül, hogy mély MI szakértelemre lenne szükség.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25441/>
 
 ---
 
-## Esemény neve: Tudás-alapú ügynökök LlamaIndex.TS segítségével
+## Esemény neve: Tudás-alapú ügynökök a LlamaIndex.TS segítségével
 
 ## Leírás
 
-A LlamaIndex ismert arról, hogy megkönnyíti a visszakeresés-alapú generálás (RAG) építését, de keretrendszereinkkel ügynökök és több ügynökös rendszerek építése is egyszerű! Ebben az előadásban bemutatjuk a Workflows-t, az ügynöki rendszerek építésének alapvető építőelemét, és építünk egy ügynököt, amely RAG-t és más eszközöket használ.
+A LlamaIndex ismert arról, hogy megkönnyíti a Lekérdezés-alapú Generálás (RAG) fejlesztését, de keretrendszereink az ügynökök és többügynökös rendszerek építését is egyszerűvé teszik! Ebben az ülésben bemutatjuk a Workflows-t, az alapvető építőelemet az ügynökrendszerek építéséhez, és felépítünk egy ügynököt, amely RAG-ot és más eszközöket használ.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25440/>
 
 ---
 
-## Esemény neve: AI ügynökök Java-hoz az Azure AI Foundry és GitHub Copilot segítségével
+## Esemény neve: MI ügynökök Java-hoz Microsoft Foundry és GitHub Copilot segítségével
 
 ## Leírás
 
-Ebben az előadásban bemutatjuk, hogyan ágyazhatod be az AI ügynökök fejlett képességeit Java alkalmazásaidba az Azure AI Foundry segítségével, beleértve a projektcélok meghatározását, modellek kísérletezését és biztonságos, gyártásra kész megoldások telepítését nagy léptékben. Útközben megtanulhatod, hogyan egyszerűsíti a GitHub Copilot (IntelliJ-ben, VS Code-ban és Eclipse-ben) a kódolást és a promptok létrehozását, miközben a modellválasztás, finomhangolás és ügynöki munkafolyamatok legjobb gyakorlatai biztosítják a felelős és hatékony fejlesztést. Legyél kezdő az AI ügynökök terén, vagy keresd a fejlett ügynöképítési technikákat, ez az előadás segít a következő szintű élmények megvalósításában az általad már ismert eszközökkel.
+Ebben az ülésben megmutatjuk, hogyan ágyazhatod be a fejlett MI ügynök képességeket Java alkalmazásaidba a Microsoft Foundry használatával, beleértve a projektcélok meghatározását, modellek kísérletezését és biztonságos, termelésre kész megoldások skálázott telepítését. Útközben megismerheted, hogyan könnyítheti meg a GitHub Copilot (IntelliJ-ben, VS Code-ban és Eclipse-ben) a kódolást és a prompt készítést, miközben a legjobb gyakorlatok a modellválasztásban, finomhangolásban és ügynökmunkafolyamatokban biztosítják a felelős és hatékony fejlesztést. Akár új vagy az MI ügynökök világában, akár fejlett építési technikákat keresel, ez az ülés gyakorlati tudást ad, hogy a már ismert eszközeiddel következő szintű élményeket nyújthass.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25336/>
 
 ---
 
-## Esemény neve: Java AI ügynökök építése LangChain4j és dinamikus munkamenetek segítségével
+## Esemény neve: Java MI ügynökök építése LangChain4j és dinamikus munkamenetek segítségével
 
 ## Leírás
 
-Használd ki az AI ügynökök lehetőségeit Java alkalmazásaidban a LangChain4j és az Azure Container Apps (ACA) dinamikus munkamenetek kombinálásával, amelyek az Azure AI szolgáltatásokhoz kapcsolódnak. Ez az előadás bemutat egy gyakorlati példát egy ügynök építésére, amely képes távoli környezettel interakcióba lépni, beleértve a fájlkezelést. Tanuld meg, hogyan definiálj egyedi eszközöket, integráld őket az ügynöki munkafolyamatokba, és használd ki az Azure skálázható infrastruktúráját intelligens, dinamikus megoldások telepítéséhez.
+Szabadítsd fel az MI ügynökök potenciálját Java alkalmazásaidban, a LangChain4j kombinálásával az Azure Container Apps (ACA) dinamikus munkameneteivel, amelyeket az Azure MI szolgáltatásokhoz kapcsolnak. Ez az ülés bemutat egy gyakorlati példát egy olyan ügynök építésére, amely képes távoli környezettel interakcióba lépni, beleértve a fájlkezelést is. Tanuld meg, hogyan definiálj egyedi eszközöket, építsd be őket az ügynökmunkafolyamatokba, és használd ki az Azure skálázható infrastruktúráját intelligens, dinamikus megoldások telepítéséhez.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25337/>
 
 ---
 
-## Esemény neve: Felelőtlen AI ügynökök
+## Esemény neve: Felelőtlen MI ügynökök
 
 ## Leírás
 
-Csatlakozz hozzánk, miközben feltárjuk az AI ügynökök potenciális kockázatait, és megoldást keresünk arra, hogyan építsünk megbízható AI gyakorlatokat a beszélgetési AI platformokba! Ez az előadás mélyen belemerül a felelőtlen AI ügynökök példáiba – lenyűgöző példákat mutatva modellhibákra, ellenséges jailbreak-ekre és más kockázatokra, amelyek aláássák a bizalmat és a megfelelőséget.
+Csatlakozz hozzánk, miközben feltárjuk az MI ügynökök potenciális kockázatait, és megküzdünk azzal a kihívással, hogyan érdemes megbízható MI gyakorlatokat beépíteni a konverzációs MI platformokba! Ez az ülés mélyen belemerül a felelőtlen MI ügynökök példáiba – megdöbbentő példákat mutatva modellhibákra, ellenséges jailbreak-ekre és más kockázatokra, amelyek aláássák a bizalmat és a megfelelést.
 
-Bemutatjuk a Microsoft legmodernebb eszközeit a megbízható AI-hoz, beleértve a tartalomszűrőket, a vörös csapat stratégiákat és az értékeléseket – élő bemutatókkal, amelyekben az AI ügynökök felelősségteljesen és felelőtlenül viselkednek, olyan módokon, amelyeket nem fogsz elhinni.
+Felfedezzük a Microsoft élvonalbeli eszközeit a megbízható MI-hez, beleértve a tartalomszűrőket, a red teaming stratégiákat és értékeléseket – élő demókkal, amelyek bemutatják, hogyan viselkednek az MI ügynökök felelősen és felelőtlenül is, olyan módokon, amiket nem fogsz elhinni.
 
-🔥 Amit magaddal viszel:
-✅ Hogyan ismerd fel és mérsékeld az AI kockázatokat, mielőtt kihasználhatók lennének
-✅ Hogyan telepítsd az Azure AI Content Safety-t a kockázatos viselkedés észlelésére és mérséklésére
-✅ A titkos recept a megbízható AI ügynökök létrehozásához
+🔥 Amit hazaviszel:
+✅ Hogyan ismerd fel és mérsékeld az MI kockázatokat, mielőtt kihasználnák őket
+✅ Hogyan vezess be az Azure AI Content Safety-t a kockázatos viselkedés felismerésére és mérséklésére
+✅ A titkos összetevő, ami megbízhatóvá teszi az MI ügynököket
 
-Készülj egy izgalmas, magas tétű AI drámával és elengedhetetlen stratégiákkal teli előadásra, hogy AI-d a történelem jó oldalán maradjon. Ne csak AI-t építs – építs AI-t, amely számít!
+Készülj egy hype-pal, nagy téttel bíró MI drámával teli ülésre és kötelező ismeretekre, hogy az MI-d mindig a történelem helyes oldalán álljon. Ne csak építs MI-t – építs olyat, ami számít!
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25388/>
 
 ---
 
-## Esemény neve: Kód-alapú alkalmazás építése az Azure AI Agent Service segítségével (.NET)
+## Esemény neve: Kód-alapú alkalmazás építése a Microsoft Foundry Agent Service segítségével (.NET)
 
 ## Leírás
 
-Az Azure AI Agent Service egy szolgáltatás és SDK tökéletes kombinációja, amely leegyszerűsíti a robusztus AI-alapú megoldások fejlesztését. Ebben az előadásban megtanulhatod, hogyan építsd meg saját kód-alapú AI ügynöködet az Azure és C# segítségével, amely képes kérdések megválaszolására, adat-elemzésre és külső adatforrások integrálására. Emellett összetettebb architektúrákat is felfedezhetsz, beleértve több ügynök együttműködését.
+A Microsoft Foundry Agent Service egy zökkenőmentes szolgáltatás és SDK ötvözete, amely leegyszerűsíti az erős, MI-alapú megoldások fejlesztését. Ebben az ülésben megtanulhatod, hogyan építs saját kód alapú MI-ügynököt az Azure és C# segítségével, amely képes kérdésekre válaszolni, adatokat elemezni és külső adatforrásokat integrálni. Emellett megismerhetsz bonyolultabb architektúrákat is, beleértve több ügynök együttműködését.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25370/>
 
 ---
 
-## Esemény neve: AI ügynökök + .NET Aspire
+## Esemény neve: MI ügynökök + .NET Aspire
 
 ## Leírás
 
-Ebben az előadásban megosztjuk a .NET platform legizgalmasabb fejlesztéseit az ügynökök körül. Fedezd fel a .NET jelenlegi állapotát, beleértve az új funkciókat és fejlesztéseket. Ismerd meg a hatékony AI ügynök képességeket. És élőben kódolunk ügynökökkel és .NET Aspire-rel.
+Ebben az ülésben megosztjuk a legizgalmasabb fejlesztéseket a .NET platformon az ügynökök körül. Fedezd fel a .NET jelenlegi állapotát, beleértve az új funkciókat és fejlesztéseket. Ismerd meg a hatékony MI ügynök képességeket. És élőben kódolunk ügynökökkel és a .NET Aspire-rel.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25332/>
 
 ---
 
-## Esemény neve: Semantic Kernel C#-al több ügynökös AI alkalmazások építéséhez, amelyeket az Azure Cosmos támogat
+## Esemény neve: Semantic Kernel C#-ban többügynökös MI alkalmazások építéséhez Azure Cosmos támogatással
 
 ## Leírás
 
-Bemutatunk egy több ügynökös alkalmazást C#-ban, amely a Semantic Kernel keretrendszerre épül. Megértheted az ügynöki alkalmazások mögötti koncepciókat, megismerheted a megvalósítás részleteit és árnyalatait, valamint megtanulhatod, hogyan integráld az Azure Cosmos DB-t adatbázisként különböző felhasználási esetekhez.
+Végigvezetünk egy többügynökös alkalmazáson C#-ban, amely a Semantic Kernel keretrendszerre épül. Megérted az ügynökös alkalmazások mögötti fogalmakat, az implementációs részleteket és finomságokat, valamint megtanulod, hogyan integráld az Azure Cosmos DB-t adatbázisként különböző felhasználási esetekhez.
 
 ## URL
 <https://developer.microsoft.com/en-us/reactor/events/25455/>
 
 ---
 
-**Felelősség kizárása**:  
-Ez a dokumentum az AI fordítási szolgáltatás [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével lett lefordítva. Bár törekszünk a pontosságra, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az eredeti nyelvén tekintendő hiteles forrásnak. Fontos információk esetén javasolt professzionális emberi fordítást igénybe venni. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely a fordítás használatából eredhet.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Jogi nyilatkozat**:
+Ez a dokumentum az AI fordítási szolgáltatás, a [Co-op Translator](https://github.com/Azure/co-op-translator) segítségével készült. Bár az pontosságra törekszünk, kérjük, vegye figyelembe, hogy az automatikus fordítások hibákat vagy pontatlanságokat tartalmazhatnak. Az eredeti dokumentum az anyanyelvén tekintendő hiteles forrásnak. Fontos információk esetén professzionális emberi fordítást javasolunk. Nem vállalunk felelősséget semmilyen félreértésért vagy téves értelmezésért, amely ebből a fordításból ered.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

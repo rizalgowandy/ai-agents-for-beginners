@@ -1,441 +1,303 @@
-[![Εξερεύνηση Πλαισίων Πρακτόρων AI](../../../translated_images/el/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
+[![Εξερεύνηση Πλαισίων Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης](../../../translated_images/el/lesson-2-thumbnail.c65f44c93b8558df.webp)](https://youtu.be/ODwF-EZo_O8?si=1xoy_B9RNQfrYdF7)
 
-> _(Κάντε κλικ στην εικόνα παραπάνω για να δείτε το βίντεο αυτού του μαθήματος)_
+> _(Κάντε κλικ στην εικόνα παραπάνω για να δείτε το βίντεο αυτής της ενότητας)_
 
-# Εξερεύνηση Πλαισίων Πρακτόρων AI
+# Εξερεύνηση Πλαισίων Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης
 
-Τα πλαίσια πρακτόρων AI είναι λογισμικά σχεδιασμένα για να απλοποιούν τη δημιουργία, την ανάπτυξη και τη διαχείριση πρακτόρων AI. Αυτά τα πλαίσια παρέχουν στους προγραμματιστές προκατασκευασμένα στοιχεία, αφαιρέσεις και εργαλεία που διευκολύνουν την ανάπτυξη σύνθετων συστημάτων AI.
+Τα πλαίσια εργασίας πρακτόρων τεχνητής νοημοσύνης είναι πλατφόρμες λογισμικού σχεδιασμένες να απλοποιούν τη δημιουργία, την ανάπτυξη και τη διαχείριση πρακτόρων τεχνητής νοημοσύνης. Αυτά τα πλαίσια προσφέρουν στους προγραμματιστές προ-κατασκευασμένα στοιχεία, αφαίρεσεις και εργαλεία που διευκολύνουν την ανάπτυξη πολύπλοκων συστημάτων ΤΝ.
 
-Αυτά τα πλαίσια βοηθούν τους προγραμματιστές να επικεντρωθούν στις μοναδικές πτυχές των εφαρμογών τους, παρέχοντας τυποποιημένες προσεγγίσεις στις κοινές προκλήσεις της ανάπτυξης πρακτόρων AI. Ενισχύουν την κλιμακωσιμότητα, την προσβασιμότητα και την αποτελεσματικότητα στην κατασκευή συστημάτων AI.
+Αυτά τα πλαίσια βοηθούν τους προγραμματιστές να εστιάσουν στις μοναδικές πτυχές των εφαρμογών τους, παρέχοντας τυποποιημένες προσεγγίσεις σε κοινές προκλήσεις στην ανάπτυξη πρακτόρων ΤΝ. Βελτιώνουν την κλιμακωσιμότητα, την προσβασιμότητα και την αποδοτικότητα στην κατασκευή συστημάτων ΤΝ.
 
 ## Εισαγωγή 
 
-Αυτό το μάθημα θα καλύψει:
+Αυτή η ενότητα θα καλύψει:
 
-- Τι είναι τα Πλαίσια Πρακτόρων AI και τι επιτρέπουν στους προγραμματιστές να επιτύχουν;
-- Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν για να δημιουργήσουν γρήγορα πρωτότυπα, να επαναλάβουν και να βελτιώσουν τις δυνατότητες του πράκτορα τους;
-- Ποιες είναι οι διαφορές μεταξύ των πλαισίων και εργαλείων που δημιουργήθηκαν από τη Microsoft <a href="https://aka.ms/ai-agents/autogen" target="_blank">AutoGen</a>, <a href="https://aka.ms/ai-agents-beginners/semantic-kernel" target="_blank">Semantic Kernel</a>, και <a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Azure AI Agent Service</a>;
-- Μπορώ να ενσωματώσω τα υπάρχοντα εργαλεία του οικοσυστήματος Azure απευθείας ή χρειάζομαι ανεξάρτητες λύσεις;
-- Τι είναι η υπηρεσία Azure AI Agents και πώς με βοηθά;
+- Τι είναι τα Πλαίσια Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης και τι επιτρέπουν στους προγραμματιστές να επιτύχουν;
+- Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν για να δημιουργήσουν γρήγορα πρωτότυπα, να επαναλάβουν και να βελτιώσουν τις ικανότητες του πράκτορά τους;
+- Ποιες είναι οι διαφορές μεταξύ των πλαισίων και των εργαλείων που δημιούργησε η Microsoft (<a href="https://aka.ms/ai-agents-beginners/ai-agent-service" target="_blank">Microsoft Foundry Agent Service</a> και το <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework</a>);
+- Μπορώ να ενσωματώσω απευθείας τα υπάρχοντα εργαλεία του οικοσυστήματος Azure ή χρειάζομαι αυτόνομες λύσεις;
+- Τι είναι το Microsoft Foundry Agent Service και πώς με βοηθάει;
 
 ## Στόχοι μάθησης
 
-Οι στόχοι αυτού του μαθήματος είναι να σας βοηθήσουν να κατανοήσετε:
+Οι στόχοι αυτής της ενότητας είναι να σας βοηθήσουν να κατανοήσετε:
 
-- Τον ρόλο των Πλαισίων Πρακτόρων AI στην ανάπτυξη AI.
-- Πώς να αξιοποιήσετε τα Πλαίσια Πρακτόρων AI για να δημιουργήσετε έξυπνους πράκτορες.
-- Βασικές δυνατότητες που παρέχονται από τα Πλαίσια Πρακτόρων AI.
-- Τις διαφορές μεταξύ AutoGen, Semantic Kernel και Azure AI Agent Service.
+- Τον ρόλο των Πλαισίων Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης στην ανάπτυξη ΤΝ.
+- Πώς να αξιοποιήσετε τα Πλαίσια Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης για την κατασκευή έξυπνων πρακτόρων.
+- Βασικές δυνατότητες που ενεργοποιούνται από τα Πλαίσια Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης.
+- Τις διαφορές μεταξύ του Microsoft Agent Framework και του Microsoft Foundry Agent Service.
 
-## Τι είναι τα Πλαίσια Πρακτόρων AI και τι επιτρέπουν στους προγραμματιστές να κάνουν;
+## Τι είναι τα Πλαίσια Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης και τι επιτρέπουν στους προγραμματιστές να κάνουν;
 
-Τα παραδοσιακά Πλαίσια AI μπορούν να σας βοηθήσουν να ενσωματώσετε AI στις εφαρμογές σας και να τις βελτιώσετε με τους εξής τρόπους:
+Τα παραδοσιακά Πλαίσια Εργασίας Τεχνητής Νοημοσύνης μπορούν να σας βοηθήσουν να ενσωματώσετε την ΤΝ στις εφαρμογές σας και να τις βελτιώσετε με τους ακόλουθους τρόπους:
 
-- **Εξατομίκευση**: Το AI μπορεί να αναλύσει τη συμπεριφορά και τις προτιμήσεις των χρηστών για να παρέχει εξατομικευμένες προτάσεις, περιεχόμενο και εμπειρίες.
-Παράδειγμα: Υπηρεσίες streaming όπως το Netflix χρησιμοποιούν AI για να προτείνουν ταινίες και σειρές βάσει του ιστορικού προβολών, ενισχύοντας την εμπλοκή και την ικανοποίηση των χρηστών.
-- **Αυτοματοποίηση και Αποτελεσματικότητα**: Το AI μπορεί να αυτοματοποιήσει επαναλαμβανόμενες εργασίες, να απλοποιήσει τις ροές εργασίας και να βελτιώσει την επιχειρησιακή αποτελεσματικότητα.
-Παράδειγμα: Εφαρμογές εξυπηρέτησης πελατών χρησιμοποιούν chatbots με AI για να χειρίζονται κοινές ερωτήσεις, μειώνοντας τους χρόνους απόκρισης και απελευθερώνοντας ανθρώπινους πράκτορες για πιο σύνθετα θέματα.
-- **Βελτιωμένη Εμπειρία Χρήστη**: Το AI μπορεί να βελτιώσει τη συνολική εμπειρία χρήστη παρέχοντας έξυπνες λειτουργίες όπως αναγνώριση φωνής, επεξεργασία φυσικής γλώσσας και προβλεπτικό κείμενο.
-Παράδειγμα: Εικονικοί βοηθοί όπως η Siri και το Google Assistant χρησιμοποιούν AI για να κατανοούν και να ανταποκρίνονται σε φωνητικές εντολές, διευκολύνοντας την αλληλεπίδραση των χρηστών με τις συσκευές τους.
+- **Προσωποποίηση**: Η ΤΝ μπορεί να αναλύσει τη συμπεριφορά και τις προτιμήσεις των χρηστών για να παρέχει εξατομικευμένες προτάσεις, περιεχόμενο και εμπειρίες.
+Παράδειγμα: Υπηρεσίες ροής όπως το Netflix χρησιμοποιούν την ΤΝ για να προτείνουν ταινίες και σειρές βάσει του ιστορικού προβολών, ενισχύοντας την εμπλοκή και ικανοποίηση του χρήστη.
+- **Αυτοματοποίηση και Αποδοτικότητα**: Η ΤΝ μπορεί να αυτοματοποιήσει επαναλαμβανόμενες εργασίες, να απλοποιήσει ροές εργασιών και να βελτιώσει την επιχειρησιακή αποδοτικότητα.
+Παράδειγμα: Εφαρμογές εξυπηρέτησης πελατών χρησιμοποιούν chatbots με ΤΝ για να χειρίζονται κοινές ερωτήσεις, μειώνοντας τους χρόνους απόκρισης και απελευθερώνοντας ανθρώπινους πράκτορες για πιο σύνθετα ζητήματα.
+- **Βελτιωμένη Εμπειρία Χρήστη**: Η ΤΝ μπορεί να βελτιώσει τη συνολική εμπειρία χρήστη παρέχοντας έξυπνα χαρακτηριστικά όπως αναγνώριση φωνής, επεξεργασία φυσικής γλώσσας και προγνωστικό κείμενο.
+Παράδειγμα: Οι εικονικοί βοηθοί όπως η Siri και η Google Assistant χρησιμοποιούν την ΤΝ για να κατανοούν και να ανταποκρίνονται σε φωνητικές εντολές, διευκολύνοντας την αλληλεπίδραση των χρηστών με τις συσκευές τους.
 
-### Ακούγεται υπέροχο, σωστά; Τότε γιατί χρειαζόμαστε τα Πλαίσια Πρακτόρων AI;
+### Ακούγεται υπέροχο, οπότε γιατί χρειαζόμαστε το Πλαίσιο Εργασίας Πρακτόρων Τεχνητής Νοημοσύνης;
 
-Τα Πλαίσια Πρακτόρων AI αντιπροσωπεύουν κάτι περισσότερο από απλά Πλαίσια AI. Είναι σχεδιασμένα για να επιτρέπουν τη δημιουργία έξυπνων πρακτόρων που μπορούν να αλληλεπιδρούν με χρήστες, άλλους πράκτορες και το περιβάλλον για να επιτύχουν συγκεκριμένους στόχους. Αυτοί οι πράκτορες μπορούν να επιδεικνύουν αυτόνομη συμπεριφορά, να λαμβάνουν αποφάσεις και να προσαρμόζονται σε μεταβαλλόμενες συνθήκες. Ας δούμε μερικές βασικές δυνατότητες που παρέχονται από τα Πλαίσια Πρακτόρων AI:
+Τα πλαίσια εργασίας πρακτόρων ΤΝ αντιπροσωπεύουν κάτι περισσότερο από απλά πλαίσια ΤΝ. Έχουν σχεδιαστεί για να επιτρέπουν τη δημιουργία έξυπνων πρακτόρων που μπορούν να αλληλεπιδρούν με χρήστες, άλλους πράκτορες και το περιβάλλον για να επιτύχουν συγκεκριμένους στόχους. Αυτοί οι πράκτορες μπορεί να εμφανίζουν αυτόνομη συμπεριφορά, να παίρνουν αποφάσεις και να προσαρμόζονται σε μεταβαλλόμενες συνθήκες. Ας δούμε ορισμένες βασικές δυνατότητες που ενεργοποιούνται από τα Πλαίσια Εργασίας Πρακτόρων ΤΝ:
 
-- **Συνεργασία και Συντονισμός Πρακτόρων**: Επιτρέπουν τη δημιουργία πολλαπλών πρακτόρων AI που μπορούν να συνεργάζονται, να επικοινωνούν και να συντονίζονται για να λύσουν σύνθετες εργασίες.
-- **Αυτοματοποίηση και Διαχείριση Εργασιών**: Παρέχουν μηχανισμούς για την αυτοματοποίηση πολυβηματικών ροών εργασίας, την ανάθεση εργασιών και τη δυναμική διαχείριση εργασιών μεταξύ πρακτόρων.
-- **Κατανόηση και Προσαρμογή στο Πλαίσιο**: Εξοπλίζουν τους πράκτορες με την ικανότητα να κατανοούν το πλαίσιο, να προσαρμόζονται σε μεταβαλλόμενα περιβάλλοντα και να λαμβάνουν αποφάσεις βάσει πληροφοριών σε πραγματικό χρόνο.
+- **Συνεργασία και Συντονισμός Πρακτόρων**: Επιτρέπουν τη δημιουργία πολλών πρακτόρων ΤΝ που μπορούν να συνεργαστούν, να επικοινωνούν και να συντονίζονται για την επίλυση σύνθετων εργασιών.
+- **Αυτοματοποίηση και Διαχείριση Εργασιών**: Παρέχουν μηχανισμούς για αυτοματοποίηση πολυ-βηματικών ροών εργασίας, ανάθεση εργασιών και δυναμική διαχείριση εργασιών μεταξύ πρακτόρων.
+- **Κατανόηση Πλαισίου και Προσαρμογή**: Εφοδιάζουν τους πράκτορες με την ικανότητα να κατανοούν το πλαίσιο, να προσαρμόζονται σε μεταβαλλόμενα περιβάλλοντα και να λαμβάνουν αποφάσεις με βάση πληροφορίες σε πραγματικό χρόνο.
 
-Συνοπτικά, οι πράκτορες σας επιτρέπουν να κάνετε περισσότερα, να ανεβάσετε την αυτοματοποίηση σε επόμενο επίπεδο, να δημιουργήσετε πιο έξυπνα συστήματα που μπορούν να προσαρμόζονται και να μαθαίνουν από το περιβάλλον τους.
+Συνοψίζοντας, οι πράκτορες σας επιτρέπουν να κάνετε περισσότερα, να ανεβάσετε την αυτοματοποίηση σε νέα επίπεδα, να δημιουργήσετε πιο έξυπνα συστήματα που μπορούν να προσαρμόζονται και να μαθαίνουν από το περιβάλλον τους.
 
-## Πώς να δημιουργήσετε γρήγορα πρωτότυπα, να επαναλάβετε και να βελτιώσετε τις δυνατότητες του πράκτορα;
+## Πώς να δημιουργήσετε γρήγορα πρωτότυπα, να επαναλάβετε και να βελτιώσετε τις ικανότητες του πράκτορα;
 
-Αυτός είναι ένας ταχέως εξελισσόμενος τομέας, αλλά υπάρχουν ορισμένα κοινά στοιχεία στα περισσότερα Πλαίσια Πρακτόρων AI που μπορούν να σας βοηθήσουν να δημιουργήσετε γρήγορα πρωτότυπα και να επαναλάβετε, όπως τα αρθρωτά στοιχεία, τα συνεργατικά εργαλεία και η εκμάθηση σε πραγματικό χρόνο. Ας τα εξετάσουμε:
+Αυτό είναι ένα ταχέως εξελισσόμενο τοπίο, αλλά υπάρχουν ορισμένα κοινά στοιχεία στα περισσότερα Πλαίσια Εργασίας Πρακτόρων ΤΝ που μπορούν να σας βοηθήσουν να δημιουργήσετε γρήγορα πρωτότυπα και να επαναλάβετε, δηλαδή στοιχειώδη συστατικά, εργαλεία συνεργασίας και μάθηση σε πραγματικό χρόνο. Ας δούμε αυτά:
 
-- **Χρησιμοποιήστε Αρθρωτά Στοιχεία**: Τα SDK AI προσφέρουν προκατασκευασμένα στοιχεία όπως συνδέσμους AI και Μνήμης, κλήση λειτουργιών χρησιμοποιώντας φυσική γλώσσα ή πρόσθετα κώδικα, πρότυπα προτροπών και άλλα.
-- **Αξιοποιήστε Συνεργατικά Εργαλεία**: Σχεδιάστε πράκτορες με συγκεκριμένους ρόλους και εργασίες, επιτρέποντάς τους να δοκιμάζουν και να βελτιώνουν συνεργατικές ροές εργασίας.
-- **Μάθετε σε Πραγματικό Χρόνο**: Εφαρμόστε βρόχους ανατροφοδότησης όπου οι πράκτορες μαθαίνουν από τις αλληλεπιδράσεις και προσαρμόζουν τη συμπεριφορά τους δυναμικά.
+- **Χρησιμοποιήστε Στοιχειώδη Συστατικά**: Τα SDK ΤΝ προσφέρουν προ-κατασκευασμένα στοιχεία όπως συνδέσμους AI και Μνήμης, κλήση λειτουργιών με φυσική γλώσσα ή προσθήκες κώδικα, πρότυπα οδηγίες και άλλα.
+- **Αξιοποιήστε Εργαλεία Συνεργασίας**: Σχεδιάστε πράκτορες με συγκεκριμένους ρόλους και εργασίες, επιτρέποντάς τους να δοκιμάζουν και να βελτιώνουν συνεργατικές ροές εργασίας.
+- **Μάθετε σε Πραγματικό Χρόνο**: Εφαρμόστε βρόχους ανατροφοδότησης όπου οι πράκτορες μαθαίνουν από τις αλληλεπιδράσεις και προσαρμόζουν δυναμικά τη συμπεριφορά τους.
 
-### Χρησιμοποιήστε Αρθρωτά Στοιχεία
+### Χρήση Στοιχειωδών Συστατικών
 
-Τα SDK όπως το Microsoft Semantic Kernel και το LangChain προσφέρουν προκατασκευασμένα στοιχεία όπως συνδέσμους AI, πρότυπα προτροπών και διαχείριση μνήμης.
+Τα SDK όπως το Microsoft Agent Framework προσφέρουν προ-κατασκευασμένα στοιχεία όπως συνδέσμους AI, ορισμούς εργαλείων και διαχείριση πρακτόρων.
 
-**Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν**: Οι ομάδες μπορούν να συναρμολογήσουν γρήγορα αυτά τα στοιχεία για να δημιουργήσουν ένα λειτουργικό πρωτότυπο χωρίς να ξεκινήσουν από το μηδέν, επιτρέποντας γρήγορη πειραματισμό και επανάληψη.
+**Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν**: Οι ομάδες μπορούν γρήγορα να συνθέσουν αυτά τα στοιχεία για να δημιουργήσουν ένα λειτουργικό πρωτότυπο χωρίς να ξεκινούν από το μηδέν, επιτρέποντας ταχεία πειραματισμό και επανάληψη.
 
-**Πώς λειτουργεί στην πράξη**: Μπορείτε να χρησιμοποιήσετε έναν προκατασκευασμένο αναλυτή για να εξαγάγετε πληροφορίες από την είσοδο του χρήστη, μια μονάδα μνήμης για να αποθηκεύσετε και να ανακτήσετε δεδομένα, και έναν δημιουργό προτροπών για να αλληλεπιδράσετε με τους χρήστες, όλα χωρίς να χρειάζεται να κατασκευάσετε αυτά τα στοιχεία από την αρχή.
+**Πώς δουλεύει στην πράξη**: Μπορείτε να χρησιμοποιήσετε έναν προ-κατασκευασμένο αναλυτή για να εξάγετε πληροφορίες από την είσοδο χρήστη, ένα μοντέλο μνήμης για αποθήκευση και ανάκτηση δεδομένων και έναν γεννήτορα οδηγιών για αλληλεπίδραση με χρήστες, όλα χωρίς να χρειάζεται να κατασκευάσετε αυτά τα στοιχεία από το μηδέν.
 
-**Παράδειγμα κώδικα**. Ας δούμε παραδείγματα για το πώς μπορείτε να χρησιμοποιήσετε έναν προκατασκευασμένο Συνδέσμο AI με το Semantic Kernel Python και .Net που χρησιμοποιεί αυτόματη κλήση λειτουργιών για να απαντήσει το μοντέλο στην είσοδο του χρήστη:
+**Παράδειγμα κώδικα**. Ας δούμε ένα παράδειγμα πως μπορείτε να χρησιμοποιήσετε το Microsoft Agent Framework με το `FoundryChatClient` ώστε το μοντέλο να ανταποκρίνεται στην είσοδο χρήστη με κλήση εργαλείων:
 
 ``` python
-# Semantic Kernel Python Example
+# Παράδειγμα Python του Microsoft Agent Framework
 
 import asyncio
-from typing import Annotated
+import os
 
-from semantic_kernel.connectors.ai import FunctionChoiceBehavior
-from semantic_kernel.connectors.ai.open_ai import AzureChatCompletion, AzureChatPromptExecutionSettings
-from semantic_kernel.contents import ChatHistory
-from semantic_kernel.functions import kernel_function
-from semantic_kernel.kernel import Kernel
-
-# Define a ChatHistory object to hold the conversation's context
-chat_history = ChatHistory()
-chat_history.add_user_message("I'd like to go to New York on January 1, 2025")
+from agent_framework import tool
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 
-# Define a sample plugin that contains the function to book travel
-class BookTravelPlugin:
-    """A Sample Book Travel Plugin"""
-
-    @kernel_function(name="book_flight", description="Book travel given location and date")
-    async def book_flight(
-        self, date: Annotated[str, "The date of travel"], location: Annotated[str, "The location to travel to"]
-    ) -> str:
-        return f"Travel was booked to {location} on {date}"
-
-# Create the Kernel
-kernel = Kernel()
-
-# Add the sample plugin to the Kernel object
-kernel.add_plugin(BookTravelPlugin(), plugin_name="book_travel")
-
-# Define the Azure OpenAI AI Connector
-chat_service = AzureChatCompletion(
-    deployment_name="YOUR_DEPLOYMENT_NAME", 
-    api_key="YOUR_API_KEY", 
-    endpoint="https://<your-resource>.azure.openai.com/",
-)
-
-# Define the request settings to configure the model with auto-function calling
-request_settings = AzureChatPromptExecutionSettings(function_choice_behavior=FunctionChoiceBehavior.Auto())
+# Ορίστε μια δείγμα συνάρτησης εργαλείου για κράτηση ταξιδιού
+@tool(approval_mode="never_require")
+def book_flight(date: str, location: str) -> str:
+    """Book travel given location and date."""
+    return f"Travel was booked to {location} on {date}"
 
 
 async def main():
-    # Make the request to the model for the given chat history and request settings
-    # The Kernel contains the sample that the model will request to invoke
-    response = await chat_service.get_chat_message_content(
-        chat_history=chat_history, settings=request_settings, kernel=kernel
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
     )
-    assert response is not None
+    agent = provider.as_agent(
+        name="travel_agent",
+        instructions="Help the user book travel. Use the book_flight tool when ready.",
+        tools=[book_flight],
+    )
 
-    """
-    Note: In the auto function calling process, the model determines it can invoke the 
-    `BookTravelPlugin` using the `book_flight` function, supplying the necessary arguments. 
-    
-    For example:
-
-    "tool_calls": [
-        {
-            "id": "call_abc123",
-            "type": "function",
-            "function": {
-                "name": "BookTravelPlugin-book_flight",
-                "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-            }
-        }
-    ]
-
-    Since the location and date arguments are required (as defined by the kernel function), if the 
-    model lacks either, it will prompt the user to provide them. For instance:
-
-    User: Book me a flight to New York.
-    Model: Sure, I'd love to help you book a flight. Could you please specify the date?
-    User: I want to travel on January 1, 2025.
-    Model: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels!
-    """
-
-    print(f"`{response}`")
-    # Example AI Model Response: `Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽`
-
-    # Add the model's response to our chat history context
-    chat_history.add_assistant_message(response.content)
+    response = await agent.run("I'd like to go to New York on January 1, 2025")
+    print(response)
+    # Παράδειγμα εξόδου: Η πτήση σας για τη Νέα Υόρκη στις 1 Ιανουαρίου 2025 έχει κλειστεί με επιτυχία. Καλό ταξίδι! ✈️🗽
 
 
 if __name__ == "__main__":
     asyncio.run(main())
 ```
-```csharp
-// Semantic Kernel C# example
 
-using Microsoft.SemanticKernel;
-using Microsoft.SemanticKernel.ChatCompletion;
-using System.ComponentModel;
-using Microsoft.SemanticKernel.Connectors.AzureOpenAI;
+Από αυτό το παράδειγμα μπορείτε να δείτε πώς μπορείτε να αξιοποιήσετε έναν προ-κατασκευασμένο αναλυτή για να εξάγετε βασικές πληροφορίες από την είσοδο χρήστη, όπως αφετηρία, προορισμός και ημερομηνία αίτησης κράτησης πτήσης. Αυτή η αρθρωτή προσέγγιση σας επιτρέπει να εστιάσετε στη λογική υψηλού επιπέδου.
 
-ChatHistory chatHistory = [];
-chatHistory.AddUserMessage("I'd like to go to New York on January 1, 2025");
+### Αξιοποίηση Εργαλείων Συνεργασίας
 
-var kernelBuilder = Kernel.CreateBuilder();
-kernelBuilder.AddAzureOpenAIChatCompletion(
-    deploymentName: "NAME_OF_YOUR_DEPLOYMENT",
-    apiKey: "YOUR_API_KEY",
-    endpoint: "YOUR_AZURE_ENDPOINT"
-);
-kernelBuilder.Plugins.AddFromType<BookTravelPlugin>("BookTravel"); 
-var kernel = kernelBuilder.Build();
+Πλαίσια όπως το Microsoft Agent Framework διευκολύνουν τη δημιουργία πολλαπλών πρακτόρων που μπορούν να συνεργαστούν.
 
-var settings = new AzureOpenAIPromptExecutionSettings()
-{
-    FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
-};
+**Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν**: Οι ομάδες μπορούν να σχεδιάζουν πράκτορες με συγκεκριμένους ρόλους και εργασίες, επιτρέποντάς τους να δοκιμάσουν και να βελτιώσουν συνεργατικές ροές εργασίας και να βελτιώσουν τη συνολική αποδοτικότητα του συστήματος.
 
-var chatCompletion = kernel.GetRequiredService<IChatCompletionService>();
+**Πώς δουλεύει στην πράξη**: Μπορείτε να δημιουργήσετε μια ομάδα πρακτόρων όπου κάθε πράκτορας έχει μια εξειδικευμένη λειτουργία, όπως ανάκτηση δεδομένων, ανάλυση ή λήψη αποφάσεων. Αυτοί οι πράκτορες μπορούν να επικοινωνούν και να μοιράζονται πληροφορίες για να επιτύχουν έναν κοινό στόχο, όπως να απαντήσουν σε ένα ερώτημα χρήστη ή να ολοκληρώσουν μια εργασία.
 
-var response = await chatCompletion.GetChatMessageContentAsync(chatHistory, settings, kernel);
-
-/*
-Behind the scenes, the model recognizes the tool to call, what arguments it already has (location) and (date)
-{
-
-"tool_calls": [
-    {
-        "id": "call_abc123",
-        "type": "function",
-        "function": {
-            "name": "BookTravelPlugin-book_flight",
-            "arguments": "{'location': 'New York', 'date': '2025-01-01'}"
-        }
-    }
-]
-*/
-
-Console.WriteLine(response.Content);
-chatHistory.AddMessage(response!.Role, response!.Content!);
-
-// Example AI Model Response: Your flight to New York on January 1, 2025, has been successfully booked. Safe travels! ✈️🗽
-
-// Define a plugin that contains the function to book travel
-public class BookTravelPlugin
-{
-    [KernelFunction("book_flight")]
-    [Description("Book travel given location and date")]
-    public async Task<string> BookFlight(DateTime date, string location)
-    {
-        return await Task.FromResult( $"Travel was booked to {location} on {date}");
-    }
-}
-```
-
-Αυτό που βλέπετε από το παράδειγμα είναι πώς μπορείτε να αξιοποιήσετε έναν προκατασκευασμένο αναλυτή για να εξαγάγετε βασικές πληροφορίες από την είσοδο του χρήστη, όπως την προέλευση, τον προορισμό και την ημερομηνία ενός αιτήματος κράτησης πτήσης. Αυτή η αρθρωτή προσέγγιση σας επιτρέπει να επικεντρωθείτε στη λογική υψηλού επιπέδου.
-
-### Αξιοποιήστε Συνεργατικά Εργαλεία
-
-Τα πλαίσια όπως το CrewAI, το Microsoft AutoGen και το Semantic Kernel διευκολύνουν τη δημιουργία πολλαπλών πρακτόρων που μπορούν να συνεργάζονται.
-
-**Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν**: Οι ομάδες μπορούν να σχεδιάσουν πράκτορες με συγκεκριμένους ρόλους και εργασίες, επιτρέποντάς τους να δοκιμάζουν και να βελτιώνουν συνεργατικές ροές εργασίας και να βελτιώνουν τη συνολική αποτελεσματικότητα του συστήματος.
-
-**Πώς λειτουργεί στην πράξη**: Μπορείτε να δημιουργήσετε μια ομάδα πρακτόρων όπου κάθε πράκτορας έχει εξειδικευμένη λειτουργία, όπως ανάκτηση δεδομένων, ανάλυση ή λήψη αποφάσεων. Αυτοί οι πράκτορες μπορούν να επικοινωνούν και να μοιράζονται πληροφορίες για να επιτύχουν έναν κοινό στόχο, όπως να απαντήσουν σε ένα ερώτημα χρήστη ή να ολοκληρώσουν μια εργασία.
-
-**Παράδειγμα κώδικα (AutoGen)**:
+**Παράδειγμα κώδικα (Microsoft Agent Framework)**:
 
 ```python
-# creating agents, then create a round robin schedule where they can work together, in this case in order
+# Δημιουργία πολλαπλών πρακτόρων που συνεργάζονται χρησιμοποιώντας το Microsoft Agent Framework
 
-# Data Retrieval Agent
-# Data Analysis Agent
-# Decision Making Agent
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-agent_retrieve = AssistantAgent(
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
+
+# Πράκτορας Ανάκτησης Δεδομένων
+agent_retrieve = provider.as_agent(
     name="dataretrieval",
-    model_client=model_client,
+    instructions="Retrieve relevant data using available tools.",
     tools=[retrieve_tool],
-    system_message="Use tools to solve tasks."
 )
 
-agent_analyze = AssistantAgent(
+# Πράκτορας Ανάλυσης Δεδομένων
+agent_analyze = provider.as_agent(
     name="dataanalysis",
-    model_client=model_client,
+    instructions="Analyze the retrieved data and provide insights.",
     tools=[analyze_tool],
-    system_message="Use tools to solve tasks."
 )
 
-# conversation ends when user says "APPROVE"
-termination = TextMentionTermination("APPROVE")
-
-user_proxy = UserProxyAgent("user_proxy", input_func=input)
-
-team = RoundRobinGroupChat([agent_retrieve, agent_analyze, user_proxy], termination_condition=termination)
-
-stream = team.run_stream(task="Analyze data", max_turns=10)
-# Use asyncio.run(...) when running in a script.
-await Console(stream)
+# Εκτέλεση πρακτόρων διαδοχικά σε μια εργασία
+retrieval_result = await agent_retrieve.run("Retrieve sales data for Q4")
+analysis_result = await agent_analyze.run(f"Analyze this data: {retrieval_result}")
+print(analysis_result)
 ```
 
-Αυτό που βλέπετε στον προηγούμενο κώδικα είναι πώς μπορείτε να δημιουργήσετε μια εργασία που περιλαμβάνει πολλαπλούς πράκτορες που συνεργάζονται για να αναλύσουν δεδομένα. Κάθε πράκτορας εκτελεί μια συγκεκριμένη λειτουργία, και η εργασία εκτελείται συντονίζοντας τους πράκτορες για να επιτύχουν το επιθυμητό αποτέλεσμα. Δημιουργώντας ειδικούς πράκτορες με εξειδικευμένους ρόλους, μπορείτε να βελτιώσετε την αποτελεσματικότητα και την απόδοση της εργασίας.
+Στον προηγούμενο κώδικα βλέπετε πώς μπορείτε να δημιουργήσετε μια εργασία που περιλαμβάνει πολλούς πράκτορες που συνεργάζονται για την ανάλυση δεδομένων. Κάθε πράκτορας εκτελεί μια συγκεκριμένη λειτουργία και η εργασία εκτελείται με συντονισμό των πρακτόρων για την επίτευξη του επιθυμητού αποτελέσματος. Με τη δημιουργία αφιερωμένων πρακτόρων με εξειδικευμένους ρόλους, μπορείτε να βελτιώσετε την αποδοτικότητα και την απόδοση της εργασίας.
 
-### Μάθετε σε Πραγματικό Χρόνο
+### Μάθηση σε Πραγματικό Χρόνο
 
-Τα προηγμένα πλαίσια παρέχουν δυνατότητες για κατανόηση και προσαρμογή στο πλαίσιο σε πραγματικό χρόνο.
+Προηγμένα πλαίσια παρέχουν δυνατότητες για κατανόηση του πλαισίου σε πραγματικό χρόνο και προσαρμογή.
 
-**Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν**: Οι ομάδες μπορούν να εφαρμόσουν βρόχους ανατροφοδότησης όπου οι πράκτορες μαθαίνουν από τις αλληλεπιδράσεις και προσαρμόζουν τη συμπεριφορά τους δυναμικά, οδηγώντας σε συνεχή βελτίωση και αναβάθμιση των δυνατοτήτων.
+**Πώς μπορούν οι ομάδες να τα χρησιμοποιήσουν**: Οι ομάδες μπορούν να υλοποιήσουν βρόχους ανατροφοδότησης όπου οι πράκτορες μαθαίνουν από τις αλληλεπιδράσεις και προσαρμόζουν τη συμπεριφορά τους δυναμικά, οδηγώντας σε συνεχή βελτίωση και εκλεπτυσμό των δυνατοτήτων.
 
-**Πώς λειτουργεί στην πράξη**: Οι πράκτορες μπορούν να αναλύσουν την ανατροφοδότηση των χρηστών, δεδομένα περιβάλλοντος και αποτελέσματα εργασιών για να ενημερώσουν τη βάση γνώσεων τους, να προσαρμόσουν τους αλγόριθμους λήψης αποφάσεων και να βελτιώσουν την απόδοση με την πάροδο του χρόνου. Αυτή η διαδικασία επαναληπτικής μάθησης επιτρέπει στους πράκτορες να προσαρμόζονται σε μεταβαλλόμενες συνθήκες και προτιμήσεις χρηστών, ενισχύοντας τη συνολική αποτελεσματικότητα του συστήματος.
+**Πώς δουλεύει στην πράξη**: Οι πράκτορες μπορούν να αναλύουν την ανατροφοδότηση των χρηστών, περιβαλλοντικά δεδομένα και αποτελέσματα εργασιών για να ενημερώνουν τη βάση γνώσεων τους, να προσαρμόζουν αλγόριθμους λήψης αποφάσεων και να βελτιώνουν την απόδοση με την πάροδο του χρόνου. Αυτή η διαδικασία επαναληπτικής μάθησης επιτρέπει στους πράκτορες να προσαρμόζονται σε μεταβαλλόμενες συνθήκες και προτιμήσεις χρηστών, ενισχύοντας τη συνολική αποτελεσματικότητα του συστήματος.
 
-## Ποιες είναι οι διαφορές μεταξύ των πλαισίων AutoGen, Semantic Kernel και Azure AI Agent Service;
+## Ποιες είναι οι διαφορές μεταξύ του Microsoft Agent Framework και του Microsoft Foundry Agent Service;
 
-Υπάρχουν πολλοί τρόποι για να συγκρίνετε αυτά τα πλαίσια, αλλά ας δούμε μερικές βασικές διαφορές όσον αφορά τον σχεδιασμό, τις δυνατότητες και τις προτεινόμενες χρήσεις τους:
+Υπάρχουν πολλοί τρόποι να συγκρίνετε αυτές τις προσεγγίσεις, αλλά ας δούμε κάποιες βασικές διαφορές όσον αφορά το σχεδιασμό, τις δυνατότητες και τις επιλεγμένες περιπτώσεις χρήσης:
 
-## AutoGen
+## Microsoft Agent Framework (MAF)
 
-Το AutoGen είναι ένα πλαίσιο ανοιχτού κώδικα που αναπτύχθηκε από το AI Frontiers Lab της Microsoft Research. Εστιάζει σε εφαρμογές *agentic* που βασίζονται σε γεγονότα και είναι κατανεμημένες, επιτρέποντας πολλαπλά LLMs και SLMs, εργαλεία και προηγμένα σχέδια πολλαπλών πρακτόρων.
+Το Microsoft Agent Framework παρέχει ένα απλοποιημένο SDK για την κατασκευή πρακτόρων ΤΝ χρησιμοποιώντας το `FoundryChatClient`. Επιτρέπει στους προγραμματιστές να δημιουργούν πράκτορες που αξιοποιούν τα μοντέλα Azure OpenAI με ενσωματωμένη κλήση εργαλείων, διαχείριση συνομιλίας και ασφάλεια επιχειρηματικού επιπέδου μέσω ταυτοποίησης Azure.
 
-Το AutoGen βασίζεται στην κεντρική ιδέα των πρακτόρων, οι οποίοι είναι αυτόνομες οντότητες που μπορούν να αντιλαμβάνονται το περιβάλλον τους, να λαμβάνουν αποφάσεις και να αναλαμβάνουν δράση για να επιτύχουν συγκεκριμένους στόχους. Οι πράκτορες επικοινωνούν μέσω ασύγχρονων μηνυμάτων, επιτρέποντάς τους να εργάζονται ανεξάρτητα και παράλληλα, ενισχύοντας την κλιμακωσιμότητα και την ανταπόκριση του συστήματος.
+**Περιπτώσεις χρήσης**: Δημιουργία παραγωγικών πρακτόρων ΤΝ με χρήση εργαλείων, πολυβηματικές ροές εργασίας και σενάρια ενσωμάτωσης σε επιχειρήσεις.
 
-<a href="https://en.wikipedia.org/wiki/Actor_model" target="_blank">Οι πράκτορες βασίζονται στο μοντέλο ηθοποιού</a>. Σύμφωνα με τη Wikipedia, ένας ηθοποιός είναι _το βασικό δομικό στοιχείο του ταυτόχρονου υπολογισμού. Σε απάντηση σε ένα μήνυμα που λαμβάνει, ένας ηθοποιός μπορεί: να λαμβάνει τοπικές αποφάσεις, να δημιουργεί περισσότερους ηθοποιούς, να στέλνει περισσότερα μηνύματα και να καθορίζει πώς να ανταποκριθεί στο επόμενο μήνυμα που λαμβάνει_.
+Ακολουθούν μερικές σημαντικές βασικές έννοιες του Microsoft Agent Framework:
 
-**Προτεινόμενες Χρήσεις**: Αυτοματοποίηση δημιουργίας κώδικα, εργασίες ανάλυσης δεδομένων και δημιουργία προσαρμοσμένων πρακτόρων για λειτουργίες σχεδιασμού και έρευνας.
+- **Πράκτορες**. Ένας πράκτορας δημιουργείται μέσω του `FoundryChatClient` και διαμορφώνεται με όνομα, οδηγίες και εργαλεία. Ο πράκτορας μπορεί:
+  - **Να επεξεργάζεται μηνύματα χρηστών** και να δημιουργεί απαντήσεις χρησιμοποιώντας τα μοντέλα Azure OpenAI.
+  - **Να καλεί εργαλεία** αυτόματα με βάση το πλαίσιο της συνομιλίας.
+  - **Να διατηρεί την κατάσταση της συνομιλίας** σε πολλές αλληλεπιδράσεις.
 
-Ακολουθούν μερικές σημαντικές βασικές έννοιες του AutoGen:
-
-- **Πράκτορες**. Ένας πράκτορας είναι μια οντότητα λογισμικού που:
-  - **Επικοινωνεί μέσω μηνυμάτων**, τα οποία μπορεί να είναι συγχρονισμένα ή ασύγχρονα.
-  - **Διατηρεί τη δική του κατάσταση**, η οποία μπορεί να τροποποιηθεί από εισερχόμενα μηνύματα.
-  - **Εκτελεί ενέργειες** σε απάντηση σε μηνύματα που λαμβάνει ή αλλαγές στην κατάστασή του. Αυτές οι ενέργειες μπορεί να τροποποιήσουν την κατάσταση του πράκτορα και να παράγουν εξωτερικά αποτελέσματα, όπως ενημέρωση αρχείων μηνυμάτων, αποστολή νέων μηνυμάτων, εκτέλεση κώδικα ή πραγματοποίηση κλήσεων API.
-    
-  Εδώ έχετε ένα σύντομο απόσπασμα κώδικα στο οποίο δημιουργείτε τον δικό σας πράκτορα με δυνατότητες συνομιλίας:
+  Εδώ είναι ένα απόσπασμα κώδικα που δείχνει πώς να δημιουργήσετε έναν πράκτορα:
 
     ```python
-    from autogen_agentchat.agents import AssistantAgent
-    from autogen_agentchat.messages import TextMessage
-    from autogen_ext.models.openai import OpenAIChatCompletionClient
+    import os
+    from agent_framework.foundry import FoundryChatClient
+    from azure.identity import AzureCliCredential
 
+    provider = FoundryChatClient(
+        project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+        model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+        credential=AzureCliCredential(),
+    )
+    agent = provider.as_agent(
+        name="my_agent",
+        instructions="You are a helpful assistant.",
+    )
 
-    class MyAgent(RoutedAgent):
-        def __init__(self, name: str) -> None:
-            super().__init__(name)
-            model_client = OpenAIChatCompletionClient(model="gpt-4o")
-            self._delegate = AssistantAgent(name, model_client=model_client)
-    
-        @message_handler
-        async def handle_my_message_type(self, message: MyMessageType, ctx: MessageContext) -> None:
-            print(f"{self.id.type} received message: {message.content}")
-            response = await self._delegate.on_messages(
-                [TextMessage(content=message.content, source="user")], ctx.cancellation_token
-            )
-            print(f"{self.id.type} responded: {response.chat_message.content}")
+    response = await agent.run("Hello, World!")
+    print(response)
     ```
-    
-    Στον προηγούμενο κώδικα, δημιουργήθηκε ο `MyAgent` και κληρονομεί από τον `RoutedAgent`. Έχει έναν χειριστή μηνυμάτων που εκτυπώνει το περιεχόμενο του μηνύματος και στη συνέχεια στέλνει μια απάντηση χρησιμοποιώντας τον αντιπρόσωπο `AssistantAgent`. Ιδιαίτερα σημειώστε πώς αναθέτουμε στο `self._delegate` μια παρουσία του `AssistantAgent`, που είναι ένας προκατασκευασμένος πράκτορας που μπορεί να χειριστεί ολοκληρώσεις συνομιλιών.
 
-
-    Ας ενημερώσουμε το AutoGen για αυτόν τον τύπο πράκτορα και ας ξεκινήσουμε το πρόγραμμα:
+- **Εργαλεία**. Το πλαίσιο υποστηρίζει τον ορισμό εργαλείων ως συναρτήσεις Python που ο πράκτορας μπορεί να καλεί αυτόματα. Τα εργαλεία εγγράφονται κατά τη δημιουργία του πράκτορα:
 
     ```python
-    
-    # main.py
-    runtime = SingleThreadedAgentRuntime()
-    await MyAgent.register(runtime, "my_agent", lambda: MyAgent())
+    def get_weather(location: str) -> str:
+        """Get the current weather for a location."""
+        return f"The weather in {location} is sunny, 72\u00b0F."
 
-    runtime.start()  # Start processing messages in the background.
-    await runtime.send_message(MyMessageType("Hello, World!"), AgentId("my_agent", "default"))
+    agent = provider.as_agent(
+        name="weather_agent",
+        instructions="Help users check the weather.",
+        tools=[get_weather],
+    )
     ```
 
-    Στον προηγούμενο κώδικα, οι πράκτορες καταχωρούνται με το runtime και στη συνέχεια αποστέλλεται ένα μήνυμα στον πράκτορα, με αποτέλεσμα την ακόλουθη έξοδο:
+- **Συντονισμός Πολλαπλών Πρακτόρων**. Μπορείτε να δημιουργήσετε πολλούς πράκτορες με διαφορετικές ειδικότητες και να συντονίζετε την εργασία τους:
 
-    ```text
-    # Output from the console:
-    my_agent received message: Hello, World!
-    my_assistant received message: Hello, World!
-    my_assistant responded: Hello! How can I assist you today?
+    ```python
+    planner = provider.as_agent(
+        name="planner",
+        instructions="Break down complex tasks into steps.",
+    )
+
+    executor = provider.as_agent(
+        name="executor",
+        instructions="Execute the planned steps using available tools.",
+        tools=[execute_tool],
+    )
+
+    plan = await planner.run("Plan a trip to Paris")
+    result = await executor.run(f"Execute this plan: {plan}")
     ```
 
-- **Πολλαπλοί πράκτορες**. Το AutoGen υποστηρίζει τη δημιουργία πολλ
-Αυτά τα δεδομένα αποθηκεύονται στη συλλογή μνήμης `SummarizedAzureDocs`. Αυτό είναι ένα πολύ απλοποιημένο παράδειγμα, αλλά μπορείτε να δείτε πώς μπορείτε να αποθηκεύσετε πληροφορίες στη μνήμη για να τις χρησιμοποιήσει το LLM.
+- **Ενσωμάτωση Azure Identity**. Το πλαίσιο χρησιμοποιεί `AzureCliCredential` (ή `DefaultAzureCredential`) για ασφαλή ταυτοποίηση χωρίς κλειδιά, εξαλείφοντας την ανάγκη διαχείρισης API κλειδιών απευθείας.
 
-Αυτά είναι τα βασικά του πλαισίου Semantic Kernel, τι γίνεται όμως με το Agent Framework;
+## Microsoft Foundry Agent Service
 
-## Υπηρεσία Azure AI Agent
+Το Microsoft Foundry Agent Service είναι μια πιο πρόσφατη προσθήκη, που παρουσιάστηκε στο Microsoft Ignite 2024. Επιτρέπει την ανάπτυξη και διάθεση πρακτόρων ΤΝ με πιο ευέλικτα μοντέλα, όπως η άμεση κλήση ανοιχτού κώδικα LLMs όπως τα Llama 3, Mistral και Cohere.
 
-Η Υπηρεσία Azure AI Agent είναι μια πιο πρόσφατη προσθήκη, που παρουσιάστηκε στο Microsoft Ignite 2024. Επιτρέπει την ανάπτυξη και την υλοποίηση AI agents με πιο ευέλικτα μοντέλα, όπως η άμεση κλήση ανοιχτού κώδικα LLMs όπως Llama 3, Mistral και Cohere.
+Το Microsoft Foundry Agent Service παρέχει ισχυρότερους μηχανισμούς ασφάλειας επιχειρήσεων και μεθόδους αποθήκευσης δεδομένων, καθιστώντας το κατάλληλο για επιχειρηματικές εφαρμογές.
 
-Η Υπηρεσία Azure AI Agent παρέχει ισχυρούς μηχανισμούς ασφάλειας για επιχειρήσεις και μεθόδους αποθήκευσης δεδομένων, καθιστώντας την κατάλληλη για επιχειρηματικές εφαρμογές.
+Λειτουργεί άμεσα με το Microsoft Agent Framework για την κατασκευή και ανάπτυξη πρακτόρων.
 
-Λειτουργεί άμεσα με πλαίσια ορχήστρωσης πολλαπλών agents όπως AutoGen και Semantic Kernel.
+Αυτή η υπηρεσία βρίσκεται αυτήν τη στιγμή σε Δημόσια Προεπισκόπηση και υποστηρίζει Python και C# για την κατασκευή πρακτόρων.
 
-Αυτή η υπηρεσία βρίσκεται επί του παρόντος σε Δημόσια Προεπισκόπηση και υποστηρίζει Python και C# για τη δημιουργία agents.
-
-Χρησιμοποιώντας το Semantic Kernel Python, μπορούμε να δημιουργήσουμε έναν Azure AI Agent με ένα plugin που ορίζεται από τον χρήστη:
+Χρησιμοποιώντας το Python SDK του Microsoft Foundry Agent Service, μπορούμε να δημιουργήσουμε έναν πράκτορα με ένα εργαλείο ορισμένο από τον χρήστη:
 
 ```python
 import asyncio
-from typing import Annotated
+from azure.identity import DefaultAzureCredential
+from azure.ai.projects import AIProjectClient
 
-from azure.identity.aio import DefaultAzureCredential
+# Ορίστε τις λειτουργίες του εργαλείου
+def get_specials() -> str:
+    """Provides a list of specials from the menu."""
+    return """
+    Special Soup: Clam Chowder
+    Special Salad: Cobb Salad
+    Special Drink: Chai Tea
+    """
 
-from semantic_kernel.agents import AzureAIAgent, AzureAIAgentSettings, AzureAIAgentThread
-from semantic_kernel.contents import ChatMessageContent
-from semantic_kernel.contents import AuthorRole
-from semantic_kernel.functions import kernel_function
-
-
-# Define a sample plugin for the sample
-class MenuPlugin:
-    """A sample Menu Plugin used for the concept sample."""
-
-    @kernel_function(description="Provides a list of specials from the menu.")
-    def get_specials(self) -> Annotated[str, "Returns the specials from the menu."]:
-        return """
-        Special Soup: Clam Chowder
-        Special Salad: Cobb Salad
-        Special Drink: Chai Tea
-        """
-
-    @kernel_function(description="Provides the price of the requested menu item.")
-    def get_item_price(
-        self, menu_item: Annotated[str, "The name of the menu item."]
-    ) -> Annotated[str, "Returns the price of the menu item."]:
-        return "$9.99"
+def get_item_price(menu_item: str) -> str:
+    """Provides the price of the requested menu item."""
+    return "$9.99"
 
 
 async def main() -> None:
-    ai_agent_settings = AzureAIAgentSettings.create()
+    credential = DefaultAzureCredential()
+    project_client = AIProjectClient.from_connection_string(
+        credential=credential,
+        conn_str="your-connection-string",
+    )
 
-    async with (
-        DefaultAzureCredential() as creds,
-        AzureAIAgent.create_client(
-            credential=creds,
-            conn_str=ai_agent_settings.project_connection_string.get_secret_value(),
-        ) as client,
-    ):
-        # Create agent definition
-        agent_definition = await client.agents.create_agent(
-            model=ai_agent_settings.model_deployment_name,
-            name="Host",
-            instructions="Answer questions about the menu.",
+    agent = project_client.agents.create_agent(
+        model="gpt-5-mini",
+        name="Host",
+        instructions="Answer questions about the menu.",
+        tools=[get_specials, get_item_price],
+    )
+
+    thread = project_client.agents.create_thread()
+
+    user_inputs = [
+        "Hello",
+        "What is the special soup?",
+        "How much does that cost?",
+        "Thank you",
+    ]
+
+    for user_input in user_inputs:
+        print(f"# User: '{user_input}'")
+        message = project_client.agents.create_message(
+            thread_id=thread.id,
+            role="user",
+            content=user_input,
         )
-
-        # Create the AzureAI Agent using the defined client and agent definition
-        agent = AzureAIAgent(
-            client=client,
-            definition=agent_definition,
-            plugins=[MenuPlugin()],
+        run = project_client.agents.create_and_process_run(
+            thread_id=thread.id, agent_id=agent.id
         )
-
-        # Create a thread to hold the conversation
-        # If no thread is provided, a new thread will be
-        # created and returned with the initial response
-        thread: AzureAIAgentThread | None = None
-
-        user_inputs = [
-            "Hello",
-            "What is the special soup?",
-            "How much does that cost?",
-            "Thank you",
-        ]
-
-        try:
-            for user_input in user_inputs:
-                print(f"# User: '{user_input}'")
-                # Invoke the agent for the specified thread
-                response = await agent.get_response(
-                    messages=user_input,
-                    thread_id=thread,
-                )
-                print(f"# {response.name}: {response.content}")
-                thread = response.thread
-        finally:
-            await thread.delete() if thread else None
-            await client.agents.delete_agent(agent.id)
+        messages = project_client.agents.list_messages(thread_id=thread.id)
+        print(f"# Agent: {messages.data[0].content[0].text.value}")
 
 
 if __name__ == "__main__":
@@ -444,13 +306,13 @@ if __name__ == "__main__":
 
 ### Βασικές έννοιες
 
-Η Υπηρεσία Azure AI Agent περιλαμβάνει τις εξής βασικές έννοιες:
+Το Microsoft Foundry Agent Service έχει τις ακόλουθες βασικές έννοιες:
 
-- **Agent**. Η Υπηρεσία Azure AI Agent ενσωματώνεται με το Azure AI Foundry. Στο AI Foundry, ένας AI Agent λειτουργεί ως "έξυπνη" μικροϋπηρεσία που μπορεί να χρησιμοποιηθεί για να απαντά σε ερωτήσεις (RAG), να εκτελεί ενέργειες ή να αυτοματοποιεί πλήρως ροές εργασίας. Το επιτυγχάνει συνδυάζοντας τη δύναμη των γεννητικών μοντέλων AI με εργαλεία που του επιτρέπουν να έχει πρόσβαση και να αλληλεπιδρά με πραγματικές πηγές δεδομένων. Εδώ είναι ένα παράδειγμα agent:
+- **Πράκτορας**. Το Microsoft Foundry Agent Service ενσωματώνεται με το Microsoft Foundry. Μέσα στο Microsoft Foundry, ένας Πράκτορας ΤΝ λειτουργεί ως "έξυπνη" μικροϋπηρεσία που μπορεί να χρησιμοποιηθεί για να απαντά σε ερωτήσεις (RAG), να εκτελεί ενέργειες ή να αυτοματοποιεί πλήρως ροές εργασίας. Αυτό επιτυγχάνεται συνδυάζοντας τη δύναμη των γεννητικών μοντέλων ΤΝ με εργαλεία που του επιτρέπουν να έχει πρόσβαση και να αλληλεπιδρά με πραγματικές πηγές δεδομένων. Ακολουθεί ένα παράδειγμα πράκτορα:
 
     ```python
     agent = project_client.agents.create_agent(
-        model="gpt-4o-mini",
+        model="gpt-5-mini",
         name="my-agent",
         instructions="You are helpful agent",
         tools=code_interpreter.definitions,
@@ -458,9 +320,9 @@ if __name__ == "__main__":
     )
     ```
 
-    Σε αυτό το παράδειγμα, δημιουργείται ένας agent με το μοντέλο `gpt-4o-mini`, ένα όνομα `my-agent` και οδηγίες `You are helpful agent`. Ο agent είναι εξοπλισμένος με εργαλεία και πόρους για να εκτελεί εργασίες ερμηνείας κώδικα.
+    Σε αυτό το παράδειγμα, ένας πράκτορας δημιουργείται με το μοντέλο `gpt-5-mini`, το όνομα `my-agent` και την οδηγία `You are helpful agent`. Ο πράκτορας είναι εξοπλισμένος με εργαλεία και πόρους για την εκτέλεση εργασιών ερμηνείας κώδικα.
 
-- **Νήμα και μηνύματα**. Το νήμα είναι μια άλλη σημαντική έννοια. Αντιπροσωπεύει μια συνομιλία ή αλληλεπίδραση μεταξύ ενός agent και ενός χρήστη. Τα νήματα μπορούν να χρησιμοποιηθούν για την παρακολούθηση της προόδου μιας συνομιλίας, την αποθήκευση πληροφοριών πλαισίου και τη διαχείριση της κατάστασης της αλληλεπίδρασης. Εδώ είναι ένα παράδειγμα νήματος:
+- **Νήμα και μηνύματα**. Το νήμα είναι άλλη μια σημαντική έννοια. Αντιπροσωπεύει μια συνομιλία ή αλληλεπίδραση μεταξύ πράκτορα και χρήστη. Τα νήματα μπορούν να χρησιμοποιηθούν για παρακολούθηση της προόδου μιας συνομιλίας, αποθήκευση πληροφοριών πλαισίου και διαχείριση της κατάστασης της αλληλεπίδρασης. Δείτε ένα παράδειγμα νήματος:
 
     ```python
     thread = project_client.agents.create_thread()
@@ -470,96 +332,87 @@ if __name__ == "__main__":
         content="Could you please create a bar chart for the operating profit using the following data and provide the file to me? Company A: $1.2 million, Company B: $2.5 million, Company C: $3.0 million, Company D: $1.8 million",
     )
     
-    # Ask the agent to perform work on the thread
+    # Ζητήστε από τον πράκτορα να εκτελέσει εργασία στο νήμα
     run = project_client.agents.create_and_process_run(thread_id=thread.id, agent_id=agent.id)
     
-    # Fetch and log all messages to see the agent's response
+    # Ανάκτηση και καταγραφή όλων των μηνυμάτων για να δείτε την απόκριση του πράκτορα
     messages = project_client.agents.list_messages(thread_id=thread.id)
     print(f"Messages: {messages}")
     ```
 
-    Στον προηγούμενο κώδικα, δημιουργείται ένα νήμα. Στη συνέχεια, αποστέλλεται ένα μήνυμα στο νήμα. Με την κλήση `create_and_process_run`, ζητείται από τον agent να εκτελέσει εργασία στο νήμα. Τέλος, τα μηνύματα ανακτώνται και καταγράφονται για να δούμε την απάντηση του agent. Τα μηνύματα δείχνουν την πρόοδο της συνομιλίας μεταξύ του χρήστη και του agent. Είναι επίσης σημαντικό να κατανοήσουμε ότι τα μηνύματα μπορεί να είναι διαφορετικών τύπων, όπως κείμενο, εικόνα ή αρχείο, δηλαδή η εργασία του agent έχει ως αποτέλεσμα, για παράδειγμα, μια εικόνα ή μια απάντηση κειμένου. Ως προγραμματιστής, μπορείτε στη συνέχεια να χρησιμοποιήσετε αυτές τις πληροφορίες για να επεξεργαστείτε περαιτέρω την απάντηση ή να την παρουσιάσετε στον χρήστη.
+    Στον προηγούμενο κώδικα, δημιουργείται ένα νήμα. Στη συνέχεια αποστέλλεται ένα μήνυμα στο νήμα. Με την κλήση του `create_and_process_run`, ζητείται από τον πράκτορα να εργαστεί πάνω στο νήμα. Τέλος, τα μηνύματα ανακτώνται και καταγράφονται για να δούμε την απάντηση του πράκτορα. Τα μηνύματα δείχνουν την πρόοδο της συνομιλίας μεταξύ χρήστη και πράκτορα. Είναι επίσης σημαντικό να κατανοήσουμε ότι τα μηνύματα μπορεί να είναι διαφόρων τύπων όπως κείμενο, εικόνα ή αρχείο, δηλαδή η εργασία του πράκτορα μπορεί να έχει ως αποτέλεσμα, για παράδειγμα, μια εικόνα ή μια κειμενική απάντηση. Ως προγραμματιστής, μπορείτε να χρησιμοποιήσετε αυτές τις πληροφορίες για περαιτέρω επεξεργασία της απάντησης ή για παρουσίασή της στο χρήστη.
 
-- **Ενσωμάτωση με άλλα πλαίσια AI**. Η Υπηρεσία Azure AI Agent μπορεί να αλληλεπιδράσει με άλλα πλαίσια όπως AutoGen και Semantic Kernel, που σημαίνει ότι μπορείτε να δημιουργήσετε μέρος της εφαρμογής σας σε ένα από αυτά τα πλαίσια και, για παράδειγμα, να χρησιμοποιήσετε την Υπηρεσία Agent ως ορχηστρωτή ή να δημιουργήσετε τα πάντα στην Υπηρεσία Agent.
+- **Ενσωματώνεται με το Microsoft Agent Framework**. Το Microsoft Foundry Agent Service λειτουργεί απρόσκοπτα με το Microsoft Agent Framework, που σημαίνει ότι μπορείτε να κατασκευάσετε πράκτορες χρησιμοποιώντας το `FoundryChatClient` και να τους αναπτύξετε μέσω της Υπηρεσίας Πρακτόρων για παραγωγικά σενάρια.
 
-**Περιπτώσεις Χρήσης**: Η Υπηρεσία Azure AI Agent έχει σχεδιαστεί για επιχειρηματικές εφαρμογές που απαιτούν ασφαλή, επεκτάσιμη και ευέλικτη ανάπτυξη AI agents.
+**Περιπτώσεις χρήσης**: Το Microsoft Foundry Agent Service έχει σχεδιαστεί για επιχειρηματικές εφαρμογές που απαιτούν ασφαλή, κλιμακούμενη και ευέλικτη ανάπτυξη πρακτόρων ΤΝ.
 
-## Ποια είναι η διαφορά μεταξύ αυτών των πλαισίων;
-
-Φαίνεται ότι υπάρχει αρκετή επικάλυψη μεταξύ αυτών των πλαισίων, αλλά υπάρχουν κάποιες βασικές διαφορές όσον αφορά τον σχεδιασμό, τις δυνατότητες και τις στοχευμένες περιπτώσεις χρήσης:
-
-- **AutoGen**: Είναι ένα πλαίσιο πειραματισμού που επικεντρώνεται στην πρωτοποριακή έρευνα για συστήματα πολλαπλών agents. Είναι το καλύτερο μέρος για πειραματισμό και πρωτότυπα σύνθετων συστημάτων πολλαπλών agents.
-- **Semantic Kernel**: Είναι μια βιβλιοθήκη agent έτοιμη για παραγωγή για τη δημιουργία επιχειρηματικών εφαρμογών με agents. Εστιάζει σε εφαρμογές με βάση γεγονότα, κατανεμημένες εφαρμογές με agents, επιτρέποντας πολλαπλά LLMs και SLMs, εργαλεία και μοτίβα σχεδίασης με έναν ή πολλούς agents.
-- **Azure AI Agent Service**: Είναι μια πλατφόρμα και υπηρεσία ανάπτυξης στο Azure Foundry για agents. Προσφέρει συνδεσιμότητα με υπηρεσίες που υποστηρίζονται από το Azure, όπως Azure OpenAI, Azure AI Search, Bing Search και εκτέλεση κώδικα.
-
+## Ποια είναι η διαφορά μεταξύ αυτών των προσεγγίσεων;
+ 
+Φαίνεται να υπάρχει κάποια επικάλυψη, αλλά υπάρχουν βασικές διαφορές όσον αφορά το σχεδιασμό, τις δυνατότητες και τις επιλεγμένες περιπτώσεις χρήσης:
+ 
+- **Microsoft Agent Framework (MAF)**: Είναι ένα παραγωγικό SDK για την κατασκευή πρακτόρων ΤΝ. Παρέχει μια απλοποιημένη API για τη δημιουργία πρακτόρων με κλήση εργαλείων, διαχείριση συνομιλιών και ενσωμάτωση ταυτοποίησης Azure.
+- **Microsoft Foundry Agent Service**: Είναι μια πλατφόρμα και υπηρεσία ανάπτυξης στο Microsoft Foundry για πράκτορες. Προσφέρει ενσωματωμένη συνδεσιμότητα με υπηρεσίες όπως Azure OpenAI, Azure AI Search, Bing Search και εκτέλεση κώδικα.
+ 
 Ακόμα δεν είστε σίγουροι ποιο να επιλέξετε;
 
-### Περιπτώσεις Χρήσης
-
-Ας δούμε αν μπορούμε να σας βοηθήσουμε περνώντας από μερικές κοινές περιπτώσεις χρήσης:
-
-> Ε: Πειραματίζομαι, μαθαίνω και δημιουργώ εφαρμογές agents proof-of-concept, και θέλω να μπορώ να δημιουργώ και να πειραματίζομαι γρήγορα
+### Περιπτώσεις χρήσης
+ 
+Ας δούμε αν μπορούμε να σας βοηθήσουμε εξετάζοντας κάποιες κοινές περιπτώσεις χρήσης:
+ 
+> Ε: Δημιουργώ παραγωγικές εφαρμογές πρακτόρων ΤΝ και θέλω να ξεκινήσω γρήγορα
 >
 
-> Α: Το AutoGen θα ήταν μια καλή επιλογή για αυτό το σενάριο, καθώς επικεντρώνεται σε εφαρμογές με βάση γεγονότα, κατανεμημένες εφαρμογές με agents και υποστηρίζει προηγμένα μοτίβα σχεδίασης πολλαπλών agents.
+>Α: Το Microsoft Agent Framework είναι μια εξαιρετική επιλογή. Παρέχει μια απλή, Python-φιλική API μέσω του `FoundryChatClient` που σας επιτρέπει να ορίσετε πράκτορες με εργαλεία και οδηγίες σε λίγες μόνο γραμμές κώδικα.
 
-> Ε: Τι κάνει το AutoGen καλύτερη επιλογή από το Semantic Kernel και την Υπηρεσία Azure AI Agent για αυτή την περίπτωση χρήσης;
+>Ε: Χρειάζομαι ανάπτυξη επιχειρηματικού επιπέδου με ενσωματώσεις Azure όπως Search και εκτέλεση κώδικα
 >
-> Α: Το AutoGen έχει σχεδιαστεί ειδικά για εφαρμογές με βάση γεγονότα, κατανεμημένες εφαρμογές με agents, καθιστώντας το κατάλληλο για την αυτοματοποίηση εργασιών δημιουργίας κώδικα και ανάλυσης δεδομένων. Παρέχει τα απαραίτητα εργαλεία και δυνατότητες για την αποτελεσματική δημιουργία σύνθετων συστημάτων πολλαπλών agents.
-
-> Ε: Φαίνεται ότι και η Υπηρεσία Azure AI Agent θα μπορούσε να λειτουργήσει εδώ, έχει εργαλεία για δημιουργία κώδικα και άλλα;
+> Α: Το Microsoft Foundry Agent Service είναι η καλύτερη επιλογή. Είναι μια πλατφόρμα υπηρεσία που παρέχει ενσωματωμένες δυνατότητες για πολλαπλά μοντέλα, Azure AI Search, Bing Search και Azure Functions. Διευκολύνει τη δημιουργία των πρακτόρων σας στο Foundry Portal και την ανάπτυξή τους σε κλίμακα.
+ 
+> Ε: Είμαι ακόμα μπερδεμένος, δώστε μου μια επιλογή
 >
-> Α: Ναι, η Υπηρεσία Azure AI Agent είναι μια πλατφόρμα υπηρεσίας για agents και προσθέτει ενσωματωμένες δυνατότητες για πολλαπλά μοντέλα, Azure AI Search, Bing Search και Azure Functions. Διευκολύνει τη δημιουργία των agents σας στο Foundry Portal και την ανάπτυξή τους σε κλίμακα.
-
-> Ε: Είμαι ακόμα μπερδεμένος, δώστε μου απλά μια επιλογή
->
-> Α: Μια εξαιρετική επιλογή είναι να δημιουργήσετε την εφαρμογή σας πρώτα στο Semantic Kernel και στη συνέχεια να χρησιμοποιήσετε την Υπηρεσία Azure AI Agent για να αναπτύξετε τον agent σας. Αυτή η προσέγγιση σας επιτρέπει να διατηρείτε εύκολα τους agents σας ενώ αξιοποιείτε τη δύναμη για τη δημιουργία συστημάτων πολλαπλών agents στο Semantic Kernel. Επιπλέον, το Semantic Kernel έχει έναν συνδετήρα στο AutoGen, καθιστώντας εύκολη τη χρήση και των δύο πλαισίων μαζί.
-
+> Α: Ξεκινήστε με το Microsoft Agent Framework για να κατασκευάσετε τους πράκτορά σας, και μετά χρησιμοποιήστε το Microsoft Foundry Agent Service όταν χρειαστεί να τους αναπτύξετε και να τους κλιμακώσετε σε παραγωγή. Αυτή η προσέγγιση σας επιτρέπει να επαναλαμβάνετε γρήγορα τη λογική του πράκτορά σας ενώ έχετε μια σαφή πορεία προς την επιχειρηματική ανάπτυξη.
+ 
 Ας συνοψίσουμε τις βασικές διαφορές σε έναν πίνακα:
 
-| Πλαίσιο | Εστίαση | Βασικές Έννοιες | Περιπτώσεις Χρήσης |
+| Πλαίσιο Εργασίας | Εστίαση | Βασικές Έννοιες | Περιπτώσεις Χρήσης |
 | --- | --- | --- | --- |
-| AutoGen | Εφαρμογές με βάση γεγονότα, κατανεμημένες εφαρμογές με agents | Agents, Personas, Functions, Data | Δημιουργία κώδικα, εργασίες ανάλυσης δεδομένων |
-| Semantic Kernel | Κατανόηση και δημιουργία περιεχομένου που μοιάζει με ανθρώπινο | Agents, Modular Components, Συνεργασία | Κατανόηση φυσικής γλώσσας, δημιουργία περιεχομένου |
-| Azure AI Agent Service | Ευέλικτα μοντέλα, ασφάλεια για επιχειρήσεις, Δημιουργία κώδικα, Κλήση εργαλείων | Μοναδικότητα, Συνεργασία, Ορχήστρωση διαδικασιών | Ασφαλής, επεκτάσιμη και ευέλικτη ανάπτυξη AI agents |
+| Microsoft Agent Framework | Απλοποιημένο SDK πρακτόρων με κλήση εργαλείων | Πράκτορες, Εργαλεία, Azure Identity | Κατασκευή πρακτόρων ΤΝ, χρήση εργαλείων, πολυβηματικές ροές εργασίας |
+| Microsoft Foundry Agent Service | Ευέλικτα μοντέλα, ασφάλεια επιχειρήσεων, Δημιουργία κώδικα, Κλήση εργαλείων | Αρθρωτότητα, Συνεργασία, Ορχήστρωση διαδικασιών | Ασφαλής, κλιμακούμενη και ευέλικτη ανάπτυξη πρακτόρων ΤΝ |
 
-Ποια είναι η ιδανική περίπτωση χρήσης για καθένα από αυτά τα πλαίσια;
+## Μπορώ να ενσωματώσω απευθείας τα υπάρχοντα εργαλεία του οικοσυστήματος Azure ή χρειάζομαι αυτόνομες λύσεις;
 
-## Μπορώ να ενσωματώσω τα υπάρχοντα εργαλεία του οικοσυστήματος Azure απευθείας ή χρειάζομαι ανεξάρτητες λύσεις;
 
-Η απάντηση είναι ναι, μπορείτε να ενσωματώσετε τα υπάρχοντα εργαλεία του οικοσυστήματος Azure απευθείας με την Υπηρεσία Azure AI Agent, ειδικά επειδή έχει σχεδιαστεί για να λειτουργεί απρόσκοπτα με άλλες υπηρεσίες Azure. Για παράδειγμα, μπορείτε να ενσωματώσετε το Bing, το Azure AI Search και το Azure Functions. Υπάρχει επίσης βαθιά ενσωμάτωση με το Azure AI Foundry.
+Η απάντηση είναι ναι, μπορείτε να ενσωματώσετε τα υπάρχοντα εργαλεία του οικοσυστήματος Azure απευθείας με την Υπηρεσία Πράκτορα Microsoft Foundry, ειδικά καθώς έχει σχεδιαστεί για να λειτουργεί ομαλά με άλλες υπηρεσίες Azure. Θα μπορούσατε για παράδειγμα να ενσωματώσετε το Bing, την Azure AI Search και τις Azure Functions. Υπάρχει επίσης βαθιά ενσωμάτωση με το Microsoft Foundry.
 
-Για το AutoGen και το Semantic Kernel, μπορείτε επίσης να ενσωματώσετε με τις υπηρεσίες Azure, αλλά μπορεί να χρειαστεί να καλέσετε τις υπηρεσίες Azure από τον κώδικά σας. Ένας άλλος τρόπος ενσωμάτωσης είναι να χρησιμοποιήσετε τα Azure SDKs για να αλληλεπιδράσετε με τις υπηρεσίες Azure από τους agents σας. Επιπλέον, όπως αναφέρθηκε, μπορείτε να χρησιμοποιήσετε την Υπηρεσία Azure AI Agent ως ορχηστρωτή για τους agents που δημιουργήθηκαν στο AutoGen ή το Semantic Kernel, κάτι που θα παρέχει εύκολη πρόσβαση στο οικοσύστημα Azure.
+Το Microsoft Agent Framework επίσης ενσωματώνεται με τις υπηρεσίες Azure μέσω του `FoundryChatClient` και της ταυτότητας Azure, επιτρέποντάς σας να καλείτε υπηρεσίες Azure απευθείας από τα εργαλεία του πράκτορα σας.
 
-## Δείγματα Κώδικα
+## Παραδείγματα Κώδικα
 
-- Python: [Agent Framework](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Microsoft Foundry)](./code_samples/02-python-agent-framework.ipynb)
+- Python: [Agent Framework (Azure OpenAI Responses API)](./code_samples/02-python-agent-framework-azure-openai.ipynb)
 - .NET: [Agent Framework](./code_samples/02-dotnet-agent-framework.md)
 
-## Έχετε περισσότερες ερωτήσεις σχετικά με τα AI Agent Frameworks;
+## Έχετε Περισσότερες Ερωτήσεις σχετικά με τα AI Agent Frameworks;
 
-Γίνετε μέλος στο [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) για να συναντήσετε άλλους μαθητές, να παρακολουθήσετε ώρες γραφείου και να λάβετε απαντήσεις στις ερωτήσεις σας για τους AI Agents.
+Εγγραφείτε στο [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) για να συναντήσετε άλλους μαθητευόμενους, να παρακολουθήσετε ώρες γραφείου και να λάβετε απαντήσεις στις ερωτήσεις σας σχετικά με τους AI Πράκτορες.
 
 ## Αναφορές
 
-- <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Azure Agent Service</a>
-- <a href="https://devblogs.microsoft.com/semantic-kernel/microsofts-agentic-ai-frameworks-autogen-and-semantic-kernel/" target="_blank">Semantic Kernel and AutoGen</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-python" target="_blank">Semantic Kernel Python Agent Framework</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/frameworks/agent/?pivots=programming-language-csharp" target="_blank">Semantic Kernel .Net Agent Framework</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent service</a>
-- <a href="https://techcommunity.microsoft.com/blog/educatordeveloperblog/using-azure-ai-agent-service-with-autogen--semantic-kernel-to-build-a-multi-agen/4363121" target="_blank">Using Azure AI Agent Service with AutoGen / Semantic Kernel to build a multi-agent's solution</a>
+- <a href="https://techcommunity.microsoft.com/blog/azure-ai-services-blog/introducing-azure-ai-agent-service/4298357" target="_blank">Υπηρεσία Πράκτορα Azure</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/responses" target="_blank">Microsoft Agent Framework - Απαντήσεις Azure OpenAI</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Υπηρεσία Πράκτορα Microsoft Foundry</a>
 
 ## Προηγούμενο Μάθημα
 
-[Εισαγωγή στους AI Agents και τις Περιπτώσεις Χρήσης](../01-intro-to-ai-agents/README.md)
+[Εισαγωγή στους AI Πράκτορες και Περιπτώσεις Χρήσης Πρακτόρων](../01-intro-to-ai-agents/README.md)
 
 ## Επόμενο Μάθημα
 
-[Κατανόηση Μοτίβων Σχεδίασης Agents](../03-agentic-design-patterns/README.md)
+[Κατανόηση των Σχεδιαστικών Προτύπων Αντιπροσώπευσης Πρακτόρων](../03-agentic-design-patterns/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Αποποίηση ευθυνών**:  
-Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία αυτόματης μετάφρασης [Co-op Translator](https://github.com/Azure/co-op-translator). Παρόλο που καταβάλλουμε προσπάθειες για ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτόματες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα θα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή εσφαλμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
+**Αποποίηση ευθυνών**:
+Αυτό το έγγραφο έχει μεταφραστεί χρησιμοποιώντας την υπηρεσία μετάφρασης με τεχνητή νοημοσύνη [Co-op Translator](https://github.com/Azure/co-op-translator). Ενώ επιδιώκουμε την ακρίβεια, παρακαλούμε να έχετε υπόψη ότι οι αυτοματοποιημένες μεταφράσεις ενδέχεται να περιέχουν λάθη ή ανακρίβειες. Το πρωτότυπο έγγραφο στη μητρική του γλώσσα πρέπει να θεωρείται η αυθεντική πηγή. Για κρίσιμες πληροφορίες, συνιστάται επαγγελματική ανθρώπινη μετάφραση. Δεν φέρουμε ευθύνη για τυχόν παρεξηγήσεις ή λανθασμένες ερμηνείες που προκύπτουν από τη χρήση αυτής της μετάφρασης.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

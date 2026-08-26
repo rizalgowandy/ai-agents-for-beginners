@@ -1,95 +1,95 @@
 [![Multi-Agent Design](../../../translated_images/sk/lesson-9-thumbnail.38059e8af1a5b71d.webp)](https://youtu.be/His9R6gw6Ec?si=3_RMb8VprNvdLRhX)
 
-> _(Kliknite na obrázok vyššie, aby ste si pozreli video k tejto lekcii)_
+> _(Kliknite na obrázok vyššie pre zobrazenie videa tejto lekcie)_
 # Metakognícia v AI agentoch
 
 ## Úvod
 
-Vitajte v lekcii o metakognícii v AI agentoch! Táto kapitola je určená pre začiatočníkov, ktorí sa zaujímajú o to, ako môžu AI agenti premýšľať o svojich vlastných myšlienkových procesoch. Na konci tejto lekcie pochopíte kľúčové koncepty a získate praktické príklady, ako aplikovať metakogníciu pri návrhu AI agentov.
+Vitajte v lekcii o metakognícii v AI agentoch! Táto kapitola je určená pre začiatočníkov, ktorí sa zaujímajú o to, ako môžu AI agenti premýšľať o vlastných procesoch myslenia. Na konci tejto lekcie porozumiete kľúčovým konceptom a budete vybavení praktickými príkladmi na aplikáciu metakognície v dizajne AI agentov.
 
 ## Ciele učenia
 
 Po absolvovaní tejto lekcie budete schopní:
 
-1. Pochopiť dôsledky cyklov uvažovania v definíciách agentov.
-2. Používať techniky plánovania a hodnotenia na podporu samokorigujúcich agentov.
+1. Pochopiť dôsledky slučiek uvažovania v definíciách agentov.
+2. Použiť plánovacie a hodnotiace techniky na pomoc samokorigujúcim agentom.
 3. Vytvoriť vlastných agentov schopných manipulovať s kódom na splnenie úloh.
 
 ## Úvod do metakognície
 
-Metakognícia sa týka vyšších kognitívnych procesov, ktoré zahŕňajú premýšľanie o vlastnom myslení. Pre AI agentov to znamená schopnosť hodnotiť a upravovať svoje činnosti na základe sebauvedomenia a minulých skúseností. Metakognícia, alebo „myslenie o myslení“, je dôležitý koncept pri vývoji agentických AI systémov. Zahŕňa to, že AI systémy si uvedomujú svoje vlastné vnútorné procesy a dokážu monitorovať, regulovať a prispôsobovať svoje správanie. Podobne ako my, keď „čítame miestnosť“ alebo analyzujeme problém. Toto sebauvedomenie môže pomôcť AI systémom robiť lepšie rozhodnutia, identifikovať chyby a zlepšovať svoj výkon v priebehu času – opäť sa vraciame k Turingovmu testu a debate o tom, či AI prevezme kontrolu.
+Metakognícia sa vzťahuje na vyššie poradie kognitívnych procesov, ktoré zahŕňajú premýšľanie o vlastnom myslení. Pre AI agentov to znamená schopnosť vyhodnotiť a upraviť svoje konanie na základe seba-vedomia a minulých skúseností. Metakognícia, alebo „premýšľanie o myslení“, je dôležitý koncept vo vývoji agentných AI systémov. Zahŕňa AI systémy, ktoré si uvedomujú svoje vlastné vnútorné procesy a sú schopné monitorovať, regulovať a prispôsobovať svoje správanie podľa toho. Podobne ako keď my vyhodnocujeme situáciu alebo riešime problém. Toto sebauvedomenie môže pomôcť AI systémom robiť lepšie rozhodnutia, identifikovať chyby a zlepšovať svoj výkon v priebehu času – opäť sa odkazujúce na Turingov test a diskusiu o tom, či AI prevezme kontrolu.
 
-V kontexte agentických AI systémov môže metakognícia pomôcť riešiť niekoľko výziev, ako napríklad:
+V kontexte agentných AI systémov môže metakognícia pomôcť riešiť niekoľko výziev, ako sú:
 - Transparentnosť: Zabezpečenie, že AI systémy dokážu vysvetliť svoje uvažovanie a rozhodnutia.
-- Uvažovanie: Zlepšenie schopnosti AI systémov syntetizovať informácie a robiť rozumné rozhodnutia.
+- Uvažovanie: Zlepšenie schopnosti AI systémov syntetizovať informácie a robiť správne rozhodnutia.
 - Adaptácia: Umožnenie AI systémom prispôsobiť sa novým prostrediam a meniacim sa podmienkam.
-- Vnímanie: Zlepšenie presnosti AI systémov pri rozpoznávaní a interpretácii údajov z ich prostredia.
+- Vnímanie: Zlepšenie presnosti AI systémov pri rozpoznávaní a interpretácii údajov zo svojho okolia.
 
 ### Čo je metakognícia?
 
-Metakognícia, alebo „myslenie o myslení“, je vyšší kognitívny proces, ktorý zahŕňa sebauvedomenie a sebareguláciu vlastných kognitívnych procesov. V oblasti AI metakognícia umožňuje agentom hodnotiť a prispôsobovať svoje stratégie a činnosti, čo vedie k zlepšeným schopnostiam riešenia problémov a rozhodovania. Pochopením metakognície môžete navrhovať AI agentov, ktorí sú nielen inteligentnejší, ale aj prispôsobivejší a efektívnejší. Pri skutočnej metakognícii by AI explicitne uvažovala o svojom vlastnom uvažovaní.
+Metakognícia, alebo „premýšľanie o myslení“, je vyšší kognitívny proces, ktorý zahŕňa sebauvedomenie a samoreguláciu vlastných kognitívnych procesov. V oblasti AI umožňuje metakognícia agentom vyhodnocovať a prispôsobovať svoje stratégie a činnosti, čo vedie k lepším schopnostiam riešenia problémov a rozhodovania. Pochopením metakognície môžete navrhovať AI agentov, ktorí nie sú len inteligentnejší, ale aj adaptabilnejší a efektívnejší. Pri skutočnej metakognícii by ste videli, ako AI explicitne uvažuje o svojom vlastnom uvažovaní.
 
-Príklad: „Uprednostnil som lacnejšie lety, pretože... Možno mi unikajú priame lety, takže to skontrolujem znova.“
-Sledovanie toho, ako alebo prečo si vybral určitú trasu.
-- Uvedomenie si, že urobil chyby, pretože sa príliš spoliehal na preferencie používateľa z minula, a preto mení svoju stratégiu rozhodovania, nielen konečné odporúčanie.
-- Diagnostikovanie vzorcov, ako napríklad: „Kedykoľvek používateľ spomenie ‚príliš preplnené‘, nemal by som len odstrániť určité atrakcie, ale aj prehodnotiť, či môj spôsob výberu ‚top atrakcií‘ nie je chybný, ak vždy hodnotím podľa popularity.“
+Príklad: „Uprednostnil som lacnejšie lety, pretože... Môžem prehliadať priame lety, takže si to znova skontrolujem.“.
+Sledovanie, ako alebo prečo si vybral určitú trasu.
+- Uvedomenie si, že urobil chyby, pretože príliš spolahl na používateľské preferencie z minulosti, a tak modifikuje svoju stratégiu rozhodovania, nie len konečné odporúčanie.
+- Diagnostikovanie vzorcov ako: „Kedykoľvek používateľ spomenie ‚príliš preplnené‘, nemal by som len odstrániť určité atrakcie, ale aj zvážiť, že moja metóda vyberania ‚najlepších atrakcií‘ je chybná, ak vždy hodnotím podľa popularity.“
 
-### Dôležitosť metakognície v AI agentoch
+### Význam metakognície v AI agentoch
 
-Metakognícia zohráva kľúčovú úlohu pri návrhu AI agentov z viacerých dôvodov:
+Metakognícia zohráva kľúčovú úlohu v dizajne AI agentov z niekoľkých dôvodov:
 
-![Dôležitosť metakognície](../../../translated_images/sk/importance-of-metacognition.b381afe9aae352f7.webp)
+![Importance of Metacognition](../../../translated_images/sk/importance-of-metacognition.b381afe9aae352f7.webp)
 
-- Sebareflexia: Agenti môžu hodnotiť svoj vlastný výkon a identifikovať oblasti na zlepšenie.
-- Adaptabilita: Agenti môžu meniť svoje stratégie na základe minulých skúseností a meniacich sa prostredí.
-- Korekcia chýb: Agenti môžu autonómne detegovať a opravovať chyby, čo vedie k presnejším výsledkom.
-- Riadenie zdrojov: Agenti môžu optimalizovať využívanie zdrojov, ako je čas a výpočtový výkon, plánovaním a hodnotením svojich činností.
+- Sebareflexia: Agenti môžu hodnotiť svoj výkon a identifikovať oblasti na zlepšenie.
+- Adaptabilita: Agenti môžu upravovať svoje stratégie na základe minulých skúseností a meniaceho sa prostredia.
+- Oprava chýb: Agenti môžu samostatne odhaľovať a korigovať chyby, čo vedie k presnejším výsledkom.
+- Správa zdrojov: Agenti môžu optimalizovať využitie zdrojov, ako je čas a výpočtový výkon, plánovaním a hodnotením svojich akcií.
 
 ## Komponenty AI agenta
 
-Predtým, než sa ponoríme do metakognitívnych procesov, je dôležité pochopiť základné komponenty AI agenta. AI agent sa zvyčajne skladá z:
+Predtým, než sa pustíme do metakognitívnych procesov, je nevyhnutné pochopiť základné komponenty AI agenta. AI agent obvykle pozostáva z:
 
 - Persona: Osobnosť a charakteristiky agenta, ktoré definujú, ako komunikuje s používateľmi.
 - Nástroje: Schopnosti a funkcie, ktoré agent dokáže vykonávať.
 - Zručnosti: Vedomosti a odborné znalosti, ktoré agent vlastní.
 
-Tieto komponenty spolupracujú na vytvorení „jednotky odbornosti“, ktorá dokáže vykonávať špecifické úlohy.
+Tieto komponenty spolupracujú na vytvorenie „jednotky odbornosti“, ktorá môže vykonávať konkrétne úlohy.
 
 **Príklad**:
-Predstavte si cestovného agenta, ktorý nielen plánuje vašu dovolenku, ale aj upravuje svoju trasu na základe údajov v reálnom čase a minulých skúseností zákazníkov.
+Predstavte si cestovného agenta, ktorý nielen plánuje vašu dovolenku, ale aj prispôsobuje trasu na základe údajov v reálnom čase a skúseností z predchádzajúcich zákazníckych ciest.
 
 ### Príklad: Metakognícia v službe cestovného agenta
 
-Predstavte si, že navrhujete službu cestovného agenta poháňanú AI. Tento agent, „Cestovný agent“, pomáha používateľom plánovať ich dovolenky. Na začlenenie metakognície musí Cestovný agent hodnotiť a upravovať svoje činnosti na základe sebauvedomenia a minulých skúseností. Tu je, ako by mohla metakognícia zohrávať úlohu:
+Predstavte si, že navrhujete službu cestovného agenta poháňanú AI. Tento agent, „Cestovný agent“, pomáha používateľom plánovať dovolenky. Aby ste začlenili metakogníciu, Cestovný agent potrebuje vyhodnocovať a upravovať svoje akcie na základe sebauvedomenia a minulých skúseností. Tu je, ako by metakognícia mohla hrať úlohu:
 
 #### Aktuálna úloha
 
-Aktuálnou úlohou je pomôcť používateľovi naplánovať výlet do Paríža.
+Aktuálnou úlohou je pomôcť používateľovi naplánovať cestu do Paríža.
 
-#### Kroky na splnenie úlohy
+#### Kroky na dokončenie úlohy
 
-1. **Zhromaždiť preferencie používateľa**: Opýtať sa používateľa na jeho cestovné dátumy, rozpočet, záujmy (napr. múzeá, kuchyňa, nakupovanie) a akékoľvek špecifické požiadavky.
-2. **Získať informácie**: Vyhľadať možnosti letov, ubytovania, atrakcií a reštaurácií, ktoré zodpovedajú preferenciám používateľa.
-3. **Vytvoriť odporúčania**: Poskytnúť personalizovaný itinerár s podrobnosťami o letoch, rezerváciách hotelov a navrhovaných aktivitách.
-4. **Upraviť na základe spätnej väzby**: Požiadať používateľa o spätnú väzbu na odporúčania a vykonať potrebné úpravy.
+1. **Zber používateľských preferencií**: Opýtajte sa používateľa na dátumy cesty, rozpočet, záujmy (napr. múzeá, kuchyňa, nakupovanie) a akékoľvek špecifické požiadavky.
+2. **Získanie informácií**: Vyhľadajte možnosti letov, ubytovania, atrakcií a reštaurácií, ktoré zodpovedajú preferenciám používateľa.
+3. **Generovanie odporúčaní**: Poskytnite personalizovaný itinerár s detailmi letov, rezerváciami hotelov a navrhovanými aktivitami.
+4. **Úprava na základe spätnej väzby**: Požiadajte používateľa o spätnú väzbu na odporúčania a vykonajte potrebné úpravy.
 
-#### Požadované zdroje
+#### Potrebné zdroje
 
 - Prístup k databázam rezervácií letov a hotelov.
 - Informácie o parížskych atrakciách a reštauráciách.
-- Údaje o spätnej väzbe od používateľov z predchádzajúcich interakcií.
+- Dáta spätnej väzby od používateľov z predchádzajúcich interakcií.
 
 #### Skúsenosti a sebareflexia
 
-Cestovný agent využíva metakogníciu na hodnotenie svojho výkonu a učenie sa z minulých skúseností. Napríklad:
+Cestovný agent používa metakogníciu na vyhodnocovanie svojho výkonu a učenie sa z minulých skúseností. Napríklad:
 
-1. **Analýza spätnej väzby používateľa**: Cestovný agent preskúma spätnú väzbu používateľa, aby zistil, ktoré odporúčania boli dobre prijaté a ktoré nie. Podľa toho upraví svoje budúce návrhy.
-2. **Adaptabilita**: Ak používateľ predtým spomenul, že nemá rád preplnené miesta, Cestovný agent sa v budúcnosti vyhne odporúčaniu populárnych turistických miest počas špičkových hodín.
-3. **Korekcia chýb**: Ak Cestovný agent urobil chybu v minulom plánovaní, napríklad navrhol hotel, ktorý bol plne obsadený, naučí sa dôkladnejšie kontrolovať dostupnosť predtým, než urobí odporúčania.
+1. **Analýza spätnej väzby používateľa**: Cestovný agent prehodnocuje spätnú väzbu, aby zistil, ktoré odporúčania boli dobre prijaté a ktoré nie. Podľa toho upravuje svoje budúce návrhy.
+2. **Adaptabilita**: Ak používateľ predtým spomenul, že nemá rád preplnené miesta, Cestovný agent sa v budúcnosti vyhne odporúčaniu populárnych turistických miest v najvyťaženejších časoch.
+3. **Oprava chýb**: Ak Cestovný agent urobil chybu pri rezervácii, napríklad navrhol hotel, ktorý bol plne obsadený, naučí sa dôkladnejšie kontrolovať dostupnosť pred podaním odporúčaní.
 
-#### Praktický príklad pre vývojárov
+#### Praktický príklad pre vývojára
 
-Tu je zjednodušený príklad kódu, ako by mohol vyzerať kód Cestovného agenta pri začlenení metakognície:
+Tu je zjednodušený príklad kódu Cestovného agenta, ktorý zahŕňa metakogníciu:
 
 ```python
 class Travel_Agent:
@@ -101,7 +101,7 @@ class Travel_Agent:
         self.user_preferences = preferences
 
     def retrieve_information(self):
-        # Search for flights, hotels, and attractions based on preferences
+        # Vyhľadávanie letov, hotelov a atrakcií na základe preferencií
         flights = search_flights(self.user_preferences)
         hotels = search_hotels(self.user_preferences)
         attractions = search_attractions(self.user_preferences)
@@ -114,10 +114,10 @@ class Travel_Agent:
 
     def adjust_based_on_feedback(self, feedback):
         self.experience_data.append(feedback)
-        # Analyze feedback and adjust future recommendations
+        # Analyzovať spätnú väzbu a upraviť budúce odporúčania
         self.user_preferences = adjust_preferences(self.user_preferences, feedback)
 
-# Example usage
+# Príklad použitia
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -135,67 +135,67 @@ travel_agent.adjust_based_on_feedback(feedback)
 #### Prečo je metakognícia dôležitá
 
 - **Sebareflexia**: Agenti môžu analyzovať svoj výkon a identifikovať oblasti na zlepšenie.
-- **Adaptabilita**: Agenti môžu meniť stratégie na základe spätnej väzby a meniacich sa podmienok.
-- **Korekcia chýb**: Agenti môžu autonómne detegovať a opravovať chyby.
-- **Riadenie zdrojov**: Agenti môžu optimalizovať využívanie zdrojov, ako je čas a výpočtový výkon.
+- **Adaptabilita**: Agenti môžu upravovať stratégie na základe spätnej väzby a meniacich sa podmienok.
+- **Oprava chýb**: Agenti môžu autonómne odhaľovať a opravovať chyby.
+- **Správa zdrojov**: Agenti môžu optimalizovať využívanie zdrojov, ako je čas a výpočtový výkon.
 
-Začlenením metakognície môže Cestovný agent poskytovať personalizovanejšie a presnejšie odporúčania na cestovanie, čím zlepší celkový používateľský zážitok.
+Začlenením metakognície môže Cestovný agent poskytovať personalizovanejšie a presnejšie cestovné odporúčania, čím zlepšuje celkový používateľský zážitok.
 
 ---
 
 ## 2. Plánovanie v agentoch
 
-Plánovanie je kľúčovou súčasťou správania AI agenta. Zahŕňa načrtnutie krokov potrebných na dosiahnutie cieľa, pričom sa zohľadňuje aktuálny stav, zdroje a možné prekážky.
+Plánovanie je kľúčovou súčasťou správania AI agenta. Zahŕňa načrtnutie krokov potrebných na dosiahnutie cieľa, zohľadňujúc aktuálny stav, zdroje a možné prekážky.
 
 ### Prvky plánovania
 
 - **Aktuálna úloha**: Jasne definovať úlohu.
-- **Kroky na splnenie úlohy**: Rozdeliť úlohu na zvládnuteľné kroky.
-- **Požadované zdroje**: Identifikovať potrebné zdroje.
-- **Skúsenosti**: Využiť minulé skúsenosti na informovanie plánovania.
+- **Kroky na dokončenie úlohy**: Rozložiť úlohu na spravovateľné kroky.
+- **Potrebné zdroje**: Identifikovať potrebné zdroje.
+- **Skúsenosti**: Využiť minulé skúsenosti na podporu plánovania.
 
 **Príklad**:
-Tu sú kroky, ktoré musí Cestovný agent podniknúť, aby efektívne pomohol používateľovi naplánovať jeho cestu:
+Tu sú kroky, ktoré musí Cestovný agent vykonať, aby účinne pomohol používateľovi plánovať jeho cestu:
 
 ### Kroky pre Cestovného agenta
 
-1. **Zhromaždiť preferencie používateľa**
-   - Opýtať sa používateľa na podrobnosti o jeho cestovných dátumoch, rozpočte, záujmoch a akýchkoľvek špecifických požiadavkách.
+1. **Zber používateľských preferencií**
+   - Opýtajte sa používateľa na detaily o dátumoch cesty, rozpočte, záujmoch a akýchkoľvek špecifických požiadavkách.
    - Príklady: „Kedy plánujete cestovať?“ „Aký je váš rozpočtový rozsah?“ „Aké aktivity si užívate na dovolenke?“
 
-2. **Získať informácie**
-   - Vyhľadať relevantné možnosti cestovania na základe preferencií používateľa.
-   - **Lety**: Vyhľadať dostupné lety v rámci rozpočtu a preferovaných dátumov používateľa.
-   - **Ubytovanie**: Nájsť hotely alebo prenájmy, ktoré zodpovedajú preferenciám používateľa pre lokalitu, cenu a vybavenie.
-   - **Atrakcie a reštaurácie**: Identifikovať populárne atrakcie, aktivity a možnosti stravovania, ktoré zodpovedajú záujmom používateľa.
+2. **Získanie informácií**
+   - Vyhľadajte relevantné možnosti cestovania na základe preferencií používateľa.
+   - **Lety**: Nájdite dostupné lety v rámci rozpočtu a preferovaných dátumov.
+   - **Ubytovanie**: Nájdite hotely alebo prenájmy, ktoré zodpovedajú preferenciám používateľa čo sa týka lokality, ceny a vybavenia.
+   - **Atrakcie a reštaurácie**: Identifikujte populárne atrakcie, aktivity a možnosti stravovania, ktoré sú v súlade so záujmami používateľa.
 
-3. **Vytvoriť odporúčania**
-   - Zostaviť získané informácie do personalizovaného itinerára.
-   - Poskytnúť podrobnosti, ako sú možnosti letov, rezervácie hotelov a navrhované aktivity, pričom odporúčania prispôsobiť preferenciám používateľa.
+3. **Generovanie odporúčaní**
+   - Zostavte získané informácie do personalizovaného itinerára.
+   - Poskytnite detaily, ako sú možnosti letov, rezervácie hotelov a navrhované aktivity, pričom sa uistite, že odporúčania zodpovedajú preferenciám používateľa.
 
-4. **Predstaviť itinerár používateľovi**
-   - Zdieľať navrhovaný itinerár s používateľom na jeho preskúmanie.
-   - Príklad: „Tu je navrhovaný itinerár pre váš výlet do Paríža. Zahŕňa podrobnosti o letoch, rezerváciách hotelov a zoznam odporúčaných aktivít a reštaurácií. Dajte mi vedieť, čo si o tom myslíte!“
+4. **Predstavenie itinerára používateľovi**
+   - Zdieľajte navrhovaný itinerár na posúdenie používateľom.
+   - Príklad: „Tu je navrhovaný itinerár pre vašu cestu do Paríža. Obsahuje detaily letov, rezervácie hotelov a zoznam odporúčaných aktivít a reštaurácií. Dajte mi vedieť vaše názory!“
 
-5. **Zhromaždiť spätnú väzbu**
-   - Požiadať používateľa o spätnú väzbu na navrhovaný itinerár.
-   - Príklady: „Páčia sa vám možnosti letov?“ „Je hotel vhodný pre vaše potreby?“ „Sú nejaké aktivity, ktoré by ste chceli pridať alebo odstrániť?“
+5. **Zber spätnej väzby**
+   - Požiadajte používateľa o spätnú väzbu na navrhovaný itinerár.
+   - Príklady: „Páčia sa vám možnosti letov?“ „Je hotel vhodný pre vaše potreby?“ „Chceli by ste niečo pridať alebo odstrániť?“
 
-6. **Upraviť na základe spätnej väzby**
+6. **Úprava podľa spätnej väzby**
    - Upraviť itinerár na základe spätnej väzby používateľa.
-   - Urobiť potrebné zmeny v odporúčaniach na lety, ubytovanie a aktivity, aby lepšie zodpovedali preferenciám používateľa.
+   - Vykonať potrebné zmeny v odporúčaniach týkajúcich sa letu, ubytovania a aktivít, aby lepšie zodpovedali preferenciám používateľa.
 
 7. **Konečné potvrdenie**
-   - Predstaviť aktualizovaný itinerár používateľovi na konečné potvrdenie.
-   - Príklad: „Urobil som úpravy na základe vašej spätnej väzby. Tu je aktualizovaný itinerár. Vyzerá všetko v poriadku?“
+   - Predložiť aktualizovaný itinerár používateľovi na finálne potvrdenie.
+   - Príklad: „Urobil som úpravy podľa vašej spätnej väzby. Tu je upravený itinerár. Vyzerá všetko v poriadku?“
 
-8. **Rezervovať a potvrdiť rezervácie**
-   - Po schválení itinerára používateľom pokračovať v rezervácii letov, ubytovania a akýchkoľvek predplánovaných aktivít.
-   - Poslať používateľovi podrobnosti o potvrdení.
+8. **Rezervácia a potvrdenie**
+   - Po schválení itinerára používateľom pokračujte s rezerváciou letov, ubytovania a predpripravených aktivít.
+   - Pošlite používateľovi potvrdenie.
 
-9. **Poskytnúť priebežnú podporu**
-   - Zostať k dispozícii na pomoc používateľovi s akýmikoľvek zmenami alebo dodatočnými požiadavkami pred a počas jeho cesty.
-   - Príklad: „Ak budete počas svojej cesty potrebovať ďalšiu pomoc, neváhajte ma kedykoľvek kontaktovať!“
+9. **Poskytovanie priebežnej podpory**
+   - Buďte k dispozícii na pomoc používateľovi so zmenami alebo ďalšími požiadavkami pred cestou a počas nej.
+   - Príklad: „Ak budete počas cesty potrebovať ďalšiu pomoc, neváhajte sa na mňa kedykoľvek obrátiť!“
 
 ### Príklad interakcie
 
@@ -223,7 +223,7 @@ class Travel_Agent:
         self.experience_data.append(feedback)
         self.user_preferences = adjust_preferences(self.user_preferences, feedback)
 
-# Example usage within a booing request
+# Príklad použitia v rámci požiadavky na bookovanie
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -238,51 +238,178 @@ feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)
 travel_agent.adjust_based_on_feedback(feedback)
 ```
 
-## 3. Korekčný RAG systém
+## 3. Korektívny RAG systém
 
-Najprv začnime pochopením rozdielu medzi nástrojom RAG a prediktívnym načítaním kontextu.
+Najskôr si poďme vysvetliť rozdiel medzi RAG nástrojom a preemptívnym načítaním kontextu.
 
-![RAG vs načítanie kontextu](../../../translated_images/sk/rag-vs-context.9eae588520c00921.webp)
+![RAG vs Context Loading](../../../translated_images/sk/rag-vs-context.9eae588520c00921.webp)
 
 ### Retrieval-Augmented Generation (RAG)
 
-RAG kombinuje systém vyhľadávania s generatívnym modelom. Keď sa zadá dopyt, systém vyhľadávania načíta relevantné dokumenty alebo údaje z externého zdroja a tieto získané informácie sa použijú na doplnenie vstupu do generatívneho modelu. To pomáha modelu generovať presnejšie a kontextovo relevantné odpovede.
+RAG kombinuje systém vyhľadávania s generatívnym modelom. Keď je zadaný dopyt, vyhľadávací systém získava relevantné dokumenty alebo dáta z externého zdroja a tieto získané informácie sa používajú na rozšírenie vstupu generatívneho modelu. To pomáha modelu vytvárať presnejšie a kontextovo relevantnejšie odpovede.
 
-V systéme RAG agent načíta relevantné informácie z databázy znalostí a použije ich na generovanie vhodných odpovedí alebo činností.
+V RAG systéme agent získava relevantné informácie z databázy znalostí a používa ich na generovanie vhodných odpovedí alebo akcií.
 
-### Korekčný prístup RAG
+### Korektívny RAG prístup
 
-Korekčný prístup RAG sa zameriava na použitie techník RAG na opravu chýb a zlepšenie presnosti AI agentov. To zahŕňa:
+Korektívny RAG prístup sa zameriava na použitie RAG techník na opravu chýb a zlepšenie presnosti AI agentov. To zahŕňa:
 
-1. **Technika podnetov**: Použitie špecifických podnetov na usmernenie agenta pri načítavaní relevantných informácií.
-2. **Nástroj**: Implementácia algoritmov a mechanizmov, ktoré umožňujú agentovi hodnotiť relevantnosť načítaných informácií a generovať presné odpovede.
-3. **Hodnotenie**: Neustále hodnotenie výkonu agenta a vykonávanie úprav na zlepšenie jeho presnosti a efektívnosti.
+1. **Technika podnetov**: Použitie špecifických podnetov na riadenie agenta pri vyhľadávaní relevantných informácií.
+2. **Nástroj**: Implementácia algoritmov a mechanizmov umožňujúcich agentovi vyhodnocovať relevantnosť získaných informácií a generovať presné odpovede.
+3. **Hodnotenie**: Neustále hodnotenie výkonu agenta a vykonávanie úprav na zlepšenie jeho presnosti a efektivity.
 
-#### Príklad: Korekčný RAG v agentovi vyhľadávania
+#### Príklad: Korektívny RAG v agentovi na vyhľadávanie
 
-Zvážte agenta vyhľadávania, ktorý načítava informácie z webu na zodpovedanie otázok používateľov. Korekčný prístup RAG môže zahŕňať:
+Predstavte si agenta na vyhľadávanie, ktorý získava informácie z webu na odpovedanie na otázky používateľov. Korektívny RAG prístup by mohol zahŕňať:
 
 1. **Technika podnetov**: Formulovanie vyhľadávacích dopytov na základe vstupu používateľa.
-2. **Nástroj**: Použitie algoritmov spracovania prirodzeného jazyka a strojového učenia na hodnotenie a filtrovanie výsledkov vyhľadávania.
-3. **Hodnotenie**: Analýza spätnej väzby používateľa na identifikáciu a opravu nepresností v načítaných informáciách.
+2. **Nástroj**: Použitie spracovania prirodzeného jazyka a algoritmov strojového učenia na hodnotenie a filtrovanie výsledkov vyhľadávania.
+3. **Hodnotenie**: Analýza spätnej väzby používateľov na identifikáciu a opravu nepresností vo získaných informáciách.
 
-### Korekčný RAG v Cestovnom agentovi
+### Korektívny RAG v Cestovnom agentovi
 
-Korekčný RAG (Retrieval-Augmented Generation) zlepšuje schopnosť AI načítavať a generovať informácie pri opravovaní akýchkoľvek nepresností. Pozrime sa, ako môže Cestovný agent využiť korekčný prístup RAG na poskytovanie presnejších a relevantnejších odporúčaní na cestovanie.
+Korektívny RAG (Retrieval-Augmented Generation) zvyšuje schopnosť AI získavať a generovať informácie, pričom opravuje akékoľvek nepresnosti. Pozrime sa, ako môže Cestovný agent využiť korektívny RAG prístup na poskytovanie presnejších a relevantnejších cestovných odporúčaní.
 
 To zahŕňa:
 
-- **Technika podnetov:** Použitie špecifických podnetov na usmernen
-### Predbežné načítanie kontextu
+- **Technika podnetov:** Použitie špecifických podnetov na riadenie agenta pri vyhľadávaní relevantných informácií.
+- **Nástroj:** Implementácia algoritmov a mechanizmov, ktoré umožňujú agentovi vyhodnocovať relevantnosť získaných informácií a generovať presné odpovede.
+- **Hodnotenie:** Neustále hodnotenie výkonu agenta a vykonávanie úprav na zlepšenie jeho presnosti a efektivity.
 
-Predbežné načítanie kontextu zahŕňa načítanie relevantných informácií alebo pozadia do modelu ešte pred spracovaním dotazu. To znamená, že model má od začiatku prístup k týmto informáciám, čo mu umožňuje generovať informovanejšie odpovede bez potreby získavania ďalších údajov počas procesu.
+#### Kroky implementácie korektívneho RAG v Cestovnom agentovi
 
-Tu je zjednodušený príklad, ako by mohlo vyzerať predbežné načítanie kontextu pre aplikáciu cestovnej agentúry v Pythone:
+1. **Počiatočná interakcia s používateľom**
+   - Cestovný agent zhromažďuje počiatočné preferencie od používateľa, ako sú cieľ, dátumy cesty, rozpočet a záujmy.
+   - Príklad:
+
+     ```python
+     preferences = {
+         "destination": "Paris",
+         "dates": "2025-04-01 to 2025-04-10",
+         "budget": "moderate",
+         "interests": ["museums", "cuisine"]
+     }
+     ```
+
+2. **Získavanie informácií**
+   - Cestovný agent získava informácie o letoch, ubytovaní, atrakciách a reštauráciách na základe preferencií používateľa.
+   - Príklad:
+
+     ```python
+     flights = search_flights(preferences)
+     hotels = search_hotels(preferences)
+     attractions = search_attractions(preferences)
+     ```
+
+3. **Generovanie počiatočných odporúčaní**
+   - Cestovný agent používa získané informácie na vytvorenie personalizovaného itinerára.
+   - Príklad:
+
+     ```python
+     itinerary = create_itinerary(flights, hotels, attractions)
+     print("Suggested Itinerary:", itinerary)
+     ```
+
+4. **Zber spätnej väzby od používateľa**
+   - Cestovný agent žiada používateľa o spätnú väzbu na počiatočné odporúčania.
+   - Príklad:
+
+     ```python
+     feedback = {
+         "liked": ["Louvre Museum"],
+         "disliked": ["Eiffel Tower (too crowded)"]
+     }
+     ```
+
+5. **Proces korektívneho RAG**
+   - **Technika podnetov**: Cestovný agent formuluje nové vyhľadávacie dopyty na základe spätnej väzby používateľa.
+     - Príklad:
+
+       ```python
+       if "disliked" in feedback:
+           preferences["avoid"] = feedback["disliked"]
+       ```
+
+   - **Nástroj**: Cestovný agent využíva algoritmy na hodnotenie a filtrovanie nových výsledkov vyhľadávania, pričom zdôrazňuje relevanciu na základe spätnej väzby.
+     - Príklad:
+
+       ```python
+       new_attractions = search_attractions(preferences)
+       new_itinerary = create_itinerary(flights, hotels, new_attractions)
+       print("Updated Itinerary:", new_itinerary)
+       ```
+
+   - **Hodnotenie**: Cestovný agent neustále vyhodnocuje relevantnosť a presnosť svojich odporúčaní analýzou spätnej väzby používateľa a vykonáva potrebné úpravy.
+     - Príklad:
+
+       ```python
+       def adjust_preferences(preferences, feedback):
+           if "liked" in feedback:
+               preferences["favorites"] = feedback["liked"]
+           if "disliked" in feedback:
+               preferences["avoid"] = feedback["disliked"]
+           return preferences
+
+       preferences = adjust_preferences(preferences, feedback)
+       ```
+
+#### Praktický príklad
+
+Tu je zjednodušený príklad kódu v Pythone, ktorý zahrňuje korektívny RAG prístup v Cestovnom agentovi:
+
+```python
+class Travel_Agent:
+    def __init__(self):
+        self.user_preferences = {}
+        self.experience_data = []
+
+    def gather_preferences(self, preferences):
+        self.user_preferences = preferences
+
+    def retrieve_information(self):
+        flights = search_flights(self.user_preferences)
+        hotels = search_hotels(self.user_preferences)
+        attractions = search_attractions(self.user_preferences)
+        return flights, hotels, attractions
+
+    def generate_recommendations(self):
+        flights, hotels, attractions = self.retrieve_information()
+        itinerary = create_itinerary(flights, hotels, attractions)
+        return itinerary
+
+    def adjust_based_on_feedback(self, feedback):
+        self.experience_data.append(feedback)
+        self.user_preferences = adjust_preferences(self.user_preferences, feedback)
+        new_itinerary = self.generate_recommendations()
+        return new_itinerary
+
+# Príklad použitia
+travel_agent = Travel_Agent()
+preferences = {
+    "destination": "Paris",
+    "dates": "2025-04-01 to 2025-04-10",
+    "budget": "moderate",
+    "interests": ["museums", "cuisine"]
+}
+travel_agent.gather_preferences(preferences)
+itinerary = travel_agent.generate_recommendations()
+print("Suggested Itinerary:", itinerary)
+feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
+new_itinerary = travel_agent.adjust_based_on_feedback(feedback)
+print("Updated Itinerary:", new_itinerary)
+```
+
+### Preemptívne načítanie kontextu
+
+
+Pre-emptívne načítanie kontextu zahŕňa načítanie relevantného kontextu alebo základných informácií do modelu pred spracovaním dotazu. To znamená, že model má prístup k týmto informáciám od začiatku, čo mu môže pomôcť generovať lepšie informované odpovede bez potreby získavania ďalších údajov počas procesu.
+
+Tu je zjednodušený príklad, ako by mohlo vyzerať pre-emptívne načítanie kontextu pre aplikáciu cestovnej kancelárie v Pythone:
 
 ```python
 class TravelAgent:
     def __init__(self):
-        # Pre-load popular destinations and their information
+        # Prednačítanie obľúbených destinácií a ich informácií
         self.context = {
             "Paris": {"country": "France", "currency": "Euro", "language": "French", "attractions": ["Eiffel Tower", "Louvre Museum"]},
             "Tokyo": {"country": "Japan", "currency": "Yen", "language": "Japanese", "attractions": ["Tokyo Tower", "Shibuya Crossing"]},
@@ -291,14 +418,14 @@ class TravelAgent:
         }
 
     def get_destination_info(self, destination):
-        # Fetch destination information from pre-loaded context
+        # Získanie informácií o destinácii z prednačítaného kontextu
         info = self.context.get(destination)
         if info:
             return f"{destination}:\nCountry: {info['country']}\nCurrency: {info['currency']}\nLanguage: {info['language']}\nAttractions: {', '.join(info['attractions'])}"
         else:
             return f"Sorry, we don't have information on {destination}."
 
-# Example usage
+# Príklad použitia
 travel_agent = TravelAgent()
 print(travel_agent.get_destination_info("Paris"))
 print(travel_agent.get_destination_info("Tokyo"))
@@ -306,27 +433,27 @@ print(travel_agent.get_destination_info("Tokyo"))
 
 #### Vysvetlenie
 
-1. **Inicializácia (`__init__` metóda)**: Trieda `TravelAgent` predbežne načíta slovník obsahujúci informácie o populárnych destináciách, ako sú Paríž, Tokio, New York a Sydney. Tento slovník zahŕňa detaily ako krajina, mena, jazyk a hlavné atrakcie pre každú destináciu.
+1. **Inicializácia (metóda `__init__`)**: Trieda `TravelAgent` prednačítava slovník obsahujúci informácie o populárnych destináciách, ako sú Paríž, Tokio, New York a Sydney. Tento slovník zahŕňa detaily ako krajina, mena, jazyk a hlavné atrakcie každej destinácie.
 
-2. **Získavanie informácií (`get_destination_info` metóda)**: Keď sa používateľ pýta na konkrétnu destináciu, metóda `get_destination_info` vyhľadá relevantné informácie z predbežne načítaného slovníka.
+2. **Získavanie informácií (metóda `get_destination_info`)**: Keď používateľ položí otázku o konkrétnej destinácii, metóda `get_destination_info` načíta relevantné informácie zo prednačítaného slovníka kontextu.
 
-Predbežným načítaním kontextu môže aplikácia cestovnej agentúry rýchlo reagovať na dotazy používateľov bez potreby získavania týchto informácií z externého zdroja v reálnom čase. To robí aplikáciu efektívnejšou a pohotovejšou.
+Prednačítavaním kontextu môže aplikácia cestovnej kancelárie rýchlo odpovedať na používateľské otázky bez nutnosti v reálnom čase získavať tieto informácie z externého zdroja. Toto robí aplikáciu efektívnejšou a responzívnejšou.
 
-### Bootstrapovanie plánu s cieľom pred iteráciou
+### Inicializácia plánu s cieľom pred iteráciou
 
-Bootstrapovanie plánu s cieľom zahŕňa začatie s jasne definovaným cieľom alebo požadovaným výsledkom. Definovaním tohto cieľa na začiatku môže model použiť tento cieľ ako vodítko počas celého iteratívneho procesu. To pomáha zabezpečiť, že každá iterácia sa približuje k dosiahnutiu požadovaného výsledku, čím sa proces stáva efektívnejším a zameranejším.
+Inicializácia plánu s cieľom znamená začať s jasným cieľom alebo želaným výsledkom na mysli. Definovaním tohto cieľa od začiatku môže model používať tento cieľ ako vodítko počas celého iteratívneho procesu. Pomáha to zabezpečiť, že každá iterácia sa približuje k dosiahnutiu požadovaného výsledku, čím sa proces stáva efektívnejším a zameraným.
 
-Tu je príklad, ako by ste mohli bootstrapovať cestovný plán s cieľom pred iteráciou pre cestovnú agentúru v Pythone:
+Tu je príklad, ako môžete inicializovať cestovný plán s cieľom pred iteráciou pre cestovnú kanceláriu v Pythone:
 
 ### Scenár
 
-Cestovná agentúra chce naplánovať prispôsobenú dovolenku pre klienta. Cieľom je vytvoriť cestovný itinerár, ktorý maximalizuje spokojnosť klienta na základe jeho preferencií a rozpočtu.
+Cestovná kancelária chce naplánovať zákaznícku dovolenku na mieru. Cieľom je vytvoriť cestovný itinerár, ktorý maximalizuje spokojnosť klienta na základe jeho preferencií a rozpočtu.
 
 ### Kroky
 
-1. Definujte preferencie a rozpočet klienta.
-2. Bootstrapujte počiatočný plán na základe týchto preferencií.
-3. Iterujte, aby ste plán zdokonalili a optimalizovali spokojnosť klienta.
+1. Definovať preferencie a rozpočet klienta.
+2. Inicializovať počiatočný plán na základe týchto preferencií.
+3. Iterovať a zdokonaľovať plán, optimalizujúc pre spokojnosť klienta.
 
 #### Python kód
 
@@ -363,7 +490,7 @@ class TravelAgent:
     def calculate_cost(self, plan, new_destination):
         return sum(destination['cost'] for destination in plan) + new_destination['cost']
 
-# Example usage
+# Príklad použitia
 destinations = [
     {"name": "Paris", "cost": 1000, "activity": "sightseeing"},
     {"name": "Tokyo", "cost": 1200, "activity": "shopping"},
@@ -384,53 +511,53 @@ print("Refined Plan:", refined_plan)
 
 #### Vysvetlenie kódu
 
-1. **Inicializácia (`__init__` metóda)**: Trieda `TravelAgent` je inicializovaná zoznamom potenciálnych destinácií, z ktorých každá má atribúty ako názov, cena a typ aktivity.
+1. **Inicializácia (metóda `__init__`)**: Trieda `TravelAgent` je inicializovaná s zoznamom potenciálnych destinácií, z ktorých každá má atribúty ako názov, cena a typ aktivity.
 
-2. **Bootstrapovanie plánu (`bootstrap_plan` metóda)**: Táto metóda vytvára počiatočný cestovný plán na základe preferencií klienta a rozpočtu. Iteruje cez zoznam destinácií a pridáva ich do plánu, ak zodpovedajú preferenciám klienta a zmestia sa do rozpočtu.
+2. **Inicializácia plánu (metóda `bootstrap_plan`)**: Táto metóda vytvorí počiatočný cestovný plán na základe preferencií a rozpočtu klienta. Prechádza zoznam destinácií a pridáva ich do plánu, ak zodpovedajú preferenciám klienta a zmestia sa do rozpočtu.
 
-3. **Porovnávanie preferencií (`match_preferences` metóda)**: Táto metóda kontroluje, či destinácia zodpovedá preferenciám klienta.
+3. **Zhodnotenie preferencií (metóda `match_preferences`)**: Táto metóda kontroluje, či destinácia zodpovedá preferenciám klienta.
 
-4. **Iterovanie plánu (`iterate_plan` metóda)**: Táto metóda zdokonaľuje počiatočný plán tým, že sa snaží nahradiť každú destináciu v pláne lepšou alternatívou, pričom zohľadňuje preferencie klienta a rozpočtové obmedzenia.
+4. **Iterácia plánu (metóda `iterate_plan`)**: Táto metóda zdokonaľuje počiatočný plán tým, že sa snaží nahradiť každú destináciu v pláne lepšou voľbou, zohľadňujúc preferencie klienta a rozpočtové obmedzenia.
 
-5. **Výpočet nákladov (`calculate_cost` metóda)**: Táto metóda vypočíta celkové náklady aktuálneho plánu vrátane potenciálnej novej destinácie.
+5. **Výpočet ceny (metóda `calculate_cost`)**: Táto metóda vypočíta celkové náklady aktuálneho plánu vrátane potenciálnej novej destinácie.
 
 #### Príklad použitia
 
-- **Počiatočný plán**: Cestovná agentúra vytvorí počiatočný plán na základe preferencií klienta pre prehliadky a rozpočet 2000 dolárov.
-- **Zdokonalený plán**: Cestovná agentúra iteruje plán, optimalizuje ho podľa preferencií klienta a rozpočtu.
+- **Počiatočný plán**: cestovná kancelária vytvorí počiatočný plán na základe preferencií klienta pre poznávanie pamiatok a rozpočtu 2000 $.
+- **Zdokonalený plán**: cestovná kancelária iteruje plán a optimalizuje ho podľa preferencií a rozpočtu klienta.
 
-Bootstrapovaním plánu s jasným cieľom (napr. maximalizácia spokojnosti klienta) a iterovaním na jeho zdokonalenie môže cestovná agentúra vytvoriť prispôsobený a optimalizovaný cestovný itinerár pre klienta. Tento prístup zabezpečuje, že cestovný plán od začiatku zodpovedá preferenciám a rozpočtu klienta a zlepšuje sa s každou iteráciou.
+Inicializáciou plánu s jasným cieľom (napr. maximalizovať spokojnosť klienta) a iteráciou na jeho zdokonalenie môže cestovná kancelária vytvoriť prispôsobený a optimalizovaný cestovný itinerár pre klienta. Tento prístup zabezpečuje, že cestovný plán od začiatku zodpovedá preferenciám a rozpočtu klienta a postupne sa zlepšuje.
 
-### Využitie LLM na prehodnocovanie a skórovanie
+### Využitie LLM na pretriedenie a skórovanie
 
-Veľké jazykové modely (LLM) môžu byť použité na prehodnocovanie a skórovanie hodnotením relevantnosti a kvality získaných dokumentov alebo generovaných odpovedí. Tu je, ako to funguje:
+Veľké jazykové modely (LLM) je možné použiť na pretriedenie a skórovanie vyhľadaných dokumentov alebo generovaných odpovedí hodnotením ich relevantnosti a kvality. Funguje to takto:
 
-**Získavanie informácií:** Počiatočný krok získavania informácií vyhľadá súbor kandidátskych dokumentov alebo odpovedí na základe dotazu.
+**Vyhľadávanie:** Počiatočný krok vyhľadávania získa sadu kandidátskych dokumentov alebo odpovedí na základe dotazu.
 
-**Prehodnocovanie:** LLM hodnotí týchto kandidátov a prehodnocuje ich na základe ich relevantnosti a kvality. Tento krok zabezpečuje, že najrelevantnejšie a najkvalitnejšie informácie sú prezentované ako prvé.
+**Pretriedenie:** LLM vyhodnotí týchto kandidátov a usporiada ich podľa relevantnosti a kvality. Tento krok zabezpečuje, že na začiatku sú prezentované najrelevantnejšie a najkvalitnejšie informácie.
 
-**Skórovanie:** LLM priraďuje skóre každému kandidátovi, ktoré odráža ich relevantnosť a kvalitu. To pomáha pri výbere najlepšej odpovede alebo dokumentu pre používateľa.
+**Skórovanie:** LLM pridá každému kandidátovi skóre, ktoré odráža jeho relevantnosť a kvalitu. To pomáha vybrať najlepšiu odpoveď alebo dokument pre používateľa.
 
-Využitím LLM na prehodnocovanie a skórovanie môže systém poskytovať presnejšie a kontextovo relevantné informácie, čím zlepšuje celkový používateľský zážitok.
+Využitím LLM na pretriedenie a skórovanie môže systém poskytovať presnejšie a kontextovo relevantné informácie, čím zlepšuje celkový používateľský zážitok.
 
-Tu je príklad, ako by cestovná agentúra mohla použiť veľký jazykový model (LLM) na prehodnocovanie a skórovanie cestovných destinácií na základe preferencií používateľa v Pythone:
+Tu je príklad, ako by cestovná kancelária mohla použiť veľký jazykový model (LLM) na pretriedenie a skórovanie cestovných destinácií na základe preferencií používateľa v Pythone:
 
-#### Scenár - Cestovanie podľa preferencií
+#### Scenár - Cestovanie na základe preferencií
 
-Cestovná agentúra chce odporučiť najlepšie cestovné destinácie klientovi na základe jeho preferencií. LLM pomôže prehodnotiť a skórovať destinácie, aby zabezpečil, že najrelevantnejšie možnosti budú prezentované.
+Cestovná kancelária chce klientovi odporučiť najlepšie cestovné destinácie na základe jeho preferencií. LLM pomôže pretriediť a skórovať destinácie tak, aby sa prezentovali tie najrelevantnejšie možnosti.
 
 #### Kroky:
 
-1. Získajte preferencie používateľa.
-2. Získajte zoznam potenciálnych cestovných destinácií.
-3. Použite LLM na prehodnocovanie a skórovanie destinácií na základe preferencií používateľa.
+1. Získať používateľské preferencie.
+2. Získať zoznam potenciálnych cestovných destinácií.
+3. Použiť LLM na pretriedenie a skórovanie destinácií na základe používateľských preferencií.
 
-Tu je, ako môžete aktualizovať predchádzajúci príklad na použitie Azure OpenAI Services:
+Tu je návod, ako môžete aktualizovať predošlý príklad na použitie Azure OpenAI služieb:
 
 #### Požiadavky
 
-1. Potrebujete mať predplatné Azure.
-2. Vytvorte zdroj Azure OpenAI a získajte svoj API kľúč.
+1. Musíte mať Azure predplatné.
+2. Vytvoriť Azure OpenAI zdroj a získať svoj API kľúč.
 
 #### Príklad Python kódu
 
@@ -443,10 +570,10 @@ class TravelAgent:
         self.destinations = destinations
 
     def get_recommendations(self, preferences, api_key, endpoint):
-        # Generate a prompt for the Azure OpenAI
+        # Vygenerujte prompt pre Azure OpenAI
         prompt = self.generate_prompt(preferences)
         
-        # Define headers and payload for the request
+        # Definujte hlavičky a obsah požiadavky
         headers = {
             'Content-Type': 'application/json',
             'Authorization': f'Bearer {api_key}'
@@ -457,11 +584,11 @@ class TravelAgent:
             "temperature": 0.7
         }
         
-        # Call the Azure OpenAI API to get the re-ranked and scored destinations
+        # Zavolajte Azure OpenAI API, aby ste získali opätovne zoradené a ohodnotené destinácie
         response = requests.post(endpoint, headers=headers, json=payload)
         response_data = response.json()
         
-        # Extract and return the recommendations
+        # Extrahujte a vráťte odporúčania
         recommendations = response_data['choices'][0]['text'].strip().split('\n')
         return recommendations
 
@@ -474,7 +601,7 @@ class TravelAgent:
             prompt += f"- {destination['name']}: {destination['description']}\n"
         return prompt
 
-# Example usage
+# Príklad použitia
 destinations = [
     {"name": "Paris", "description": "City of lights, known for its art, fashion, and culture."},
     {"name": "Tokyo", "description": "Vibrant city, famous for its modernity and traditional temples."},
@@ -493,26 +620,267 @@ for rec in recommendations:
     print(rec)
 ```
 
-#### Vysvetlenie kódu - Preference Booker
+#### Vysvetlenie kódu - Rezervátor preferencií
 
-1. **Inicializácia**: Trieda `TravelAgent` je inicializovaná zoznamom potenciálnych cestovných destinácií, z ktorých každá má atribúty ako názov a popis.
+1. **Inicializácia**: Trieda `TravelAgent` je inicializovaná so zoznamom potenciálnych cestovných destinácií, z ktorých každá má atribúty ako názov a popis.
 
-2. **Získavanie odporúčaní (`get_recommendations` metóda)**: Táto metóda generuje prompt pre službu Azure OpenAI na základe preferencií používateľa a vykoná HTTP POST požiadavku na API Azure OpenAI, aby získala prehodnotené a skórované destinácie.
+2. **Získavanie odporúčaní (metóda `get_recommendations`)**: Táto metóda generuje prompt pre službu Azure OpenAI na základe preferencií používateľa a vykonáva HTTP POST požiadavku na API Azure OpenAI, aby získala pretriedené a skórované destinácie.
 
-3. **Generovanie promptu (`generate_prompt` metóda)**: Táto metóda konštruuje prompt pre Azure OpenAI, vrátane preferencií používateľa a zoznamu destinácií. Prompt usmerňuje model, aby prehodnotil a skóroval destinácie na základe poskytnutých preferencií.
+3. **Generovanie promptu (metóda `generate_prompt`)**: Táto metóda vytvára prompt pre Azure OpenAI, vrátane používateľských preferencií a zoznamu destinácií. Prompt vedie model k pretriedeniu a skórovaniu destinácií na základe poskytnutých preferencií.
 
-4. **API volanie**: Knižnica `requests` sa používa na vykonanie HTTP POST požiadavky na API endpoint Azure OpenAI. Odpoveď obsahuje prehodnotené a skórované destinácie.
+4. **Volanie API**: Na vykonanie HTTP POST požiadavky na endpoint Azure OpenAI API sa používa knižnica `requests`. Odpoveď obsahuje pretriedené a skórované destinácie.
 
-5. **Príklad použitia**: Cestovná agentúra zhromažďuje preferencie používateľa (napr. záujem o prehliadky a rozmanitú kultúru) a používa službu Azure OpenAI na získanie prehodnotených a skórovaných odporúčaní pre cestovné destinácie.
+5. **Príklad použitia**: Cestovná kancelária zhromažďuje používateľské preferencie (napr. záujem o poznávanie pamiatok a rôznorodú kultúru) a používa službu Azure OpenAI, aby získala pretriedené a skórované odporúčania cestovných destinácií.
 
-Uistite sa, že nahradíte `your_azure_openai_api_key` svojím skutočným API kľúčom Azure OpenAI a `https://your-endpoint.com/...` skutočnou URL endpointu vášho nasadenia Azure OpenAI.
+Nezabudnite nahradiť `your_azure_openai_api_key` vaším skutočným API kľúčom Azure OpenAI a `https://your-endpoint.com/...` skutočnou URL adresou endpointu vašej Azure OpenAI implementácie.
 
-Využitím LLM na prehodnocovanie a skórovanie môže cestovná agentúra poskytovať personalizovanejšie a relevantnejšie cestovné odporúčania klientom, čím zlepšuje ich celkový zážitok.
-#### Praktický príklad: Vyhľadávanie s úmyslom v cestovnej agentúre
+Využitím LLM na pretriedenie a skórovanie môže cestovná kancelária poskytnúť osobnejšie a relevantnejšie cestovné odporúčania klientom, čím zlepší ich celkový zážitok.
 
-Pozrime sa na príklad cestovnej agentúry, aby sme videli, ako môže byť implementované vyhľadávanie s úmyslom.
+### RAG: Technika promptovania vs. nástroj
 
-1. **Zhromažďovanie preferencií používateľa**
+Retrieval-Augmented Generation (RAG) môže byť zároveň technikou promptovania aj nástrojom pri vývoji AI agentov. Pochopenie rozdielu medzi nimi vám pomôže efektívnejšie využiť RAG vo vašich projektoch.
+
+#### RAG ako technika promptovania
+
+**Čo to je?**
+
+- Ako technika promptovania RAG zahŕňa formuláciu špecifických dotazov alebo promptov na usmernenie vyhľadávania relevantných informácií z veľkého korpusu alebo databázy. Tieto informácie sa potom používajú na generovanie odpovedí alebo akcií.
+
+**Ako to funguje:**
+
+1. **Formulácia promptov**: Vytvorte dobre štruktúrované prompt alebo dotazy na základe zadania alebo vstupu používateľa.
+2. **Získavanie informácií**: Pomocou prompt vyhľadávajte relevantné údaje z existujúcej databázy poznatkov alebo datasetu.
+3. **Generovanie odpovede**: Kombinujte získané informácie s generatívnymi AI modelmi na vytvorenie komplexnej a zrozumiteľnej odpovede.
+
+**Príklad v cestovnej kancelárii**:
+
+- Vstup používateľa: "Chcem navštíviť múzeá v Paríži."
+- Prompt: "Nájdite najlepšie múzeá v Paríži."
+- Získané informácie: Detaily o múzeu Louvre, Musée d'Orsay atď.
+- Generovaná odpoveď: "Tu sú top múzeá v Paríži: múzeum Louvre, Musée d'Orsay a Centre Pompidou."
+
+#### RAG ako nástroj
+
+**Čo to je?**
+
+- Ako nástroj je RAG integrovaný systém, ktorý automatizuje proces vyhľadávania a generovania, čo uľahčuje vývojárom implementovať komplexné AI funkcionality bez nutnosti manuálne vytvárať prompt pre každý dotaz.
+
+**Ako to funguje:**
+
+1. **Integrácia**: Zaintegrovať RAG v rámci architektúry AI agenta, čo mu umožní automaticky spracovávať úlohy vyhľadávania a generovania.
+2. **Automatizácia**: Nástroj riadi celý proces od prijatia vstupu používateľa až po generovanie konečnej odpovede bez potreby explicitných promptov pre každý krok.
+3. **Efektivita**: Zlepšuje výkon agenta tým, že zjednodušuje proces vyhľadávania a generovania, čo umožňuje rýchlejšie a presnejšie odpovede.
+
+**Príklad v cestovnej kancelárii**:
+
+- Vstup používateľa: "Chcem navštíviť múzeá v Paríži."
+- RAG nástroj: Automaticky získa informácie o múzeách a generuje odpoveď.
+- Generovaná odpoveď: "Tu sú top múzeá v Paríži: múzeum Louvre, Musée d'Orsay a Centre Pompidou."
+
+### Porovnanie
+
+| Aspekt                  | Technika promptovania                                      | Nástroj                                               |
+|-------------------------|-----------------------------------------------------------|-------------------------------------------------------|
+| **Manuálne vs Automatické** | Manuálna tvorba promptov pre každý dotaz.                 | Automatizovaný proces vyhľadávania a generovania.      |
+| **Kontrola**             | Ponúka väčšiu kontrolu nad procesom vyhľadávania.         | Zjednodušuje a automatizuje vyhľadávanie a generovanie.|
+| **Flexibilita**          | Umožňuje prispôsobené prompty podľa špecifických potrieb. | Efektívnejšie pre veľkoskalové implementácie.          |
+| **Komplexnosť**          | Vyžaduje tvorbu a ladenie promptov.                        | Jednoduchšie na integráciu v rámci architektúry AI agenta.|
+
+### Praktické príklady
+
+**Príklad techniky promptovania:**
+
+```python
+def search_museums_in_paris():
+    prompt = "Find top museums in Paris"
+    search_results = search_web(prompt)
+    return search_results
+
+museums = search_museums_in_paris()
+print("Top Museums in Paris:", museums)
+```
+
+**Príklad nástroja:**
+
+```python
+class Travel_Agent:
+    def __init__(self):
+        self.rag_tool = RAGTool()
+
+    def get_museums_in_paris(self):
+        user_input = "I want to visit museums in Paris."
+        response = self.rag_tool.retrieve_and_generate(user_input)
+        return response
+
+travel_agent = Travel_Agent()
+museums = travel_agent.get_museums_in_paris()
+print("Top Museums in Paris:", museums)
+```
+
+### Hodnotenie relevantnosti
+
+Hodnotenie relevantnosti je kľúčový aspekt výkonnosti AI agenta. Zabezpečuje, že informácie získané a generované agentom sú vhodné, presné a užitočné pre používateľa. Pozrime sa, ako hodnotiť relevantnosť v AI agentoch vrátane praktických príkladov a techník.
+
+#### Kľúčové koncepty hodnotenia relevantnosti
+
+1. **Povedomie o kontexte**:
+   - Agent musí rozumieť kontextu používateľovho dotazu, aby získal a generoval relevantné informácie.
+   - Príklad: Ak používateľ pýta "najlepšie reštaurácie v Paríži," agent by mal brať do úvahy preferencie používateľa, ako typ kuchyne a rozpočet.
+
+2. **Presnosť**:
+   - Informácie poskytované agentom by mali byť fakticky správne a aktuálne.
+   - Príklad: Odporúčanie reštaurácií, ktoré sú otvorené a majú dobré recenzie, namiesto zastaralých alebo zatvorených možností.
+
+3. **Úmysel používateľa**:
+   - Agent by mal odhadnúť úmysel používateľa za dotazom, aby poskytol najrelevantnejšie informácie.
+   - Príklad: Ak používateľ hľadá "lacné hotely," agent by mal uprednostniť cenovo dostupné možnosti.
+
+4. **Spätná väzba**:
+   - Neustále zhromažďovanie a analyzovanie spätnej väzby od používateľov pomáha agentovi zlepšovať proces hodnotenia relevantnosti.
+   - Príklad: Zahrnutie hodnotení a spätnej väzby na predchádzajúce odporúčania na zlepšenie budúcich odpovedí.
+
+#### Praktické techniky hodnotenia relevantnosti
+
+1. **Scoring relevance**:
+   - Priraďte každému získanému prvku skóre relevantnosti na základe toho, ako dobre zodpovedá používateľovmu dotazu a preferenciám.
+   - Príklad:
+
+     ```python
+     def relevance_score(item, query):
+         score = 0
+         if item['category'] in query['interests']:
+             score += 1
+         if item['price'] <= query['budget']:
+             score += 1
+         if item['location'] == query['destination']:
+             score += 1
+         return score
+     ```
+
+2. **Filtrovanie a zoradenie**:
+   - Odstráňte nerelevantné položky a zoradte zostávajúce podľa skóre relevantnosti.
+   - Príklad:
+
+     ```python
+     def filter_and_rank(items, query):
+         ranked_items = sorted(items, key=lambda item: relevance_score(item, query), reverse=True)
+         return ranked_items[:10]  # Vrátiť top 10 relevantných položiek
+     ```
+
+3. **Spracovanie prirodzeného jazyka (NLP)**:
+   - Použite NLP techniky na pochopenie dotazu používateľa a získanie relevantných informácií.
+   - Príklad:
+
+     ```python
+     def process_query(query):
+         # Použite NLP na extrahovanie kľúčových informácií z dotazu používateľa
+         processed_query = nlp(query)
+         return processed_query
+     ```
+
+4. **Integrácia spätnej väzby používateľa**:
+   - Zhromažďujte spätnú väzbu používateľov na poskytnuté odporúčania a využívajte ju na prispôsobenie budúcich hodnotení relevantnosti.
+   - Príklad:
+
+     ```python
+     def adjust_based_on_feedback(feedback, items):
+         for item in items:
+             if item['name'] in feedback['liked']:
+                 item['relevance'] += 1
+             if item['name'] in feedback['disliked']:
+                 item['relevance'] -= 1
+         return items
+     ```
+
+#### Príklad: Hodnotenie relevantnosti v cestovnej kancelárii
+
+Tu je praktický príklad, ako môže cestovná kancelária hodnotiť relevantnosť cestovných odporúčaní:
+
+```python
+class Travel_Agent:
+    def __init__(self):
+        self.user_preferences = {}
+        self.experience_data = []
+
+    def gather_preferences(self, preferences):
+        self.user_preferences = preferences
+
+    def retrieve_information(self):
+        flights = search_flights(self.user_preferences)
+        hotels = search_hotels(self.user_preferences)
+        attractions = search_attractions(self.user_preferences)
+        return flights, hotels, attractions
+
+    def generate_recommendations(self):
+        flights, hotels, attractions = self.retrieve_information()
+        ranked_hotels = self.filter_and_rank(hotels, self.user_preferences)
+        itinerary = create_itinerary(flights, ranked_hotels, attractions)
+        return itinerary
+
+    def filter_and_rank(self, items, query):
+        ranked_items = sorted(items, key=lambda item: self.relevance_score(item, query), reverse=True)
+        return ranked_items[:10]  # Vrátiť top 10 relevantných položiek
+
+    def relevance_score(self, item, query):
+        score = 0
+        if item['category'] in query['interests']:
+            score += 1
+        if item['price'] <= query['budget']:
+            score += 1
+        if item['location'] == query['destination']:
+            score += 1
+        return score
+
+    def adjust_based_on_feedback(self, feedback, items):
+        for item in items:
+            if item['name'] in feedback['liked']:
+                item['relevance'] += 1
+            if item['name'] in feedback['disliked']:
+                item['relevance'] -= 1
+        return items
+
+# Príklad použitia
+travel_agent = Travel_Agent()
+preferences = {
+    "destination": "Paris",
+    "dates": "2025-04-01 to 2025-04-10",
+    "budget": "moderate",
+    "interests": ["museums", "cuisine"]
+}
+travel_agent.gather_preferences(preferences)
+itinerary = travel_agent.generate_recommendations()
+print("Suggested Itinerary:", itinerary)
+feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
+updated_items = travel_agent.adjust_based_on_feedback(feedback, itinerary['hotels'])
+print("Updated Itinerary with Feedback:", updated_items)
+```
+
+### Hľadanie s úmyslom
+
+Hľadanie s úmyslom znamená pochopenie a interpretáciu skrytého cieľa alebo zámeru za používateľovým dotazom s cieľom získať a generovať tie najrelevantnejšie a najpraktickejšie informácie. Tento prístup ide ďalej než len jednoduché vyhľadávanie kľúčových slov a zameriava sa na pochopenie skutočných potrieb a kontextu používateľa.
+
+#### Kľúčové koncepty hľadania s úmyslom
+
+1. **Pochopenie úmyslu používateľa**:
+   - Úmysel používateľa možno klasifikovať do troch hlavných typov: informačný, navigačný a transakčný.
+     - **Informačný úmysel**: Používateľ hľadá informácie o téme (napr. "Aké sú najlepšie múzeá v Paríži?").
+     - **Navigačný úmysel**: Používateľ chce prejsť na konkrétnu webovú stránku alebo stránku (napr. "Oficiálna stránka múzea Louvre").
+     - **Transakčný úmysel**: Používateľ chce vykonať transakciu, napríklad rezervovať let alebo uskutočniť nákup (napr. "Rezervovať let do Paríža").
+
+2. **Povedomie o kontexte**:
+   - Analýza kontextu dotazu používateľa pomáha presne identifikovať jeho úmysel. Zahŕňa to zohľadnenie predchádzajúcich interakcií, preferencií používateľa a konkrétnych detailov aktuálneho dotazu.
+
+3. **Spracovanie prirodzeného jazyka (NLP)**:
+   - NLP techniky sa využívajú na pochopenie a interpretáciu prirodzených jazykových dotazov používateľov. Zahŕňa úlohy ako rozpoznávanie entít, analýzu sentimentu a parsovanie dotazu.
+
+4. **Personalizácia**:
+   - Personalizácia výsledkov vyhľadávania na základe histórie, preferencií a spätnej väzby používateľa zvyšuje relevantnosť získaných informácií.
+
+#### Praktický príklad: Hľadanie s úmyslom v cestovnej kancelárii
+
+Pozrime sa na príklad cestovnej kancelárie, ako môže byť hľadanie s úmyslom implementované.
+
+1. **Zhromažďovanie používateľských preferencií**
 
    ```python
    class Travel_Agent:
@@ -523,7 +891,7 @@ Pozrime sa na príklad cestovnej agentúry, aby sme videli, ako môže byť impl
            self.user_preferences = preferences
    ```
 
-2. **Porozumenie úmyslu používateľa**
+2. **Pochopenie úmyslu používateľa**
 
    ```python
    def identify_intent(query):
@@ -535,11 +903,12 @@ Pozrime sa na príklad cestovnej agentúry, aby sme videli, ako môže byť impl
            return "informational"
    ```
 
-3. **Vedomie kontextu**
+3. **Povedomie o kontexte**
+
 
    ```python
    def analyze_context(query, user_history):
-       # Combine current query with user history to understand context
+       # Skombinujte aktuálny dopyt s históriou používateľa, aby ste porozumeli kontextu
        context = {
            "current_query": query,
            "user_history": user_history
@@ -563,24 +932,24 @@ Pozrime sa na príklad cestovnej agentúry, aby sme videli, ako môže byť impl
        return personalized_results
 
    def search_information(query, preferences):
-       # Example search logic for informational intent
+       # Príklad vyhľadávacej logiky pre informačný zámer
        results = search_web(f"best {preferences['interests']} in {preferences['destination']}")
        return results
 
    def search_navigation(query):
-       # Example search logic for navigational intent
+       # Príklad vyhľadávacej logiky pre navigačný zámer
        results = search_web(query)
        return results
 
    def search_transaction(query, preferences):
-       # Example search logic for transactional intent
+       # Príklad vyhľadávacej logiky pre transakčný zámer
        results = search_web(f"book {query} to {preferences['destination']}")
        return results
 
    def personalize_results(results, user_history):
-       # Example personalization logic
+       # Príklad personalizačnej logiky
        personalized = [result for result in results if result not in user_history]
-       return personalized[:10]  # Return top 10 personalized results
+       return personalized[:10]  # Vrátiť top 10 personalizovaných výsledkov
    ```
 
 5. **Príklad použitia**
@@ -602,46 +971,46 @@ Pozrime sa na príklad cestovnej agentúry, aby sme videli, ako môže byť impl
 
 ## 4. Generovanie kódu ako nástroj
 
-Agenti na generovanie kódu využívajú AI modely na písanie a vykonávanie kódu, riešenie zložitých problémov a automatizáciu úloh.
+Agentmi generátora kódu sú modely AI, ktoré píšu a vykonávajú kód na riešenie zložitých problémov a automatizáciu úloh.
 
-### Agenti na generovanie kódu
+### Agent generátora kódu
 
-Agenti na generovanie kódu využívajú generatívne AI modely na písanie a vykonávanie kódu. Títo agenti dokážu riešiť zložité problémy, automatizovať úlohy a poskytovať cenné poznatky generovaním a spúšťaním kódu v rôznych programovacích jazykoch.
+Agentmi generátora kódu používajú generatívne AI modely na písanie a vykonávanie kódu. Títo agenti môžu riešiť zložité problémy, automatizovať úlohy a poskytovať hodnotné poznatky generovaním a spúšťaním kódu v rôznych programovacích jazykoch.
 
-#### Praktické aplikácie
+#### Praktické použitia
 
-1. **Automatizované generovanie kódu**: Generovanie úryvkov kódu pre konkrétne úlohy, ako je analýza dát, web scraping alebo strojové učenie.
+1. **Automatizovaná generácia kódu**: Generovanie kódových útržkov pre konkrétne úlohy, napríklad analýzu dát, web scraping alebo strojové učenie.
 2. **SQL ako RAG**: Použitie SQL dotazov na získavanie a manipuláciu s dátami z databáz.
-3. **Riešenie problémov**: Tvorba a vykonávanie kódu na riešenie konkrétnych problémov, ako je optimalizácia algoritmov alebo analýza dát.
+3. **Riešenie problémov**: Vytváranie a vykonávanie kódu na riešenie špecifických problémov, napríklad optimalizácia algoritmov alebo analýza dát.
 
-#### Príklad: Agent na generovanie kódu pre analýzu dát
+#### Príklad: agent generátora kódu pre analýzu dát
 
-Predstavte si, že navrhujete agenta na generovanie kódu. Takto by to mohlo fungovať:
+Predstavte si, že navrhujete agenta generátora kódu. Tu je, ako by mohol fungovať:
 
-1. **Úloha**: Analyzovať dataset na identifikáciu trendov a vzorcov.
+1. **Úloha**: Analyzovať dátovú množinu na identifikáciu trendov a vzorov.
 2. **Kroky**:
-   - Načítať dataset do nástroja na analýzu dát.
+   - Načítať dátovú množinu do nástroja na analýzu dát.
    - Generovať SQL dotazy na filtrovanie a agregáciu dát.
-   - Spustiť dotazy a získať výsledky.
-   - Použiť výsledky na vytvorenie vizualizácií a poznatkov.
-3. **Požadované zdroje**: Prístup k datasetu, nástroje na analýzu dát a SQL schopnosti.
-4. **Skúsenosti**: Použitie minulých výsledkov analýz na zlepšenie presnosti a relevantnosti budúcich analýz.
+   - Vykonať dotazy a získať výsledky.
+   - Použiť výsledky na generovanie vizualizácií a poznatkov.
+3. **Potrebné zdroje**: Prístup k dátovej množine, nástroje na analýzu dát a SQL schopnosti.
+4. **Skúsenosti**: Použiť minulé výsledky analýz na zlepšenie presnosti a relevancie budúcich analýz.
 
-### Príklad: Agent na generovanie kódu pre cestovnú agentúru
+### Príklad: agent generátora kódu pre cestovnú kanceláriu
 
-V tomto príklade navrhneme agenta na generovanie kódu, Travel Agent, ktorý pomáha používateľom plánovať cestovanie generovaním a vykonávaním kódu. Tento agent dokáže zvládnuť úlohy, ako je získavanie cestovných možností, filtrovanie výsledkov a zostavovanie itinerára pomocou generatívnej AI.
+V tomto príklade navrhneme agenta generátora kódu, Cestovnú kanceláriu, ktorý pomáha užívateľom plánovať ich cestovanie generovaním a vykonávaním kódu. Tento agent dokáže riešiť úlohy, ako je získavanie možností cestovania, filtrovanie výsledkov a zostavovanie itinerára pomocou generatívnej AI.
 
-#### Prehľad agenta na generovanie kódu
+#### Prehľad agenta generátora kódu
 
-1. **Zhromažďovanie preferencií používateľa**: Zbiera vstupy používateľa, ako sú destinácia, dátumy cestovania, rozpočet a záujmy.
-2. **Generovanie kódu na získavanie dát**: Generuje úryvky kódu na získavanie dát o letoch, hoteloch a atrakciách.
+1. **Zbieranie preferencií užívateľa**: Zhromažďuje vstupy užívateľa, ako sú destinácia, dátumy cesty, rozpočet a záujmy.
+2. **Generovanie kódu na získavanie dát**: Generuje útržky kódu na získanie informácií o letoch, hoteloch a atrakciách.
 3. **Vykonávanie generovaného kódu**: Spúšťa generovaný kód na získanie aktuálnych informácií.
 4. **Generovanie itinerára**: Zostavuje získané dáta do personalizovaného cestovného plánu.
-5. **Úprava na základe spätnej väzby**: Prijíma spätnú väzbu od používateľa a regeneruje kód, ak je to potrebné, na spresnenie výsledkov.
+5. **Úpravy na základe spätnej väzby**: Prijíma spätnú väzbu od užívateľa a podľa potreby znovu generuje kód na doladenie výsledkov.
 
 #### Implementácia krok za krokom
 
-1. **Zhromažďovanie preferencií používateľa**
+1. **Zbieranie preferencií užívateľa**
 
    ```python
    class Travel_Agent:
@@ -656,7 +1025,7 @@ V tomto príklade navrhneme agenta na generovanie kódu, Travel Agent, ktorý po
 
    ```python
    def generate_code_to_fetch_data(preferences):
-       # Example: Generate code to search for flights based on user preferences
+       # Príklad: Vygenerujte kód na vyhľadávanie letov podľa používateľských preferencií
        code = f"""
        def search_flights():
            import requests
@@ -666,7 +1035,7 @@ V tomto príklade navrhneme agenta na generovanie kódu, Travel Agent, ktorý po
        return code
 
    def generate_code_to_fetch_hotels(preferences):
-       # Example: Generate code to search for hotels
+       # Príklad: Vygenerujte kód na vyhľadávanie hotelov
        code = f"""
        def search_hotels():
            import requests
@@ -680,7 +1049,7 @@ V tomto príklade navrhneme agenta na generovanie kódu, Travel Agent, ktorý po
 
    ```python
    def execute_code(code):
-       # Execute the generated code using exec
+       # Spustite vygenerovaný kód pomocou exec
        exec(code)
        result = locals()
        return result
@@ -720,11 +1089,11 @@ V tomto príklade navrhneme agenta na generovanie kódu, Travel Agent, ktorý po
    print("Suggested Itinerary:", itinerary)
    ```
 
-5. **Úprava na základe spätnej väzby**
+5. **Úpravy na základe spätnej väzby**
 
    ```python
    def adjust_based_on_feedback(feedback, preferences):
-       # Adjust preferences based on user feedback
+       # Upravte preferencie na základe spätnej väzby od používateľa
        if "liked" in feedback:
            preferences["favorites"] = feedback["liked"]
        if "disliked" in feedback:
@@ -734,7 +1103,7 @@ V tomto príklade navrhneme agenta na generovanie kódu, Travel Agent, ktorý po
    feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
    updated_preferences = adjust_based_on_feedback(feedback, preferences)
    
-   # Regenerate and execute code with updated preferences
+   # Znovu vygenerujte a spustite kód s aktualizovanými preferenciami
    updated_flight_code = generate_code_to_fetch_data(updated_preferences)
    updated_hotel_code = generate_code_to_fetch_hotels(updated_preferences)
    
@@ -747,31 +1116,31 @@ V tomto príklade navrhneme agenta na generovanie kódu, Travel Agent, ktorý po
 
 ### Využitie environmentálneho povedomia a uvažovania
 
-Na základe schémy tabuľky je možné zlepšiť proces generovania dotazov využitím environmentálneho povedomia a uvažovania.
+Založenie na schéme tabuľky môže skutočne zlepšiť proces generovania dotazov využitím environmentálneho povedomia a uvažovania.
 
-Tu je príklad, ako to môže byť realizované:
+Tu je príklad, ako sa to dá urobiť:
 
-1. **Porozumenie schéme**: Systém porozumie schéme tabuľky a použije tieto informácie na ukotvenie generovania dotazov.
-2. **Úprava na základe spätnej väzby**: Systém upraví preferencie používateľa na základe spätnej väzby a uvažuje o tom, ktoré polia v schéme je potrebné aktualizovať.
-3. **Generovanie a vykonávanie dotazov**: Systém generuje a vykonáva dotazy na získanie aktualizovaných dát o letoch a hoteloch na základe nových preferencií.
+1. **Pochopenie schémy**: Systém pochopí schému tabuľky a použije tieto informácie na zakotvenie generovania dotazov.
+2. **Úprava na základe spätnej väzby**: Systém upraví užívateľské preferencie na základe spätnej väzby a uvažuje o tom, ktoré polia v schéme je potrebné aktualizovať.
+3. **Generovanie a vykonávanie dotazov**: Systém vygeneruje a vykoná dotazy na získanie aktualizovaných údajov o letoch a hoteloch na základe nových preferencií.
 
-Tu je aktualizovaný príklad Python kódu, ktorý zahŕňa tieto koncepty:
+Tu je aktualizovaný príklad kódu v Pythone, ktorý tieto koncepty začleňuje:
 
 ```python
 def adjust_based_on_feedback(feedback, preferences, schema):
-    # Adjust preferences based on user feedback
+    # Upravte preferencie na základe spätnej väzby používateľa
     if "liked" in feedback:
         preferences["favorites"] = feedback["liked"]
     if "disliked" in feedback:
         preferences["avoid"] = feedback["disliked"]
-    # Reasoning based on schema to adjust other related preferences
+    # Odôvodnenie založené na schéme na úpravu ďalších súvisiacich preferencií
     for field in schema:
         if field in preferences:
             preferences[field] = adjust_based_on_environment(feedback, field, schema)
     return preferences
 
 def adjust_based_on_environment(feedback, field, schema):
-    # Custom logic to adjust preferences based on schema and feedback
+    # Vlastná logika na úpravu preferencií na základe schémy a spätnej väzby
     if field in feedback["liked"]:
         return schema[field]["positive_adjustment"]
     elif field in feedback["disliked"]:
@@ -779,33 +1148,33 @@ def adjust_based_on_environment(feedback, field, schema):
     return schema[field]["default"]
 
 def generate_code_to_fetch_data(preferences):
-    # Generate code to fetch flight data based on updated preferences
+    # Vygenerujte kód na získanie údajov o letoch na základe aktualizovaných preferencií
     return f"fetch_flights(preferences={preferences})"
 
 def generate_code_to_fetch_hotels(preferences):
-    # Generate code to fetch hotel data based on updated preferences
+    # Vygenerujte kód na získanie údajov o hoteloch na základe aktualizovaných preferencií
     return f"fetch_hotels(preferences={preferences})"
 
 def execute_code(code):
-    # Simulate execution of code and return mock data
+    # Simulujte vykonanie kódu a vráťte skúšobné údaje
     return {"data": f"Executed: {code}"}
 
 def generate_itinerary(flights, hotels, attractions):
-    # Generate itinerary based on flights, hotels, and attractions
+    # Vygenerujte itinerár na základe letov, hotelov a atrakcií
     return {"flights": flights, "hotels": hotels, "attractions": attractions}
 
-# Example schema
+# Príklad schémy
 schema = {
     "favorites": {"positive_adjustment": "increase", "negative_adjustment": "decrease", "default": "neutral"},
     "avoid": {"positive_adjustment": "decrease", "negative_adjustment": "increase", "default": "neutral"}
 }
 
-# Example usage
+# Príklad použitia
 preferences = {"favorites": "sightseeing", "avoid": "crowded places"}
 feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
 updated_preferences = adjust_based_on_feedback(feedback, preferences, schema)
 
-# Regenerate and execute code with updated preferences
+# Znovu vygenerujte a vykonajte kód s aktualizovanými preferenciami
 updated_flight_code = generate_code_to_fetch_data(updated_preferences)
 updated_hotel_code = generate_code_to_fetch_hotels(updated_preferences)
 
@@ -816,55 +1185,55 @@ updated_itinerary = generate_itinerary(updated_flights, updated_hotels, feedback
 print("Updated Itinerary:", updated_itinerary)
 ```
 
-#### Vysvetlenie - Rezervácia na základe spätnej väzby
+#### Vysvetlenie - rezervácia na základe spätnej väzby
 
-1. **Povedomie o schéme**: Slovník `schema` definuje, ako by sa mali preferencie upravovať na základe spätnej väzby. Zahŕňa polia ako `favorites` a `avoid` s príslušnými úpravami.
-2. **Úprava preferencií (metóda `adjust_based_on_feedback`)**: Táto metóda upravuje preferencie na základe spätnej väzby používateľa a schémy.
-3. **Úpravy na základe prostredia (metóda `adjust_based_on_environment`)**: Táto metóda prispôsobuje úpravy na základe schémy a spätnej väzby.
-4. **Generovanie a vykonávanie dotazov**: Systém generuje kód na získanie aktualizovaných dát o letoch a hoteloch na základe upravených preferencií a simuluje vykonávanie týchto dotazov.
-5. **Generovanie itinerára**: Systém vytvára aktualizovaný itinerár na základe nových dát o letoch, hoteloch a atrakciách.
+1. **Povedomie o schéme**: Slovník `schema` definuje, ako by sa mali preferencie upravovať na základe spätnej väzby. Obsahuje polia ako `favorites` a `avoid` s príslušnými úpravami.
+2. **Úprava preferencií (metóda `adjust_based_on_feedback`)**: Táto metóda upravuje preferencie na základe spätnej väzby užívateľa a schémy.
+3. **Úpravy založené na prostredí (metóda `adjust_based_on_environment`)**: Táto metóda prispôsobuje úpravy na základe schémy a spätnej väzby.
+4. **Generovanie a vykonávanie dotazov**: Systém generuje kód na získanie aktualizovaných údajov o letoch a hoteloch na základe upravených preferencií a simuluje vykonávanie týchto dotazov.
+5. **Generovanie itinerára**: Systém vytvorí aktualizovaný itinerár na základe nových údajov o letoch, hoteloch a atrakciách.
 
-Vďaka tomu, že je systém environmentálne uvedomelý a uvažuje na základe schémy, dokáže generovať presnejšie a relevantnejšie dotazy, čo vedie k lepším cestovným odporúčaniam a personalizovanejšiemu zážitku používateľa.
+Tým, že je systém vedomý prostredia a uvažuje na základe schémy, môže generovať presnejšie a relevantnejšie dotazy, čo vedie k lepším odporúčaniam pre cestovanie a personalizovanejšiemu užívateľskému zážitku.
 
-### Použitie SQL ako Retrieval-Augmented Generation (RAG) techniky
+### Použitie SQL ako techniky Retrieval-Augmented Generation (RAG)
 
-SQL (Structured Query Language) je výkonný nástroj na interakciu s databázami. Keď sa používa ako súčasť prístupu Retrieval-Augmented Generation (RAG), SQL dokáže získať relevantné dáta z databáz na informovanie a generovanie odpovedí alebo akcií v AI agentoch. Pozrime sa, ako môže byť SQL použité ako RAG technika v kontexte cestovnej agentúry.
+SQL (Structurovaný dotazovací jazyk) je mocný nástroj na interakciu s databázami. Keď sa používa ako súčasť prístupu Retrieval-Augmented Generation (RAG), SQL dokáže získať relevantné dáta z databáz na informovanie a generovanie odpovedí alebo činností v AI agentoch. Preskúmajme, ako môže byť SQL použité ako technika RAG v kontexte Cestovnej kancelárie.
 
 #### Kľúčové koncepty
 
 1. **Interakcia s databázou**:
    - SQL sa používa na dotazovanie databáz, získavanie relevantných informácií a manipuláciu s dátami.
-   - Príklad: Získavanie detailov o letoch, informácií o hoteloch a atrakciách z cestovnej databázy.
+   - Príklad: Získavanie detailov letov, informácií o hoteloch a atrakciách z cestovnej databázy.
 
 2. **Integrácia s RAG**:
-   - SQL dotazy sú generované na základe vstupov a preferencií používateľa.
-   - Získané dáta sa potom používajú na generovanie personalizovaných odporúčaní alebo akcií.
+   - SQL dotazy sa generujú na základe vstupu a preferencií užívateľa.
+   - Získané údaje sa následne používajú na generovanie personalizovaných odporúčaní alebo činností.
 
-3. **Dynamické generovanie dotazov**:
-   - AI agent generuje dynamické SQL dotazy na základe kontextu a potrieb používateľa.
-   - Príklad: Prispôsobenie SQL dotazov na filtrovanie výsledkov podľa rozpočtu, dátumov a záujmov.
+3. **Dynamická generácia dotazov**:
+   - AI agent generuje dynamické SQL dotazy na základe kontextu a potrieb užívateľa.
+   - Príklad: Prispôsobovanie SQL dotazov na filtrovanie výsledkov podľa rozpočtu, dátumov a záujmov.
 
-#### Aplikácie
+#### Použitia
 
-- **Automatizované generovanie kódu**: Generovanie úryvkov kódu pre konkrétne úlohy.
+- **Automatizovaná generácia kódu**: Generovanie kódových útržkov pre konkrétne úlohy.
 - **SQL ako RAG**: Použitie SQL dotazov na manipuláciu s dátami.
-- **Riešenie problémov**: Tvorba a vykonávanie kódu na riešenie problémov.
+- **Riešenie problémov**: Vytváranie a vykonávanie kódu na riešenie problémov.
 
 **Príklad**:
 Agent na analýzu dát:
 
-1. **Úloha**: Analyzovať dataset na nájdenie trendov.
+1. **Úloha**: Analyzovať dátovú množinu na zistenie trendov.
 2. **Kroky**:
-   - Načítať dataset.
+   - Načítať dátovú množinu.
    - Generovať SQL dotazy na filtrovanie dát.
-   - Spustiť dotazy a získať výsledky.
+   - Vykonať dotazy a získať výsledky.
    - Generovať vizualizácie a poznatky.
-3. **Zdroje**: Prístup k datasetu, SQL schopnosti.
-4. **Skúsenosti**: Použitie minulých výsledkov na zlepšenie budúcich analýz.
+3. **Zdroje**: Prístup k dátovej množine, schopnosti SQL.
+4. **Skúsenosti**: Použiť minulé výsledky na zlepšenie budúcich analýz.
 
-#### Praktický príklad: Použitie SQL v cestovnej agentúre
+#### Praktický príklad: použitie SQL v Cestovnej kancelárii
 
-1. **Zhromažďovanie preferencií používateľa**
+1. **Zbieranie preferencií užívateľa**
 
    ```python
    class Travel_Agent:
@@ -932,46 +1301,48 @@ Agent na analýzu dát:
    print("Suggested Itinerary:", itinerary)
    ```
 
-#### Príklady SQL dotazov
+#### Príklad SQL dotazov
 
-1. **Dotaz na lety**
+1. **Dotaz na let**
 
    ```sql
    SELECT * FROM flights WHERE destination='Paris' AND dates='2025-04-01 to 2025-04-10' AND budget='moderate';
    ```
 
-2. **Dotaz na hotely**
+2. **Dotaz na hotel**
 
    ```sql
    SELECT * FROM hotels WHERE destination='Paris' AND budget='moderate';
    ```
 
-3. **Dotaz na atrakcie**
+3. **Dotaz na atrakciu**
 
    ```sql
    SELECT * FROM attractions WHERE destination='Paris' AND interests='museums, cuisine';
    ```
 
-Využitím SQL ako súčasti Retrieval-Augmented Generation (RAG) techniky môžu AI agenti, ako je Travel Agent, dynamicky získavať a využívať relevantné dáta na poskytovanie presných a personalizovaných odporúčaní.
+Využitím SQL ako súčasti techniky Retrieval-Augmented Generation (RAG) môžu AI agenti ako Cestovná kancelária dynamicky získavať a využívať relevantné dáta na poskytovanie presných a personalizovaných odporúčaní.
 
 ### Príklad metakognície
 
-Na demonštráciu implementácie metakognície vytvorme jednoduchého agenta, ktorý *reflektuje svoj proces rozhodovania* pri riešení problému. V tomto príklade vytvoríme systém, kde agent optimalizuje výber hotela, ale následne hodnotí svoje vlastné rozhodovanie a upravuje svoju stratégiu, keď urobí chyby alebo suboptimálne rozhodnutia.
+Aby sme demonštrovali implementáciu metakognície, vytvorme jednoduchého agenta, ktorý *reflektuje svoj proces rozhodovania* počas riešenia problému. V tomto príklade postavíme systém, kde agent sa snaží optimalizovať výber hotela, no následne vyhodnocuje svoje odôvodnenie a upravuje stratégiu, keď robí chyby alebo neoptimálne výbery.
+
+Tento proces nasimulujeme na jednoduchom príklade, kde agent vyberá hotely na základe kombinácie ceny a kvality, no bude „reflektovať“ svoje rozhodnutia a podľa toho sa upraví.
 
 #### Ako to ilustruje metakogníciu:
 
-1. **Počiatočné rozhodnutie**: Agent vyberie najlacnejší hotel bez ohľadu na kvalitu.
-2. **Reflexia a hodnotenie**: Po počiatočnom výbere agent skontroluje, či bol hotel "zlou" voľbou na základe spätnej väzby používateľa. Ak zistí, že kvalita hotela bola príliš nízka, reflektuje svoje rozhodovanie.
-3. **Úprava stratégie**: Agent upraví svoju stratégiu na základe reflexie a prejde z "najlacnejšieho" na "najkvalitnejší", čím zlepší svoj proces rozhodovania v budúcich iteráciách.
+1. **Počiatočné rozhodnutie**: Agent vyberie najlacnejší hotel bez pochopenia vplyvu kvality.
+2. **Reflexia a vyhodnotenie**: Po prvotnom výbere agent skontroluje, či hotel nebol „zlou“ voľbou pomocou spätnej väzby od užívateľa. Ak zistí, že kvalita hotela bola príliš nízka, reflexne vyhodnotí svoje odôvodnenie.
+3. **Úprava stratégie**: Agent upraví stratégiu na základe svojej reflexie a prejde z „najlacnejšieho“ na „najvyššiu kvalitu“, čím vylepší svoj rozhodovací proces pri budúcich iteráciách.
 
 Tu je príklad:
 
 ```python
 class HotelRecommendationAgent:
     def __init__(self):
-        self.previous_choices = []  # Stores the hotels chosen previously
-        self.corrected_choices = []  # Stores the corrected choices
-        self.recommendation_strategies = ['cheapest', 'highest_quality']  # Available strategies
+        self.previous_choices = []  # Ukladá predtým vybrané hotely
+        self.corrected_choices = []  # Ukladá opravené výbery
+        self.recommendation_strategies = ['cheapest', 'highest_quality']  # Dostupné stratégie
 
     def recommend_hotel(self, hotels, strategy):
         """
@@ -996,11 +1367,11 @@ class HotelRecommendationAgent:
             return "No choices made yet."
 
         last_choice_strategy, last_choice = self.previous_choices[-1]
-        # Let's assume we have some user feedback that tells us whether the last choice was good or not
+        # Predpokladajme, že máme spätnú väzbu od používateľa, ktorá nám povedz, či posledný výber bol dobrý alebo nie
         user_feedback = self.get_user_feedback(last_choice)
 
         if user_feedback == "bad":
-            # Adjust strategy if the previous choice was unsatisfactory
+            # Upravte stratégiu, ak bol predchádzajúci výber neuspokojivý
             new_strategy = 'highest_quality' if last_choice_strategy == 'cheapest' else 'cheapest'
             self.corrected_choices.append((new_strategy, last_choice))
             return f"Reflecting on choice. Adjusting strategy to {new_strategy}."
@@ -1017,44 +1388,44 @@ class HotelRecommendationAgent:
             return "bad"
         return "good"
 
-# Simulate a list of hotels (price and quality)
+# Simulujte zoznam hotelov (cena a kvalita)
 hotels = [
     {'name': 'Budget Inn', 'price': 80, 'quality': 6},
     {'name': 'Comfort Suites', 'price': 120, 'quality': 8},
     {'name': 'Luxury Stay', 'price': 200, 'quality': 9}
 ]
 
-# Create an agent
+# Vytvorte agenta
 agent = HotelRecommendationAgent()
 
-# Step 1: The agent recommends a hotel using the "cheapest" strategy
+# Krok 1: Agent odporúča hotel pomocou stratégie „najlacnejší“
 recommended_hotel = agent.recommend_hotel(hotels, 'cheapest')
 print(f"Recommended hotel (cheapest): {recommended_hotel['name']}")
 
-# Step 2: The agent reflects on the choice and adjusts strategy if necessary
+# Krok 2: Agent reflektuje na výber a podľa potreby upraví stratégiu
 reflection_result = agent.reflect_on_choice()
 print(reflection_result)
 
-# Step 3: The agent recommends again, this time using the adjusted strategy
+# Krok 3: Agent opäť odporúča, tentoraz s použitím upravenej stratégie
 adjusted_recommendation = agent.recommend_hotel(hotels, 'highest_quality')
 print(f"Adjusted hotel recommendation (highest_quality): {adjusted_recommendation['name']}")
 ```
 
-#### Metakognitívne schopnosti agenta
+#### Schopnosti metakognície agenta
 
-Kľúčom je schopnosť agenta:
-- Vyhodnotiť svoje predchádzajúce rozhodnutia a proces rozhodovania.
-- Upraviť svoju stratégiu na základe tejto reflexie, teda metakognícia v praxi.
+Kľúčové je, že agent dokáže:
+- Vyhodnocovať svoje predchádzajúce výbery a proces rozhodovania.
+- Upraviť svoju stratégiu na základe tejto reflexie, teda metakogníciu v praxi.
 
-Toto je jednoduchá forma metakognície, kde je systém schopný upraviť svoj proces uvažovania na základe internej spätnej väzby.
+Toto je jednoduchá forma metakognície, kde systém vie upravovať svoj uvažovací proces na základe vnútorných spätných väzieb.
 
 ### Záver
 
-Metakognícia je mocný nástroj, ktorý môže výrazne zlepšiť schopnosti AI agentov. Vďaka začleneniu metakognitívnych procesov môžete navrhnúť agentov, ktorí sú inteligentnejší, prispôsobivejší a efektívnejší. Využite ďalšie zdroje na hlbšie preskúmanie fascinujúceho sveta metakognície v AI agentoch.
+Metakognícia je mocný nástroj, ktorý môže výrazne zlepšiť schopnosti AI agentov. Začlenením metakognitívnych procesov môžete navrhnúť agentov, ktorí sú inteligentnejší, prispôsobivejší a efektívnejší. Použite ďalšie zdroje na hlbšie preskúmanie fascinujúceho sveta metakognície v AI agentoch.
 
-### Máte ďalšie otázky o dizajnovom vzore metakognície?
+### Máte ďalšie otázky ohľadom návrhového vzoru metakognície?
 
-Pripojte sa k [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kde sa môžete stretnúť s ďalšími študentmi, zúčastniť sa konzultačných hodín a získať odpovede na svoje otázky o AI agentoch.
+Pridajte sa do [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) a stretnite sa s ďalšími študentmi, zúčastnite sa konzultačných hodín a získajte odpovede na vaše otázky týkajúce sa AI agentov.
 
 ## Predchádzajúca lekcia
 
@@ -1066,5 +1437,7 @@ Pripojte sa k [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kde 
 
 ---
 
-**Upozornenie**:  
-Tento dokument bol preložený pomocou služby AI prekladu [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, prosím, berte na vedomie, že automatizované preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho pôvodnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za akékoľvek nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vyhlásenie o zodpovednosti**:
+Tento dokument bol preložený pomocou AI prekladateľskej služby [Co-op Translator](https://github.com/Azure/co-op-translator). Hoci sa snažíme o presnosť, vezmite prosím na vedomie, že automatické preklady môžu obsahovať chyby alebo nepresnosti. Pôvodný dokument v jeho natívnom jazyku by mal byť považovaný za autoritatívny zdroj. Pre kritické informácie sa odporúča profesionálny ľudský preklad. Nie sme zodpovední za žiadne nedorozumenia alebo nesprávne interpretácie vyplývajúce z použitia tohto prekladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

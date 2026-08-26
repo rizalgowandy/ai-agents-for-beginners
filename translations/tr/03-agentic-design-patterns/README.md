@@ -1,117 +1,118 @@
 [![İyi AI Ajanları Nasıl Tasarlanır](../../../translated_images/tr/lesson-3-thumbnail.1092dd7a8f1074a5.webp)](https://youtu.be/m9lM8qqoOEA?si=4KimounNKvArQQ0K)
 
 > _(Bu dersin videosunu izlemek için yukarıdaki görsele tıklayın)_
-# AI Ajanik Tasarım İlkeleri
+# AI Ajan Tasarım İlkeleri
 
 ## Giriş
 
-AI Ajanik Sistemleri oluşturmayı düşünmenin birçok yolu vardır. Üretken AI tasarımında belirsizliğin bir hata değil, bir özellik olduğu göz önüne alındığında, mühendislerin nereden başlayacaklarını anlamaları bazen zor olabilir. Geliştiricilerin, iş ihtiyaçlarını çözmek için müşteri odaklı ajanik sistemler oluşturmalarını sağlamak amacıyla insan merkezli bir UX Tasarım İlkeleri seti oluşturduk. Bu tasarım ilkeleri, kesin bir mimari değil, ajan deneyimlerini tanımlayan ve geliştiren ekipler için bir başlangıç noktasıdır.
+AI Ajan Sistemleri inşa etmenin birçok yolu vardır. Jeneratif AI tasarımında belirsizliğin bir hata değil özellik olması nedeniyle, mühendislerin nereden başlayacaklarını bulmaları bazen zordur. Geliştiricilerin müşteri odaklı ajan sistemleri oluşturabilmeleri için insan merkezli bir dizi UX Tasarım İlkesi oluşturduk. Bu tasarım ilkeleri reçetesel bir mimari değil, ajan deneyimlerini tanımlayan ve oluşturan ekipler için bir başlangıç noktasıdır.
 
-Genel olarak, ajanlar şunları yapmalıdır:
+Genel olarak ajanlar:
 
-- İnsan kapasitesini genişletmek ve ölçeklendirmek (beyin fırtınası, problem çözme, otomasyon vb.)
-- Bilgi boşluklarını doldurmak (bilgi alanlarında hız kazandırmak, çeviri vb.)
-- Bireyler olarak başkalarıyla çalışma tercihlerimize uygun şekilde iş birliğini kolaylaştırmak ve desteklemek
-- Bizi daha iyi versiyonlarımız haline getirmek (örneğin, yaşam koçu/görev yöneticisi, duygusal düzenleme ve farkındalık becerilerini öğrenmemize yardımcı olmak, dayanıklılık oluşturmak vb.)
+- İnsan yeteneklerini genişletmeli ve ölçeklendirmeli (beyin fırtınası, problem çözme, otomasyon vb.)
+- Bilgi boşluklarını doldurmalı (bilgi alanlarında beni hızlandırmalı, çeviri vb.)
+- Birey olarak başkalarıyla çalışmayı tercih ettiğimiz yollarla işbirliği kolaylaştırmalı ve desteklemeli
+- Kendimizin daha iyi versiyonları olmamıza yardımcı olmalı (örneğin, yaşam koçu/görev yöneticisi, duygusal düzenleme ve farkındalık becerileri öğretmek, dayanıklılık oluşturmak vb.)
 
-## Bu Derste Ele Alınacaklar
+## Bu Ders Kapsayacak
 
-- Ajanik Tasarım İlkeleri nelerdir
-- Bu tasarım ilkelerini uygularken izlenecek bazı yönergeler nelerdir
-- Tasarım ilkelerinin kullanımına dair bazı örnekler nelerdir
+- Ajan Tasarım İlkeleri nelerdir
+- Bu tasarım ilkeleri uygulanırken uyulması gereken bazı yönergeler nelerdir
+- Tasarım ilkeleri kullanılarak yapılmış bazı örnekler
 
 ## Öğrenme Hedefleri
 
 Bu dersi tamamladıktan sonra şunları yapabileceksiniz:
 
-1. Ajanik Tasarım İlkelerinin ne olduğunu açıklamak
-2. Ajanik Tasarım İlkelerinin kullanımına yönelik yönergeleri açıklamak
-3. Ajanik Tasarım İlkelerini kullanarak bir ajan oluşturmayı anlamak
+1. Ajan Tasarım İlkelerinin ne olduğunu açıklayın
+2. Ajan Tasarım İlkelerinin kullanımına ilişkin yönergeleri açıklayın
+3. Ajan Tasarım İlkeleri kullanarak bir ajan nasıl oluşturulur anlayın
 
-## Ajanik Tasarım İlkeleri
+## Ajan Tasarım İlkeleri
 
-![Ajanik Tasarım İlkeleri](../../../translated_images/tr/agentic-design-principles.1cfdf8b6d3cc73c2.webp)
+![Ajan Tasarım İlkeleri](../../../translated_images/tr/agentic-design-principles.1cfdf8b6d3cc73c2.webp)
 
 ### Ajan (Mekan)
 
-Bu, ajanın çalıştığı ortamdır. Bu ilkeler, ajanların fiziksel ve dijital dünyalarda nasıl tasarlanacağını bilgilendirir.
+Ajanın çalıştığı ortam budur. Bu ilkeler fiziksel ve dijital dünyalarla etkileşimde bulunacak ajanların nasıl tasarlanacağını belirler.
 
-- **Bağlantı kurmak, çökertmek değil** – insanları diğer insanlara, etkinliklere ve eyleme geçirilebilir bilgilere bağlayarak iş birliğini ve bağlantıyı mümkün kılmak.
-  - Ajanlar olayları, bilgileri ve insanları birbirine bağlar.
-  - Ajanlar insanları birbirine yakınlaştırır. İnsanların yerini almak veya onları küçümsemek için tasarlanmamıştır.
-- **Kolay erişilebilir ama bazen görünmez** – ajan genellikle arka planda çalışır ve yalnızca ilgili ve uygun olduğunda bizi uyarır.
-  - Ajan, yetkili kullanıcılar için herhangi bir cihaz veya platformda kolayca keşfedilebilir ve erişilebilir olmalıdır.
-  - Ajan, çok modlu giriş ve çıkışları destekler (ses, konuşma, metin vb.).
-  - Ajan, kullanıcı ihtiyaçlarını algılamasına bağlı olarak ön plan ve arka plan arasında; proaktif ve reaktif arasında sorunsuz geçiş yapabilir.
-  - Ajan görünmez bir formda çalışabilir, ancak arka plan işlem yolu ve diğer Ajanlarla iş birliği kullanıcıya şeffaf ve kontrol edilebilir olmalıdır.
+- **Bağlantı sağlamak, yıkmamak** – insanları diğer insanlara, olaylara ve eyleme dönüştürülebilir bilgiye bağlamaya yardımcı olun, işbirliği ve bağlantı sağlanmasını mümkün kılın.
+- Ajanlar olayları, bilgiyi ve insanları birbirine bağlamaya yardımcı olur.
+- Ajanlar insanları birbirine yakınlaştırır. İnsanları değiştirmek veya değersizleştirmek için tasarlanmamıştır.
+- **Kolay erişilebilir ama zaman zaman görünmez** – ajan büyük ölçüde arka planda çalışır ve yalnızca ilgili ve uygun olduğunda bizi uyarır.
+  - Ajan, yetkili kullanıcılar için her cihaz veya platformda kolayca keşfedilebilir ve erişilebilir olmalıdır.
+  - Ajan multimodal giriş ve çıkışları destekler (ses, konuşma, metin vb.).
+  - Ajan, kullanıcının ihtiyaçlarını algılamasına göre ön plandan arka plana ve proaktiften reaktif hale sorunsuz geçiş yapabilir.
+  - Ajan görünmez formda çalışabilir ancak arka plan süreci ve diğer Ajanlarla işbirliği kullanıcı tarafından şeffaf ve kontrol edilebilir.
 
 ### Ajan (Zaman)
 
-Bu, ajanın zaman içinde nasıl çalıştığını ifade eder. Bu ilkeler, ajanların geçmiş, şimdi ve gelecekte nasıl etkileşimde bulunacağını bilgilendirir.
+Ajanın zaman içinde nasıl çalıştığını belirtir. Bu ilkeler ajanın geçmiş, şimdi ve gelecek arasında nasıl etkileşimde bulunacağını tasarlar.
 
-- **Geçmiş**: Durum ve bağlamı içeren geçmişe yansımak.
-  - Ajan, yalnızca olay, insanlar veya durumların ötesinde daha zengin tarihsel verilerin analiziyle daha alakalı sonuçlar sağlar.
-  - Ajan, geçmiş olaylardan bağlantılar kurar ve mevcut durumlarla etkileşimde bulunmak için hafızayı aktif olarak yansıtır.
-- **Şimdi**: Bildirimden çok yönlendirme.
-  - Ajan, insanlarla etkileşimde kapsamlı bir yaklaşımı benimser. Bir olay meydana geldiğinde, Ajan statik bir bildirim veya diğer statik formalitelerin ötesine geçer. Ajan, kullanıcı dikkatini doğru anda yönlendirmek için akışları basitleştirebilir veya dinamik olarak ipuçları oluşturabilir.
-  - Ajan, bağlamsal çevreye, sosyal ve kültürel değişimlere dayalı ve kullanıcı niyetine göre uyarlanmış bilgiler sunar.
-  - Ajan etkileşimi kademeli olabilir, uzun vadede kullanıcıları güçlendirmek için karmaşıklıkta evrilir/büyür.
-- **Gelecek**: Uyum sağlamak ve evrilmek.
-  - Ajan, çeşitli cihazlara, platformlara ve modlara uyum sağlar.
-  - Ajan, kullanıcı davranışlarına, erişilebilirlik ihtiyaçlarına uyum sağlar ve serbestçe özelleştirilebilir.
-  - Ajan, sürekli kullanıcı etkileşimi yoluyla şekillenir ve evrilir.
+- **Geçmiş**: Hem durum hem de bağlamı içeren tarihe yansımalar.
+  - Ajan, yalnızca olay, insanlar veya durumlar dışında daha zengin tarihsel veri analizine dayalı daha alakalı sonuçlar sağlar.
+  - Ajan geçmiş olaylardan bağlantılar kurar ve belleğini aktif kullanarak mevcut durumlarla etkileşime girer.
+- **Şimdi**: Bildirmekten çok teşvik etmek.
+  - Ajan, insanlarla etkileşimde kapsamlı bir yaklaşımı temsil eder. Bir olay gerçekleştiğinde, Ajan statik bildirim veya diğer statik formalitelerin ötesine geçer. Ajan, akışları basitleştirebilir veya kullanıcının dikkatini doğru anda yönlendirmek için dinamik ipuçları oluşturabilir.
+  - Ajan bilgi sunumunu bağlamsal ortam, sosyal ve kültürel değişikliklere ve kullanıcı niyetine göre uyarlar.
+  - Ajan etkileşimi kademeli olabilir, uzun vadede kullanıcıları güçlendirmek için karmaşıklığı evrilebilir/büyüyebilir.
+- **Gelecek**: Uyarlanma ve evrimleşme.
+  - Ajan çeşitli cihazlara, platformlara ve modalitelere uyum sağlar.
+  - Ajan kullanıcı davranışına, erişilebilirlik ihtiyaçlarına uyum sağlar ve tamamen kişiselleştirilebilir.
+  - Ajan sürekli kullanıcı etkileşimi ile şekillenir ve evrimleşir.
 
 ### Ajan (Çekirdek)
 
-Bunlar, bir ajanın tasarımının temel unsurlarıdır.
+Bunlar bir ajanın çekirdeğindeki temel öğelerdir.
 
-- **Belirsizliği kucaklayın ama güven oluşturun**.
-  - Belirli bir düzeyde Ajan belirsizliği beklenir. Belirsizlik, ajan tasarımının temel bir unsurudur.
-  - Güven ve şeffaflık, Ajan tasarımının temel katmanlarıdır.
-  - Ajanın ne zaman açık/kapalı olduğuna insanlar karar verir ve Ajan durumu her zaman açıkça görülebilir.
+- **Belirsizliği kabul et ama güven oluştur**.
+  - Ajan belirsizliği belli bir düzeyde beklenir. Belirsizlik ajan tasarımının ana öğesidir.
+  - Güven ve şeffaflık, ajan tasarımının temel katmanlarıdır.
+  - İnsanlar ajanın açık/kapalı durumunu kontrol eder ve ajan durumu her zaman net bir şekilde görünür.
 
-## Bu İlkeleri Uygulama Yönergeleri
+## Bu İlkeleri Uygulamak İçin Yönergeler
 
-Yukarıdaki tasarım ilkelerini kullanırken şu yönergeleri izleyin:
+Önceki tasarım ilkelerini kullanırken, aşağıdaki yönergeleri kullanın:
 
-1. **Şeffaflık**: Kullanıcıya AI'nın dahil olduğunu, nasıl çalıştığını (geçmiş eylemler dahil) ve nasıl geri bildirim verip sistemi değiştirebileceğini bildirin.
-2. **Kontrol**: Kullanıcının sistemi ve özelliklerini özelleştirmesine, tercihlerini belirtmesine ve kişiselleştirmesine olanak tanıyın (unutma yeteneği dahil).
-3. **Tutarlılık**: Cihazlar ve uç noktalar arasında tutarlı, çok modlu deneyimler hedefleyin. Mümkün olduğunda tanıdık UI/UX öğelerini kullanın (örneğin, sesli etkileşim için mikrofon simgesi) ve müşterinin bilişsel yükünü mümkün olduğunca azaltın (örneğin, özlü yanıtlar, görsel yardımcılar ve 'Daha Fazla Bilgi' içeriği hedefleyin).
+1. **Şeffaflık**: Kullanıcıya AI’nın dahil olduğunu, nasıl çalıştığını (geçmiş işlemler dahil) ve geri bildirim vermeyi ve sistemi değiştirmeyi nasıl yapılacağını bildirin.
+2. **Kontrol**: Kullanıcının özelleştirmesine, tercihleri belirtmesine, kişiselleştirmesine ve sistem ve özellikleri üzerinde kontrol sahibi olmasına (unutma yeteneği dahil) izin verin.
+3. **Tutarlılık**: Cihazlar ve uç noktalar arasında tutarlı, çok modlu deneyimler hedefleyin. Mümkünse tanıdık UI/UX öğeleri kullanın (örneğin, sesli etkileşim için mikrofon simgesi) ve müşterinin bilişsel yükünü mümkün olduğunca azaltın (örneğin, kısa yanıtlar, görsel yardımcılar ve ‘Daha Fazla Öğren’ içeriği).
 
-## Bu İlkeler ve Yönergeler Kullanılarak Bir Seyahat Ajanı Nasıl Tasarlanır?
+## Bu İlkeler ve Yönergelerle Seyahat Ajanı Nasıl Tasarlanır
 
-Bir Seyahat Ajanı tasarladığınızı hayal edin, işte Tasarım İlkeleri ve Yönergeleri kullanmayı nasıl düşünebileceğiniz:
+Bir Seyahat Ajanı tasarladığınızı hayal edin, İşte Tasarım İlkeleri ve Yönergeler kullanarak nasıl düşünebilirsiniz:
 
-1. **Şeffaflık** – Kullanıcıya Seyahat Ajanının bir AI destekli Ajan olduğunu bildirin. Başlamak için bazı temel talimatlar sağlayın (örneğin, bir “Merhaba” mesajı, örnek istemler). Bunu ürün sayfasında açıkça belgeleyin. Kullanıcının geçmişte sorduğu istemlerin listesini gösterin. Geri bildirim vermenin nasıl yapılacağını netleştirin (beğenme ve beğenmeme, Geri Bildirim Gönder düğmesi vb.). Ajanın kullanım veya konu kısıtlamaları varsa bunu açıkça ifade edin.
-2. **Kontrol** – Kullanıcının, Sistem İstemi gibi şeylerle Ajanı oluşturduktan sonra nasıl değiştirebileceğini netleştirin. Kullanıcının Ajanın ne kadar ayrıntılı olduğunu, yazı stilini ve Ajanın konuşmaması gereken konuları seçmesine olanak tanıyın. Kullanıcının ilişkili dosyaları veya verileri, istemleri ve geçmiş konuşmaları görüntülemesine ve silmesine izin verin.
-3. **Tutarlılık** – Paylaş İstemi, bir dosya veya fotoğraf ekleme ve birini veya bir şeyi etiketleme simgelerinin standart ve tanınabilir olduğundan emin olun. Ajan ile dosya yükleme/paylaşımı için ataş simgesini ve grafik yükleme için bir resim simgesini kullanın.
+1. **Şeffaflık** – Kullanıcıya Seyahat Ajanının AI destekli bir Ajan olduğunu bildirin. Başlamaya dair bazı temel talimatlar (örneğin, bir "Merhaba" mesajı, örnek komutlar) sağlayın. Bunu ürün sayfasında açıkça belgeleyin. Kullanıcının geçmişte sorduğu komutların listesini gösterin. Geri bildirim vermenin (beğenme veya beğenmeme, Geri Bildirim Gönder düğmesi vb.) net olduğunu açıkça belirtin. Ajanın kullanım ya da konu kısıtlamaları varsa bunu açıkça ifade edin.
+2. **Kontrol** – Ajan oluşturulduktan sonra Sistem İsteği gibi şeylerle nasıl değiştirilebileceği net olmalıdır. Kullanıcının ajanın ne kadar ayrıntılı yazacağı, yazım tarzı ve ajanın ne hakkında konuşmaması gerektiği konusunda herhangi bir uyarıyı seçebilmesini sağlayın. İlgili dosyalar, veriler, istemler ve geçmiş konuşmalar kullanıcı tarafından görüntülenip silinebilir olmalıdır.
+3. **Tutarlılık** – Komut Paylaş, dosya veya fotoğraf ekleme ve birini veya bir şeyi etiketleme simgelerinin standart ve tanınabilir olmasını sağlayın. Dosya yükleme/paylaşma için ataç simgesi ve grafik yükleme için resim simgesi kullanın.
 
 ## Örnek Kodlar
 
-- Python: [Ajan Çerçevesi](./code_samples/03-python-agent-framework.ipynb)
-- .NET: [Ajan Çerçevesi](./code_samples/03-dotnet-agent-framework.md)
+- Python: [Agent Framework](./code_samples/03-python-agent-framework.ipynb)
+- .NET: [Agent Framework](./code_samples/03-dotnet-agent-framework.md)
 
-## AI Ajanik Tasarım Modelleri Hakkında Daha Fazla Sorunuz mu Var?
 
-[Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) topluluğuna katılarak diğer öğrenenlerle tanışabilir, ofis saatlerine katılabilir ve AI Ajanları hakkındaki sorularınıza yanıt alabilirsiniz.
+## AI Ajan Tasarım Desenleri Hakkında Daha Fazla Sorunuz Mu Var?
+
+Diğer öğrenenlerle tanışmak, mesai saatlerine katılmak ve AI Ajanlarınızla ilgili soruları yanıtlamak için [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) topluluğuna katılın.
 
 ## Ek Kaynaklar
 
-- <a href="https://openai.com" target="_blank">Ajanik AI Sistemlerini Yönetme Uygulamaları | OpenAI</a>
-- <a href="https://microsoft.com" target="_blank">HAX Toolkit Projesi - Microsoft Araştırma</a>
+- <a href="https://openai.com" target="_blank">Agent AI Sistemlerini Yönetme Uygulamaları | OpenAI</a>
+- <a href="https://microsoft.com" target="_blank">HAX Araç Seti Projesi - Microsoft Araştırma</a>
 - <a href="https://responsibleaitoolbox.ai" target="_blank">Sorumlu AI Araç Kutusu</a>
 
 ## Önceki Ders
 
-[Ajanik Çerçeveleri Keşfetmek](../02-explore-agentic-frameworks/README.md)
+[Ajan Çerçevelerini Keşfetmek](../02-explore-agentic-frameworks/README.md)
 
 ## Sonraki Ders
 
-[Aracın Kullanımı Tasarım Modeli](../04-tool-use/README.md)
+[Araç Kullanım Tasarım Deseni](../04-tool-use/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Feragatname**:  
-Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba göstersek de, otomatik çevirilerin hata veya yanlışlıklar içerebileceğini lütfen unutmayın. Belgenin orijinal dili, yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımından kaynaklanan yanlış anlama veya yanlış yorumlamalardan sorumlu değiliz.
+**Feragatname**:
+Bu belge, AI çeviri hizmeti [Co-op Translator](https://github.com/Azure/co-op-translator) kullanılarak çevrilmiştir. Doğruluk için çaba sarf etsek de, otomatik çevirilerin hata veya yanlışlık içerebileceğini lütfen unutmayınız. Orijinal belge, kendi dilinde yetkili kaynak olarak kabul edilmelidir. Kritik bilgiler için profesyonel insan çevirisi önerilir. Bu çevirinin kullanımı sonucu ortaya çıkabilecek yanlış anlamalardan veya yanlış yorumlamalardan sorumlu değiliz.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

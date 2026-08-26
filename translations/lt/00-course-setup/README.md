@@ -1,64 +1,64 @@
-# Kursų nustatymas
+# Kurso paruošimas
 
 ## Įvadas
 
-Šioje pamokoje aptarsime, kaip paleisti šio kurso kodų pavyzdžius.
+Ši pamoka paaiškins, kaip vykdyti šio kurso kodo pavyzdžius.
 
 ## Prisijunkite prie kitų mokinių ir gaukite pagalbos
 
-Prieš pradėdami klonuoti savo saugyklą, prisijunkite prie [AI Agents For Beginners Discord kanalo](https://aka.ms/ai-agents/discord), kad gautumėte pagalbos dėl nustatymo, atsakymų į klausimus apie kursą ar galėtumėte susisiekti su kitais mokiniais.
+Prieš pradėdami kopijuoti savo repozitoriją, prisijunkite prie [AI Agents For Beginners Discord kanalo](https://aka.ms/ai-agents/discord), kad gautumėte pagalbos su paruošimu, užduotumėte klausimus apie kursą ar susisiektumėte su kitais mokiniais.
 
-## Klonuokite arba šakokite šią saugyklą
+## Nukopijuokite arba šakninę šią repozitoriją
 
-Norėdami pradėti, prašome klonuoti arba šakoti GitHub saugyklą. Tai sukurs jūsų asmeninę kurso medžiagos versiją, kad galėtumėte paleisti, testuoti ir koreguoti kodą!
+Norėdami pradėti, nukopijuokite arba atšakinkite GitHub repozitoriją. Tai sukurs jūsų kopiją kurso medžiagos, kad galėtumėte vykdyti, testuoti ir koreguoti kodą!
 
-Tai galite padaryti paspaudę nuorodą <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">šakoti saugyklą</a>
+Tai galite padaryti spustelėję nuorodą <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">atšakinti repozitoriją</a>
 
-Dabar turėtumėte turėti savo šakotą šio kurso versiją šioje nuorodoje:
+Dabar turėtumėte turėti savo atšakintą šios kursų versiją šioje nuorodoje:
 
-![Šakota saugykla](../../../translated_images/lt/forked-repo.33f27ca1901baa6a.webp)
+![Forked Repo](../../../translated_images/lt/forked-repo.33f27ca1901baa6a.webp)
 
-### Paviršutiniškas klonavimas (rekomenduojama dirbtuvėms / Codespaces)
+### Paviršutiniškas klonas (rekomenduojama dirbtuvių / Codespaces atvejams)
 
-  >Visa saugykla gali būti didelė (~3 GB), kai atsisiunčiate visą istoriją ir visus failus. Jei dalyvaujate tik dirbtuvėse arba jums reikia tik kelių pamokų aplankų, paviršutiniškas klonavimas (arba dalinis klonavimas) leidžia išvengti didžiosios dalies atsisiuntimo, sutrumpinant istoriją ir/arba praleidžiant failus.
+  > Pilna repozitorija gali būti didelė (~3 GB), kai atsisiunčiate visą istoriją ir visus failus. Jei dalyvausite tik dirbtuvėse arba norite tik keletos pamokų aplankų, paviršutiniškas klonas (arba ribotas klonas) leidžia išvengti didžiojo atsisiuntimo, apribojant istoriją ir/arba apeinant blob'us.
 
-#### Greitas paviršutiniškas klonavimas — minimalus istorijos kiekis, visi failai
+#### Greitas paviršutiniškas klonas — minimali istorija, visi failai
 
-Pakeiskite `<your-username>` žemiau pateiktuose komandose savo šakos URL (arba pirminį URL, jei pageidaujate).
+Pakeiskite `<your-username>` žemiau pateiktose komandose savo fork URL (arba uprstream URL, jei norite).
 
-Norėdami klonuoti tik naujausią istorijos įrašą (mažas atsisiuntimas):
+Norėdami nukopijuoti tik naujausią įsipareigojimą (mažas atsisiuntimas):
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Norėdami klonuoti konkrečią šaką:
+Norėdami nukopijuoti konkretų šaką:
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### Dalinis (dalinis) klonavimas — minimalūs failai + tik pasirinkti aplankai
+#### Dalinis (ribotas) klonas — minimalūs blob'ai + tik pasirinkti aplankai
 
-Tai naudoja dalinį klonavimą ir dalinį patikrinimą (reikalinga Git 2.25+ ir rekomenduojama moderni Git versija su dalinio klonavimo palaikymu):
+Tai naudoja dalinį kloną ir sparse-checkout (reikalauja Git 2.25+ ir rekomenduojama moderni Git versija su dalinio klono palaikymu):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Pereikite į saugyklos aplanką:
+Pereikite į repozitorijos aplanką:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-Tada nurodykite, kuriuos aplankus norite (žemiau pateiktame pavyzdyje rodomi du aplankai):
+Tada nurodykite, kuriuos aplankus norite (žemiau pavyzdyje du aplankai):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-Po klonavimo ir failų patikrinimo, jei jums reikia tik failų ir norite atlaisvinti vietą (be git istorijos), prašome ištrinti saugyklos metaduomenis (💀negrįžtama — prarasite visą Git funkcionalumą: jokių įrašų, traukimų, stūmimų ar istorijos prieigos).
+Po klonavimo ir failų patvirtinimo, jei jums reikia tik failų ir norite atlaisvinti vietos (be git istorijos), ištrinkite repozitorijos metadata (💀negrįžtamai — prarasite visas Git funkcijas: jokių įsipareigojimų, gaudymų, išsiuntimų ar istorijos prieigos).
 
 ```bash
 # zsh/bash
@@ -70,52 +70,41 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### Naudojant GitHub Codespaces (rekomenduojama išvengti vietinių didelių atsisiuntimų)
+#### GitHub Codespaces naudojimas (rekomenduojama vengti didelių vietinių atsisiuntimų)
 
-- Sukurkite naują Codespace šiai saugyklai per [GitHub UI](https://github.com/codespaces).  
+- Sukurkite naują Codespace šiai repozitorijai per [GitHub UI](https://github.com/codespaces).  
 
-- Naujoje Codespace terminale paleiskite vieną iš paviršutiniško/dalinio klonavimo komandų, kad įtrauktumėte tik jums reikalingus pamokų aplankus į Codespace darbo aplinką.
-- Pasirinktinai: po klonavimo Codespaces viduje, pašalinkite .git, kad atgautumėte papildomą vietą (žr. pašalinimo komandas aukščiau).
-- Pastaba: Jei pageidaujate atidaryti saugyklą tiesiogiai Codespaces (be papildomo klonavimo), atkreipkite dėmesį, kad Codespaces sukurs devcontainer aplinką ir vis tiek gali paruošti daugiau nei jums reikia. Klonuojant paviršutinišką kopiją šviežioje Codespace suteikia daugiau kontrolės disko naudojimui.
+- Naujo sukurto Codespace terminale paleiskite vieną iš aukščiau pateiktų paviršutiniško/riboto klono komandų, kad į Codespace darbinę vietą atsineštumėte tik reikalingus pamokų aplankus.
+- Papildomai: po klonavimo Codespaces pašalinkite .git, kad sutaupytumėte vietos (žr. aukščiau pateiktas pašalinimo komandas).
+- Pastaba: jei norite tiesiogiai atidaryti repozitoriją Codespaces (be papildomo klono), atkreipkite dėmesį, kad Codespaces sukurs devcontainer aplinką ir gali sumodeliuoti daugiau, nei reikia. Paviršutiniško klono kopija šviežiame Codespace suteikia daugiau kontrolės disko naudojimui.
 
 #### Patarimai
 
-- Visada pakeiskite klonavimo URL savo šaka, jei norite redaguoti/įrašyti.
-- Jei vėliau jums reikia daugiau istorijos ar failų, galite juos gauti arba koreguoti dalinį patikrinimą, kad įtrauktumėte papildomus aplankus.
+- Visada pakeiskite klono URL savo fork, jei norite redaguoti/įsipareigoti.
+- Jei vėliau reikės daugiau istorijos ar failų, galite juos atsisiųsti arba pakoreguoti sparse-checkout, kad įtrauktumėte papildomus aplankus.
 
-## Kodo paleidimas
+## Kodo vykdymas
 
-Šis kursas siūlo seriją Jupyter Notebooks, kuriuos galite paleisti, kad praktiškai išmoktumėte kurti AI agentus.
+Šis kursas siūlo seriją Jupyter užrašų knygelių, kurias galite vykdyti norėdami įgyti praktinės patirties statant AI agentus.
 
-Kodo pavyzdžiai naudoja:
+Kodo pavyzdžiai naudoja **Microsoft Agent Framework (MAF)** su `FoundryChatClient`, kuris jungiasi prie **Microsoft Foundry Agent Service V2** (Atsakymų API) per **Microsoft Foundry**.
 
-**Reikalinga GitHub paskyra - nemokama**:
-
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Pažymėta kaip (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. Pažymėta kaip (autogen.ipynb)
-
-**Reikalinga Azure prenumerata**:
-
-3) Azure AI Foundry + Azure AI Agent Service. Pažymėta kaip (azureaiagent.ipynb)
-
-Rekomenduojame išbandyti visus tris pavyzdžių tipus, kad pamatytumėte, kuris jums geriausiai tinka.
-
-Kurią parinktį pasirinksite, tai nulems, kokius nustatymo veiksmus turėsite atlikti žemiau:
+Visi Python užrašų knygelės pažymėti kaip `*-python-agent-framework.ipynb`.
 
 ## Reikalavimai
 
 - Python 3.12+
-  - **PASTABA**: Jei neturite Python3.12 įdiegto, įsitikinkite, kad jį įdiegėte. Tada sukurkite savo venv naudodami python3.12, kad užtikrintumėte, jog teisingos versijos bus įdiegtos iš requirements.txt failo.
+  - **PASTABA**: Jei neturite įdiegto Python3.12, įsitikinkite, kad jį įdiegėte. Tada sukurkite venv naudodami python3.12, kad būtų įdiegtos tinkamos versijos iš requirements.txt failo.
   
     >Pavyzdys
 
-    Sukurkite Python venv aplanką:
+    Sukurkite Python venv katalogą:
 
     ```bash|powershell
     python -m venv venv
     ```
 
-    Tada aktyvuokite venv aplinką:
+    Tada aktyvuokite venv aplinką skirtai platformai:
 
     ```bash
     # zsh/bash
@@ -127,19 +116,19 @@ Kurią parinktį pasirinksite, tai nulems, kokius nustatymo veiksmus turėsite a
     venv\Scripts\activate
     ```
 
-- .NET 10+: Norėdami naudoti pavyzdinius kodus su .NET, įsitikinkite, kad įdiegėte [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) arba naujesnę versiją. Tada patikrinkite savo įdiegtą .NET SDK versiją:
+- .NET 10+: Jei naudojate .NET pavyzdžius, įsitikinkite, kad įdiegėte [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) ar naujesnę versiją. Tada patikrinkite savo įdiegtą .NET SDK versiją:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- GitHub paskyra - Norint pasiekti GitHub Models Marketplace
-- Azure prenumerata - Norint pasiekti Azure AI Foundry
-- Azure AI Foundry paskyra - Norint pasiekti Azure AI Agent Service
+- **Azure CLI** — Reikalinga autentifikacijai. Įdiekite iš [aka.ms/installazurecli](https://aka.ms/installazurecli).
+- **Azure prenumerata** — Norint prieiti prie Microsoft Foundry ir Microsoft Foundry Agent Service.
+- **Microsoft Foundry projektas** — Projektas su paleistu modeliu (pvz., `gpt-5-mini`). Žr. [1 žingsnis](#1-žingsnis-sukurkite-microsoft-foundry-projektą) žemiau.
 
-Mes įtraukėme `requirements.txt` failą šios saugyklos šaknyje, kuriame yra visi reikalingi Python paketai, kad galėtumėte paleisti kodo pavyzdžius.
+Šios repozitorijos šaknyje yra `requirements.txt` failas, kuriame pateikti visi reikalingi Python paketai kodo pavyzdžiams vykdyti.
 
-Juos galite įdiegti paleisdami šią komandą savo terminale saugyklos šaknyje:
+Juos galite įdiegti vykdydami šią komandą savo terminale repo šaknyje:
 
 ```bash|powershell
 pip install -r requirements.txt
@@ -147,93 +136,64 @@ pip install -r requirements.txt
 
 Rekomenduojame sukurti Python virtualią aplinką, kad išvengtumėte konfliktų ir problemų.
 
-## VSCode nustatymas
+## VSCode paruošimas
 
-Įsitikinkite, kad naudojate tinkamą Python versiją VSCode.
+Įsitikinkite, kad VSCode naudojate tinkamą Python versiją.
 
-![vaizdas](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
+![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## Nustatymas pavyzdžiams naudojant GitHub Models 
+## Microsoft Foundry ir Microsoft Foundry Agent Service nustatymas
 
-### 1 žingsnis: Gaukite savo GitHub asmeninio prieigos žetoną (PAT)
+### 1 žingsnis: Sukurkite Microsoft Foundry projektą
 
-Šis kursas naudoja GitHub Models Marketplace, suteikiant nemokamą prieigą prie didelių kalbos modelių (LLMs), kuriuos naudosite kurdami AI agentus.
+Norint vykdyti užrašų knygeles, jums reikia Microsoft Foundry **hub'o** ir **projekto** su paleistu modeliu.
 
-Norėdami naudoti GitHub Models, turėsite sukurti [GitHub asmeninio prieigos žetoną](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+1. Eikite į [ai.azure.com](https://ai.azure.com) ir prisijunkite su savo Azure paskyra.
+2. Sukurkite **hub'ą** (arba naudokite jau esantį). Žr.: [Hub išteklių apžvalga](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources).
+3. Hube sukurkite **projektą**.
+4. Iš **Models + Endpoints** → **Deploy model** įdiekite modelį (pvz., `gpt-5-mini`).
 
-Tai galite padaryti eidami į savo <a href="https://github.com/settings/personal-access-tokens" target="_blank">Asmeninio prieigos žetonų nustatymus</a> savo GitHub paskyroje.
+### 2 žingsnis: Gaukite projekto galutinę taško URL ir modelio įdiegimo pavadinimą
 
-Prašome laikytis [Mažiausio privilegijų principo](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) kuriant savo žetoną. Tai reiškia, kad turėtumėte suteikti žetonui tik tas teises, kurių reikia, kad galėtumėte paleisti šio kurso kodo pavyzdžius.
+Savo projekte Microsoft Foundry portale:
 
-1. Pasirinkite `Fine-grained tokens` parinktį kairėje ekrano pusėje, eidami į **Kūrėjo nustatymus**
+- **Projekto galinis taškas** — Eikite į **Overview** puslapį ir nukopijuokite galutinę taško URL.
 
-   ![Kūrėjo nustatymai](../../../translated_images/lt/profile_developer_settings.410a859fe749c755.webp)
+![Project Connection String](../../../translated_images/lt/project-endpoint.8cf04c9975bbfbf1.webp)
 
-   Tada pasirinkite `Generate new token`.
+- **Modelio įdiegimo pavadinimas** — Eikite į **Models + Endpoints**, pasirinkite įdiegtą modelį ir pažymėkite **Deployment name** (pvz., `gpt-5-mini`).
 
-   ![Generuoti žetoną](../../../translated_images/lt/fga_new_token.1c1a234afe202ab3.webp)
+### 3 žingsnis: Prisijunkite prie Azure su `az login`
 
-2. Įveskite aprašomąjį žetono pavadinimą, kuris atspindi jo paskirtį, kad vėliau būtų lengva jį identifikuoti.
+Visos užrašų knygelės naudoja **`AzureCliCredential`** autentifikacijai — nereikia valdyti API raktų. Tai reikalauja būti prisijungus per Azure CLI.
 
-    🔐 Žetono trukmės rekomendacija
+1. Jei dar neturite, **įdiekite Azure CLI**: [aka.ms/installazurecli](https://aka.ms/installazurecli)
 
-    Rekomenduojama trukmė: 30 dienų
-    Dėl saugesnės pozicijos galite pasirinkti trumpesnį laikotarpį—pvz., 7 dienas 🛡️
-    Tai puikus būdas nustatyti asmeninį tikslą ir baigti kursą, kol jūsų mokymosi tempas yra aukštas 🚀.
+2. Prisijunkite paleisdami:
 
-    ![Žetono pavadinimas ir galiojimo data](../../../translated_images/lt/token-name-expiry-date.a095fb0de6386864.webp)
+    ```bash|powershell
+    az login
+    ```
 
-3. Apribokite žetono apimtį savo šakai šioje saugykloje.
+    Arba jei esate nuotolinėje/Codespace aplinkoje be naršyklės:
 
-    ![Apriboti apimtį šakos saugyklai](../../../translated_images/lt/token_repository_limit.924ade5e11d9d8bb.webp)
+    ```bash|powershell
+    az login --use-device-code
+    ```
 
-4. Apribokite žetono teises: Skiltyje **Teisės**, spustelėkite **Paskyros** skirtuką ir spustelėkite "+ Pridėti teises" mygtuką. Atsiras išskleidžiamasis meniu. Prašome ieškoti **Models** ir pažymėti langelį.
+3. Jei bus prašoma, **pasirinkite savo prenumeratą** — tą, kurioje yra jūsų Foundry projektas.
 
-    ![Pridėti Models teisę](../../../translated_images/lt/add_models_permissions.c0c44ed8b40fc143.webp)
+4. Patikrinkite, ar esate prisijungę:
 
-5. Patikrinkite reikiamas teises prieš generuodami žetoną. ![Patikrinti teises](../../../translated_images/lt/verify_permissions.06bd9e43987a8b21.webp)
+    ```bash|powershell
+    az account show
+    ```
 
-6. Prieš generuodami žetoną, įsitikinkite, kad esate pasiruošę saugoti žetoną saugioje vietoje, pvz., slaptažodžių valdymo saugykloje, nes jis nebus rodomas dar kartą po jo sukūrimo. ![Saugoti žetoną saugiai](../../../translated_images/lt/store_token_securely.08ee2274c6ad6caf.webp)
+> **Kodėl `az login`?** Užrašų knygelės autentifikuojasi naudodamos `AzureCliCredential` iš `azure-identity` paketo. Tai reiškia, kad jūsų Azure CLI sesija suteikia prisijungimo duomenis — nereikia API raktų ar slaptų duomenų `.env` faile. Tai yra [geriausia saugumo praktika](https://learn.microsoft.com/azure/developer/ai/keyless-connections).
 
-Nukopijuokite naują žetoną, kurį ką tik sukūrėte. Dabar pridėsite jį į savo `.env` failą, įtrauktą į šį kursą.
+### 4 žingsnis: Sukurkite savo `.env` failą
 
-### 2 žingsnis: Sukurkite savo `.env` failą
-
-Norėdami sukurti savo `.env` failą, paleiskite šią komandą savo terminale.
-
-```bash
-# zsh/bash
-cp .env.example .env
-```
-
-```powershell
-# PowerShell
-Copy-Item .env.example .env
-```
-
-Tai nukopijuos pavyzdinį failą ir sukurs `.env` jūsų kataloge, kur užpildysite aplinkos kintamųjų reikšmes.
-
-Nukopijavę savo žetoną, atidarykite `.env` failą savo mėgstamame teksto redaktoriuje ir įklijuokite savo žetoną į `GITHUB_TOKEN` lauką.
-
-![GitHub žetono laukas](../../../translated_images/lt/github_token_field.20491ed3224b5f4a.webp)
-
-Dabar turėtumėte galėti paleisti šio kurso kodo pavyzdžius.
-
-## Nustatymas pavyzdžiams naudojant Azure AI Foundry ir Azure AI Agent Service
-
-### 1 žingsnis: Gaukite savo Azure projekto galutinį tašką
-
-Sekite žingsnius, kaip sukurti centrą ir projektą Azure AI Foundry, pateiktus čia: [Centro išteklių apžvalga](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-Kai sukursite savo projektą, turėsite gauti savo projekto prisijungimo eilutę.
-
-Tai galite padaryti eidami į **Apžvalgos** puslapį savo projekte Azure AI Foundry portale.
-
-![Projekto prisijungimo eilutė](../../../translated_images/lt/project-endpoint.8cf04c9975bbfbf1.webp)
-
-### 2 žingsnis: Sukurkite savo `.env` failą
-
-Norėdami sukurti savo `.env` failą, paleiskite šią komandą savo terminale.
+Nukopijuokite pavyzdinį failą:
 
 ```bash
 # zsh/bash
@@ -245,72 +205,185 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Tai nukopijuos pavyzdinį failą ir sukurs `.env` jūsų kataloge, kur užpildysite aplinkos kintamųjų reikšmes.
+Atidarykite `.env` ir užpildykite šias dvi reikšmes:
 
-Nukopijavę savo žetoną, atidarykite `.env` failą savo mėgstamame teksto redaktoriuje ir įklijuokite savo žetoną į `PROJECT_ENDPOINT` lauką.
+```env
+AZURE_AI_PROJECT_ENDPOINT=https://<your-project>.services.ai.azure.com/api/projects/<your-project-id>
+AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-5-mini
+```
 
-### 3 žingsnis: Prisijunkite prie Azure
+| Kintamasis | Kur rasti |
+|----------|-----------------|
+| `AZURE_AI_PROJECT_ENDPOINT` | Foundry portalas → jūsų projektas → **Overview** puslapis |
+| `AZURE_AI_MODEL_DEPLOYMENT_NAME` | Foundry portalas → **Models + Endpoints** → jūsų įdiegtas modelis |
 
-Kaip saugumo geriausia praktika, naudosime [autentifikaciją be raktų](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst), kad autentifikuotume prie Azure OpenAI su Microsoft Entra ID. 
+Tai viskas daugumai pamokų! Užrašų knygelės automatiškai autentifikuosis per jūsų `az login` sesiją.
 
-Tada atidarykite terminalą ir paleiskite `az login --use-device-code`, kad prisijungtumėte prie savo Azure paskyros.
+### 5 žingsnis: Įdiekite Python priklausomybes
 
-Kai prisijungsite, pasirinkite savo prenumeratą terminale.
+```bash|powershell
+pip install -r requirements.txt
+```
 
-## Papildomi aplinkos kintamieji - Azure Search ir Azure OpenAI 
+Rekomenduojame tai vykdyti virtualioje aplinkoje, kurią sukūrėte anksčiau.
 
-Agentic RAG pamokai - 5 pamoka - yra pavyzdžių, kurie naudoja Azure Search ir Azure OpenAI.
+## Papildomas paruošimas 5 pamokai (Agentic RAG)
 
-Jei norite paleisti šiuos pavyzdžius, turėsite pridėti šiuos aplinkos kintamuosius į savo `.env` failą:
+5 pamoka naudoja **Azure AI Search** paieškos-nesustiprintai generacijai. Jei planuojate vykdyti šią pamoką, pridėkite šiuos kintamuosius į savo `.env` failą:
 
-### Apžvalgos puslapis (Projektas)
+| Kintamasis | Kur rasti |
+|----------|-----------------|
+| `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure portalas → jūsų **Azure AI Search** išteklius → **Overview** → URL |
+| `AZURE_SEARCH_API_KEY` | Azure portalas → jūsų **Azure AI Search** išteklius → **Settings** → **Keys** → pirminis administratoriaus raktas |
 
-- `AZURE_SUBSCRIPTION_ID` - Patikrinkite **Projekto detales** **Apžvalgos** puslapyje savo projekte.
+## Papildomas paruošimas pamokoms, kurios tiesiogiai kviečia Azure OpenAI (6 ir 8 pamokos)
 
-- `AZURE_AI_PROJECT_NAME` - Pažvelkite į **Apžvalgos** puslapio viršų savo projekte.
+Kai kurios 6 ir 8 pamokų užrašų knygelės tiesiogiai kviečia **Azure OpenAI** (naudodamos **Responses API**), o ne per Microsoft Foundry projektą. Šie pavyzdžiai anksčiau naudojo GitHub Models, kurie yra pasenę (bus nutraukti 2026 m. liepos mėn.) ir nepalaiko Responses API. Jei planuojate vykdyti tuos pavyzdžius, pridėkite šiuos kintamuosius į savo `.env` failą:
 
-- `AZURE_OPENAI_SERVICE` - Raskite tai **Įtrauktų galimybių** skirtuke **Azure OpenAI Service** **Apžvalgos** puslapyje.
+| Kintamasis | Kur rasti |
+|----------|-----------------|
+| `AZURE_OPENAI_ENDPOINT` | Azure portalas → jūsų **Azure OpenAI** ištekliai → **Keys and Endpoint** → Galinis taškas (pvz. `https://<your-resource>.openai.azure.com`) |
+| `AZURE_OPENAI_DEPLOYMENT` | Įdiegto modelio pavadinimas (pvz., `gpt-5-mini`), kuris palaiko Responses API |
+| `AZURE_OPENAI_API_KEY` | Pasirinktinai — tik jei naudojate raktų pagrindu autentifikaciją vietoje `az login` / Entra ID |
 
-### Valdymo centras
+> Responses API naudoja stabilų `/openai/v1/` galinį tašką, todėl `api-version` nereikia. Prisijunkite su `az login`, kad naudotumėte saugią, be raktų, Entra ID autentifikaciją.
 
-- `AZURE_OPENAI_RESOURCE_GROUP` - Eikite į **Projekto savybes** **Apžvalgos** puslapyje **Valdymo centre**.
+## Alternatyvus tiekėjas: MiniMax (OpenAI suderinamas)
 
-- `GLOBAL_LLM_SERVICE` - Skiltyje **Susiję ištekliai**, raskite **Azure AI Services** prisijungimo pavadinimą. Jei nerandate, patikrinkite **Azure portalą** savo išteklių grupėje dėl AI Services išteklių pavadinimo.
+[MiniMax](https://platform.minimaxi.com/) teikia didelės apimties modelius (iki 204 tūkst. žetonų) per OpenAI suderinamą API. Kadangi Microsoft Agent Framework `OpenAIChatClient` veikia su bet kuriuo OpenAI suderinamu galu, galite naudoti MiniMax kaip tiesioginę alternatyvą Azure OpenAI ar OpenAI.
 
-### Modeliai + galutiniai taškai puslapis
+Pridėkite šiuos kintamuosius į savo `.env` failą:
 
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Pasirinkite savo įterpimo modelį (pvz., `text-embedding-ada-002`) ir užsirašykite **Diegimo pavadinimą** iš modelio detalių.
+| Kintamasis | Kur rasti |
+|----------|-----------------|
+| `MINIMAX_API_KEY` | [MiniMax Platform](https://platform.minimaxi.com/) → API raktais |
+| `MINIMAX_BASE_URL` | Naudokite `https://api.minimax.io/v1` (numatytoji reikšmė) |
+| `MINIMAX_MODEL_ID` | Naudojamo modelio pavadinimas (pvz., `MiniMax-M3`) |
 
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Pasirinkite savo pokalbio modelį (pvz., `gpt-4o-mini`) ir užsirašykite **Diegimo pavadinimą** iš modelio detalių.
+**Pavyzdiniai modeliai**: `MiniMax-M3` (rekomenduojamas), `MiniMax-M2.7`, `MiniMax-M2.7-highspeed` (greitesni atsakymai). Modelių pavadinimai ir prieinamumas gali keistis, o prieiga prie konkretaus modelio gali priklausyti nuo jūsų paskyros ar regiono — žiūrėkite [MiniMax Platform](https://platform.minimaxi.com/) aktualų sąrašą. Jei `MiniMax-M3` nėra prieinamas jūsų paskyrai, nustatykite `MINIMAX_MODEL_ID` modeliui, prie kurio turite prieigą (pvz., `MiniMax-M2.7`).
 
-### Azure portalas
+Kodo pavyzdžiai, kuriuose naudojamas `OpenAIChatClient` (pvz., 14 pamokos viešbučio užsakymo darbo eiga), automatiškai atpažins ir naudos jūsų MiniMax konfigūraciją, jei `MINIMAX_API_KEY` yra nustatytas.
 
-- `AZURE_OPENAI_ENDPOINT` - Ieškokite **Azure AI services**, spustelėkite jį, tada eikite į **Išteklių valdymas**, **Raktai ir galutiniai taškai**, slinkite žemyn iki "Azure OpenAI galutiniai taškai" ir nukopijuokite tą, kuris sako "Kalbos API".
+## Alternatyvus tiekėjas: Foundry Local (Modelių paleidimas vietoje)
 
-- `AZURE_OPENAI_API_KEY` - Iš to paties ekrano nukopijuokite RAKTĄ 1 arba RAKTĄ 2.
+[Foundry Local](https://foundrylocal.ai) yra lengvas vykdymo variklis, kuris atsisiunčia, valdo ir tiekia kalbos modelius **visiškai savo kompiuteryje** per OpenAI suderinamą API — be debesies, be Azure prenumeratos ir be API raktų. Tai puikus pasirinkimas offline vystymui, eksperimentams nepatiriant debesies išlaidų ar duomenų laikymui vietoje.
 
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - Raskite savo **Azure AI Search** išteklių, spustelėkite jį ir peržiūrėkite **Apžvalga**.
+Kadangi Microsoft Agent Framework `OpenAIChatClient` veikia su bet kuriuo OpenAI suderinamu galu, Foundry Local yra vietinė alternatyva Azure OpenAI.
 
-- `AZURE_SEARCH_API_KEY` - Tada eikite į **Nustatymai** ir tada **Raktai**, kad nukopijuotumėte pirminį arba antrinį administratoriaus raktą.
+**1. Įdiekite Foundry Local**
 
-### Išorinė svetainė
+```bash
+# Windows operacinė sistema
+winget install Microsoft.FoundryLocal
 
-- `AZURE_OPENAI_API_VERSION` - Apsilankykite [API versijos gyvavimo ciklo](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) puslapyje skiltyje **Naujausia GA API versija**.
+# macOS operacinė sistema
+brew install foundrylocal
+```
 
-### Nustatykite autentifikaciją be raktų
+**2. Atsisiųskite ir paleiskite modelį** (tai taip pat paleidžia vietinę paslaugą):
 
-Užuot kodavę savo kredencialus, naudosime ryšį be raktų su Azure OpenAI. Tam importuosime `DefaultAzureCredential` ir vėliau iškviesime `DefaultAzureCredential` funkciją, kad g
-Jei kyla problemų vykdant šį nustatymą, prisijunkite prie mūsų <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> arba <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">sukurkite problemos pranešimą</a>.
+```bash
+foundry model list          # žiūrėti turimus modelius
+foundry model run phi-4-mini
+```
 
-## Kita pamoka
+**3. Įdiekite Python SDK** skirtą vietiniam galutiniam taškui atrasti:
 
-Dabar esate pasiruošę vykdyti šio kurso kodą. Smagaus mokymosi apie AI agentų pasaulį!
+```bash
+pip install foundry-local-sdk
+```
 
-[Įvadas į AI agentus ir agentų naudojimo atvejus](../01-intro-to-ai-agents/README.md)
+**4. Nustatykite Microsoft Agent Framework naudoti savo vietinį modelį:**
+
+```python
+from foundry_local import FoundryLocalManager
+from agent_framework.openai import OpenAIChatClient
+
+# Atsisiunčia (jei reikia) ir paleidžia modelį vietoje, tada suranda galinį tašką/prievadą.
+manager = FoundryLocalManager("phi-4-mini")
+
+chat_client = OpenAIChatClient(
+    base_url=manager.endpoint,      # pvz. http://localhost:<port>/v1
+    api_key=manager.api_key,        # visada "neprivaloma" Foundry Local atveju
+    model_id=manager.get_model_info("phi-4-mini").id,
+)
+
+agent = chat_client.as_agent(
+    name="LocalAgent",
+    instructions="You are a helpful assistant running fully on-device.",
+)
+```
+
+> **Pastaba:** Foundry Local pateikia OpenAI suderinamą **Chat Completions** galinį tašką. Naudokite jį vietiniam vystymui ir offline scenarijams. Pilną **Responses API** funkcionalumo rinkinį (valstybines pokalbių grandines, gilų įrankių valdymą, agentų stiliaus vystymą) naudokite **Azure OpenAI** arba **Microsoft Foundry** projektą, kaip parodyta pamokose. Žr. [Foundry Local dokumentaciją](https://foundrylocal.ai) su esamų modelių katalogu ir platformos palaikymu.
+
+## Papildomas paruošimas 8 pamokai (Bing integravimo eiga)
+
+
+Sąlyginio veikimo užrašų knyga 8 pamokoje naudoja **Bing grounding** per Microsoft Foundry. Jei planuojate vykdyti tą pavyzdį, pridėkite šią kintamąją į savo `.env` failą:
+
+| Kintamasis | Kur jį rasti |
+|----------|-----------------|
+| `BING_CONNECTION_ID` | Microsoft Foundry portalas → jūsų projektas → **Management** → **Connected resources** → jūsų Bing jungtis → nukopijuokite jungties ID |
+
+## Trikčių šalinimas
+
+### SSL sertifikato patikros klaidos macOS
+
+Jei naudojate macOS ir gaunate klaidą panašią į:
+
+```plaintext
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
+```
+
+Tai žinoma Python problema macOS, kai sistemos SSL sertifikatai nėra automatiškai patikimi. Išbandykite šiuos sprendimus eilės tvarka:
+
+**1 variantas: Paleiskite Python „Install Certificates“ scenarijų (rekomenduojama)**
+
+```bash
+# Pakeiskite 3.XX į jūsų įdiegtą Python versiją (pvz., 3.12 arba 3.13):
+/Applications/Python\ 3.XX/Install\ Certificates.command
+```
+
+**2 variantas: Naudokite `connection_verify=False` savo užrašų knygoje (tik GitHub Models užrašų knygoms)**
+
+6 pamokos užrašų knygoje (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`) yra jau įtrauktas užkomentuotas sprendimo būdas. Atkomentuokite `connection_verify=False`, kai kuriate klientą:
+
+```python
+client = ChatCompletionsClient(
+    endpoint=endpoint,
+    credential=AzureKeyCredential(token),
+    connection_verify=False,  # Išjunkite SSL patvirtinimą, jei susiduriate su sertifikato klaidomis
+)
+```
+
+> **⚠️ Įspėjimas:** SSL patikros išjungimas (`connection_verify=False`) sumažina saugumą, nes praleidžiama sertifikato patikra. Naudokite tai tik kaip laikiną sprendimą kūrimo aplinkose, niekada ne gamyboje.
+
+**3 variantas: Įdiekite ir naudokite `truststore`**
+
+```bash
+pip install truststore
+```
+
+Tada pridėkite tai savo užrašų knygos arba skripto viršuje prieš atlikdami bet kokius tinklo kvietimus:
+
+```python
+import truststore
+truststore.inject_into_ssl()
+```
+
+## Užstrigote?
+
+Jei kyla problemų vykdant šią sąranką, prisijunkite prie mūsų <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> arba <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">sukurkite problemą</a>.
+
+## Kitoji pamoka
+
+Dabar esate pasirengę vykdyti šio kurso kodą. Smagaus mokymosi apie AI Agentų pasaulį!
+
+[Įvadas į AI Agentus ir agentų naudojimo atvejus](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Atsakomybės apribojimas**:  
-Šis dokumentas buvo išverstas naudojant AI vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors stengiamės užtikrinti tikslumą, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba turėtų būti laikomas autoritetingu šaltiniu. Kritinei informacijai rekomenduojama naudoti profesionalų žmogaus vertimą. Mes neprisiimame atsakomybės už nesusipratimus ar neteisingus interpretavimus, atsiradusius dėl šio vertimo naudojimo.
+**Atsakomybės apribojimas**:
+Šis dokumentas buvo išverstas naudojant dirbtinio intelekto vertimo paslaugą [Co-op Translator](https://github.com/Azure/co-op-translator). Nors siekiame tikslumo, prašome atkreipti dėmesį, kad automatiniai vertimai gali turėti klaidų ar netikslumų. Originalus dokumentas jo gimtąja kalba laikomas autoritetingu šaltiniu. Svarbiai informacijai rekomenduojama naudoti profesionalų žmogiškąjį vertimą. Mes neatsakome už jokius nesusipratimus ar neteisingą interpretaciją, kilusią naudojantis šiuo vertimu.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

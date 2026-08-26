@@ -1,7 +1,7 @@
 # Memory for AI Agents 
 [![Agent Memory](./images/lesson-13-thumbnail.png)](https://youtu.be/QrYbHesIxpw?si=qNYW6PL3fb3lTPMk)
 
-When discussing the unique benefits of creating AI Agents, two things are mainly discussed: the ability to call tools to complete tasks and the the ability to improve over time. Memory is at the foundation of creating self-improving agent that can create better experiences for our users.
+When discussing the unique benefits of creating AI Agents, two things are mainly discussed: the ability to call tools to complete tasks and the ability to improve over time. Memory is at the foundation of creating self-improving agent that can create better experiences for our users.
 
 In this lesson, we will look at what memory is for AI Agents and how we can manage it and use it for the benefit of our applications.
 
@@ -19,7 +19,7 @@ This lesson will cover:
 
 This lesson includes two comprehensive notebook tutorials:
 
-• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implements memory using Mem0 and Azure AI Search with Semantic Kernel framework
+• **[13-agent-memory.ipynb](./13-agent-memory.ipynb)**: Implements memory using Mem0 and Azure AI Search with Microsoft Agent Framework
 
 • **[13-agent-memory-cognee.ipynb](./13-agent-memory-cognee.ipynb)**: Implements structured memory using Cognee, automatically building knowledge graph backed by embeddings, visualizing graph, and intelligent retrieval
 
@@ -29,7 +29,7 @@ After completing this lesson, you will know how to:
 
 • **Differentiate between various types of AI agent memory**, including working, short-term, and long-term memory, as well as specialized forms like persona and episodic memory.
 
-• **Implement and manage short-term and long-term memory for AI agents** using the Semantic Kernel framework, leveraging tools like Mem0, Cognee, Whiteboard memory, and integrating with Azure AI Search.
+• **Implement and manage short-term and long-term memory for AI agents** using Microsoft Agent Framework, leveraging tools like Mem0, Cognee, Whiteboard memory, and integrating with Azure AI Search.
 
 • **Understand the principles behind self-improving AI agents** and how robust memory management systems contribute to continuous learning and adaptation.
 
@@ -68,6 +68,8 @@ In a travel booking agent, working memory might capture the user's current reque
 #### Short Term Memory
 
 This type of memory retains information for the duration of a single conversation or session. It's the context of the current chat, allowing the agent to refer back to previous turns in the dialogue.
+
+In the [Microsoft Agent Framework](https://github.com/microsoft/agent-framework) Python SDK samples, this maps to `AgentSession`, created with `agent.create_session()`. The session is the framework's built-in short-term memory: it keeps conversation context available while that same session is reused, but that context is not persisted when the session ends or the application restarts. Use long-term memory for facts and preferences that need to survive across sessions, typically through a database, vector index, or another persistent store.
 
 **Short Term Memory Example**
 
@@ -134,7 +136,7 @@ The Cognee notebook tutorial ([13-agent-memory-cognee.ipynb](./13-agent-memory-c
 
 ### Storing Memory with RAG
 
-Beyond specialized memory tools like mem0 , you can leverage robust search services like **Azure AI Search as a backend for storing and retrieving memories**, especially for structured RAG.
+Beyond specialized memory tools like Mem0, you can leverage robust search services like **Azure AI Search as a backend for storing and retrieving memories**, especially for structured RAG.
 
 This allows you to ground your agent's responses with your own data, ensuring more relevant and accurate answers. Azure AI Search can be used to store user-specific travel memories, product catalogs, or any other domain-specific knowledge.
 
@@ -160,4 +162,11 @@ A common pattern for self-improving agents involves introducing a **"knowledge a
 
 ## Got More Questions About Agent Memory?
 
-Join the [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
+Join the [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) to meet with other learners, attend office hours and get your AI Agents questions answered.
+## Previous Lesson
+
+[Context Engineering for AI Agents](../12-context-engineering/README.md)
+
+## Next Lesson
+
+[Exploring Microsoft Agent Framework](../14-microsoft-agent-framework/README.md)

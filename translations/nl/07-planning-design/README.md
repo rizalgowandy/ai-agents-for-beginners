@@ -2,54 +2,54 @@
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
 
-# Plannen en Ontwerpen
+# Planning Design
 
 ## Introductie
 
-Deze les behandelt:
+Deze les behandelt
 
-* Het definiëren van een duidelijk algemeen doel en het opdelen van een complexe taak in beheersbare taken.
+* Het definiëren van een duidelijk overkoepelend doel en het opdelen van een complexe taak in beheersbare taken.
 * Het benutten van gestructureerde output voor betrouwbaardere en machine-leesbare antwoorden.
-* Het toepassen van een event-driven aanpak om dynamische taken en onverwachte invoer te verwerken.
+* Het toepassen van een event-driven aanpak om dynamische taken en onverwachte inputs te beheren.
 
 ## Leerdoelen
 
-Na het voltooien van deze les heb je inzicht in:
+Na het voltooien van deze les begrijp je:
 
-* Het identificeren en stellen van een algemeen doel voor een AI-agent, zodat deze duidelijk weet wat er moet worden bereikt.
-* Het opdelen van een complexe taak in beheersbare subtaken en deze organiseren in een logische volgorde.
-* Het uitrusten van agents met de juiste tools (bijv. zoektools of data-analysetools), beslissen wanneer en hoe ze worden gebruikt, en omgaan met onverwachte situaties die zich voordoen.
-* Het evalueren van de resultaten van subtaken, prestaties meten en acties herhalen om de uiteindelijke output te verbeteren.
+* Hoe je een overkoepelend doel voor een AI-agent identificeert en stelt, zodat deze precies weet wat bereikt moet worden.
+* Hoe je een complexe taak opdeelt in beheersbare subtaken en deze organiseert in een logische volgorde.
+* Hoe je agenten van de juiste tools voorziet (bijv. zoektools of data-analysesoftware), besluit wanneer en hoe ze worden gebruikt, en hoe onverwachte situaties worden afgehandeld.
+* Hoe je de uitkomsten van subtaken evalueert, prestaties meet en acties iteratief verbetert om het eindresultaat te optimaliseren.
 
-## Het Definiëren van het Algemeen Doel en Het Opdelen van een Taak
+## Het bepalen van het overkoepelende doel en het opdelen van een taak
 
 ![Doelen en Taken Definiëren](../../../translated_images/nl/defining-goals-tasks.d70439e19e37c47a.webp)
 
-De meeste taken in de echte wereld zijn te complex om in één stap aan te pakken. Een AI-agent heeft een beknopt doel nodig om zijn planning en acties te sturen. Bijvoorbeeld, overweeg het doel:
+De meeste taken in de echte wereld zijn te complex om in één stap aan te pakken. Een AI-agent heeft een beknopt doel nodig om zijn planning en acties te sturen. Overweeg bijvoorbeeld het doel:
 
     "Genereer een reisroute voor 3 dagen."
 
-Hoewel het eenvoudig te formuleren is, heeft het nog steeds verfijning nodig. Hoe duidelijker het doel, hoe beter de agent (en eventuele menselijke medewerkers) zich kunnen richten op het behalen van het juiste resultaat, zoals het creëren van een uitgebreide reisroute met vluchtopties, hotelaanbevelingen en activiteitensuggesties.
+Hoewel het eenvoudig is om te formuleren, vereist het nog verfijning. Hoe duidelijker het doel, hoe beter de agent (en eventuele menselijke samenwerkers) zich kunnen richten op het behalen van het juiste resultaat, zoals het maken van een uitgebreide route inclusief vluchtopties, hotelaanbevelingen en activiteiten suggesties.
 
 ### Taakopdeling
 
-Grote of ingewikkelde taken worden beheersbaarder wanneer ze worden opgesplitst in kleinere, doelgerichte subtaken.
+Grote of ingewikkelde taken worden beter beheersbaar door ze op te splitsen in kleinere, doelgerichte subtaken.
 Voor het voorbeeld van de reisroute kun je het doel opdelen in:
 
-* Vlucht boeken
-* Hotel boeken
-* Auto huren
+* Vlucht Boeken
+* Hotel Boeken
+* Autoverhuur
 * Personalisatie
 
-Elke subtaak kan vervolgens worden aangepakt door toegewijde agents of processen. Eén agent kan zich specialiseren in het zoeken naar de beste vluchtdeals, een andere richt zich op hotelboekingen, enzovoort. Een coördinerende of “downstream” agent kan deze resultaten vervolgens samenvoegen tot één samenhangende reisroute voor de eindgebruiker.
+Elke subtaak kan dan worden aangepakt door toegewijde agenten of processen. Eén agent kan gespecialiseerd zijn in het zoeken naar de beste vluchtaanbiedingen, een andere richt zich op hotelreserveringen, enzovoort. Een coördinerende of “downstream” agent kan vervolgens deze resultaten samenvoegen in één samenhangende route voor de eindgebruiker.
 
-Deze modulaire aanpak maakt ook stapsgewijze verbeteringen mogelijk. Bijvoorbeeld, je kunt gespecialiseerde agents toevoegen voor voedselaanbevelingen of lokale activiteitensuggesties en de reisroute in de loop van de tijd verfijnen.
+Deze modulaire aanpak maakt ook incrementele verbeteringen mogelijk. Zo kun je gespecialiseerde agenten toevoegen voor Voedseladvies of Lokale Activiteitensuggesties en de route in de loop van de tijd verfijnen.
 
 ### Gestructureerde output
 
-Grote Taalmodellen (LLMs) kunnen gestructureerde output genereren (bijv. JSON) die gemakkelijker te verwerken is door downstream agents of services. Dit is vooral nuttig in een multi-agent context, waar we deze taken kunnen uitvoeren nadat de planning-output is ontvangen. Zie hiervoor een snelle samenvatting.
+Grote Taalmodellen (LLM’s) kunnen gestructureerde output genereren (bijv. JSON) die makkelijker te parseren en verwerken is voor downstream-agenten of -diensten. Dit is vooral nuttig in een multi-agent context, waar we deze taken kunnen uitvoeren nadat de planning is ontvangen.
 
-De volgende Python-code laat zien hoe een eenvoudige planning-agent een doel opsplitst in subtaken en een gestructureerd plan genereert:
+De volgende Python snippet laat zien hoe een eenvoudige planning agent een doel opdeelt in subtaken en een gestructureerd plan genereert:
 
 ```python
 from pydantic import BaseModel
@@ -59,9 +59,8 @@ import json
 import os
 from typing import Optional
 from pprint import pprint
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.azure import AzureAIChatCompletionClient
-from azure.core.credentials import AzureKeyCredential
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 class AgentEnum(str, Enum):
     FlightBooking = "flight_booking"
@@ -72,35 +71,26 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Reis SubTaak Model
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # we willen de taak toewijzen aan de agent
 
 class TravelPlan(BaseModel):
     main_task: str
     subtasks: List[TravelSubTask]
     is_greeting: bool
 
-client = AzureAIChatCompletionClient(
-    model="gpt-4o-mini",
-    endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-    credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
-    model_info={
-        "json_output": False,
-        "function_calling": True,
-        "vision": True,
-        "family": "unknown",
-    },
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
-# Define the user message
-messages = [
-    SystemMessage(content="""You are an planner agent.
+# Definieer het gebruikersbericht
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
-                      Provide your response in JSON format with the following structure:
+    Provide your response in JSON format with the following structure:
 {'main_task': 'Plan a family trip from Singapore to Melbourne.',
  'subtasks': [{'assigned_agent': 'flight_booking',
                'task_details': 'Book round-trip flights from Singapore to '
@@ -111,44 +101,27 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(
-        content="Create a travel plan for a family of 2 kids from Singapore to Melboune", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": 'json_object'})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-response_content: Optional[str] = response.content if isinstance(
-    response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string" )
+response = client.create_response(input=user_message, instructions=system_prompt)
 
+response_content = response.output_text
 pprint(json.loads(response_content))
-
-# # Ensure the response content is a valid JSON string before loading it
-# response_content: Optional[str] = response.content if isinstance(
-#     response.content, str) else None
-# if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
-
-# # Print the response content after loading it as JSON
-# pprint(json.loads(response_content))
-
-# Validate the response content with the MathReasoning model
-# TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Planning Agent met Multi-Agent Orchestratie
+### Planning Agent met Multi-Agent Orkestratie
 
-In dit voorbeeld ontvangt een Semantic Router Agent een gebruikersverzoek (bijv. "Ik heb een hotelplan nodig voor mijn reis.").
+In dit voorbeeld ontvangt een Semantic Router Agent een gebruikersverzoek (bijv. "Ik heb een hotelplan voor mijn reis nodig.").
 
-De planner:
+De planner doet vervolgens:
 
-* Ontvangt het Hotelplan: De planner neemt het bericht van de gebruiker en genereert, op basis van een systeemprompt (inclusief details over beschikbare agents), een gestructureerd reisplan.
-* Lijst Agents en Hun Tools: Het agentregister bevat een lijst van agents (bijv. voor vluchten, hotels, autoverhuur en activiteiten) samen met de functies of tools die ze aanbieden.
-* Routeert het Plan naar de Respectieve Agents: Afhankelijk van het aantal subtaken stuurt de planner het bericht rechtstreeks naar een toegewijde agent (voor enkelvoudige taken) of coördineert via een groepschatmanager voor samenwerking tussen meerdere agents.
-* Vat het Resultaat Samen: Tot slot vat de planner het gegenereerde plan samen voor duidelijkheid.
-De volgende Python-code illustreert deze stappen:
+* Ontvangt het Hotelplan: De planner neemt het bericht van de gebruiker en genereert op basis van een systeemprompt (inclusief beschikbare agentdetails) een gestructureerd reisplan.
+* Lijst van agenten en hun tools: Het agentenregister houdt een lijst bij van agenten (bijv. voor vluchten, hotels, autoverhuur en activiteiten) evenals de functies of tools die zij bieden.
+* Stuurt het plan naar de respectieve agenten: Afhankelijk van het aantal subtaken stuurt de planner het bericht direct naar een toegewijde agent (voor scenario's met één taak) of coördineert via een groepschatmanager voor samenwerking tussen meerdere agenten.
+* Vat de uitkomst samen: Tot slot vat de planner het gegenereerde plan samen voor duidelijkheid.
+Het volgende Python codevoorbeeld illustreert deze stappen:
 
 ```python
 
@@ -166,11 +139,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Reist SubTaak Model
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # we willen de taak toewijzen aan de agent
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -180,25 +153,22 @@ import json
 import os
 from typing import Optional
 
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the client with type-checked environment variables
+# Maak de client aan
 
-client = AzureOpenAIChatCompletionClient(
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
 from pprint import pprint
 
-# Define the user message
+# Definieer het gebruikersbericht
 
-messages = [
-    SystemMessage(content="""You are an planner agent.
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -206,24 +176,20 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-# Ensure the response content is a valid JSON string before loading it
+response = client.create_response(input=user_message, instructions=system_prompt)
 
-response_content: Optional[str] = response.content if isinstance(response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string")
+response_content = response.output_text
 
-# Print the response content after loading it as JSON
+# Druk de responsinhoud af nadat deze is geladen als JSON
 
 pprint(json.loads(response_content))
 ```
 
-Wat volgt is de output van de vorige code en je kunt deze gestructureerde output vervolgens gebruiken om te routeren naar `assigned_agent` en de reisroute samen te vatten voor de eindgebruiker.
+Wat volgt is de output van de vorige code en je kunt deze gestructureerde output gebruiken om naar `assigned_agent` te routeren en het reisplan aan de eindgebruiker samen te vatten.
 
 ```json
 {
@@ -254,21 +220,23 @@ Wat volgt is de output van de vorige code en je kunt deze gestructureerde output
 }
 ```
 
-Een voorbeeldnotebook met de vorige code is beschikbaar [hier](07-autogen.ipynb).
+Een voorbeeldnotebook met de vorige code is beschikbaar [hier](./code_samples/07-python-agent-framework.ipynb).
 
-### Iteratief Plannen
+### Iteratieve Planning
 
-Sommige taken vereisen een heen-en-weer of herplanning, waarbij het resultaat van een subtaak invloed heeft op de volgende. Bijvoorbeeld, als de agent een onverwacht dataformaat ontdekt tijdens het boeken van vluchten, moet deze mogelijk zijn strategie aanpassen voordat hij verder gaat met hotelboekingen.
+Sommige taken vereisen een heen-en-weer of een herplanning, waarbij de uitkomst van de ene subtaak invloed heeft op de volgende. Bijvoorbeeld, als de agent tijdens het boeken van vluchten een onverwacht dataformaat tegenkomt, moet hij mogelijk zijn strategie aanpassen voordat hij doorgaat met hotelboekingen.
 
-Daarnaast kan gebruikersfeedback (bijv. een mens die besluit dat ze een eerdere vlucht willen) een gedeeltelijke herplanning triggeren. Deze dynamische, iteratieve aanpak zorgt ervoor dat de uiteindelijke oplossing aansluit bij realistische beperkingen en veranderende gebruikersvoorkeuren.
+Daarnaast kan gebruikersfeedback (bijv. een mens die kiest voor een eerdere vlucht) een gedeeltelijke herplanning triggeren. Deze dynamische, iteratieve aanpak zorgt ervoor dat de uiteindelijke oplossing aansluit bij de reële wereldbeperkingen en veranderende wensen van de gebruiker.
 
-Bijvoorbeeld voorbeeldcode:
+b.v. voorbeeldcode
 
 ```python
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
-messages = [
-    SystemMessage(content="""You are a planner agent to optimize the
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+#.. hetzelfde als de vorige code en geef de gebruikersgeschiedenis, het huidige plan door
+
+system_prompt = """You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -276,38 +244,43 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-    AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
-]
-# .. re-plan and send the tasks to respective agents
+    - DefaultAgent: For handling general requests"""
+
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
+
+response = client.create_response(
+    input=user_message,
+    instructions=system_prompt,
+    context=f"Previous travel plan - {TravelPlan}",
+)
+# .. herplan en stuur de taken naar de respectievelijke agenten
 ```
 
-Voor meer uitgebreide planning, bekijk Magnetic One voor het oplossen van complexe taken.
+Voor meer uitgebreide planning kun je de Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Blogpost</a> bekijken voor het oplossen van complexe taken.
 
 ## Samenvatting
 
-In dit artikel hebben we gekeken naar een voorbeeld van hoe we een planner kunnen maken die dynamisch de beschikbare agents selecteert die zijn gedefinieerd. De output van de Planner splitst de taken op en wijst de agents toe zodat ze kunnen worden uitgevoerd. Er wordt aangenomen dat de agents toegang hebben tot de functies/tools die nodig zijn om de taak uit te voeren. Naast de agents kun je andere patronen zoals reflectie, samenvatting en round robin chat toevoegen om verder aan te passen.
+In dit artikel hebben we een voorbeeld bekeken van hoe je een planner kunt maken die dynamisch de beschikbare agenten selecteert. De output van de planner splitst de taken op en wijst de agenten toe zodat ze kunnen worden uitgevoerd. Het wordt verondersteld dat de agenten toegang hebben tot de functies/tools die nodig zijn om de taak uit te voeren. Naast de agenten kun je ook andere patronen toevoegen zoals reflectie, samenvatting en round robin chat om verder te personaliseren.
 
-## Aanvullende Bronnen
+## Aanvullende bronnen
 
-AutoGen Magnetic One - Een generalistisch multi-agent systeem voor het oplossen van complexe taken en heeft indrukwekkende resultaten behaald op meerdere uitdagende benchmarks voor agents. Referentie:
+Magnetic One - Een algemene multi-agent systeem voor het oplossen van complexe taken en heeft indrukwekkende resultaten behaald op meerdere uitdagende agent benchmarks. Referentie: <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Magnetic One</a>. In deze implementatie maakt de orkestrator taak-specifieke plannen en delegeert deze taken aan de beschikbare agenten. Naast planning gebruikt de orkestrator ook een tracking mechanisme om de voortgang van de taak te monitoren en indien nodig te herplannen.
 
-In deze implementatie creëert de orkestrator een taak-specifiek plan en delegeert deze taken aan de beschikbare agents. Naast planning gebruikt de orkestrator ook een trackingmechanisme om de voortgang van de taak te monitoren en indien nodig opnieuw te plannen.
+### Nog meer vragen over het Planning Design Pattern?
 
-### Heb je Meer Vragen over het Planning Design Pattern?
+Sluit je aan bij de [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) om andere leerlingen te ontmoeten, kantooruren bij te wonen en je AI Agents vragen beantwoord te krijgen.
 
-Word lid van de [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) om andere leerlingen te ontmoeten, spreekuren bij te wonen en je vragen over AI Agents beantwoord te krijgen.
+## Vorige les
 
-## Vorige Les
+[Vertrouwde AI-agenten bouwen](../06-building-trustworthy-agents/README.md)
 
-[Vertrouwen Opbouwen in AI Agents](../06-building-trustworthy-agents/README.md)
-
-## Volgende Les
+## Volgende les
 
 [Multi-Agent Design Pattern](../08-multi-agent/README.md)
 
 ---
 
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we ons best doen voor nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Dit document is vertaald met behulp van de AI vertaaldienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

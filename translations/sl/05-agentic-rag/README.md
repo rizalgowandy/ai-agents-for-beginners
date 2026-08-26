@@ -1,142 +1,158 @@
 [![Agentic RAG](../../../translated_images/sl/lesson-5-thumbnail.20ba9d0c0ae64fae.webp)](https://youtu.be/WcjAARvdL7I?si=BCgwjwFb2yCkEhR9)
 
-> _(Kliknite na zgornjo sliko za ogled videa te lekcije)_
+> _(Kliknite na sliko zgoraj za ogled videa tega učnega gradiva)_
 
 # Agentic RAG
 
-Ta lekcija ponuja celovit pregled paradigme Agentic Retrieval-Augmented Generation (Agentic RAG), novega pristopa v umetni inteligenci, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, medtem ko pridobivajo informacije iz zunanjih virov. Za razliko od statičnih vzorcev "pridobivanja in nato branja" Agentic RAG vključuje iterativne klice LLM, prepletene z uporabo orodij ali funkcij ter strukturiranimi izhodi. Sistem ocenjuje rezultate, izpopolnjuje poizvedbe, po potrebi uporablja dodatna orodja in nadaljuje ta cikel, dokler ne doseže zadovoljive rešitve.
+To učno gradivo ponuja celovit pregled Agentic Retrieval-Augmented Generation (Agentic RAG), novega paradigme umetne inteligence, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, hkrati pa pridobivajo informacije iz zunanjih virov. V nasprotju s statičnimi vzorci pridobivanja in nato branja, vključuje Agentic RAG iterativne klice LLM, prekinjene z orodji ali funkcijskimi klici in strukturiranimi izhodi. Sistem ocenjuje rezultate, izboljšuje poizvedbe, po potrebi kliče dodatna orodja in nadaljuje ta cikel, dokler ne doseže zadovoljive rešitve.
 
 ## Uvod
 
-Ta lekcija bo obravnavala:
+To učno gradivo bo zajemalo
 
-- **Razumevanje Agentic RAG:** Spoznajte novo paradigmo v umetni inteligenci, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, medtem ko pridobivajo informacije iz zunanjih virov podatkov.
-- **Razumevanje iterativnega pristopa Maker-Checker:** Razumite zanko iterativnih klicev LLM, prepletenih z uporabo orodij ali funkcij ter strukturiranimi izhodi, zasnovano za izboljšanje pravilnosti in obravnavo nepravilnih poizvedb.
-- **Raziskovanje praktičnih aplikacij:** Prepoznajte scenarije, kjer Agentic RAG izstopa, kot so okolja, kjer je pravilnost na prvem mestu, kompleksne interakcije z bazami podatkov in podaljšani delovni tokovi.
+- **Razumevanje Agentic RAG:** Spoznajte nastajajoči paradigm umetne inteligence, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, hkrati pa pridobivajo informacije iz zunanjih podatkovnih virov.
+- **Razumevanje iterativnega Maker-Checker sloga:** Razumite zanko iterativnih klicev LLM, prekinjenih z orodji ali funkcijskimi klici in strukturiranimi izhodi, namenjenimi izboljšanju pravilnosti in obravnavi nepravilen poizvedb.
+- **Raziskovanje praktičnih aplikacij:** Prepoznajte scenarije, kjer Agentic RAG izstopa, kot so okolja, fokusirana na pravilnost, kompleksne interakcije z bazami podatkov in razširjeni delovni procesi.
 
 ## Cilji učenja
 
-Po zaključku te lekcije boste znali/razumeli:
+Po zaključku tega učnega gradiva boste znali/razumeli:
 
-- **Razumevanje Agentic RAG:** Spoznajte novo paradigmo v umetni inteligenci, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, medtem ko pridobivajo informacije iz zunanjih virov podatkov.
-- **Iterativni pristop Maker-Checker:** Razumite koncept zanke iterativnih klicev LLM, prepletenih z uporabo orodij ali funkcij ter strukturiranimi izhodi, zasnovano za izboljšanje pravilnosti in obravnavo nepravilnih poizvedb.
-- **Samostojno upravljanje procesa razmišljanja:** Razumite sposobnost sistema, da samostojno upravlja proces razmišljanja, sprejema odločitve o pristopu k problemom brez zanašanja na vnaprej določene poti.
-- **Delovni tok:** Razumite, kako agentni model samostojno odloča o pridobivanju poročil o tržnih trendih, identifikaciji podatkov o konkurentih, povezovanju notranjih prodajnih metrik, sintezi ugotovitev in ocenjevanju strategije.
-- **Iterativne zanke, integracija orodij in spomin:** Spoznajte zanašanje sistema na vzorec interakcije v zanki, ohranjanje stanja in spomina med koraki, da se izogne ponavljajočim se zankam in sprejema informirane odločitve.
-- **Obravnavanje načinov neuspeha in samopopravljanje:** Raziskujte robustne mehanizme samopopravljanja sistema, vključno z iteracijo in ponovnim poizvedovanjem, uporabo diagnostičnih orodij ter zanašanjem na človeški nadzor.
-- **Meje avtonomije:** Razumite omejitve Agentic RAG, osredotočene na avtonomijo, specifično za domeno, odvisnost od infrastrukture in spoštovanje varoval.
-- **Praktični primeri uporabe in vrednost:** Prepoznajte scenarije, kjer Agentic RAG izstopa, kot so okolja, kjer je pravilnost na prvem mestu, kompleksne interakcije z bazami podatkov in podaljšani delovni tokovi.
+- **Razumevanje Agentic RAG:** Spoznajte nastajajoči paradigm umetne inteligence, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, hkrati pa pridobivajo informacije iz zunanjih podatkovnih virov.
+- **Iterativni Maker-Checker slog:** Razumite koncept zanke iterativnih klicev LLM, prekinjenih z orodji ali funkcijskimi klici in strukturiranimi izhodi, namenjenih izboljšanju pravilnosti in obravnavi nepravilen poizvedb.
+- **Obvladovanje procesa razmišljanja:** Razumite sistemovo sposobnost obvladovanja procesa razmišljanja, sprejemati odločitve o pristopu k problemom brez odvisnosti od vnaprej določenih poti.
+- **Delovni tok:** Razumite, kako agentni model neodvisno odloča za pridobivanje poročil o trendih na trgu, prepoznavanje podatkov konkurentov, korelacijo notranjih prodajnih metrik, sintezo ugotovitev in ocenjevanje strategije.
+- **Iterativne zanke, integracija orodij in pomnilnik:** Spoznajte, kako sistem temelji na vzorcu interakcije z zanko, vzdržuje stanje in pomnilnik skozi korake, da se izogne ponavljajočim zankam in sprejema informirane odločitve.
+- **Obvladovanje načinov napak in samopopravljanje:** Raziskujte robustne mehanizme samopopravkov sistema, vključno z iteriranjem in ponovnim poizvedovanjem, uporabo diagnostičnih orodij in prehodi na človeški nadzor.
+- **Meje avtonomije:** Razumite omejitve Agentic RAG, osredotočene na avtonomijo znotraj domen, odvisnost od infrastrukture in spoštovanje varnostnih omejitev.
+- **Praktični primeri uporabe in vrednost:** Prepoznajte scenarije, kjer Agentic RAG izstopa, kot so okolja, osredotočena na pravilnost, kompleksne interakcije z bazami podatkov in daljši delovni procesi.
 - **Upravljanje, transparentnost in zaupanje:** Spoznajte pomen upravljanja in transparentnosti, vključno z razložljivim razmišljanjem, nadzorom pristranskosti in človeškim nadzorom.
 
 ## Kaj je Agentic RAG?
 
-Agentic Retrieval-Augmented Generation (Agentic RAG) je nova paradigma v umetni inteligenci, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, medtem ko pridobivajo informacije iz zunanjih virov. Za razliko od statičnih vzorcev "pridobivanja in nato branja" Agentic RAG vključuje iterativne klice LLM, prepletene z uporabo orodij ali funkcij ter strukturiranimi izhodi. Sistem ocenjuje rezultate, izpopolnjuje poizvedbe, po potrebi uporablja dodatna orodja in nadaljuje ta cikel, dokler ne doseže zadovoljive rešitve. Ta iterativni pristop "maker-checker" izboljšuje pravilnost, obravnava nepravilne poizvedbe in zagotavlja visokokakovostne rezultate.
+Agentic Retrieval-Augmented Generation (Agentic RAG) je nastajajoči paradigm umetne inteligence, kjer veliki jezikovni modeli (LLM) samostojno načrtujejo svoje naslednje korake, hkrati pa pridobivajo informacije iz zunanjih virov. V nasprotju s statičnimi vzorci pridobivanja in nato branja vključuje Agentic RAG iterativne klice LLM, prekinjene z orodji ali funkcijskimi klici in strukturiranimi izhodi. Sistem ocenjuje rezultate, izboljšuje poizvedbe, po potrebi kliče dodatna orodja in nadaljuje ta cikel, dokler ne doseže zadovoljive rešitve. Ta iterativni "maker-checker" slog izboljšuje pravilnost, obvladuje napačne poizvedbe in zagotavlja visokokakovostne rezultate.
 
-Sistem aktivno upravlja svoj proces razmišljanja, prepisuje neuspele poizvedbe, izbira različne metode pridobivanja in integrira več orodij—kot so iskanje vektorjev v Azure AI Search, SQL baze podatkov ali prilagojeni API-ji—preden dokonča svoj odgovor. Posebna značilnost agentnega sistema je njegova sposobnost samostojnega upravljanja procesa razmišljanja. Tradicionalne implementacije RAG se zanašajo na vnaprej določene poti, medtem ko agentni sistem samostojno določa zaporedje korakov na podlagi kakovosti najdenih informacij.
+Sistem aktivno upravlja svoj proces razmišljanja, prepisuje neuspešne poizvedbe, izbira različne metode pridobivanja informacij in združuje več orodij—kot so iskanje po vektorjih v Azure AI Search, SQL baze podatkov ali lastni API-ji—preden dokončno poda odgovor. Značilna kakovost agentnega sistema je njegova sposobnost upravljanja svojega razmišljanja. Tradicionalne implementacije RAG se zanašajo na vnaprej določene poti, medtem ko agentni sistem samostojno določa zaporedje korakov na podlagi kakovosti najdenih informacij.
 
-## Definicija Agentic Retrieval-Augmented Generation (Agentic RAG)
+## Določanje Agentic Retrieval-Augmented Generation (Agentic RAG)
 
-Agentic Retrieval-Augmented Generation (Agentic RAG) je nova paradigma v razvoju umetne inteligence, kjer LLM ne le pridobivajo informacije iz zunanjih virov podatkov, temveč tudi samostojno načrtujejo svoje naslednje korake. Za razliko od statičnih vzorcev "pridobivanja in nato branja" ali skrbno skriptiranih zaporedij pozivov Agentic RAG vključuje zanko iterativnih klicev LLM, prepletenih z uporabo orodij ali funkcij ter strukturiranimi izhodi. Na vsakem koraku sistem ocenjuje pridobljene rezultate, odloča, ali je treba poizvedbe izpopolniti, po potrebi uporablja dodatna orodja in nadaljuje ta cikel, dokler ne doseže zadovoljive rešitve.
+Agentic Retrieval-Augmented Generation (Agentic RAG) je nastajajoči paradigme v razvoju umetne inteligence, kjer LLM ne le pridobivajo informacije iz zunanjih podatkovnih virov, ampak tudi samostojno načrtujejo svoje naslednje korake. V nasprotju s statičnimi vzorci pridobivanja in nato branja ali skrbno načrtovanimi nizi pozivov, vključuje Agentic RAG zanko iterativnih klicev LLM, prekinjenih z orodji ali funkcijskimi klici in strukturiranimi izhodi. Ob vsakem koraku sistem ocenjuje pridobljene rezultate, odloča, ali je treba izboljšati poizvedbe, po potrebi kliče dodatna orodja in nadaljuje ta cikel, dokler ne doseže zadovoljive rešitve.
 
-Ta iterativni pristop "maker-checker" je zasnovan za izboljšanje pravilnosti, obravnavo nepravilnih poizvedb v strukturirane baze podatkov (npr. NL2SQL) in zagotavljanje uravnoteženih, visokokakovostnih rezultatov. Namesto da se zanaša zgolj na skrbno zasnovane verige pozivov, sistem aktivno upravlja svoj proces razmišljanja. Lahko prepiše neuspele poizvedbe, izbere različne metode pridobivanja in integrira več orodij—kot so iskanje vektorjev v Azure AI Search, SQL baze podatkov ali prilagojeni API-ji—preden dokonča svoj odgovor. To odpravlja potrebo po preveč kompleksnih orkestracijskih okvirih. Namesto tega lahko relativno preprosta zanka "klic LLM → uporaba orodja → klic LLM → …" prinese sofisticirane in dobro utemeljene izhode.
+Ta iterativni "maker-checker" slog delovanja je zasnovan za izboljšanje pravilnosti, obravnavo napačnih poizvedb do strukturiranih baz podatkov (npr. NL2SQL) in zagotavljanje uravnoteženih, visokokakovostnih rezultatov. Namesto da bi se zanašal samo na natančno zasnovane verige pozivov, sistem aktivno upravlja svoj proces razmišljanja. Lahko prepiše neuspešne poizvedbe, izbere različne metode pridobivanja in združi več orodij—kot so iskanje po vektorjih v Azure AI Search, SQL baze podatkov ali lastni API-ji—preden dokončno poda odgovor. S tem odstrani potrebo po preveč zapletenih okvirih orkestracije. Namesto tega lahko razmeroma preprosta zanka "klic LLM → uporaba orodja → klic LLM → ..." prinese sofisticirane in dobro utemeljene izhode.
 
 ![Agentic RAG Core Loop](../../../translated_images/sl/agentic-rag-core-loop.c8f4b85c26920f71.webp)
 
-## Samostojno upravljanje procesa razmišljanja
+## Upravljanje procesa razmišljanja
 
-Posebna značilnost, ki sistem opredeljuje kot "agentni", je njegova sposobnost samostojnega upravljanja procesa razmišljanja. Tradicionalne implementacije RAG se pogosto zanašajo na ljudi, da vnaprej določijo pot za model: verigo razmišljanja, ki določa, kaj pridobiti in kdaj. 
-Ko pa je sistem resnično agentni, samostojno odloča, kako pristopiti k problemu. Ne izvaja zgolj skripta; samostojno določa zaporedje korakov na podlagi kakovosti najdenih informacij. 
-Na primer, če je sistemu naročeno, da ustvari strategijo lansiranja izdelka, se ne zanaša zgolj na poziv, ki podrobno opisuje celoten raziskovalni in odločevalni delovni tok. Namesto tega agentni model samostojno odloča:
+Značilna lastnost, ki sistem naredi "agentnega", je njegova sposobnost upravljanja lastnega procesa razmišljanja. Tradicionalne implementacije RAG pogosto temeljijo na vnaprej določenih poteh, ki jih ljudje pripravijo za model: verigi misli, ki opisuje, kaj pridobiti in kdaj.
+Vendar, ko je sistem resnično agenten, interno odloča, kako se lotiti problema. Ne izvaja samo scenarij; samostojno določa zaporedje korakov na podlagi kakovosti najdenih informacij.
+Na primer, če ga prosijo za izdelavo strategije lansiranja izdelka, se ne zanese samo na poziv, ki v celoti opiše raziskovalni in odločilni proces. Namesto tega agentni model samostojno odloča, da:
 
-1. Pridobiti poročila o trenutnih tržnih trendih z uporabo Bing Web Grounding.
-2. Identificirati ustrezne podatke o konkurentih z uporabo Azure AI Search.
-3. Povezati zgodovinske notranje prodajne metrike z uporabo Azure SQL Database.
-4. Sintetizirati ugotovitve v kohezivno strategijo, orkestrirano prek Azure OpenAI Service.
-5. Oceniti strategijo glede vrzeli ali neskladnosti, kar lahko sproži nov krog pridobivanja podatkov, če je potrebno.
+1. Pridobi trenutna poročila o trendih na trgu z uporabo Bing Web Grounding
+2. Identificira ustrezne podatke o konkurentih z uporabo Azure AI Search.
+3. Korelira zgodovinske notranje prodajne metrike z uporabo Azure SQL Database.
+4. Sintesizira ugotovitve v skladno strategijo, orkestrirano prek Azure OpenAI Service.
+5. Ocenjuje strategijo za vrzeli ali neskladnosti, če je potrebno sproži nov krog pridobivanja.
+Vsi ti koraki—izboljševanje poizvedb, izbira virov, iteriranje dokler ni "zadovoljen" z odgovorom—so odločitve modela, ne pa vnaprej določene s strani človeka.
 
-Vsi ti koraki—izpopolnjevanje poizvedb, izbira virov, iteracija, dokler ni dosežen "zadovoljiv" odgovor—so odločitve modela, ne vnaprej skriptirane s strani človeka.
-
-## Iterativne zanke, integracija orodij in spomin
+## Iterativne zanke, integracija orodij in pomnilnik
 
 ![Tool Integration Architecture](../../../translated_images/sl/tool-integration.0f569710b5c17c10.webp)
 
-Agentni sistem se zanaša na vzorec interakcije v zanki:
+Agentni sistem se zanaša na vzorec interakcije z zanko:
 
-- **Začetni klic:** Cilj uporabnika (tj. uporabniški poziv) je predstavljen LLM.
-- **Uporaba orodja:** Če model zazna manjkajoče informacije ali dvoumna navodila, izbere orodje ali metodo pridobivanja—kot je poizvedba v vektorski bazi podatkov (npr. Azure AI Search Hybrid search nad zasebnimi podatki) ali strukturiran SQL klic—za pridobitev več konteksta.
-- **Ocena in izpopolnjevanje:** Po pregledu vrnjenih podatkov model odloči, ali so informacije zadostne. Če niso, izpopolni poizvedbo, preizkusi drugo orodje ali prilagodi svoj pristop.
-- **Ponovi, dokler ni zadovoljen:** Ta cikel se nadaljuje, dokler model ne ugotovi, da ima dovolj jasnosti in dokazov za podajanje končnega, dobro utemeljenega odgovora.
-- **Spomin in stanje:** Ker sistem ohranja stanje in spomin med koraki, se lahko spomni prejšnjih poskusov in njihovih rezultatov, izogne ponavljajočim se zankam ter sprejema bolj informirane odločitve med procesom.
+- **Začetni klic:** Cilj uporabnika (tudi uporabniški poziv) se predstavi LLM.
+- **Klic orodja:** Če model ugotovi, da manjkajo informacije ali so navodila nejasna, izbere orodje ali metodo pridobivanja—kot je poizvedba v vektorski bazi podatkov (npr. Azure AI Search Hybrid iskanje po zasebnih podatkih) ali strukturiran SQL klic—za zbiranje več konteksta.
+- **Ocena in izboljšava:** Po pregledu vrnjenih podatkov model odloča, ali so informacije zadostne. Če ne, izboljša poizvedbo, preizkusi drugo orodje ali prilagodi pristop.
+- **Ponovi dokler ni zadovoljen:** Ta cikel se nadaljuje, dokler model ne ugotovi, da ima dovolj jasnosti in dokazov za podajo končnega, dobro premišljenega odgovora.
+- **Pomnilnik in stanje:** Ker sistem vzdržuje stanje in pomnilnik skozi korake, se lahko spomni prejšnjih poskusov in njihovih izidov, s čimer se izogne ponavljajočim zankam in sprejema bolj informirane odločitve med postopkom.
 
-Sčasoma to ustvari občutek razvijajočega se razumevanja, kar omogoča modelu, da navigira skozi kompleksne, večstopenjske naloge brez potrebe po stalnem človeškem posredovanju ali preoblikovanju poziva.
+Sčasoma to ustvarja občutek razvijajočega se razumevanja, ki omogoča modelu navigacijo skozi kompleksne, večkorakne naloge brez potrebe po stalnem človekovem vpletanju ali spreminjanju pozivov.
 
-## Obravnava načinov neuspeha in samopopravljanje
+## Obvladovanje načinov napak in samopopravljanje
 
-Avtonomija Agentic RAG vključuje tudi robustne mehanizme samopopravljanja. Ko sistem naleti na slepe ulice—kot je pridobivanje nerelevantnih dokumentov ali nepravilne poizvedbe—lahko:
+Avtonomija Agentic RAG vključuje tudi robustne mehanizme samopopravkov. Ko sistem naleti na mrtve točke—kot so pridobivanje nepomembnih dokumentov ali soočanje z napačnimi poizvedbami—lahko:
 
-- **Iterira in ponovno poizveduje:** Namesto da vrne nizko vrednostne odgovore, model preizkusi nove strategije iskanja, prepiše poizvedbe v bazi podatkov ali pregleda alternativne nize podatkov.
-- **Uporabi diagnostična orodja:** Sistem lahko uporabi dodatne funkcije, zasnovane za pomoč pri odpravljanju napak v korakih razmišljanja ali potrjevanju pravilnosti pridobljenih podatkov. Orodja, kot je Azure AI Tracing, bodo pomembna za omogočanje robustne opazljivosti in spremljanja.
-- **Zanaša se na človeški nadzor:** Pri scenarijih z visokim tveganjem ali ponavljajočih se neuspehih lahko model označi negotovost in zahteva človeško usmeritev. Ko človek poda korektivne povratne informacije, jih model lahko upošteva v prihodnje.
+- **Iterira in ponovi poizvedbo:** Namesto da bi vrnil nizkocenovne odgovore, model poskuša nove strategije iskanja, prepiše poizvedbe v bazi podatkov ali pregleda alternativne nize podatkov.
+- **Uporaba diagnostičnih orodij:** Sistem lahko kliče dodatne funkcije, zasnovane za pomoč pri razhroščevanju korakov razmišljanja ali potrditvi pravilnosti pridobljenih podatkov. Orodja, kot je Azure AI Tracing, bodo pomembna za omogočanje robustne opaznosti in nadzora.
+- **Prehod na človeški nadzor:** Za situacije z visokim tveganjem ali ponavljajoče neuspešne primere lahko model označi negotovost in zahteva človeško usmeritev. Ko človek poda popravljive povratne informacije, jih model lahko upošteva v prihodnosti.
 
-Ta iterativen in dinamičen pristop omogoča modelu, da se nenehno izboljšuje, kar zagotavlja, da ni zgolj sistem za enkratno uporabo, temveč takšen, ki se uči iz svojih napak med določeno sejo.
+Ta iterativni in dinamični pristop omogoča modelu nenehno izboljševanje, zagotavljajoč, da ni le enkratni sistem, ampak tak, ki se uči iz svojih napak med posamezno seanso.
 
 ![Self Correction Mechanism](../../../translated_images/sl/self-correction.da87f3783b7f174b.webp)
 
 ## Meje avtonomije
 
-Kljub svoji avtonomiji znotraj naloge Agentic RAG ni enakovreden umetni splošni inteligenci. Njegove "agentne" sposobnosti so omejene na orodja, vire podatkov in politike, ki jih zagotavljajo človeški razvijalci. Ne more si izmisliti svojih orodij ali preseči meja, ki so bile določene. Namesto tega odlično obvladuje dinamično orkestracijo razpoložljivih virov.
+Kljub svoji avtonomiji znotraj naloge Agentic RAG ni primerljiv z umetno splošno inteligenco (AGI). Njegove "agentne" zmogljivosti so omejene na orodja, podatkovne vire in politike, ki jih zagotavljajo človeški razvijalci. Ne more si izumiti lastnih orodij ali stopiti izven omejitev domene, ki so bile določene. Namesto tega izstopa pri dinamični orkestraciji razpoložljivih virov.
 Ključne razlike od bolj naprednih oblik umetne inteligence vključujejo:
 
-1. **Avtonomija, specifična za domeno:** Sistemi Agentic RAG so osredotočeni na doseganje ciljev, ki jih določi uporabnik, znotraj znane domene, pri čemer uporabljajo strategije, kot so prepisovanje poizvedb ali izbira orodij za izboljšanje rezultatov.
-2. **Odvisnost od infrastrukture:** Zmožnosti sistema so odvisne od orodij in podatkov, ki jih integrirajo razvijalci. Brez človeškega posredovanja ne more preseči teh meja.
-3. **Spoštovanje varoval:** Etične smernice, pravila skladnosti in poslovne politike ostajajo zelo pomembne. Svoboda agenta je vedno omejena z varnostnimi ukrepi in mehanizmi nadzora (upajmo?).
+1. **Avtonomija, specifična za domeno:** Agentni sistemi RAG so osredotočeni na doseganje ciljev, ki jih določi uporabnik znotraj znane domene, pri tem uporabljajo strategije, kot so prepisovanje poizvedb ali izbira orodij za izboljšanje rezultatov.
+2. **Odvisnost od infrastrukture:** Zmožnosti sistema so odvisne od orodij in podatkov, ki jih integrirajo razvijalci. Ne more preseči teh meja brez človeškega posega.
+3. **Spoštovanje varnostnih omejitev:** Etična pravila, pravila skladnosti in poslovne politike ostajajo zelo pomembni. Svoboda agenta je vedno omejena z varnostnimi ukrepi in nadzornimi mehanizmi (upamo?).
 
 ## Praktični primeri uporabe in vrednost
 
-Agentic RAG izstopa v scenarijih, ki zahtevajo iterativno izpopolnjevanje in natančnost:
+Agentic RAG izstopa v scenarijih, ki zahtevajo iterativno izboljšavo in natančnost:
 
-1. **Okolja, kjer je pravilnost na prvem mestu:** Pri preverjanju skladnosti, regulativni analizi ali pravnih raziskavah lahko agentni model večkrat preveri dejstva, konzultira več virov in prepiše poizvedbe, dokler ne poda temeljito preverjenega odgovora.
-2. **Kompleksne interakcije z bazami podatkov:** Pri delu s strukturiranimi podatki, kjer poizvedbe pogosto ne uspejo ali potrebujejo prilagoditev, lahko sistem samostojno izpopolni svoje poizvedbe z uporabo Azure SQL ali Microsoft Fabric OneLake, kar zagotavlja, da končno pridobivanje ustreza namenu uporabnika.
-3. **Podaljšani delovni tokovi:** Daljše seje se lahko razvijajo, ko se pojavijo nove informacije. Agentic RAG lahko nenehno vključuje nove podatke, spreminja strategije, ko se nauči več o problematičnem prostoru.
+1. **Okolja, ki dajejo prednost pravilnosti:** Pri preverjanju skladnosti, regulativnih analizah ali pravnih raziskavah lahko agentni model večkrat preveri dejstva, se posvetuje z več viri in prepiše poizvedbe, dokler ne ustvari popolnoma preverjenega odgovora.
+2. **Kompleksne interakcije z bazami podatkov:** Pri delu s strukturiranimi podatki, kjer poizvedbe pogosto spodletijo ali jih je treba prilagoditi, lahko sistem samostojno izboljša poizvedbe z uporabo Azure SQL ali Microsoft Fabric OneLake, s čimer zagotovi, da je končno pridobljeno skladno z uporabniškimi nameni.
+3. **Razširjeni delovni procesi:** Dolgotrajne seje se lahko razvijajo z novimi informacijami. Agentic RAG lahko nenehno vključuje nove podatke in spreminja strategije, ko se uči več o problematiki.
 
 ## Upravljanje, transparentnost in zaupanje
 
-Ker ti sistemi postajajo bolj avtonomni v svojem razmišljanju, so upravljanje in transparentnost ključnega pomena:
+Ko sistemi postajajo bolj avtonomni v svojem razmišljanju, sta upravljanje in preglednost ključna:
 
-- **Razložljivo razmišljanje:** Model lahko zagotovi revizijsko sled poizvedb, ki jih je izvedel, virov, ki jih je konzultiral, in korakov razmišljanja, ki jih je uporabil za dosego zaključka. Orodja, kot so Azure AI Content Safety in Azure AI Tracing / GenAIOps, lahko pomagajo ohranjati transparentnost in zmanjšati tveganja.
-- **Nadzor pristranskosti in uravnoteženo pridobivanje:** Razvijalci lahko prilagodijo strategije pridobivanja, da zagotovijo, da so upoštevani uravnoteženi, reprezentativni viri podatkov, ter redno preverjajo izhode, da odkrijejo pristranskost ali izkrivljene vzorce z uporabo prilagojenih modelov za napredne organizacije podatkovne znanosti z uporabo Azure Machine Learning.
-- **Človeški nadzor in skladnost:** Pri občutljivih nalogah ostaja človeški pregled bistven. Agentic RAG ne nadomešča človeške presoje pri odločitvah z visokim tveganjem—jo dopolnjuje z bolj temeljito preverjenimi možnostmi.
+- **Razložljivo razmišljanje:** Model lahko zagotovi revizijsko sled poizvedb, ki jih je izvedel, virov, ki jih je pregledal, in korakov razmišljanja, ki jih je uporabil za dosego zaključka. Orodja, kot sta Azure AI Content Safety in Azure AI Tracing / GenAIOps, lahko pomagajo ohranjati preglednost in ublažiti tveganja.
+- **Nadzor pristranskosti in uravnoteženo pridobivanje:** Razvijalci lahko prilagajajo strategije pridobivanja informacij, da zagotovijo upoštevanje uravnoteženih in reprezentativnih podatkovnih virov, ter redno pregledujejo izhode, da zaznajo pristranskost ali izkrivljene vzorce z uporabo prilagojenih modelov za napredne organizacije podatkovnih znanosti, ki uporabljajo Azure Machine Learning.
+- **Človeški nadzor in skladnost:** Za občutljive naloge ostaja človeški pregled bistven. Agentic RAG ne zamenjuje človeške presoje pri odločanju z visokimi vložki—namesto tega jo dopolnjuje z zagotavljanjem podrobneje preverjenih možnosti.
 
-Imeti orodja, ki zagotavljajo jasen zapis dejanj, je bistveno. Brez njih je odpravljanje napak v večstopenjskem procesu lahko zelo težavno. Oglejte si naslednji primer iz Literal AI (podjetje za Chainlit) za izvedbo agenta:
+Imati orodja, ki nudijo jasno evidenco o opravilih, je bistveno. Brez njih je razhroščevanje večkoraknega procesa zelo zahtevno. Oglejte si naslednji primer iz Literal AI (podjetje za Chainlit) za primer delovanja agenta:
 
 ![AgentRunExample](../../../translated_images/sl/AgentRunExample.471a94bc40cbdc0c.webp)
 
 ## Zaključek
 
-Agentic RAG predstavlja naravno evolucijo v načinu, kako sistemi umetne inteligence obravnavajo kompleksne, podatkovno intenzivne naloge. Z uporabo vzorca interakcije v zanki, samostojno izbiro orodij in izpopolnjevanjem poizvedb, dokler ne doseže visokokakovostnega rezultata, sistem presega statično sledenje pozivom in postane bolj prilagodljiv ter zavedajoč se konteksta. Čeprav je še vedno omejen z infrastrukturo, ki jo določijo ljudje, in etičnimi smernicami, te agentne sposobnosti omogočajo bogatejše, bolj dinamične in na koncu bolj uporabne interakcije umetne inteligence za podjetja in končne uporab
-- <a href="https://ragaboutit.com/agentic-rag-a-complete-guide-to-agent-based-retrieval-augmented-generation/" target="_blank">Agentic RAG: Celoten vodnik po agentno temeljenem pridobivanju in generiranju – Novice iz generacije RAG</a>
-- <a href="https://huggingface.co/learn/cookbook/agent_rag" target="_blank">Agentic RAG: pospešite svoj RAG z reformulacijo poizvedb in samopoizvedbo! Hugging Face odprtokodni AI priročnik</a>
-- <a href="https://youtu.be/aQ4yQXeB1Ss?si=2HUqBzHoeB5tR04U" target="_blank">Dodajanje agentnih slojev v RAG</a>
-- <a href="https://www.youtube.com/watch?v=zeAyuLc_f3Q&t=244s" target="_blank">Prihodnost asistentov za znanje: Jerry Liu</a>
+Agentic RAG predstavlja naravno evolucijo v načinu, kako sistemi umetne inteligence obravnavajo kompleksne, podatkovno intenzivne naloge. Z uporabo vzorca interakcije z zanko, samostojno izbiro orodij in izboljševanjem poizvedb, dokler ne doseže visokokakovostnega rezultata, sistem presega statično izvajanje pozivov in postane bolj prilagodljiv, kontekstualno zavesten odločevalec. Čeprav je še vedno omejen z infrastrukturo in etičnimi smernicami, ki jih določajo ljudje, te agentne zmogljivosti omogočajo bogatejše, bolj dinamične in na koncu bolj uporabne interakcije z AI tako za podjetja kot končne uporabnike.
+
+### Imate več vprašanj o Agentic RAG?
+
+Pridružite se [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), da spoznate druge učence, se udeležite uradnih ur in dobite odgovore na vprašanja o AI agentih.
+
+## Dodatni viri
+
+- <a href="https://learn.microsoft.com/training/modules/use-own-data-azure-openai" target="_blank">Izvedba Retrieval Augmented Generation (RAG) z Azure OpenAI Service: Naučite se uporabljati lastne podatke z Azure OpenAI Service. Ta modul Microsoft Learn ponuja celovit vodič o implementaciji RAG</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Ocena aplikacij generativne AI z Microsoft Foundry: Ta članek pokriva ocenjevanje in primerjavo modelov na javno dostopnih podatkovnih nizih, vključno z agentnimi AI aplikacijami in RAG arhitekturami</a>
+- <a href="https://weaviate.io/blog/what-is-agentic-rag" target="_blank">Kaj je Agentic RAG | Weaviate</a>
+- <a href="https://ragaboutit.com/agentic-rag-a-complete-guide-to-agent-based-retrieval-augmented-generation/" target="_blank">Agentic RAG: celovit vodič po agentno osnovani Retrieval Augmented Generation – novice iz generacije RAG</a>
+
+- <a href="https://huggingface.co/learn/cookbook/agent_rag" target="_blank">Agentic RAG: pospešite svoj RAG z reformulacijo poizvedb in samopovpraševanjem! Hugging Face odprtokodna kuharska knjiga AI</a>
+- <a href="https://youtu.be/aQ4yQXeB1Ss?si=2HUqBzHoeB5tR04U" target="_blank">Dodajanje agentnih plasti k RAG</a>
+- <a href="https://www.youtube.com/watch?v=zeAyuLc_f3Q&t=244s" target="_blank">Prihodnost znanstvenih pomočnikov: Jerry Liu</a>
 - <a href="https://www.youtube.com/watch?v=AOSjiXP1jmQ" target="_blank">Kako zgraditi agentne RAG sisteme</a>
-- <a href="https://ignite.microsoft.com/sessions/BRK102?source=sessions" target="_blank">Uporaba storitve Azure AI Foundry Agent za skaliranje vaših AI agentov</a>
+- <a href="https://ignite.microsoft.com/sessions/BRK102?source=sessions" target="_blank">Uporaba Microsoft Foundry Agent Service za razširitev vaših AI agentov</a>
 
 ### Akademski članki
 
-- <a href="https://arxiv.org/abs/2303.17651" target="_blank">2303.17651 Self-Refine: Iterativno izboljševanje s samopovratnimi informacijami</a>
+- <a href="https://arxiv.org/abs/2303.17651" target="_blank">2303.17651 Self-Refine: Iterativno izboljševanje s samopovratno zvezo</a>
 - <a href="https://arxiv.org/abs/2303.11366" target="_blank">2303.11366 Reflexion: Jezikovni agenti z verbalnim okrepljenim učenjem</a>
-- <a href="https://arxiv.org/abs/2305.11738" target="_blank">2305.11738 CRITIC: Veliki jezikovni modeli se lahko sami popravijo z interaktivnim kritiziranjem orodij</a>
-- <a href="https://arxiv.org/abs/2501.09136" target="_blank">2501.09136 Agentno pridobivanje in generiranje: Pregled agentnega RAG</a>
+- <a href="https://arxiv.org/abs/2305.11738" target="_blank">2305.11738 CRITIC: Veliki jezikovni modeli se lahko samopopravljajo z orodjno interaktivno kritiko</a>
+- <a href="https://arxiv.org/abs/2501.09136" target="_blank">2501.09136 Agentna generacija z izboljšanim iskanjem: Pregled agentnega RAG</a>
 
-## Prejšnja lekcija
+## Preizkus delovanja tega agenta (neobvezno)
 
-[Vzorec oblikovanja uporabe orodij](../04-tool-use/README.md)
+Ko se naučite nameščati agente v [Lekcija 16](../16-deploying-scalable-agents/README.md), lahko preizkusite delovanje `TravelRAGAgent` iz te lekcije — preverite, da njegovi odgovori ostanejo utemeljeni v bazi znanja — z [`tests/lesson-05-smoke-tests.json`](../../../tests/lesson-05-smoke-tests.json). Ogledate si lahko [`tests/README.md`](../tests/README.md) za navodila, kako ga zagnati.
+
+## Predhodna lekcija
+
+[Vzorec uporabe orodij](../04-tool-use/README.md)
 
 ## Naslednja lekcija
 
-[Gradnja zaupanja vrednih AI agentov](../06-building-trustworthy-agents/README.md)
+[Gradnja zanesljivih AI agentov](../06-building-trustworthy-agents/README.md)
 
 ---
 
-**Omejitev odgovornosti**:  
-Ta dokument je bil preveden z uporabo storitve AI za prevajanje [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da lahko avtomatizirani prevodi vsebujejo napake ali netočnosti. Izvirni dokument v njegovem maternem jeziku naj se šteje za avtoritativni vir. Za ključne informacije priporočamo profesionalni človeški prevod. Ne prevzemamo odgovornosti za morebitne nesporazume ali napačne razlage, ki bi nastale zaradi uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Omejitev odgovornosti**:
+Ta dokument je bil preveden z uporabo AI prevajalske storitve [Co-op Translator](https://github.com/Azure/co-op-translator). Čeprav si prizadevamo za natančnost, vas prosimo, da upoštevate, da avtomatizirani prevodi lahko vsebujejo napake ali netočnosti. Izvirni dokument v njegovem izvirnem jeziku je treba obravnavati kot avtoritativni vir. Za kritične informacije je priporočljiv strokovni človeški prevod. Ne odgovarjamo za morebitna nesporazume ali napačne interpretacije, ki izhajajo iz uporabe tega prevoda.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

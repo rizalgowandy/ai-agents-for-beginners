@@ -1,81 +1,87 @@
-# Agenci AI w produkcji: Obserwowalność i ocena
+# Agenci AI w Produkcji: Obserwowalność i Ocena
 
-[![Agenci AI w produkcji](../../../translated_images/pl/lesson-10-thumbnail.2b79a30773db093e.webp)](https://youtu.be/l4TP6IyJxmQ?si=reGOyeqjxFevyDq9)
+[![Agenci AI w Produkcji](../../../translated_images/pl/lesson-10-thumbnail.2b79a30773db093e.webp)](https://youtu.be/l4TP6IyJxmQ?si=reGOyeqjxFevyDq9)
 
-Gdy agenci AI przechodzą od eksperymentalnych prototypów do aplikacji w rzeczywistym świecie, kluczowe staje się zrozumienie ich zachowań, monitorowanie wydajności oraz systematyczna ocena ich wyników.
+W miarę jak agenci AI przechodzą od prototypów eksperymentalnych do zastosowań w rzeczywistym świecie, zdolność do rozumienia ich zachowania, monitorowania wydajności i systematycznej oceny wyników staje się istotna.
 
 ## Cele nauki
 
-Po ukończeniu tej lekcji będziesz wiedzieć, jak/zrozumiesz:
-- Podstawowe pojęcia związane z obserwowalnością i oceną agentów
-- Techniki poprawy wydajności, kosztów i skuteczności agentów
-- Co i jak oceniać w swoich agentach AI w sposób systematyczny
-- Jak kontrolować koszty podczas wdrażania agentów AI do produkcji
-- Jak instrumentować agentów zbudowanych za pomocą AutoGen
+Po ukończeniu tej lekcji będziesz znać/jak zrozumieć:
+- Kluczowe pojęcia obserwowalności i oceny agentów
+- Techniki poprawy wydajności, kosztów i efektywności agentów
+- Co i jak systematycznie oceniać swoich agentów AI
+- Jak kontrolować koszty przy wdrażaniu agentów AI do produkcji
+- Jak instrumentować agentów zbudowanych za pomocą Microsoft Agent Framework
 
-Celem jest wyposażenie Cię w wiedzę, która pozwoli przekształcić "czarne skrzynki" w przejrzyste, zarządzalne i niezawodne systemy.
+Celem jest wyposażenie Cię w wiedzę potrzebną do przekształcenia Twoich agentów z „czarnej skrzynki” w systemy przejrzyste, łatwe do zarządzania i niezawodne.
 
-_**Uwaga:** Ważne jest wdrażanie agentów AI, którzy są bezpieczni i godni zaufania. Sprawdź lekcję [Budowanie godnych zaufania agentów AI](./06-building-trustworthy-agents/README.md)._
+_**Uwaga:** Ważne jest wdrażanie agentów AI, które są bezpieczne i godne zaufania. Sprawdź także lekcję [Budowanie godnych zaufania agentów AI](../06-building-trustworthy-agents/README.md)._
 
 ## Ślady i zakresy
 
-Narzędzia do obserwowalności, takie jak [Langfuse](https://langfuse.com/) czy [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-azure-ai-foundry), zazwyczaj przedstawiają działania agentów jako ślady i zakresy.
+Narzędzia do obserwowalności takie jak [Langfuse](https://langfuse.com/) lub [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-foundry/what-is-azure-ai-foundry) zazwyczaj przedstawiają działanie agenta jako ślady i zakresy.
 
-- **Ślad** reprezentuje pełne zadanie agenta od początku do końca (np. obsługa zapytania użytkownika).
-- **Zakresy** to poszczególne kroki w ramach śladu (np. wywołanie modelu językowego lub pobranie danych).
+- **Ślad** reprezentuje kompletne zadanie agenta od początku do końca (np. obsługa zapytania użytkownika).
+- **Zakresy** to poszczególne kroki w obrębie śladu (np. wywołanie modelu językowego lub pobranie danych).
 
-![Drzewo śladów w Langfuse](https://langfuse.com/images/cookbook/example-autogen-evaluation/trace-tree.png)
+![Drzewo śladu w Langfuse](https://langfuse.com/images/cookbook/example-autogen-evaluation/trace-tree.png)
+<!-- Image URL retained for illustration purposes -->
 
-Bez obserwowalności agent AI może wydawać się "czarną skrzynką" – jego wewnętrzny stan i rozumowanie są nieprzejrzyste, co utrudnia diagnozowanie problemów lub optymalizację wydajności. Dzięki obserwowalności agenci stają się "szklanymi skrzynkami", oferując przejrzystość, która jest kluczowa dla budowania zaufania i zapewnienia, że działają zgodnie z zamierzeniami.
+Bez obserwowalności agent AI może wydawać się „czarną skrzynką” – jego stan wewnętrzny i rozumowanie są nieprzejrzyste, co utrudnia diagnozę problemów lub optymalizację wydajności. Z obserwowalnością agenci stają się „szklanymi skrzynkami”, oferując przejrzystość niezbędną do budowania zaufania i zapewnienia ich działania zgodnie z zamierzeniami.
 
 ## Dlaczego obserwowalność ma znaczenie w środowiskach produkcyjnych
 
-Przejście agentów AI do środowisk produkcyjnych wprowadza nowe wyzwania i wymagania. Obserwowalność przestaje być "miłym dodatkiem" i staje się kluczową funkcją:
+Przeniesienie agentów AI do środowisk produkcyjnych wiąże się z nowym zestawem wyzwań i wymagań. Obserwowalność przestaje być „miłym dodatkiem”, stając się krytyczną funkcjonalnością:
 
-*   **Debugowanie i analiza przyczyn źródłowych**: Gdy agent zawodzi lub generuje nieoczekiwany wynik, narzędzia do obserwowalności dostarczają śladów potrzebnych do zidentyfikowania źródła błędu. Jest to szczególnie ważne w przypadku złożonych agentów, które mogą obejmować wiele wywołań LLM, interakcji z narzędziami i logiki warunkowej.
-*   **Zarządzanie opóźnieniami i kosztami**: Agenci AI często polegają na LLM i innych zewnętrznych API, które są rozliczane za token lub za wywołanie. Obserwowalność pozwala na precyzyjne śledzenie tych wywołań, pomagając zidentyfikować operacje, które są zbyt wolne lub kosztowne. Dzięki temu zespoły mogą optymalizować podpowiedzi, wybierać bardziej wydajne modele lub przeprojektowywać przepływy pracy, aby zarządzać kosztami operacyjnymi i zapewnić dobrą jakość obsługi użytkownika.
-*   **Zaufanie, bezpieczeństwo i zgodność**: W wielu aplikacjach ważne jest zapewnienie, że agenci działają bezpiecznie i etycznie. Obserwowalność dostarcza ścieżki audytu działań i decyzji agenta. Może to być używane do wykrywania i łagodzenia problemów, takich jak wstrzykiwanie podpowiedzi, generowanie szkodliwych treści czy niewłaściwe obchodzenie się z danymi osobowymi (PII). Na przykład można przejrzeć ślady, aby zrozumieć, dlaczego agent udzielił określonej odpowiedzi lub użył konkretnego narzędzia.
-*   **Pętle ciągłego doskonalenia**: Dane z obserwowalności są podstawą iteracyjnego procesu rozwoju. Monitorując, jak agenci radzą sobie w rzeczywistym świecie, zespoły mogą identyfikować obszary do poprawy, zbierać dane do dostrajania modeli i weryfikować wpływ zmian. Tworzy to pętlę sprzężenia zwrotnego, w której informacje z oceny online informują o eksperymentach offline i udoskonaleniach, prowadząc do stopniowej poprawy wydajności agentów.
+*   **Debugowanie i analiza przyczyny źródłowej**: Gdy agent zawiedzie lub wygeneruje nieoczekiwany wynik, narzędzia obserwowalności dostarczają ślady potrzebne do zlokalizowania źródła błędu. Jest to szczególnie ważne w złożonych agentach, które mogą obsługiwać wiele wywołań LLM, interakcje z narzędziami i logikę warunkową.
+*   **Zarządzanie opóźnieniami i kosztami**: Agenci AI często korzystają z LLM i innych zewnętrznych API, które są rozliczane za token lub za wywołanie. Obserwowalność pozwala precyzyjnie śledzić te wywołania, pomagając zidentyfikować operacje zbyt wolne lub kosztowne. Umożliwia to zespołom optymalizację zapytań, wybór wydajniejszych modeli lub przeprojektowanie procesów w celu kontrolowania kosztów operacyjnych i zapewnienia dobrej jakości doświadczenia użytkownika.
+*   **Zaufanie, bezpieczeństwo i zgodność**: W wielu zastosowaniach ważne jest zapewnienie, że agenci zachowują się bezpiecznie i etycznie. Obserwowalność zapewnia ślad audytu działań i decyzji agenta. Można go użyć do wykrywania i łagodzenia problemów, takich jak wstrzyknięcia zapytań, generowanie szkodliwych treści lub niewłaściwe przetwarzanie danych osobowych (PII). Na przykład, możesz przeglądać ślady, aby zrozumieć, dlaczego agent udzielił konkretnej odpowiedzi lub użył konkretnego narzędzia.
+*   **Ciągłe pętle doskonalenia**: Dane obserwowalności są fundamentem iteracyjnego procesu rozwoju. Monitorując, jak agenci działają w rzeczywistości, zespoły mogą identyfikować obszary do poprawy, zbierać dane do dopasowywania modeli i weryfikować wpływ zmian. Tworzy to pętlę zwrotną, gdzie spostrzeżenia z produkcji uzyskane z oceny online informują eksperymenty i udoskonalenia offline, prowadząc do stopniowo lepszej wydajności agenta.
 
 ## Kluczowe metryki do śledzenia
 
-Aby monitorować i zrozumieć zachowanie agentów, należy śledzić szereg metryk i sygnałów. Chociaż konkretne metryki mogą się różnić w zależności od celu agenta, niektóre są uniwersalnie ważne.
+Aby monitorować i rozumieć zachowanie agenta, należy śledzić szereg metryk i sygnałów. Chociaż konkretne metryki mogą się różnić w zależności od celu agenta, niektóre mają uniwersalne znaczenie.
 
-Oto niektóre z najczęściej monitorowanych metryk przez narzędzia do obserwowalności:
+Oto niektóre z najczęściej monitorowanych metryk przez narzędzia obserwowalności:
 
-**Opóźnienia:** Jak szybko agent odpowiada? Długie czasy oczekiwania negatywnie wpływają na doświadczenie użytkownika. Należy mierzyć opóźnienia dla zadań i poszczególnych kroków, śledząc działania agenta. Na przykład agent, który potrzebuje 20 sekund na wszystkie wywołania modelu, może zostać przyspieszony poprzez użycie szybszego modelu lub równoległe wykonywanie wywołań modelu.
+**Opóźnienie:** Jak szybko agent odpowiada? Długie czasy oczekiwania negatywnie wpływają na doświadczenie użytkownika. Powinieneś mierzyć opóźnienia dla zadań i poszczególnych kroków, śledząc przebieg działania agenta. Na przykład agent, który potrzebuje 20 sekund na wszystkie wywołania modelu, może przyspieszyć, używając szybszego modelu lub wykonując wywołania równolegle.
 
-**Koszty:** Jaki jest koszt na jedno działanie agenta? Agenci AI polegają na wywołaniach LLM rozliczanych za token lub zewnętrznych API. Częste użycie narzędzi lub wiele podpowiedzi może szybko zwiększyć koszty. Na przykład, jeśli agent wywołuje LLM pięć razy dla marginalnej poprawy jakości, należy ocenić, czy koszt jest uzasadniony, czy można zmniejszyć liczbę wywołań lub użyć tańszego modelu. Monitorowanie w czasie rzeczywistym może również pomóc w identyfikacji nieoczekiwanych skoków (np. błędów powodujących nadmierne pętle API).
+**Koszty:** Jaki jest koszt za jedno wykonanie agenta? Agenci AI opierają się na wywołaniach LLM rozliczanych za token lub zewnętrznych API. Częste korzystanie z narzędzi lub wielokrotne zapytania mogą szybko zwiększyć koszty. Na przykład, jeśli agent wywołuje LLM pięć razy dla niewielkiej poprawy jakości, musisz ocenić, czy koszt jest uzasadniony lub czy można zmniejszyć liczbę wywołań albo użyć tańszego modelu. Monitorowanie w czasie rzeczywistym może też pomóc wykryć niespodziewane skoki (np. błędy powodujące nadmierne pętle API).
 
-**Błędy żądań:** Ile żądań agenta zakończyło się niepowodzeniem? Może to obejmować błędy API lub nieudane wywołania narzędzi. Aby uczynić agenta bardziej odpornym w produkcji, można skonfigurować mechanizmy awaryjne lub ponowne próby. Na przykład, jeśli dostawca LLM A jest niedostępny, można przełączyć się na dostawcę LLM B jako zapas.
+**Błędy zapytań:** Ile zapytań nie powiodło się? Może to obejmować błędy API lub nieudane wywołania narzędzi. Aby uczynić agenta bardziej odpornym na takie sytuacje w produkcji, możesz ustawić zapasowe mechanizmy lub próby ponownego wywołania. Np. jeśli dostawca LLM A jest niedostępny, przełączasz się na dostawcę B jako zapas.
 
-**Opinie użytkowników:** Bezpośrednie oceny użytkowników dostarczają cennych informacji. Może to obejmować oceny (👍kciuk w górę/👎w dół, ⭐1-5 gwiazdek) lub komentarze tekstowe. Stała negatywna opinia powinna być sygnałem alarmowym, że agent nie działa zgodnie z oczekiwaniami.
+**Opinie użytkowników:** Implementacja bezpośrednich ocen użytkowników dostarcza cennych informacji. Może to obejmować wyraźne oceny (👍kciuk w górę/👎w dół, ⭐1-5 gwiazdek) lub komentarze tekstowe. Stała negatywna opinia powinna Cię zaalarmować, ponieważ jest znakiem, że agent nie działa zgodnie z oczekiwaniami.
 
-**Ukryte opinie użytkowników:** Zachowania użytkowników dostarczają pośrednich informacji zwrotnych, nawet bez wyraźnych ocen. Może to obejmować natychmiastowe przeformułowanie pytania, powtarzanie zapytań lub klikanie przycisku ponownego wywołania. Na przykład, jeśli użytkownicy wielokrotnie zadają to samo pytanie, jest to znak, że agent nie działa zgodnie z oczekiwaniami.
+**Pośrednia opinia użytkowników:** Zachowania użytkowników dostarczają pośredniego feedbacku nawet bez wyraźnych ocen. Może to obejmować natychmiastowe przeformułowanie pytania, powtarzane zapytania lub kliknięcie przycisku ponów. Np. jeśli widzisz, że użytkownicy wielokrotnie zadają to samo pytanie, jest to sygnał, że agent nie działa zgodnie z oczekiwaniami.
 
-**Dokładność:** Jak często agent generuje poprawne lub pożądane wyniki? Definicje dokładności mogą się różnić (np. poprawność rozwiązywania problemów, dokładność wyszukiwania informacji, satysfakcja użytkownika). Pierwszym krokiem jest zdefiniowanie, jak wygląda sukces dla Twojego agenta. Można śledzić dokładność za pomocą automatycznych kontroli, wyników oceny lub etykiet ukończenia zadań. Na przykład oznaczanie śladów jako "udane" lub "nieudane".
+**Dokładność:** Jak często agent generuje poprawne lub pożądane wyniki? Definicje dokładności różnią się (np. poprawność rozwiązywania problemów, dokładność wyszukiwania informacji, satysfakcja użytkownika). Pierwszym krokiem jest zdefiniowanie, czym jest sukces dla Twojego agenta. Możesz śledzić dokładność za pomocą automatycznych testów, ocen ewaluacyjnych lub oznaczeń ukończenia zadań. Na przykład oznaczając ślady jako „powodzenie” lub „niepowodzenie”.
 
-**Automatyczne metryki oceny:** Można również skonfigurować automatyczne oceny. Na przykład można użyć LLM do oceny wyników agenta, np. czy są pomocne, dokładne czy nie. Istnieje również kilka bibliotek open source, które pomagają oceniać różne aspekty agenta, np. [RAGAS](https://docs.ragas.io/) dla agentów RAG lub [LLM Guard](https://llm-guard.com/) do wykrywania szkodliwego języka lub wstrzykiwania podpowiedzi.
+**Automatyczne metryki ewaluacyjne:** Możesz także skonfigurować automatyczne testy. Na przykład możesz użyć LLM do oceniania wyników agenta, na przykład czy są pomocne, dokładne, czy nie. Istnieje również kilka bibliotek open source, które pomagają oceniać różne aspekty agenta. Np. [RAGAS](https://docs.ragas.io/) dla agentów RAG lub [LLM Guard](https://llm-guard.com/) do wykrywania szkodliwego języka lub wstrzyknięć zapytań.
 
-W praktyce kombinacja tych metryk zapewnia najlepsze pokrycie zdrowia agenta AI. W [przykładowym notebooku](./code_samples/10_autogen_evaluation.ipynb) w tym rozdziale pokażemy, jak te metryki wyglądają w rzeczywistych przykładach, ale najpierw nauczymy się, jak wygląda typowy przepływ pracy oceny.
+W praktyce połączenie tych metryk daje najlepszy obraz zdrowia agenta AI. W [przykładowym notatniku](./code_samples/10-expense_claim-demo.ipynb) w tym rozdziale pokażemy, jak te metryki wyglądają na konkretnych przykładach, ale najpierw nauczymy się, jak wygląda typowy przepływ pracy oceny.
 
-## Instrumentowanie agenta
+## Instrumentuj swojego agenta
 
-Aby zbierać dane śledzenia, należy instrumentować kod. Celem jest instrumentowanie kodu agenta, aby emitował ślady i metryki, które mogą być przechwytywane, przetwarzane i wizualizowane przez platformę obserwowalności.
+Aby zbierać dane śledzenia, musisz zaimplementować instrumentację swojego kodu. Celem jest instrumentowanie kodu agenta, aby emitował ślady i metryki, które mogą być przechwycone, przetworzone i wizualizowane przez platformę obserwowalności.
 
-**OpenTelemetry (OTel):** [OpenTelemetry](https://opentelemetry.io/) stało się standardem branżowym w zakresie obserwowalności LLM. Zapewnia zestaw API, SDK i narzędzi do generowania, zbierania i eksportowania danych telemetrycznych.
+**OpenTelemetry (OTel):** [OpenTelemetry](https://opentelemetry.io/) stał się standardem branżowym dla obserwowalności LLM. Dostarcza zestaw API, SDK i narzędzi do generowania, zbierania i eksportowania danych telemetrycznych.
 
-Istnieje wiele bibliotek instrumentacyjnych, które opakowują istniejące frameworki agentów i ułatwiają eksportowanie zakresów OpenTelemetry do narzędzia obserwowalności. Poniżej znajduje się przykład instrumentowania agenta AutoGen za pomocą biblioteki [OpenLit](https://github.com/openlit/openlit):
+Istnieje wiele bibliotek instrumentacyjnych, które opakowują istniejące frameworki agentów i ułatwiają eksportowanie zakresów OpenTelemetry do narzędzia obserwowalności. Microsoft Agent Framework natywnie integruje się z OpenTelemetry. Poniżej przykład instrumentacji agenta MAF:
 
 ```python
-import openlit
+from agent_framework.observability import get_tracer, get_meter
 
-openlit.init(tracer = langfuse._otel_tracer, disable_batch = True)
+tracer = get_tracer()
+meter = get_meter()
+
+with tracer.start_as_current_span("agent_run"):
+    # Wykonanie agenta jest śledzone automatycznie
+    pass
 ```
 
-[Przykładowy notebook](./code_samples/10_autogen_evaluation.ipynb) w tym rozdziale pokaże, jak instrumentować agenta AutoGen.
+[Przykładowy notatnik](./code_samples/10-expense_claim-demo.ipynb) w tym rozdziale pokaże, jak instrumentować swojego agenta MAF.
 
-**Ręczne tworzenie zakresów:** Chociaż biblioteki instrumentacyjne zapewniają dobrą bazę, często zdarzają się przypadki, w których potrzebne są bardziej szczegółowe lub niestandardowe informacje. Można ręcznie tworzyć zakresy, aby dodać niestandardową logikę aplikacji. Co ważniejsze, można wzbogacić automatycznie lub ręcznie tworzone zakresy o niestandardowe atrybuty (znane również jako tagi lub metadane). Te atrybuty mogą obejmować dane specyficzne dla biznesu, obliczenia pośrednie lub dowolny kontekst, który może być przydatny do debugowania lub analizy, takie jak `user_id`, `session_id` czy `model_version`.
+**Ręczne tworzenie zakresów:** Choć biblioteki instrumentacyjne zapewniają dobrą podstawę, często potrzebne są bardziej szczegółowe lub niestandardowe informacje. Możesz ręcznie tworzyć zakresy, aby dodać niestandardową logikę aplikacji. Co ważniejsze, mogą one wzbogacać automatycznie lub ręcznie tworzone zakresy o niestandardowe atrybuty (zwane też tagami lub metadanymi). Atrybuty te mogą zawierać dane specyficzne dla biznesu, obliczenia pośrednie lub dowolny kontekst użyteczny do debugowania lub analizy, taki jak `user_id`, `session_id` czy `model_version`.
 
 Przykład ręcznego tworzenia śladów i zakresów za pomocą [Langfuse Python SDK](https://langfuse.com/docs/sdk/python/sdk-v3):
 
@@ -91,81 +97,72 @@ span.end()
 
 ## Ocena agenta
 
-Obserwowalność dostarcza metryk, ale ocena to proces analizowania tych danych (i przeprowadzania testów), aby określić, jak dobrze działa agent AI i jak można go poprawić. Innymi słowy, gdy masz już ślady i metryki, jak ich użyć do oceny agenta i podejmowania decyzji?
+Obserwowalność dostarcza nam metryk, ale ocena to proces analizowania tych danych (i przeprowadzania testów), aby określić, jak dobrze agent AI działa i jak można go poprawić. Innymi słowy, gdy masz te ślady i metryki, jak ich użyć do oceny agenta i podejmowania decyzji?
 
-Regularna ocena jest ważna, ponieważ agenci AI często są niedeterministyczni i mogą ewoluować (poprzez aktualizacje lub zmiany w zachowaniu modelu) – bez oceny nie wiedziałbyś, czy Twój "inteligentny agent" faktycznie dobrze wykonuje swoją pracę, czy też się pogorszył.
+Regularna ocena jest ważna, ponieważ agenci AI często są niedeterministyczni i mogą się zmieniać (przez aktualizacje lub dryftowanie zachowania modelu) – bez oceny nie wiedziałbyś, czy Twój „inteligentny agent” rzeczywiście dobrze wykonuje swoją pracę, czy też jego działanie się pogorszyło.
 
-Istnieją dwie kategorie ocen dla agentów AI: **ocena offline** i **ocena online**. Obie są wartościowe i wzajemnie się uzupełniają. Zazwyczaj zaczynamy od oceny offline, ponieważ jest to minimalny konieczny krok przed wdrożeniem agenta.
+Istnieją dwie kategorie ocen dla agentów AI: **ocena online** i **ocena offline**. Obie są wartościowe i się uzupełniają. Zazwyczaj zaczynamy od oceny offline, ponieważ jest to minimalny krok konieczny przed wdrożeniem dowolnego agenta.
 
 ### Ocena offline
 
 ![Elementy zbioru danych w Langfuse](https://langfuse.com/images/cookbook/example-autogen-evaluation/example-dataset.png)
 
-Polega na ocenie agenta w kontrolowanym środowisku, zazwyczaj przy użyciu zestawów testowych, a nie zapytań użytkowników na żywo. Używasz przygotowanych zestawów danych, w których znasz oczekiwany wynik lub poprawne zachowanie, a następnie uruchamiasz na nich swojego agenta.
+Obejmuje ocenę agenta w kontrolowanym środowisku, zwykle za pomocą zestawów testowych, a nie zapytań na żywo od użytkowników. Używasz wyselekcjonowanych zestawów danych, gdzie znasz oczekiwany wynik lub prawidłowe zachowanie, a następnie testujesz na nich agenta.
 
-Na przykład, jeśli stworzyłeś agenta rozwiązującego matematyczne problemy tekstowe, możesz mieć [zestaw testowy](https://huggingface.co/datasets/gsm8k) składający się ze 100 problemów z znanymi odpowiedziami. Ocena offline jest często przeprowadzana podczas rozwoju (i może być częścią pipeline'ów CI/CD), aby sprawdzić ulepszenia lub zapobiec regresjom. Korzyścią jest to, że jest **powtarzalna i można uzyskać jasne metryki dokładności, ponieważ masz prawdę podstawową**. Możesz także symulować zapytania użytkowników i mierzyć odpowiedzi agenta w porównaniu do idealnych odpowiedzi lub używać automatycznych metryk, jak opisano powyżej.
+Na przykład, jeśli zbudowałeś agenta do rozwiązywania zadań tekstowych z matematyki, możesz mieć [zestaw testowy](https://huggingface.co/datasets/gsm8k) zawierający 100 problemów z znanymi odpowiedziami. Ocena offline jest często przeprowadzana podczas rozwoju (i może być częścią pipeline’ów CI/CD) w celu weryfikacji ulepszeń lub ochrony przed regresją. Zaleta jest taka, że jest **powtarzalna i pozwala uzyskać jasne metryki dokładności, ponieważ masz prawdziwe odpowiedzi**. Możesz też symulować zapytania użytkowników i mierzyć odpowiedzi agenta wobec idealnych odpowiedzi lub używać automatycznych metryk opisanych wyżej.
 
-Głównym wyzwaniem w ocenie offline jest zapewnienie, że Twój zestaw testowy jest wszechstronny i pozostaje aktualny – agent może dobrze radzić sobie na stałym zestawie testowym, ale napotkać zupełnie inne zapytania w produkcji. Dlatego należy regularnie aktualizować zestawy testowe o nowe przypadki brzegowe i przykłady odzwierciedlające scenariusze rzeczywiste​. Przydatne jest połączenie małych zestawów "testów dymnych" i większych zestawów oceny: małe zestawy do szybkich kontroli i większe do szerszych metryk wydajności​.
+Głównym wyzwaniem oceny offline jest zapewnienie, że zestaw testowy jest wszechstronny i pozostaje aktualny – agent może dobrze radzić sobie na stałym zestawie, ale napotkać zupełnie inne zapytania w produkcji. Dlatego warto aktualizować zestawy testowe o nowe skrajne przypadki i przykłady odzwierciedlające rzeczywiste scenariusze. Przydatne jest łączenie małych „testów dymnych” z większymi zestawami ewaluacyjnymi: małe zestawy do szybkich kontroli, większe do szerszych metryk wydajności.
 
 ### Ocena online
 
 ![Przegląd metryk obserwowalności](https://langfuse.com/images/cookbook/example-autogen-evaluation/dashboard.png)
 
-Odnosi się do oceny agenta w rzeczywistym, żywym środowisku, tj. podczas rzeczywistego użytkowania w produkcji. Ocena online polega na monitorowaniu wydajności agenta w rzeczywistych interakcjach użytkowników i ciągłej analizie wyników.
+Odnosi się do oceny agenta w czasie rzeczywistym, w środowisku produkcyjnym, tzn. podczas faktycznego użycia. Ocena online polega na monitorowaniu wydajności agenta podczas rzeczywistych interakcji użytkowników i ciągłej analizie wyników.
 
-Na przykład możesz śledzić wskaźniki sukcesu, oceny satysfakcji użytkowników lub inne metryki na żywym ruchu. Zaletą oceny online jest to, że **uchwyca rzeczy, których możesz nie przewidzieć w warunkach laboratoryjnych** – możesz obserwować dryf modelu w czasie (jeśli skuteczność agenta pogarsza się wraz ze zmianą wzorców wejściowych) i wychwycić nieoczekiwane zapytania lub sytuacje, które nie były w Twoich danych testowych​. Dostarcza prawdziwego obrazu tego, jak agent zachowuje się w rzeczywistości.
+Przykładowo możesz śledzić wskaźniki sukcesu, oceny satysfakcji użytkowników lub inne metryki na ruchu na żywo. Zaletą oceny online jest to, że **uchwytuje rzeczy, których możesz nie przewidzieć w środowisku laboratoryjnym** – możesz zaobserwować dryft modelu w czasie (jeśli efektywność agenta pogarsza się wraz ze zmianą wzorców danych wejściowych) oraz wykryć nieoczekiwane zapytania lub sytuacje, które nie były w danych testowych. Dostarcza prawdziwego obrazu zachowania agenta na żywo.
 
-Ocena online często obejmuje zbieranie ukrytych i jawnych opinii użytkowników, jak omówiono, a także możliwe przeprowadzanie testów równoległych lub A/B (gdzie nowa wersja agenta działa równolegle, aby porównać ją z starą). Wyzwanie polega na tym, że trudno jest uzyskać wiarygodne etykiety lub oceny dla interakcji na żywo – możesz polegać na opiniach użytkowników lub metrykach downstream (np. czy użytkownik kliknął wynik).
+Ocena online często obejmuje zbieranie pośrednich i wyraźnych opinii użytkowników, jak omówiono, oraz ewentualne przeprowadzanie testów cienia lub testów A/B (gdzie nowa wersja agenta działa równolegle, aby porównać ją ze starą). Wyzwanie polega na tym, że trudno jest uzyskać wiarygodne oznaczenia lub wyniki dla interakcji na żywo – możesz polegać na opiniach użytkowników lub metrykach niższego poziomu (np. czy użytkownik kliknął wynik).
 
-### Łączenie obu metod
+### Łączenie obu
 
-Oceny online i offline nie wykluczają się wzajemnie; są bardzo komplementarne. Wnioski z monitorowania online (np. nowe typy zapytań użytkowników, w których agent radzi sobie słabo) mogą być używane do uzupełniania i poprawy zestawów testowych offline. Z kolei agenci, którzy dobrze radzą sobie w testach offline, mogą być bardziej pewnie wdrażani i monitorowani online.
+Oceny online i offline nie wykluczają się; są bardzo komplementarne. Wnioski z monitoringu na żywo (np. nowe typy zapytań użytkowników, na które agent reaguje słabo) można wykorzystać do rozszerzenia i poprawy zestawów testowych offline. Z kolei agenci, którzy sprawdzają się w testach offline, mogą być z większą pewnością wdrożeni i monitorowani online.
 
-W rzeczywistości wiele zespołów przyjmuje pętlę:
+W rzeczywistości wiele zespołów stosuje cykl:
 
-_ocena offline -> wdrożenie -> monitorowanie online -> zbieranie nowych przypadków błędów -> dodanie do zestawu offline -> udoskonalenie agenta -> powtórzenie_.
+_ocena offline -> wdrożenie -> monitoring online -> zbieranie nowych błędów -> dodawanie do zbioru offline -> doskonalenie agenta -> powtórka_.
 
 ## Typowe problemy
 
-Podczas wdrażania agentów AI do produkcji możesz napotkać różne wyzwania. Oto niektóre typowe problemy i ich potencjalne rozwiązania:
+W miarę wdrażania agentów AI do produkcji możesz napotkać różne wyzwania. Oto kilka powszechnych problemów i ich potencjalne rozwiązania:
 
 | **Problem**    | **Potencjalne rozwiązanie**   |
 | ------------- | ------------------ |
-| Agent AI nie wykonuje zadań konsekwentnie | - Doprecyzuj podpowiedź przekazywaną agentowi AI; bądź jasny co do celów.<br>- Zidentyfikuj, gdzie podział zadań na podzadania i obsługa ich przez wielu agentów może pomóc. |
-| Agent AI wpada w ciągłe pętle  | - Upewnij się, że masz jasno określone warunki zakończenia, aby agent wiedział, kiedy zakończyć proces. |
+| Agent AI nie wykonuje zadań konsekwentnie | - Doprecyzuj zapytanie (prompt) przekazywane agentowi AI; bądź jasny co do celów.<br>- Zidentyfikuj, gdzie podział zadań na subtasks i obsługa ich przez wielu agentów może pomóc. |
+| Agent AI wpada w ciągłe pętle  | - Upewnij się, że masz jasne warunki zakończenia, aby agent wiedział, kiedy zakończyć proces.<br>- Do złożonych zadań wymagających rozumowania i planowania użyj większego modelu specjalizowanego do takich zadań. |
+| Wywołania narzędzi agenta AI nie działają dobrze   | - Testuj i weryfikuj output narzędzia poza systemem agenta.<br>- Doprecyzuj parametry, zapytania i nazewnictwo narzędzi.  |
+| System Multi-Agent działa niespójnie | - Doprecyzuj zapytania dla każdego agenta, aby były specyficzne i odrębne.<br>- Zbuduj system hierarchiczny z agentem „routingowym” lub kontrolerem, który określa, który agent jest właściwy. |
 
-## Rozwiązywanie problemów z agentami AI
-
-### Typowe problemy i ich rozwiązania
-
-Poniżej przedstawiono kilka typowych problemów, które mogą wystąpić podczas pracy z agentami AI, oraz sposoby ich rozwiązania:
-
-| **Problem**                                   | **Rozwiązanie**                                                                                     |
-|-----------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| Agent nie działa zgodnie z oczekiwaniami      | - Przeanalizuj ślady i metryki, aby zidentyfikować, gdzie występują problemy.<br>- Ulepsz podpowiedzi i parametry. |
-| Zadania wymagające złożonego rozumowania      | - Użyj większego modelu, który jest wyspecjalizowany w zadaniach wymagających rozumowania.          |
-| Narzędzia agenta AI nie działają poprawnie    | - Przetestuj i zweryfikuj wyniki narzędzia poza systemem agenta.<br>- Doprecyzuj parametry, podpowiedzi i nazwy narzędzi. |
-| System wieloagentowy działa niespójnie        | - Doprecyzuj podpowiedzi dla każdego agenta, aby były specyficzne i różniły się od siebie.<br>- Zbuduj hierarchiczny system z użyciem agenta „routingu” lub kontrolera, który określi, który agent jest odpowiedni. |
-
-Wiele z tych problemów można skuteczniej zidentyfikować, jeśli wdrożona jest obserwowalność. Ślady i metryki, o których wspomniano wcześniej, pomagają dokładnie określić, gdzie w przepływie pracy agenta występują problemy, co znacznie ułatwia debugowanie i optymalizację.
+Wiele z tych problemów można skuteczniej zidentyfikować mając obserwowalność. Ślady i metryki, o których wcześniej mówiliśmy, pomagają dokładnie ustalić, gdzie w przepływie działania agenta występują problemy, co znacznie ułatwia debugowanie i optymalizację.
 
 ## Zarządzanie kosztami
 
-Oto kilka strategii zarządzania kosztami wdrażania agentów AI w środowisku produkcyjnym:
 
-**Używanie mniejszych modeli:** Małe modele językowe (SLM) mogą dobrze sprawdzać się w przypadku niektórych zastosowań agentowych i znacząco obniżyć koszty. Jak wspomniano wcześniej, budowa systemu oceny, który pozwoli porównać wydajność w stosunku do większych modeli, jest najlepszym sposobem na zrozumienie, jak dobrze SLM sprawdzi się w Twoim przypadku. Rozważ użycie SLM do prostszych zadań, takich jak klasyfikacja intencji czy ekstrakcja parametrów, a większe modele rezerwuj do bardziej złożonych zadań wymagających rozumowania.
+Oto kilka strategii zarządzania kosztami wdrażania agentów AI do produkcji:
 
-**Używanie modelu routingu:** Podobną strategią jest wykorzystanie różnorodnych modeli o różnych rozmiarach. Możesz użyć LLM/SLM lub funkcji bezserwerowej do kierowania żądań w zależności od ich złożoności do najlepiej dopasowanych modeli. To również pomoże obniżyć koszty, jednocześnie zapewniając odpowiednią wydajność dla właściwych zadań. Na przykład, proste zapytania kieruj do mniejszych, szybszych modeli, a drogie, duże modele wykorzystuj tylko do zadań wymagających złożonego rozumowania.
+**Używanie mniejszych modeli:** Małe modele językowe (SLM) mogą dobrze sprawdzać się w niektórych zastosowaniach agentowych i znacznie obniżyć koszty. Jak wspomniano wcześniej, budowanie systemu oceny do określania i porównywania wydajności w stosunku do większych modeli jest najlepszym sposobem, aby zrozumieć, jak dobrze SLM sprawdzi się w Twoim przypadku użycia. Rozważ użycie SLM do prostszych zadań, takich jak klasyfikacja intencji lub ekstrakcja parametrów, pozostawiając większe modele do złożonych rozumowań.
 
-**Buforowanie odpowiedzi:** Identyfikowanie typowych żądań i zadań oraz dostarczanie odpowiedzi przed przejściem przez system agentowy to dobry sposób na zmniejszenie liczby podobnych żądań. Możesz nawet wdrożyć proces identyfikacji, jak bardzo dane żądanie jest podobne do już zbuforowanych, używając prostszych modeli AI. Ta strategia może znacząco obniżyć koszty w przypadku często zadawanych pytań lub typowych przepływów pracy.
+**Używanie modelu routera:** Podobną strategią jest korzystanie z różnorodności modeli i rozmiarów. Możesz użyć LLM/SLM lub funkcji serverless do kierowania zapytań na podstawie ich złożoności do najlepiej dopasowanych modeli. To również pomoże obniżyć koszty, jednocześnie zapewniając wydajność w odpowiednich zadaniach. Na przykład, kieruj proste zapytania do mniejszych, szybszych modeli, a do złożonych zadań rozumowania używaj tylko drogich, dużych modeli.
+
+**Buforowanie odpowiedzi:** Identyfikowanie typowych zapytań i zadań oraz dostarczanie odpowiedzi przed tym, jak trafią do Twojego systemu agentowego, to dobry sposób na zmniejszenie liczby podobnych zapytań. Możesz nawet zaimplementować mechanizm do oceny, jak podobne jest zapytanie do tych już zbuforowanych, używając prostszych modeli AI. Ta strategia może znacznie zmniejszyć koszty dla często zadawanych pytań lub typowych procesów.
 
 ## Zobaczmy, jak to działa w praktyce
 
-W [przykładowym notebooku tej sekcji](./code_samples/10_autogen_evaluation.ipynb) zobaczymy przykłady, jak możemy używać narzędzi do obserwowalności, aby monitorować i oceniać naszego agenta.
+W [przykładowym zeszycie tego rozdziału](./code_samples/10-expense_claim-demo.ipynb) zobaczymy przykłady, jak możemy używać narzędzi do obserwowalności, by monitorować i oceniać naszego agenta.
 
-### Masz więcej pytań dotyczących agentów AI w środowisku produkcyjnym?
 
-Dołącz do [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), aby spotkać innych uczących się, uczestniczyć w godzinach konsultacyjnych i uzyskać odpowiedzi na pytania dotyczące agentów AI.
+### Masz więcej pytań dotyczących agentów AI w produkcji?
+
+Dołącz do [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), aby spotkać innych uczących się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące agentów AI.
 
 ## Poprzednia lekcja
 
@@ -177,5 +174,7 @@ Dołącz do [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), aby sp
 
 ---
 
-**Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczeniowej AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż dokładamy wszelkich starań, aby tłumaczenie było precyzyjne, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za wiarygodne źródło. W przypadku informacji o kluczowym znaczeniu zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Zastrzeżenie**:
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Choć dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub niedokładności. Oryginalny dokument w jego języku źródłowym należy uznawać za autorytatywne źródło. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

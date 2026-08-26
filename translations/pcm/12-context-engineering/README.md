@@ -2,19 +2,19 @@
 
 [![Context Engineering](../../../translated_images/pcm/lesson-12-thumbnail.ed19c94463e774d4.webp)](https://youtu.be/F5zqRV7gEag)
 
-> _(Click di image wey dey up to watch di video for dis lesson)_
+> _(Click di image wey de above to watch video for dis lesson)_
 
-To sabi di complexity of di application wey you wan build AI agent for dey important to make am reliable. We need to build AI Agents wey go sabi manage information well to fit handle complex needs wey pass just prompt engineering.
+To sabi di complexity of di application wey you dey build AI agent for dey important to make correct one. We need build AI Agents wey go fit manage information well well to handle complex wahala pass just prompt engineering.
 
-For dis lesson, we go look wetin context engineering be and how e dey help to build AI agents.
+For dis lesson, we go look wetin context engineering be and how e take work for building AI agents.
 
 ## Introduction
 
 Dis lesson go cover:
 
-• **Wetin Context Engineering be** and why e different from prompt engineering.
+• **Wet in be Context Engineering** and why e different from prompt engineering.
 
-• **Strategies for better Context Engineering**, like how to write, select, compress, and isolate information.
+• **Ways to do correct Context Engineering**, including how to write, select, compress, and separate information.
 
 • **Common Context Wahala** wey fit spoil your AI agent and how to fix am.
 
@@ -22,39 +22,39 @@ Dis lesson go cover:
 
 After you finish dis lesson, you go sabi how to:
 
-• **Explain wetin context engineering be** and how e different from prompt engineering.
+• **Define context engineering** and sabi how e differ from prompt engineering.
 
-• **Identify di main parts of context** for Large Language Model (LLM) applications.
+• **Identify main parts of context** for Large Language Model (LLM) applications.
 
-• **Use strategies to write, select, compress, and isolate context** to make agent performance better.
+• **Use strategies to write, select, compress, and separate context** to make agent work well.
 
-• **Know di common context wahala** like poisoning, distraction, confusion, and clash, and how to stop dem.
+• **Know common context wahala** like poisoning, distraction, confusion, and clash, and how to solve dem.
 
 ## Wetin be Context Engineering?
 
-For AI Agents, na context dey guide di planning wey go make AI Agent take certain actions. Context Engineering na di work wey dey make sure say di AI Agent get di correct information wey e need to complete di next step for di task. Di context window get limit for size, so as people wey dey build agent, we need to create systems and processes to manage how we go add, remove, and reduce di information wey dey di context window.
+For AI Agents, context na wetin de control how AI Agent go plan to take action. Context Engineering na di work to make sure say AI Agent get correct information to complete di next step for di task. Di context window get limit size, so as agent builders we need make systems and ways to manage how to add, remove, and compress di information wey dey inside di context window.
 
 ### Prompt Engineering vs Context Engineering
 
-Prompt engineering na di work wey dey focus on one set of fixed instructions to guide di AI Agents well with rules. Context engineering na how to manage di dynamic set of information, including di first prompt, to make sure say di AI Agent get wetin e need as time dey go. Di main idea for context engineering na to make dis process dey repeatable and reliable.
+Prompt engineering dey focus only on one set of static instructions to guide AI Agents with set of rules. Context engineering na how to manage changing information wey include di first prompt to make sure say AI Agent get wetin e need over time. Di main idea of context engineering na to make dis process fit run again and be trustworthy.
 
 ### Types of Context
 
 [![Types of Context](../../../translated_images/pcm/context-types.fc10b8927ee43f06.webp)](https://youtu.be/F5zqRV7gEag)
 
-E dey important to remember say context no be just one thing. Di information wey di AI Agent need fit come from different sources and na our work to make sure say di agent fit access dis sources:
+E important to remember say context no be just one thing. Di information wey AI Agent need fit come from many different places and na our work to make sure agent fit access all these places:
 
-Di types of context wey AI agent fit need to manage include:
+Di kinds of context AI agent fit need to manage include:
 
-• **Instructions:** Dis one be like di agent "rules" – prompts, system messages, few-shot examples (to show di AI how to do something), and descriptions of tools wey e fit use. Na here prompt engineering and context engineering dey join hand.
+• **Instructions:** Dis dey like di agent "rules" – prompts, system messages, few-shot examples (wey show AI how to do something), and description of tools wey e fit use. Na here prompt engineering and context engineering meet.
 
-• **Knowledge:** Dis one cover facts, information wey dem retrieve from databases, or long-term memories wey di agent don gather. E include how to use Retrieval Augmented Generation (RAG) system if di agent need access to different knowledge stores and databases.
+• **Knowledge:** Dis cover facts, information wen dem collect from databases, or long-term memories wey agent don get. E fit also include using Retrieval Augmented Generation (RAG) system if agent need to access diff knowledge stores and databases.
 
-• **Tools:** Dis na di definitions of external functions, APIs and MCP Servers wey di agent fit call, plus di feedback (results) wey e get from using dem.
+• **Tools:** Dis na definitions of external functions, APIs and MCP Servers wey agent fit use, plus feedback (results) wey e dey get from dem.
 
-• **Conversation History:** Di ongoing talk wey di agent dey do with user. As time dey go, di conversation go dey long and complex, wey go mean say e go dey take space for di context window.
+• **Conversation History:** Na ongoing talk wey dey happen with user. As time dey go, these talks go dey longer and more complex, and e mean say dem go take space for context window.
 
-• **User Preferences:** Information wey di agent don learn about wetin di user like or no like over time. Dis one fit dey stored and di agent fit use am when e dey make important decisions to help di user.
+• **User Preferences:** Information wey dem learn about wetin user like or no like over time. Dem fit store dis kind info and use am when dem dey make important decisions to help user.
 
 ## Strategies for Effective Context Engineering
 
@@ -62,105 +62,127 @@ Di types of context wey AI agent fit need to manage include:
 
 [![Context Engineering Best Practices](../../../translated_images/pcm/best-practices.f4170873dc554f58.webp)](https://youtu.be/F5zqRV7gEag)
 
-Good context engineering dey start with good planning. Dis na how you fit begin to think about how to use di idea of context engineering:
+Good context engineering start with good planning. Here na one way wey go help you start to sabi how to apply context engineering:
 
-1. **Define Clear Results** - Di results of di tasks wey AI Agents go do suppose dey clear. Answer di question - "How di world go be when di AI Agent don finish di task?" Wetin go change, di information or di response wey di user suppose get after e interact with di AI Agent.
-
-2. **Map di Context** - After you don define di results of di AI Agent, you need to answer di question "Wetin di AI Agent need to sabi to complete dis task?". Dis go help you map di context of where di information dey.
-
-3. **Create Context Pipelines** - Now wey you don sabi where di information dey, you need to answer di question "How di Agent go get dis information?". You fit do dis in different ways like RAG, use MCP servers and other tools.
+1. **Define Clear Results** - Results of tasks wey AI Agents go do suppose dey clear. Answer di question - "How di world go be when AI Agent finish im task?" In other words, wetin change, information, or response user go get after dem interact with AI Agent.
+2. **Map the Context** - After you don define results for AI Agent, you go need answer di question "Wetin AI Agent need to know to complete dis task?". Dis na how you go start map di context of where di information dey.
+3. **Create Context Pipelines** - Now wey you sabi where di information dey, you for answer di question "How Agent go take get dis information?". Dis fit be done in different ways like RAG, using MCP servers, and other tools.
 
 ### Practical Strategies
 
-Planning dey important but once di information don dey enter di agent context window, we need practical strategies to manage am:
+Planning na correct but as information enter our agent context window, we need to get practical strategies to handle am:
 
 #### Managing Context
 
-Some information go dey enter di context window automatically, but context engineering na di active work to manage dis information wey fit happen through some strategies:
+Even though some information go dey add to context window automatically, context engineering na to take active control for dis information using some strategies:
 
-1. **Agent Scratchpad**
-Dis one dey allow AI Agent to take notes of di important information about di current tasks and user interactions during one session. E suppose dey outside di context window for file or runtime object wey di agent fit later retrieve during di session if e need am.
+ 1. **Agent Scratchpad**
+ Dis allow AI Agent to note down correct information about current tasks and user interactions during one session. E for dey outside di context window for file or runtime object wey agent fit later check for dis session if e need am.
 
-2. **Memories**
-Scratchpads dey good to manage information outside di context window for one session. Memories dey allow agents to store and retrieve important information across many sessions. Dis fit include summaries, user preferences and feedback to make am better for di future.
+ 2. **Memories**
+ Scratchpads good to manage information outside of context window for one session. Memories allow agents store and still get correct information across many sessions. This one fit cover summaries, user preferences, and feedback for better work later.
 
-3. **Compressing Context**
-When di context window don dey full, techniques like summarization and trimming fit dey used. Dis one dey keep only di most important information or remove old messages.
+ 3. **Compressing Context**
+  When context window big and e near limit, you fit use methods like summarization and trimming. Dis fit mean keep only di important information or delete older messages.
+  
+ 4. **Multi-Agent Systems**
+  To develop multi-agent system na one way for context engineering because each agent get im own context window. How to share and pass context to different agents na another thing to plan for when you dey build these systems.
+  
+ 5. **Sandbox Environments**
+  If agent need run some code or process large information for one document, dis fit take many tokens for process results. Instead of keep all inside context window, agent fit use sandbox environment to run dis code and only read results plus other important info.
+  
+ 6. **Runtime State Objects**
+   Dis na to create containers of information to handle situations when Agent need access to certain info. For complex task, dis go allow Agent store results of each small task step by step, make context dey connected only to that small task.
 
-4. **Multi-Agent Systems**
-To develop multi-agent system na one type of context engineering because each agent get e own context window. How di context go dey shared and passed to different agents na another thing to plan when you dey build dis systems.
+#### Inspecting Context
 
-5. **Sandbox Environments**
-If agent need to run some code or process plenty information for one document, e fit take plenty tokens to process di results. Instead of storing everything for di context window, di agent fit use sandbox environment wey go run di code and only read di results and other important information.
+After you apply one of these strategies, e good to check wetin di next model call really receive. One useful debugging question be:
 
-6. **Runtime State Objects**
-Dis one dey happen when you create containers of information to manage situations wey di Agent need access to certain information. For complex task, dis go allow Agent to store di results of each subtask step by step, so di context go dey connected only to dat specific subtask.
+> Did the agent load too much context, wrong context, or miss context wey e need?
+
+You no need log raw prompts, tool outputs, or memory contents to answer dat question. For production, you should prefer small context inspection records wey capture counts, ids, hashes, and policy labels:
+
+- **Selection:** Track how many candidate chunks, tools, or memories dem check, how many dem pick, and which rule or score make others to dey filter out.
+- **Compression:** Record source range or trace id, summary id, estimated token count before and after compression, and whether raw content bin comot from next call.
+- **Isolation:** Note which subtask run inside separate agent, session, or sandbox, which summary dem return, and if big tool output remain outside di main agent context.
+- **Memory and RAG:** Store retrieval document ids, memory ids, scores, selected ids and redaction status instead of the full retrieved text.
+- **Safety and privacy:** Prefer hashes, ids, token buckets, and policy labels above sensitive prompt text, tool arguments, tool results, or user memory bodies.
+
+Di goal no be make you keep more context. Di goal na to leave enough proof wey developer fit tell which context strategy run and whether e change next model call as dem intend.
 
 ### Example of Context Engineering
 
-Make we say we want AI agent to **"Book me a trip to Paris."**
+Make we talk say we want AI agent to **"Book me a trip to Paris."**
 
-• Simple agent wey dey use only prompt engineering fit just reply: **"Okay, when you wan go Paris?**". E only process di direct question wey di user ask.
+• Simple agent wey dey use only prompt engineering fit just reply: **"Okay, when you want go Paris?**". E go just process your direct question when user ask am.
 
-• Agent wey dey use di context engineering strategies wey we talk go do plenty things. Before e even reply, e system fit:
+• Agent wey use context engineering strategies wey we talk about go do way more. Before e even respond, im system fit:
 
-  ◦ **Check your calendar** for available dates (to retrieve real-time data).
+  ◦ **Check your calendar** for free dates (carry real-time data).
 
- ◦ **Remember past travel preferences** (from long-term memory) like di airline wey you like, budget, or if you like direct flights.
+ ◦ **Recall past travel preferences** (from long-term memory) like your preferred airline, budget, or if you like direct flights.
 
- ◦ **Find available tools** for flight and hotel booking.
+ ◦ **Identify available tools** for flight and hotel booking.
 
-- Then, di reply fit be: "Hey [Your Name]! I see say you free for di first week of October. Make I check direct flights to Paris for [Preferred Airline] wey dey inside your usual budget of [Budget]?". Dis kind rich, context-aware reply dey show di power of context engineering.
+- Then, example response fit be like: "Hey [Your Name]! I see say you free the first week of October. Make I find direct flights to Paris on [Preferred Airline] inside your usual budget of [Budget]?". Dis correct context-aware response show di power of context engineering.
 
 ## Common Context Wahala
 
 ### Context Poisoning
 
-**Wetin e be:** When hallucination (false information wey di LLM generate) or mistake enter di context and e dey referenced again and again, e fit make di agent dey chase impossible goals or dey create nonsense strategies.
+**Wet in be:** When hallucination (false info wey LLM produce) or error enter context and dem dey reference am plenty times, e fit make agent pursue impossible goals or do nonsense strategies.
 
-**Wetin to do:** Use **context validation** and **quarantine**. Check di information well before e enter long-term memory. If you see say e fit poison di context, start fresh context threads to stop di bad information from spreading.
+**Wetin to do:** Use **context validation** and **quarantine**. Check info before you add to long-term memory. If you find say e fit be poisoning, start fresh context threads to stop bad info from spread.
 
-**Travel Booking Example:** Your agent dey imagine say **direct flight dey from one small local airport to one far international city** wey no dey even get international flights. Dis fake flight detail go enter di context. Later, when you ask di agent to book, e go dey try find tickets for dis impossible route, wey go cause repeated errors.
+**Travel Booking Example:** Your agent dey hallucinate **direct flight from one small local airport to far international city** wey no get international flights. Dis fake flight detail dey saved for context. Later, when you ask agent to book, e go dey try find ticket for this impossible route, leading to repeated errors.
 
-**Solution:** Add step wey go **check di flight existence and routes with real-time API** _before_ di flight detail go enter di agent working context. If di check fail, di wrong information go dey "quarantined" and no go dey used again.
+**Solution:** Make e get step wey **check if flight really dey and di routes with real-time API** _before_ e add flight detail to agent working context. If check fail, e place wrong info for "quarantine" and no use am again.
 
 ### Context Distraction
 
-**Wetin e be:** When di context don big reach, di model go dey focus too much on di history wey don gather instead of using wetin e learn during training, wey fit lead to repetitive or useless actions. Models fit dey make mistake even before di context window full.
+**Wet in be:** When context too big so model start focus too much on old history instead of wetin e learn during training, e lead to repetitive or useless actions. Models fit start make mistakes even before context window fill up.
 
-**Wetin to do:** Use **context summarization**. From time to time, compress di information wey don gather into short summaries, keep di important details and remove di extra history. Dis go help "reset" di focus.
+**Wetin to do:** Use **context summarization**. Regularly compress info to short summaries, keep important details but remove repeated history. Dis go help reset di focus.
 
-**Travel Booking Example:** You don dey talk about different dream travel destinations for long, including di story of your backpacking trip two years ago. When you finally ask **"find me cheap flight for next month,"** di agent go dey stuck for di old, no-important details and go dey ask about your backpacking gear or past trips, instead of di current request.
+**Travel Booking Example:** You don dey talk plenty about dream travel places for long time, include detailed story about your backpacking trip from two years ago. When you finally ask to **"find me cheap flight for** **next month****,"** agent go confuse with old irrelevant details and e go keep dey ask about your backpacking things or old plans, forget your current request.
 
-**Solution:** After plenty turns or when di context don big, di agent suppose **summarize di most recent and important parts of di talk** – focus on your current travel dates and destination – and use di summary for di next LLM call, throway di less important old talk.
+**Solution:** After certain turns or when context big, agent suppose **make summary of recent and relevant parts of conversation** – focus on your current travel dates and where you want go – and use that short summary for next LLM call, discard less relevant old chat.
 
 ### Context Confusion
 
-**Wetin e be:** When too much context, like too many tools, dey make di model dey give bad replies or dey call tools wey no dey relevant. Small models dey suffer dis one well.
+**Wet in be:** When too much unnecessary context dey, mostly in form of plenty available tools, e fit make model respond bad or call wrong tools. Smaller models dey prone to dis most.
 
-**Wetin to do:** Use **tool loadout management** with RAG techniques. Store tool descriptions for vector database and select _only_ di tools wey dey relevant for di specific task. Research show say make tool selection no pass 30.
+**Wetin to do:** Use **tool loadout management** with RAG techniques. Store tool descriptions for vector database and pick _only_ most relevant tools for each task. Research show say make tools no pass 30.
 
-**Travel Booking Example:** Your agent get access to plenty tools: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, etc. You ask, **"Wetin be di best way to waka for Paris?"** Because di tools plenty, di agent go dey confused and fit try call `book_flight` _inside_ Paris, or `rent_car` even though you like public transport, because di tool descriptions fit dey overlap or e no fit choose di best one.
+**Travel Booking Example:** Your agent get access to plenty tools: `book_flight`, `book_hotel`, `rent_car`, `find_tours`, `currency_converter`, `weather_forecast`, `restaurant_reservations`, and others. You ask, **"How best I fit waka for Paris?"** Because of many tools, agent go confuse and fit try call `book_flight` _inside_ Paris, or `rent_car` even when you like public transport, because tool descriptions fit overlap or e no fit sabi which best.
 
-**Solution:** Use **RAG for tool descriptions**. When you ask about waka for Paris, di system go dynamically bring out _only_ di tools wey dey relevant like `rent_car` or `public_transport_info` based on your question, and show di focused "loadout" of tools to di LLM.
+**Solution:** Use **RAG for tool descriptions**. When you ask about waka for Paris, system go dynamically bring _only_ most relevant tools like `rent_car` or `public_transport_info` based on your question, show focused "loadout" of tools to LLM.
 
 ### Context Clash
 
-**Wetin e be:** When conflicting information dey inside di context, e go cause inconsistent reasoning or bad final replies. Dis dey happen when information dey come in stages, and di early, wrong assumptions still dey di context.
+**Wet in be:** When conflicting info dey inside context, e fit cause inconsistent reasoning or bad final responses. Dis dey happen when info come in stages, and early wrong assumptions still dey for context.
 
-**Wetin to do:** Use **context pruning** and **offloading**. Pruning dey remove old or conflicting information as new details dey come. Offloading dey give di model separate "scratchpad" workspace to process information without making di main context scatter.
+**Wetin to do:** Use **context pruning** and **offloading**. Pruning mean remove old or conflicting info as new details come. Offloading mean give model separate "scratchpad" workspace to process info without full context get problem.
 
-**Travel Booking Example:** You first tell your agent, **"I wan fly economy class."** Later for di talk, you change your mind and say, **"For dis trip, make we go business class."** If di two instructions still dey di context, di agent fit dey confused about which one to follow.
 
-**Solution:** Use **context pruning**. When new instruction dey contradict old one, di old instruction go dey removed or e go dey clearly overridden for di context. Or di agent fit use **scratchpad** to settle di conflicting preferences before e decide, so di final instruction go dey clear.
+**Travel Booking Example:** You first tell your agent, **"I want to fly economy class."** Later for di conversation, you change your mind and talk, **"Actually, for dis trip, make we go business class."** If both instructions still dey for di context, di agent fit get conflicting search results or e fit confuse about which preference to put for front.
 
-## Get More Questions About Context Engineering?
+**Solution:** Make you do **context pruning**. When new instruction dey contradict old one, di old instruction go comot or dem go override am well for di context. Another way be say di agent fit use **scratchpad** to fix conflicting preferences before e decide, to make sure only di final, correct instruction na im go guide im action.
 
-Join di [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet other learners, attend office hours and get answers to your AI Agents questions.
+## You get More Questions About Context Engineering?
+
+Join di [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) to meet other learners, attend office hours and make your AI Agents questions get correct answer.
+## Previous Lesson
+
+[Agentic Protocols](../11-agentic-protocols/README.md)
+
+## Next Lesson
+
+[Memory for AI Agents](../13-agent-memory/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI transleshion service [Co-op Translator](https://github.com/Azure/co-op-translator) do di transleshion. Even as we dey try make am accurate, abeg make you sabi say automatik transleshion fit get mistake or no dey correct well. Di original dokyument wey dey for im native language na di one wey you go take as di main source. For important mata, e good make you use professional human transleshion. We no go fit take blame for any misunderstanding or wrong interpretation wey go happen because you use dis transleshion.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

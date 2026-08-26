@@ -2,63 +2,63 @@
 
 ## 簡介
 
-本課程將教您如何執行課程中的程式碼範例。
+本課程將介紹如何執行本課程的程式碼範例。
 
-## 加入其他學習者並獲得幫助
+## 加入其他學習者並獲得協助
 
-在您開始複製您的倉庫之前，請加入 [AI Agents For Beginners Discord 頻道](https://aka.ms/ai-agents/discord)，以獲得設定上的幫助、課程相關問題的解答，或與其他學習者交流。
+在您開始複製您的資料庫之前，請加入 [AI Agents For Beginners Discord 頻道](https://aka.ms/ai-agents/discord)，以獲取任何設定上的協助、課程相關問題或與其他學習者交流。
 
-## 複製或分叉此倉庫
+## 複製或分叉此資料庫
 
-首先，請複製或分叉 GitHub 倉庫。這將建立您自己的課程材料版本，讓您可以執行、測試及調整程式碼！
+請先複製或分叉 GitHub 儲存庫。這將建立您自己的課程材料版本，使您能執行、測試及調整程式碼！
 
-您可以點擊以下連結來 <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">分叉倉庫</a>
+您可以點擊連結 <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">分叉儲存庫</a> 來完成此動作
 
-現在，您應該擁有此課程的分叉版本，連結如下：
+您現在應該擁有以下連結中的課程分叉版本：
 
-![分叉倉庫](../../../translated_images/zh-TW/forked-repo.33f27ca1901baa6a.webp)
+![分叉儲存庫](../../../translated_images/zh-TW/forked-repo.33f27ca1901baa6a.webp)
 
 ### 淺層複製（建議用於工作坊 / Codespaces）
 
-  >完整的倉庫可能很大（約 3 GB），當您下載完整的歷史記錄和所有檔案時。如果您只參加工作坊或只需要幾個課程資料夾，淺層複製（或稀疏複製）可以避免大部分的下載，僅保留最新的歷史記錄或跳過部分檔案。
+  > 如果您下載完整歷史紀錄和所有檔案，整個儲存庫可能會很大（約 3 GB）。若僅參加工作坊或只需部分課程資料夾，淺層複製（或稀疏複製）透過截斷歷史和/或跳過 blob，避免大部分下載量。
 
-#### 快速淺層複製 — 最小的歷史記錄，所有檔案
+#### 快速淺層複製 — 最小歷史紀錄，所有檔案
 
-在以下指令中，將 `<your-username>` 替換為您的分叉 URL（或如果您偏好，使用上游 URL）。
+請將下面指令中 `<your-username>` 替換成您的分叉 URL（或如果您願意，使用上游 URL）。
 
-若只複製最新的提交歷史記錄（下載量小）：
+複製最新提交歷史紀錄（下載較小）：
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-若要複製特定分支：
+複製特定分支：
 
 ```bash|powershell
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### 部分（稀疏）複製 — 最小的檔案 + 只選擇特定資料夾
+#### 部分（稀疏）複製 — 最小 blob + 只取指定資料夾
 
-此方法使用部分複製和稀疏檢出（需要 Git 2.25+，建議使用支援部分複製的現代 Git）：
+此方法使用部分複製與稀疏檢出（需要 Git 2.25+，建議使用支持部分複製的新版 Git）：
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-進入倉庫資料夾：
+進入儲存庫資料夾：
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-然後指定您需要的資料夾（以下範例顯示兩個資料夾）：
+然後指定您想要的資料夾（下方範例示範兩個資料夾）：
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-複製並驗證檔案後，如果您只需要檔案並希望釋放空間（不需要 git 歷史記錄），請刪除倉庫的元數據（💀不可逆 — 您將失去所有 Git 功能：無法提交、拉取、推送或存取歷史記錄）。
+複製並確認檔案後，如果您只需要檔案並想釋放空間（無須 git 歷史），請刪除儲存庫元資料（💀不可逆—將失去所有 Git 功能：無法提交、拉取、推送或存取歷史）。
 
 ```bash
 # zsh/bash
@@ -70,52 +70,41 @@ rm -rf .git
 Remove-Item -Recurse -Force .git
 ```
 
-#### 使用 GitHub Codespaces（建議避免本地大型下載）
+#### 使用 GitHub Codespaces（建議避免本機大下載）
 
-- 通過 [GitHub UI](https://github.com/codespaces) 為此倉庫建立新的 Codespace。
+- 透過 [GitHub 使用者介面](https://github.com/codespaces)為此儲存庫建立一個新的 Codespace。  
 
-- 在新建立的 Codespace 的終端中，執行上述的淺層/稀疏複製指令，僅將您需要的課程資料夾帶入 Codespace 工作區。
-- 選擇性：在 Codespaces 中複製後，移除 .git 以釋放額外空間（請參考上述移除指令）。
-- 注意：如果您偏好直接在 Codespaces 中開啟倉庫（不額外複製），請注意 Codespaces 會構建開發容器環境，可能仍會配置超出您需求的內容。在新的 Codespace 中複製淺層版本可讓您更好地控制磁碟使用量。
+- 在新建立的 Codespace 終端機中，執行上述其中一個淺層/稀疏複製指令，將您需要的課程資料夾帶入 Codespace 工作空間。
+- 選用：在 Codespaces 中複製後，刪除 .git 以回收更多空間（請參閱上述移除指令）。
+- 注意：如果您偏好直接於 Codespaces 開啟儲存庫（無需額外複製），請注意 Codespaces 將構建 devcontainer 環境，且可能仍配置超過您所需資源。於新 Codespace 中複製淺層版本，能讓您更好控管磁碟使用。
 
-#### 提示
+#### 小技巧
 
-- 如果您想編輯/提交，請始終替換為您的分叉 URL。
-- 如果您之後需要更多的歷史記錄或檔案，您可以拉取它們或調整稀疏檢出以包含其他資料夾。
+- 若想編輯/提交，務必用您的分叉網址替換複製 URL。
+- 若日後需要更多歷史或檔案，可以取得它們或調整稀疏檢出來包含其他資料夾。
 
 ## 執行程式碼
 
-本課程提供一系列 Jupyter Notebook，讓您能夠親身體驗如何建立 AI Agents。
+本課程提供一系列 Jupyter 筆記本，帶您動手實作 AI Agent 的建置。
 
-程式碼範例使用以下方式：
+程式碼範例使用 **Microsoft Agent Framework (MAF)** 與 `FoundryChatClient`，此用戶端透過 **Microsoft Foundry** 連接至 **Microsoft Foundry Agent Service V2**（即 Responses API）。
 
-**需要 GitHub 帳號 - 免費**：
+所有 Python 筆記本皆標註為 `*-python-agent-framework.ipynb`。
 
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace。標記為 (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace。標記為 (autogen.ipynb)
+## 環境需求
 
-**需要 Azure 訂閱**：
-
-3) Azure AI Foundry + Azure AI Agent Service。標記為 (azureaiagent.ipynb)
-
-我們鼓勵您嘗試所有三種類型的範例，看看哪一種最適合您。
-
-無論您選擇哪一種，都將決定您需要遵循的設定步驟：
-
-## 系統需求
-
-- Python 3.12+
-  - **注意**：如果您尚未安裝 Python3.12，請確保安裝它。然後使用 python3.12 建立您的 venv，以確保從 requirements.txt 檔案中安裝正確的版本。
+- Python 3.12 以上
+  - <strong>注意</strong>：如果尚未安裝 Python3.12，請務必安裝。接著使用 python3.12 建立虛擬環境，以確保安裝 requirements.txt 中的正確版本。
   
-    >範例
+    > 範例
 
-    建立 Python venv 目錄：
+    建立 Python 虛擬環境資料夾：
 
     ```bash|powershell
     python -m venv venv
     ```
 
-    然後啟動 venv 環境：
+    然後啟用虛擬環境：
 
     ```bash
     # zsh/bash
@@ -127,113 +116,84 @@ Remove-Item -Recurse -Force .git
     venv\Scripts\activate
     ```
 
-- .NET 10+: 對於使用 .NET 的範例程式碼，請確保安裝 [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) 或更新版本。然後檢查您已安裝的 .NET SDK 版本：
+- .NET 10 以上：使用 .NET 範例程式碼時，請安裝 [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) 或更高版本。接著檢查已安裝的 SDK 版本：
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- GitHub 帳號 - 用於存取 GitHub Models Marketplace
-- Azure 訂閱 - 用於存取 Azure AI Foundry
-- Azure AI Foundry 帳號 - 用於存取 Azure AI Agent Service
+- **Azure CLI** — 用於認證。請從 [aka.ms/installazurecli](https://aka.ms/installazurecli) 安裝。
+- **Azure 訂閱** — 用於存取 Microsoft Foundry 和 Microsoft Foundry Agent Service。
+- **Microsoft Foundry 專案** — 需有已部署模型的專案（如 `gpt-5-mini`）。詳見下方 [步驟 1](#步驟-1：建立-microsoft-foundry-專案)。
 
-我們在此倉庫的根目錄中包含了一個 `requirements.txt` 檔案，其中列出了執行程式碼範例所需的所有 Python 套件。
+本儲存庫根目錄中包含 `requirements.txt`，列出了執行程式碼範例所需的所有 Python 套件。
 
-您可以在終端中於倉庫根目錄執行以下指令來安裝它們：
+您可於儲存庫根目錄的終端機執行下列指令安裝套件：
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
 
-我們建議建立 Python 虛擬環境以避免任何衝突和問題。
+建議建立 Python 虛擬環境，以避免衝突和問題。
 
 ## 設定 VSCode
 
-確保您在 VSCode 中使用正確版本的 Python。
+請確定 VSCode 使用正確的 Python 版本。
 
 ![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## 使用 GitHub Models 的範例設定 
+## 設定 Microsoft Foundry 與 Microsoft Foundry Agent Service
 
-### 步驟 1：取得您的 GitHub 個人存取權杖 (PAT)
+### 步驟 1：建立 Microsoft Foundry 專案
 
-本課程利用 GitHub Models Marketplace，提供免費存取大型語言模型 (LLMs)，您將使用這些模型來建立 AI Agents。
+您需要一個 Microsoft Foundry **hub** 與 <strong>專案</strong>，且專案內需部署模型，方能執行筆記本。
 
-要使用 GitHub Models，您需要建立 [GitHub 個人存取權杖](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)。
+1. 前往 [ai.azure.com](https://ai.azure.com) 並用 Azure 帳戶登入。
+2. 建立 **hub**（或使用現有 hub）。參閱：[Hub 資源概覽](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)。
+3. 在 hub 中建立 <strong>專案</strong>。
+4. 從 **Models + Endpoints** → **Deploy model** 部署模型（如 `gpt-5-mini`）。
 
-您可以前往您的 GitHub 帳號中的 <a href="https://github.com/settings/personal-access-tokens" target="_blank">個人存取權杖設定</a> 來完成此操作。
+### 步驟 2：取得專案端點與模型部署名稱
 
-請遵循 [最低權限原則](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely) 建立您的權杖。這意味著您應僅賦予權杖執行本課程程式碼範例所需的權限。
+於 Microsoft Foundry 入口網站的專案中：
 
-1. 在螢幕左側選擇 `Fine-grained tokens` 選項，進入 **開發者設定**。
-
-   ![開發者設定](../../../translated_images/zh-TW/profile_developer_settings.410a859fe749c755.webp)
-
-   然後選擇 `Generate new token`。
-
-   ![生成權杖](../../../translated_images/zh-TW/fga_new_token.1c1a234afe202ab3.webp)
-
-2. 為您的權杖輸入一個描述性名稱，反映其用途，方便日後識別。
-
-    🔐 權杖有效期建議
-
-    建議有效期：30 天
-    為了更安全，您可以選擇更短的期限，例如 7 天 🛡️
-    這是一個很好的方式來設定個人目標，並在學習動力高漲時完成課程 🚀。
-
-    ![權杖名稱和到期日期](../../../translated_images/zh-TW/token-name-expiry-date.a095fb0de6386864.webp)
-
-3. 將權杖的範圍限制在此倉庫的分叉版本。
-
-    ![限制範圍至分叉倉庫](../../../translated_images/zh-TW/token_repository_limit.924ade5e11d9d8bb.webp)
-
-4. 限制權杖的權限：在 **Permissions** 下，點擊 **Account** 標籤，然後點擊 "+ Add permissions" 按鈕。下拉選單會出現。請搜尋 **Models** 並勾選它。
-
-    ![新增 Models 權限](../../../translated_images/zh-TW/add_models_permissions.c0c44ed8b40fc143.webp)
-
-5. 在生成權杖之前，請確認所需的權限。 ![確認權限](../../../translated_images/zh-TW/verify_permissions.06bd9e43987a8b21.webp)
-
-6. 在生成權杖之前，請確保您已準備好將權杖存放在安全的地方，例如密碼管理器保險庫，因為生成後將無法再次查看。 ![安全存放權杖](../../../translated_images/zh-TW/store_token_securely.08ee2274c6ad6caf.webp)
-
-複製您剛剛建立的新權杖。您現在需要將此權杖添加到本課程包含的 `.env` 檔案中。
-
-### 步驟 2：建立您的 `.env` 檔案
-
-要建立 `.env` 檔案，請在終端中執行以下指令。
-
-```bash
-# zsh/bash
-cp .env.example .env
-```
-
-```powershell
-# PowerShell
-Copy-Item .env.example .env
-```
-
-這將複製範例檔案並在您的目錄中建立 `.env`，您需要在其中填寫環境變數的值。
-
-複製您的權杖後，使用您喜愛的文字編輯器打開 `.env` 檔案，並將您的權杖貼到 `GITHUB_TOKEN` 欄位中。
-
-![GitHub 權杖欄位](../../../translated_images/zh-TW/github_token_field.20491ed3224b5f4a.webp)
-
-現在，您應該可以執行本課程的程式碼範例。
-
-## 使用 Azure AI Foundry 和 Azure AI Agent Service 的範例設定
-
-### 步驟 1：取得您的 Azure 專案端點
-
-請按照此處的步驟建立 Azure AI Foundry 中的 hub 和專案：[Hub 資源概述](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-建立專案後，您需要取得專案的連接字串。
-
-您可以在 Azure AI Foundry 入口網站的專案 **概述** 頁面找到此資訊。
+- <strong>專案端點</strong> — 前往 **Overview** 頁面並複製端點 URL。
 
 ![專案連接字串](../../../translated_images/zh-TW/project-endpoint.8cf04c9975bbfbf1.webp)
 
-### 步驟 2：建立您的 `.env` 檔案
+- <strong>模型部署名稱</strong> — 前往 **Models + Endpoints**，選擇您的已部署模型，並記下 **Deployment name**（如 `gpt-5-mini`）。
 
-要建立 `.env` 檔案，請在終端中執行以下指令。
+### 步驟 3：使用 `az login` 登入 Azure
+
+所有筆記本均使用 **`AzureCliCredential`** 進行認證，無需管理 API 金鑰。此方式要求您透過 Azure CLI 登入。
+
+1. 若尚未安裝 **Azure CLI**，請先安裝：[aka.ms/installazurecli](https://aka.ms/installazurecli)
+
+2. 執行以下指令登入：
+
+    ```bash|powershell
+    az login
+    ```
+
+    若您使用遠端／Codespace 環境且無瀏覽器：
+
+    ```bash|powershell
+    az login --use-device-code
+    ```
+
+3. 如系統提示，選擇您的訂閱 — 選擇包含 Foundry 專案的訂閱。
+
+4. 驗證您已登入：
+
+    ```bash|powershell
+    az account show
+    ```
+
+> **為何要使用 `az login`？** 筆記本使用 `azure-identity` 套件的 `AzureCliCredential` 進行認證，意即您的 Azure CLI 工作階段提供憑證 — 不需在 `.env` 檔案中放置 API 金鑰或密鑰。這是 [安全最佳實踐](https://learn.microsoft.com/azure/developer/ai/keyless-connections)。
+
+### 步驟 4：建立你的 `.env` 檔案
+
+複製範例檔：
 
 ```bash
 # zsh/bash
@@ -245,79 +205,185 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-這將複製範例檔案並在您的目錄中建立 `.env`，您需要在其中填寫環境變數的值。
+打開 `.env`，填入以下兩個數值：
 
-複製您的權杖後，使用您喜愛的文字編輯器打開 `.env` 檔案，並將您的權杖貼到 `PROJECT_ENDPOINT` 欄位中。
+```env
+AZURE_AI_PROJECT_ENDPOINT=https://<your-project>.services.ai.azure.com/api/projects/<your-project-id>
+AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-5-mini
+```
 
-### 步驟 3：登入 Azure
+| 變數 | 位置 |
+|----------|-----------------|
+| `AZURE_AI_PROJECT_ENDPOINT` | Foundry 入口網站 → 您的專案 → **Overview** 頁面 |
+| `AZURE_AI_MODEL_DEPLOYMENT_NAME` | Foundry 入口網站 → **Models + Endpoints** → 您已部署模型的名稱 |
 
-作為安全最佳實踐，我們將使用 [無密鑰認證](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst) 來使用 Microsoft Entra ID 認證登入 Azure OpenAI。
+大部分課程就這樣完成了！筆記本會自動透過您的 `az login` 工作階段認證。
 
-接下來，打開終端並執行 `az login --use-device-code` 以登入您的 Azure 帳號。
+### 步驟 5：安裝 Python 相依套件
 
-登入後，在終端中選擇您的訂閱。
+```bash|powershell
+pip install -r requirements.txt
+```
 
-## 額外的環境變數 - Azure Search 和 Azure OpenAI 
+建議於先前建立的虛擬環境中執行此作業。
 
-針對 Agentic RAG 課程 - 第 5 課 - 有些範例使用 Azure Search 和 Azure OpenAI。
+## 第五課額外設定（Agentic RAG）
 
-如果您想執行這些範例，您需要在 `.env` 檔案中添加以下環境變數：
+第五課使用 **Azure AI Search** 來進行檢索增強生成。如果您計劃執行該課程，請將以下變數加入 `.env` 檔案：
 
-### 概述頁面（專案）
+| 變數 | 位置 |
+|----------|-----------------|
+| `AZURE_SEARCH_SERVICE_ENDPOINT` | Azure 入口網站 → 您的 **Azure AI Search** 資源 → **Overview** → URL |
+| `AZURE_SEARCH_API_KEY` | Azure 入口網站 → 您的 **Azure AI Search** 資源 → **Settings** → **Keys** → 主要管理金鑰 |
 
-- `AZURE_SUBSCRIPTION_ID` - 在專案 **概述** 頁面的 **專案詳細資訊** 中檢查。
+## 直接呼叫 Azure OpenAI 的課程額外設定（第 6 與 8 課）
 
-- `AZURE_AI_PROJECT_NAME` - 查看專案 **概述** 頁面頂部。
+部分第 6 與 8 課的筆記本直接呼叫 **Azure OpenAI**（使用 **Responses API**），而非透過 Microsoft Foundry 專案。這些範例之前使用 GitHub 模型，該服務已停用（將於 2026 年 7 月退休），且不支援 Responses API。如果您要執行這些範例，請將以下變數加入 `.env` 檔案：
 
-- `AZURE_OPENAI_SERVICE` - 在 **概述** 頁面的 **包含的功能** 標籤中找到 **Azure OpenAI Service**。
+| 變數 | 位置 |
+|----------|-----------------|
+| `AZURE_OPENAI_ENDPOINT` | Azure 入口網站 → 您的 **Azure OpenAI** 資源 → **Keys and Endpoint** → 端點（例如 `https://<your-resource>.openai.azure.com`） |
+| `AZURE_OPENAI_DEPLOYMENT` | 您已部署，且支援 Responses API 的模型名稱（例如 `gpt-5-mini`） |
+| `AZURE_OPENAI_API_KEY` | 選用 — 僅在您使用基於金鑰的認證，非 `az login` / Entra ID 時填寫 |
 
-### 管理中心
+> Responses API 使用穩定的 `/openai/v1/` 端點，因此不需指定 `api-version`。請使用 `az login` 登入，以利用無金鑰的 Entra ID 認證。
 
-- `AZURE_OPENAI_RESOURCE_GROUP` - 在 **管理中心** 的 **概述** 頁面中，前往 **專案屬性**。
+## 替代提供者：MiniMax（OpenAI 相容）
 
-- `GLOBAL_LLM_SERVICE` - 在 **連接的資源** 下，找到 **Azure AI Services** 連接名稱。如果未列出，請檢查 **Azure 入口網站** 中的資源群組以找到 AI Services 資源名稱。
+[MiniMax](https://platform.minimaxi.com/) 提供支援最大 204K 代幣的長上下文模型，透過 OpenAI 相容 API。由於 Microsoft Agent Framework 的 `OpenAIChatClient` 可使用任何 OpenAI 相容端點，您可以將 MiniMax 作為 Azure OpenAI 或 OpenAI 的無縫替代方案。
 
-### 模型 + 端點頁面
+請將以下變數加入 `.env` 檔案：
 
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - 選擇您的嵌入模型（例如 `text-embedding-ada-002`），並記下模型詳細資訊中的 **部署名稱**。
+| 變數 | 位置 |
+|----------|-----------------|
+| `MINIMAX_API_KEY` | [MiniMax 平台](https://platform.minimaxi.com/) → API 金鑰 |
+| `MINIMAX_BASE_URL` | 使用 `https://api.minimax.io/v1`（預設值） |
+| `MINIMAX_MODEL_ID` | 要使用的模型名稱（例如 `MiniMax-M3`） |
 
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - 選擇您的聊天模型（例如 `gpt-4o-mini`），並記下模型詳細資訊中的 **部署名稱**。
+<strong>範例模型</strong>：`MiniMax-M3`（推薦）、`MiniMax-M2.7`、`MiniMax-M2.7-highspeed`（較快回應）。模型名稱及可用性會隨時間變動，且特定模組的使用權限可能依您的帳戶或地區而異—請至 [MiniMax 平台](https://platform.minimaxi.com/) 查詢最新列表。若您的帳戶無法使用 `MiniMax-M3`，請將 `MINIMAX_MODEL_ID` 設為您可用的模型（例如 `MiniMax-M2.7`）。
 
-### Azure 入口網站
+使用 `OpenAIChatClient` 的程式碼範例（如第 14 課飯店訂房工作流程）會在設定了 `MINIMAX_API_KEY` 時，偵測並自動使用您的 MiniMax 配置。
 
-- `AZURE_OPENAI_ENDPOINT` - 找到 **Azure AI services**，點擊它，然後前往 **資源管理**，**金鑰和端點**，向下滾動到 "Azure OpenAI endpoints"，複製標記為 "Language APIs" 的端點。
+## 替代提供者：Foundry Local（本機執行模型）
 
-- `AZURE_OPENAI_API_KEY` - 在同一頁面中，複製 KEY 1 或 KEY 2。
+[Foundry Local](https://foundrylocal.ai) 是輕量級執行環境，可完全在您自己的機器上下載、管理與提供語言模型服務，透過 OpenAI 相容 API — 無需雲端、Azure 訂閱或 API 金鑰。適合離線開發、無雲成本實驗或需要資料本機存放的場合。
 
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - 找到您的 **Azure AI Search** 資源，點擊它，然後查看 **概述**。
+由於 Microsoft Agent Framework 的 `OpenAIChatClient` 可使用任意 OpenAI 相容端點，Foundry Local 正是 Azure OpenAI 的本機替代方案。
 
-- `AZURE_SEARCH_API_KEY` - 然後前往 **設定**，再到 **金鑰**，複製主要或次要管理金鑰。
+**1. 安裝 Foundry Local**
 
-### 外部網頁
+```bash
+# Windows 作業系統
+winget install Microsoft.FoundryLocal
 
-- `AZURE_OPENAI_API_VERSION` - 訪問 [API 版本生命週期](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) 頁面，查看 **最新 GA API 發佈**。
+# macOS 作業系統
+brew install foundrylocal
+```
 
-### 設定無密鑰認證
+**2. 下載並執行模型**（此步驟同時啟動本地服務）：
 
-我們將使用 Azure OpenAI 的無密鑰連接，而不是硬編碼您的憑證。為此，我們將匯入 `DefaultAzureCredential`，稍後調用 `DefaultAzureCredential` 函數以獲取憑證。
+```bash
+foundry model list          # 查看可用模型
+foundry model run phi-4-mini
+```
+
+**3. 安裝用於偵測本地端點的 Python SDK：**
+
+```bash
+pip install foundry-local-sdk
+```
+
+**4. 指向 Microsoft Agent Framework 使用您的本地模型：**
 
 ```python
-# Python
-from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
+from foundry_local import FoundryLocalManager
+from agent_framework.openai import OpenAIChatClient
+
+# 下載（如有需要）並在本地提供模型，然後發現端點/埠口。
+manager = FoundryLocalManager("phi-4-mini")
+
+chat_client = OpenAIChatClient(
+    base_url=manager.endpoint,      # 例如 http://localhost:<port>/v1
+    api_key=manager.api_key,        # 對於 Foundry Local，總是「不需要」
+    model_id=manager.get_model_info("phi-4-mini").id,
+)
+
+agent = chat_client.as_agent(
+    name="LocalAgent",
+    instructions="You are a helpful assistant running fully on-device.",
+)
+```
+
+> **注意：** Foundry Local 提供 OpenAI 相容的 **Chat Completions** 端點，適合本機開發與離線使用。若需完整 **Responses API** 功能（有狀態對話、深入工具編排、代理式開發），請指向 **Azure OpenAI** 或 **Microsoft Foundry** 專案，如課程示範。詳情請參閱 [Foundry Local 文件](https://foundrylocal.ai) 以查看現行模型目錄及平台支援。
+
+## 第八課額外設定（Bing Grounding 工作流程）
+
+
+第 8 課中的條件工作流程筆記本使用透過 Microsoft Foundry 的 **Bing 根基**。如果您計劃執行該範例，請將此變數添加到您的 `.env` 檔案中：
+
+| 變數 | 位置 |
+|----------|-----------------|
+| `BING_CONNECTION_ID` | Microsoft Foundry 入口網站 → 您的專案 → <strong>管理</strong> → <strong>已連接資源</strong> → 您的 Bing 連線 → 複製連線 ID |
+
+## 疑難排解
+
+### macOS 上的 SSL 憑證驗證錯誤
+
+如果您在 macOS 上遇到類似以下錯誤：
+
+```plaintext
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
+```
+
+這是在 macOS 上 Python 的已知問題，系統 SSL 憑證未自動信任。請依序嘗試以下解決方案：
+
+**方案一：執行 Python 的 Install Certificates 腳本（推薦）**
+
+```bash
+# 將 3.XX 替換為您安裝的 Python 版本（例如，3.12 或 3.13）：
+/Applications/Python\ 3.XX/Install\ Certificates.command
+```
+
+**方案二：在您的筆記本中使用 `connection_verify=False`（僅適用於 GitHub Models 筆記本）**
+
+在第 6 課的筆記本 (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`) 中，已包含註解掉的變通方法。建立 client 時解除註解 `connection_verify=False`：
+
+```python
+client = ChatCompletionsClient(
+    endpoint=endpoint,
+    credential=AzureKeyCredential(token),
+    connection_verify=False,  # 如果遇到證書錯誤，請禁用 SSL 驗證
+)
+```
+
+> **⚠️ 警告：** 禁用 SSL 驗證（`connection_verify=False`）會因跳過憑證驗證而降低安全性。僅在開發環境中作為臨時變通方法使用，切勿在生產環境中使用。
+
+**方案三：安裝並使用 `truststore`**
+
+```bash
+pip install truststore
+```
+
+然後在筆記本或腳本的最上方（在進行任何網路呼叫之前）加入以下內容：
+
+```python
+import truststore
+truststore.inject_into_ssl()
 ```
 
 ## 卡住了嗎？
-如果您在執行此設置時遇到任何問題，請加入我們的 <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI 社群 Discord</a> 或 <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">建立一個問題</a>。
+
+如果您在執行設定時有任何問題，歡迎加入我們的 <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> 或 <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">提出問題</a>。
 
 ## 下一課
 
-您現在已準備好運行本課程的程式碼。祝您在學習 AI Agents 的世界中收穫滿滿！
+您現在已準備好執行本課程的程式碼。祝您學習 AI 代理人的世界愉快！ 
 
-[AI Agents 簡介與應用案例](../01-intro-to-ai-agents/README.md)
+[Introduction to AI Agents and Agent Use Cases](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**免責聲明**：  
-本文件使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。
+**免責聲明**：
+此文件已使用 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。雖然我們努力追求準確性，但請注意自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應視為權威來源。對於關鍵資訊，建議採用專業人工翻譯。我們不對因使用此翻譯所產生的任何誤解或誤譯承擔責任。
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,95 +1,95 @@
-[![多代理設計](../../../translated_images/zh-HK/lesson-9-thumbnail.38059e8af1a5b71d.webp)](https://youtu.be/His9R6gw6Ec?si=3_RMb8VprNvdLRhX)
+[![多智能體設計](../../../translated_images/zh-HK/lesson-9-thumbnail.38059e8af1a5b71d.webp)](https://youtu.be/His9R6gw6Ec?si=3_RMb8VprNvdLRhX)
 
-> _(點擊上方圖片觀看本課程的影片)_
-# AI代理的後設認知
+> _(點擊上方圖片觀看本課程影片)_
+# AI 智能體中的後設認知
 
 ## 簡介
 
-歡迎來到AI代理後設認知的課程！這一章專為對AI代理如何思考自身思維過程感興趣的初學者設計。完成本課程後，您將理解關鍵概念，並掌握應用後設認知於AI代理設計的實用範例。
+歡迎來到 AI 智能體後設認知的課程！本章節專為好奇 AI 智能體如何思考自我思維過程的初學者設計。完成本課程後，您將了解關鍵概念，並掌握應用後設認知於 AI 智能體設計的實用範例。
 
 ## 學習目標
 
 完成本課程後，您將能夠：
 
-1. 理解代理定義中的推理循環影響。
-2. 使用規劃與評估技術幫助代理進行自我修正。
-3. 創建能夠操作程式碼以完成任務的代理。
+1. 理解推理迴圈在智能體定義中的影響。
+2. 利用規劃與評估技術協助自我修正的智能體。
+3. 創建能操控程式碼以完成任務的智能體。
 
-## 後設認知簡介
+## 後設認知介紹
 
-後設認知指的是高階認知過程，涉及對自身思維的思考。對於AI代理而言，這意味著能夠根據自我意識和過往經驗評估並調整行動。後設認知，或稱「思考思維」，是開發具代理性AI系統的重要概念。它涉及AI系統對自身內部過程的認識，並能夠監控、調節和適應其行為。就像我們在觀察環境或解決問題時所做的一樣。這種自我意識能幫助AI系統做出更好的決策、識別錯誤，並隨著時間推進提升其性能——這也再次與圖靈測試以及AI是否會接管的辯論相關。
+後設認知指的是涉及思考自我思維的高階認知過程。對於 AI 智能體來說，這意味著能根據自我意識與過往經驗評估並調整其行動。後設認知，或稱「對思考的思考」，是智能體 AI 系統發展中的重要概念。它包含 AI 系統認識自身內部過程，且能監控、調節及適應其行為。就像我們在觀察環境或分析問題時所做的那樣。這種自我意識能幫助 AI 系統做出更佳決策、識別錯誤，並持續提升運作表現——再次聯想到圖靈測試及 AI 是否將掌控世界的爭論。
 
-在代理性AI系統的背景下，後設認知能幫助解決多項挑戰，例如：
-- 透明性：確保AI系統能解釋其推理和決策。
-- 推理能力：提升AI系統綜合資訊並做出合理決策的能力。
-- 適應性：使AI系統能適應新環境和變化的條件。
-- 感知能力：提升AI系統在辨識和解讀環境數據方面的準確性。
+在智能體 AI 系統的範疇中，後設認知可幫助解決數項挑戰，例如：
+- 透明度：確保 AI 系統能解釋其推理與決策。
+- 推理能力：提升 AI 系統綜合資訊並做出合理決策的能力。
+- 適應能力：使 AI 系統能調整以適應新環境與變化條件。
+- 感知能力：改善 AI 系統對環境資料的準確識別及解讀。
 
 ### 什麼是後設認知？
 
-後設認知，或稱「思考思維」，是一種高階認知過程，涉及對自身認知過程的自我意識和自我調節。在AI領域，後設認知賦予代理評估和調整其策略與行動的能力，從而提升問題解決和決策能力。通過理解後設認知，您可以設計出更智能、更具適應性和效率的AI代理。在真正的後設認知中，AI會明確地對自身的推理進行推理。
+後設認知，或稱「對思考的思考」，係一種高階認知過程，包含自我覺察與自我調節自身的認知過程。在 AI 範疇中，後設認知使智能體能評估及調整其策略與行動，促進問題解決及決策能力的提升。理解後設認知後，您可以設計出不僅更聰明且更具適應性與效率的 AI 智能體。真正的後設認知會讓 AI 明確推理其自身的推理過程。
 
-範例：「我優先選擇了便宜的航班，因為……可能錯過了直飛航班，所以讓我再檢查一次。」
-記錄它為何選擇某條路徑。
-- 注意到它因過度依賴上次的用戶偏好而犯錯，因此修改其決策策略，而不僅僅是最終建議。
-- 診斷模式，例如：「每當我看到用戶提到‘太擁擠’，我不僅應該移除某些景點，還應該反思如果我總是按受歡迎程度排序，那麼我的‘熱門景點’選擇方法就是有缺陷的。」
+範例：「我優先選擇較便宜的航班，因為……可能會錯過直飛航班，讓我重新檢查一下。」。
+追蹤它選擇特定路徑的原因或方式。
+- 注意它因過度依賴上次的用戶偏好而犯錯，故不只修改最終建議，也改變決策策略。
+- 診斷模式，例如：「當我看到用戶提到‘太擁擠’時，我不只是移除某些景點，也應反思 若只依人氣排序‘熱門景點’的方法是有缺陷的。」
 
-### 後設認知在AI代理中的重要性
+### 後設認知在 AI 智能體中的重要性
 
-後設認知在AI代理設計中扮演著至關重要的角色，原因如下：
+後設認知在 AI 智能體設計上扮演關鍵角色，原因包括：
 
 ![後設認知的重要性](../../../translated_images/zh-HK/importance-of-metacognition.b381afe9aae352f7.webp)
 
-- 自我反思：代理可以評估自身表現並找出改進空間。
-- 適應性：代理可以根據過往經驗和變化的環境調整其策略。
-- 錯誤修正：代理可以自主檢測並修正錯誤，從而產生更準確的結果。
-- 資源管理：代理可以通過規劃和評估行動來優化資源使用，例如時間和計算能力。
+- 自我反思：智能體可評估自身表現並識別需改進之處。
+- 適應性：智能體能根據過去經驗和環境變化調整策略。
+- 錯誤修正：智能體可自主偵測與修正錯誤，提高結果準確度。
+- 資源管理：智能體透過規劃與評估行動，優化時間及計算資源的使用。
 
-## AI代理的組成部分
+## AI 智能體的組件
 
-在深入探討後設認知過程之前，首先需要了解AI代理的基本組成部分。AI代理通常由以下部分組成：
+在深入後設認知過程前，理解 AI 智能體的基本組件至關重要。AI 智能體通常包含：
 
-- 人格：代理的個性和特徵，定義了它如何與用戶互動。
-- 工具：代理能執行的功能和能力。
-- 技能：代理擁有的知識和專業技能。
+- 角色特性：智能體的個性能及特徵，決定其與用戶互動方式。
+- 工具：智能體可執行的功能與能力。
+- 技能：智能體擁有的知識和專業能力。
 
-這些組成部分共同構成了一個「專業單元」，能執行特定任務。
+這些組成部分攜手合作，形成能執行特定任務的「專業單元」。
 
-**範例**：
-考慮一個旅遊代理服務，它不僅能規劃您的假期，還能根據實時數據和過往客戶的旅程經驗調整路徑。
+<strong>範例</strong>：
+想想看旅行代理智能體，它不僅規劃您的假期，且能依據即時數據及客戶過往旅程經驗調整行程。
 
-### 範例：旅遊代理服務中的後設認知
+### 範例：旅行代理服務中的後設認知
 
-假設您正在設計一個由AI驅動的旅遊代理服務。這個代理「旅遊代理」幫助用戶規劃假期。為了融入後設認知，旅遊代理需要根據自我意識和過往經驗評估並調整其行動。以下是後設認知可能發揮作用的方式：
+假設您設計一個由 AI 驅動的旅行代理服務。這個智能體「Travel Agent」協助用戶規劃假期。為融合後設認知，Travel Agent 需要基於自我覺察及過去經驗，評估並調整其行動。後設認知可具體體現於：
 
 #### 當前任務
 
-當前任務是幫助用戶規劃巴黎之旅。
+目前任務是協助用戶規劃巴黎之旅。
 
 #### 完成任務的步驟
 
-1. **收集用戶偏好**：詢問用戶的旅行日期、預算、興趣（如博物館、美食、購物）以及任何具體需求。
-2. **檢索資訊**：搜索符合用戶偏好的航班選項、住宿、景點和餐廳。
-3. **生成建議**：提供包含航班詳情、酒店預訂和建議活動的個性化行程。
-4. **根據反饋調整**：詢問用戶對建議的反饋並進行必要的調整。
+1. <strong>收集用戶偏好</strong>：詢問用戶旅行日期、預算、興趣（如博物館、美食、購物）及任何特殊需求。
+2. <strong>檢索資訊</strong>：尋找符合用戶偏好的航班、住宿、景點及餐廳資訊。
+3. <strong>生成建議</strong>：提供包含航班詳情、飯店預訂和推薦活動的個人化行程。
+4. <strong>根據反饋調整</strong>：詢問用戶對建議的意見，並進行必要調整。
 
-#### 所需資源
+#### 需要的資源
 
-- 訪問航班和酒店預訂數據庫。
-- 關於巴黎景點和餐廳的資訊。
-- 過往互動中的用戶反饋數據。
+- 存取航班及飯店預訂資料庫。
+- 巴黎景點與餐廳資訊。
+- 來自先前互動的用戶反饋數據。
 
 #### 經驗與自我反思
 
-旅遊代理利用後設認知來評估其表現並從過往經驗中學習。例如：
+Travel Agent 利用後設認知來評估其績效，並從過往經驗中學習。例如：
 
-1. **分析用戶反饋**：旅遊代理審查用戶反饋，以確定哪些建議受到好評，哪些不受歡迎，並相應地調整未來建議。
-2. **適應性**：如果用戶之前提到不喜歡擁擠的地方，旅遊代理將避免在未來的建議中推薦高峰時段的熱門景點。
-3. **錯誤修正**：如果旅遊代理在過去的預訂中出現錯誤，例如建議了一家已滿房的酒店，它會學習在提出建議前更嚴格地檢查可用性。
+1. <strong>分析用戶反饋</strong>：Travel Agent 評估用戶回饋，判斷哪些建議受歡迎，哪些不佳，並相應調整未來建議。
+2. <strong>適應性</strong>：若用戶先前表明不喜擁擠場所，Travel Agent 未來會避免在高峰時間推薦熱門景點。
+3. <strong>錯誤修正</strong>：若 Travel Agent 過去建議了已額滿的飯店，會學習更嚴謹地查核可用性再做推薦。
 
-#### 實用開發者範例
+#### 實務開發者範例
 
-以下是一個簡化的旅遊代理程式碼範例，展示如何融入後設認知：
+以下為 Travel Agent 代碼融合後設認知的簡化範例：
 
 ```python
 class Travel_Agent:
@@ -101,7 +101,7 @@ class Travel_Agent:
         self.user_preferences = preferences
 
     def retrieve_information(self):
-        # Search for flights, hotels, and attractions based on preferences
+        # 根據偏好搜尋航班、酒店和景點
         flights = search_flights(self.user_preferences)
         hotels = search_hotels(self.user_preferences)
         attractions = search_attractions(self.user_preferences)
@@ -114,10 +114,10 @@ class Travel_Agent:
 
     def adjust_based_on_feedback(self, feedback):
         self.experience_data.append(feedback)
-        # Analyze feedback and adjust future recommendations
+        # 分析反饋並調整未來推薦
         self.user_preferences = adjust_preferences(self.user_preferences, feedback)
 
-# Example usage
+# 使用範例
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -134,70 +134,70 @@ travel_agent.adjust_based_on_feedback(feedback)
 
 #### 為何後設認知重要
 
-- **自我反思**：代理可以分析其表現並找出改進空間。
-- **適應性**：代理可以根據反饋和變化的條件調整策略。
-- **錯誤修正**：代理可以自主檢測並修正錯誤。
-- **資源管理**：代理可以優化資源使用，例如時間和計算能力。
+- <strong>自我反思</strong>：智能體能分析其表現，找出需改進之處。
+- <strong>適應性</strong>：智能體可依反饋與變化條件調整策略。
+- <strong>錯誤修正</strong>：智能體能自主偵測並修正錯誤。
+- <strong>資源管理</strong>：智能體能優化資源運用，如時間和計算能力。
 
-通過融入後設認知，旅遊代理能提供更個性化和準確的旅遊建議，提升整體用戶體驗。
+融入後設認知後，Travel Agent 能提供更個人化且準確的旅遊建議，提高整體用戶體驗。
 
 ---
 
-## 2. 代理中的規劃
+## 2. 智能體中的規劃
 
-規劃是AI代理行為中的關鍵組成部分。它涉及明確目標，考慮當前狀態、資源和可能的障礙，並制定實現目標的步驟。
+規劃是 AI 智能體行為的重要組成，涵蓋訂定達成目標所需步驟，並考量現狀、資源及潛在障礙。
 
-### 規劃的要素
+### 規劃要素
 
-- **當前任務**：清晰定義任務。
-- **完成任務的步驟**：將任務分解為可管理的步驟。
-- **所需資源**：確定必要的資源。
-- **經驗**：利用過往經驗來指導規劃。
+- <strong>當前任務</strong>：明確定義任務。
+- <strong>完成任務步驟</strong>：將任務劃分為易管理的步驟。
+- <strong>所需資源</strong>：識別必要資源。
+- <strong>經驗</strong>：利用過去經驗指導規劃。
 
-**範例**：
-以下是旅遊代理需要採取的步驟，以有效幫助用戶規劃旅行：
+<strong>範例</strong>：
+以下為 Travel Agent 助用戶有效規劃旅程需執行的步驟：
 
-### 旅遊代理的步驟
+### Travel Agent 步驟
 
-1. **收集用戶偏好**
-   - 詢問用戶有關旅行日期、預算、興趣和任何具體需求的詳細資訊。
-   - 範例：「您計劃什麼時候旅行？」、「您的預算範圍是多少？」、「您在假期中喜歡哪些活動？」
+1. <strong>收集用戶偏好</strong>
+   - 詢問用戶旅行日期、預算、興趣及任何特別需求。
+   - 範例：「您計劃何時出行？」、「您的預算範圍是多少？」、「您喜歡假期中參與哪些活動？」
 
-2. **檢索資訊**
-   - 根據用戶偏好搜索相關的旅行選項。
-   - **航班**：查找符合用戶預算和偏好的航班。
-   - **住宿**：尋找符合用戶對地點、價格和設施偏好的酒店或租賃房。
-   - **景點和餐廳**：識別符合用戶興趣的熱門景點、活動和餐飲選擇。
+2. <strong>檢索資訊</strong>
+   - 根據用戶偏好搜尋相關旅遊選項。
+   - <strong>航班</strong>：尋找預算內且在用戶偏好日期的可用航班。
+   - <strong>住宿</strong>：找到符合用戶地點、價格及設施偏好的飯店或租賃物件。
+   - <strong>景點與餐廳</strong>：找出與用戶興趣相符的熱門景點、活動和餐飲選項。
 
-3. **生成建議**
-   - 將檢索到的資訊編輯成個性化行程。
-   - 提供航班選項、酒店預訂和建議活動的詳細資訊，確保建議符合用戶偏好。
+3. <strong>生成建議</strong>
+   - 將檢索到的資訊彙整成個人化行程。
+   - 提供航班選擇、飯店預訂和建議活動細節，確保建議貼合用戶偏好。
 
-4. **向用戶展示行程**
-   - 與用戶分享建議行程供其審閱。
-   - 範例：「這是您巴黎之旅的建議行程，包括航班詳情、酒店預訂以及推薦的活動和餐廳。請告訴我您的想法！」
+4. <strong>向用戶呈現行程</strong>
+   - 與用戶分享建議行程讓其審閱。
+   - 範例：「這是為您規劃的巴黎行程，包含航班資訊、飯店預訂及推薦活動與餐廳清單。請告訴我您的想法！」
 
-5. **收集反饋**
-   - 詢問用戶對建議行程的反饋。
-   - 範例：「您喜歡這些航班選項嗎？」、「這家酒店是否符合您的需求？」、「有沒有需要添加或刪除的活動？」
+5. <strong>收集反饋</strong>
+   - 詢問用戶對建議行程的看法。
+   - 範例：「您喜歡這些航班選擇嗎？」「這間飯店符合您的需求嗎？」「您想加減哪些活動？」
 
-6. **根據反饋調整**
+6. <strong>根據反饋調整</strong>
    - 根據用戶反饋修改行程。
-   - 對航班、住宿和活動建議進行必要的更改，以更好地符合用戶偏好。
+   - 對航班、住宿及活動建議做必要調整，更吻合用戶偏好。
 
-7. **最終確認**
-   - 向用戶展示更新後的行程以進行最終確認。
-   - 範例：「我根據您的反饋進行了調整。這是更新後的行程。看起來一切都符合您的需求嗎？」
+7. <strong>最終確認</strong>
+   - 向用戶呈現更新後行程，請其最終確認。
+   - 範例：「我已根據您的意見調整行程。這是更新版，您覺得還好嗎？」
 
-8. **預訂並確認**
-   - 在用戶批准行程後，進行航班、住宿和任何預先計劃活動的預訂。
-   - 向用戶發送確認詳情。
+8. <strong>預訂與確認</strong>
+   - 用戶確認行程後，進行航班、住宿及預定活動。
+   - 將確認詳情發送給用戶。
 
-9. **提供持續支持**
-   - 在用戶旅行前和旅行期間隨時提供幫助。
-   - 範例：「如果您在旅行期間需要任何進一步的幫助，隨時與我聯繫！」
+9. <strong>持續支援</strong>
+   - 在用戶旅程前及期間，隨時提供協助及處理額外需求。
+   - 範例：「旅途中若需任何協助，隨時聯絡我！」
 
-### 範例互動
+### 互動示範
 
 ```python
 class Travel_Agent:
@@ -223,7 +223,7 @@ class Travel_Agent:
         self.experience_data.append(feedback)
         self.user_preferences = adjust_preferences(self.user_preferences, feedback)
 
-# Example usage within a booing request
+# 在預訂請求中的範例用法
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -238,48 +238,48 @@ feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)
 travel_agent.adjust_based_on_feedback(feedback)
 ```
 
-## 3. 修正型RAG系統
+## 3. 糾正型 RAG 系統
 
-首先，讓我們了解RAG工具與預先上下文加載的區別。
+首先，我們來理解 RAG 工具與預先載入上下文的區別。
 
-![RAG與上下文加載](../../../translated_images/zh-HK/rag-vs-context.9eae588520c00921.webp)
+![RAG 與上下文加載比較](../../../translated_images/zh-HK/rag-vs-context.9eae588520c00921.webp)
 
 ### 檢索增強生成（RAG）
 
-RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從外部來源提取相關文件或數據，這些檢索到的資訊用於增強生成模型的輸入。這有助於模型生成更準確且上下文相關的回應。
+RAG 結合了檢索系統與生成模型。當提出查詢時，檢索系統從外部資源檢索相關文件或資料，再將檢索到的資訊用於增強輸入給生成模型，有助模型產生更準確且具語境相關的回應。
 
-在RAG系統中，代理從知識庫中檢索相關資訊，並利用這些資訊生成適當的回應或行動。
+在 RAG 系統中，智能體從知識庫檢索相關資訊，並用以生成適當回應或行動。
 
-### 修正型RAG方法
+### 糾正型 RAG 方法
 
-修正型RAG方法專注於使用RAG技術來修正錯誤並提升AI代理的準確性。這包括：
+糾正型 RAG 的重點在於運用 RAG 技術來糾正錯誤與提升 AI 智能體精準度。這包括：
 
-1. **提示技術**：使用特定提示引導代理檢索相關資訊。
-2. **工具**：實施算法和機制，使代理能夠評估檢索資訊的相關性並生成準確的回應。
-3. **評估**：持續評估代理的表現，並進行調整以提升其準確性和效率。
+1. <strong>提示技術</strong>：利用特定提示引導智能體檢索相關資訊。
+2. <strong>工具</strong>：實作演算法與機制，讓智能體評估檢索資訊的相關度並產生精確回應。
+3. <strong>評估</strong>：持續評估智能體表現，並進行調整以提升準確率與效率。
 
-#### 範例：搜索代理中的修正型RAG
+#### 範例：搜尋智能體中的糾正型 RAG
 
-考慮一個從網路檢索資訊以回答用戶查詢的搜索代理。修正型RAG方法可能包括：
+想像一個從網路檢索資訊回應使用者查詢的搜尋智能體。糾正型 RAG 方法可能包含：
 
-1. **提示技術**：根據用戶輸入制定搜索查詢。
-2. **工具**：使用自然語言處理和機器學習算法對搜索結果進行排序和篩選。
-3. **評估**：分析用戶反饋以識別並修正檢索資訊中的不準確之處。
+1. <strong>提示技術</strong>：根據用戶輸入構建搜尋查詢。
+2. <strong>工具</strong>：使用自然語言處理及機器學習演算法對搜尋結果進行排名與篩選。
+3. <strong>評估</strong>：分析用戶反饋，識別並糾正檢索資訊的不準確處。
 
-### 修正型RAG在旅遊代理中的應用
+### 旅行代理中的糾正型 RAG
 
-修正型RAG（檢索增強生成）提升了AI檢索和生成資訊的能力，同時修正任何不準確之處。讓我們看看旅遊代理如何利用修正型RAG方法提供更準確且相關的旅遊建議。
+糾正型 RAG（檢索增強生成）增強 AI 在檢索與生成資訊時糾正錯誤的能力。讓我們看看 Travel Agent 如何使用此方法來提供更準確且相關的旅行建議。
 
 這包括：
 
-- **提示技術**：使用特定提示引導代理檢索相關資訊。
-- **工具**：實施算法和機制，使代理能夠評估檢索資訊的相關性並生成準確的回應。
-- **評估**：持續評估代理的表現，並進行調整以提升其準確性和效率。
+- **提示技術：** 利用特定提示引導智能體檢索相關資訊。
+- **工具：** 實作演算法與機制，讓智能體評估檢索結果相關度並產生精確回應。
+- **評估：** 持續評估智能體表現並作調整，提升準確率與效率。
 
-#### 在旅遊代理中實施修正型RAG的步驟
+#### 在旅行代理中實作糾正型 RAG 的步驟
 
-1. **初次用戶互動**
-   - 旅遊代理收集用戶的初步偏好，例如目的地、旅行日期、預算和興趣。
+1. <strong>初步用戶互動</strong>
+   - Travel Agent 收集用戶的初步偏好，如目的地、旅行日期、預算及興趣。
    - 範例：
 
      ```python
@@ -291,8 +291,8 @@ RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從�
      }
      ```
 
-2. **資訊檢索**
-   - 旅遊代理根據用戶偏好檢索有關航班、住宿、景點和餐廳的資訊。
+2. <strong>檢索資訊</strong>
+   - Travel Agent 根據用戶偏好檢索航班、住宿、景點與餐廳資訊。
    - 範例：
 
      ```python
@@ -301,8 +301,8 @@ RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從�
      attractions = search_attractions(preferences)
      ```
 
-3. **生成初步建議**
-   - 旅遊代理利用檢索到的資訊生成個性化行程。
+3. <strong>生成初步建議</strong>
+   - Travel Agent 利用檢索到的資訊生成個人化行程。
    - 範例：
 
      ```python
@@ -310,8 +310,8 @@ RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從�
      print("Suggested Itinerary:", itinerary)
      ```
 
-4. **收集用戶反饋**
-   - 旅遊代理詢問用戶對初步建議的反饋。
+4. <strong>收集用戶反饋</strong>
+   - Travel Agent 向用戶詢問對初步建議的意見。
    - 範例：
 
      ```python
@@ -321,8 +321,8 @@ RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從�
      }
      ```
 
-5. **修正型RAG過程**
-   - **提示技術**：旅遊代理根據用戶反饋制定新的搜索查詢。
+5. **糾正型 RAG 過程**
+   - <strong>提示技術</strong>：Travel Agent 根據用戶反饋制定新的搜尋查詢。
      - 範例：
 
        ```python
@@ -330,7 +330,7 @@ RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從�
            preferences["avoid"] = feedback["disliked"]
        ```
 
-   - **工具**：旅遊代理使用算法對新的搜索結果進行排序和篩選，強調基於用戶反饋的相關性。
+   - <strong>工具</strong>：Travel Agent 使用演算法對新的搜尋結果進行排名與篩選，強調基於用戶反饋的相關性。
      - 範例：
 
        ```python
@@ -339,7 +339,7 @@ RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從�
        print("Updated Itinerary:", new_itinerary)
        ```
 
-   - **評估**：旅遊代理通過分析用戶反饋持續評估建議的相關性和準確性，並進行必要的調整。
+   - <strong>評估</strong>：Travel Agent 持續分析用戶反饋，評估建議的相關性與精確度，並作必要調整。
      - 範例：
 
        ```python
@@ -353,9 +353,10 @@ RAG結合了檢索系統與生成模型。當收到查詢時，檢索系統從�
        preferences = adjust_preferences(preferences, feedback)
        ```
 
-#### 實用範例
+#### 實務範例
 
-以下是一個簡化的Python程式碼範例，展示如何在旅遊代理中融入修正型RAG方法：
+以下為將糾正型 RAG 方法整合至 Travel Agent 的簡化 Python 代碼範例：
+
 ```python
 class Travel_Agent:
     def __init__(self):
@@ -382,7 +383,7 @@ class Travel_Agent:
         new_itinerary = self.generate_recommendations()
         return new_itinerary
 
-# Example usage
+# 使用範例
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -400,14 +401,15 @@ print("Updated Itinerary:", new_itinerary)
 
 ### 預先載入上下文
 
-預先載入上下文指的是在處理查詢之前，先將相關的上下文或背景資訊載入模型。這意味著模型從一開始就能夠存取這些資訊，從而幫助它生成更具資訊性的回應，而無需在過程中額外檢索資料。
 
-以下是一個簡化的例子，展示如何在 Python 中為旅遊代理應用程式進行預先載入上下文：
+預先載入上下文是指在處理查詢前將相關的上下文或背景資訊載入模型。這意味著模型從一開始就可以訪問這些資訊，有助於它生成更具參考性的回答，而無需在過程中檢索額外資料。
+
+下面是一個簡化的範例，展示在 Python 裡旅行代理應用如何執行預先載入上下文：
 
 ```python
 class TravelAgent:
     def __init__(self):
-        # Pre-load popular destinations and their information
+        # 預先載入熱門目的地及其資料
         self.context = {
             "Paris": {"country": "France", "currency": "Euro", "language": "French", "attractions": ["Eiffel Tower", "Louvre Museum"]},
             "Tokyo": {"country": "Japan", "currency": "Yen", "language": "Japanese", "attractions": ["Tokyo Tower", "Shibuya Crossing"]},
@@ -416,14 +418,14 @@ class TravelAgent:
         }
 
     def get_destination_info(self, destination):
-        # Fetch destination information from pre-loaded context
+        # 從預載內容中擷取目的地資料
         info = self.context.get(destination)
         if info:
             return f"{destination}:\nCountry: {info['country']}\nCurrency: {info['currency']}\nLanguage: {info['language']}\nAttractions: {', '.join(info['attractions'])}"
         else:
             return f"Sorry, we don't have information on {destination}."
 
-# Example usage
+# 範例用法
 travel_agent = TravelAgent()
 print(travel_agent.get_destination_info("Paris"))
 print(travel_agent.get_destination_info("Tokyo"))
@@ -431,27 +433,27 @@ print(travel_agent.get_destination_info("Tokyo"))
 
 #### 解釋
 
-1. **初始化 (`__init__` 方法)**：`TravelAgent` 類別預先載入了一個字典，包含有關熱門目的地（例如巴黎、東京、紐約和悉尼）的資訊。這些資訊包括國家、貨幣、語言以及主要景點。
+1. **初始化（`__init__` 方法）**：`TravelAgent` 類別預先載入一個包含熱門目的地資訊的字典，如巴黎、東京、紐約和雪梨。該字典包含每個目的地的國家、貨幣、語言和主要景點等細節。
 
-2. **檢索資訊 (`get_destination_info` 方法)**：當使用者查詢特定目的地時，`get_destination_info` 方法會從預載的上下文字典中提取相關資訊。
+2. **擷取資訊（`get_destination_info` 方法）**：當用戶查詢特定目的地時，`get_destination_info` 方法從預先載入的上下文字典中提取相關資訊。
 
-透過預先載入上下文，旅遊代理應用程式可以快速回應使用者查詢，而無需即時從外部來源檢索資訊。這使得應用程式更加高效且反應迅速。
+透過預先載入上下文，旅行代理應用可以快速回應用戶查詢，無需實時從外部來源檢索資料。這使應用更有效率且更具回應性。
 
-### 在迭代之前以目標啟動計劃
+### 在迭代前先用目標啟動計畫
 
-以目標啟動計劃指的是在開始時就設定清晰的目標或期望結果。透過事先定義這個目標，模型可以在整個迭代過程中以此作為指導原則。這有助於確保每次迭代都更接近實現期望的結果，使過程更加高效且專注。
+用目標啟動計畫是指以明確的目標或期望結果為起點。透過事先定義此目標，模型可以將其作為整個迭代過程的指導原則，有助於確保每次迭代表現更接近期望結果，使過程更有效率且聚焦。
 
-以下是一個例子，展示如何在迭代之前以目標啟動旅遊計劃，適用於 Python 中的旅遊代理：
+以下是如何在 Python 中為旅行代理在迭代前用目標啟動旅行計畫的範例：
 
-### 情境
+### 場景
 
-一位旅遊代理希望為客戶制定一個量身定制的假期計劃。目標是根據客戶的偏好和預算，創建一個能最大化客戶滿意度的旅遊行程。
+一位旅行代理想為客戶規劃訂製假期。目標是根據客戶偏好和預算制定最大化滿意度的行程。
 
 ### 步驟
 
-1. 定義客戶的偏好和預算。
-2. 根據這些偏好啟動初步計劃。
-3. 迭代以完善計劃，優化客戶的滿意度。
+1. 定義客戶偏好和預算。
+2. 根據這些偏好啟動初始計畫。
+3. 迭代精煉計畫，以優化客戶滿意度。
 
 #### Python 程式碼
 
@@ -488,7 +490,7 @@ class TravelAgent:
     def calculate_cost(self, plan, new_destination):
         return sum(destination['cost'] for destination in plan) + new_destination['cost']
 
-# Example usage
+# 使用範例
 destinations = [
     {"name": "Paris", "cost": 1000, "activity": "sightseeing"},
     {"name": "Tokyo", "cost": 1200, "activity": "shopping"},
@@ -507,57 +509,57 @@ refined_plan = travel_agent.iterate_plan(initial_plan, preferences, budget)
 print("Refined Plan:", refined_plan)
 ```
 
-#### 程式碼解釋
+#### 程式碼說明
 
-1. **初始化 (`__init__` 方法)**：`TravelAgent` 類別以一個潛在目的地的列表初始化，每個目的地都有名稱、成本和活動類型等屬性。
+1. **初始化（`__init__` 方法）**：`TravelAgent` 類別初始化時帶有一組潛在目的地列表，每個目的地有名稱、成本和活動類型等屬性。
 
-2. **啟動計劃 (`bootstrap_plan` 方法)**：此方法根據客戶的偏好和預算創建初步旅遊計劃。它會遍歷目的地列表，並將符合客戶偏好且在預算範圍內的目的地加入計劃。
+2. **啟動計畫（`bootstrap_plan` 方法）**：根據客戶偏好和預算創建初始旅行計畫。它會遍歷目的地列表，若符合偏好並在預算內，則將其加入計畫。
 
-3. **匹配偏好 (`match_preferences` 方法)**：此方法檢查某個目的地是否符合客戶的偏好。
+3. **匹配偏好（`match_preferences` 方法）**：檢查目的地是否符合客戶偏好。
 
-4. **迭代計劃 (`iterate_plan` 方法)**：此方法透過嘗試用更符合客戶偏好的目的地替換計劃中的每個目的地，來完善初步計劃，同時考慮預算限制。
+4. **迭代計畫（`iterate_plan` 方法）**：透過嘗試用更符合偏好的目的地替換計畫中的地點，精煉初始計畫，同時考慮預算限制。
 
-5. **計算成本 (`calculate_cost` 方法)**：此方法計算當前計劃的總成本，包括可能新增的目的地。
+5. **計算成本（`calculate_cost` 方法）**：計算目前計畫總費用，包括可能的新目的地。
 
-#### 使用範例
+#### 範例用法
 
-- **初步計劃**：旅遊代理根據客戶對觀光的偏好和 $2000 的預算創建初步計劃。
-- **完善計劃**：旅遊代理迭代計劃，優化客戶的偏好和預算。
+- <strong>初始計畫</strong>：旅行代理基於客戶的觀光偏好和 2000 美元預算制定初始行程。
+- <strong>精煉計畫</strong>：旅行代理透過迭代精煉計畫，優化符合客戶偏好與預算。
 
-透過以清晰的目標（例如最大化客戶滿意度）啟動計劃並迭代完善計劃，旅遊代理可以為客戶創建量身定制且優化的旅遊行程。此方法確保旅遊計劃從一開始就符合客戶的偏好和預算，並在每次迭代中持續改進。
+透過以明確目標（例如最大化客戶滿意度）啟動計畫，並經過迭代精煉，旅行代理能為客戶制定訂製且最佳化的旅行行程。這確保從一開始行程就符合客戶偏好和預算，並隨著迭代不斷改善。
 
-### 利用大型語言模型進行重新排序和評分
+### 利用大型語言模型（LLM）進行重新排序和評分
 
-大型語言模型（LLMs）可以用於重新排序和評分，透過評估檢索到的文件或生成的回應的相關性和品質來實現。以下是其工作原理：
+大型語言模型（LLM）可以用於重新排序和評分，評估檢索到的文件或生成的回答的相關性和品質。其運作過程如下：
 
-**檢索**：初步檢索步驟根據查詢獲取一組候選文件或回應。
+<strong>檢索</strong>：初步檢索根據查詢獲取候選文件或回答集合。
 
-**重新排序**：LLM 評估這些候選項，並根據其相關性和品質進行重新排序。此步驟確保最相關且高品質的資訊優先呈現。
+<strong>重新排序</strong>：LLM 評估這些候選項並按相關性及品質重新排序，確保最相關且高品質的資訊優先呈現。
 
-**評分**：LLM 為每個候選項分配分數，反映其相關性和品質。這有助於選擇最佳的回應或文件給使用者。
+<strong>評分</strong>：LLM 為每個候選項指派分數，反映其相關性和品質，有助於挑選最佳回答或文件。
 
-透過利用 LLM 進行重新排序和評分，系統可以提供更準確且符合上下文的資訊，改善整體使用者體驗。
+透過利用 LLM 進行重新排序和評分，系統能提供更準確且符合上下文的資訊，提升整體用戶體驗。
 
-以下是一個例子，展示旅遊代理如何使用大型語言模型（LLM）根據使用者偏好重新排序和評分旅遊目的地，適用於 Python：
+以下是一個範例，展示旅行代理如何在 Python 中依用戶偏好利用大型語言模型（LLM）對旅遊目的地進行重新排序和評分：
 
-#### 情境 - 根據偏好進行旅遊
+#### 場景 - 根據偏好旅遊
 
-一位旅遊代理希望根據客戶的偏好推薦最佳旅遊目的地。LLM 將幫助重新排序和評分目的地，以確保呈現最相關的選項。
+旅行代理想根據客戶偏好推薦最佳旅遊目的地。LLM 將幫助重新排序並評分目的地，確保展示最相關選項。
 
 #### 步驟：
 
-1. 收集使用者偏好。
-2. 檢索潛在的旅遊目的地列表。
-3. 使用 LLM 根據使用者偏好重新排序和評分目的地。
+1. 收集用戶偏好。
+2. 檢索潛在旅遊目的地列表。
+3. 使用 LLM 根據用戶偏好對目的地重新排序並評分。
 
-以下是如何使用 Azure OpenAI Services 更新之前的範例：
+以下示範如何更新前述範例以使用 Azure OpenAI 服務：
 
-#### 要求
+#### 需求
 
-1. 您需要擁有 Azure 訂閱。
-2. 創建 Azure OpenAI 資源並獲取您的 API 金鑰。
+1. 需擁有 Azure 訂閱。
+2. 創建 Azure OpenAI 資源並取得 API 金鑰。
 
-#### Python 程式碼範例
+#### Python 範例程式碼
 
 ```python
 import requests
@@ -568,10 +570,10 @@ class TravelAgent:
         self.destinations = destinations
 
     def get_recommendations(self, preferences, api_key, endpoint):
-        # Generate a prompt for the Azure OpenAI
+        # 為 Azure OpenAI 產生提示
         prompt = self.generate_prompt(preferences)
         
-        # Define headers and payload for the request
+        # 定義請求的標頭和負載
         headers = {
             'Content-Type': 'application/json',
             'Authorization': f'Bearer {api_key}'
@@ -582,11 +584,11 @@ class TravelAgent:
             "temperature": 0.7
         }
         
-        # Call the Azure OpenAI API to get the re-ranked and scored destinations
+        # 調用 Azure OpenAI API 以取得重新排序及評分的目的地
         response = requests.post(endpoint, headers=headers, json=payload)
         response_data = response.json()
         
-        # Extract and return the recommendations
+        # 擷取並回傳推薦結果
         recommendations = response_data['choices'][0]['text'].strip().split('\n')
         return recommendations
 
@@ -599,7 +601,7 @@ class TravelAgent:
             prompt += f"- {destination['name']}: {destination['description']}\n"
         return prompt
 
-# Example usage
+# 使用範例
 destinations = [
     {"name": "Paris", "description": "City of lights, known for its art, fashion, and culture."},
     {"name": "Tokyo", "description": "Vibrant city, famous for its modernity and traditional temples."},
@@ -618,75 +620,75 @@ for rec in recommendations:
     print(rec)
 ```
 
-#### 程式碼解釋 - 偏好推薦
+#### 程式碼說明 - 偏好預訂
 
-1. **初始化**：`TravelAgent` 類別以一個潛在旅遊目的地的列表初始化，每個目的地都有名稱和描述等屬性。
+1. <strong>初始化</strong>：`TravelAgent` 類別初始化時帶有潛在旅遊目的地列表，每個目的地有名稱和描述等屬性。
 
-2. **獲取推薦 (`get_recommendations` 方法)**：此方法根據使用者的偏好生成一個 Azure OpenAI 服務的提示，並向 Azure OpenAI API 發送 HTTP POST 請求以獲取重新排序和評分的目的地。
+2. **取得推薦結果（`get_recommendations` 方法）**：此方法根據用戶偏好生成 Azure OpenAI 服務的提示，並發出 HTTP POST 請求調用 Azure OpenAI API，取得重新排序和評分後的目的地。
 
-3. **生成提示 (`generate_prompt` 方法)**：此方法為 Azure OpenAI 構建一個提示，包括使用者的偏好和目的地列表。提示引導模型根據提供的偏好重新排序和評分目的地。
+3. **生成提示（`generate_prompt` 方法）**：建立給 Azure OpenAI 的提示，包含用戶偏好和目的地列表。該提示指導模型依偏好重新排序及評分目的地。
 
-4. **API 呼叫**：使用 `requests` 庫向 Azure OpenAI API 端點發送 HTTP POST 請求。回應包含重新排序和評分的目的地。
+4. **API 呼叫**：使用 `requests` 庫向 Azure OpenAI API 端點發出 HTTP POST 請求。回應包含重新排序和評分後的目的地。
 
-5. **使用範例**：旅遊代理收集使用者偏好（例如對觀光和多元文化的興趣），並使用 Azure OpenAI 服務獲取重新排序和評分的旅遊目的地推薦。
+5. <strong>範例用法</strong>：旅行代理收集用戶偏好（例如喜愛觀光與多元文化），並使用 Azure OpenAI 服務取得重新排序和評分的旅行目的地推薦。
 
-請確保將 `your_azure_openai_api_key` 替換為您的實際 Azure OpenAI API 金鑰，並將 `https://your-endpoint.com/...` 替換為您的 Azure OpenAI 部署的實際端點 URL。
+請確保將 `your_azure_openai_api_key` 替換為您的實際 Azure OpenAI API 金鑰，並將 `https://your-endpoint.com/...` 替換為 Azure OpenAI 部署的實際端點 URL。
 
-透過利用 LLM 進行重新排序和評分，旅遊代理可以為客戶提供更個性化且相關的旅遊推薦，提升整體體驗。
+透過利用 LLM 進行重新排序和評分，旅行代理可提供更個人化且相關的旅行推薦，提升客戶整體體驗。
 
-### RAG：提示技術與工具
+### RAG：提示技巧 vs 工具
 
-檢索增強生成（RAG）既可以作為提示技術，也可以作為開發 AI 代理的工具。理解兩者的區別有助於您在項目中更有效地利用 RAG。
+檢索增強生成（RAG）既可視為提示技巧，也可作為開發 AI 代理的工具。理解兩者差異，有助於更有效地利用 RAG。
 
-#### RAG 作為提示技術
+#### 作為提示技巧的 RAG
 
-**什麼是提示技術？**
+**它是什麼？**
 
-- 作為提示技術，RAG 涉及制定特定的查詢或提示，以引導從大型語料庫或資料庫中檢索相關資訊。這些資訊隨後用於生成回應或執行操作。
-
-**如何運作：**
-
-1. **制定提示**：根據任務或使用者輸入創建結構良好的提示或查詢。
-2. **檢索資訊**：使用提示從預先存在的知識庫或資料集中搜索相關資料。
-3. **生成回應**：結合檢索到的資訊與生成式 AI 模型，生成全面且連貫的回應。
-
-**旅遊代理中的範例**：
-
-- 使用者輸入：「我想參觀巴黎的博物館。」
-- 提示：「尋找巴黎的頂級博物館。」
-- 檢索資訊：有關盧浮宮博物館、奧賽博物館等的詳細資訊。
-- 生成回應：「以下是巴黎的一些頂級博物館：盧浮宮博物館、奧賽博物館和蓬皮杜中心。」
-
-#### RAG 作為工具
-
-**什麼是工具？**
-
-- 作為工具，RAG 是一個整合系統，能自動化檢索和生成過程，使開發者能更輕鬆地實現複雜的 AI 功能，而無需為每個查詢手動編寫提示。
+- 作為提示技巧，RAG 涉及設計特定查詢或提示，以引導從大型語料庫或資料庫檢索相關資訊，再用該資訊生成回答或動作。
 
 **如何運作：**
 
-1. **整合**：將 RAG 嵌入 AI 代理的架構中，使其能自動處理檢索和生成任務。
-2. **自動化**：工具管理整個過程，從接收使用者輸入到生成最終回應，無需每步都明確提示。
-3. **效率**：透過簡化檢索和生成過程，提升代理的性能，實現更快速且更準確的回應。
+1. <strong>設計提示</strong>：根據任務或用戶輸入製作結構良好的提示或查詢。
+2. <strong>檢索資訊</strong>：用提示從預先存在的知識庫或資料集搜尋相關資料。
+3. <strong>生成回答</strong>：結合檢索到的資訊與生成式 AI 模型，產出完整且連貫的回答。
 
-**旅遊代理中的範例**：
+<strong>旅行代理中的例子</strong>：
 
-- 使用者輸入：「我想參觀巴黎的博物館。」
-- RAG 工具：自動檢索有關博物館的資訊並生成回應。
-- 生成回應：「以下是巴黎的一些頂級博物館：盧浮宮博物館、奧賽博物館和蓬皮杜中心。」
+- 用戶輸入：「我想參觀巴黎的博物館。」
+- 提示：「找出巴黎的頂級博物館。」
+- 檢索資訊：有關羅浮宮博物館、奧賽美術館等細節。
+- 生成回答：「這裡有一些巴黎的頂級博物館：羅浮宮博物館、奧賽美術館和龐畢度中心。」
+
+#### 作為工具的 RAG
+
+**它是什麼？**
+
+- 作為工具，RAG 是一個整合系統，自動化處理檢索和生成流程，讓開發者無需為每個查詢手動製作提示即可實現複雜 AI 功能。
+
+**如何運作：**
+
+1. <strong>整合</strong>：將 RAG 嵌入 AI 代理架構，自動處理檢索和生成任務。
+2. <strong>自動化</strong>：工具管理整個流程，從接收用戶輸入到產生最終回應，無需針對每步設計明確提示。
+3. <strong>效率</strong>：透過簡化檢索及生成過程，提高代理效能，使回應更快且更精確。
+
+<strong>旅行代理中的例子</strong>：
+
+- 用戶輸入：「我想參觀巴黎的博物館。」
+- RAG 工具：自動檢索有關博物館的資訊，並生成回應。
+- 生成回答：「這裡有一些巴黎的頂級博物館：羅浮宮博物館、奧賽美術館和龐畢度中心。」
 
 ### 比較
 
-| 方面                   | 提示技術                                                | 工具                                                   |
-|------------------------|-------------------------------------------------------|-------------------------------------------------------|
-| **手動 vs 自動**       | 每個查詢手動制定提示。                                  | 自動化檢索和生成過程。                                |
-| **控制**               | 提供更多對檢索過程的控制。                              | 簡化並自動化檢索和生成。                              |
-| **靈活性**             | 可根據特定需求定制提示。                                | 更適合大規模實施。                                    |
-| **複雜性**             | 需要編寫和調整提示。                                    | 更容易整合到 AI 代理的架構中。                        |
+| 方面                  | 提示技巧                                                   | 工具                                                  |
+|------------------------|-------------------------------------------------------------|-------------------------------------------------------|
+| **手動 vs 自動**        | 為每個查詢手動設計提示。                                   | 自動化處理檢索和生成。                                   |
+| <strong>控制</strong>                | 對檢索過程控制度較高。                                     | 簡化並自動化檢索及生成。                                |
+| <strong>彈性</strong>                | 可根據特定需求客製提示。                                  | 適合大規模應用，效率較高。                               |
+| <strong>複雜度</strong>              | 需設計並微調提示。                                         | 容易整合到 AI 代理架構中。                               |
 
-### 實際範例
+### 實務範例
 
-**提示技術範例：**
+**提示技巧範例：**
 
 ```python
 def search_museums_in_paris():
@@ -717,30 +719,30 @@ print("Top Museums in Paris:", museums)
 
 ### 評估相關性
 
-評估相關性是 AI 代理性能的重要方面。它確保代理檢索和生成的資訊對使用者而言是適當、準確且有用的。以下是如何評估 AI 代理的相關性，包括實際範例和技術。
+評估相關性是 AI 代理表現的關鍵面向，確保代理檢索和生成的資訊適合、精確且對用戶有用。讓我們探討如何評估 AI 代理的相關性，包括實務範例和技術。
 
 #### 評估相關性的關鍵概念
 
-1. **上下文意識**：
-   - 代理必須理解使用者查詢的上下文，以檢索和生成相關資訊。
-   - 範例：如果使用者詢問「巴黎的最佳餐廳」，代理應考慮使用者的偏好，例如菜系類型和預算。
+1. <strong>上下文感知</strong>：
+   - 代理必須理解用戶查詢的上下文，才能檢索和生成相關資訊。
+   - 範例：用戶查詢「巴黎最佳餐廳」，代理應考慮用戶偏好，如菜系和預算。
 
-2. **準確性**：
-   - 代理提供的資訊應該是事實正確且最新的。
-   - 範例：推薦目前營業且評價良好的餐廳，而非過時或已關閉的選項。
+2. <strong>準確性</strong>：
+   - 代理提供的資訊應具事實正確性且為最新。
+   - 範例：推薦現在營業且評價良好的餐廳，而非過時或已關閉選項。
 
-3. **使用者意圖**：
-   - 代理應推斷使用者查詢背後的意圖，以提供最相關的資訊。
-   - 範例：如果使用者詢問「經濟型酒店」，代理應優先推薦價格實惠的選項。
+3. <strong>用戶意圖</strong>：
+   - 代理應推測用戶查詢的真正意圖，提供最相關資訊。
+   - 範例：用戶查「經濟型旅館」，代理應優先推薦價格合理選項。
 
-4. **反饋迴路**：
-   - 持續收集和分析使用者反饋，有助於代理完善其相關性評估過程。
-   - 範例：整合使用者對之前推薦的評分和反饋，以改善未來的回應。
+4. <strong>反饋回路</strong>：
+   - 持續收集和分析用戶反饋，有助於代理改進相關性評估流程。
+   - 範例：結合用戶對過往推薦的評價和意見，提升未來回應品質。
 
-#### 評估相關性的實際技術
+#### 評估相關性的實務技術
 
-1. **相關性評分**：
-   - 根據與使用者查詢和偏好的匹配程度，為每個檢索項分配相關性分數。
+1. <strong>相關性得分</strong>：
+   - 根據檢索項是否符合用戶查詢和偏好，為其分配相關性得分。
    - 範例：
 
      ```python
@@ -755,29 +757,29 @@ print("Top Museums in Paris:", museums)
          return score
      ```
 
-2. **篩選和排序**：
-   - 篩選掉不相關的項目，並根據相關性分數對剩餘項目進行排序。
+2. <strong>過濾與排序</strong>：
+   - 過濾掉不相關項目，根據得分排序剩餘項目。
    - 範例：
 
      ```python
      def filter_and_rank(items, query):
          ranked_items = sorted(items, key=lambda item: relevance_score(item, query), reverse=True)
-         return ranked_items[:10]  # Return top 10 relevant items
+         return ranked_items[:10]  # 返回最相關的前10個項目
      ```
 
-3. **自然語言處理 (NLP)**：
-   - 使用 NLP 技術理解使用者查詢並檢索相關資訊。
+3. **自然語言處理（NLP）**：
+   - 利用 NLP 技術理解用戶查詢並檢索相關資訊。
    - 範例：
 
      ```python
      def process_query(query):
-         # Use NLP to extract key information from the user's query
+         # 使用自然語言處理從用戶查詢中提取關鍵資訊
          processed_query = nlp(query)
          return processed_query
      ```
 
-4. **使用者反饋整合**：
-   - 收集使用者對推薦的反饋，並用於調整未來的相關性評估。
+4. <strong>用戶反饋整合</strong>：
+   - 收集用戶對推薦的回饋，並利用這些訊息調整未來的相關性評估。
    - 範例：
 
      ```python
@@ -790,9 +792,9 @@ print("Top Museums in Paris:", museums)
          return items
      ```
 
-#### 範例：旅遊代理中的相關性評估
+#### 範例：旅行代理評估推薦相關性
 
-以下是一個實際範例，展示旅遊代理如何評估旅遊推薦的相關性：
+這裡有一個實務範例展示旅行代理如何評估旅行推薦的相關性：
 
 ```python
 class Travel_Agent:
@@ -817,7 +819,7 @@ class Travel_Agent:
 
     def filter_and_rank(self, items, query):
         ranked_items = sorted(items, key=lambda item: self.relevance_score(item, query), reverse=True)
-        return ranked_items[:10]  # Return top 10 relevant items
+        return ranked_items[:10]  # 返回前10個相關項目
 
     def relevance_score(self, item, query):
         score = 0
@@ -837,7 +839,7 @@ class Travel_Agent:
                 item['relevance'] -= 1
         return items
 
-# Example usage
+# 使用範例
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -853,31 +855,32 @@ updated_items = travel_agent.adjust_based_on_feedback(feedback, itinerary['hotel
 print("Updated Itinerary with Feedback:", updated_items)
 ```
 
-### 意圖導向的搜尋
+### 有意圖的搜尋
 
-意圖導向的搜尋涉及理解和解釋使用者查詢背後的目的或目標，以檢索和生成最相關且有用的資訊。此方法超越了簡單的關鍵字匹配，專注於掌握使用者的實際需求和上下文。
+有意圖的搜尋包含理解與詮釋用戶查詢背後的目的或目標，以檢索和生成最相關且有用的資訊。此方法超越純粹匹配關鍵字，著重掌握用戶的真實需求與上下文。
 
-#### 意圖導向搜尋的關鍵概念
+#### 有意圖搜尋的關鍵概念
 
-1. **理解使用者意圖**：
-   - 使用者意圖可分為三大類型：資訊型、導航型和交易型。
-     - **資訊型意圖**：使用者尋求有關某個主題的資訊（例如：「巴黎的最佳博物館有哪些？」）。
-     - **導航型意圖**：使用者希望導航到特定網站或頁面（例如：「盧浮宮博物館官方網站」）。
-     - **交易型意圖**：使用者希望執行交易，例如預訂航班或購買商品（例如：「預訂飛往巴黎的航班」）。
+1. <strong>理解用戶意圖</strong>：
+   - 用戶意圖大致可分為三類：資訊型、導向型與交易型。
+     - <strong>資訊型意圖</strong>：用戶尋求主題相關資訊（如：「巴黎有哪些最佳博物館？」）。
+     - <strong>導向型意圖</strong>：用戶想導航至特定網站或頁面（如：「羅浮宮博物館官方網站」）。
+     - <strong>交易型意圖</strong>：用戶欲執行交易，如訂機票或購買（如：「訂一張飛巴黎的機票」）。
 
-2. **上下文意識**：
-   - 分析使用者查詢的上下文有助於準確識別其意圖。這包括考慮之前的互動、使用者偏好以及當前查詢的具體細節。
+2. <strong>上下文感知</strong>：
+   - 分析用戶查詢的上下文有助準確識別其意圖，包含先前互動、用戶偏好及當前查詢細節。
 
-3. **自然語言處理 (NLP)**：
-   - 使用 NLP 技術理解和解釋使用者提供的自然語言查詢。這包括實體識別、情感分析和查詢解析等任務。
+3. **自然語言處理（NLP）**：
+   - 運用 NLP 技術理解並詮釋用戶提出的自然語言查詢，涵蓋實體識別、情感分析及查詢解析等任務。
 
-4. **個性化**：
-   - 根據使用者的歷史、偏好和反饋進行個性化搜尋結果，提升檢索資訊的相關性。
-#### 實際例子：在旅行代理中以意圖進行搜尋
+4. <strong>個人化</strong>：
+   - 基於用戶歷史、偏好和反饋個人化搜尋結果，提升檢索資訊的相關性。
 
-讓我們以旅行代理為例，看看如何實現以意圖進行搜尋。
+#### 實務範例：旅行代理中的有意圖搜尋
 
-1. **收集用戶偏好**
+以旅行代理為例，展示如何實現有意圖搜尋。
+
+1. <strong>收集用戶偏好</strong>
 
    ```python
    class Travel_Agent:
@@ -888,7 +891,7 @@ print("Updated Itinerary with Feedback:", updated_items)
            self.user_preferences = preferences
    ```
 
-2. **理解用戶意圖**
+2. <strong>理解用戶意圖</strong>
 
    ```python
    def identify_intent(query):
@@ -900,11 +903,12 @@ print("Updated Itinerary with Feedback:", updated_items)
            return "informational"
    ```
 
-3. **上下文感知**
+3. <strong>上下文感知</strong>
+
 
    ```python
    def analyze_context(query, user_history):
-       # Combine current query with user history to understand context
+       # 將當前查詢與用戶歷史結合以理解上下文
        context = {
            "current_query": query,
            "user_history": user_history
@@ -912,7 +916,7 @@ print("Updated Itinerary with Feedback:", updated_items)
        return context
    ```
 
-4. **搜尋並個性化結果**
+4. <strong>搜尋及個人化結果</strong>
 
    ```python
    def search_with_intent(query, preferences, user_history):
@@ -928,27 +932,27 @@ print("Updated Itinerary with Feedback:", updated_items)
        return personalized_results
 
    def search_information(query, preferences):
-       # Example search logic for informational intent
+       # 用於資訊性意圖的搜尋示例邏輯
        results = search_web(f"best {preferences['interests']} in {preferences['destination']}")
        return results
 
    def search_navigation(query):
-       # Example search logic for navigational intent
+       # 用於導航性意圖的搜尋示例邏輯
        results = search_web(query)
        return results
 
    def search_transaction(query, preferences):
-       # Example search logic for transactional intent
+       # 用於交易性意圖的搜尋示例邏輯
        results = search_web(f"book {query} to {preferences['destination']}")
        return results
 
    def personalize_results(results, user_history):
-       # Example personalization logic
+       # 個人化示例邏輯
        personalized = [result for result in results if result not in user_history]
-       return personalized[:10]  # Return top 10 personalized results
+       return personalized[:10]  # 回傳前10個個人化結果
    ```
 
-5. **使用範例**
+5. <strong>使用範例</strong>
 
    ```python
    travel_agent = Travel_Agent()
@@ -965,48 +969,48 @@ print("Updated Itinerary with Feedback:", updated_items)
 
 ---
 
-## 4. 生成代碼作為工具
+## 4. 將生成代碼作為工具
 
-代碼生成代理使用人工智能模型來編寫和執行代碼，解決複雜問題並自動化任務。
+生成代碼的代理人使用 AI 模型來編寫和執行代碼，解決複雜問題並自動化任務。
 
-### 代碼生成代理
+### 生成代碼代理人
 
-代碼生成代理使用生成式人工智能模型來編寫和執行代碼。這些代理可以通過生成和運行各種編程語言的代碼來解決複雜問題、自動化任務並提供有價值的洞察。
+生成代碼的代理人使用生成式 AI 模型來編寫和執行代碼。這些代理人能夠通過用多種程式語言生成並執行代碼，來解決複雜問題、自動化任務並提供有價值的見解。
 
 #### 實際應用
 
-1. **自動代碼生成**：為特定任務生成代碼片段，例如數據分析、網頁抓取或機器學習。
-2. **SQL 作為 RAG**：使用 SQL 查詢從數據庫中檢索和操作數據。
-3. **問題解決**：創建並執行代碼以解決特定問題，例如優化算法或分析數據。
+1. <strong>自動代碼生成</strong>：為特定任務生成代碼片段，例如數據分析、網頁爬蟲或機器學習。
+2. **RAG 中的 SQL**：使用 SQL 查詢從資料庫檢索和操作數據。
+3. <strong>問題解決</strong>：創建並執行代碼解決特定問題，例如優化算法或分析數據。
 
-#### 範例：用於數據分析的代碼生成代理
+#### 範例：用於數據分析的代碼生成代理人
 
-假設您正在設計一個代碼生成代理。以下是它的工作方式：
+想像你正在設計一個代碼生成代理人。以下是它的可能運作方式：
 
-1. **任務**：分析數據集以識別趨勢和模式。
-2. **步驟**：
-   - 將數據集加載到數據分析工具中。
-   - 生成 SQL 查詢以篩選和聚合數據。
+1. <strong>任務</strong>：分析數據集以識別趨勢和模式。
+2. <strong>步驟</strong>：
+   - 將數據集載入數據分析工具。
+   - 生成 SQL 查詢以過濾和匯總數據。
    - 執行查詢並檢索結果。
-   - 使用結果生成可視化和洞察。
-3. **所需資源**：訪問數據集、數據分析工具和 SQL 功能。
-4. **經驗**：利用過去的分析結果提高未來分析的準確性和相關性。
+   - 使用結果生成視覺化和洞見。
+3. <strong>必需資源</strong>：可訪問數據集、數據分析工具和 SQL 功能。
+4. <strong>經驗</strong>：利用過去分析結果提升未來分析的準確性與相關性。
 
-### 範例：旅行代理的代碼生成代理
+### 範例：用於旅行代理人的代碼生成代理人
 
-在此範例中，我們將設計一個代碼生成代理——旅行代理，通過生成和執行代碼來幫助用戶規劃旅行。此代理可以處理如獲取旅行選項、篩選結果以及使用生成式人工智能編制行程等任務。
+在此範例中，我們將設計一個代碼生成代理人，Travel Agent，協助用戶規劃旅行，透過生成和執行代碼來完成任務。此代理人可以處理擷取旅遊選項、篩選結果和編制行程等工作，運用生成式 AI 技術。
 
-#### 代碼生成代理概述
+#### 代碼生成代理人概述
 
-1. **收集用戶偏好**：收集用戶輸入，例如目的地、旅行日期、預算和興趣。
-2. **生成代碼以獲取數據**：生成代碼片段以檢索有關航班、酒店和景點的數據。
-3. **執行生成的代碼**：運行生成的代碼以獲取實時信息。
-4. **生成行程**：將獲取的數據編制成個性化的旅行計劃。
-5. **根據反饋進行調整**：接收用戶反饋並重新生成代碼以改進結果。
+1. <strong>收集用戶偏好</strong>：收集用戶輸入，例如目的地、旅行日期、預算和興趣。
+2. <strong>產生獲取數據的代碼</strong>：生成代碼片段以檢索關於航班、酒店和景點的數據。
+3. <strong>執行生成的代碼</strong>：執行生成的代碼以獲取實時資訊。
+4. <strong>生成行程</strong>：將獲取的數據編制成個人化旅行計劃。
+5. <strong>根據反饋進行調整</strong>：接收用戶反饋，必要時重新生成代碼以優化結果。
 
-#### 分步實現
+#### 實作步驟詳解
 
-1. **收集用戶偏好**
+1. <strong>收集用戶偏好</strong>
 
    ```python
    class Travel_Agent:
@@ -1017,11 +1021,11 @@ print("Updated Itinerary with Feedback:", updated_items)
            self.user_preferences = preferences
    ```
 
-2. **生成代碼以獲取數據**
+2. <strong>產生獲取數據的代碼</strong>
 
    ```python
    def generate_code_to_fetch_data(preferences):
-       # Example: Generate code to search for flights based on user preferences
+       # 例子：生成代碼以根據用戶喜好搜尋航班
        code = f"""
        def search_flights():
            import requests
@@ -1031,7 +1035,7 @@ print("Updated Itinerary with Feedback:", updated_items)
        return code
 
    def generate_code_to_fetch_hotels(preferences):
-       # Example: Generate code to search for hotels
+       # 例子：生成代碼以搜尋酒店
        code = f"""
        def search_hotels():
            import requests
@@ -1041,11 +1045,11 @@ print("Updated Itinerary with Feedback:", updated_items)
        return code
    ```
 
-3. **執行生成的代碼**
+3. <strong>執行生成的代碼</strong>
 
    ```python
    def execute_code(code):
-       # Execute the generated code using exec
+       # 使用 exec 執行已生成的代碼
        exec(code)
        result = locals()
        return result
@@ -1069,7 +1073,7 @@ print("Updated Itinerary with Feedback:", updated_items)
    print("Hotel Options:", hotels)
    ```
 
-4. **生成行程**
+4. <strong>生成行程</strong>
 
    ```python
    def generate_itinerary(flights, hotels, attractions):
@@ -1085,11 +1089,11 @@ print("Updated Itinerary with Feedback:", updated_items)
    print("Suggested Itinerary:", itinerary)
    ```
 
-5. **根據反饋進行調整**
+5. <strong>根據反饋進行調整</strong>
 
    ```python
    def adjust_based_on_feedback(feedback, preferences):
-       # Adjust preferences based on user feedback
+       # 根據用戶反饋調整偏好設定
        if "liked" in feedback:
            preferences["favorites"] = feedback["liked"]
        if "disliked" in feedback:
@@ -1099,7 +1103,7 @@ print("Updated Itinerary with Feedback:", updated_items)
    feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
    updated_preferences = adjust_based_on_feedback(feedback, preferences)
    
-   # Regenerate and execute code with updated preferences
+   # 重新生成並執行帶有更新偏好的代碼
    updated_flight_code = generate_code_to_fetch_data(updated_preferences)
    updated_hotel_code = generate_code_to_fetch_hotels(updated_preferences)
    
@@ -1110,33 +1114,33 @@ print("Updated Itinerary with Feedback:", updated_items)
    print("Updated Itinerary:", updated_itinerary)
    ```
 
-### 利用環境感知和推理
+### 利用環境感知與推理
 
-基於表的結構確實可以通過利用環境感知和推理來增強查詢生成過程。
+根據資料表結構確實可以透過運用環境感知與推理來提升查詢生成過程。
 
-以下是一個範例：
+以下是如何實作的範例：
 
-1. **理解結構**：系統將理解表的結構並利用此信息來支持查詢生成。
-2. **根據反饋進行調整**：系統將根據反饋調整用戶偏好並推理需要更新結構中的哪些字段。
-3. **生成並執行查詢**：系統將生成並執行查詢以根據新偏好獲取更新的航班和酒店數據。
+1. <strong>理解架構</strong>：系統會理解資料表的架構，並利用此資訊作為查詢生成的基礎。
+2. <strong>根據反饋調整</strong>：系統會根據反饋調整用戶偏好，並推理哪些架構欄位需要更新。
+3. <strong>生成並執行查詢</strong>：系統會生成並執行查詢，以根據新偏好抓取更新的航班和酒店資料。
 
-以下是一個更新的 Python 代碼範例，該範例包含這些概念：
+以下是融入這些概念的更新版 Python 程式碼範例：
 
 ```python
 def adjust_based_on_feedback(feedback, preferences, schema):
-    # Adjust preferences based on user feedback
+    # 根據用戶反饋調整偏好設定
     if "liked" in feedback:
         preferences["favorites"] = feedback["liked"]
     if "disliked" in feedback:
         preferences["avoid"] = feedback["disliked"]
-    # Reasoning based on schema to adjust other related preferences
+    # 根據結構推理調整其他相關偏好設定
     for field in schema:
         if field in preferences:
             preferences[field] = adjust_based_on_environment(feedback, field, schema)
     return preferences
 
 def adjust_based_on_environment(feedback, field, schema):
-    # Custom logic to adjust preferences based on schema and feedback
+    # 根據結構和反饋自訂邏輯調整偏好設定
     if field in feedback["liked"]:
         return schema[field]["positive_adjustment"]
     elif field in feedback["disliked"]:
@@ -1144,33 +1148,33 @@ def adjust_based_on_environment(feedback, field, schema):
     return schema[field]["default"]
 
 def generate_code_to_fetch_data(preferences):
-    # Generate code to fetch flight data based on updated preferences
+    # 生成代碼以根據更新的偏好設定獲取航班數據
     return f"fetch_flights(preferences={preferences})"
 
 def generate_code_to_fetch_hotels(preferences):
-    # Generate code to fetch hotel data based on updated preferences
+    # 生成代碼以根據更新的偏好設定獲取酒店數據
     return f"fetch_hotels(preferences={preferences})"
 
 def execute_code(code):
-    # Simulate execution of code and return mock data
+    # 模擬執行代碼並返回模擬數據
     return {"data": f"Executed: {code}"}
 
 def generate_itinerary(flights, hotels, attractions):
-    # Generate itinerary based on flights, hotels, and attractions
+    # 根據航班、酒店和景點生成行程安排
     return {"flights": flights, "hotels": hotels, "attractions": attractions}
 
-# Example schema
+# 範例結構
 schema = {
     "favorites": {"positive_adjustment": "increase", "negative_adjustment": "decrease", "default": "neutral"},
     "avoid": {"positive_adjustment": "decrease", "negative_adjustment": "increase", "default": "neutral"}
 }
 
-# Example usage
+# 使用範例
 preferences = {"favorites": "sightseeing", "avoid": "crowded places"}
 feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
 updated_preferences = adjust_based_on_feedback(feedback, preferences, schema)
 
-# Regenerate and execute code with updated preferences
+# 使用更新的偏好設定重新生成並執行代碼
 updated_flight_code = generate_code_to_fetch_data(updated_preferences)
 updated_hotel_code = generate_code_to_fetch_hotels(updated_preferences)
 
@@ -1181,55 +1185,55 @@ updated_itinerary = generate_itinerary(updated_flights, updated_hotels, feedback
 print("Updated Itinerary:", updated_itinerary)
 ```
 
-#### 解釋 - 根據反饋進行預訂
+#### 解說 — 基於反饋的預訂調整
 
-1. **結構感知**：`schema` 字典定義了如何根據反饋調整偏好。它包括像 `favorites` 和 `avoid` 這樣的字段，以及相應的調整。
-2. **調整偏好（`adjust_based_on_feedback` 方法）**：此方法根據用戶反饋和結構調整偏好。
-3. **基於環境的調整（`adjust_based_on_environment` 方法）**：此方法根據結構和反饋自定義調整。
-4. **生成並執行查詢**：系統生成代碼以根據調整後的偏好獲取更新的航班和酒店數據，並模擬執行這些查詢。
-5. **生成行程**：系統根據新的航班、酒店和景點數據創建更新的行程。
+1. <strong>架構意識</strong>：`schema` 字典定義了如何基於反饋調整偏好，包括 `favorites` 和 `avoid` 欄位及其對應調整。
+2. **調整偏好（`adjust_based_on_feedback` 方法）**：此方法根據用戶反饋及架構調整偏好設定。
+3. **基於環境的調整（`adjust_based_on_environment` 方法）**：此方法根據架構和反饋自訂調整策略。
+4. <strong>生成並執行查詢</strong>：系統根據調整後的偏好生成代碼抓取更新的航班和酒店資料，並模擬執行這些查詢。
+5. <strong>生成行程</strong>：系統根據更新的航班、酒店及景點資料產生最新行程。
 
-通過使系統具有環境感知並基於結構進行推理，它可以生成更準確和相關的查詢，從而提供更好的旅行建議和更個性化的用戶體驗。
+透過使系統具備環境感知並基於架構推理，可生成更準確且相關的查詢，進而提供更佳的旅行建議和更個人化的用戶體驗。
 
-### 使用 SQL 作為檢索增強生成（RAG）技術
+### 將 SQL 作為檢索強化生成（RAG）技術使用
 
-SQL（結構化查詢語言）是一種與數據庫交互的強大工具。當作為檢索增強生成（RAG）方法的一部分使用時，SQL 可以從數據庫中檢索相關數據，以便在人工智能代理中生成響應或執行操作。讓我們探討如何在旅行代理的背景下使用 SQL 作為 RAG 技術。
+SQL（結構化查詢語言）是與資料庫互動的強大工具。在檢索強化生成（RAG）方法中，SQL 可從資料庫中檢索相關數據，用於AI代理的響應生成或行動決策。讓我們探討 SQL 如何用作 Travel Agent 的 RAG 技術。
 
 #### 關鍵概念
 
-1. **數據庫交互**：
-   - 使用 SQL 查詢數據庫，檢索相關信息並操作數據。
-   - 範例：從旅行數據庫中獲取航班詳情、酒店信息和景點。
+1. <strong>資料庫互動</strong>：
+   - 使用 SQL 查詢資料庫、取得相關資訊和操作數據。
+   - 範例：從旅遊資料庫擷取航班詳情、酒店資訊及景點資料。
 
-2. **與 RAG 的整合**：
+2. **與 RAG 結合**：
    - 根據用戶輸入和偏好生成 SQL 查詢。
-   - 檢索的數據用於生成個性化建議或操作。
+   - 使用檢索到的數據生成個人化建議或行動。
 
-3. **動態查詢生成**：
-   - 人工智能代理根據上下文和用戶需求生成動態 SQL 查詢。
-   - 範例：自定義 SQL 查詢以根據預算、日期和興趣篩選結果。
+3. <strong>動態查詢生成</strong>：
+   - AI 代理根據情境和需求動態生成 SQL 查詢。
+   - 範例：根據預算、日期和興趣自訂 SQL 查詢篩選結果。
 
-#### 應用
+#### 應用案例
 
-- **自動代碼生成**：生成特定任務的代碼片段。
-- **SQL 作為 RAG**：使用 SQL 查詢操作數據。
-- **問題解決**：創建並執行代碼以解決問題。
+- <strong>自動代碼生成</strong>：為特定任務生成代碼片段。
+- **RAG 中的 SQL**：使用 SQL 查詢操作數據。
+- <strong>問題解決</strong>：創建並執行代碼解決問題。
 
-**範例**：
-一個數據分析代理：
+<strong>例子</strong>：
+一個數據分析代理人：
 
-1. **任務**：分析數據集以發現趨勢。
-2. **步驟**：
-   - 加載數據集。
-   - 生成 SQL 查詢以篩選數據。
-   - 執行查詢並檢索結果。
-   - 生成可視化和洞察。
-3. **資源**：數據集訪問、SQL 功能。
-4. **經驗**：利用過去結果提高未來分析。
+1. <strong>任務</strong>：分析數據集尋找趨勢。
+2. <strong>步驟</strong>：
+   - 載入數據集。
+   - 生成 SQL 查詢篩選數據。
+   - 執行查詢並取得結果。
+   - 生成視覺化及洞見。
+3. <strong>資源</strong>：可訪問數據集和 SQL 功能。
+4. <strong>經驗</strong>：使用過往結果改善未來分析。
 
-#### 實際範例：在旅行代理中使用 SQL
+#### 實務範例：Travel Agent 中使用 SQL
 
-1. **收集用戶偏好**
+1. <strong>收集用戶偏好</strong>
 
    ```python
    class Travel_Agent:
@@ -1266,7 +1270,7 @@ SQL（結構化查詢語言）是一種與數據庫交互的強大工具。當�
        return results
    ```
 
-4. **生成建議**
+4. <strong>生成推薦</strong>
 
    ```python
    def generate_recommendations(preferences):
@@ -1299,46 +1303,46 @@ SQL（結構化查詢語言）是一種與數據庫交互的強大工具。當�
 
 #### 範例 SQL 查詢
 
-1. **航班查詢**
+1. <strong>航班查詢</strong>
 
    ```sql
    SELECT * FROM flights WHERE destination='Paris' AND dates='2025-04-01 to 2025-04-10' AND budget='moderate';
    ```
 
-2. **酒店查詢**
+2. <strong>酒店查詢</strong>
 
    ```sql
    SELECT * FROM hotels WHERE destination='Paris' AND budget='moderate';
    ```
 
-3. **景點查詢**
+3. <strong>景點查詢</strong>
 
    ```sql
    SELECT * FROM attractions WHERE destination='Paris' AND interests='museums, cuisine';
    ```
 
-通過將 SQL 作為檢索增強生成（RAG）技術的一部分，像旅行代理這樣的人工智能代理可以動態檢索和利用相關數據，提供準確且個性化的建議。
+利用 SQL 作為檢索強化生成（RAG）技術的一部分，像 Travel Agent 這樣的 AI 代理能動態檢索並使用相關資料，提供準確且個人化的建議。
 
-### 元認知的範例
+### 元認知範例
 
-為了展示元認知的實現，我們來創建一個簡單的代理，*反思其決策過程*，並在解決問題時調整策略。以下是一個範例，代理嘗試優化酒店選擇，但在做出錯誤或次優選擇時評估自己的推理並調整策略。
+為了展示元認知的實作，我們來建立一個簡單代理，它在解決問題的同時會<em>反思其決策過程</em>。本例中，我們將構建一個系統，代理嘗試優化酒店選擇，但若其推理失誤或選擇次優，則會評估自身推理並調整策略。
 
-我們將使用一個基本範例來模擬，代理根據價格和質量的組合選擇酒店，並在反思後進行調整。
+我們將透過一個基本範例模擬此狀況，代理根據價格與品質的綜合評估選擇酒店，但會「反思」其決策並做出相應調整。
 
-#### 如何展示元認知：
+#### 此範例如何說明元認知：
 
-1. **初始決策**：代理將選擇最便宜的酒店，而不考慮質量影響。
-2. **反思與評估**：在初次選擇後，代理將檢查酒店是否是“糟糕”的選擇，並根據用戶反饋進行反思。如果發現酒店質量過低，它會反思其推理。
-3. **調整策略**：代理根據反思調整策略，從“最便宜”切換到“最高質量”，從而在未來迭代中改進其決策過程。
+1. <strong>初步決策</strong>：代理選擇價格最低的酒店，未考慮品質影響。
+2. <strong>反思與評估</strong>：初選後，代理透過用戶反饋檢查酒店是否為不良選擇。如發現品質過低，則反思其推理。
+3. <strong>調整策略</strong>：代理基於反思調整策略，從「最低價」切換至「最高品質」，提升未來決策的品質。
 
-以下是一個範例：
+範例如下：
 
 ```python
 class HotelRecommendationAgent:
     def __init__(self):
-        self.previous_choices = []  # Stores the hotels chosen previously
-        self.corrected_choices = []  # Stores the corrected choices
-        self.recommendation_strategies = ['cheapest', 'highest_quality']  # Available strategies
+        self.previous_choices = []  # 儲存之前選擇的酒店
+        self.corrected_choices = []  # 儲存修正後的選擇
+        self.recommendation_strategies = ['cheapest', 'highest_quality']  # 可用的策略
 
     def recommend_hotel(self, hotels, strategy):
         """
@@ -1363,11 +1367,11 @@ class HotelRecommendationAgent:
             return "No choices made yet."
 
         last_choice_strategy, last_choice = self.previous_choices[-1]
-        # Let's assume we have some user feedback that tells us whether the last choice was good or not
+        # 假設我們有一些用戶反饋，告訴我們最後的選擇是否好
         user_feedback = self.get_user_feedback(last_choice)
 
         if user_feedback == "bad":
-            # Adjust strategy if the previous choice was unsatisfactory
+            # 如果之前的選擇不理想，調整策略
             new_strategy = 'highest_quality' if last_choice_strategy == 'cheapest' else 'cheapest'
             self.corrected_choices.append((new_strategy, last_choice))
             return f"Reflecting on choice. Adjusting strategy to {new_strategy}."
@@ -1384,25 +1388,25 @@ class HotelRecommendationAgent:
             return "bad"
         return "good"
 
-# Simulate a list of hotels (price and quality)
+# 模擬一個酒店列表（價格和質素）
 hotels = [
     {'name': 'Budget Inn', 'price': 80, 'quality': 6},
     {'name': 'Comfort Suites', 'price': 120, 'quality': 8},
     {'name': 'Luxury Stay', 'price': 200, 'quality': 9}
 ]
 
-# Create an agent
+# 建立一個代理人
 agent = HotelRecommendationAgent()
 
-# Step 1: The agent recommends a hotel using the "cheapest" strategy
+# 第一步：代理人使用「最平」策略推薦酒店
 recommended_hotel = agent.recommend_hotel(hotels, 'cheapest')
 print(f"Recommended hotel (cheapest): {recommended_hotel['name']}")
 
-# Step 2: The agent reflects on the choice and adjusts strategy if necessary
+# 第二步：代理人反思選擇並在必要時調整策略
 reflection_result = agent.reflect_on_choice()
 print(reflection_result)
 
-# Step 3: The agent recommends again, this time using the adjusted strategy
+# 第三步：代理人再次推薦，這次使用調整後的策略
 adjusted_recommendation = agent.recommend_hotel(hotels, 'highest_quality')
 print(f"Adjusted hotel recommendation (highest_quality): {adjusted_recommendation['name']}")
 ```
@@ -1410,28 +1414,30 @@ print(f"Adjusted hotel recommendation (highest_quality): {adjusted_recommendatio
 #### 代理的元認知能力
 
 關鍵在於代理能夠：
-- 評估其之前的選擇和決策過程。
-- 根據反思調整策略，即元認知的實際應用。
+- 評估先前的選擇及決策過程。
+- 根據反思調整策略，展現元認知的實作。
 
-這是一種簡單的元認知形式，系統能夠根據內部反饋調整其推理過程。
+這是元認知的一種簡易形式，系統能基於內部反饋調整推理程序。
 
 ### 結論
 
-元認知是一種強大的工具，可以顯著增強人工智能代理的能力。通過整合元認知過程，您可以設計出更智能、更具適應性和更高效的代理。使用額外資源進一步探索人工智能代理中元認知的迷人世界。
+元認知是能顯著提升 AI 代理能力的強大工具。透過融合元認知過程，您可以設計出更智能、適應力強且有效率的代理。可使用附加資源進一步探索 AI 代理中元認知的精彩世界。
 
-### 有關元認知設計模式的更多問題？
+### 對元認知設計模式有更多疑問？
 
-加入 [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord)，與其他學習者交流，參加辦公時間並解答您的人工智能代理問題。
+加入 [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) 與其他學習者交流，參加辦公時間並獲得 AI 代理相關問題的解答。
 
-## 上一課
+## 前一課程
 
 [多代理設計模式](../08-multi-agent/README.md)
 
-## 下一課
+## 下一課程
 
-[人工智能代理的生產應用](../10-ai-agents-production/README.md)
+[生產環境中的 AI 代理](../10-ai-agents-production/README.md)
 
 ---
 
-**免責聲明**：  
-此文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。應以原始語言的文件作為權威來源。對於關鍵資訊，建議尋求專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或誤釋不承擔責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責聲明**：
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻譯而成。雖然我們致力於確保準確性，但請注意，機器自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議進行專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋承擔責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

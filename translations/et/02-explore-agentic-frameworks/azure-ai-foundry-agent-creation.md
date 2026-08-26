@@ -1,42 +1,42 @@
-# Azure AI Agent Service Arendus
+# Microsoft Foundry agendi teenuse arendus
 
-Selles harjutuses kasutad Azure AI Agent teenuse tööriistu [Azure AI Foundry portaalis](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst), et luua lennupiletite broneerimise agent. Agent suudab suhelda kasutajatega ja anda teavet lendude kohta.
+Selles harjutuses kasutate Microsoft Foundry agendi teenuse tööriistu Microsoft Foundry portaalis ([Microsoft Foundry portal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)) lennupiletite broneerimiseks agendi loomiseks. Agent saab suhelda kasutajatega ja anda teavet lendude kohta.
 
 ## Eeltingimused
 
-Selle harjutuse läbiviimiseks vajad järgmist:
-1. Azure'i konto aktiivse tellimusega. [Loo tasuta konto](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
-2. Vajad õigusi Azure AI Foundry hubi loomiseks või peab see olema sinu jaoks juba loodud.
-    - Kui sinu roll on Contributor või Owner, saad järgida selle juhendi samme.
+Selle harjutuse läbimiseks vajate järgmisi asju:
+1. Azure konto aktiivse tellimusega. [Loo konto tasuta](https://azure.microsoft.com/free/?WT.mc_id=academic-105485-koreyst).
+2. Õigusi Microsoft Foundry keskusete loomiseks või kelleltki, kes selle teie jaoks loob.
+    - Kui teie roll on Kaastöötaja või Omanik, võite järgida selles juhendis olevaid samme.
 
-## Azure AI Foundry hubi loomine
+## Loo Microsoft Foundry keskus
 
-> **Note:** Azure AI Foundry oli varem tuntud kui Azure AI Studio.
+> **Märkus:** Microsoft Foundryt nimetati varem Azure AI Studioks.
 
-1. Järgi juhiseid [Azure AI Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) blogipostitusest, et luua Azure AI Foundry hub.
-2. Kui projekt on loodud, sulge kõik kuvatavad näpunäited ja vaata projekti lehte Azure AI Foundry portaalis, mis peaks välja nägema sarnane järgmisele pildile:
+1. Järgige neid juhiseid [Microsoft Foundry](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst) blogipostitusest Microsoft Foundry keskuse loomiseks.
+2. Kui teie projekt on loodud, sulgege kõik kuvatavad näpunäited ja vaadake üle projekti leht Microsoft Foundry portaalis, mis peaks välja nägema sarnaselt järgmise pildiga:
 
-    ![Azure AI Foundry Projekt](../../../translated_images/et/azure-ai-foundry.88d0c35298348c2f.webp)
+    ![Microsoft Foundry Project](../../../translated_images/et/azure-ai-foundry.88d0c35298348c2f.webp)
 
 ## Mudeli juurutamine
 
-1. Projekti vasakpoolses paneelis, jaotises **My assets**, vali leht **Models + endpoints**.
-2. Lehel **Models + endpoints**, vahekaardil **Model deployments**, menüüs **+ Deploy model**, vali **Deploy base model**.
-3. Otsi loendist mudelit `gpt-4o-mini` ja vali ning kinnita see.
+1. Projekti vasakul paneelil jaotises **Minu varad** valige leht **Mudelite + lõpp-punktid**.
+2. Lehel **Mudelite + lõpp-punktid**, vahekaardil **Mudeli juurutused**, menüüs **+ Juhtmurdi juurutamine**, valige **Juuruta baasmudel**.
+3. Otsige nimekirjast mudel `gpt-5-mini`, valige see ja kinnitage.
 
-    > **Note**: TPM-i vähendamine aitab vältida tellimuse kvoodi ületarbimist.
+    > **Märkus**: TPM-i vähendamine aitab vältida teie kasutatavas tellimuses saadaoleva limiidi liigselt kasutamist.
 
-    ![Mudeli Juurutamine](../../../translated_images/et/model-deployment.3749c53fb81e18fd.webp)
+    ![Model Deployed](../../../translated_images/et/model-deployment.3749c53fb81e18fd.webp)
 
 ## Agendi loomine
 
-Kui mudel on juurutatud, saad luua agendi. Agent on vestlus-AI mudel, mida saab kasutada kasutajatega suhtlemiseks.
+Nüüd, kui olete mudeli juurutanud, saate luua agendi. Agent on vestluslik AI mudel, mida saab kasutada kasutajatega suhtlemiseks.
 
-1. Projekti vasakpoolses paneelis, jaotises **Build & Customize**, vali leht **Agents**.
-2. Klõpsa **+ Create agent**, et luua uus agent. **Agent Setup** dialoogiboksis:
-    - Sisesta agendi nimi, näiteks `FlightAgent`.
-    - Veendu, et varem loodud `gpt-4o-mini` mudeli juurutamine on valitud.
-    - Määra **Instructions** vastavalt juhistele, mida soovid, et agent järgiks. Näiteks:
+1. Projekti vasakul paneelil, jaotises **Ehita ja kohanda**, valige leht **Agendid**.
+2. Klõpsake **+ Loo agent** uue agendi loomiseks. Dialoogiboksis **Agendi häälestus**:
+    - Sisestage agendi nimi, näiteks `FlightAgent`.
+    - Veenduge, et on valitud eelnevalt loodud `gpt-5-mini` mudeli juurutus
+    - Määrake **Juhised** vastavalt juhistele, mida soovite agendi järgida. Näiteks:
     ```
     You are FlightAgent, a virtual assistant specialized in handling flight-related queries. Your role includes assisting users with searching for flights, retrieving flight details, checking seat availability, and providing real-time flight status. Follow the instructions below to ensure clarity and effectiveness in your responses:
 
@@ -64,43 +64,46 @@ Kui mudel on juurutatud, saad luua agendi. Agent on vestlus-AI mudel, mida saab 
     
     ```
 > [!NOTE]
-> Üksikasjaliku juhise jaoks saad vaadata [seda repositooriumi](https://github.com/ShivamGoyal03/RoamMind) lisainformatsiooni saamiseks.
+> Täpsema juhise jaoks võite tutvuda [selle hoidla](https://github.com/ShivamGoyal03/RoamMind) lisainfoga.
     
-> Lisaks saad lisada **Knowledge Base** ja **Actions**, et täiustada agendi võimekust pakkuda rohkem teavet ja täita automatiseeritud ülesandeid vastavalt kasutaja päringutele. Selle harjutuse jaoks võid need sammud vahele jätta.
+> Lisaks saate lisada **Teadmistebaasi** ja **Tegevusi**, et täiendada agendi võimekust pakkuda rohkem teavet ja täita automatiseeritud ülesandeid kasutajate päringute põhjal. Selle harjutuse jaoks võite need sammud vahele jätta.
     
-![Agendi Seadistamine](../../../translated_images/et/agent-setup.9bbb8755bf5df672.webp)
+![Agent Setup](../../../translated_images/et/agent-setup.9bbb8755bf5df672.webp)
 
-3. Uue multi-AI agendi loomiseks klõpsa lihtsalt **New Agent**. Uus agent kuvatakse seejärel lehel Agents.
+3. Uue mitme AI-agendi loomiseks klõpsake lihtsalt **Uus agent**. Värskelt loodud agent kuvatakse seejärel Agendid lehel.
+
 
 ## Agendi testimine
 
-Pärast agendi loomist saad seda testida, et näha, kuidas see reageerib kasutaja päringutele Azure AI Foundry portaali mänguväljakul.
+Pärast agendi loomist saate seda testida, et vaadata, kuidas see kasutajate päringutele Microsoft Foundry portaalis mänguväljakul reageerib.
 
-1. Agendi **Setup** paneeli ülaosas vali **Try in playground**.
-2. **Playground** paneelil saad agendiga suhelda, sisestades päringuid vestlusaknas. Näiteks võid paluda agendil otsida lende Seattle'ist New Yorki 28. kuupäeval.
+1. Agendi **Häälestus** paneeli ülaosas valige **Proovi mänguväljakul**.
+2. Paneelis **Mänguväljak** saate agendiga suhelda, tippides vestlusaknas päringuid. Näiteks võite paluda agendil otsida lende Seattle'ist New Yorki 28. kuupäevaks.
 
-    > **Note**: Agent ei pruugi anda täpseid vastuseid, kuna selles harjutuses ei kasutata reaalajas andmeid. Eesmärk on testida agendi võimet mõista ja vastata kasutaja päringutele vastavalt antud juhistele.
+    > **Märkus**: Agent ei pruugi anda täpseid vastuseid, kuna selles harjutuses ei kasutata reaalajas andmeid. Eesmärk on testida agendi võimet mõista ja vastata kasutajate päringutele antud juhiste põhjal.
 
-    ![Agendi Mänguväljak](../../../translated_images/et/agent-playground.dc146586de715010.webp)
+    ![Agent Playground](../../../translated_images/et/agent-playground.dc146586de715010.webp)
 
-3. Pärast agendi testimist saad seda edasi kohandada, lisades rohkem intentsioone, treeningandmeid ja tegevusi, et täiustada selle võimekust.
+3. Pärast agendi testimist saate seda edasi kohandada, lisades rohkem kavatsusi, koolitusandmeid ja tegevusi selle võimekuse suurendamiseks.
 
-## Ressursside kustutamine
+## Ressursside koristamine
 
-Kui oled agendi testimise lõpetanud, saad selle kustutada, et vältida lisakulusid.
-1. Ava [Azure portaal](https://portal.azure.com) ja vaata ressursside grupi sisu, kuhu sa harjutuse jaoks hubi ressursid juurutasid.
-2. Tööriistaribal vali **Delete resource group**.
-3. Sisesta ressursside grupi nimi ja kinnita, et soovid selle kustutada.
+Kui olete agendi testimise lõpetanud, saate selle kustutada, et vältida lisakulutusi.
+1. Avage [Azure portal](https://portal.azure.com) ja vaadake ressursigrupi sisu, kuhu juurutasite selles harjutuses kasutatud keskuse ressursid.
+2. Tööriistaribal valige **Kustuta ressursirühm**.
+3. Sisestage ressursigrupi nimi ja kinnitage kustutamine.
 
 ## Ressursid
 
-- [Azure AI Foundry dokumentatsioon](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
-- [Azure AI Foundry portaal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
-- [Azure AI Studio alustamine](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
-- [AI agentide põhialused Azure'is](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry dokumentatsioon](https://learn.microsoft.com/en-us/azure/ai-studio/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundry portaal](https://ai.azure.com/?WT.mc_id=academic-105485-koreyst)
+- [Microsoft Foundryga alustamine](https://techcommunity.microsoft.com/blog/educatordeveloperblog/getting-started-with-azure-ai-studio/4095602?WT.mc_id=academic-105485-koreyst)
+- [Azure AI agentide põhialused](https://learn.microsoft.com/en-us/training/modules/ai-agent-fundamentals/?WT.mc_id=academic-105485-koreyst)
 - [Azure AI Discord](https://aka.ms/AzureAI/Discord)
 
 ---
 
-**Lahtiütlus**:  
-See dokument on tõlgitud AI tõlketeenuse [Co-op Translator](https://github.com/Azure/co-op-translator) abil. Kuigi püüame tagada täpsust, palume arvestada, et automaatsed tõlked võivad sisaldada vigu või ebatäpsusi. Algne dokument selle algses keeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitame kasutada professionaalset inimtõlget. Me ei vastuta selle tõlke kasutamisest tulenevate arusaamatuste või valesti tõlgenduste eest.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Lahtiütlus**:
+See dokument on tõlgitud kasutades AI tõlketeenust [Co-op Translator](https://github.com/Azure/co-op-translator). Kuigi me püüdleme täpsuse poole, palun pange tähele, et automatiseeritud tõlgetes võib esineda vigu või ebatäpsusi. Originaaldokument selle emakeeles tuleks pidada autoriteetseks allikaks. Olulise teabe puhul soovitatakse kasutada professionaalset inimtõlget. Me ei vastuta selle tõlkega seotud eksimustest või valesti mõistmistest.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

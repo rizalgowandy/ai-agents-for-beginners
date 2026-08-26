@@ -2,31 +2,31 @@
 
 ## Въведение
 
-Този урок ще обхване как да стартирате примерите с код от този курс.
+Този урок ще обясни как да стартирате примерния код от този курс.
 
-## Присъединете се към други обучаващи се и получете помощ
+## Присъединете се към други учащи и получете помощ
 
-Преди да започнете да клонирате вашето хранилище, присъединете се към [AI Agents For Beginners Discord канала](https://aka.ms/ai-agents/discord), за да получите помощ с настройката, да зададете въпроси относно курса или да се свържете с други обучаващи се.
+Преди да започнете да клонирате своя репозиторий, присъединете се към [AI Agents For Beginners Discord channel](https://aka.ms/ai-agents/discord), за да получите помощ с настройката, отговори на въпроси за курса или за да се свържете с други учащи.
 
-## Клонирайте или създайте копие на това хранилище
+## Клониране или форкване на този репозиторий
 
-За да започнете, моля, клонирайте или създайте копие на GitHub хранилището. Това ще създаде ваша собствена версия на материалите от курса, за да можете да стартирате, тествате и променяте кода!
+За да започнете, моля клонирайте или форкнете GitHub репозиторията. Това ще ви създаде собствена версия на материала от курса, така че да можете да стартирате, тествате и променяте кода!
 
-Това може да се направи, като кликнете на линка за <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">създаване на копие на хранилището</a>.
+Това може да се направи като кликнете на линка за <a href="https://github.com/microsoft/ai-agents-for-beginners/fork" target="_blank">форкване на репото</a>
 
-Сега трябва да имате ваша собствена версия на този курс на следния линк:
+Сега трябва да имате собствен форк на този курс на следния линк:
 
 ![Forked Repo](../../../translated_images/bg/forked-repo.33f27ca1901baa6a.webp)
 
-### Повърхностно клониране (препоръчително за работилници / Codespaces)
+### Леко клониране (препоръчително за работилници / Codespaces)
 
-  >Пълното хранилище може да бъде голямо (~3 GB), когато изтеглите цялата история и всички файлове. Ако само посещавате работилницата или ви трябват само няколко папки с уроци, повърхностното клониране (или частично клониране) избягва голяма част от това изтегляне, като съкращава историята и/или пропуска ненужни файлове.
+  >Целият репозиторий може да е голям (~3 GB), когато изтеглите цялата история и всички файлове. Ако посещавате само работилницата или ви трябват само няколко папки с уроци, лекото клониране (или частично клониране) предотвратява изтеглянето на голяма част от историята и/или пропуска blob обекти.
 
-#### Бързо повърхностно клониране — минимална история, всички файлове
+#### Бързо леко клониране — минимална история, всички файлове
 
-Заменете `<your-username>` в командите по-долу с URL на вашето копие (или основния URL, ако предпочитате).
+Заменете `<your-username>` в долните команди с URL адреса на вашия форк (или с URL адреса на upstream, ако предпочитате).
 
-За да клонирате само последната история на комитите (малко изтегляне):
+За да клонирате само последната история на комита (малко изтегляне):
 
 ```bash|powershell
 git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.git
@@ -38,27 +38,27 @@ git clone --depth 1 https://github.com/<your-username>/ai-agents-for-beginners.g
 git clone --depth 1 --branch <branch-name> https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-#### Частично (спарс) клониране — минимални файлове + само избрани папки
+#### Частично (разредено) клониране — минимални blob обекти и само избрани папки
 
-Това използва частично клониране и спарс-чекаут (изисква Git 2.25+ и препоръчителен модерен Git с поддръжка за частично клониране):
+Това използва частично клониране и sparse-checkout (изисква Git 2.25+ и се препоръчва модерен Git с поддръжка на частично клониране):
 
 ```bash|powershell
 git clone --depth 1 --filter=blob:none --sparse https://github.com/<your-username>/ai-agents-for-beginners.git
 ```
 
-Влезте в папката на хранилището:
+Влезте в папката на репото:
 
 ```bash|powershell
 cd ai-agents-for-beginners
 ```
 
-След това посочете кои папки искате (примерът по-долу показва две папки):
+После посочете кои папки искате (примерът по-долу показва две папки):
 
 ```bash|powershell
 git sparse-checkout set 00-course-setup 01-intro-to-ai-agents
 ```
 
-След клониране и проверка на файловете, ако ви трябват само файлове и искате да освободите пространство (без история на Git), моля, изтрийте метаданните на хранилището (💀необратимо — ще загубите всички функции на Git: няма комити, изтегляния, качвания или достъп до история).
+След клонирането и проверката на файловете, ако ви трябват само файловете и искате да освободите място (без история на git), изтрийте метаданните на репозитория (💀невъзвратно — ще загубите цялата Git функционалност: няма комити, извличания, натискане или достъп до история).
 
 ```bash
 # zsh/bash
@@ -72,40 +72,29 @@ Remove-Item -Recurse -Force .git
 
 #### Използване на GitHub Codespaces (препоръчително за избягване на големи локални изтегляния)
 
-- Създайте нов Codespace за това хранилище чрез [GitHub UI](https://github.com/codespaces).  
+- Създайте нов Codespace за това репо чрез [GitHub UI](https://github.com/codespaces).  
 
-- В терминала на новосъздадения Codespace, изпълнете една от командите за повърхностно/частично клониране по-горе, за да донесете само папките с уроци, които ви трябват, в работното пространство на Codespace.
-- По избор: след клониране в Codespaces, премахнете .git, за да освободите допълнително пространство (вижте командите за премахване по-горе).
-- Забележка: Ако предпочитате да отворите хранилището директно в Codespaces (без допълнително клониране), имайте предвид, че Codespaces ще създаде средата на devcontainer и може все още да предостави повече, отколкото ви е необходимо. Клонирането на повърхностно копие в нов Codespace ви дава повече контрол върху използването на диска.
+- В терминала на новосъздадения кодспейс, изпълнете една от горните команди за леко/разредено клониране, за да донесете само папките с уроци, които ви трябват в работното пространство на Codespace.
+- По избор: след клониране вътре в Codespaces, премахнете .git, за да освободите допълнително място (вижте командите за премахване по-горе).
+- Забележка: Ако предпочитате да отворите директно репото в Codespaces (без допълнително клониране), имайте предвид, че Codespaces ще конструира devcontainer средата и може да зареди повече отколкото ви трябва. Клониране на леко копие в чист Codespace ви дава повече контрол върху използването на дисково пространство.
 
 #### Съвети
 
-- Винаги заменяйте URL за клониране с вашето копие, ако искате да редактирате/комитирате.
-- Ако по-късно ви трябва повече история или файлове, можете да ги изтеглите или да коригирате спарс-чекаут, за да включите допълнителни папки.
+- Винаги заменяйте URL за клониране с този на вашия форк, ако искате да редактирате/комитирате.
+- Ако по-късно ви трябва повече история или файлове, можете да ги изтеглите или да нагласите sparse-checkout, за да включите допълнителни папки.
 
 ## Стартиране на кода
 
-Този курс предлага серия от Jupyter Notebooks, които можете да стартирате, за да получите практически опит в изграждането на AI агенти.
+Този курс предлага серия от Jupyter тетрадки, които можете да стартирате, за да получите практически опит в изграждането на AI агенти.
 
-Примерите с код използват:
+Примерният код използва **Microsoft Agent Framework (MAF)** с `FoundryChatClient`, който се свързва с **Microsoft Foundry Agent Service V2** (отговарящият API) чрез **Microsoft Foundry**.
 
-**Изисква GitHub акаунт - Безплатно**:
-
-1) Semantic Kernel Agent Framework + GitHub Models Marketplace. Обозначено като (semantic-kernel.ipynb)
-2) AutoGen Framework + GitHub Models Marketplace. Обозначено като (autogen.ipynb)
-
-**Изисква Azure абонамент**:
-
-3) Azure AI Foundry + Azure AI Agent Service. Обозначено като (azureaiagent.ipynb)
-
-Препоръчваме ви да изпробвате и трите типа примери, за да видите кой работи най-добре за вас.
-
-Който и вариант да изберете, той ще определи кои стъпки за настройка трябва да следвате по-долу:
+Всички Python тетрадки имат етикет `*-python-agent-framework.ipynb`.
 
 ## Изисквания
 
 - Python 3.12+
-  - **NOTE**: Ако нямате инсталиран Python3.12, уверете се, че го инсталирате. След това създайте вашия venv, използвайки python3.12, за да гарантирате, че правилните версии са инсталирани от файла requirements.txt.
+  - **ЗАБЕЛЕЖКА**: Ако нямате инсталиран Python3.12, уверете се, че го инсталирате. След това създайте вашата виртуална среда с python3.12, за да сте сигурни, че се инсталират правилните версии от файла requirements.txt.
   
     >Пример
 
@@ -115,7 +104,7 @@ Remove-Item -Recurse -Force .git
     python -m venv venv
     ```
 
-    След това активирайте venv средата за:
+    След това активирайте venv средата с:
 
     ```bash
     # zsh/bash
@@ -127,113 +116,84 @@ Remove-Item -Recurse -Force .git
     venv\Scripts\activate
     ```
 
-- .NET 10+: За примерите с код, използващи .NET, уверете се, че сте инсталирали [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) или по-нова версия. След това проверете инсталираната версия на .NET SDK:
+- .NET 10+: За примерния код с .NET, уверете се, че сте инсталирали [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) или по-нова версия. След това проверете версията на инсталирания .NET SDK:
 
     ```bash|powershell
     dotnet --list-sdks
     ```
 
-- GitHub акаунт - За достъп до GitHub Models Marketplace
-- Azure абонамент - За достъп до Azure AI Foundry
-- Azure AI Foundry акаунт - За достъп до Azure AI Agent Service
+- **Azure CLI** — Изисква се за автентикация. Инсталирайте от [aka.ms/installazurecli](https://aka.ms/installazurecli).
+- **Azure абонамент** — За достъп до Microsoft Foundry и Microsoft Foundry Agent Service.
+- **Microsoft Foundry проект** — Проект с разположен модел (напр. `gpt-5-mini`). Вижте [Стъпка 1](#стъпка-1-създаване-на-microsoft-foundry-проект) по-долу.
 
-В корена на това хранилище сме включили файл `requirements.txt`, който съдържа всички необходими Python пакети за стартиране на примерите с код.
+В корена на този репозиторий сме включили файл `requirements.txt`, който съдържа всички необходими Python пакети за стартиране на примерния код.
 
-Можете да ги инсталирате, като изпълните следната команда в терминала в корена на хранилището:
+Можете да ги инсталирате, като стартирате следната команда в терминала си в корена на репото:
 
 ```bash|powershell
 pip install -r requirements.txt
 ```
 
-Препоръчваме създаването на Python виртуална среда, за да избегнете конфликти и проблеми.
+Препоръчваме ви да създадете Python виртуална среда, за да избегнете конфликти и проблеми.
 
-## Настройка на VSCode
+## Настройване на VSCode
 
-Уверете се, че използвате правилната версия на Python в VSCode.
+Уверете се, че използвате правилната версия на Python във VSCode.
 
 ![image](https://github.com/user-attachments/assets/a85e776c-2edb-4331-ae5b-6bfdfb98ee0e)
 
-## Настройка за примери, използващи GitHub модели
+## Настройка на Microsoft Foundry и Microsoft Foundry Agent Service
 
-### Стъпка 1: Получете вашия GitHub Personal Access Token (PAT)
+### Стъпка 1: Създаване на Microsoft Foundry проект
 
-Този курс използва GitHub Models Marketplace, предоставяйки безплатен достъп до големи езикови модели (LLMs), които ще използвате за изграждане на AI агенти.
+Трябва ви Microsoft Foundry **hub** и **проект** с разположен модел, за да стартирате тетрадките.
 
-За да използвате GitHub моделите, ще трябва да създадете [GitHub Personal Access Token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
+1. Отидете на [ai.azure.com](https://ai.azure.com) и влезте със своя Azure акаунт.
+2. Създайте **hub** (или използвайте съществуващ). Вижте: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources).
+3. Вътре в hub-а създайте **проект**.
+4. Разположете модел (например `gpt-5-mini`) от **Models + Endpoints** → **Deploy model**.
 
-Това може да се направи, като отидете на <a href="https://github.com/settings/personal-access-tokens" target="_blank">настройките за лични токени</a> във вашия GitHub акаунт.
+### Стъпка 2: Вземете своя проектен крайна точка и име на разполагане на модела
 
-Моля, следвайте [Принципа на минималните привилегии](https://docs.github.com/en/get-started/learning-to-code/storing-your-secrets-safely), когато създавате вашия токен. Това означава, че трябва да дадете на токена само разрешенията, които са му необходими за стартиране на примерите с код в този курс.
+От вашия проект в портала на Microsoft Foundry:
 
-1. Изберете опцията `Fine-grained tokens` от лявата страна на екрана, като отидете в **Developer settings**.
-
-   ![Developer settings](../../../translated_images/bg/profile_developer_settings.410a859fe749c755.webp)
-
-   След това изберете `Generate new token`.
-
-   ![Generate Token](../../../translated_images/bg/fga_new_token.1c1a234afe202ab3.webp)
-
-2. Въведете описателно име за вашия токен, което отразява неговата цел, за да бъде лесно разпознаваем по-късно.
-
-    🔐 Препоръка за продължителност на токена
-
-    Препоръчителна продължителност: 30 дни
-    За по-сигурна настройка можете да изберете по-кратък период — например 7 дни 🛡️
-    Това е чудесен начин да си поставите лична цел и да завършите курса, докато вашият учебен импулс е висок 🚀.
-
-    ![Token Name and Expiration](../../../translated_images/bg/token-name-expiry-date.a095fb0de6386864.webp)
-
-3. Ограничете обхвата на токена до вашето копие на това хранилище.
-
-    ![Limit scope to fork repository](../../../translated_images/bg/token_repository_limit.924ade5e11d9d8bb.webp)
-
-4. Ограничете разрешенията на токена: Под **Permissions**, кликнете върху таба **Account** и натиснете бутона "+ Add permissions". Ще се появи падащо меню. Моля, потърсете **Models** и отметнете полето за него.
-
-    ![Add Models Permission](../../../translated_images/bg/add_models_permissions.c0c44ed8b40fc143.webp)
-
-5. Проверете необходимите разрешения преди да генерирате токена. ![Verify Permissions](../../../translated_images/bg/verify_permissions.06bd9e43987a8b21.webp)
-
-6. Преди да генерирате токена, уверете се, че сте готови да го съхраните на сигурно място, като например сейф за пароли, тъй като той няма да бъде показан отново след създаването му. ![Store Token Securely](../../../translated_images/bg/store_token_securely.08ee2274c6ad6caf.webp)
-
-Копирайте новия токен, който току-що сте създали. Сега ще го добавите към вашия `.env` файл, включен в този курс.
-
-### Стъпка 2: Създайте вашия `.env` файл
-
-За да създадете вашия `.env` файл, изпълнете следната команда в терминала.
-
-```bash
-# zsh/bash
-cp .env.example .env
-```
-
-```powershell
-# PowerShell
-Copy-Item .env.example .env
-```
-
-Това ще копира примерния файл и ще създаде `.env` във вашата директория, където ще попълните стойностите за променливите на средата.
-
-С копирания токен, отворете `.env` файла в любимия си текстов редактор и поставете вашия токен в полето `GITHUB_TOKEN`.
-
-![GitHub Token Field](../../../translated_images/bg/github_token_field.20491ed3224b5f4a.webp)
-
-Сега трябва да можете да стартирате примерите с код от този курс.
-
-## Настройка за примери, използващи Azure AI Foundry и Azure AI Agent Service
-
-### Стъпка 1: Получете вашия Azure Project Endpoint
-
-Следвайте стъпките за създаване на хъб и проект в Azure AI Foundry, описани тук: [Hub resources overview](https://learn.microsoft.com/azure/ai-foundry/concepts/ai-resources)
-
-След като създадете вашия проект, ще трябва да получите низ за връзка за вашия проект.
-
-Това може да се направи, като отидете на страницата **Overview** на вашия проект в портала Azure AI Foundry.
+- **Project Endpoint** — Отидете на страницата **Overview** и копирайте URL на крайна точка.
 
 ![Project Connection String](../../../translated_images/bg/project-endpoint.8cf04c9975bbfbf1.webp)
 
-### Стъпка 2: Създайте вашия `.env` файл
+- **Model Deployment Name** — Отидете на **Models + Endpoints**, изберете своя разположен модел и запишете **Deployment name** (напр. `gpt-5-mini`).
 
-За да създадете вашия `.env` файл, изпълнете следната команда в терминала.
+### Стъпка 3: Влезте в Azure с `az login`
+
+Всички тетрадки използват **`AzureCliCredential`** за автентикация — няма нужда да управлявате API ключове. Това изисква да сте влезли през Azure CLI.
+
+1. **Инсталирайте Azure CLI**, ако не сте го направили: [aka.ms/installazurecli](https://aka.ms/installazurecli)
+
+2. **Влезте** като стартирате:
+
+    ```bash|powershell
+    az login
+    ```
+
+    Или ако сте в отдалечена/Codespace среда без браузър:
+
+    ```bash|powershell
+    az login --use-device-code
+    ```
+
+3. **Изберете своя абонамент**, ако ви попита — изберете този, съдържащ вашия Foundry проект.
+
+4. **Потвърдете**, че сте влезли:
+
+    ```bash|powershell
+    az account show
+    ```
+
+> **Защо `az login`?** Тетрадките се автентикират чрез `AzureCliCredential` от пакета `azure-identity`. Това означава, че вашата Azure CLI сесия осигурява идентификацията — без API ключове или тайни във вашия `.env` файл. Това е [най-добра практика за сигурност](https://learn.microsoft.com/azure/developer/ai/keyless-connections).
+
+### Стъпка 4: Създайте своя `.env` файл
+
+Копирайте примерния файл:
 
 ```bash
 # zsh/bash
@@ -245,79 +205,185 @@ cp .env.example .env
 Copy-Item .env.example .env
 ```
 
-Това ще копира примерния файл и ще създаде `.env` във вашата директория, където ще попълните стойностите за променливите на средата.
+Отворете `.env` и попълнете тези две стойности:
 
-С копирания токен, отворете `.env` файла в любимия си текстов редактор и поставете вашия токен в полето `PROJECT_ENDPOINT`.
-
-### Стъпка 3: Влезте в Azure
-
-Като най-добра практика за сигурност, ще използваме [автентикация без ключове](https://learn.microsoft.com/azure/developer/ai/keyless-connections?tabs=csharp%2Cazure-cli?WT.mc_id=academic-105485-koreyst), за да се автентикираме към Azure OpenAI с Microsoft Entra ID. 
-
-След това отворете терминал и изпълнете `az login --use-device-code`, за да влезете във вашия Azure акаунт.
-
-След като влезете, изберете вашия абонамент в терминала.
-
-## Допълнителни променливи на средата - Azure Search и Azure OpenAI 
-
-За урока Agentic RAG - Урок 5 - има примери, които използват Azure Search и Azure OpenAI.
-
-Ако искате да стартирате тези примери, ще трябва да добавите следните променливи на средата към вашия `.env` файл:
-
-### Страница Overview (Проект)
-
-- `AZURE_SUBSCRIPTION_ID` - Проверете **Project details** на страницата **Overview** на вашия проект.
-
-- `AZURE_AI_PROJECT_NAME` - Погледнете в горната част на страницата **Overview** за вашия проект.
-
-- `AZURE_OPENAI_SERVICE` - Намерете това в таба **Included capabilities** за **Azure OpenAI Service** на страницата **Overview**.
-
-### Център за управление
-
-- `AZURE_OPENAI_RESOURCE_GROUP` - Отидете на **Project properties** на страницата **Overview** на **Management Center**.
-
-- `GLOBAL_LLM_SERVICE` - Под **Connected resources**, намерете името на връзката **Azure AI Services**. Ако не е изброено, проверете **Azure portal** под вашата ресурсна група за името на ресурса AI Services.
-
-### Страница Models + Endpoints
-
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Изберете вашия модел за вграждане (например `text-embedding-ada-002`) и отбележете **Deployment name** от детайлите на модела.
-
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Изберете вашия чат модел (например `gpt-4o-mini`) и отбележете **Deployment name** от детайлите на модела.
-
-### Azure портал
-
-- `AZURE_OPENAI_ENDPOINT` - Потърсете **Azure AI services**, кликнете върху него, след това отидете на **Resource Management**, **Keys and Endpoint**, превъртете надолу до "Azure OpenAI endpoints" и копирайте този, който казва "Language APIs".
-
-- `AZURE_OPENAI_API_KEY` - От същия екран, копирайте KEY 1 или KEY 2.
-
-- `AZURE_SEARCH_SERVICE_ENDPOINT` - Намерете вашия **Azure AI Search** ресурс, кликнете върху него и вижте **Overview**.
-
-- `AZURE_SEARCH_API_KEY` - След това отидете на **Settings** и след това **Keys**, за да копирате основния или вторичния администраторски ключ.
-
-### Външна уеб страница
-
-- `AZURE_OPENAI_API_VERSION` - Посетете страницата [API version lifecycle](https://learn.microsoft.com/azure/ai-services/openai/api-version-deprecation#latest-ga-api-release) под **Latest GA API release**.
-
-### Настройка на автентикация без ключове
-
-Вместо да кодирате вашите идентификационни данни, ще използваме връзка без ключове с Azure OpenAI. За целта ще импортираме `DefaultAzureCredential` и по-късно ще извикаме функцията `DefaultAzureCredential`, за да получим идентификационните данни.
-
-```python
-# Пайтън
-from azure.identity import DefaultAzureCredential, InteractiveBrowserCredential
+```env
+AZURE_AI_PROJECT_ENDPOINT=https://<your-project>.services.ai.azure.com/api/projects/<your-project-id>
+AZURE_AI_MODEL_DEPLOYMENT_NAME=gpt-5-mini
 ```
 
-## Нуждаете се от помощ?
-Ако имате някакви проблеми с изпълнението на тази настройка, присъединете се към нашия <a href="https://discord.gg/kzRShWzttr" target="_blank">Discord на общността Azure AI</a> или <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">създайте проблем</a>.
+| Променлива | Къде да я намерите |
+|----------|-----------------|
+| `AZURE_AI_PROJECT_ENDPOINT` | Портал на Foundry → вашият проект → страница **Overview** |
+| `AZURE_AI_MODEL_DEPLOYMENT_NAME` | Портал на Foundry → **Models + Endpoints** → името на вашия разположен модел |
+
+Това е всичко за повечето уроци! Тетрадките ще се автентикират автоматично чрез вашата сесия `az login`.
+
+### Стъпка 5: Инсталирайте Python зависимости
+
+```bash|powershell
+pip install -r requirements.txt
+```
+
+Препоръчваме да изпълните това вътре във виртуалната среда, която създадохте по-рано.
+
+## Допълнителна настройка за урок 5 (Agentic RAG)
+
+Урок 5 използва **Azure AI Search** за генериране с разширено извличане. Ако планирате да изпълните този урок, добавете тези променливи към своя `.env` файл:
+
+| Променлива | Къде да я намерите |
+|----------|-----------------|
+| `AZURE_SEARCH_SERVICE_ENDPOINT` | Портал на Azure → вашият ресурс **Azure AI Search** → **Overview** → URL |
+| `AZURE_SEARCH_API_KEY` | Портал на Azure → вашият ресурс **Azure AI Search** → **Settings** → **Keys** → първичен администраторски ключ |
+
+## Допълнителна настройка за уроци, които използват директно Azure OpenAI (уроци 6 и 8)
+
+Някои тетрадки в уроци 6 и 8 извикват **Azure OpenAI** директно (чрез **Responses API**) вместо чрез Microsoft Foundry проект. Тези примери по-рано са използвали GitHub Models, които са остарели (прекратяващи поддръжка през юли 2026) и не поддържат Responses API. Ако планирате да използвате тези примери, добавете тези променливи към своя `.env` файл:
+
+| Променлива | Къде да я намерите |
+|----------|-----------------|
+| `AZURE_OPENAI_ENDPOINT` | Портал на Azure → вашия ресурс **Azure OpenAI** → **Keys and Endpoint** → Endpoint (напр. `https://<your-resource>.openai.azure.com`) |
+| `AZURE_OPENAI_DEPLOYMENT` | Името на разположения модел (напр. `gpt-5-mini`), който поддържа Responses API |
+| `AZURE_OPENAI_API_KEY` | По избор — само ако използвате удостоверяване с ключ вместо `az login` / Entra ID |
+
+> Responses API използва стабилната крайна точка `/openai/v1/`, така че не се изисква `api-version`. Влезте с `az login`, за да използвате удостоверяване без ключ с Entra ID.
+
+## Алтернативен доставчик: MiniMax (съвместим с OpenAI)
+
+[MiniMax](https://platform.minimaxi.com/) предоставя модели с голям контекст (до 204K токена) чрез API, съвместимо с OpenAI. Тъй като Microsoft Agent Framework `OpenAIChatClient` работи с всяка крайна точка, съвместима с OpenAI, можете да използвате MiniMax като директна алтернатива на Azure OpenAI или OpenAI.
+
+Добавете тези променливи към вашия `.env` файл:
+
+| Променлива | Къде да я намерите |
+|----------|-----------------|
+| `MINIMAX_API_KEY` | [MiniMax Platform](https://platform.minimaxi.com/) → API ключове |
+| `MINIMAX_BASE_URL` | Използвайте `https://api.minimax.io/v1` (по подразбиране) |
+| `MINIMAX_MODEL_ID` | Име на модела за използване (напр., `MiniMax-M3`) |
+
+**Примерни модели**: `MiniMax-M3` (препоръчително), `MiniMax-M2.7`, `MiniMax-M2.7-highspeed` (по-бързи отговори). Имената на моделите и наличността им може да се променят с времето, а достъпът до даден модел може да зависи от вашия акаунт или регион — проверете [MiniMax Platform](https://platform.minimaxi.com/) за актуален списък. Ако `MiniMax-M3` не е наличен за вашия акаунт, задайте `MINIMAX_MODEL_ID` на модел, до който имате достъп (напр. `MiniMax-M2.7`).
+
+Примерният код, който използва `OpenAIChatClient` (например работния процес за резервация на хотел в урок 14), автоматично ще открие и използва вашата MiniMax конфигурация, когато `MINIMAX_API_KEY` е зададен.
+
+## Алтернативен доставчик: Foundry Local (стартиране на модели на устройството)
+
+[Foundry Local](https://foundrylocal.ai) е лека среда за изпълнение, която изтегля, управлява и предоставя езикови модели **изцяло на вашата машина** чрез API, съвместимо с OpenAI — без облак, без Azure абонамент и без API ключове. Това е чудесна опция за офлайн разработка, експериментиране без облачни разходи или за съхранение на данни на устройството.
+
+Тъй като Microsoft Agent Framework-ът `OpenAIChatClient` работи с всяка OpenAI-съвместима крайна точка, Foundry Local е директна локална алтернатива на Azure OpenAI.
+
+**1. Инсталирайте Foundry Local**
+
+```bash
+# Windows
+winget install Microsoft.FoundryLocal
+
+# macOS
+brew install foundrylocal
+```
+
+**2. Изтеглете и стартирайте модел** (това също стартира локалната услуга):
+
+```bash
+foundry model list          # виж наличните модели
+foundry model run phi-4-mini
+```
+
+**3. Инсталирайте Python SDK-то**, използвано за откриване на локалната крайна точка:
+
+```bash
+pip install foundry-local-sdk
+```
+
+**4. Насочете Microsoft Agent Framework към локалния модел:**
+
+```python
+from foundry_local import FoundryLocalManager
+from agent_framework.openai import OpenAIChatClient
+
+# Изтегля (ако е необходимо) и обслужва модела локално, след което открива крайната точка/порта.
+manager = FoundryLocalManager("phi-4-mini")
+
+chat_client = OpenAIChatClient(
+    base_url=manager.endpoint,      # напр. http://localhost:<port>/v1
+    api_key=manager.api_key,        # винаги "не е задължително" за Foundry Local
+    model_id=manager.get_model_info("phi-4-mini").id,
+)
+
+agent = chat_client.as_agent(
+    name="LocalAgent",
+    instructions="You are a helpful assistant running fully on-device.",
+)
+```
+
+> **Забележка:** Foundry Local предоставя OpenAI-съвместима крайна точка за **Chat Completions**. Използвайте я за локална разработка и офлайн сценарии. За пълния набор от функции на **Responses API** (състояниеви разговори, дълбока оркестрация на инструменти и агентски стил на разработка) насочете към **Azure OpenAI** или **Microsoft Foundry** проект, както е показано в уроците. Вижте [Foundry Local документацията](https://foundrylocal.ai) за актуален каталог на модели и поддръжка на платформи.
+
+## Допълнителна настройка за урок 8 (работен процес Bing Grounding)
+
+
+Учебникът за условния работен процес в урок 8 използва **Bing grounding** чрез Microsoft Foundry. Ако планирате да стартирате този пример, добавете тази променлива във вашия файл `.env`:
+
+| Променлива | Къде да я намерите |
+|----------|-----------------|
+| `BING_CONNECTION_ID` | Портал Microsoft Foundry → вашия проект → **Management** → **Connected resources** → вашата Bing връзка → копирайте connection ID |
+
+## Отстраняване на проблеми
+
+### Грешки при верификация на SSL сертификати на macOS
+
+Ако използвате macOS и срещнете грешка като:
+
+```plaintext
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain
+```
+
+Това е известен проблем с Python на macOS, при който системните SSL сертификати не се доверяват автоматично. Опитайте следните решения по ред:
+
+**Вариант 1: Стартирайте скрипта за инсталиране на сертификати на Python (препоръчително)**
+
+```bash
+# Заменете 3.XX с инсталираната версия на Python (напр. 3.12 или 3.13):
+/Applications/Python\ 3.XX/Install\ Certificates.command
+```
+
+**Вариант 2: Използвайте `connection_verify=False` във вашия учебник (само за GitHub Models учебници)**
+
+В учебника от урок 6 (`06-building-trustworthy-agents/code_samples/06-system-message-framework.ipynb`) вече има закоментирано решение. Декоментирайте `connection_verify=False` при създаването на клиента:
+
+```python
+client = ChatCompletionsClient(
+    endpoint=endpoint,
+    credential=AzureKeyCredential(token),
+    connection_verify=False,  # Деактивирайте проверката на SSL, ако срещнете грешки с сертификата
+)
+```
+
+> **⚠️ Внимание:** Изключването на SSL проверката (`connection_verify=False`) намалява сигурността, като пропуска валидирането на сертификата. Използвайте това само като временно решение в среди за разработка, никога в продукция.
+
+**Вариант 3: Инсталирайте и използвайте `truststore`**
+
+```bash
+pip install truststore
+```
+
+След това добавете следното в началото на вашия учебник или скрипт преди да правите мрежови обаждания:
+
+```python
+import truststore
+truststore.inject_into_ssl()
+```
+
+## Закъсали ли сте някъде?
+
+Ако имате проблеми с изпълнението на тази настройка, присъединете се към нашия <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Community Discord</a> или <a href="https://github.com/microsoft/ai-agents-for-beginners/issues?WT.mc_id=academic-105485-koreyst" target="_blank">създайте проблем</a>.
 
 ## Следващ урок
 
-Вече сте готови да изпълните кода за този курс. Приятно учене за света на AI агентите!
+Вече сте готови да стартирате кода за този курс. Желая ви приятно учене за света на AI агентите!
 
-[Въведение в AI агентите и техните случаи на употреба](../01-intro-to-ai-agents/README.md)
+[Въведение в AI агентите и случаи на използване на агенти](../01-intro-to-ai-agents/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Отказ от отговорност**:  
-Този документ е преведен с помощта на AI услуга за превод [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля, имайте предвид, че автоматичните преводи може да съдържат грешки или неточности. Оригиналният документ на неговия оригинален език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Ние не носим отговорност за каквито и да било недоразумения или погрешни интерпретации, произтичащи от използването на този превод.
+**Отказ от отговорност**:
+Този документ е преведен с помощта на AI преводачески услуга [Co-op Translator](https://github.com/Azure/co-op-translator). Въпреки че се стремим към точност, моля имайте предвид, че автоматизираните преводи могат да съдържат грешки или неточности. Оригиналният документ на неговия роден език трябва да се счита за авторитетен източник. За критична информация се препоръчва професионален човешки превод. Ние не носим отговорност за каквито и да е недоразумения или неправилни тълкувания, произтичащи от използването на този превод.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

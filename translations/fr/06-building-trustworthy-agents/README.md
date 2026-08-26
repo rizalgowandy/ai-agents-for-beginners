@@ -1,44 +1,44 @@
-[![Agents IA de Confiance](../../../translated_images/fr/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
+[![Agents d'IA dignes de confiance](../../../translated_images/fr/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
 
-> _(Cliquez sur l'image ci-dessus pour visionner la vidéo de cette leçon)_
+> _(Cliquez sur l'image ci-dessus pour voir la vidéo de cette leçon)_
 
-# Construire des Agents IA de Confiance
+# Construire des agents d'IA dignes de confiance
 
 ## Introduction
 
 Cette leçon couvrira :
 
-- Comment créer et déployer des agents IA sûrs et efficaces.
-- Les considérations importantes en matière de sécurité lors du développement d'agents IA.
-- Comment préserver la confidentialité des données et des utilisateurs lors du développement d'agents IA.
+- Comment construire et déployer des agents d'IA sûrs et efficaces
+- Considérations importantes en matière de sécurité lors du développement d'agents d'IA.
+- Comment protéger les données et la vie privée des utilisateurs lors du développement d'agents d'IA.
 
-## Objectifs d'Apprentissage
+## Objectifs d'apprentissage
 
-Après avoir terminé cette leçon, vous saurez :
+Après avoir terminé cette leçon, vous saurez comment :
 
-- Identifier et atténuer les risques lors de la création d'agents IA.
-- Mettre en œuvre des mesures de sécurité pour garantir une gestion appropriée des données et des accès.
-- Créer des agents IA qui respectent la confidentialité des données tout en offrant une expérience utilisateur de qualité.
+- Identifier et atténuer les risques lors de la création d'agents d'IA.
+- Mettre en œuvre des mesures de sécurité pour garantir une bonne gestion des données et des accès.
+- Créer des agents d'IA qui préservent la confidentialité des données et offrent une expérience utilisateur de qualité.
 
 ## Sécurité
 
-Commençons par examiner comment construire des applications agentiques sûres. La sécurité signifie que l'agent IA fonctionne comme prévu. En tant que concepteurs d'applications agentiques, nous disposons de méthodes et d'outils pour maximiser la sécurité :
+Examinons d'abord comment construire des applications agentiques sûres. La sécurité signifie que l'agent IA fonctionne comme prévu. En tant que concepteurs d'applications agentiques, nous disposons de méthodes et d'outils pour maximiser la sécurité :
 
-### Construire un Cadre de Messages Systémiques
+### Construire un cadre pour les messages système
 
-Si vous avez déjà conçu une application IA utilisant des modèles de langage de grande taille (LLMs), vous savez à quel point il est crucial de concevoir un message système robuste. Ces messages établissent les règles, instructions et directives générales sur la manière dont le LLM interagira avec l'utilisateur et les données.
+Si vous avez déjà construit une application d'IA en utilisant des modèles de langage large (LLM), vous connaissez l'importance de concevoir une invite système robuste ou un message système. Ces invites établissent les règles méta, instructions et directives sur la façon dont le LLM interagira avec l'utilisateur et les données.
 
-Pour les agents IA, le message système est encore plus important, car ces agents nécessitent des instructions très spécifiques pour accomplir les tâches prévues.
+Pour les agents d'IA, l'invite système est encore plus importante car les agents d'IA auront besoin d'instructions très spécifiques pour accomplir les tâches que nous avons conçues pour eux.
 
-Pour créer des messages système évolutifs, nous pouvons utiliser un cadre de messages systémiques pour construire un ou plusieurs agents dans notre application :
+Pour créer des invites système évolutives, nous pouvons utiliser un cadre de message système pour construire un ou plusieurs agents dans notre application :
 
-![Construire un Cadre de Messages Systémiques](../../../translated_images/fr/system-message-framework.3a97368c92d11d68.webp)
+![Construire un cadre pour les messages système](../../../translated_images/fr/system-message-framework.3a97368c92d11d68.webp)
 
-#### Étape 1 : Créer un Message Systémique Méta
+#### Étape 1 : Créer un message système méta
 
-Le message méta sera utilisé par un LLM pour générer les messages systémiques des agents que nous créons. Nous le concevons comme un modèle afin de pouvoir créer efficacement plusieurs agents si nécessaire.
+Le méta-invite sera utilisé par un LLM pour générer les invites système pour les agents que nous créons. Nous le concevons comme un modèle afin de pouvoir créer efficacement plusieurs agents si nécessaire.
 
-Voici un exemple de message systémique méta que nous fournirions au LLM :
+Voici un exemple de message système méta que nous donnerions au LLM :
 
 ```plaintext
 You are an expert at creating AI agent assistants. 
@@ -47,9 +47,9 @@ information that you will use to provide a system prompt for.
 To create the system prompt, be descriptive as possible and provide a structure that a system using an LLM can better understand the role and responsibilities of the AI assistant. 
 ```
 
-#### Étape 2 : Créer un Message de Base
+#### Étape 2 : Créer une invite de base
 
-L'étape suivante consiste à créer un message de base pour décrire l'agent IA. Vous devez inclure le rôle de l'agent, les tâches qu'il accomplira, ainsi que toute autre responsabilité.
+L'étape suivante consiste à créer une invite de base pour décrire l'agent d'IA. Vous devez inclure le rôle de l'agent, les tâches que l'agent accomplira et toute autre responsabilité de l'agent.
 
 Voici un exemple :
 
@@ -57,11 +57,11 @@ Voici un exemple :
 You are a travel agent for Contoso Travel that is great at booking flights for customers. To help customers you can perform the following tasks: lookup available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
 ```
 
-#### Étape 3 : Fournir le Message Systémique de Base au LLM
+#### Étape 3 : Fournir le message système de base au LLM
 
-Nous pouvons maintenant optimiser ce message systémique en fournissant le message méta comme message système et notre message systémique de base.
+Maintenant, nous pouvons optimiser ce message système en fournissant le message système méta comme message système et notre message système de base.
 
-Cela produira un message systémique mieux conçu pour guider nos agents IA :
+Cela produira un message système mieux conçu pour guider nos agents d'IA :
 
 ```markdown
 **Company Name:** Contoso Travel  
@@ -113,98 +113,112 @@ This AI assistant is designed to streamline the flight booking process for custo
 
 ```
 
-#### Étape 4 : Itérer et Améliorer
+#### Étape 4 : Itérer et améliorer
 
-L'intérêt de ce cadre de messages systémiques est de faciliter la création de messages systémiques pour plusieurs agents et d'améliorer vos messages au fil du temps. Il est rare qu'un message systémique fonctionne parfaitement dès la première tentative pour un cas d'utilisation complet. Pouvoir effectuer de petits ajustements et améliorations en modifiant le message systémique de base et en le passant à travers le système vous permettra de comparer et d'évaluer les résultats.
+La valeur de ce cadre de message système est de pouvoir facilement créer des messages système évolutifs pour plusieurs agents ainsi que d'améliorer vos messages système au fil du temps. Il est rare d'avoir un message système qui fonctionne parfaitement du premier coup pour votre cas d'utilisation complet. Pouvoir apporter de petits ajustements et améliorations en modifiant le message système de base et en le passant à travers le système vous permettra de comparer et d'évaluer les résultats.
 
-## Comprendre les Menaces
+## Comprendre les menaces
 
-Pour construire des agents IA de confiance, il est important de comprendre et d'atténuer les risques et menaces auxquels votre agent IA peut être confronté. Examinons quelques-unes des différentes menaces et comment mieux les anticiper et s'y préparer.
+Pour construire des agents d'IA dignes de confiance, il est important de comprendre et d'atténuer les risques et menaces auxquels votre agent d'IA est exposé. Examinons quelques-unes des différentes menaces pour les agents d'IA et comment mieux planifier et vous y préparer.
 
-![Comprendre les Menaces](../../../translated_images/fr/understanding-threats.89edeada8a97fc0f.webp)
+![Comprendre les menaces](../../../translated_images/fr/understanding-threats.89edeada8a97fc0f.webp)
 
-### Tâches et Instructions
+### Tâche et instruction
 
-**Description :** Les attaquants tentent de modifier les instructions ou les objectifs de l'agent IA en manipulant les entrées ou les invites.
+**Description :** Les attaquants tentent de modifier les instructions ou objectifs de l'agent d'IA via des invites ou en manipulant les entrées.
 
-**Atténuation :** Effectuez des vérifications de validation et appliquez des filtres d'entrée pour détecter les invites potentiellement dangereuses avant qu'elles ne soient traitées par l'agent IA. Comme ces attaques nécessitent généralement des interactions fréquentes avec l'agent, limiter le nombre de tours dans une conversation est une autre méthode pour prévenir ce type d'attaques.
+**Atténuation** : Effectuer des vérifications de validation et des filtres d'entrée pour détecter les invites potentiellement dangereuses avant qu'elles ne soient traitées par l'agent d'IA. Comme ces attaques nécessitent généralement une interaction fréquente avec l'agent, limiter le nombre de tours dans une conversation est une autre manière d'empêcher ce type d'attaques.
 
-### Accès aux Systèmes Critiques
+### Accès aux systèmes critiques
 
-**Description :** Si un agent IA a accès à des systèmes et services contenant des données sensibles, les attaquants peuvent compromettre la communication entre l'agent et ces services. Cela peut inclure des attaques directes ou des tentatives indirectes pour obtenir des informations sur ces systèmes via l'agent.
+**Description :** Si un agent d'IA a accès à des systèmes et services qui stockent des données sensibles, les attaquants peuvent compromettre la communication entre l'agent et ces services. Il peut s'agir d'attaques directes ou de tentatives indirectes d'obtenir des informations sur ces systèmes via l'agent.
 
-**Atténuation :** Les agents IA ne devraient avoir accès aux systèmes que sur une base strictement nécessaire pour éviter ce type d'attaques. La communication entre l'agent et les systèmes doit également être sécurisée. La mise en œuvre de mécanismes d'authentification et de contrôle d'accès est une autre méthode pour protéger ces informations.
+**Atténuation** : Les agents d'IA ne devraient avoir accès aux systèmes qu'en cas de besoin pour prévenir de tels types d'attaques. La communication entre l'agent et le système doit également être sécurisée. Mettre en place une authentification et un contrôle d'accès est une autre méthode pour protéger ces informations.
 
-### Surcharge des Ressources et Services
+### Surcharge des ressources et services
 
-**Description :** Les agents IA peuvent accéder à différents outils et services pour accomplir des tâches. Les attaquants peuvent exploiter cette capacité pour surcharger ces services en envoyant un grand volume de requêtes via l'agent IA, ce qui peut entraîner des pannes système ou des coûts élevés.
+**Description :** Les agents d'IA peuvent accéder à différents outils et services pour accomplir des tâches. Les attaquants peuvent exploiter cette capacité pour attaquer ces services en envoyant un grand volume de requêtes via l'agent d'IA, ce qui peut entraîner des défaillances du système ou des coûts élevés.
 
-**Atténuation :** Mettez en place des politiques pour limiter le nombre de requêtes qu'un agent IA peut effectuer vers un service. Limiter le nombre de tours de conversation et de requêtes adressées à votre agent IA est une autre méthode pour prévenir ce type d'attaques.
+**Atténuation :** Mettre en œuvre des règles pour limiter le nombre de requêtes qu'un agent d'IA peut effectuer vers un service. Limiter le nombre de tours de conversation et de requêtes à votre agent d'IA est une autre manière de prévenir ce type d'attaques.
 
-### Empoisonnement de la Base de Connaissances
+### Empoisonnement de la base de connaissances
 
-**Description :** Ce type d'attaque ne cible pas directement l'agent IA, mais la base de connaissances et d'autres services que l'agent IA utilise. Cela peut inclure la corruption des données ou informations que l'agent IA utilise pour accomplir une tâche, entraînant des réponses biaisées ou inappropriées pour l'utilisateur.
+**Description :** Ce type d'attaque ne cible pas directement l'agent d'IA mais la base de connaissances et d'autres services que l'agent d'IA utilisera. Cela peut impliquer la corruption des données ou informations que l'agent d'IA va utiliser pour accomplir une tâche, entraînant des réponses biaisées ou non désirées à l'utilisateur.
 
-**Atténuation :** Effectuez des vérifications régulières des données que l'agent IA utilisera dans ses flux de travail. Assurez-vous que l'accès à ces données est sécurisé et que seules des personnes de confiance peuvent les modifier pour éviter ce type d'attaques.
+**Atténuation :** Effectuer des vérifications régulières des données que l'agent d'IA utilisera dans ses flux de travail. Assurer la sécurité de l'accès à ces données et qu'elles ne soient modifiées que par des personnes de confiance pour éviter ce type d'attaque.
 
-### Erreurs en Cascade
+### Erreurs en cascade
 
-**Description :** Les agents IA accèdent à divers outils et services pour accomplir des tâches. Les erreurs causées par des attaquants peuvent entraîner des défaillances dans d'autres systèmes connectés à l'agent IA, rendant l'attaque plus étendue et plus difficile à résoudre.
+**Description :** Les agents d'IA accèdent à divers outils et services pour accomplir des tâches. Les erreurs causées par des attaquants peuvent entraîner des défaillances d'autres systèmes auxquels l'agent d'IA est connecté, rendant l'attaque plus étendue et plus difficile à diagnostiquer.
 
-**Atténuation :** Une méthode pour éviter cela est de faire fonctionner l'agent IA dans un environnement limité, comme effectuer des tâches dans un conteneur Docker, afin de prévenir les attaques directes sur les systèmes. Créer des mécanismes de secours et une logique de reprise lorsque certains systèmes répondent par une erreur est une autre façon de prévenir des défaillances plus importantes.
+**Atténuation :** Une méthode pour éviter cela est de faire fonctionner l'agent d'IA dans un environnement limité, comme l'exécution des tâches dans un conteneur Docker, pour prévenir les attaques directes sur le système. Créer des mécanismes de secours et une logique de nouvelle tentative lorsque certains systèmes répondent par une erreur est une autre façon d'éviter de plus grandes défaillances.
 
-## Humain dans la Boucle
+## Humain dans la boucle
 
-Une autre méthode efficace pour construire des systèmes d'agents IA de confiance est d'intégrer un humain dans la boucle. Cela crée un flux où les utilisateurs peuvent fournir des retours aux agents pendant leur exécution. Les utilisateurs agissent essentiellement comme des agents dans un système multi-agents en approuvant ou en interrompant le processus en cours.
+Une autre méthode efficace pour construire des systèmes agents d'IA dignes de confiance est d'utiliser un humain dans la boucle. Cela crée un flux où les utilisateurs peuvent fournir des retours aux agents pendant l'exécution. Essentiellement, les utilisateurs agissent comme agents dans un système multi-agent en fournissant une approbation ou en interrompant le processus en cours.
 
-![Humain dans la Boucle](../../../translated_images/fr/human-in-the-loop.5f0068a678f62f4f.webp)
+![Humain dans la boucle](../../../translated_images/fr/human-in-the-loop.5f0068a678f62f4f.webp)
 
-Voici un extrait de code utilisant AutoGen pour montrer comment ce concept est mis en œuvre :
+Voici un extrait de code utilisant le cadre Microsoft Agent Framework pour montrer comment ce concept est implémenté :
 
 ```python
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the agents.
-model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
-assistant = AssistantAgent("assistant", model_client=model_client)
-user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Use input() to get user input from console.
+# Créer le fournisseur avec approbation humaine intégrée
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
 
-# Create the termination condition which will end the conversation when the user says "APPROVE".
-termination = TextMentionTermination("APPROVE")
+# Créer l'agent avec une étape d'approbation humaine
+response = provider.create_response(
+    input="Write a 4-line poem about the ocean.",
+    instructions="You are a helpful assistant. Ask for user approval before finalizing.",
+)
 
-# Create the team.
-team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
-
-# Run the conversation and stream to the console.
-stream = team.run_stream(task="Write a 4-line poem about the ocean.")
-# Use asyncio.run(...) when running in a script.
-await Console(stream)
-
+# L'utilisateur peut examiner et approuver la réponse
+print(response.output_text)
+user_input = input("Do you approve? (APPROVE/REJECT): ")
+if user_input == "APPROVE":
+    print("Response approved.")
+else:
+    print("Response rejected. Revising...")
 ```
 
 ## Conclusion
 
-Construire des agents IA de confiance nécessite une conception soignée, des mesures de sécurité robustes et une itération continue. En mettant en œuvre des systèmes de méta-invites structurés, en comprenant les menaces potentielles et en appliquant des stratégies d'atténuation, les développeurs peuvent créer des agents IA à la fois sûrs et efficaces. De plus, intégrer un humain dans la boucle garantit que les agents IA restent alignés sur les besoins des utilisateurs tout en minimisant les risques. À mesure que l'IA évolue, adopter une approche proactive en matière de sécurité, de confidentialité et de considérations éthiques sera essentiel pour renforcer la confiance et la fiabilité des systèmes pilotés par l'IA.
+Construire des agents d'IA dignes de confiance nécessite une conception soignée, des mesures de sécurité robustes, et une itération continue. En mettant en œuvre des systèmes structurés de méta-invites, en comprenant les menaces potentielles, et en appliquant des stratégies d'atténuation, les développeurs peuvent créer des agents d'IA à la fois sûrs et efficaces. De plus, l'intégration d'une approche avec un humain dans la boucle garantit que les agents d'IA restent alignés avec les besoins des utilisateurs tout en minimisant les risques. À mesure que l'IA continue d'évoluer, adopter une posture proactive sur la sécurité, la confidentialité et les considérations éthiques sera la clé pour favoriser la confiance et la fiabilité des systèmes pilotés par l'IA.
 
-### Vous avez d'autres questions sur la création d'agents IA de confiance ?
+## Exemples de code
 
-Rejoignez le [Discord Azure AI Foundry](https://aka.ms/ai-agents/discord) pour rencontrer d'autres apprenants, assister à des permanences et obtenir des réponses à vos questions sur les agents IA.
+- [`code_samples/06-system-message-framework.ipynb`](code_samples/06-system-message-framework.ipynb) : démonstration étape par étape du cadre méta-invite de message système.
+- [`code_samples/06-human-in-the-loop.ipynb`](code_samples/06-human-in-the-loop.ipynb) : portes d'approbation pré-action, hiérarchisation des risques, et journalisation d'audit pour agents dignes de confiance.
 
-## Ressources Supplémentaires
+### Vous avez d'autres questions sur la construction d'agents d'IA dignes de confiance ?
 
-- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Vue d'ensemble de l'IA responsable</a>
-- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Évaluation des modèles génératifs et des applications IA</a>
-- <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">Messages systémiques pour la sécurité</a>
+Rejoignez le [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) pour rencontrer d'autres apprenants, assister aux heures de bureau et faire répondre vos questions sur les agents d'IA.
+
+## Ressources supplémentaires
+
+- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Présentation de l'IA responsable</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Évaluation des modèles d'IA générative et des applications AI</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">Messages système sécurisés</a>
 - <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Modèle d'évaluation des risques</a>
 
-## Leçon Précédente
+## Leçon précédente
 
 [Agentic RAG](../05-agentic-rag/README.md)
 
-## Leçon Suivante
+## Leçon suivante
 
-[Modèle de Conception de Planification](../07-planning-design/README.md)
+[Modèle de conception de planification](../07-planning-design/README.md)
 
 ---
 
-**Avertissement** :  
-Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforcions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue d'origine doit être considéré comme la source faisant autorité. Pour des informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous déclinons toute responsabilité en cas de malentendus ou d'interprétations erronées résultant de l'utilisation de cette traduction.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Avertissement** :
+Ce document a été traduit à l'aide du service de traduction automatique [Co-op Translator](https://github.com/Azure/co-op-translator). Bien que nous nous efforçions d'assurer l'exactitude, veuillez noter que les traductions automatisées peuvent contenir des erreurs ou des inexactitudes. Le document original dans sa langue native doit être considéré comme la source faisant autorité. Pour les informations critiques, il est recommandé de recourir à une traduction professionnelle réalisée par un humain. Nous ne saurions être tenus responsables des malentendus ou erreurs d'interprétation découlant de l'utilisation de cette traduction.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

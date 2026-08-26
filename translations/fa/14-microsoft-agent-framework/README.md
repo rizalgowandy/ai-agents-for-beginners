@@ -2,55 +2,55 @@
 
 ![Agent Framework](../../../translated_images/fa/lesson-14-thumbnail.90df0065b9d234ee.webp)
 
-### مقدمه
+### معرفی
 
-این درس شامل موارد زیر خواهد بود:
+این درس شامل موارد زیر است:
 
-- آشنایی با چارچوب Microsoft Agent: ویژگی‌های کلیدی و ارزش  
-- بررسی مفاهیم اصلی چارچوب Microsoft Agent  
-- مقایسه MAF با Semantic Kernel و AutoGen: راهنمای مهاجرت  
+- درک چارچوب Microsoft Agent: ویژگی‌های کلیدی و ارزش  
+- بررسی مفاهیم کلیدی چارچوب Microsoft Agent
+- الگوهای پیشرفته MAF: جریان‌های کاری، میان‌افزار و حافظه
 
 ## اهداف یادگیری
 
-پس از اتمام این درس، شما قادر خواهید بود:
+پس از اتمام این درس، شما خواهید دانست چگونه:
 
-- عوامل هوش مصنوعی آماده تولید را با استفاده از چارچوب Microsoft Agent بسازید  
-- ویژگی‌های اصلی چارچوب Microsoft Agent را در موارد استفاده عامل‌محور خود اعمال کنید  
-- چارچوب‌ها و ابزارهای عامل‌محور موجود را مهاجرت داده و یکپارچه کنید  
+- ساخت عوامل هوش مصنوعی آماده برای تولید با استفاده از چارچوب Microsoft Agent
+- به‌کارگیری ویژگی‌های اصلی چارچوب Microsoft Agent برای موارد استفاده عاملی خود
+- استفاده از الگوهای پیشرفته شامل جریان‌های کاری، میان‌افزار و قابلیت مشاهده
 
-## نمونه‌های کد
+## نمونه‌های کد 
 
-نمونه‌های کد برای [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) در این مخزن تحت فایل‌های `xx-python-agent-framework` و `xx-dotnet-agent-framework` موجود است.
+نمونه‌های کد برای [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framework) در این مخزن زیر فایل‌های `xx-python-agent-framework` و `xx-dotnet-agent-framework` قرار دارند.
 
-## آشنایی با چارچوب Microsoft Agent
+## درک چارچوب Microsoft Agent
 
 ![Framework Intro](../../../translated_images/fa/framework-intro.077af16617cf130c.webp)
 
-[چارچوب Microsoft Agent (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) بر اساس تجربیات و آموخته‌های Semantic Kernel و AutoGen ساخته شده است. این چارچوب انعطاف‌پذیری لازم برای پاسخگویی به انواع موارد استفاده عامل‌محور در محیط‌های تولید و تحقیقاتی را فراهم می‌کند، از جمله:
+[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framework) چارچوب متحد مایکروسافت برای ساخت عوامل هوش مصنوعی است. این چارچوب انعطاف‌پذیری لازم برای رسیدگی به انواع گسترده موارد استفاده عاملی را در محیط‌های تولید و پژوهشی از جمله موارد زیر ارائه می‌دهد:
 
-- **ارکستراسیون عامل ترتیبی** در سناریوهایی که نیاز به جریان‌های کاری مرحله به مرحله دارند.  
-- **ارکستراسیون همزمان** در سناریوهایی که عوامل باید وظایف را به طور همزمان انجام دهند.  
-- **ارکستراسیون چت گروهی** در سناریوهایی که عوامل می‌توانند با هم روی یک وظیفه همکاری کنند.  
-- **ارکستراسیون انتقال وظیفه** در سناریوهایی که عوامل وظیفه را به یکدیگر منتقل می‌کنند تا زیر وظایف تکمیل شوند.  
-- **ارکستراسیون مغناطیسی** در سناریوهایی که یک عامل مدیر لیست وظایف را ایجاد و اصلاح می‌کند و هماهنگی عوامل فرعی را برای تکمیل وظیفه مدیریت می‌کند.  
+- **هماهنگی عوامل توالی‌وار** در سناریوهایی که جریان‌های کاری مرحله به مرحله لازم است.
+- **هماهنگی همزمان** در سناریوهایی که عوامل باید وظایف را به صورت همزمان کامل کنند.
+- **هماهنگی چت گروهی** در سناریوهایی که عوامل می‌توانند با هم برای یک وظیفه همکاری کنند.
+- **هماهنگی انتقال کار** در سناریوهایی که عوامل وظیفه را به یکدیگر منتقل می‌کنند در حالی که زیرکارها کامل می‌شوند.
+- **هماهنگی مغناطیسی** در سناریویی که یک عامل مدیر فهرست وظایف را ایجاد و اصلاح کرده و هماهنگی زیرعوامل برای تکمیل وظیفه را مدیریت می‌کند.
 
-برای ارائه عوامل هوش مصنوعی در تولید، MAF همچنین ویژگی‌هایی را شامل می‌شود برای:
+برای ارائه عوامل هوش مصنوعی در تولید، MAF همچنین ویژگی‌هایی برای موارد زیر ارائه می‌دهد:
 
-- **مشاهده‌پذیری** از طریق استفاده از OpenTelemetry که هر اقدام عامل هوش مصنوعی از جمله فراخوانی ابزار، مراحل ارکستراسیون، جریان‌های استدلال و نظارت بر عملکرد را از طریق داشبوردهای Azure AI Foundry ثبت می‌کند.  
-- **امنیت** با میزبانی عوامل به صورت بومی در Azure AI Foundry که شامل کنترل‌های امنیتی مانند دسترسی مبتنی بر نقش، مدیریت داده‌های خصوصی و ایمنی محتوای داخلی است.  
-- **دوام** به گونه‌ای که رشته‌ها و جریان‌های کاری عامل می‌توانند متوقف شوند، از سر گرفته شوند و از خطاها بازیابی شوند که امکان فرآیندهای طولانی‌تر را فراهم می‌کند.  
-- **کنترل** به گونه‌ای که جریان‌های کاری با حضور انسان پشتیبانی می‌شوند، جایی که وظایف به عنوان نیازمند تأیید انسانی علامت‌گذاری می‌شوند.  
+- **قابلیت مشاهده‌پذیری** از طریق استفاده از OpenTelemetry که هر اقدام عامل هوش مصنوعی شامل فراخوانی ابزار، مراحل هماهنگی، جریان‌های استدلال و نظارت عملکرد از طریق داشبوردهای Microsoft Foundry را شامل می‌شود.
+- **امنیت** با میزبانی عوامل به‌صورت بومی در Microsoft Foundry که شامل کنترل‌های امنیتی مانند دسترسی مبتنی بر نقش، مدیریت داده‌های خصوصی و ایمنی محتوا به‌صورت داخلی است.
+- **دوام** به‌طوری که رشته‌ها و جریان‌های کاری عامل می‌توانند متوقف، ادامه داده شده و از خطاها بازیابی شوند که امکان اجرای فرآیندهای طولانی‌تر را فراهم می‌کند.
+- **کنترل** به‌طوری که جریان‌های کاری انسان در حلقه پشتیبانی می‌شوند که در آن وظایف به عنوان نیازمند تأیید انسانی علامت‌گذاری می‌شوند.
 
-چارچوب Microsoft Agent همچنین بر قابلیت همکاری تمرکز دارد از طریق:
+چارچوب Microsoft Agent همچنین بر قابلیت همکاری متمرکز است از طریق:
 
-- **عدم وابستگی به ابر** - عوامل می‌توانند در کانتینرها، در محل و در چندین ابر مختلف اجرا شوند.  
-- **عدم وابستگی به ارائه‌دهنده** - عوامل می‌توانند از طریق SDK مورد نظر شما از جمله Azure OpenAI و OpenAI ایجاد شوند.  
-- **یکپارچه‌سازی استانداردهای باز** - عوامل می‌توانند از پروتکل‌هایی مانند Agent-to-Agent (A2A) و Model Context Protocol (MCP) برای کشف و استفاده از عوامل و ابزارهای دیگر بهره ببرند.  
-- **پلاگین‌ها و کانکتورها** - اتصالات می‌توانند به خدمات داده و حافظه مانند Microsoft Fabric، SharePoint، Pinecone و Qdrant برقرار شوند.  
+- **غیر وابسته به ابر بودن** - عوامل می‌توانند در کانتینرها، در محل و در چندین ابر مختلف اجرا شوند.
+- **غیر وابسته به ارائه‌دهنده بودن** - عوامل می‌توانند از طریق SDK ترجیحی شما از جمله Azure OpenAI و OpenAI ساخته شوند.
+- **ادغام استانداردهای باز** - عوامل می‌توانند از پروتکل‌هایی مانند Agent-to-Agent(A2A) و Model Context Protocol (MCP) برای کشف و استفاده از سایر عوامل و ابزارها بهره ببرند.
+- **افزونه‌ها و اتصال‌دهنده‌ها** - ارتباطاتی می‌توانند با خدمات داده و حافظه مانند Microsoft Fabric، SharePoint، Pinecone و Qdrant برقرار شوند.
 
 بیایید ببینیم چگونه این ویژگی‌ها در برخی از مفاهیم اصلی چارچوب Microsoft Agent اعمال می‌شوند.
 
-## مفاهیم اصلی چارچوب Microsoft Agent
+## مفاهیم کلیدی چارچوب Microsoft Agent
 
 ### عوامل
 
@@ -58,19 +58,20 @@
 
 **ایجاد عوامل**
 
-ایجاد عامل با تعریف سرویس استنتاج (ارائه‌دهنده LLM)، مجموعه‌ای از دستورالعمل‌ها برای عامل هوش مصنوعی و یک `نام` اختصاص داده شده انجام می‌شود:
+ایجاد عامل با تعریف سرویس استنتاج (ارائه‌دهنده LLM)،
+مجموعه‌ای از دستورالعمل‌ها برای پیروی عامل هوش مصنوعی، و یک `name` اختصاص یافته انجام می‌شود:
 
 ```python
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at recommending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-در مثال بالا از `Azure OpenAI` استفاده شده است، اما عوامل می‌توانند با استفاده از خدمات مختلف از جمله `Azure AI Foundry Agent Service` ایجاد شوند:
+کد بالا از `Azure OpenAI` استفاده می‌کند اما عوامل می‌توانند با استفاده از انواع خدمات از جمله `Microsoft Foundry Agent Service` ایجاد شوند:
 
 ```python
 AzureAIAgentClient(async_credential=credential).create_agent( name="HelperAgent", instructions="You are a helpful assistant." ) as agent
 ```
 
-API‌های `Responses` و `ChatCompletion` OpenAI
+OpenAI `Responses`، APIهای `ChatCompletion`
 
 ```python
 agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="You are a helpful weather assistant.", )
@@ -80,7 +81,13 @@ agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="Y
 agent = OpenAIChatClient().create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
 ```
 
-یا عوامل از راه دور با استفاده از پروتکل A2A:
+یا [MiniMax](https://platform.minimaxi.com/) که API سازگار با OpenAI با پنجره‌های زمینه بزرگ (تا 204 هزار توکن) ارائه می‌دهد:
+
+```python
+agent = OpenAIChatClient(base_url="https://api.minimax.io/v1", api_key=os.environ["MINIMAX_API_KEY"], model_id="MiniMax-M3").create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
+```
+
+یا عوامل راه دور با استفاده از پروتکل A2A:
 
 ```python
 agent = A2AAgent( name=agent_card.name, description=agent_card.description, agent_card=agent_card, url="https://your-a2a-agent-host" )
@@ -88,7 +95,7 @@ agent = A2AAgent( name=agent_card.name, description=agent_card.description, agen
 
 **اجرای عوامل**
 
-عوامل با استفاده از متدهای `.run` یا `.run_stream` برای پاسخ‌های غیرجریانی یا جریانی اجرا می‌شوند.
+عوامل با استفاده از متدهای `.run` یا `.run_stream` برای پاسخ‌های بدون جریان یا جریانی اجرا می‌شوند.
 
 ```python
 result = await agent.run("What are good places to visit in Amsterdam?")
@@ -102,19 +109,19 @@ async for update in agent.run_stream("What are the good places to visit in Amste
 
 ```
 
-هر اجرای عامل همچنین می‌تواند گزینه‌هایی برای سفارشی‌سازی پارامترهایی مانند `max_tokens` که توسط عامل استفاده می‌شود، `ابزارها` که عامل قادر به فراخوانی آن‌ها است، و حتی `مدل` مورد استفاده برای عامل داشته باشد.
+هر اجرای عامل همچنین می‌تواند گزینه‌هایی برای سفارشی‌سازی پارامترهایی مانند `max_tokens` مصرفی توسط عامل، `tools` که عامل می‌تواند فراخوانی کند، و حتی خود `model` مورد استفاده برای عامل داشته باشد.
 
-این ویژگی در مواردی که مدل‌ها یا ابزارهای خاصی برای تکمیل وظیفه کاربر مورد نیاز است، مفید است.
+این در مواردی مفید است که مدل‌ها یا ابزارهای خاص برای تکمیل وظیفه کاربر لازم می‌باشند.
 
 **ابزارها**
 
-ابزارها می‌توانند هم هنگام تعریف عامل تعریف شوند:
+ابزارها را می‌توان هم هنگام تعریف عامل مشخص کرد:
 
 ```python
 def get_attractions( location: Annotated[str, Field(description="The location to get the top tourist attractions for")], ) -> str: """Get the top tourist attractions for a given location.""" return f"The top attractions for {location} are." 
 
 
-# When creating a ChatAgent directly 
+# هنگام ایجاد مستقیم یک ChatAgent
 
 agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
 
@@ -124,53 +131,53 @@ agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpf
 
 ```python
 
-result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # Tool provided for this run only )
+result1 = await agent.run( "What's the best place to visit in Seattle?", tools=[get_attractions] # ابزار ارائه شده فقط برای این اجرا )
 ```
 
 **رشته‌های عامل**
 
-رشته‌های عامل برای مدیریت مکالمات چند نوبتی استفاده می‌شوند. رشته‌ها می‌توانند با استفاده از:
+رشته‌های عامل برای مدیریت مکالمات چند مرحله‌ای استفاده می‌شوند. رشته‌ها می‌توانند به دو صورت ایجاد شوند:
 
-- `get_new_thread()` که امکان ذخیره رشته را در طول زمان فراهم می‌کند.  
-- ایجاد خودکار رشته هنگام اجرای عامل و فقط داشتن رشته در طول اجرای فعلی.  
+- استفاده از `get_new_thread()` که به ذخیره شدن رشته در طول زمان امکان می‌دهد
+- ایجاد یک رشته به‌صورت خودکار هنگام اجرای عامل که فقط در طول اجرای فعلی پایدار است.
 
 برای ایجاد یک رشته، کد به این صورت است:
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# ایجاد یک نخ جدید.
+thread = agent.get_new_thread() # اجرا کردن عامل با نخ.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 
 ```
 
-سپس می‌توانید رشته را برای استفاده بعدی ذخیره کنید:
+سپس می‌توانید رشته را به صورت سریالی ذخیره کنید تا برای استفاده بعدی نگهداری شود:
 
 ```python
-# Create a new thread. 
+# یک نخ جدید ایجاد کنید.
 thread = agent.get_new_thread() 
 
-# Run the agent with the thread. 
+# عامل را با نخ اجرا کنید.
 
 response = await agent.run("Hello, how are you?", thread=thread) 
 
-# Serialize the thread for storage. 
+# نخ را برای ذخیره‌سازی سریال کنید.
 
 serialized_thread = await thread.serialize() 
 
-# Deserialize the thread state after loading from storage. 
+# پس از بارگذاری از ذخیره‌سازی، وضعیت نخ را سریال‌زدایی کنید.
 
 resumed_thread = await agent.deserialize_thread(serialized_thread)
 ```
 
 **میان‌افزار عامل**
 
-عوامل برای تکمیل وظایف کاربر با ابزارها و LLM‌ها تعامل دارند. در برخی سناریوها، می‌خواهیم بین این تعاملات عملیاتی را اجرا یا پیگیری کنیم. میان‌افزار عامل به ما این امکان را می‌دهد که این کار را انجام دهیم:
+عوامل با ابزارها و مدل‌های زبان بزرگ تعامل دارند تا وظایف کاربران را کامل کنند. در برخی سناریوها می‌خواهیم بین این تعاملات اجرا یا رهگیری انجام دهیم. میان‌افزار عامل این امکان را می‌دهد از طریق:
 
-*میان‌افزار عملکرد*
+*میان‌افزار تابع*
 
-این میان‌افزار به ما امکان می‌دهد عملیاتی را بین عامل و یک عملکرد/ابزار که قرار است فراخوانی شود اجرا کنیم. مثالی از زمانی که این مورد استفاده می‌شود، زمانی است که ممکن است بخواهید برخی از اطلاعات مربوط به فراخوانی عملکرد را ثبت کنید.
+این میان‌افزار امکان اجرای عملی بین عامل و تابع/ابزاری که فراخوانی می‌کند فراهم می‌نماید. مثالی از کاربرد آن وقتی است که می‌خواهید روی فراخوانی تابع لاگ‌برداری انجام دهید.
 
-در کد زیر `next` تعریف می‌کند که آیا میان‌افزار بعدی یا عملکرد واقعی باید فراخوانی شود.
+در کد زیر `next` مشخص می‌کند که آیا میان‌افزار بعدی یا تابع اصلی باید فراخوانی شود.
 
 ```python
 async def logging_function_middleware(
@@ -178,21 +185,21 @@ async def logging_function_middleware(
     next: Callable[[FunctionInvocationContext], Awaitable[None]],
 ) -> None:
     """Function middleware that logs function execution."""
-    # Pre-processing: Log before function execution
+    # پیش‌پردازش: ثبت لاگ قبل از اجرای تابع
     print(f"[Function] Calling {context.function.name}")
 
-    # Continue to next middleware or function execution
+    # ادامه به میدل‌ور بعدی یا اجرای تابع
     await next(context)
 
-    # Post-processing: Log after function execution
+    # پس‌پردازش: ثبت لاگ بعد از اجرای تابع
     print(f"[Function] {context.function.name} completed")
 ```
 
 *میان‌افزار چت*
 
-این میان‌افزار به ما امکان می‌دهد عملیاتی را بین عامل و درخواست‌های بین LLM اجرا یا ثبت کنیم.
+این میان‌افزار امکان اجرا یا لاگ‌برداری عملی بین عامل و درخواست‌های بین مدل زبان بزرگ را فراهم می‌کند.
 
-این شامل اطلاعات مهمی مانند `پیام‌ها` است که به سرویس هوش مصنوعی ارسال می‌شوند.
+این شامل اطلاعات مهمی مانند `messages` است که به سرویس هوش مصنوعی ارسال می‌شوند.
 
 ```python
 async def logging_chat_middleware(
@@ -200,39 +207,39 @@ async def logging_chat_middleware(
     next: Callable[[ChatContext], Awaitable[None]],
 ) -> None:
     """Chat middleware that logs AI interactions."""
-    # Pre-processing: Log before AI call
+    # پیش‌پردازش: ثبت لاگ قبل از فراخوانی هوش مصنوعی
     print(f"[Chat] Sending {len(context.messages)} messages to AI")
 
-    # Continue to next middleware or AI service
+    # ادامه به میان‌افزار بعدی یا سرویس هوش مصنوعی
     await next(context)
 
-    # Post-processing: Log after AI response
+    # پس‌پردازش: ثبت لاگ پس از دریافت پاسخ هوش مصنوعی
     print("[Chat] AI response received")
 
 ```
 
 **حافظه عامل**
 
-همان‌طور که در درس `Agentic Memory` پوشش داده شد، حافظه یک عنصر مهم برای امکان‌پذیر کردن عملکرد عامل در زمینه‌های مختلف است. MAF چندین نوع حافظه مختلف ارائه می‌دهد:
+همانطور که در درس `حافظه عاملی` پوشش داده شده است، حافظه نقش مهمی در توانمندسازی عامل برای کار در بافت‌های مختلف دارد. MAF انواع مختلفی از حافظه‌ها را ارائه می‌دهد:
 
-*ذخیره‌سازی در حافظه*
+*ذخیره‌سازی درون حافظه‌ای*
 
-این حافظه در رشته‌ها در طول زمان اجرای برنامه ذخیره می‌شود.
+این حافظه در رشته‌ها در طول اجرای برنامه ذخیره می‌شود.
 
 ```python
-# Create a new thread. 
-thread = agent.get_new_thread() # Run the agent with the thread. 
+# یک رشته جدید ایجاد کنید.
+thread = agent.get_new_thread() # عامل را با رشته اجرا کنید.
 response = await agent.run("Hello, I am here to help you book travel. Where would you like to go?", thread=thread)
 ```
 
-*پیام‌های پایدار*
+*پیام‌های ماندگار*
 
-این حافظه زمانی استفاده می‌شود که تاریخچه مکالمه در جلسات مختلف ذخیره شود. این حافظه با استفاده از `chat_message_store_factory` تعریف می‌شود:
+این حافظه برای ذخیره تاریخچه مکالمات در جلسات مختلف استفاده می‌شود. با استفاده از `chat_message_store_factory` تعریف می‌شود:
 
 ```python
 from agent_framework import ChatMessageStore
 
-# Create a custom message store
+# ایجاد یک مخزن پیام سفارشی
 def create_message_store():
     return ChatMessageStore()
 
@@ -246,12 +253,12 @@ agent = ChatAgent(
 
 *حافظه پویا*
 
-این حافظه قبل از اجرای عوامل به زمینه اضافه می‌شود. این حافظه‌ها می‌توانند در خدمات خارجی مانند mem0 ذخیره شوند:
+این حافظه قبل از اجرای عوامل به بافت اضافه می‌شود. این حافظه‌ها می‌توانند در سرویس‌های خارجی مانند mem0 ذخیره شوند:
 
 ```python
 from agent_framework.mem0 import Mem0Provider
 
-# Using Mem0 for advanced memory capabilities
+# استفاده از Mem0 برای قابلیت‌های پیشرفته حافظه
 memory_provider = Mem0Provider(
     api_key="your-mem0-api-key",
     user_id="user_123",
@@ -266,9 +273,9 @@ agent = ChatAgent(
 
 ```
 
-**مشاهده‌پذیری عامل**
+**قابلیت مشاهده‌پذیری عامل**
 
-مشاهده‌پذیری برای ساخت سیستم‌های عامل‌محور قابل اعتماد و قابل نگهداری مهم است. MAF با OpenTelemetry یکپارچه شده است تا ردیابی و اندازه‌گیری‌های بهتر برای مشاهده‌پذیری فراهم کند.
+قابلیت مشاهده‌پذیری برای ساخت سیستم‌های عاملی قابل اطمینان و قابل نگهداری اهمیت دارد. MAF با OpenTelemetry ادغام می‌شود تا ردیابی و اندازه‌گیری برای قابلیت مشاهده بهتر فراهم کند.
 
 ```python
 from agent_framework.observability import get_tracer, get_meter
@@ -276,7 +283,7 @@ from agent_framework.observability import get_tracer, get_meter
 tracer = get_tracer()
 meter = get_meter()
 with tracer.start_as_current_span("my_custom_span"):
-    # do something
+    # کاری انجام بده
     pass
 counter = meter.create_counter("my_custom_counter")
 counter.add(1, {"key": "value"})
@@ -284,21 +291,21 @@ counter.add(1, {"key": "value"})
 
 ### جریان‌های کاری
 
-MAF جریان‌های کاری را ارائه می‌دهد که مراحل از پیش تعریف شده‌ای برای تکمیل یک وظیفه هستند و شامل عوامل هوش مصنوعی به عنوان اجزای این مراحل می‌شوند.
+MAF جریان‌های کاری را ارائه می‌دهد که گام‌های از پیش تعریف‌شده برای کامل کردن یک وظیفه هستند و عوامل هوش مصنوعی را به عنوان اجزا در آن مراحل شامل می‌شوند.
 
-جریان‌های کاری از اجزای مختلفی تشکیل شده‌اند که کنترل جریان را بهتر می‌کنند. جریان‌های کاری همچنین امکان **ارکستراسیون چند عاملی** و **ایجاد نقاط بررسی** برای ذخیره وضعیت جریان کاری را فراهم می‌کنند.
+جریان‌های کاری از اجزای مختلفی تشکیل شده‌اند که جریان کنترل بهتری را امکان‌پذیر می‌کنند. جریان‌های کاری همچنین امکان **هماهنگی چندعامل** و **نقطه ذخیره‌سازی** برای ذخیره وضعیت جریان کاری را فراهم می‌کنند.
 
 اجزای اصلی یک جریان کاری عبارتند از:
 
-**اجراکننده‌ها**
+**مجریان**
 
-اجراکننده‌ها پیام‌های ورودی را دریافت می‌کنند، وظایف اختصاص داده شده خود را انجام می‌دهند و سپس یک پیام خروجی تولید می‌کنند. این فرآیند جریان کاری را به سمت تکمیل وظیفه بزرگ‌تر پیش می‌برد. اجراکننده‌ها می‌توانند عامل هوش مصنوعی یا منطق سفارشی باشند.
+مجریان پیام‌های ورودی را دریافت می‌کنند، وظایف اختصاص‌یافته خود را انجام می‌دهند و سپس پیام خروجی تولید می‌کنند. این جریان کاری را به سمت تکمیل وظیفه بزرگ‌تر پیش می‌برد. مجریان می‌توانند عامل هوش مصنوعی یا منطق سفارشی باشند.
 
 **لبه‌ها**
 
-لبه‌ها برای تعریف جریان پیام‌ها در یک جریان کاری استفاده می‌شوند. این لبه‌ها می‌توانند:
+لبه‌ها برای تعریف جریان پیام‌ها در یک جریان کاری استفاده می‌شوند. این‌ها می‌توانند:
 
-*لبه‌های مستقیم* - اتصالات ساده یک به یک بین اجراکننده‌ها:
+*لبه‌های مستقیم* - اتصال‌های ساده یک به یک بین مجریان:
 
 ```python
 from agent_framework import WorkflowBuilder
@@ -309,76 +316,134 @@ builder.set_start_executor(source_executor)
 workflow = builder.build()
 ```
 
-*لبه‌های شرطی* - پس از برآورده شدن یک شرط خاص فعال می‌شوند. به عنوان مثال، زمانی که اتاق‌های هتل در دسترس نیستند، یک اجراکننده می‌تواند گزینه‌های دیگر را پیشنهاد دهد.
+*لبه‌های شرطی* - فعال شده پس از برآورده شدن شرایط خاص. به عنوان مثال، وقتی اتاق‌های هتل در دسترس نیستند، یک مجری می‌تواند گزینه‌های دیگر را پیشنهاد دهد.
 
-*لبه‌های سوئیچ-کیس* - پیام‌ها را بر اساس شرایط تعریف شده به اجراکننده‌های مختلف هدایت می‌کنند. به عنوان مثال، اگر مشتری سفر دسترسی اولویت داشته باشد، وظایف آن‌ها از طریق یک جریان کاری دیگر مدیریت می‌شود.
+*لبه‌های سوئیچ-کیس* - روت‌کردن پیام‌ها به مجریان مختلف بر اساس شرایط تعریف شده. مثلا اگر مشتری سفر دسترسی اولویت دارد و وظایفش از طریق جریان کاری دیگری پردازش می‌شوند.
 
-*لبه‌های فن-اوت* - یک پیام را به چندین هدف ارسال می‌کنند.
+*لبه‌های پخش‌کننده* - ارسال یک پیام به چندین مقصد.
 
-*لبه‌های فن-این* - چندین پیام از اجراکننده‌های مختلف جمع‌آوری کرده و به یک هدف ارسال می‌کنند.
+*لبه‌های جمع‌کننده* - جمع‌آوری چندین پیام از مجریان مختلف و ارسال به یک مقصد.
 
 **رویدادها**
 
-برای ارائه مشاهده‌پذیری بهتر در جریان‌های کاری، MAF رویدادهای داخلی برای اجرا ارائه می‌دهد، از جمله:
+برای ارائه قابلیت مشاهده بهتر در جریان‌های کاری، MAF رویدادهای داخلی برای اجرای جریان کاری ارائه می‌دهد از جمله:
 
-- `WorkflowStartedEvent` - اجرای جریان کاری آغاز می‌شود  
-- `WorkflowOutputEvent` - جریان کاری یک خروجی تولید می‌کند  
-- `WorkflowErrorEvent` - جریان کاری با خطا مواجه می‌شود  
-- `ExecutorInvokeEvent` - اجراکننده شروع به پردازش می‌کند  
-- `ExecutorCompleteEvent` - اجراکننده پردازش را به پایان می‌رساند  
-- `RequestInfoEvent` - یک درخواست صادر می‌شود  
+- `WorkflowStartedEvent`  - اجرای جریان کاری آغاز می‌شود
+- `WorkflowOutputEvent` - جریان کاری خروجی تولید می‌کند
+- `WorkflowErrorEvent` - جریان کاری با خطا مواجه می‌شود
+- `ExecutorInvokeEvent`  - مجری شروع به پردازش می‌کند
+- `ExecutorCompleteEvent`  -  مجری پردازش را تمام می‌کند
+- `RequestInfoEvent` - یک درخواست صادر شده است
 
-## مهاجرت از چارچوب‌های دیگر (Semantic Kernel و AutoGen)
+## الگوهای پیشرفته MAF
 
-### تفاوت‌های بین MAF و Semantic Kernel
+بخش‌های بالا مفاهیم کلیدی چارچوب Microsoft Agent را پوشش دادند. هنگامی که عوامل پیچیده‌تر می‌سازید، الگوهای پیشرفته زیر را در نظر بگیرید:
 
-**ایجاد عامل ساده‌تر**
+- **ترکیب میان‌افزار**: زنجیره‌ای از چندین دستیگر میان‌افزار (لاگ‌برداری، احراز هویت، محدودیت نرخ) با استفاده از میان‌افزار تابع و چت برای کنترل دقیق‌تر رفتار عامل.
+- **نقطه ذخیره‌سازی جریان کاری**: استفاده از رویدادهای جریان کاری و سریال‌سازی برای ذخیره و ادامه فرآیندهای طولانی عامل.
+- **انتخاب پویا ابزار**: ترکیب RAG روی توضیحات ابزار با ثبت ابزارهای MAF برای ارائه تنها ابزارهای مرتبط در هر پرس‌وجو.
+- **انتقال چندعاملی**: استفاده از لبه‌های جریان کاری و مسیریابی شرطی برای هماهنگی انتقال بین عوامل تخصصی.
 
-Semantic Kernel نیاز به ایجاد یک نمونه Kernel برای هر عامل دارد. MAF از رویکرد ساده‌تری با استفاده از افزونه‌ها برای ارائه‌دهندگان اصلی استفاده می‌کند.
+## میزبانی عوامل LangChain / LangGraph روی Microsoft Foundry
 
-```python
-agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at reccomending trips to customers based on their preferences.", name="TripRecommender" )
+چارچوب Microsoft Agent  **قابلیت همکاری چارچوبی** دارد — شما محدود به عوامل نوشته شده با MAF نیستید. اگر قبلاً عاملی با **LangChain** یا **LangGraph** ساخته‌اید، می‌توانید آن را به عنوان عامل میزبانی شده در **Microsoft Foundry** اجرا کنید تا Foundry زمان اجرا، جلسات، مقیاس‌دهی، هویت و نقاط پایانی پروتکل را مدیریت کند، در حالی که منطق عامل شما در LangGraph باقی می‌ماند.
+
+این با بسته `langchain_azure_ai.agents.hosting` انجام می‌شود که یک گراف کامپایل شده LangGraph را روی همان پروتکل‌هایی که عوامل میزبانی شده Foundry استفاده می‌کنند، ارائه می‌دهد.
+
+**1. نصب افزونه میزبانی:**
+
+```bash
+pip install -U "langchain-azure-ai[hosting]>=1.2.4" azure-identity
 ```
 
-**ایجاد رشته عامل**
+افزونه `hosting` کتابخانه‌های پروتکل Foundry را نصب می‌کند: `azure-ai-agentserver-responses` (نقطه پایانی سازگار با OpenAI `/responses`) و `azure-ai-agentserver-invocations` (نقطه پایانی عمومی `/invocations`).
 
-Semantic Kernel نیاز به ایجاد دستی رشته‌ها دارد. در MAF، عامل به طور مستقیم یک رشته اختصاص داده می‌شود.
+**2. انتخاب پروتکل میزبانی:**
 
-```python
-thread = agent.get_new_thread() # Run the agent with the thread. 
+| پروتکل | کلاس میزبان | نقطه پایانی | مواقع استفاده |
+|----------|-----------|----------|----------|
+| **Responses** | `ResponsesHostServer` | `/responses` | می‌خواهید چت سازگار با OpenAI، استریمینگ، تاریخچه پاسخ‌ها و موضوع‌بندی مکالمه — که پیش‌فرض توصیه شده برای عوامل مکالمه‌ای است. |
+| **Invocations** | `InvocationsHostServer` | `/invocations` | نیاز به شکل JSON سفارشی، نقطه پایانی نوع وب‌هوک، یا پردازش غیر مکالمه‌ای دارید. |
+
+چون **API پاسخ‌ها (Responses) API اصلی برای توسعه به سبک عامل‌ها در Foundry است**، برای بیشتر عوامل با `ResponsesHostServer` شروع کنید.
+
+**3. پیکربندی متغیرهای محیطی** (`az login` را ابتدا انجام دهید تا `DefaultAzureCredential` بتواند احراز هویت کند):
+
+```bash
+export FOUNDRY_PROJECT_ENDPOINT="https://<resource>.services.ai.azure.com/api/projects/<project>"
+export FOUNDRY_MODEL_NAME="gpt-5-mini"
 ```
 
-**ثبت ابزار**
+وقتی عامل به عنوان عامل میزبانی شده در Foundry اجرا شود، پلتفرم به صورت خودکار `FOUNDRY_PROJECT_ENDPOINT` را تزریق می‌کند.
 
-در Semantic Kernel، ابزارها به Kernel ثبت می‌شوند و سپس Kernel به عامل منتقل می‌شود. در MAF، ابزارها به طور مستقیم در طول فرآیند ایجاد عامل ثبت می‌شوند.
+**4. ارائه یک عامل LangGraph روی پروتکل Responses:**
 
 ```python
-agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
+import os
+
+from azure.ai.projects import AIProjectClient
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
+from langchain_azure_ai.agents.hosting import ResponsesHostServer
+
+_AZURE_AI_SCOPE = "https://ai.azure.com/.default"
+
+
+def build_chat_model() -> ChatOpenAI:
+    project_endpoint = os.environ["FOUNDRY_PROJECT_ENDPOINT"].rstrip("/")
+    deployment = os.environ.get("FOUNDRY_MODEL_NAME", "gpt-5-mini")
+    credential = DefaultAzureCredential()
+    project = AIProjectClient(endpoint=project_endpoint, credential=credential)
+    openai_client = project.get_openai_client()
+    token_provider = get_bearer_token_provider(credential, _AZURE_AI_SCOPE)
+
+    # ChatOpenAI در اینجا به نقطه پایانی (Responses) سازگار با OpenAI پروژه Foundry اشاره دارد.
+    return ChatOpenAI(
+        model=deployment,
+        base_url=str(openai_client.base_url),
+        api_key=token_provider,
+    )
+
+
+def main() -> None:
+    graph = create_agent(build_chat_model(), tools=[])
+    port = int(os.environ.get("PORT", "8088"))
+    ResponsesHostServer(graph).run(port=port)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
-### تفاوت‌های بین MAF و AutoGen
+آن را به صورت محلی با `python main.py` اجرا کنید، سپس یک درخواست Responses به آدرس `http://localhost:8088/responses` ارسال کنید.
 
-**تیم‌ها در مقابل جریان‌های کاری**
+**رفتارهای کلیدی:**
 
-`تیم‌ها` ساختار رویداد برای فعالیت‌های مبتنی بر رویداد با عوامل در AutoGen هستند. MAF از `جریان‌های کاری` استفاده می‌کند که داده‌ها را از طریق معماری مبتنی بر گراف به اجراکننده‌ها هدایت می‌کند.
+- **مکالمات**: کلاینت‌ها مکالمه‌ای را با ارسال `previous_response_id` یا شناسه `conversation` ادامه می‌دهند. اگر گراف شما با کنترل‌کننده نقطه ذخیره‌سازی LangGraph کامپایل شده باشد، Foundry وضعیت مکالمه را به نقطه ذخیره نگاشت می‌کند (در تولید از کنترل‌کننده پایدار استفاده کنید؛ `MemorySaver` برای تست محلی مناسب است).
+- **انسان در حلقه**: اگر گراف شما از `interrupt()` LangGraph استفاده کند، `ResponsesHostServer` قطعی در حال انتظار را به عنوان آیتم `function_call` / `mcp_approval_request` در Responses ظاهر می‌کند، و کلاینت‌ها با `function_call_output` / `mcp_approval_response` متناظر ادامه می‌دهند.
+- **استقرار در Foundry**: از Azure Developer CLI استفاده کنید — `azd ext install azure.ai.agents`، `azd ai agent init -m <manifest>`، `azd ai agent run` (محلی، نیازمند داکر)، سپس `azd provision` و `azd deploy`. استقرار عامل میزبانی شده نیازمند نقش **Foundry Project Manager** است.
 
-**ایجاد ابزار**
+نسخه اجرایی این مثال در [code-samples/14-langchain-hosted-agent.py](../../../14-microsoft-agent-framework/code-samples/14-langchain-hosted-agent.py) موجود است. برای راهنمای کامل (پروتکل Invocations، اسکیمای درخواست سفارشی، و رفع خطا) به [میزبانی عوامل LangGraph به عنوان عوامل میزبانی شده Foundry](https://learn.microsoft.com/azure/foundry/how-to/develop/langchain-hosted-agents) مراجعه کنید.
 
-AutoGen از `FunctionTool` برای بسته‌بندی توابعی که عوامل می‌توانند فراخوانی کنند استفاده می‌کند. MAF از @ai_function استفاده می‌کند که به طور مشابه عمل می‌کند اما همچنین به طور خودکار طرح‌ها را برای هر عملکرد استنتاج می‌کند.
+## نمونه‌های کد 
 
-**رفتار عامل**
-
-عوامل در AutoGen به طور پیش‌فرض عوامل تک‌نوبتی هستند مگر اینکه `max_tool_iterations` به مقدار بالاتری تنظیم شود. در MAF، `ChatAgent` به طور پیش‌فرض چند نوبتی است، به این معنی که تا زمانی که وظیفه کاربر کامل شود، به فراخوانی ابزارها ادامه می‌دهد.
-
-## نمونه‌های کد
-
-نمونه‌های کد برای چارچوب Microsoft Agent در این مخزن تحت فایل‌های `xx-python-agent-framework` و `xx-dotnet-agent-framework` موجود است.
+نمونه‌های کد برای چارچوب Microsoft Agent در این مخزن زیر فایل‌های `xx-python-agent-framework` و `xx-dotnet-agent-framework` قرار دارند.
 
 ## سوالات بیشتری درباره چارچوب Microsoft Agent دارید؟
 
-به [Discord Azure AI Foundry](https://aka.ms/ai-agents/discord) بپیوندید تا با دیگر یادگیرندگان ملاقات کنید، در ساعات اداری شرکت کنید و سوالات خود درباره عوامل هوش مصنوعی را پاسخ دهید.
+به [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) بپیوندید تا با یادگیرندگان دیگر ملاقات کنید، در ساعات اداری شرکت کنید و سوالات خود درباره عوامل هوش مصنوعی را پاسخ دهید.
+## درس قبلی
+
+[حافظه برای عوامل هوش مصنوعی](../13-agent-memory/README.md)
+
+## درس بعدی
+
+[ساخت عوامل استفاده‌کننده از کامپیوتر (CUA)](../15-browser-use/README.md)
 
 ---
 
-**سلب مسئولیت**:  
-این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما تلاش می‌کنیم دقت را حفظ کنیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌ها باشند. سند اصلی به زبان اصلی آن باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حساس، توصیه می‌شود از ترجمه انسانی حرفه‌ای استفاده کنید. ما مسئولیتی در قبال سوء تفاهم‌ها یا تفسیرهای نادرست ناشی از استفاده از این ترجمه نداریم.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**سلب مسئولیت**:
+این سند با استفاده از سرویس ترجمه هوش مصنوعی [Co-op Translator](https://github.com/Azure/co-op-translator) ترجمه شده است. در حالی که ما در تلاش برای دقت هستیم، لطفاً توجه داشته باشید که ترجمه‌های خودکار ممکن است شامل خطاها یا نادرستی‌هایی باشند. سند اصلی به زبان مادری خود باید به عنوان منبع معتبر در نظر گرفته شود. برای اطلاعات حیاتی، ترجمه حرفه‌ای انسانی توصیه می‌شود. ما در قبال هرگونه سوء تفاهم یا برداشت نادرست ناشی از استفاده از این ترجمه مسئولیتی نداریم.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

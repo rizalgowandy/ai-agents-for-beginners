@@ -8,7 +8,7 @@ This lesson will cover:
 
 - Understanding Microsoft Agent Framework: Key Features and Value  
 - Exploring the Key Concepts of Microsoft Agent Framework
-- Comparing MAF to Semantic Kernel and AutoGen: Migration Guide
+- Advanced MAF Patterns: Workflows, Middleware, and Memory
 
 ## Learning Goals
 
@@ -16,17 +16,17 @@ After completing this lesson, you will know how to:
 
 - Build Production Ready AI Agents using Microsoft Agent Framework
 - Apply the core features of Microsoft Agent Framework to your Agentic Use Cases
-- Migrate and integrate existing Agentic frameworks and tools  
+- Use advanced patterns including workflows, middleware, and observability
 
 ## Code Samples 
 
-Code samples for [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) can be found in this repository under `xx-python-agent-framework` and `xx-dotnet-agent-framework` files.
+Code samples for [Microsoft Agent Framework (MAF)](https://learn.microsoft.com/en-us/agent-framework/overview/?wt.mc_id=youtube_26688_organicsocial_reactor&pivots=programming-language-python) can be found in this repository under `xx-python-agent-framework` and `xx-dotnet-agent-framework` files.
 
 ## Understanding Microsoft Agent Framework
 
 ![Framework Intro](./images/framework-intro.png)
 
-[Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-beginners/agent-framewrok) builds on top of the experience and learnings from Semantic Kernel and AutoGen. It offers the flexibility to address the wide variety of agentic use cases seen in both production and research environments including:
+[Microsoft Agent Framework (MAF)](https://learn.microsoft.com/en-us/agent-framework/overview/?wt.mc_id=youtube_26688_organicsocial_reactor&pivots=programming-language-python) is Microsoft's unified framework for building AI agents. It offers the flexibility to address the wide variety of agentic use cases seen in both production and research environments including:
 
 - **Sequential Agent orchestration** in scenarios where step-by-step workflows are needed.
 - **Concurrent orchestration** in scenarios where agents need to complete tasks at the same time.
@@ -36,8 +36,8 @@ Code samples for [Microsoft Agent Framework (MAF)](https://aka.ms/ai-agents-begi
 
 To deliver AI Agents in Production, MAF also has included features for:
 
-- **Observability** through the use of OpenTelemetry where every action of the AI Agent including tool invocation, orchestration steps, reasoning flows and performance monitoring through Azure AI Foundry dashboards.
-- **Security** by hosting agents natively on Azure AI Foundry which includes security controls such as role-based access, private data handling and built-in content safety.
+- **Observability** through the use of OpenTelemetry where every action of the AI Agent including tool invocation, orchestration steps, reasoning flows and performance monitoring through Microsoft Foundry dashboards.
+- **Security** by hosting agents natively on Microsoft Foundry which includes security controls such as role-based access, private data handling and built-in content safety.
 - **Durability** as Agent threads and workflows can pause, resume and recover from errors which enables longer running process.
 - **Control** as human in the loop workflows are supported where tasks are marked as requiring human approval.
 
@@ -65,7 +65,7 @@ set of instructions for the AI Agent to follow, and an assigned `name`:
 agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at recommending trips to customers based on their preferences.", name="TripRecommender" )
 ```
 
-The above is using `Azure OpenAI` but agents can be created using a variety of services including `Azure AI Foundry Agent Service`:
+The above is using `Azure OpenAI` but agents can be created using a variety of services including `Microsoft Foundry Agent Service`:
 
 ```python
 AzureAIAgentClient(async_credential=credential).create_agent( name="HelperAgent", instructions="You are a helpful assistant." ) as agent
@@ -79,6 +79,12 @@ agent = OpenAIResponsesClient().create_agent( name="WeatherBot", instructions="Y
 
 ```python
 agent = OpenAIChatClient().create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
+```
+
+or [MiniMax](https://platform.minimaxi.com/), which provides an OpenAI-compatible API with large context windows (up to 204K tokens):
+
+```python
+agent = OpenAIChatClient(base_url="https://api.minimax.io/v1", api_key=os.environ["MINIMAX_API_KEY"], model_id="MiniMax-M3").create_agent( name="HelpfulAssistant", instructions="You are a helpful assistant.", )
 ```
 
 or remote agents using the A2A protocol:
@@ -329,47 +335,96 @@ To provide better observability into workflows, MAF offers built-in events for e
 - `ExecutorCompleteEvent`  -  Executor finishes processing
 - `RequestInfoEvent` - A request is issued
 
-## Migrating From Other Frameworks (Semantic Kernel and AutoGen)
+## Advanced MAF Patterns
 
-### Differences between MAF and Semantic Kernel
+The sections above cover the key concepts of Microsoft Agent Framework. As you build more complex agents, here are some advanced patterns to consider:
 
-**Simplified Agent Creation**
+- **Middleware Composition**: Chain multiple middleware handlers (logging, auth, rate-limiting) using function and chat middleware for fine-grained control over agent behavior.
+- **Workflow Checkpointing**: Use workflow events and serialization to save and resume long-running agent processes.
+- **Dynamic Tool Selection**: Combine RAG over tool descriptions with MAF's tool registration to present only relevant tools per query.
+- **Multi-Agent Handoff**: Use workflow edges and conditional routing to orchestrate handoffs between specialized agents.
 
-Semantic Kernel relies on the creation of a Kernel instance for every agent. MAF uses has a simplified approach by using extensions for the main providers.
+## Hosting LangChain / LangGraph Agents on Microsoft Foundry
 
-```python
-agent = AzureOpenAIChatClient(credential=AzureCliCredential()).create_agent( instructions="You are good at reccomending trips to customers based on their preferences.", name="TripRecommender" )
+Microsoft Agent Framework is **framework-interoperable** — you're not limited to agents written with MAF. If you already have an agent built with **LangChain** or **LangGraph**, you can run it as a **Microsoft Foundry hosted agent** so that Foundry manages the runtime, sessions, scaling, identity, and protocol endpoints for you, while your agent logic stays in LangGraph.
+
+This is done with the `langchain_azure_ai.agents.hosting` package, which exposes a compiled LangGraph graph over the same protocols Foundry hosted agents use.
+
+**1. Install the hosting extra:**
+
+```bash
+pip install -U "langchain-azure-ai[hosting]>=1.2.4" azure-identity
 ```
 
-**Agent Thread Creation**
+The `hosting` extra installs the Foundry protocol libraries: `azure-ai-agentserver-responses` (the OpenAI-compatible `/responses` endpoint) and `azure-ai-agentserver-invocations` (the generic `/invocations` endpoint).
 
-Semantic Kernel requires threads to be created manually. In MAF, the agent is directly assigned a thread.
+**2. Choose a hosting protocol:**
 
-```python
-thread = agent.get_new_thread() # Run the agent with the thread. 
+| Protocol | Host class | Endpoint | Use when |
+|----------|-----------|----------|----------|
+| **Responses** | `ResponsesHostServer` | `/responses` | You want OpenAI-compatible chat, streaming, response history, and conversation threading — the recommended default for conversational agents. |
+| **Invocations** | `InvocationsHostServer` | `/invocations` | You need a custom JSON shape, a webhook-style endpoint, or non-conversational processing. |
+
+Because the **Responses API is the primary API for agent-style development in Foundry**, start with `ResponsesHostServer` for most agents.
+
+**3. Configure environment variables** (`az login` first so `DefaultAzureCredential` can authenticate):
+
+```bash
+export FOUNDRY_PROJECT_ENDPOINT="https://<resource>.services.ai.azure.com/api/projects/<project>"
+export FOUNDRY_MODEL_NAME="gpt-5-mini"
 ```
 
-**Tool Registration**
+When the agent later runs as a hosted agent in Foundry, the platform injects `FOUNDRY_PROJECT_ENDPOINT` automatically.
 
-In Semantic Kernel, tools are registered to the Kernel and the Kernel is then passed to the agent. In MAF, tools are registered directly during the agent creation process.
+**4. Expose a LangGraph agent over the Responses protocol:**
 
 ```python
-agent = ChatAgent( chat_client=OpenAIChatClient(), instructions="You are a helpful assistant", tools=[get_attractions]
+import os
+
+from azure.ai.projects import AIProjectClient
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
+from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
+from langchain_azure_ai.agents.hosting import ResponsesHostServer
+
+_AZURE_AI_SCOPE = "https://ai.azure.com/.default"
+
+
+def build_chat_model() -> ChatOpenAI:
+    project_endpoint = os.environ["FOUNDRY_PROJECT_ENDPOINT"].rstrip("/")
+    deployment = os.environ.get("FOUNDRY_MODEL_NAME", "gpt-5-mini")
+    credential = DefaultAzureCredential()
+    project = AIProjectClient(endpoint=project_endpoint, credential=credential)
+    openai_client = project.get_openai_client()
+    token_provider = get_bearer_token_provider(credential, _AZURE_AI_SCOPE)
+
+    # ChatOpenAI here targets the Foundry project's OpenAI-compatible (Responses) endpoint.
+    return ChatOpenAI(
+        model=deployment,
+        base_url=str(openai_client.base_url),
+        api_key=token_provider,
+    )
+
+
+def main() -> None:
+    graph = create_agent(build_chat_model(), tools=[])
+    port = int(os.environ.get("PORT", "8088"))
+    ResponsesHostServer(graph).run(port=port)
+
+
+if __name__ == "__main__":
+    main()
 ```
 
-### Differences between MAF and  AutoGen
+Run it locally with `python main.py`, then send a Responses request to `http://localhost:8088/responses`.
 
-**Teams vs Workflows**
+**Key behaviors:**
 
-`Teams` are the event structure for event driven activity with agents in AutoGen. MAF uses `Workflows` that route data to executors through a graph based architecture.
+- **Conversations**: Clients continue a conversation by passing `previous_response_id` or a `conversation` ID. If your graph is compiled with a LangGraph checkpointer, Foundry keys conversation state to the checkpoint (use a durable checkpointer in production; `MemorySaver` is fine for local testing).
+- **Human-in-the-loop**: If your graph uses LangGraph `interrupt()`, `ResponsesHostServer` surfaces the pending interrupt as a Responses `function_call` / `mcp_approval_request` item, and clients resume with a matching `function_call_output` / `mcp_approval_response`.
+- **Deploy to Foundry**: Use the Azure Developer CLI — `azd ext install azure.ai.agents`, `azd ai agent init -m <manifest>`, `azd ai agent run` (local, requires Docker), then `azd provision` and `azd deploy`. Hosted-agent deployment requires the **Foundry Project Manager** role.
 
-**Tool Creation**
-
-AutoGen uses `FunctionTool` to wrap functions for agents to call. MAF uses @ai_function which operates similarly but also infers the schemas automatically for each function.
-
-**Agent Behaviour**
-
-Agents are single-turn agents by default in AutoGen unless `max_tool_iterations` is set to something higher. Within MAF the `ChatAgent` is a multi-turn by default meaning that it will keep calling tools until the user's task is complete.
+A runnable version of this example lives in [code-samples/14-langchain-hosted-agent.py](./code-samples/14-langchain-hosted-agent.py). For the full walkthrough (Invocations protocol, custom request schemas, and troubleshooting), see [Host LangGraph agents as Foundry hosted agents](https://learn.microsoft.com/azure/foundry/how-to/develop/langchain-hosted-agents).
 
 ## Code Samples 
 
@@ -377,4 +432,11 @@ Code samples for Microsoft Agent Framework can be found in this repository under
 
 ## Got More Questions About Microsoft Agent Framework?
 
-Join the [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
+Join the [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) to meet with other learners, attend office hours and get your AI Agents questions answered.
+## Previous Lesson
+
+[Memory for AI Agents](../13-agent-memory/README.md)
+
+## Next Lesson
+
+[Building Computer Use Agents (CUA)](../15-browser-use/README.md)

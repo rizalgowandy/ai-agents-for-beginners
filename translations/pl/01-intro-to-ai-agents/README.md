@@ -1,123 +1,155 @@
-[![Wprowadzenie do agentów AI](../../../translated_images/pl/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
+[![Wprowadzenie do Agentów AI](../../../translated_images/pl/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
 
-> _(Kliknij obrazek powyżej, aby obejrzeć wideo z tej lekcji)_
+> _(Kliknij powyższy obraz, aby obejrzeć wideo do tej lekcji)_
 
-# Wprowadzenie do agentów AI i ich zastosowań
+# Wprowadzenie do Agentów AI i Przypadków Użycia Agentów
 
-Witaj w kursie "Agenci AI dla początkujących"! Ten kurs dostarcza podstawowej wiedzy oraz praktycznych przykładów budowania agentów AI.
+Witamy na kursie **AI Agents for Beginners**! Ten kurs daje Ci podstawową wiedzę — oraz rzeczywisty działający kod — aby zacząć budować Agentów AI od podstaw.
 
-Dołącz do <a href="https://discord.gg/kzRShWzttr" target="_blank">społeczności Azure AI na Discordzie</a>, aby spotkać innych uczących się i twórców agentów AI oraz zadać pytania dotyczące tego kursu.
+Wpadnij się przywitać w <a href="https://discord.gg/kzRShWzttr" target="_blank">Azure AI Discord Community</a> — to społeczność pełna uczących się i budowniczych AI, którzy chętnie odpowiadają na pytania.
 
-Na początek kursu skupimy się na lepszym zrozumieniu, czym są agenci AI i jak można ich używać w aplikacjach i procesach, które tworzymy.
+Zanim przejdziemy do budowy, upewnijmy się, że naprawdę rozumiemy, czym jest Agent AI i kiedy warto go użyć.
+
+---
 
 ## Wprowadzenie
 
 Ta lekcja obejmuje:
 
-- Czym są agenci AI i jakie są ich różne typy?
-- Jakie zastosowania są najlepsze dla agentów AI i jak mogą nam pomóc?
-- Jakie są podstawowe elementy projektowania rozwiązań opartych na agentach?
+- Czym są Agenty AI oraz jakie istnieją ich różne typy
+- Do jakich zadań najlepiej nadają się Agenty AI
+- Główne elementy, których użyjesz projektując rozwiązanie oparte na agentach
 
-## Cele nauki
-Po ukończeniu tej lekcji będziesz w stanie:
+## Cele Nauki
 
-- Zrozumieć koncepcje agentów AI i ich różnice w porównaniu z innymi rozwiązaniami AI.
-- Efektywnie stosować agentów AI.
-- Produktywnie projektować rozwiązania oparte na agentach dla użytkowników i klientów.
+Pod koniec tej lekcji powinieneś być w stanie:
 
-## Definicja agentów AI i ich typy
+- Wyjaśnić, czym jest Agent AI i jak różni się od tradycyjnego rozwiązania AI
+- Wiedzieć, kiedy sięgnąć po Agenta AI (a kiedy nie)
+- Zarysować podstawowy projekt rozwiązania opartego na agentach dla realnego problemu
 
-### Czym są agenci AI?
+---
 
-Agenci AI to **systemy**, które umożliwiają **modelom językowym dużej skali (LLM)** **wykonywanie działań**, rozszerzając ich możliwości poprzez zapewnienie im **dostępu do narzędzi** i **wiedzy**.
+## Definicja Agentów AI i Typy Agentów AI
 
-Rozbijmy tę definicję na mniejsze części:
+### Czym są Agenty AI?
 
-- **System** - Ważne jest, aby myśleć o agentach nie jako o pojedynczym komponencie, ale jako o systemie wielu komponentów. Na podstawowym poziomie komponenty agenta AI to:
-  - **Środowisko** - Zdefiniowana przestrzeń, w której działa agent AI. Na przykład, jeśli mielibyśmy agenta AI do rezerwacji podróży, środowiskiem mogłoby być system rezerwacji podróży, z którego agent korzysta, aby wykonywać zadania.
-  - **Czujniki** - Środowiska zawierają informacje i dostarczają informacji zwrotnych. Agenci AI używają czujników do zbierania i interpretowania tych informacji o aktualnym stanie środowiska. W przykładzie agenta rezerwacji podróży, system rezerwacji podróży może dostarczać informacji, takich jak dostępność hoteli czy ceny lotów.
-  - **Siłowniki** - Gdy agent AI otrzyma aktualny stan środowiska, dla bieżącego zadania określa, jakie działanie wykonać, aby zmienić środowisko. W przypadku agenta rezerwacji podróży może to być zarezerwowanie dostępnego pokoju dla użytkownika.
+Oto prosty sposób, aby to sobie wyobrazić:
 
-![Czym są agenci AI?](../../../translated_images/pl/what-are-ai-agents.1ec8c4d548af601a.webp)
+> **Agenty AI to systemy, które pozwalają Modelom Językowym (LLM) rzeczywiście *coś robić* — poprzez dawanie im narzędzi i wiedzy do działania w świecie, a nie tylko odpowiadania na zapytania.**
 
-**Modele językowe dużej skali** - Koncepcja agentów istniała przed powstaniem LLM. Zaletą budowania agentów AI z LLM jest ich zdolność do interpretowania języka ludzkiego i danych. Ta zdolność pozwala LLM interpretować informacje o środowisku i definiować plan zmiany środowiska.
+Rozwińmy to trochę:
 
-**Wykonywanie działań** - Poza systemami agentów AI, LLM są ograniczone do sytuacji, w których działanie polega na generowaniu treści lub informacji na podstawie zapytania użytkownika. W systemach agentów AI LLM mogą realizować zadania, interpretując prośbę użytkownika i korzystając z narzędzi dostępnych w ich środowisku.
+- **System** — Agent AI to nie pojedyncza rzecz. To zbiór części współpracujących ze sobą. W jego rdzeniu każdy agent ma trzy elementy:
+  - **Środowisko** — Przestrzeń, w której agent działa. Dla agenta rezerwacji podróży będzie to platforma do rezerwacji.
+  - **Sensory** — Jak agent odczytuje bieżący stan środowiska. Nasz agent podróży może sprawdzać dostępność hoteli lub ceny lotów.
+  - **Aktuatory** — Jak agent wykonuje działania. Agent podróży może zarezerwować pokój, wysłać potwierdzenie lub anulować rezerwację.
 
-**Dostęp do narzędzi** - To, jakie narzędzia są dostępne dla LLM, zależy od 1) środowiska, w którym działa, oraz 2) programisty agenta AI. W naszym przykładzie agenta podróży narzędzia agenta są ograniczone przez operacje dostępne w systemie rezerwacji oraz/lub programista może ograniczyć dostęp agenta do narzędzi, takich jak loty.
+![Czym są Agenty AI?](../../../translated_images/pl/what-are-ai-agents.1ec8c4d548af601a.webp)
 
-**Pamięć + Wiedza** - Pamięć może być krótkoterminowa w kontekście rozmowy między użytkownikiem a agentem. Długoterminowo, poza informacjami dostarczanymi przez środowisko, agenci AI mogą również pobierać wiedzę z innych systemów, usług, narzędzi, a nawet innych agentów. W przykładzie agenta podróży wiedza ta mogłaby obejmować informacje o preferencjach podróżnych użytkownika znajdujące się w bazie danych klientów.
+- **Modele Językowe** — Agenty istniały przed LLM, ale to LLM sprawiają, że nowoczesne agenty są tak potężne. Potrafią rozumieć język naturalny, rozważać kontekst i przekształcać niejasne żądania użytkownika w konkretny plan działania.
 
-### Różne typy agentów
+- **Wykonywanie Działań** — Bez systemu agenta, LLM tylko generuje tekst. W systemie agenta, LLM może faktycznie *wykonać* kroki — przeszukać bazę danych, wywołać API, wysłać wiadomość.
 
-Teraz, gdy mamy ogólną definicję agentów AI, przyjrzyjmy się niektórym konkretnym typom agentów i ich zastosowaniom w przypadku agenta rezerwacji podróży.
+- **Dostęp do Narzędzi** — Jakie narzędzia agent może używać zależy od (1) środowiska, w którym działa i (2) co deweloper zdecydował mu dać. Agent podróży może szukać lotów, ale nie edytować danych klientów — wszystko zależy od konfiguracji.
 
-| **Typ agenta**                | **Opis**                                                                                                                       | **Przykład**                                                                                                                                                                                                                   |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Proste agenty reaktywne**   | Wykonują natychmiastowe działania na podstawie z góry określonych reguł.                                                         | Agent podróży interpretuje kontekst e-maila i przekazuje skargi dotyczące podróży do obsługi klienta.                                                                                                                          |
-| **Agenty reaktywne oparte na modelu** | Wykonują działania na podstawie modelu świata i zmian w tym modelu.                                                              | Agent podróży priorytetowo traktuje trasy z istotnymi zmianami cen na podstawie dostępu do danych historycznych dotyczących cen.                                                                                                             |
-| **Agenty oparte na celach**   | Tworzą plany osiągnięcia określonych celów, interpretując cel i określając działania, które do niego prowadzą.                     | Agent podróży rezerwuje podróż, określając niezbędne środki transportu (samochód, komunikacja publiczna, loty) z obecnej lokalizacji do miejsca docelowego.                                                                                |
-| **Agenty oparte na użyteczności** | Uwzględniają preferencje i oceniają kompromisy numerycznie, aby określić, jak osiągnąć cele.                                               | Agent podróży maksymalizuje użyteczność, oceniając wygodę w porównaniu z kosztami podczas rezerwacji podróży.                                                                                                                                          |
-| **Agenty uczące się**         | Poprawiają się z czasem, reagując na informacje zwrotne i dostosowując działania.                                                        | Agent podróży poprawia się, korzystając z opinii klientów z ankiet po podróży, aby wprowadzać zmiany w przyszłych rezerwacjach.                                                                                                               |
-| **Agenty hierarchiczne**      | Zawierają wielu agentów w systemie warstwowym, gdzie agenci wyższego poziomu dzielą zadania na podzadania dla agentów niższego poziomu. | Agent podróży anuluje podróż, dzieląc zadanie na podzadania (np. anulowanie konkretnych rezerwacji) i zlecając ich wykonanie agentom niższego poziomu, którzy raportują wyniki agentowi wyższego poziomu.                                     |
-| **Systemy wieloagentowe (MAS)** | Agenci wykonują zadania niezależnie, współpracując lub konkurując.                                                           | Współpraca: Wielu agentów rezerwuje konkretne usługi podróżne, takie jak hotele, loty i rozrywka. Konkurencja: Wielu agentów zarządza i rywalizuje o wspólny kalendarz rezerwacji hotelowych, aby zarezerwować klientów w hotelu. |
+- **Pamięć + Wiedza** — Agenty mogą mieć pamięć krótkotrwałą (bieżąca konwersacja) i długotrwałą (baza klientów, przeszłe interakcje). Agent podróży może "pamiętać", że wolisz miejsca przy oknie.
 
-## Kiedy używać agentów AI
+---
 
-W poprzedniej sekcji użyliśmy przykładu agenta podróży, aby wyjaśnić, jak różne typy agentów mogą być używane w różnych scenariuszach rezerwacji podróży. Będziemy kontynuować korzystanie z tej aplikacji w całym kursie.
+### Różne Typy Agentów AI
 
-Przyjrzyjmy się typom zastosowań, w których agenci AI sprawdzają się najlepiej:
+Nie wszystkie agenty są zbudowane jednakowo. Oto podział głównych typów, na przykładzie agenta rezerwacji podróży:
 
-![Kiedy używać agentów AI?](../../../translated_images/pl/when-to-use-ai-agents.54becb3bed74a479.webp)
+| **Typ Agenta** | **Co robi** | **Przykład agenta podróży** |
+|---|---|---|
+| **Proste Agenty Refleksyjne** | Podążają za twardo zakodowanymi regułami — brak pamięci, brak planowania. | Widzi maila z reklamacją → przekazuje do obsługi klienta. Koniec. |
+| **Agenty Refleksyjne oparte na Modelu** | Utrzymuje wewnętrzny model świata i aktualizuje go w miarę zmian. | Śledzi historyczne ceny lotów i sygnalizuje trasy, które nagle stają się drogie. |
+| **Agenty Celowe** | Ma cel i krok po kroku ustala, jak go osiągnąć. | Rezerwuje cały wyjazd (loty, samochód, hotel) od Twojej lokalizacji do celu podróży. |
+| **Agenty Utylitarne** | Nie tylko znajduje *jakieś* rozwiązanie, ale *najlepsze* poprzez ocenę kompromisów. | Równoważy koszt z wygodą, aby znaleźć wyjazd najlepiej dopasowany do Twoich preferencji. |
+| **Agenty Uczące się** | Z czasem staje się lepszy ucząc się na podstawie opinii. | Dostosowuje przyszłe rekomendacje rezerwacji na podstawie ankiet po podróży. |
+| **Agenty Hierarchiczne** | Agent na wysokim poziomie dzieli pracę na podzadania i deleguje agentom niższego poziomu. | Prośba o "anulowanie wyjazdu" jest rozdzielana na: anulowanie lotu, anulowanie hotelu, anulowanie wynajmu auta — każde realizowane przez pod-agenta. |
+| **Systemy Multi-Agentowe (MAS)** | Wielu niezależnych agentów współpracuje (lub rywalizuje). | Kooperacja: odrębni agenci zajmują się hotelami, lotami i rozrywką. Rywalizacja: wielu agentów rywalizuje o wypełnienie pokoi hotelowych najlepszą ceną. |
 
-- **Problemy otwarte** - pozwalając LLM określić potrzebne kroki do wykonania zadania, ponieważ nie zawsze można je zakodować w procesie.
-- **Procesy wieloetapowe** - zadania wymagające poziomu złożoności, w których agent AI musi korzystać z narzędzi lub informacji przez wiele tur, zamiast jednorazowego pobierania.  
-- **Poprawa z czasem** - zadania, w których agent może się poprawiać z czasem, otrzymując informacje zwrotne od środowiska lub użytkowników, aby zapewnić lepszą użyteczność.
+---
 
-Więcej rozważań dotyczących używania agentów AI omówimy w lekcji "Budowanie wiarygodnych agentów AI".
+## Kiedy używać Agentów AI
 
-## Podstawy rozwiązań opartych na agentach
+Tylko dlatego, że *możesz* użyć agenta AI, nie oznacza, że zawsze *powinieneś*. Oto sytuacje, w których agenty naprawdę się sprawdzają:
 
-### Tworzenie agentów
+![Kiedy używać Agentów AI?](../../../translated_images/pl/when-to-use-ai-agents.54becb3bed74a479.webp)
 
-Pierwszym krokiem w projektowaniu systemu agenta AI jest zdefiniowanie narzędzi, działań i zachowań. W tym kursie skupiamy się na używaniu **Azure AI Agent Service** do definiowania naszych agentów. Oferuje on funkcje takie jak:
+- **Problemy otwarte** — Gdy kroki do rozwiązania problemu nie mogą być zaprogramowane wcześniej. Potrzebujesz, by LLM dynamicznie znalazł drogę.
+- **Procesy wieloetapowe** — Zadania wymagające użycia narzędzi na wielu etapach, nie tylko pojedynczego sprawdzenia lub generacji.
+- **Poprawa w Czasie** — Gdy chcesz, by system stawał się mądrzejszy na podstawie opinii użytkownika lub sygnałów z otoczenia.
 
-- Wybór otwartych modeli, takich jak OpenAI, Mistral i Llama
-- Korzystanie z licencjonowanych danych od dostawców, takich jak Tripadvisor
-- Korzystanie ze standardowych narzędzi OpenAPI 3.0
+W dalszej części kursu, w lekcji **Budowanie Godnych Zaufania Agentów AI**, zagłębimy się, kiedy (i kiedy *nie*) warto używać agentów AI.
 
-### Wzorce agentów
+---
 
-Komunikacja z LLM odbywa się za pomocą promptów. Ze względu na półautonomiczny charakter agentów AI, nie zawsze jest możliwe lub konieczne ręczne ponowne promptowanie LLM po zmianie w środowisku. Używamy **wzorów agentów**, które pozwalają na promptowanie LLM przez wiele kroków w bardziej skalowalny sposób.
+## Podstawy Rozwiązań Agentowych
 
-Ten kurs jest podzielony na niektóre z obecnie popularnych wzorców agentów.
+### Tworzenie Agenta
 
-### Frameworki agentów
+Pierwszą rzeczą, którą robisz budując agenta, jest zdefiniowanie *co potrafi robić* — jego narzędzi, działań i zachowań.
 
-Frameworki agentów pozwalają programistom wdrażać wzorce agentów za pomocą kodu. Te frameworki oferują szablony, wtyczki i narzędzia do lepszej współpracy agentów AI. Te korzyści zapewniają lepszą obserwowalność i rozwiązywanie problemów w systemach agentów AI.
+W tym kursie używamy **Microsoft Foundry Agent Service** jako głównej platformy. Obsługuje ona:
 
-W tym kursie zbadamy oparty na badaniach framework AutoGen oraz gotowy do produkcji framework Agent z Semantic Kernel.
+- Modele od dostawców, takich jak OpenAI, Mistral i Meta (Llama)
+- Dane licencjonowane od dostawców takich jak Tripadvisor
+- Ustandaryzowane definicje narzędzi OpenAPI 3.0
 
-## Przykładowe kody
+### Wzorce Agentowe
 
-- Python: [Framework agenta](./code_samples/01-python-agent-framework.ipynb)
-- .NET: [Framework agenta](./code_samples/01-dotnet-agent-framework.md)
+Komunikujesz się z LLM poprzez prompt-y. W przypadku agentów nie zawsze możesz ręcznie tworzyć każdy prompt — agent musi działać wieloetapowo. Tu z pomocą przychodzą **Wzorce Agentowe**. To wielokrotnego użytku strategie promptowania i organizowania pracy LLM w bardziej skalowalny, niezawodny sposób.
 
-## Masz więcej pytań dotyczących agentów AI?
+Kurs jest zorganizowany wokół najczęstszych i najbardziej użytecznych wzorców agentowych.
 
-Dołącz do [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), aby spotkać się z innymi uczącymi się, wziąć udział w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące agentów AI.
+### Ramy Agentowe
 
-## Poprzednia lekcja
+Ramy agentowe dają deweloperom gotowe szablony, narzędzia i infrastrukturę do budowy agentów. Ułatwiają one:
+
+- Podłączanie narzędzi i funkcji
+- Obserwowanie, co agent robi (i debugowanie, gdy coś idzie źle)
+- Współpracę między wieloma agentami
+
+W tym kursie skupiamy się na **Microsoft Agent Framework (MAF)** do budowy agentów gotowych do produkcji.
+
+---
+
+## Przykłady kodu
+
+Gotowy, by zobaczyć to w działaniu? Oto przykłady kodu do tej lekcji:
+
+- 🐍 Python: [Agent Framework](./code_samples/01-python-agent-framework.ipynb)
+- 🔷 .NET: [Agent Framework](./code_samples/01-dotnet-agent-framework.md)
+
+---
+
+## Masz pytania?
+
+Dołącz do [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), aby połączyć się z innymi uczącymi się, uczestniczyć w godzinach konsultacji i uzyskać odpowiedzi na pytania dotyczące Agentów AI od społeczności.
+
+
+---
+
+## Testowanie tego Agenta (Opcjonalne)
+
+Gdy nauczysz się wdrażać agentów w [Lekcji 16](../16-deploying-scalable-agents/README.md), możesz dodać szybki sprawdzian zdrowia po wdrożeniu dla tego agenta `TravelAgent` z gotowym katalogiem [`tests/lesson-01-smoke-tests.json`](../../../tests/lesson-01-smoke-tests.json). Zobacz [`tests/README.md`](../tests/README.md) jak go uruchomić.
+
+---
+
+## Poprzednia Lekcja
 
 [Konfiguracja kursu](../00-course-setup/README.md)
 
-## Następna lekcja
+## Następna Lekcja
 
-[Odkrywanie frameworków agentów](../02-explore-agentic-frameworks/README.md)
+[Odkrywanie Ram Agentowych](../02-explore-agentic-frameworks/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Zastrzeżenie**:  
-Ten dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Chociaż staramy się zapewnić dokładność, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub nieścisłości. Oryginalny dokument w jego rodzimym języku powinien być uznawany za autorytatywne źródło. W przypadku informacji krytycznych zaleca się skorzystanie z profesjonalnego tłumaczenia przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
+**Zastrzeżenie**:
+Niniejszy dokument został przetłumaczony za pomocą usługi tłumaczenia AI [Co-op Translator](https://github.com/Azure/co-op-translator). Choć dążymy do dokładności, prosimy pamiętać, że automatyczne tłumaczenia mogą zawierać błędy lub niedokładności. Oryginalny dokument w jego języku źródłowym należy uznawać za autorytatywne źródło. W przypadku informacji krytycznych zalecane jest skorzystanie z profesjonalnego tłumaczenia wykonanego przez człowieka. Nie ponosimy odpowiedzialności za jakiekolwiek nieporozumienia lub błędne interpretacje wynikające z użycia tego tłumaczenia.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

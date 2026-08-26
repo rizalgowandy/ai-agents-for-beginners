@@ -1,143 +1,146 @@
 [![Agentic RAG](../../../translated_images/pcm/lesson-5-thumbnail.20ba9d0c0ae64fae.webp)](https://youtu.be/WcjAARvdL7I?si=BCgwjwFb2yCkEhR9)
 
-> _(Click di image wey dey up to watch di video for dis lesson)_
+> _(Click di pikin pikshua wey dey up make you see video for dis lesson)_
 
 # Agentic RAG
 
-Dis lesson go explain well-well wetin Agentic Retrieval-Augmented Generation (Agentic RAG) be, one new AI way wey dey make big language models (LLMs) dey plan dia next move by demself while dem dey collect info from outside sources. E no be like di normal retrieval-then-read style, Agentic RAG dey use LLM many times, dey mix am with tool or function calls and structured outputs. Di system dey check di results, dey fix queries, dey use more tools if e need am, and e go continue dis process until e get di answer wey e dey look for.
+Dis lesson go give full overview about Agentic Retrieval-Augmented Generation (Agentic RAG), weh be new AI way weh big language models (LLMs) dey plan their next move by themself dem dey find info from outside sources. E no be like static retrieval-then-read wey dey normal; Agentic RAG dey do many calls go LLM, come dey put tool or function calls and dey organize the output. Di system dey check wetin e find, dey improve queries, dey use another tools if e need, come continue dis process till e find better answer.
 
 ## Introduction
 
-Dis lesson go cover:
+Dis lesson go cover
 
-- **Understand Agentic RAG:** Learn about dis new AI way wey big language models (LLMs) dey plan dia next move by demself while dem dey collect info from outside sources.
-- **Grasp Iterative Maker-Checker Style:** Understand how di LLM dey work in loop, dey mix tool or function calls and structured outputs to make sure di answer correct and fix bad queries.
-- **Explore Practical Applications:** See di kind work wey Agentic RAG dey do well, like places wey correctness dey important, complex database work, and long workflows.
+- **Understand Agentic RAG:**  Learn about di new style for AI weh big language models (LLMs) dey plan dem next steps on their own while dem dey get info from outside data sources.
+- **Grasp Iterative Maker-Checker Style:** Understand di loop weh dey involve many calls to di LLM, put tool or function calls plus organized outputs, wey dey help improve correctness and solve wrong queries.
+- **Explore Practical Applications:** See places wey Agentic RAG dey work well, like for correctness-first environments, complex database work, and long workflows.
 
 ## Learning Goals
 
-After you finish dis lesson, you go sabi:
+After you finish this lesson, you go sabi how to/ understand:
 
-- **Understanding Agentic RAG:** Learn about dis new AI way wey big language models (LLMs) dey plan dia next move by demself while dem dey collect info from outside sources.
-- **Iterative Maker-Checker Style:** Understand di loop wey dey mix LLM calls, tool or function calls, and structured outputs to make sure di answer correct and fix bad queries.
-- **Owning the Reasoning Process:** Understand how di system dey make decisions by itself on how e go solve problems without following fixed steps.
-- **Workflow:** Learn how di agentic model dey decide by itself to collect market trend reports, find competitor data, check internal sales metrics, join di findings, and check di strategy.
-- **Iterative Loops, Tool Integration, and Memory:** Learn how di system dey use loop interaction, dey keep memory of di steps, and dey avoid repeating di same thing.
-- **Handling Failure Modes and Self-Correction:** See how di system dey fix itself when e make mistake, dey try again, dey use tools to check di problem, and dey ask human for help if e need am.
-- **Boundaries of Agency:** Understand di limits of Agentic RAG, like di fact say e dey depend on di tools and rules wey human put for am.
-- **Practical Use Cases and Value:** See di kind work wey Agentic RAG dey do well, like places wey correctness dey important, complex database work, and long workflows.
-- **Governance, Transparency, and Trust:** Learn why e dey important to make sure di system dey follow rules, dey explain wetin e dey do, and dey get human oversight.
+- **Understanding Agentic RAG:** Learn about di new AI style weh big language models (LLMs) dey plan their next steps on their own while dem dey collect info from outside sources.
+- **Iterative Maker-Checker Style:** Understand di loop idea weh involve many calls to di LLM, put tool or function calls and structured outputs, wey dey improve correctness and handle wrong queries.
+- **Owning the Reasoning Process:** Understand how di system fit be in control of how e reason through things, e fit decide how e go solve wahala without following tori wey dem plan before.
+- **Workflow:** Understand how di agentic model dey decide by itself to find market trend reports, identify competitor data, join internal sales info, put findings together, and check di plan.
+- **Iterative Loops, Tool Integration, and Memory:** Learn how di system dey depend on loop interaction, dey keep state and memory across steps to stop repeat Wahala and make correct decisions.
+- **Handling Failure Modes and Self-Correction:** Check how di system dey correct itself well, including iterating, re-querying, using diagnostic tools, and support from human oversight.
+- **Boundaries of Agency:** Understand di limits of Agentic RAG, including domain-specific freedom, infrastructure dependence, and respecting safety guardrails.
+- **Practical Use Cases and Value:** Identify places wey Agentic RAG dey shine, like correctness-first settings, complex database work, and extended workflows.
+- **Governance, Transparency, and Trust:** Learn why governance and transparency dey important, including clear reasoning, bias control, and human supervision.
 
-## Wetin Be Agentic RAG?
+## Wetin be Agentic RAG?
 
-Agentic Retrieval-Augmented Generation (Agentic RAG) na one new AI way wey big language models (LLMs) dey plan dia next move by demself while dem dey collect info from outside sources. E no be like di normal retrieval-then-read style, Agentic RAG dey use LLM many times, dey mix am with tool or function calls and structured outputs. Di system dey check di results, dey fix queries, dey use more tools if e need am, and e go continue dis process until e get di answer wey e dey look for. Dis “maker-checker” style dey help make sure di answer correct, dey fix bad queries, and dey give better results.
+Agentic Retrieval-Augmented Generation (Agentic RAG) na new AI style weh big language models (LLMs) dey plan their next moves on their own while dem dey gather info from outside sources. E no be like static retrieval-then-read pattern; Agentic RAG dey do many calls to LLM, mix am with tool or function calls plus structured outputs. Di system dey check result, improve queries, call more tools if e need, and continue till e find better solution. Dis iterative “maker-checker” style dey improve correctness, fit handle wrong queries, and make sure result good well well.
 
-Di system dey take charge of di reasoning process, dey rewrite failed queries, dey choose different ways to collect info, and dey use tools like vector search for Azure AI Search, SQL databases, or custom APIs before e finalize di answer. Wetin make agentic system different na di way e dey take charge of di reasoning process. Di normal RAG dey follow fixed steps, but agentic system dey decide di steps by itself based on di info wey e find.
+Di system dey fully control how e reason, e dey rewrite query wey fail, pick better retrieval ways, and join many tools—like vector search for Azure AI Search, SQL databases, or custom APIs—before e give final answer. The better thing for agentic system be say e fit control e own reasoning. Normal RAG dem dey follow pre-planned path, but agentic system dey decide steps by itself based on quality of info e find.
 
-## Defining Agentic Retrieval-Augmented Generation (Agentic RAG)
+## Define Agentic Retrieval-Augmented Generation (Agentic RAG)
 
-Agentic Retrieval-Augmented Generation (Agentic RAG) na one new AI way wey LLMs no just dey collect info from outside sources but dem dey plan dia next move by demself. E no be like di normal retrieval-then-read style or fixed prompt sequences, Agentic RAG dey use LLM many times, dey mix am with tool or function calls and structured outputs. Di system dey check di results, dey fix queries, dey use more tools if e need am, and e go continue dis process until e get di answer wey e dey look for.
+Agentic Retrieval-Augmented Generation (Agentic RAG) na new AI way where LLMs no just dey pull info from outside data sources but dem dey plan their next move by themselves. E no be like static retrieval-then-read or one fine script prompt, Agentic RAG dey do loop with many calls to LLM, mix am with tool/function calls plus structured output. Every time, di system dey check di result, decide if e go improve the queries, call more tools if e need, and continue till e get better solution.
 
-Dis “maker-checker” style dey help make sure di answer correct, dey fix bad queries for structured databases (like NL2SQL), and dey give balanced, better results. Di system dey take charge of di reasoning process, dey rewrite failed queries, dey choose different ways to collect info, and dey use tools like vector search for Azure AI Search, SQL databases, or custom APIs before e finalize di answer. E no need complex frameworks, just simple loop of “LLM call → tool use → LLM call → …” fit give better and grounded outputs.
+Dis iterative “maker-checker” approach na to make results correct, fix bad queries wey go structured databases (like NL2SQL), and make sure result balance and high-quality. No be only rely on fine prompt chains, di system dey control how e reason. E fit rewrite bad queries, choose different retrieval way, and join many tools like vector search for Azure AI Search, SQL databases, or custom APIs before e finalize answer. Dis one mean say no need complex orchestrations; just simple loop of “LLM call → tool use → LLM call → …” go fit get strong and grounded output.
 
 ![Agentic RAG Core Loop](../../../translated_images/pcm/agentic-rag-core-loop.c8f4b85c26920f71.webp)
 
 ## Owning the Reasoning Process
 
-Wetin make di system “agentic” na di way e dey take charge of di reasoning process. Di normal RAG dey depend on humans to plan di steps for di model: like chain-of-thought wey dey show wetin to collect and when. But agentic system dey decide by itself how e go solve di problem. E no dey just follow script; e dey decide di steps based on di info wey e find.
+Wetin make system “agentic” na say e fit control how e reason. Normal RAG models dey depend on humans to plan path for model: chain-of-thought wey show wetin to get and when to do am.
+But when system really be agentic, e go decide by itself how to solve problem. E no dey follow script; e dey find steps based on info quality wey e find.
+For example, if dem ask am to create product launch plan, e no go just depend on prompt wey talk all the research and decision workflow. Instead, di agentic model go decide alone to:
 
-For example, if dem ask am to create product launch strategy, e no go just follow prompt wey explain di whole research and decision-making process. Instead, di agentic model go decide by itself to:
-
-1. Collect current market trend reports using Bing Web Grounding.
-2. Find competitor data using Azure AI Search.
-3. Check historical internal sales metrics using Azure SQL Database.
-4. Join di findings into one strategy using Azure OpenAI Service.
-5. Check di strategy for gaps or mistakes, and if e need am, e go collect more info.
-
-All dis steps—fixing queries, choosing sources, repeating until e dey satisfied—na di model dey decide, no be human wey dey plan am.
+1. Find current market trend reports using Bing Web Grounding
+2. Identify relevant competitor data with Azure AI Search.
+3.	Join historical internal sales data with Azure SQL Database.
+4. Put all findings together into better plan through Azure OpenAI Service.
+5.	Check di plan for any gap or wahala, if e find any, e go do another round of data searching.
+All these steps — refining queries, choosing sources, try till e happy with answer — na model itself dey decide, no human script.
 
 ## Iterative Loops, Tool Integration, and Memory
 
 ![Tool Integration Architecture](../../../translated_images/pcm/tool-integration.0f569710b5c17c10.webp)
 
-Agentic system dey use loop interaction pattern:
+Agentic system dey use looped interaction pattern:
 
-- **Initial Call:** Di user go give di LLM di goal (like user prompt).
-- **Tool Invocation:** If di model see say info dey miss or instruction no clear, e go choose tool or retrieval method—like vector database query (e.g. Azure AI Search Hybrid search over private data) or structured SQL call—to collect more info.
-- **Assessment & Refinement:** Di model go check di data wey e collect, decide if e dey okay. If e no dey okay, e go fix di query, try another tool, or change di way e dey do am.
-- **Repeat Until Satisfied:** Dis process go continue until di model feel say e don get enough info to give final, correct answer.
-- **Memory & State:** Di system dey keep memory of di steps, so e fit remember wetin e don try before and avoid repeating di same thing. Dis dey help am make better decisions as e dey go.
+- **Initial Call:** User goal (user prompt) na im dem give LLM.
+- **Tool Invocation:** If model find say info never complete or instructions dey unclea, e go choose tool or retrieval way—like vector database query (e.g. Azure AI Search Hybrid search over private data) or structured SQL call—to get more info.
+- **Assessment & Refinement:** After e check data wey return, model go decide if info enough. If no, e go improve query, try another tool, or change plan.
+- **Repeat Until Satisfied:** Dis cycle go continue till model sure say e get enough clear info to give final well-reasoned answer.
+- **Memory & State:** Because system keep state and memory across steps, e fit remember previous tries and result, no dey enter same loop again, come dey make better decisions as e move.
 
-Over time, dis dey make di model dey understand di problem better, so e fit handle complex, multi-step tasks without human dey change di prompt every time.
+Overtime, dis one dey give sense say model dey understand better, e fit handle complex multi-step tasks without human to dey always interfere or change prompt.
 
 ## Handling Failure Modes and Self-Correction
 
-Agentic RAG dey also get strong way to fix itself. If di system jam wahala—like collecting wrong documents or bad queries—e fit:
+Agentic RAG own autonomy get strong self-correcting systems too. When e jam dead ends—like finding wrong doc or bad queries—we fit:
 
-- **Iterate and Re-Query:** Instead of giving bad answer, di model go try new search ways, rewrite database queries, or check other data sets.
-- **Use Diagnostic Tools:** Di system fit use extra functions to check di problem or confirm di data wey e collect. Tools like Azure AI Tracing go help make sure di system dey work well.
-- **Fallback on Human Oversight:** For big problems or when e dey fail many times, di model fit ask human for help. Di human go give feedback, and di model go learn from di correction.
+- **Iterate and Re-Query:** Instead of dey give low-quality answers, model go try new search ways, rewrite database queries, or check other data sets.
+- **Use Diagnostic Tools:** System fit call extra functions wey help debug how e take reason or check if data correct. Tools like Azure AI Tracing dey important to allow good observability and monitoring.
+- **Fallback on Human Oversight:** For important or repeated wahala, model fit show say e no sure and beg human help. When human give feedback, model fit learn and improve for future.
 
-Dis way wey di model dey fix itself dey make sure say e no be one-time system but one wey dey learn from di mistakes wey e make for di session.
+Dis iterative and dynamic style dey help model improve steady steady, e no be one-time system; e dey learn from mistakes during one session.
 
 ![Self Correction Mechanism](../../../translated_images/pcm/self-correction.da87f3783b7f174b.webp)
 
 ## Boundaries of Agency
 
-Even though di system dey work by itself for di task, Agentic RAG no be Artificial General Intelligence. Di “agentic” power dey limited to di tools, data sources, and rules wey human developers put for am. E no fit create new tools or go outside di domain wey dem set for am. Instead, e dey good for arranging di resources wey e get.
+Despite say e autonomous inside task, Agentic RAG no be Artificial General Intelligence. Di “agentic” powers na limited to tools, data sources, and policies wey human developers give am. E no fit create hin own tools or waka outside domain boundaries wey dem set. Instead, e good at managing resources wey e get inside.
+Main differences from advanced AI dem be:
 
-Di main difference from advanced AI na:
-
-1. **Domain-Specific Autonomy:** Agentic RAG dey focus on user goals for di domain wey e sabi, dey use ways like query rewriting or tool selection to get better results.
-2. **Infrastructure-Dependent:** Di system dey depend on di tools and data wey developers put for am. E no fit pass di boundaries without human help.
-3. **Respect for Guardrails:** Rules, compliance, and business policies still dey very important. Di agent freedom dey always dey under safety measures and human oversight.
+1. **Domain-Specific Autonomy:** Agentic RAG systems dey work to achieve user-set goals inside one known domain, dem dey use ways like query rewriting or tool choice to improve results.
+2. **Infrastructure-Dependent:** System powers dey depend on tools and data dem wey developers join. E no fit cross those limits without human help.
+3. **Respect for Guardrails:** Ethical rules, compliance, and business policies still very important. Agent freedom always dey controlled by safety and oversight mechanisms (hope so?).
 
 ## Practical Use Cases and Value
 
-Agentic RAG dey work well for places wey need correct answer and precision:
+Agentic RAG dey shine for places wey need repeated editing and accuracy:
 
-1. **Correctness-First Environments:** For compliance checks, regulatory analysis, or legal research, di agentic model fit dey verify facts many times, check different sources, and fix queries until e get correct answer.
-2. **Complex Database Interactions:** For structured data wey queries dey fail or need adjustment, di system fit dey fix di queries by itself using Azure SQL or Microsoft Fabric OneLake, to make sure di final answer dey correct.
-3. **Extended Workflows:** For long tasks wey dey change as new info dey come, Agentic RAG fit dey add new data, dey change di way e dey work as e dey learn more about di problem.
+1. **Correctness-First Environments:** For compliance checking, regulatory work, or legal research, agentic model fit dey check facts many times, check plenty sources, and rewrite queries till e get fully vetted answer.
+2. **Complex Database Interactions:** For structured data wey queries fit fail or need updates, system fit improve queries by itself using Azure SQL or Microsoft Fabric OneLake, sure say final data na wetin user want.
+3. **Extended Workflows:** Long sessions fit evolve as new info show. Agentic RAG fit continue add new data, change strategies as e learn more about problem.
 
 ## Governance, Transparency, and Trust
 
-As di system dey get more power to reason by itself, e dey important to make sure e dey follow rules and dey transparent:
+As systems become more autonomous inside reasoning, governance and transparency dey important:
 
-- **Explainable Reasoning:** Di model fit show record of di queries wey e make, di sources wey e check, and di steps wey e follow to reach di answer. Tools like Azure AI Content Safety and Azure AI Tracing / GenAIOps fit help keep transparency and reduce risk.
-- **Bias Control and Balanced Retrieval:** Developers fit adjust di way e dey collect info to make sure e dey balanced, dey check di outputs to see if bias dey or di data dey one-sided using custom models for advanced data science organizations with Azure Machine Learning.
-- **Human Oversight and Compliance:** For sensitive tasks, human review still dey important. Agentic RAG no dey replace human judgment for big decisions—e dey help am by giving better options wey dem don check well.
+- **Explainable Reasoning:** Model fit show audit trail of queries wey e do, sources wey e use, and reasoning steps wey e take to decide. Tools like Azure AI Content Safety and Azure AI Tracing / GenAIOps fit help keep transparency and reduce risk.
+- **Bias Control and Balanced Retrieval:** Developers fit adjust retrieval ways to make sure balanced, representative sources dey considered, and dem fit regularly check output for bias using custom models for advanced data science orgs using Azure Machine Learning.
+- **Human Oversight and Compliance:** For sensitive work, human review still necessary. Agentic RAG no go replace human judgement for big decisions—e go help make better vetted options.
 
-Tools wey fit show clear record of actions dey very important. Without dem, e go hard to debug multi-step process. See dis example from Literal AI (di company wey dey behind Chainlit) for how Agent dey work:
+Get tools wey fit provide clear record of actions dey very important. Without am, e go hard to debug multi-step process. See example from Literal AI (company wey dey behind Chainlit) for Agent run:
 
 ![AgentRunExample](../../../translated_images/pcm/AgentRunExample.471a94bc40cbdc0c.webp)
 
 ## Conclusion
 
-Agentic RAG na di next step for how AI systems dey handle complex, data-heavy tasks. By using loop interaction, choosing tools by itself, and fixing queries until e get better answer, di system dey move past di normal prompt-following to become more adaptive and dey make better decisions. Even though e dey limited by human-defined tools and rules, dis agentic power dey make AI interactions richer, more dynamic, and more useful for businesses and users.
+Agentic RAG na natural way AI systems dey evolve for how dem handle complex, data-heavy tasks. By using looped interaction, picking tools by itself, and improving queries till complete correct result, system dey move past static prompt following to become better, context-aware decision maker. Even though e still limited by human-set infrastructure and ethics, these agentic powers fit give richer, more dynamic and useful AI experience for both companies and end-users.
 
-### You Get More Questions About Agentic RAG?
+### You get more questions about Agentic RAG?
 
-Join di [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet other learners, attend office hours, and ask your AI Agents questions.
+Join [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) make you link up with other learners, attend office hours and get your AI Agents questions answered.
 
 ## Additional Resources
 
-- <a href="https://learn.microsoft.com/training/modules/use-own-data-azure-openai" target="_blank">Implement Retrieval Augmented Generation (RAG) with Azure OpenAI Service: Learn how to use your own data with di Azure OpenAI Service. Dis Microsoft Learn module dey explain well how to do RAG</a>
-- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Evaluation of generative AI applications with Azure AI Foundry: Dis article dey talk about how to check and compare models for public datasets, including Agentic AI applications and RAG architectures</a>
+- <a href="https://learn.microsoft.com/training/modules/use-own-data-azure-openai" target="_blank">Implement Retrieval Augmented Generation (RAG) with Azure OpenAI Service: Learn how to use your own data with the Azure OpenAI Service. This Microsoft Learn module provides a comprehensive guide on implementing RAG</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Evaluation of generative AI applications with Microsoft Foundry: This article covers the evaluation and comparison of models on publicly available datasets, including Agentic AI applications and RAG architectures</a>
 - <a href="https://weaviate.io/blog/what-is-agentic-rag" target="_blank">What is Agentic RAG | Weaviate</a>
-- <a href="https://ragaboutit.com/agentic-rag-a-complete-guide-to-agent-based-retrieval-augmented-generation/" target="_blank">Agentic RAG: Full Guide for Agent-Based Retrieval Augmented Generation – News from generation RAG</a>
-- <a href="https://huggingface.co/learn/cookbook/agent_rag" target="_blank">Agentic RAG: make your RAG better with query reformulation and self-query! Hugging Face Open-Source AI Cookbook</a>
-- <a href="https://youtu.be/aQ4yQXeB1Ss?si=2HUqBzHoeB5tR04U" target="_blank">Add Agentic Layers to RAG</a>
-- <a href="https://www.youtube.com/watch?v=zeAyuLc_f3Q&t=244s" target="_blank">The Future of Knowledge Assistants: Jerry Liu</a>
+- <a href="https://ragaboutit.com/agentic-rag-a-complete-guide-to-agent-based-retrieval-augmented-generation/" target="_blank">Agentic RAG: A Complete Guide to Agent-Based Retrieval Augmented Generation – News from generation RAG</a>
+
+- <a href="https://huggingface.co/learn/cookbook/agent_rag" target="_blank">Agentic RAG: turbocharge your RAG wit query reformulation and self-query! Hugging Face Open-Source AI Cookbook</a>
+- <a href="https://youtu.be/aQ4yQXeB1Ss?si=2HUqBzHoeB5tR04U" target="_blank">Adding Agentic Layers to RAG</a>
+- <a href="https://www.youtube.com/watch?v=zeAyuLc_f3Q&t=244s" target="_blank">Di Future of Knowledge Assistants: Jerry Liu</a>
 - <a href="https://www.youtube.com/watch?v=AOSjiXP1jmQ" target="_blank">How to Build Agentic RAG Systems</a>
-- <a href="https://ignite.microsoft.com/sessions/BRK102?source=sessions" target="_blank">Use Azure AI Foundry Agent Service to grow your AI agents</a>
+- <a href="https://ignite.microsoft.com/sessions/BRK102?source=sessions" target="_blank">Using Microsoft Foundry Agent Service to scale your AI agents</a>
 
 ### Academic Papers
 
-- <a href="https://arxiv.org/abs/2303.17651" target="_blank">2303.17651 Self-Refine: Iterative Refinement with Self-Feedback</a>
-- <a href="https://arxiv.org/abs/2303.11366" target="_blank">2303.11366 Reflexion: Language Agents with Verbal Reinforcement Learning</a>
-- <a href="https://arxiv.org/abs/2305.11738" target="_blank">2305.11738 CRITIC: Large Language Models Fit Correct Demself with Tool-Interactive Critiquing</a>
-- <a href="https://arxiv.org/abs/2501.09136" target="_blank">2501.09136 Agentic Retrieval-Augmented Generation: A Survey on Agentic RAG</a>
+- <a href="https://arxiv.org/abs/2303.17651" target="_blank">2303.17651 Self-Refine: Iterative Refinement wit Self-Feedback</a>
+- <a href="https://arxiv.org/abs/2303.11366" target="_blank">2303.11366 Reflexion: Language Agents wit Verbal Reinforcement Learning</a>
+- <a href="https://arxiv.org/abs/2305.11738" target="_blank">2305.11738 CRITIC: Large Language Models Fit Self-Correct wit Tool-Interactive Critiquing</a>
+- <a href="https://arxiv.org/abs/2501.09136" target="_blank">2501.09136 Agentic Retrieval-Augmented Generation: One Survey on Agentic RAG</a>
+
+## Smoke-Test Dis Agent (Optional)
+
+After you don learn to deploy agents for [Lesson 16](../16-deploying-scalable-agents/README.md), you fit smoke-test dis lesson `TravelRAGAgent` — check say im answers dey grounded for the knowledge base — wit [`tests/lesson-05-smoke-tests.json`](../../../tests/lesson-05-smoke-tests.json). See [`tests/README.md`](../tests/README.md) for how you go run am.
 
 ## Previous Lesson
 
@@ -150,6 +153,6 @@ Join di [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet oth
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Disclaimer**:  
-Dis dokyument don use AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator) do di translation. Even as we dey try make am accurate, abeg sabi say automated translations fit get mistake or no dey correct well. Di original dokyument for im native language na di main source wey you go fit trust. For important information, e better make professional human translation dey used. We no go fit take blame for any misunderstanding or wrong interpretation wey fit happen because you use dis translation.
+**Disclaimer**:
+Dis document don translate wit AI translation service [Co-op Translator](https://github.com/Azure/co-op-translator). Even tho we dey try make am correct, abeg make you know say automated translation fit get errors or mistakes. Di original document for dia own language na im be di correct source. For important info, make person wey sabi human translation do am. We no go responsible for any misunderstanding or wrong understanding wey fit happen because of dis translation.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

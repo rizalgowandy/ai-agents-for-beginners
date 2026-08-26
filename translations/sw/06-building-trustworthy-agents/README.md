@@ -1,44 +1,44 @@
-[![Trustworthy AI Agents](../../../translated_images/sw/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
+[![Mashine Agents wa Kuaminika wa AI](../../../translated_images/sw/lesson-6-thumbnail.a58ab36c099038d4.webp)](https://youtu.be/iZKkMEGBCUQ?si=Q-kEbcyHUMPoHp8L)
 
 > _(Bonyeza picha hapo juu kutazama video ya somo hili)_
 
-# Kujenga Mawakala wa AI Wenye Kuaminika
+# Kujenga Mashine Agents wa Kuaminika wa AI
 
 ## Utangulizi
 
-Somo hili litashughulikia:
+Somo hili litaelezea:
 
-- Jinsi ya kujenga na kupeleka Mawakala wa AI salama na wenye ufanisi.
-- Masuala muhimu ya usalama wakati wa kuunda Mawakala wa AI.
-- Jinsi ya kudumisha faragha ya data na watumiaji wakati wa kuunda Mawakala wa AI.
+- Jinsi ya kuunda na kupeleka Mashine Agents wa AI salama na yenye ufanisi
+- Mambo muhimu ya usalama wakati wa kuendeleza Mashine Agents wa AI.
+- Jinsi ya kudumisha usiri wa data na watumiaji wakati wa kuendeleza Mashine Agents wa AI.
 
 ## Malengo ya Kujifunza
 
-Baada ya kukamilisha somo hili, utajua jinsi ya:
+Baada ya kumaliza somo hili, utajua jinsi ya:
 
-- Kutambua na kupunguza hatari wakati wa kuunda Mawakala wa AI.
-- Kutekeleza hatua za usalama ili kuhakikisha data na ufikiaji vinadhibitiwa ipasavyo.
-- Kuunda Mawakala wa AI wanaodumisha faragha ya data na kutoa uzoefu bora kwa mtumiaji.
+- Kutambua na kupunguza hatari wakati wa kuunda Mashine Agents wa AI.
+- Kutekeleza hatua za usalama kuhakikisha kwamba data na ufikiaji vinadhibitiwa ipasavyo.
+- Kuunda Mashine Agents wa AI wanaodumisha usiri wa data na kutoa uzoefu bora kwa mtumiaji.
 
 ## Usalama
 
-Hebu kwanza tuangalie jinsi ya kujenga programu za mawakala salama. Usalama unamaanisha kwamba wakala wa AI anafanya kazi kama ilivyokusudiwa. Kama watengenezaji wa programu za mawakala, tuna mbinu na zana za kuongeza usalama:
+Kwanza tuchunguze jinsi ya kujenga programu salama za mawakala. Usalama unamaanisha kuwa wakala wa AI hufanya kazi kama ilivyopangwa. Kama wajenzi wa programu za mawakala, tuna njia na zana za kuongeza usalama:
 
 ### Kujenga Mfumo wa Ujumbe wa Mfumo
 
-Ikiwa umewahi kuunda programu ya AI kwa kutumia Large Language Models (LLMs), unajua umuhimu wa kubuni mfumo wa ujumbe wa mfumo ulio imara. Ujumbe huu huweka sheria za msingi, maelekezo, na miongozo ya jinsi LLM itakavyoshirikiana na mtumiaji na data.
+Ikiwa umewahi kujenga programu ya AI ukitumia Modeli Kubwa za Lugha (LLMs), unajua umuhimu wa kubuni amri imara ya mfumo au ujumbe wa mfumo. Amri hizi huanzisha sheria za meta, maelekezo, na miongozo ya jinsi LLM itakavyoshirikiana na mtumiaji na data.
 
-Kwa Mawakala wa AI, ujumbe wa mfumo ni muhimu zaidi kwani Mawakala wa AI wanahitaji maelekezo maalum sana ili kukamilisha majukumu tuliyowapangia.
+Kwa Mashine Agents wa AI, amri ya mfumo ni muhimu zaidi kwani Mashine Agents itahitaji maelekezo maalum sana kukamilisha majukumu tuliyoyapanga kwao.
 
-Ili kuunda ujumbe wa mfumo unaoweza kupanuka, tunaweza kutumia mfumo wa ujumbe wa mfumo kwa ajili ya kujenga wakala mmoja au zaidi katika programu yetu:
+Kuunda amri za mfumo zinazoweza kupanuliwa, tunaweza kutumia mfumo wa ujumbe wa mfumo kujenga wakala mmoja au zaidi katika programu yetu:
 
-![Building a System Message Framework](../../../translated_images/sw/system-message-framework.3a97368c92d11d68.webp)
+![Kujenga Mfumo wa Ujumbe wa Mfumo](../../../translated_images/sw/system-message-framework.3a97368c92d11d68.webp)
 
-#### Hatua ya 1: Unda Ujumbe wa Mfumo wa Meta
+#### Hatua ya 1: Unda Ujumbe wa Meta wa Mfumo
 
-Ujumbe wa meta utatumika na LLM kuunda ujumbe wa mfumo kwa mawakala tunaowaunda. Tunaunda kama kiolezo ili tuweze kuunda mawakala wengi kwa ufanisi ikiwa inahitajika.
+Amri ya meta itatumika na LLM kuunda amri za mfumo kwa mawakala tunaowaunda. Tunabuni kama kiolezo ili tuweze kuunda mawakala wengi kwa ufanisi ikiwa inahitajika.
 
-Hapa kuna mfano wa ujumbe wa mfumo wa meta ambao tungepatia LLM:
+Hapa kuna mfano wa ujumbe wa meta wa mfumo ambao tutampeleka LLM:
 
 ```plaintext
 You are an expert at creating AI agent assistants. 
@@ -47,9 +47,9 @@ information that you will use to provide a system prompt for.
 To create the system prompt, be descriptive as possible and provide a structure that a system using an LLM can better understand the role and responsibilities of the AI assistant. 
 ```
 
-#### Hatua ya 2: Unda Ujumbe wa Msingi
+#### Hatua ya 2: Unda Amri ya Msingi
 
-Hatua inayofuata ni kuunda ujumbe wa msingi wa kuelezea Wakala wa AI. Unapaswa kujumuisha jukumu la wakala, majukumu ambayo wakala atakamilisha, na majukumu mengine yoyote ya wakala.
+Hatua inayofuata ni kuunda amri ya msingi kuelezea Wakala wa AI. Unapaswa kujumuisha jukumu la wakala, kazi ambazo wakala atakamilisha, na majukumu mengine yoyote ya wakala.
 
 Hapa kuna mfano:
 
@@ -57,11 +57,11 @@ Hapa kuna mfano:
 You are a travel agent for Contoso Travel that is great at booking flights for customers. To help customers you can perform the following tasks: lookup available flights, book flights, ask for preferences in seating and times for flights, cancel any previously booked flights and alert customers on any delays or cancellations of flights.  
 ```
 
-#### Hatua ya 3: Toa Ujumbe wa Msingi kwa LLM
+#### Hatua ya 3: Toa Ujumbe wa Mfumo wa Msingi kwa LLM
 
-Sasa tunaweza kuboresha ujumbe huu wa mfumo kwa kutoa ujumbe wa mfumo wa meta kama ujumbe wa mfumo na ujumbe wetu wa msingi wa mfumo.
+Sasa tunaweza kuboresha ujumbe huu wa mfumo kwa kutoa ujumbe wa meta wa mfumo kama ujumbe wa mfumo pamoja na ujumbe wetu wa msingi wa mfumo.
 
-Hii itazalisha ujumbe wa mfumo uliobuniwa vizuri kwa kuongoza Mawakala wetu wa AI:
+Hii itazalisha ujumbe wa mfumo ulio bora zaidi wa kuongoza mawakala wetu wa AI:
 
 ```markdown
 **Company Name:** Contoso Travel  
@@ -115,84 +115,96 @@ This AI assistant is designed to streamline the flight booking process for custo
 
 #### Hatua ya 4: Rudia na Boresha
 
-Thamani ya mfumo huu wa ujumbe wa mfumo ni uwezo wa kupanua kuunda ujumbe wa mfumo kwa mawakala wengi kwa urahisi pamoja na kuboresha ujumbe wako wa mfumo kwa muda. Ni nadra kuwa na ujumbe wa mfumo unaofanya kazi mara ya kwanza kwa matumizi yako kamili. Uwezo wa kufanya marekebisho madogo na maboresho kwa kubadilisha ujumbe wa msingi wa mfumo na kuendesha kupitia mfumo utakuwezesha kulinganisha na kutathmini matokeo.
+Thamani ya mfumo huu wa ujumbe wa mfumo ni kuwawezesha kueneza uundaji wa ujumbe kutoka kwa mawakala wengi kwa urahisi pamoja na kuboresha ujumbe wako wa mfumo kwa muda. Ni nadra kupata ujumbe wa mfumo unaofanya kazi mara ya kwanza kwa matumizi yako kamili. Kuwa na uwezo wa kufanya marekebisho madogo na maboresho kwa kubadilisha ujumbe wa msingi wa mfumo na kuufanya kupitia mfumo kutakuwezesha kulinganisha na kutathmini matokeo.
 
 ## Kuelewa Vitisho
 
-Ili kujenga Mawakala wa AI wenye kuaminika, ni muhimu kuelewa na kupunguza hatari na vitisho kwa wakala wako wa AI. Hebu tuangalie baadhi tu ya vitisho tofauti kwa Mawakala wa AI na jinsi unavyoweza kupanga na kujiandaa vyema.
+Ili kujenga mashine agents wa AI wa kuaminika, ni muhimu kuelewa na kupunguza hatari na vitisho kwa wakala wako wa AI. Hebu tuangalie baadhi tu ya vitisho tofauti kwa mawakala wa AI na jinsi unaweza kupanga na kujiandaa vizuri kwao.
 
-![Understanding Threats](../../../translated_images/sw/understanding-threats.89edeada8a97fc0f.webp)
+![Kuelewa Vitisho](../../../translated_images/sw/understanding-threats.89edeada8a97fc0f.webp)
 
-### Majukumu na Maelekezo
+### Kazi na Maelekezo
 
-**Maelezo:** Washambuliaji wanajaribu kubadilisha maelekezo au malengo ya wakala wa AI kupitia kuandika au kudanganya pembejeo.
+**Maelezo:** Washambuliaji hujaribu kubadilisha maelekezo au malengo ya wakala wa AI kupitia amri au kuendesha pembejeo.
 
-**Kupunguza:** Tekeleza ukaguzi wa uthibitisho na vichujio vya pembejeo ili kugundua maelekezo hatari kabla ya kuchakatwa na Wakala wa AI. Kwa kuwa mashambulizi haya kwa kawaida yanahitaji mwingiliano wa mara kwa mara na Wakala, kupunguza idadi ya mizunguko katika mazungumzo ni njia nyingine ya kuzuia mashambulizi ya aina hii.
+**Kuzuia**: Fanya ukaguzi wa kuthibitisha na vichujio vya pembejeo kugundua amri zinazoweza kuwa hatari kabla ya kushughulikiwa na Wakala wa AI. Kwa kuwa mashambulizi haya kawaida yanahitaji mwingiliano wa mara kwa mara na Wakala, kupunguza idadi ya mzunguko wa mazungumzo ni njia nyingine ya kuzuia aina hizi za mashambulizi.
 
 ### Ufikiaji wa Mifumo Muhimu
 
-**Maelezo:** Ikiwa wakala wa AI ana ufikiaji wa mifumo na huduma zinazohifadhi data nyeti, washambuliaji wanaweza kuhatarisha mawasiliano kati ya wakala na huduma hizi. Haya yanaweza kuwa mashambulizi ya moja kwa moja au majaribio ya moja kwa moja ya kupata taarifa kuhusu mifumo hii kupitia wakala.
+**Maelezo**: Ikiwa wakala wa AI anaweza kufikia mifumo na huduma zinazohifadhi data nyeti, washambuliaji wanaweza kuingilia mawasiliano kati ya wakala na huduma hizi. Hii inaweza kuwa mashambulizi ya moja kwa moja au majaribio ya moja kwa moja kupata taarifa kuhusu mifumo hii kupitia wakala.
 
-**Kupunguza:** Mawakala wa AI wanapaswa kuwa na ufikiaji wa mifumo kwa msingi wa mahitaji tu ili kuzuia mashambulizi ya aina hii. Mawasiliano kati ya wakala na mfumo yanapaswa pia kuwa salama. Kutekeleza uthibitisho na udhibiti wa ufikiaji ni njia nyingine ya kulinda taarifa hii.
+**Kuzuia**: Mawakala wa AI wanapaswa kuwa na ufikiaji wa mifumo kwa misingi ya hitaji tu ili kuzuia aina hizi za mashambulizi. Mawasiliano kati ya wakala na mfumo pia yanapaswa kuwa salama. Kutekeleza uthibitishaji na udhibiti wa ufikiaji ni njia nyingine ya kulinda taarifa hii.
 
-### Kuelemea Rasilimali na Huduma
+### Kupakia Rasilimali na Huduma
 
-**Maelezo:** Mawakala wa AI wanaweza kufikia zana na huduma tofauti ili kukamilisha majukumu. Washambuliaji wanaweza kutumia uwezo huu kushambulia huduma hizi kwa kutuma idadi kubwa ya maombi kupitia Wakala wa AI, ambayo inaweza kusababisha kushindwa kwa mfumo au gharama kubwa.
+**Maelezo:** Mawakala wa AI wanaweza kufikia zana na huduma mbalimbali kukamilisha kazi. Washambuliaji wanaweza kutumia uwezo huu kushambulia huduma hizi kwa kutuma maombi mengi kupitia Wakala wa AI, jambo ambalo linaweza kusababisha mifumo kutofaulu au gharama kubwa.
 
-**Kupunguza:** Tekeleza sera za kupunguza idadi ya maombi ambayo wakala wa AI anaweza kufanya kwa huduma. Kupunguza idadi ya mizunguko ya mazungumzo na maombi kwa wakala wako wa AI ni njia nyingine ya kuzuia mashambulizi ya aina hii.
+**Kuzuia:** Tekeleza sera za kupunguza idadi ya maombi ambayo wakala wa AI anaweza kutuma kwa huduma. Kupunguza mzunguko wa mazungumzo na maombi kwa wakala wako wa AI ni njia nyingine ya kuzuia aina hizi za mashambulizi.
 
-### Uchafuzi wa Msingi wa Maarifa
+### Kupigia Sumu Misingi ya Maarifa
 
-**Maelezo:** Aina hii ya shambulio hailengi wakala wa AI moja kwa moja lakini inalenga msingi wa maarifa na huduma nyingine ambazo wakala wa AI atatumia. Hii inaweza kuhusisha kuharibu data au taarifa ambayo wakala wa AI atatumia kukamilisha jukumu, na kusababisha majibu yenye upendeleo au yasiyotarajiwa kwa mtumiaji.
+**Maelezo:** Aina hii ya mashambulizi haisilengi wakala wa AI moja kwa moja lakini inalenga msingi wa maarifa na huduma nyingine ambazo wakala wa AI atatumia. Hii inaweza kuhusisha kuharibu data au taarifa ambayo wakala wa AI atatumia kukamilisha kazi, na kusababisha majibu yenye upendeleo au yasiyokusudiwa kwa mtumiaji.
 
-**Kupunguza:** Fanya uthibitisho wa mara kwa mara wa data ambayo wakala wa AI atatumia katika mtiririko wake wa kazi. Hakikisha kwamba ufikiaji wa data hii ni salama na unabadilishwa tu na watu wanaoaminika ili kuepuka shambulio la aina hii.
+**Kuzuia:** Fanya uhakiki wa mara kwa mara wa data ambayo wakala wa AI atatumia katika mchakato wake. Hakikisha ufikiaji wa data hii ni salama na unabadilishwa tu na watu wa kuaminika ili kuepuka aina hii ya mashambulizi.
 
-### Makosa Yanayozidi
+### Makosa Yanayoenea
 
-**Maelezo:** Mawakala wa AI wanapata zana na huduma mbalimbali ili kukamilisha majukumu. Makosa yanayosababishwa na washambuliaji yanaweza kusababisha kushindwa kwa mifumo mingine ambayo wakala wa AI umeunganishwa nayo, na kusababisha shambulio kuwa kubwa zaidi na gumu kutatua.
+**Maelezo:** Mawakala wa AI huingia kwenye zana na huduma mbalimbali kukamilisha kazi. Makosa yanayosababishwa na washambuliaji yanaweza kusababisha mifumo mingine ambayo wakala wa AI ameunganishwa nayo kufeli, na kufanya shambulizi hilo kuenea na kuwa gumu kutatua.
 
-**Kupunguza:** Njia moja ya kuepuka hili ni kuwa na Wakala wa AI akifanya kazi katika mazingira yaliyopunguzwa, kama vile kutekeleza majukumu katika kontena la Docker, ili kuzuia mashambulizi ya moja kwa moja ya mfumo. Kuunda mifumo ya kurudi nyuma na mantiki ya kurudia wakati mifumo fulani inajibu na kosa ni njia nyingine ya kuzuia kushindwa kwa mifumo mikubwa.
+**Kuzuia**: Njia moja ya kuepuka hili ni kuwa na Wakala wa AI afanye kazi katika mazingira yaliyopunguzwa, kama kutekeleza kazi katika kontena la Docker, ili kuzuia mashambulizi ya moja kwa moja ya mfumo. Kuunda mbinu za kutegemea na mantiki ya kurudia wakati mifumo fulani inajibu kwa kosa ni njia nyingine ya kuzuia kutofaulu kwa mifumo kubwa.
 
-## Binadamu Katika Mzunguko
+## Mtu Mshiriki Katika Mzunguko
 
-Njia nyingine bora ya kujenga mifumo ya Mawakala wa AI yenye kuaminika ni kutumia Binadamu Katika Mzunguko. Hii huunda mtiririko ambapo watumiaji wanaweza kutoa maoni kwa Mawakala wakati wa mchakato wa utekelezaji. Watumiaji kimsingi hufanya kama mawakala katika mfumo wa mawakala wengi kwa kutoa idhini au kusitisha mchakato unaoendelea.
+Njia nyingine yenye ufanisi ya kujenga mifumo ya Mashine Agents wa AI wa kuaminika ni kutumia Mtu katika mzunguko (Human-in-the-loop). Hii huunda mchakato ambapo watumiaji wanaweza kutoa maoni kwa mawakala wakati wa utekelezaji. Watumiaji kwa kweli hufanya kazi kama mawakala katika mfumo wa mawakala wengi kwa kutoa idhini au kusitisha mchakato unaoendelea.
 
-![Human in The Loop](../../../translated_images/sw/human-in-the-loop.5f0068a678f62f4f.webp)
+![Mtu Mshiriki Katika Mzunguko](../../../translated_images/sw/human-in-the-loop.5f0068a678f62f4f.webp)
 
-Hapa kuna kipande cha msimbo kinachotumia AutoGen kuonyesha jinsi dhana hii inavyotekelezwa:
+Hapa kuna kipande cha msimbo kinachoonyesha jinsi dhana hii inavyotekelezwa kwa kutumia Microsoft Agent Framework:
 
 ```python
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the agents.
-model_client = OpenAIChatCompletionClient(model="gpt-4o-mini")
-assistant = AssistantAgent("assistant", model_client=model_client)
-user_proxy = UserProxyAgent("user_proxy", input_func=input)  # Use input() to get user input from console.
+# Unda mtoaji na idhini ya mtu katika mzunguko
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
 
-# Create the termination condition which will end the conversation when the user says "APPROVE".
-termination = TextMentionTermination("APPROVE")
+# Unda wakala na hatua ya idhini ya mtu
+response = provider.create_response(
+    input="Write a 4-line poem about the ocean.",
+    instructions="You are a helpful assistant. Ask for user approval before finalizing.",
+)
 
-# Create the team.
-team = RoundRobinGroupChat([assistant, user_proxy], termination_condition=termination)
-
-# Run the conversation and stream to the console.
-stream = team.run_stream(task="Write a 4-line poem about the ocean.")
-# Use asyncio.run(...) when running in a script.
-await Console(stream)
-
+# Mtumiaji anaweza kupitia na kuidhinisha jibu
+print(response.output_text)
+user_input = input("Do you approve? (APPROVE/REJECT): ")
+if user_input == "APPROVE":
+    print("Response approved.")
+else:
+    print("Response rejected. Revising...")
 ```
 
 ## Hitimisho
 
-Kujenga Mawakala wa AI wenye kuaminika kunahitaji muundo makini, hatua madhubuti za usalama, na mabadiliko ya mara kwa mara. Kwa kutekeleza mifumo ya meta ya ujumbe iliyopangwa, kuelewa vitisho vinavyoweza kutokea, na kutumia mikakati ya kupunguza, watengenezaji wanaweza kuunda Mawakala wa AI ambao ni salama na wenye ufanisi. Zaidi ya hayo, kuingiza mbinu ya binadamu katika mzunguko huhakikisha kwamba Mawakala wa AI wanabaki sambamba na mahitaji ya watumiaji huku wakipunguza hatari. Kadri AI inavyoendelea kubadilika, kudumisha msimamo wa kuzuia kuhusu usalama, faragha, na masuala ya kimaadili kutakuwa muhimu katika kukuza uaminifu na kutegemewa katika mifumo inayoendeshwa na AI.
+Kujenga mashine agents wa AI wa kuaminika kunahitaji muundo makini, hatua thabiti za usalama, na kurudia mfululizo. Kwa kutekeleza mifumo iliyoandaliwa ya amri za meta ya mfumo, kuelewa vitisho vinavyoweza kuwepo, na kutumia njia za kupunguza hatari, waendelezaji wanaweza kuunda mashine agents wa AI ambao ni salama na wenye ufanisi. Zaidi ya hayo, kuingiza njia ya mtu katika mzunguko hutegemea kuwa mawakala wa AI wanabaki wakiwa sambamba na mahitaji ya watumiaji huku kupunguza hatari. Kadiri AI inavyoendelea kubadilika, kudumisha msimamo wa kuzuia usalama, usiri, na maadili kutakuwa muhimu kukuza imani na kuaminika katika mifumo inayoendeshwa na AI.
 
-### Una Maswali Zaidi Kuhusu Kujenga Mawakala wa AI Wenye Kuaminika?
+## Sampuli za Msimbo
 
-Jiunge na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ili kukutana na wanafunzi wengine, kuhudhuria masaa ya ofisi, na kupata majibu ya maswali yako kuhusu Mawakala wa AI.
+- [`code_samples/06-system-message-framework.ipynb`](code_samples/06-system-message-framework.ipynb): Maonyesho ya hatua kwa hatua ya mfumo wa amri za meta wa ujumbe wa mfumo.
+- [`code_samples/06-human-in-the-loop.ipynb`](code_samples/06-human-in-the-loop.ipynb): Milango ya idhini kabla ya vitendo, upangaji wa hatari, na kurekodi ukaguzi kwa mawakala wa kuaminika.
 
-## Rasilimali za Ziada
+### Una Maswali Zaidi Kuhusu Kujenga Mashine Agents wa Kuaminika wa AI?
 
-- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Muhtasari wa AI yenye Uwajibikaji</a>
-- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Tathmini ya mifano ya AI ya kizazi na programu za AI</a>
+Jiunge na [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) kukutana na wanaojifunza wengine, kuhudhuria saa za ofisi, na kupata majibu ya maswali yako kuhusu Mashine Agents wa AI.
+
+## Rasilimali Zaidi
+
+- <a href="https://learn.microsoft.com/azure/ai-studio/responsible-use-of-ai-overview" target="_blank">Muhtasari wa AI Inayowajibika</a>
+- <a href="https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai" target="_blank">Tathmini ya modeli za AI zinazozalisha na programu za AI</a>
 - <a href="https://learn.microsoft.com/azure/ai-services/openai/concepts/system-message?context=%2Fazure%2Fai-studio%2Fcontext%2Fcontext&tabs=top-techniques" target="_blank">Ujumbe wa mfumo wa usalama</a>
 - <a href="https://blogs.microsoft.com/wp-content/uploads/prod/sites/5/2022/06/Microsoft-RAI-Impact-Assessment-Template.pdf?culture=en-us&country=us" target="_blank">Kiolezo cha Tathmini ya Hatari</a>
 
@@ -202,9 +214,11 @@ Jiunge na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ili kukut
 
 ## Somo Linalofuata
 
-[Planning Design Pattern](../07-planning-design/README.md)
+[Mchoro wa Ubunifu wa Mipango](../07-planning-design/README.md)
 
 ---
 
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, inashauriwa kutumia huduma ya tafsiri ya kitaalamu ya binadamu. Hatutawajibika kwa maelewano mabaya au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

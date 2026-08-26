@@ -1,146 +1,144 @@
-[![छान AI एजंट्स कसे डिझाइन करायचे](../../../translated_images/mr/lesson-4-thumbnail.546162853cb3daff.webp)](https://youtu.be/vieRiPRx-gI?si=cEZ8ApnT6Sus9rhn)
+[![कसे तयार करावे चांगले AI एजंट्स](../../../translated_images/mr/lesson-4-thumbnail.546162853cb3daff.webp)](https://youtu.be/vieRiPRx-gI?si=cEZ8ApnT6Sus9rhn)
 
-> _(या धड्याचा व्हिडिओ पाहण्यासाठी वरील प्रतिमा क्लिक करा)_
+> _(या धड्याचा व्हिडिओ पाहण्यासाठी वरील प्रतिमेवर क्लिक करा)_
 
-# टूल युज डिझाइन पॅटर्न
+# टूल वापर डिझाईन पॅटर्न
 
-टूल्स रंजक आहेत कारण ते AI एजंट्सना अधिक व्यापक क्षमता देतात. एजंटकडे जर फक्त काही अंमलबजावणी करण्याच्या मर्यादित क्रियांचा संच असेल, तर टूल जोडल्याने ती एजंट आता विस्तृत प्रमाणात क्रियाकलाप करू शकतो. या प्रकरणात आपण टूल युज डिझाइन पॅटर्न पाहणार आहोत, जे सांगते की AI एजंट्स कसे विशिष्ट साधने वापरून त्यांच्या उद्दिष्टांपर्यंत पोहोचू शकतात.
+टूल्स मनोरंजक आहेत कारण ते AI एजंट्सना अधिक विस्तृत कार्यक्षमतेची परवानगी देतात. एजंटकडे जे करायची कृतींची मर्यादित सूची आहे त्याऐवजी टूल जोडल्याने, एजंट आता विविध प्रकारच्या क्रिया करू शकतो. या प्रकरणात, आपण टूल वापर डिझाईन पॅटर्न पाहणार आहोत, ज्यामुळे AI एजंट्स विशिष्ट टूल्स वापरून त्यांचे उद्दिष्ट साधू शकतात हे वर्णन होते.
 
 ## परिचय
 
-या धड्यात आपण खालील प्रश्नांची उत्तरे शोधणार आहोत:
+या धड्यात, आपण खालील प्रश्नांची उत्तरे शोधणार आहोत:
 
-- टूल युज डिझाइन पॅटर्न म्हणजे काय?
-- कोणत्या वापराच्या प्रकरणांमध्ये ते लागू करता येऊ शकते?
-- डिझाइन पॅटर्न लागू करण्यासाठी कोणत्या घटक/बिल्डिंग ब्लॉक्सची आवश्यकता आहे?
-- विश्वासार्ह AI एजंट तयार करण्यासाठी टूल युज डिझाइन पॅटर्न वापरताना कोणत्या विशेष बाबी लक्षात ठेवाव्यात?
+- टूल वापर डिझाईन पॅटर्न म्हणजे काय?
+- कोणत्या वापरपत्रकांवर हे लागू होऊ शकते?
+- या डिझाईन पॅटर्नसाठी कोणकोणते घटक/बिल्डिंग ब्लॉक्स आवश्यक आहेत?
+- विश्वसनीय AI एजंट तयार करण्यासाठी टूल वापर डिझाईन पॅटर्न वापरताना कोणती विशेष बाबी लक्षात घ्याव्यात?
 
-## शिकण्याचे उद्दिष्टे
+## शिक्षणाच्या उद्दिष्टे
 
-हा धडा पूर्ण केल्यावर, आपण सक्षम असाल:
+हा धडा पूर्ण केल्यावर, आपण पुढील गोष्टी करू शकाल:
 
-- टूल युज डिझाइन पॅटर्न आणि त्याचा हेतू परिभाषित करण्यासाठी.
-- ज्या वापराच्या प्रकरणांमध्ये टूल युज डिझाइन पॅटर्न लागू आहे ती ओळखण्यासाठी.
-- डिझाइन पॅटर्न अंमलात आणण्यासाठी आवश्यक मुख्य घटक समजण्यासाठी.
-- हा डिझाइन पॅटर्न वापरून AI एजंटमध्ये विश्वासार्हता सुनिश्चित करण्यासाठी विचार करण्याच्या बाबी ओळखण्यासाठी.
+- टूल वापर डिझाईन पॅटर्न आणि त्याचा उद्देश परिभाषित करा.
+- ज्या वापरपत्रकांवर हा डिझाईन पॅटर्न लागू आहे ते ओळखा.
+- डिझाईन पॅटर्न अंमलात आणण्यासाठी आवश्यक मुख्य घटक समजून घ्या.
+- या डिझाईन पॅटर्न वापरून AI एजंट्समध्ये विश्वासार्हता सुनिश्चित करण्यासाठीच्या बाबी ओळखा.
 
-## टूल युज डिझाइन पॅटर्न म्हणजे काय?
+## टूल वापर डिझाईन पॅटर्न म्हणजे काय?
 
-**टूल युज डिझाइन पॅटर्न** LLMs ला विशिष्ट उद्दिष्ट साध्य करण्यासाठी बाह्य साधनांशी संवाद साधण्याची क्षमता देते. टूल म्हणजे कोड जो एजंटद्वारे क्रिया करण्यासाठी चालवता येतो. टूल एक साधा कार्य (फंक्शन) असू शकतो जसे कॅल्क्युलेटर, किंवा तृतीय पक्ष सेवा जसे स्टॉक किंमती तपासणे किंवा हवामानाचा अंदाज घेण्यासाठी API कॉल. AI एजंट्सच्या संदर्भात, टूल्स हे **मॉडेल-जनरेट केलेल्या फंक्शन कॉल्स** च्या प्रतिसादादाखल एजंटद्वारे चालविण्यासाठी डिझाइन केलेले आहेत.
+**टूल वापर डिझाईन पॅटर्न** LLMs ला विशिष्ट उद्दिष्ट साध्य करण्यासाठी बाह्य टूल्सशी संवाद साधण्याची क्षमता देते. टूल्स म्हणजे कोड जे एजंटद्वारे क्रिया करण्यासाठी चालवता येतात. एक टूल साधी क्रिया असेल जसे की कॅल्क्युलेटर, किंवा तृतीय पक्ष सेवा जसे स्टॉक किंमत शोधणे किंवा हवामानाचा अंदाज, यासाठी API कॉल असू शकतो. AI एजंट्सच्या संदर्भात, टूल एजंटद्वारे **मॉडल-निर्मित फंक्शन कॉल्स** च्या प्रतिसादात चालवले जातात.
 
-## कोणत्या वापराच्या प्रकरणांमध्ये ते लागू करता येते?
+## कोणत्या वापरपत्रकांवर हे लागू होऊ शकते?
 
-AI एजंट्स बहु-प्रकारच्या कामांसाठी, माहिती घेण्यासाठी, किंवा निर्णय घेण्यासाठी टूल्सचा वापर करू शकतात. टूल युज डिझाइन पॅटर्न विशेषत: अशा परिदृश्यांमध्ये वापरला जातो जेथे बाह्य प्रणालींसह गतिशील संवाद आवश्यक असतो, जसे डेटाबेस, वेब सेवा, किंवा कोड व्याख्याकार. ही क्षमता खालील विविध वापराच्या बाबतीत उपयुक्त आहे:
+AI एजंट्स जटिल कामे पूर्ण करण्यासाठी, माहिती मिळवण्यासाठी किंवा निर्णय घेण्यासाठी टूल्सचा लाभ घेऊ शकतात. टूल वापर डिझाईन पॅटर्नचा वापर बहुदा अशा परिस्थितीत केला जातो जिथे बाह्य प्रणालींसह गतिशील संवाद आवश्यक असतो, जसे डेटाबेस, वेब सेवा, किंवा कोड इंटरप्रिटर्स. या क्षमतेचा वापर अनेक विभिन्न वापरपत्रकांसाठी होतो ज्यात समाविष्ट आहे:
 
-- **गतिशील माहिती प्राप्ती:** एजंट्स बाह्य API किंवा डेटाबेसमधून सतत अद्ययावत डेटा विचारू शकतात (उदा. SQLite डेटाबेसमधून डेटा विश्लेषणासाठी विचारणा करणे, स्टॉक किंमती किंवा हवामान माहिती घेणे).
-- **कोडच्या अंमलबजावणी आणि व्याख्या:** गणितीय समस्या सोडविण्यासाठी, अहवाल तयार करण्यासाठी, किंवा सिम्युलेशन्स करण्यासाठी कोड/स्क्रिप्ट चालवू शकतात.
-- **कार्यप्रवाह स्वयंचलन:** कामांचे पुन्हा पुन्हा होणारे किंवा बहु-टप्प्यांचे कार्यप्रवाह ऑटोमेट करण्यासाठी टास्क शेड्युलर, ईमेल सेवा, किंवा डेटा पाईपलाइन्स यासारखी टूल्स समाकलित करणे.
-- **ग्राहक समर्थन:** एजंट्स CRM प्रणाली, तिकीट प्रणाली, किंवा ज्ञानाधारांशी संवाद साधून वापरकर्त्यांच्या प्रश्नांची सोडवणूक करू शकतात.
-- **सामग्री निर्मिती आणि संपादन:** एजंट्स व्याकरण तपासणी, मजकूर सारांश, किंवा सामग्री सुरक्षितता मूल्यमापन करणाऱ्या टूल्सचा वापर करून सामग्री तयार करण्यास मदत करू शकतात.
+- **गतिशील माहिती पुनर्प्राप्ती:** एजंट्स बाह्य API किंवा डेटाबेस चौकशी करू शकतात जसे समसामयिक डेटा मिळविण्यासाठी (उदा. SQLite डेटाबेस डेटा विश्लेषणासाठी, स्टॉक किंमती किंवा हवामान माहिती मिळवणे).
+- **कोड अंमलबजावणी आणि व्याख्या:** एजंट्स गणिती समस्यांचे निराकरण, अहवाल तयार करणे किंवा सिम्युलेशन्स करण्यासाठी कोड किंवा स्क्रिप्ट्स चालवू शकतात.
+- **वर्कफ्लो ऑटोमेशन:** कार्य वेळापत्रक, ईमेल सेवा किंवा डेटा पाइपलाइनसारख्या टूल्स वापरून पुनरावृत्ती कामे किंवा बहु-टप्प्याचे वर्कफ्लो स्वयंचलित करणे.
+- **ग्राहक सेवा:** एजंट्स CRM प्रणाली, तिकीट प्रणाली किंवा ज्ञान भांडारांशी संवाद साधून वापरकर्ता प्रश्न सोडवू शकतात.
+- **सामग्री निर्माण आणि संपादन:** एजंट्स व्याकरण तपासक, मजकूर सारांशकार, किंवा सामग्री सुरक्षा मूल्यमापन करणारे टूल्स वापरून सामग्री निर्मितीमध्ये मदत करू शकतात.
 
-## टूल युज डिझाइन पॅटर्न लागू करण्यासाठी कोणते घटक/बिल्डिंग ब्लॉक्स आवश्यक आहेत?
+## टूल वापर डिझाईन पॅटर्न अंमलात आणण्यासाठी आवश्यक घटक/बिल्डिंग ब्लॉक्स कोणते आहेत?
 
-हे बिल्डिंग ब्लॉक्स AI एजंटला विस्तृत काम करण्यास सक्षम करतात. टूल युज डिझाइन पॅटर्न अंमलात आणण्यासाठी आवश्यक मुख्य घटक खालीलप्रमाणे आहेत:
+हे बिल्डिंग ब्लॉक्स AI एजंटला अनेक प्रकारची कामे करण्यास अनुमती देतात. चला टूल वापर डिझाईन पॅटर्न अंमलात आणण्यासाठी आवश्यक मुख्य घटक पाहूया:
 
-- **फंक्शन/टूल स्कीमा:** उपलब्ध टूल्सची सविस्तर व्याख्या, ज्यात फंक्शनचे नाव, हेतू, आवश्यक पॅरामीटर्स, आणि अपेक्षित आउटपुट्स यांचा समावेश असतो. हे स्कीमा LLM ला टूल्सची उपलब्धता आणि वैध विनंत्या कशा तयार कराव्यात हे समजावून देतात.
+- **फंक्शन/टूल स्कीमा:** उपलब्ध टूल्सची तपशीलवार व्याख्या, ज्यात फंक्शन नाव, उद्देश, आवश्यक पॅरामीटर्स आणि अपेक्षित आउटपुट्स यांचा समावेश होतो. हे स्कीमा LLM ला उपलब्ध टूल्स काय आहेत आणि वैध विनंत्या कशा तयार करायच्या हे समजून घेण्यास मदत करतात.
 
-- **फंक्शन अंमलबजावणी लॉजिक:** वापरकर्त्याच्या हेतू आणि संभाषणाच्या संदर्भावर आधारित टूल कधी आणि कसे वापरायचे हे नियंत्रित करते. यात नियोजक मॉड्यूल, रूटिंग यंत्रणा, किंवा परिस्थितीनुरूप प्रवाह असू शकतात जे टूलच्या वापरावर गतिशीलपणे निर्णय घेतात.
+- **फंक्शन अंमलबजावणी लॉजिक:** वापरकर्त्याच्या हेतू आणि संभाषणाच्या संदर्भानुसार टूल्स कधी आणि कसे वापरायचे हे नियंत्रित करते. यात प्लॅनर मॉड्यूल्स, वावटळ व्यवस्था, किंवा निर्देशांक प्रवाह असू शकतात जे टूल वापर गतिशीलपणे ठरवतात.
 
-- **संदेश व्यवस्थापन प्रणाली:** वापरकर्त्याच्या इनपुट्स, LLM प्रतिसाद, टूल कॉल्स, आणि टूल आउटपुट्स यामधील संभाषण प्रवाह व्यवस्थापित करणारे घटक.
+- **मेसेज हँडलिंग सिस्टम:** वापरकर्ता इनपुट्स, LLM प्रतिसाद, टूल कॉल्स आणि टूल आउटपुट्स यातील संभाषण प्रवाह व्यवस्थापित करणारे घटक.
 
-- **टूल इंटिग्रेशन फ्रेमवर्क:** एजंटला विविध टूल्सशी जोडणारे पायाभूत सुविधा, ज्या सोपे फंक्शन्स असू शकतात किंवा जटिल बाह्य सेवा असू शकतात.
+- **टूल इंटिग्रेशन फ्रेमवर्क:** एजंटला विविध टूल्सशी जोडणारी पायाभूत सुविधा, साधी फंक्शन्स असो किंवा जटिल बाह्य सेवा.
 
-- **त्रुटी हाताळणी व प्रमाणीकरण:** टूल अंमलबजावणीत अपयश हाताळणे, पॅरामीटर्सची प्रमाणीकरण करणे, आणि अनपेक्षित प्रतिसादांची व्यवस्थापन करण्यासाठी यंत्रणा.
+- **त्रुटी हाताळणी आणि प्रमाणीकरण:** टूल अंमलबजावणीत अपयश हाताळणे, पॅरामीटर्सची प्रमाणीकरण करणे, आणि अनपेक्षित प्रतिसाद व्यवस्थापनासाठी यंत्रणा.
 
-- **स्थिती व्यवस्थापन:** संभाषणाचा संदर्भ, मागील टूल संवाद, आणि सातत्य राखण्यासाठी टिकाऊ डेटा ट्रॅक करण्यासाठी.
+- **स्थिती व्यवस्थापन:** संभाषण संदर्भ, आधीच्या टूल संवाद, आणि सातत्य राखण्यासाठी टिकाऊ डेटा ट्रॅक करते.
 
-आता चला फंक्शन/टूल कॉलिंग अधिक तपशीलवार पाहू.
-
+पुढे, आपण फंक्शन/टूल कॉलिंग याबद्दल अधिक तपशीलवार पाहूया.
+ 
 ### फंक्शन/टूल कॉलिंग
 
-फंक्शन कॉलिंग हे मुख्य माध्यम आहे ज्याद्वारे Large Language Models (LLMs) टूल्सशी संवाद साधतात. तुम्हाला 'फंक्शन' आणि 'टूल' हा दोन शब्द बाजूने वापरले जातील कारण 'फंक्शन्स' (पुन्हा वापरता येणाऱ्या कोडचे ब्लॉक्स) हे 'टूल्स' आहेत जे एजंट्स त्यांच्या कामासाठी वापरतात. जेणेकरून फंक्शनचा कोड चालवला जाईल, LLM ला वापरकर्त्याच्या विनंतीचे तुलनात्मक दरम्यान फंक्शनचे वर्णन तपासावे लागते. त्यामुळे उपलब्ध सर्व फंक्शन्सच्या वर्णन असलेले स्कीमा LLM कडे पाठवले जाते. LLM मग त्या कामासाठी सर्वात योग्य फंक्शन निवडतो आणि त्याचे नाव आणि पॅरामीटर्स परत पाठवतो. निवडलेले फंक्शन कॉल केले जाते, त्याचा प्रतिसाद LLM कडे परत पाठवला जातो, जे वापरकर्त्याच्या विनंतीला प्रतिसाद देण्यासाठी तो माहिती वापरते.
+फंक्शन कॉलिंग हे LLMs ना टूल्सशी संवाद साधण्यासाठी मुख्य मार्ग आहे. 'फंक्शन' आणि 'टूल' या संज्ञा एकाच अर्थाने वापरल्या जातात कारण 'फंक्शन्स' (पुन्हा वापरता येणाऱ्या कोडचे ब्लॉक्स) हे टूल्स असतात जे एजंट विविध कार्य करायला वापरतात. एखाद्या फंक्शनचे कोड चालवण्यासाठी, LLM ला वापरकर्त्याच्या विनंतीला फंक्शनच्या वर्णनाशी जुळवून पाहावे लागते. यासाठी सर्व उपलब्ध फंक्शन्सची वर्णने असलेले स्कीमा LLM कडे पाठवले जाते. नंतर LLM संबंधित कार्यासाठी साजेसा फंक्शन निवडतो आणि त्याचे नाव व आर्ग्युमेंट्स परत करतो. निवडलेला फंक्शन कॉल केला जातो, त्याचा प्रतिसाद LLM कडे परत पाठवला जातो, जो वापरकर्त्याच्या विनंतीला उत्तर देण्यासाठी वापरला जातो.
 
-डेव्हलपर्सना एजंटसाठी फंक्शन कॉलिंग लागू करायचे असल्यास, खाली लागेल:
+डेव्हलपर्सना एजंटसाठी फंक्शन कॉलिंग अंमलात आणण्यासाठी खालील गोष्टी गरजेच्या आहेत:
 
-1. फंक्शन कॉलिंग समर्थन करणारे LLM मॉडेल
-2. फंक्शन वर्णन असलेले स्कीमा
+1. फंक्शन कॉलिंगला समर्थन देणारा LLM मॉडेल
+2. फंक्शन वर्णने असलेले स्कीमा
 3. प्रत्येक फंक्शनसाठी कोड
 
-चला, एका शहरातील सध्याच्या वेळेचा तपासण्यासाठी उदाहरण म्हणुन पहा:
+शहरातील वर्तमान वेळ मिळवण्याचा उदाहरण वापरून समजून घेऊया:
 
-1. **फंक्शन कॉलिंगसाठी समर्थन करणारे LLM मॉडेल सुरु करा:**
+1. **फंक्शन कॉलिंगला समर्थन देणारा LLM प्रारंभ करा:**
 
-    सर्व मॉडेल्स फंक्शन कॉलिंगसाठी समर्थन करत नाहीत, त्यामुळे वापरत असलेल्या LLM मध्ये ते आहे की नाही हे तपासणे महत्वाचे आहे. <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling" target="_blank">Azure OpenAI</a> फंक्शन कॉलिंगसाठी समर्थन देतो. आपण Azure OpenAI क्लायंट सुरू करण्यापासून प्रारंभ करू शकतो.
+    सर्व मॉडेल्स फंक्शन कॉलिंगला समर्थन देत नाहीत, त्यामुळे वापरत असलेला LLM हा तपासणे महत्त्वाचे आहे. <a href="https://learn.microsoft.com/azure/ai-services/openai/how-to/function-calling" target="_blank">Azure OpenAI</a> फंक्शन कॉलिंगला समर्थन देते. आपण OpenAI क्लायंट सुरू करू शकतो Azure OpenAI **Responses API** वर (स्थिर `/openai/v1/` एंडपॉइंट — `api_version` ची गरज नाही).
 
     ```python
-    # Azure OpenAI क्लायंट सुरू करा
-    client = AzureOpenAI(
-        azure_endpoint = os.getenv("AZURE_OPENAI_ENDPOINT"), 
-        api_key=os.getenv("AZURE_OPENAI_API_KEY"),  
-        api_version="2024-05-01-preview"
+    # Azure OpenAI साठी OpenAI क्लायंट सुरू करा (Responses API, v1 endpoint)
+    client = OpenAI(
+        base_url=f"{os.environ['AZURE_OPENAI_ENDPOINT'].rstrip('/')}/openai/v1/",
+        api_key=os.environ["AZURE_OPENAI_API_KEY"],
     )
+    deployment_name = os.environ["AZURE_OPENAI_DEPLOYMENT"]
     ```
 
-1. **फंक्शन स्कीमा तयार करा:**
+1. **फंक्शन स्कीमा तयार करा**:
 
-    पुढे आपण JSON स्कीमा तयार करू ज्यात फंक्शनचे नाव, फंक्शन काय करते याचे वर्णन, आणि फंक्शन पॅरामीटर्सची नावे व त्यांचे वर्णन असेल.
-    हे स्कीमा आणि वापरकर्त्याची विनंती क्लायंटला दिल्या जातील जे आधी तयार केले होते, उदाहरणार्थ San Francisco मधील वेळ मिळवण्याच्या साठी. महत्वाचं म्हणजे, परत मिळणं म्हणजे **टूल कॉल** आहे, **प्रश्नाचे अंतिम उत्तर नाही**. जसे आधी सांगितले, LLM निवडलेल्या फंक्शनचे नाव आणि त्याला दिले जाणारे अर्ग्युमेंट्स परत पाठवतो.
+    पुढे आपण JSON स्कीमा तयार करू ज्यात फंक्शनचे नाव, कार्याचे वर्णन आणि आवश्यक पॅरामीटर्सची नावे व वर्णन असतील.
+    नंतर हा स्कीमा क्लायंटला आणि वापरकर्त्याच्या विनंतीला पास करतो, जिथे सॅन फ्रान्सिस्कोचे वेळ माहिती मिळते. लक्षात घ्या की **टूल कॉल** परत मिळतो, **शेवटचे उत्तर नाही**. म्हणून, LLM कार्यासाठी निवडलेले फंक्शनचे नाव आणि त्याचे आर्ग्युमेंट्स परत करतो.
 
     ```python
-    # मॉडेल वाचण्यासाठी फंक्शनचे वर्णन
+    # मॉडेलसाठी फंक्शन वर्णन वाचण्यासाठी (Responses API फ्लॅट टूल स्वरूप)
     tools = [
         {
             "type": "function",
-            "function": {
-                "name": "get_current_time",
-                "description": "Get the current time in a given location",
-                "parameters": {
-                    "type": "object",
-                    "properties": {
-                        "location": {
-                            "type": "string",
-                            "description": "The city name, e.g. San Francisco",
-                        },
+            "name": "get_current_time",
+            "description": "Get the current time in a given location",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "location": {
+                        "type": "string",
+                        "description": "The city name, e.g. San Francisco",
                     },
-                    "required": ["location"],
                 },
-            }
+                "required": ["location"],
+            },
         }
     ]
     ```
    
     ```python
   
-    # प्रारंभिक वापरकर्त्याचा संदेश
-    messages = [{"role": "user", "content": "What's the current time in San Francisco"}] 
-  
-    # प्रथम API कॉल: मॉडेलला फंक्शन वापरण्यास विचारा
-      response = client.chat.completions.create(
-          model=deployment_name,
-          messages=messages,
-          tools=tools,
-          tool_choice="auto",
-      )
-  
-      # मॉडेलच्या प्रतिसादाची प्रक्रिया करा
-      response_message = response.choices[0].message
-      messages.append(response_message)
-  
-      print("Model's response:")  
+    # प्राथमिक वापरकर्ता संदेश
+    messages = [{"role": "user", "content": "What's the current time in San Francisco"}]
 
-      print(response_message)
+    # प्रथम API कॉल: मॉडेलला फंक्शन वापरण्याचा आग्रह करा
+    response = client.responses.create(
+        model=deployment_name,
+        input=messages,
+        tools=tools,
+        tool_choice="auto",
+        store=False,
+    )
+
+    # Responses API प्रतिक्रियेत function_call आयटम्स म्हणून टूल कॉल्स परत करतो response.output मध्ये.
+    # त्यांना संभाषणात जोडावे ज्यामुळे मॉडेलला पुढील टप्प्यात पूर्ण संदर्भ मिळेल.
+    messages += response.output
+
+    print("Model's response:")
+    print(response.output)
   
     ```
 
     ```bash
     Model's response:
-    ChatCompletionMessage(content=None, role='assistant', function_call=None, tool_calls=[ChatCompletionMessageToolCall(id='call_pOsKdUlqvdyttYB67MOj434b', function=Function(arguments='{"location":"San Francisco"}', name='get_current_time'), type='function')])
+    [ResponseFunctionToolCall(arguments='{"location":"San Francisco"}', call_id='call_pOsKdUlqvdyttYB67MOj434b', name='get_current_time', type='function_call')]
     ```
   
-1. **काम करण्यासाठी आवश्यक असलेला फंक्शन कोड:**
+1. **कार्य पार पाडण्यासाठी आवश्यक फंक्शन कोड:**
 
-    आता LLM ने कोणता फंक्शन चालवायचा तो निवडल्यावर, तो कार्य करणारा कोड अंमलबजावनीसाठी तयार करणे व चालवणे आवश्यक आहे.
-    आपण Python मध्ये वर्तमान वेळ मिळविण्यासाठी कोड लिहू. तसेच, response_message मधून नाव व अर्ग्युमेंट्स काढण्याचा कोड देखील लिहायला हवा.
+    LLM ने फंक्शन निवडल्यानंतर, काम पार पाडणारा कोड तयार करावा व चालवावा लागतो.
+    आपण Python मध्ये वर्तमान वेळ मिळवण्यासाठी कोड तयार करू. तसेच response_message मधून नाव आणि आर्ग्युमेंट्स काढण्यासाठी कोड लिहावा लागेल ज्याने अंतिम परिणाम मिळेल.
 
     ```python
       def get_current_time(location):
@@ -162,33 +160,36 @@ AI एजंट्स बहु-प्रकारच्या कामां�
     ```
 
      ```python
-     # फंक्शन कॉल हाताळा
-      if response_message.tool_calls:
-          for tool_call in response_message.tool_calls:
-              if tool_call.function.name == "get_current_time":
-     
-                  function_args = json.loads(tool_call.function.arguments)
-     
-                  time_response = get_current_time(
-                      location=function_args.get("location")
-                  )
-     
-                  messages.append({
-                      "tool_call_id": tool_call.id,
-                      "role": "tool",
-                      "name": "get_current_time",
-                      "content": time_response,
-                  })
-      else:
-          print("No tool calls were made by the model.")  
-  
-      # दुसरा API कॉल: मॉडेलकडून अंतिम प्रतिसाद मिळवा
-      final_response = client.chat.completions.create(
-          model=deployment_name,
-          messages=messages,
-      )
-  
-      return final_response.choices[0].message.content
+    # फंक्शन कॉल्स हाताळा
+    tool_calls = [item for item in response.output if item.type == "function_call"]
+    if tool_calls:
+        for tool_call in tool_calls:
+            if tool_call.name == "get_current_time":
+
+                function_args = json.loads(tool_call.arguments)
+
+                time_response = get_current_time(
+                    location=function_args.get("location")
+                )
+
+                # टूलचा निकाल function_call_output आयटेम म्हणून परत करा
+                messages.append({
+                    "type": "function_call_output",
+                    "call_id": tool_call.call_id,
+                    "output": time_response,
+                })
+    else:
+        print("No tool calls were made by the model.")
+
+    # दुसरा API कॉल: मॉडेलकडून अंतिम प्रतिसाद मिळवा
+    final_response = client.responses.create(
+        model=deployment_name,
+        input=messages,
+        tools=tools,
+        store=False,
+    )
+
+    return final_response.output_text
      ```
 
      ```bash
@@ -197,89 +198,84 @@ AI एजंट्स बहु-प्रकारच्या कामां�
       The current time in San Francisco is 09:24 AM.
      ```
 
-फंक्शन कॉलिंग ही बहुतांश, सर्व नाही तरी, एजंट टूल युज डिझाइनचा केंद्रस्थानी असते, पण ते कधी कधी सुरुवातीपासून अंमलबजावणी करणे आव्हानात्मक असू शकते.
-जसे आपण [Lesson 2](../../../02-explore-agentic-frameworks) मध्ये जाणले, एजंटिक फ्रेमवर्क्स आम्हाला टूल युजसाठी पूर्वनिर्मित बिल्डिंग ब्लॉक्स उपलब्ध करून देतात.
+फंक्शन कॉलिंग हा जास्तीत जास्त एजंट टूल वापर डिझाईनचा मुख्य भाग आहे, परंतु याला सुरुवातीपासून तयार करणे कधीकधी आव्हानात्मक असू शकते.
+आपल्याला [धडा 2](../../../02-explore-agentic-frameworks) मध्ये शिकले तसे एजंटिक फ्रेमवर्क्स आपल्याला टूल वापर अंमलात आणण्यासाठी पूर्वनिर्मित बिल्डिंग ब्लॉक्स पुरवतात.
+ 
+## एजंटिक फ्रेमवर्क्ससह टूल वापर उदाहरणे
 
-## एजंटिक फ्रेमवर्क्ससह टूल युज उदाहरणे
+येथे विविध एजंटिक फ्रेमवर्क्स वापरून टूल वापर डिझाईन पॅटर्न कसा अंमलात आणता येतो त्याची काही उदाहरणे आहेत:
 
-टूल युज डिझाइन पॅटर्न कसे विविध एजंटिक फ्रेमवर्क वापरून अंमलात आणता येते याची काही उदाहरणे येथे दिली आहेत:
+### Microsoft एजंट फ्रेमवर्क
 
-### सेमॅंटिक कर्नेल
+<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft एजंट फ्रेमवर्क</a> हे AI एजंट्स तयार करण्यासाठी ओपन-सोर्स फ्रेमवर्क आहे. हे फंक्शन कॉलिंग वापरणी सोपी करते, ज्यात आपण टूल्सना Python फंक्शन्स म्हणून `@tool` डेकोरेटर वापरुन परिभाषित करू शकतो. हे फ्रेमवर्क मॉडेल आणि तुमच्या कोडमधील संवाद हाताळते. तसेच, File Search आणि Code Interpreter सारखे पूर्वनिर्मित टूल्स `FoundryChatClient` मार्फत उपलब्ध करून देते.
 
-<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">सेमॅंटिक कर्नेल</a> हा .NET, Python, आणि Java विकसकांसाठी एक मुक्त स्रोत AI फ्रेमवर्क आहे जे LLMs सह काम करते. तो फंक्शन कॉलिंग वापरणे सुलभ करतो कारण तो आपली फंक्शन्स व त्यांच्या पॅरामीटर्सना मॉडेलकडे वर्णन करणाऱ्या प्रक्रियेला <a href="https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions" target="_blank">सीरियलायझिंग</a> म्हणतात, तसेच मॉडेल आणि कोडमधील संवाद नियंत्रित करतो. सेमॅंटिक कर्नेलसारखा एजंटिक फ्रेमवर्क वापरण्याचा आणखी फायदा म्हणजे यामध्ये आपल्याला पूर्व-निर्मित टूल्स जसे <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step4_assistant_tool_file_search.py" target="_blank">File Search</a> आणि <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py" target="_blank">Code Interpreter</a> वापरता येतात.
-
-खालील आकृती सेमॅंटिक कर्नेलसह फंक्शन कॉलिंग प्रक्रियेला दर्शविते:
+खालील आकृती Microsoft एजंट फ्रेमवर्कसह फंक्शन कॉलिंग प्रक्रियेचं दर्शन घडवते:
 
 ![function calling](../../../translated_images/mr/functioncalling-diagram.a84006fc287f6014.webp)
 
-सेमॅंटिक कर्नेलमध्ये फंक्शन/टूल्सना <a href="https://learn.microsoft.com/semantic-kernel/concepts/plugins/?pivots=programming-language-python" target="_blank">प्लगइन्स</a> म्हणतात. आपण `get_current_time` फंक्शन प्लगइनमध्ये रूपांतर करू शकतो, ज्यामध्ये तो फंक्शन असलेला एक वर्ग (class) बनवू शकतो. `kernel_function` डिकॉरटर देखील आपण आयात करू शकतो, जो फंक्शनचे वर्णन घेते. जेव्हा आपण GetCurrentTimePlugin सह कर्नेल तयार करता, तेव्हा कर्नेल आपोआप फंक्शन आणि त्याचे पॅरामीटर्स सीरियलाइज करून स्कीमा तयार करतो आणि LLM कडे पाठवतो.
+Microsoft एजंट फ्रेमवर्कमध्ये, टूल्स डेकोरेटेड फंक्शन्स म्हणून परिभाषित केल्या जातात. आपण पूर्वी पाहिलेला `get_current_time` फंक्शन `@tool` डेकोरेटर वापरून टूलमध्ये रूपांतरित करू शकतो. फ्रेमवर्क आपोआप फंक्शन व त्याचे पॅरामीटर्स सीरिअलाइज करून LLM कडे पाठवायला स्कीमा तयार करेल.
 
 ```python
-from semantic_kernel.functions import kernel_function
+import os
+from agent_framework import tool
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-class GetCurrentTimePlugin:
-    async def __init__(self, location):
-        self.location = location
+@tool(approval_mode="never_require")
+def get_current_time(location: str) -> str:
+    """Get the current time for a given location"""
+    ...
 
-    @kernel_function(
-        description="Get the current time for a given location"
-    )
-    def get_current_time(location: str = ""):
-        ...
+# क्लायंट तयार करा
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
+)
 
-```
-
-```python 
-from semantic_kernel import Kernel
-
-# कर्नल तयार करा
-kernel = Kernel()
-
-# प्लगइन तयार करा
-get_current_time_plugin = GetCurrentTimePlugin(location)
-
-# प्लगइन कर्नलमध्ये जोडा
-kernel.add_plugin(get_current_time_plugin)
+# एक एजंट तयार करा आणि साधनासह चालवा
+agent = provider.as_agent(name="TimeAgent", instructions="Use available tools to answer questions.", tools=get_current_time)
+response = await agent.run("What time is it?")
 ```
   
-### Azure AI Agent Service
+### Microsoft Foundry एजंट सेवा
 
-<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Azure AI Agent Service</a> हा एक नवा एजंटिक फ्रेमवर्क आहे जो विकासकांना सुरक्षितरीत्या उच्च-गुणवत्तेचे आणि विस्तारक्षम AI एजंट तयार करणे, तैनात करणे, आणि स्केल करण्यास सक्षम करतो, त्याच वेळी खालीलच्या संगणकीय आणि संचयन संसाधनांचे व्यवस्थापन करावे लागत नाही. हा विशेषतः एंटरप्राइझ अनुप्रयोगांसाठी उपयुक्त आहे कारण तो पूर्णपणे व्यवस्थापित सेवा आहे ज्यामध्ये एंटरप्राइझ-स्तरीय सुरक्षा आहे.
+<a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft Foundry एजंट सेवा</a> ही एक नवीन एजंटिक फ्रेमवर्क आहे जी डेव्हलपर्सना सुरक्षितपणे उच्च दर्जाचे आणि विस्तारयोग्य AI एजंट्स तयार, तैनात आणि मापन करण्यास सशक्त करते, ज्यासाठी तुम्हाला अंतर्गत संगणकीय संसाधने आणि संग्रह व्यवस्थापित करण्याची गरज नाही. ती उद्योजकीय अनुप्रयोगांसाठी विशेषतः उपयुक्त आहे कारण ही पूर्णपणे व्यवस्थापित सेवा असून उद्योजकीय दर्जाची सुरक्षा पुरवते.
 
-LLM API थेट वापरून विकसित करण्याच्या तुलनेत, Azure AI Agent Service काही फायदे देते जसे:
+LLM API सोबत तुलना करता, Microsoft Foundry एजंट सेवा खालील फायदे देते:
 
-- स्वयंचलित टूल कॉलिंग – टूल कॉल पार्स करण्याची, टूल चालवण्याची, आणि प्रतिसाद हाताळण्याची गरज नाही; हे सर्व आता सर्व्हर साईडवर होते.
-- सुरक्षितरीत्या व्यवस्थापित डेटा – आपला स्वतःचा संभाषणाचा स्थिती व्यवस्थापित करण्याऐवजी, आपण थ्रेड्सवर पूर्ण माहिती साठवू शकता.
-- रेडीमेड टूल्स – वापरले जाणारे टूल्स ज्याद्वारे तुम्ही तुमच्या डेटा स्त्रोतांशी जसे Bing, Azure AI Search, आणि Azure Functions यांच्यासह संवाद साधू शकता.
+- स्वयंचलित टूल कॉलिंग – टूल कॉल पार्स करणे, टूल चालवणे आणि प्रतिसाद हाताळण्याची गरज नाही; हे सर्व आता सर्व्हर बाजूने होते
+- सुरक्षितपणे व्यवस्थापित डेटा – संभाषण स्थिती स्वतः व्यवस्थापित करण्याऐवजी तुम्ही थ्रेड्सवर अवलंबून राहू शकता जी आवश्यक सर्व माहिती साठवतात
+- रेडी-टू-यूज टूल्स – Bing, Azure AI Search, आणि Azure Functions सारख्या डेटा स्रोतांशी संवाद साधण्यासाठी टूल्स
 
-Azure AI Agent Service मध्ये उपलब्ध टूल्स दोन श्रेणींमध्ये विभागले आहेत:
+Microsoft Foundry एजंट सेवेमध्ये उपलब्ध टूल्स दोन श्रेणीत विभागले आहेत:
 
 1. ज्ञान टूल्स:
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview" target="_blank">Bing Search सह ग्राउंडिंग</a>
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/file-search?tabs=python&pivots=overview" target="_blank">File Search</a>
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-ai-search?tabs=azurecli%2Cpython&pivots=overview-azure-ai-search" target="_blank">Azure AI Search</a>
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/bing-grounding?tabs=python&pivots=overview" target="_blank">Bing शोधासह ग्राउंडिंग</a>
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/file-search?tabs=python&pivots=overview" target="_blank">फाइल शोध</a>
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-ai-search?tabs=azurecli%2Cpython&pivots=overview-azure-ai-search" target="_blank">Azure AI शोध</a>
 
-2. अ‍ॅक्शन टूल्स:
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/function-calling?tabs=python&pivots=overview" target="_blank">Function Calling</a>
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?tabs=python&pivots=overview" target="_blank">Code Interpreter</a>
+2. क्रिया टूल्स:
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/function-calling?tabs=python&pivots=overview" target="_blank">फंक्शन कॉलिंग</a>
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/code-interpreter?tabs=python&pivots=overview" target="_blank">कोड इंटरप्रिटर</a>
     - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/openapi-spec?tabs=python&pivots=overview" target="_blank">OpenAPI परिभाषित टूल्स</a>
-    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-functions?pivots=overview" target="_blank">Azure Functions</a>
+    - <a href="https://learn.microsoft.com/azure/ai-services/agents/how-to/tools/azure-functions?pivots=overview" target="_blank">Azure फंक्शन्स</a>
 
-Agent Service आम्हाला हे टूल्स एकत्र `toolset` म्हणून वापरण्याची परवानगी देतो. हे `threads` देखील वापरतो जे एका विशिष्ट संभाषणाबाबत इतिहास ट्रॅक करतात.
+एजंट सेवा आपल्याला या टूल्सना `toolset` म्हणून एकत्र वापरण्याची परवानगी देते. तसेच `threads` चा वापर करते जे विशिष्ट संभाषणातील संदेश इतिहास राखतात.
 
-कल्पना करा की तुम्ही कॉन्टोसो नावाच्या कंपनीत विक्री एजंट आहात. तुम्हाला असा संभाषण एजंट तयार करायचा आहे जो तुमच्या विक्री डेटाविषयी प्रश्नांची उत्तरे देऊ शकतो.
+गृहित धरा की तुम्ही Contoso नावाच्या कंपनीतील विक्री एजंट आहात. तुम्हाला एक संवादात्मक एजंट तयार करायचा आहे जो तुमच्या विक्री डेटाबद्दल प्रश्नांची उत्तरे देऊ शकेल.
 
-खालील प्रतिमा Azure AI Agent Service वापरून तुमच्या विक्री डेटाचा कसोटी कशी करता येईल हे दाखवते:
+खालील प्रतिमा Microsoft Foundry एजंट सेवा वापरून तुमच्या विक्री डेटाचे विश्लेषण कसे करता येईल हे दाखवते:
 
 ![Agentic Service In Action](../../../translated_images/mr/agent-service-in-action.34fb465c9a84659e.webp)
 
-या सेवेतील कोणतेही टूल वापरण्यासाठी आपण क्लायंट तयार करू शकतो आणि टूल किंवा टूलसेट परिभाषित करू शकतो. प्रत्यक्षात यासाठी खालील Python कोड वापरू शकतो. LLM टूलसेट पाहून वापरकर्त्याने तयार केलेले फंक्शन `fetch_sales_data_using_sqlite_query` वापरायचे की पूर्वनिर्मित Code Interpreter वापरायचा हे वापरकर्त्याच्या विनंतीनुसार ठरवेल.
+या सेवेद्वारे कोणतेही टूल वापरण्यासाठी आपण ग्राहक तयार करू शकतो आणि टूल किंवा टूलसेट परिभाषित करू शकतो. व्यवहारिक रूपात यासाठी पुढील Python कोड वापरू शकतो. LLM टूलसेट पहातो आणि वापरकर्त्याच्या विनंतीनुसार वापरकर्ता तयार केलेला फंक्शन `fetch_sales_data_using_sqlite_query` किंवा पूर्वनिर्मित कोड इंटरप्रिटर वापरण्याचा निर्णय घेतो.
 
 ```python 
 import os
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
-from fetch_sales_data_functions import fetch_sales_data_using_sqlite_query # fetch_sales_data_using_sqlite_query फंक्शन जे fetch_sales_data_functions.py फाईलमध्ये सापडू शकते.
+from fetch_sales_data_functions import fetch_sales_data_using_sqlite_query # fetch_sales_data_using_sqlite_query फंक्शन जे fetch_sales_data_functions.py फाईलमध्ये सापडेल.
 from azure.ai.projects.models import ToolSet, FunctionTool, CodeInterpreterTool
 
 project_client = AIProjectClient.from_connection_string(
@@ -290,53 +286,56 @@ project_client = AIProjectClient.from_connection_string(
 # टूलसेट सुरू करा
 toolset = ToolSet()
 
-# fetch_sales_data_using_sqlite_query फंक्शनसह फंक्शन कॉलिंग एजंट सुरू करा आणि ते टूलसेटमध्ये जोडा
+# fetch_sales_data_using_sqlite_query फंक्शनसह फंक्शन कॉलिंग एजंट सुरू करा आणि त्याला टूलसेटमध्ये जोडा
 fetch_data_function = FunctionTool(fetch_sales_data_using_sqlite_query)
 toolset.add(fetch_data_function)
 
-# कोड इंटरप्रिटर टूल सुरू करा आणि ते टूलसेटमध्ये जोडा.
-code_interpreter = code_interpreter = CodeInterpreterTool()
-toolset.add(code_interpreter)
+# कोड इंटरप्रिटर टूल सुरू करा आणि त्याला टूलसेटमध्ये जोडा.
+code_interpreter = CodeInterpreterTool()toolset.add(code_interpreter)
 
 agent = project_client.agents.create_agent(
-    model="gpt-4o-mini", name="my-agent", instructions="You are helpful agent", 
+    model="gpt-5-mini", name="my-agent", instructions="You are helpful agent", 
     toolset=toolset
 )
 ```
 
-## विश्वासार्ह AI एजंट तयार करण्यासाठी टूल युज डिझाइन पॅटर्नच्या वापरासाठी विशेष बाबी कोणत्या?
+## विश्वासार्ह AI एजंट तयार करण्यासाठी टूल वापर डिझाईन पॅटर्न वापरात विशेष बाबी कोणत्या आहेत?
 
-LLM द्वारे डायनॅमिकली तयार होणाऱ्या SQL बाबत एक सामान्य चिंता म्हणजे सुरक्षा, विशेषतः SQL इंजेक्शनचा धोका किंवा खाल्ल्याच्या डेटाबेसमध्ये हल्ला करणारे कृत्ये जसे डेटाबेस ड्रॉप करणे किंवा त्यात फेरफार करणे. जरी या चिंता योग्य असल्या तरी, त्या योग्य रीतीने डेटाबेस प्रवेश परवानग्या संरचीत करून परिणामकारकपणे टाळता येऊ शकतात. बहुतेक डेटाबेससाठी हे रीड-ओनली मोडमध्ये डेटाबेस संरचीत करण्याचा समावेश आहे. PostgreSQL किंवा Azure SQL सारख्या डेटाबेस सेवांसाठी, अ‍ॅपला रीड-ओनली (SELECT) रोल दिला जावा.
-अॅपला सुरक्षित वातावरणात चालवणे संरक्षण आणखी वाढवते. एंटरप्राइझ परिस्थितीत, डेटा बहुतेक वेळा ऑपरेशनल सिस्टम्समधून वाचण्यासाठी फक्त उपलब्ध असलेल्या डेटाबेस किंवा डेटा वेअरहाऊसबद्दल वापरकर्ता-अनुकूल स्कीमासह रूपांतरित केला जातो. हा दृष्टिकोन डेटा सुरक्षित ठेवतो, कामगिरी आणि प्रवेशयोग्यता यासाठी ऑप्टिमाइझ करतो, आणि अॅपला मर्यादित, फक्त वाचण्याच्या प्रवेश परवानगी देतो.
+LLMs द्वारे डायनॅमिकली तयार केलेल्या SQL मध्ये सामान्य चिंता म्हणजे सुरक्षा, विशेषतः SQL इंजेक्शनचा धोका किंवा दुर्भावनायुक्त क्रियाकलाप जसे डेटा बेस ड्रॉप करणे किंवा छेडछाड करणे. या चिंता बरोबर असल्या तरी, योग्य डेटाबेस प्रवेश परवानग्या सेट केल्यास त्यांचा प्रभावीपणे प्रतिबंध करता येतो. बहुतेक डेटाबेससाठी हे डेटाबेसला फक्त वाचन-केवल मोडमध्ये कॉन्फिगर करणे अपेक्षित आहे. PostgreSQL किंवा Azure SQL सारख्या डेटाबेस सेवांसाठी, अॅपला फक्त फक्त वाचन-परवानगी (SELECT) असलेली भूमिका दिली पाहिजे.
 
-## Sample Codes
+अॅपला सुरक्षित वातावरणात चालविल्यास सुरक्षा आणखी वाढते. उद्योजकीय परिस्थितीत डेटाचा वापर सहसा चालू प्रणालींपासून गोळा करून वाचन-केवल डेटाबेस किंवा डेटा वेअरहाऊस मध्ये रूपांतरित केला जातो, ज्यात वापरकर्ता-अनुकूल स्कीमा असतो. या पद्धतीमुळे डेटा सुरक्षित, कार्यक्षमतेसाठी अनुकूल आणि अॅपला मर्यादित वाचन-परवानगी मिळते याची खात्री होते.
 
-- Python: [Agent Framework](./code_samples/04-python-agent-framework.ipynb)
-- .NET: [Agent Framework](./code_samples/04-dotnet-agent-framework.md)
+## नमुना कोड्स
 
-## Got More Questions about the Tool Use Design Patterns?
+- Python: [एजंट फ्रेमवर्क](./code_samples/04-python-agent-framework.ipynb)
+- .NET: [एजंट फ्रेमवर्क](./code_samples/04-dotnet-agent-framework.md)
 
-Join the [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) to meet with other learners, attend office hours and get your AI Agents questions answered.
+## टूल वापर डिझाईन पॅटर्नबाबत अजून प्रश्न आहेत का?
 
-## Additional Resources
+[Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) मध्ये सामील व्हा, इतर शिकणाऱ्यांशी भेटा, ऑफिस आवर्समध्ये सहभागी व्हा आणि तुमचे AI एजंट्सबाबत प्रश्नांचे उत्तर मिळवा.
 
-- <a href="https://microsoft.github.io/build-your-first-agent-with-azure-ai-agent-service-workshop/" target="_blank">Azure AI Agents Service Workshop</a>
-- <a href="https://github.com/Azure-Samples/contoso-creative-writer/tree/main/docs/workshop" target="_blank">Contoso Creative Writer Multi-Agent Workshop</a>
-- <a href="https://learn.microsoft.com/semantic-kernel/concepts/ai-services/chat-completion/function-calling/?pivots=programming-language-python#1-serializing-the-functions" target="_blank">Semantic Kernel Function Calling Tutorial</a>
-- <a href="https://github.com/microsoft/semantic-kernel/blob/main/python/samples/getting_started_with_agents/openai_assistant/step3_assistant_tool_code_interpreter.py" target="_blank">Semantic Kernel Code Interpreter</a>
-- <a href="https://microsoft.github.io/autogen/dev/user-guide/core-user-guide/components/tools.html" target="_blank">Autogen Tools</a>
+## अतिरिक्त साधने
 
-## Previous Lesson
+- <a href="https://microsoft.github.io/build-your-first-agent-with-azure-ai-agent-service-workshop/" target="_blank">Azure AI एजंट सेवा कार्यशाळा</a>
+- <a href="https://github.com/Azure-Samples/contoso-creative-writer/tree/main/docs/workshop" target="_blank">Contoso क्रिएटिव रायटर मल्टि-एजंट कार्यशाळा</a>
+- <a href="https://learn.microsoft.com/azure/ai-services/agents/overview" target="_blank">Microsoft एजंट फ्रेमवर्क विषद</a>
 
-[Understanding Agentic Design Patterns](../03-agentic-design-patterns/README.md)
 
-## Next Lesson
+## या एजंटचे स्मोक-टेस्टिंग (ऐच्छिक)
+
+[Lesson 16](../16-deploying-scalable-agents/README.md) मध्ये एजंट कसे तैनात करायचे ते शिकल्यानंतर, तुम्ही या धड्याचा `TravelToolAgent` (तो अजूनही त्याचे टूल्स कॉल करतो आणि उत्तर देतो का?) [`tests/lesson-04-smoke-tests.json`](../../../tests/lesson-04-smoke-tests.json) वापरून स्मोक-टेस्ट करू शकता. ते कसे चालवायचे ते पाहण्यासाठी [`tests/README.md`](../tests/README.md) पहा.
+
+## मागील धडा
+
+[Agentic Design Patterns समजून घेणे](../03-agentic-design-patterns/README.md)
+
+## पुढील धडा
 
 [Agentic RAG](../05-agentic-rag/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**अस्वीकरण**:  
-हा दस्तऐवज AI अनुवाद सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) वापरून अनुवादित केला आहे. आम्ही अचूकतेसाठी प्रयत्न करतो, तरी कृपया लक्षात घ्या की स्वयंचलित अनुवादांमध्ये चुका किंवा विसंगती असू शकतात. मूळ दस्तऐवज त्याच्या स्थानिक भाषेत अधिकृत स्रोत मानला पाहिजे. महत्वाच्या माहितीच्या बाबतीत व्यावसायिक मानवी अनुवाद शिफारसीय आहे. या अनुवादाच्या वापरामुळे उद्भवणाऱ्या कोणत्याही गैरसमज किंवा चुकीच्या अर्थ लावणीबद्दल आम्ही जबाबदार नाही.
+**अस्वीकरण**:
+हा दस्तऐवज AI भाषांतर सेवा [Co-op Translator](https://github.com/Azure/co-op-translator) चा वापर करून अनुवादित केला आहे. जरी आम्ही अचूकतेसाठी प्रयत्न करतो, तरी कृपया लक्षात घ्या की स्वयंचलित भाषांतरांमध्ये त्रुटी किंवा अचूकतेची कमतरता असू शकते. मूळ दस्तऐवज त्याच्या मूळ भाषेत अधिकृत स्रोत मानला पाहिजे. महत्त्वाची माहिती असल्यास, व्यावसायिक मानवी भाषांतराची शिफारस केली जाते. या भाषांतराच्या वापरामुळे उद्भवणाऱ्या कोणत्याही गैरसमज किंवा चुकीच्या अर्थलावणीसाठी आम्ही जबाबदार नाही.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

@@ -1,43 +1,42 @@
 # AGENTS.md
 
-## Projektin yleiskatsaus
+## Projektin yleiskuvaus
 
-Tämä arkisto sisältää "AI Agents for Beginners" -koulutuskokonaisuuden, joka opettaa kaiken tarvittavan tekoälyagenttien rakentamiseen. Kurssi koostuu yli 15 oppitunnista, jotka kattavat perusteet, suunnittelumallit, kehykset ja tekoälyagenttien tuotantoon viemisen.
+Tämä repositorio sisältää "AI Agents for Beginners" -laajan opetuskokonaisuuden, joka opettaa kaiken tarvittavan AI-agenttien rakentamiseen. Kurssi koostuu 18 oppitunnista (numeroitu 00-18) käsittäen perusteet, suunnittelumallit, kehykset, tuotantokäyttöön viemiseksi, paikalliset/laitteella toimivat agentit sekä AI-agenttien turvallisuuden.
 
 **Keskeiset teknologiat:**
 - Python 3.12+
-- Jupyter Notebookit interaktiiviseen oppimiseen
-- Tekoälykehykset: Semantic Kernel, AutoGen, Microsoft Agent Framework (MAF)
-- Azure AI -palvelut: Azure AI Foundry, Azure AI Agent Service
-- GitHub Models Marketplace (ilmainen taso saatavilla)
+- Interaktiiviseen oppimiseen Jupyter Notebookit
+- AI-kehykset: Microsoft Agent Framework (MAF)
+- Azure AI -palvelut: Microsoft Foundry, Microsoft Foundry Agent Service V2
 
 **Arkkitehtuuri:**
-- Oppituntipohjainen rakenne (hakemistot 00-15+)
-- Jokainen oppitunti sisältää: README-dokumentaation, koodiesimerkit (Jupyter-notebookit) ja kuvia
-- Monikielinen tuki automatisoidun käännösjärjestelmän avulla
-- Useita kehysvaihtoehtoja per oppitunti (Semantic Kernel, AutoGen, Azure AI Agent Service)
+- Oppituntipohjainen rakenne (00-15+ hakemistoja)
+- Jokaisessa oppitunnissa README-dokumentaatio, koodiesimerkit (Jupyter Notebookit) ja kuvat
+- Monikielinen tuki automaattisen käännösjärjestelmän kautta
+- Yksi Python-notebook per oppitunti Microsoft Agent Frameworkilla
 
 ## Asennuskomennot
 
 ### Esivaatimukset
 - Python 3.12 tai uudempi
-- GitHub-tili (GitHub Models - ilmainen taso)
-- Azure-tilaus (valinnainen, Azure AI -palveluille)
+- Azure-tilaus (Microsoft Foundryn käyttöön)
+- Azure CLI asennettuna ja autentikoituna (`az login`)
 
-### Alkuasennus
+### Alustava asennus
 
-1. **Kloonaa tai haarauta arkisto:**
+1. **Kloonaa tai forkkaa repositorio:**
    ```bash
    gh repo fork microsoft/ai-agents-for-beginners --clone
-   # OR
+   # TAI
    git clone https://github.com/microsoft/ai-agents-for-beginners.git
    cd ai-agents-for-beginners
    ```
 
-2. **Luo ja aktivoi Python-virtuaaliympäristö:**
+2. **Luo ja aktivoi Pythonin virtuaaliympäristö:**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # Windowsilla: venv\Scripts\activate
    ```
 
 3. **Asenna riippuvuudet:**
@@ -48,295 +47,272 @@ Tämä arkisto sisältää "AI Agents for Beginners" -koulutuskokonaisuuden, jok
 4. **Määritä ympäristömuuttujat:**
    ```bash
    cp .env.example .env
-   # Edit .env with your API keys and endpoints
+   # Muokkaa .env tiedostoa API-avaimillasi ja päätepisteilläsi
    ```
 
+### Vaaditut ympäristömuuttujat
 
-### Tarvittavat ympäristömuuttujat
+Microsoft Foundrylle (pakollinen):
+- `AZURE_AI_PROJECT_ENDPOINT` - Microsoft Foundry -projektin päätepiste
+- `AZURE_AI_MODEL_DEPLOYMENT_NAME` - Mallin käyttöönoton nimi (esimerkiksi gpt-5-mini)
 
-**GitHub Models (ilmainen):**
-- `GITHUB_TOKEN` - Henkilökohtainen käyttöoikeustunnus GitHubista
+Azure AI Searchille (Oppitunti 05 - RAG):
+- `AZURE_SEARCH_SERVICE_ENDPOINT` - Azure AI Search -päätepiste
+- `AZURE_SEARCH_API_KEY` - Azure AI Search API-avain
 
-**Azure AI -palvelut** (valinnainen):
-- `PROJECT_ENDPOINT` - Azure AI Foundry -projektin päätepiste
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI -API-avain
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI -päätepisteen URL
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - Chat-mallin käyttöönoton nimi
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - Upotusten käyttöönoton nimi
-- Lisäasetukset löytyvät tiedostosta `.env.example`
+Autentikointi: Suorita `az login` ennen notebookien ajoa (käyttää `AzureCliCredential`-tunnistetta).
 
-## Kehitystyön kulku
+## Kehitystyön työnkulku
 
-### Jupyter-notebookien suorittaminen
+### Jupyter Notebookien ajaminen
 
-Jokainen oppitunti sisältää useita Jupyter-notebookeja eri kehyksille:
+Jokaisessa oppitunnissa on useita Jupyter-notebookeja eri kehyksille:
 
 1. **Käynnistä Jupyter:**
    ```bash
    jupyter notebook
    ```
 
-2. **Siirry oppituntihakemistoon** (esim. `01-intro-to-ai-agents/code_samples/`)
+2. **Siirry oppitunnin kansioon** (esim. `01-intro-to-ai-agents/code_samples/`)
 
 3. **Avaa ja suorita notebookit:**
-   - `*-semantic-kernel.ipynb` - Semantic Kernel -kehys
-   - `*-autogen.ipynb` - AutoGen-kehys
-   - `*-python-agent-framework.ipynb` - Microsoft Agent Framework (Python)
-   - `*-dotnet-agent-framework.ipynb` - Microsoft Agent Framework (.NET)
-   - `*-azureaiagent.ipynb` - Azure AI Agent Service
+   - `*-python-agent-framework.ipynb` - Käyttää Microsoft Agent Frameworkia (Python)
+   - `*-dotnet-agent-framework.ipynb` - Käyttää Microsoft Agent Frameworkia (.NET)
 
-### Työskentely eri kehysten kanssa
+### Microsoft Agent Frameworkin käyttö
 
-**Semantic Kernel + GitHub Models:**
-- Ilmainen taso saatavilla GitHub-tilillä
-- Hyvä oppimiseen ja kokeiluun
-- Tiedostomalli: `*-semantic-kernel*.ipynb`
-
-**AutoGen + GitHub Models:**
-- Ilmainen taso saatavilla GitHub-tilillä
-- Moniagenttien orkestrointikyvyt
-- Tiedostomalli: `*-autogen.ipynb`
-
-**Microsoft Agent Framework (MAF):**
-- Microsoftin uusin kehys
-- Saatavilla Pythonilla ja .NET:llä
-- Tiedostomalli: `*-agent-framework.ipynb`
-
-**Azure AI Agent Service:**
+**Microsoft Agent Framework + Microsoft Foundry:**
 - Vaatii Azure-tilauksen
-- Tuotantovalmiit ominaisuudet
-- Tiedostomalli: `*-azureaiagent.ipynb`
+- Käyttää `FoundryChatClientia` Agent Service V2:lle (agentit näkyvät Foundry-portaalissa)
+- Tuotantovalmiita sisäänrakennetulla havainnoinnilla
+- Tiedostokuvio: `*-python-agent-framework.ipynb`
 
 ## Testausohjeet
 
-Tämä on opetusarkisto, joka sisältää esimerkkikoodia eikä tuotantokoodia automaattisilla testeillä. Tarkista asennuksesi ja muutoksesi seuraavasti:
+Tämä on opetuksellinen repositorio esimerkkikoodilla, ei tuotantokoodi automatisoiduilla testeillä. Tarkista asennuksesi ja muutokset:
 
 ### Manuaalinen testaus
 
 1. **Testaa Python-ympäristö:**
    ```bash
-   python --version  # Should be 3.12+
-   pip list | grep -E "(autogen|semantic-kernel|azure-ai)"
+   python --version  # Pitäisi olla 3.12 tai uudempi
+   pip list | grep -E "(agent-framework|azure-ai|azure-identity)"
    ```
 
-2. **Testaa notebookien suoritus:**
+2. **Testaa notebookin suoritus:**
    ```bash
-   # Convert notebook to script and run (tests imports)
+   # Muunna muistikirja skriptiksi ja suorita (testaa tuonnit)
    jupyter nbconvert --to script <lesson-folder>/code_samples/<notebook>.ipynb --stdout | python
    ```
 
 3. **Varmista ympäristömuuttujat:**
    ```bash
-   python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ GITHUB_TOKEN' if os.getenv('GITHUB_TOKEN') else '✗ GITHUB_TOKEN missing')"
+   python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ AZURE_AI_PROJECT_ENDPOINT' if os.getenv('AZURE_AI_PROJECT_ENDPOINT') else '✗ AZURE_AI_PROJECT_ENDPOINT missing')"
    ```
 
+### Yksittäisten notebookien ajaminen
 
-### Yksittäisten notebookien suorittaminen
-
-Avaa notebookit Jupyterissä ja suorita solut järjestyksessä. Jokainen notebook on itsenäinen ja sisältää:
+Avaa notebookit Jupyterissa ja suorita solut peräkkäin. Jokainen notebook on itsenäinen ja sisältää:
 - Tuontilauseet
-- Konfiguraation lataus
-- Esimerkkitoteutukset agenteille
-- Odotetut tulokset markdown-soluissa
+- Konfiguraation lataamisen
+- Esimerkkien agenttien toteutukset
+- Odotetut tulosteet markdown-soluissa
+
+### Käyttöönotettujen agenttien savutestaus
+
+Oppitunneissa, joissa agentti on käyttöönotettu Microsoft Foundryn isännöimänä agenttina (01, 04, 05, 16), repo sisältää savutestiluettelot `tests/`-kansiossa, jotka suorittaa `.github/workflows/smoke-test.yml`-työnkulku [AI Smoke Test](https://github.com/marketplace/actions/ai-smoke-test) -toiminnon kautta. Nämä ovat kevyitä käyttöönoton jälkeisiä porteja (onko agentti tavoitettavissa ja noudattaako se peruskehotteita?), täydentäen arviointiputkea oppitunneilla 10 ja 16. Katso [tests/README.md](./tests/README.md) luettelo-oppitunti-agentti-mappaus. Oppitunti 17 ajetaan paikallisesti Foundry Localilla eikä sillä ole isännöityä päätepistettä, joten se validoidaan ajamalla notebook suoranaisesti.
 
 ## Koodityyli
 
 ### Python-käytännöt
 
 - **Python-versio**: 3.12+
-- **Koodityyli**: Noudata Pythonin PEP 8 -käytäntöjä
-- **Notebookit**: Käytä selkeitä markdown-soluja konseptien selittämiseen
-- **Tuonnit**: Ryhmittele standardikirjasto, kolmannen osapuolen ja paikalliset tuonnit
+- **Koodityyli**: Noudata standardeja Python PEP 8 -käytäntöjä
+- **Notebookit**: Käytä selkeitä markdown-soluja selittämään käsitteitä
+- **Tuonnit**: Ryhmittele standardikirjasto, kolmannen osapuolen ja paikallisiin tuonteihin
 
-### Jupyter-notebookien käytännöt
+### Jupyter Notebook -käytännöt
 
-- Sisällytä kuvailevat markdown-solut ennen koodisoluja
-- Lisää tulosesimerkkejä notebookeihin viitteeksi
-- Käytä selkeitä muuttujanimiä, jotka vastaavat oppituntien konsepteja
-- Pidä notebookien suoritusjärjestys lineaarisena (solu 1 → 2 → 3...)
+- Sisällytä kuvailevia markdown-soluja koodisoluja ennen
+- Lisää tulostesimerkkejä notebookeihin viitteeksi
+- Käytä selkeitä muuttujien nimiä, jotka vastaavat oppitunnin käsitteitä
+- Pidä notebookin suoritusjärjestys lineaarisena (solu 1 → 2 → 3...)
 
-### Tiedostojen järjestely
+### Tiedostojen organisointi
 
 ```
 <lesson-number>-<lesson-name>/
 ├── README.md                     # Lesson documentation
 ├── code_samples/
-│   ├── <number>-semantic-kernel.ipynb
-│   ├── <number>-autogen.ipynb
 │   ├── <number>-python-agent-framework.ipynb
-│   └── <number>-azureaiagent.ipynb
+│   └── <number>-dotnet-agent-framework.ipynb  (optional)
 └── images/
     └── *.png
 ```
-
 
 ## Rakentaminen ja käyttöönotto
 
 ### Dokumentaation rakentaminen
 
-Tämä arkisto käyttää Markdownia dokumentaatioon:
-- README.md-tiedostot jokaisessa oppituntihakemistossa
-- Pää-README.md arkiston juurihakemistossa
-- Automatisoitu käännösjärjestelmä GitHub Actionsin kautta
+Tämä repositorio käyttää Markdownia dokumentaatioon:
+- README.md-tiedostot jokaisessa oppitunnin kansiossa
+- Pää-README.md repositorion juurihakemistossa
+- Automaattinen käännösjärjestelmä GitHub Actionseilla
 
 ### CI/CD-putki
 
 Sijaitsee hakemistossa `.github/workflows/`:
 
 1. **co-op-translator.yml** - Automaattinen käännös yli 50 kielelle
-2. **welcome-issue.yml** - Tervetuloviesti uusille issue-tekijöille
-3. **welcome-pr.yml** - Tervetuloviesti uusille pull request -tekijöille
+2. **welcome-issue.yml** - Tervetulotoivotus uusille issueiden luojille
+3. **welcome-pr.yml** - Tervetulotoivotus uusille pull requestin tekijöille
 
 ### Käyttöönotto
 
-Tämä on opetusarkisto - ei käyttöönottoprosessia. Käyttäjät:
-1. Haarauttavat tai kloonaavat arkiston
-2. Suorittavat notebookit paikallisesti tai GitHub Codespacesissa
-3. Oppivat muokkaamalla ja kokeilemalla esimerkkejä
+Tämä on opetuksellinen repositorio - ei käyttöönottoprosessia. Käyttäjät:
+1. Forkkaa tai kloonaa repositorio
+2. Suorita notebookit paikallisesti tai GitHub Codespacessa
+3. Opiskele muokkaamalla ja kokeilemalla esimerkkejä
 
-## Pull Request -ohjeet
+## Pull request -ohjeet
 
 ### Ennen lähettämistä
 
 1. **Testaa muutoksesi:**
    - Suorita kaikki vaikuttavat notebookit kokonaan
    - Varmista, että kaikki solut suorittuvat ilman virheitä
-   - Tarkista, että tulokset ovat asianmukaisia
+   - Tarkista, että tulosteet ovat sopivia
 
-2. **Dokumentaation päivitykset:**
-   - Päivitä README.md, jos lisäät uusia konsepteja
-   - Lisää kommentteja notebookeihin monimutkaiselle koodille
+2. **Dokumentaatiopäivitykset:**
+   - Päivitä README.md, jos lisäät uusia käsitteitä
+   - Lisää kommentteja monimutkaiseen koodiin notebookeissa
    - Varmista, että markdown-solut selittävät tarkoituksen
 
 3. **Tiedostomuutokset:**
-   - Älä sitoudu `.env`-tiedostoja (käytä `.env.example`)
-   - Älä sitoudu `venv/`- tai `__pycache__/`-hakemistoja
-   - Säilytä notebookien tulokset, kun ne havainnollistavat konsepteja
-   - Poista väliaikaiset tiedostot ja varmuuskopiot (`*-backup.ipynb`)
+   - Vältä commit:a `.env`-tiedostoja (käytä `.env.example`-tiedostoa)
+   - Älä commit:aa `venv/` tai `__pycache__/` -kansioita
+   - Pidä notebookin tulosteet, jos ne demonstroivat käsitteitä
+   - Poista väliaikaiset tiedostot ja varmuuskopiotiedostot (`*-backup.ipynb`)
 
 ### PR-otsikon muoto
 
-Käytä kuvailevia otsikoita:
-- `[Lesson-XX] Lisää uusi esimerkki <konsepti>`
-- `[Fix] Korjaa kirjoitusvirhe lesson-XX README:ssä`
-- `[Update] Paranna koodiesimerkkiä lesson-XX:ssa`
+Käytä kuvaavia otsikoita:
+- `[Lesson-XX] Lisää uusi esimerkki <käsite>`
+- `[Fix] Korjaa kirjoitusvirhe oppitunti-XX README:ssa`
+- `[Update] Paranna koodiesimerkkiä oppitunti-XX:ssa`
 - `[Docs] Päivitä asennusohjeet`
 
 ### Vaaditut tarkistukset
 
 - Notebookien tulee suorittua ilman virheitä
 - README-tiedostojen tulee olla selkeitä ja tarkkoja
-- Noudata arkiston olemassa olevia koodimalleja
-- Säilytä yhdenmukaisuus muiden oppituntien kanssa
+- Noudata olemassa olevia koodimallien käytäntöjä
+- Säilytä johdonmukaisuus muiden oppituntien kanssa
 
-## Lisähuomioita
+## Lisähuomiot
 
-### Yleiset sudenkuopat
+### Yleisiä sudenkuoppia
 
 1. **Python-version yhteensopimattomuus:**
    - Varmista, että käytät Python 3.12+:aa
    - Jotkin paketit eivät toimi vanhemmilla versioilla
-   - Käytä `python3 -m venv` määrittääksesi Python-version
+   - Käytä `python3 -m venv` määrittääksesi Python-version eksplisiittisesti
 
 2. **Ympäristömuuttujat:**
    - Luo aina `.env` tiedostosta `.env.example`
-   - Älä sitoudu `.env`-tiedostoa (se on `.gitignore`-tiedostossa)
-   - GitHub-tunnuksella tulee olla asianmukaiset oikeudet
+   - Älä commit:aa `.env` tiedostoa (se on `.gitignore`-tiedostossa)
+   - Kirjaudu sisään `az login` komennolla avaimettoman Entra ID -todennuksen käyttöä varten
 
-3. **Pakettien ristiriidat:**
+3. **Pakettiristiriidat:**
    - Käytä uutta virtuaaliympäristöä
-   - Asenna `requirements.txt`-tiedostosta yksittäisten pakettien sijaan
-   - Jotkin notebookit saattavat vaatia lisäpaketteja, jotka mainitaan niiden markdown-soluissa
+   - Asenna riippuvuudet `requirements.txt` tiedostosta yksittäisten pakettien sijaan
+   - Joissain notebookeissa voidaan tarvita lisäpaketteja, jotka mainitaan niiden markdown-soluissa
 
 4. **Azure-palvelut:**
    - Azure AI -palvelut vaativat aktiivisen tilauksen
    - Jotkin ominaisuudet ovat aluekohtaisia
-   - Ilmaisen tason rajoitukset koskevat GitHub Models -malleja
+   - Varmista, että Azure OpenAI -mallisi käyttöönotto tukee Responses API:ta
 
 ### Oppimispolku
 
-Suositeltu eteneminen oppitunneilla:
-1. **00-course-setup** - Aloita tästä ympäristön asennuksella
-2. **01-intro-to-ai-agents** - Ymmärrä tekoälyagenttien perusteet
+Suositeltu eteneminen oppituntien läpi:
+1. **00-course-setup** - Aloita tästä ympäristön pystytyksessä
+2. **01-intro-to-ai-agents** - Ymmärrä AI-agenttien perusteet
 3. **02-explore-agentic-frameworks** - Tutustu eri kehyksiin
 4. **03-agentic-design-patterns** - Keskeiset suunnittelumallit
-5. Jatka numeroitujen oppituntien läpi järjestyksessä
+5. Jatka järjestelmällisesti numeroitujen oppituntien läpi
 
 ### Kehyksen valinta
 
 Valitse kehys tavoitteidesi mukaan:
-- **Oppiminen/prototyyppaus**: Semantic Kernel + GitHub Models (ilmainen)
-- **Moniagenttijärjestelmät**: AutoGen
-- **Uusimmat ominaisuudet**: Microsoft Agent Framework (MAF)
-- **Tuotantokäyttö**: Azure AI Agent Service
+- **Kaikki oppitunnit**: Microsoft Agent Framework (MAF) `FoundryChatClient`-asiakkaalla
+- **Agentit rekisteröityvät palvelinpuolelle** Microsoft Foundry Agent Service V2:ssa ja näkyvät Foundry-portaalissa
 
-### Avun saaminen
+### Apua saa näistä
 
-- Liity [Azure AI Foundry Community Discordiin](https://aka.ms/ai-agents/discord)
-- Tarkista oppituntien README-tiedostot saadaksesi tarkempia ohjeita
-- Katso pää-[README.md](./README.md) kurssin yleiskatsaukseen
-- Viittaa [Course Setup](./00-course-setup/README.md) -ohjeisiin yksityiskohtaisissa asennusohjeissa
+- Liity [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord) -kanavalle
+- Tarkista oppituntien README-tiedostot tarkkojen ohjeiden saamiseksi
+- Katso pää-README.md:stä kurssin yleiskuvaus
+- Ohjeet löytyy myös [Course Setup](./00-course-setup/README.md) -kansiosta
 
 ### Osallistuminen
 
-Tämä on avoin opetusprojekti. Osallistuminen on tervetullutta:
+Tämä on avoin opetushanke. Osallistumisia otetaan vastaan:
 - Paranna koodiesimerkkejä
 - Korjaa kirjoitusvirheitä tai virheitä
 - Lisää selventäviä kommentteja
 - Ehdota uusia oppituntiaiheita
 - Käännä lisäkielille
 
-Katso [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) nykyiset tarpeet.
+Katso [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) nykyisistä tarpeista.
 
 ## Projektikohtainen konteksti
 
-### Monikielinen tuki
+### Monikielituki
 
-Tämä arkisto käyttää automatisoitua käännösjärjestelmää:
+Tämä repositorio käyttää automaattista käännösjärjestelmää:
 - Yli 50 kieltä tuettuna
-- Käännökset hakemistoissa `/translations/<kielikoodi>/`
-- GitHub Actions -työnkulku käsittelee käännöspäivitykset
-- Lähdetiedostot ovat englanniksi arkiston juurihakemistossa
+- Käännökset kansioissa `/translations/<lang-code>/`
+- GitHub Actions -työnkulku hoitaa käännösten päivitykset
+- Lähdetiedostot ovat englanniksi repositorion juurissa
 
-### Oppituntien rakenne
+### Oppituntirakenne
 
-Jokainen oppitunti noudattaa johdonmukaista mallia:
+Jokainen oppitunti noudattaa johdonmukaista kaavaa:
 1. Videon pikkukuva ja linkki
-2. Kirjallinen oppituntisisältö (README.md)
-3. Koodiesimerkit useilla kehyksillä
+2. Kirjoitettu oppisisältö (README.md)
+3. Koodiesimerkit useissa kehyksissä
 4. Oppimistavoitteet ja esivaatimukset
-5. Linkitetyt lisäoppimisresurssit
+5. Lisäoppimateriaalit linkitettynä
 
 ### Koodiesimerkkien nimeäminen
 
-Muoto: `<oppitunti-numero>-<kehys-nimi>.ipynb`
-- `04-semantic-kernel.ipynb` - Oppitunti 4, Semantic Kernel
-- `07-autogen.ipynb` - Oppitunti 7, AutoGen
-- `14-python-agent-framework.ipynb` - Oppitunti 14, MAF Python
-- `14-dotnet-agent-framework.ipynb` - Oppitunti 14, MAF .NET
+Muoto: `<lesson-number>-python-agent-framework.ipynb`
+- `01-python-agent-framework.ipynb` - Oppitunti 1, MAF Python
+- `14-sequential.ipynb` - Oppitunti 14, MAF edistyneet mallit
+- `16-python-agent-framework.ipynb` - Oppitunti 16, tuotantovalmiina asiakastukikäyttöagentti
+- `17-local-agent-foundry-local.ipynb` - Oppitunti 17, paikallinen agentti Foundry Localilla + Qwen
 
-### Erityishakemistot
+### Erityiset kansiot
 
-- `translated_images/` - Lokalisoidut kuvat käännöksiä varten
+- `translated_images/` - Käännetyt kuvat käännöksiä varten
 - `images/` - Alkuperäiset kuvat englanninkieliselle sisällölle
-- `.devcontainer/` - VS Code -kehityskontin konfiguraatio
-- `.github/` - GitHub Actions -työnkulut ja mallit
+- `.devcontainer/` - VS Code kehityssäiliön konfiguraatio
+- `.github/` - GitHub Actions -työnkulut ja mallipohjat
 
 ### Riippuvuudet
 
-Keskeiset paketit tiedostosta `requirements.txt`:
-- `autogen-agentchat`, `autogen-core`, `autogen-ext` - AutoGen-kehys
-- `semantic-kernel` - Semantic Kernel -kehys
+Keskeiset paketit `requirements.txt` tiedostosta:
 - `agent-framework` - Microsoft Agent Framework
+- `a2a-sdk` - Agent-to-Agent -protokollatuki
 - `azure-ai-inference`, `azure-ai-projects` - Azure AI -palvelut
+- `azure-identity` - Azure-todennus (AzureCliCredential)
 - `azure-search-documents` - Azure AI Search -integraatio
-- `chromadb` - Vektorikanta RAG-esimerkeille
-- `chainlit` - Chat-käyttöliittymäkehys
-- `browser_use` - Selaimen automaatio agenteille
 - `mcp[cli]` - Model Context Protocol -tuki
-- `mem0ai` - Muistinhallinta agenteille
 
 ---
 
-**Vastuuvapauslauseke**:  
-Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, huomioithan, että automaattiset käännökset voivat sisältää virheitä tai epätarkkuuksia. Alkuperäistä asiakirjaa sen alkuperäisellä kielellä tulisi pitää ensisijaisena lähteenä. Kriittisen tiedon osalta suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa väärinkäsityksistä tai virhetulkinnoista, jotka johtuvat tämän käännöksen käytöstä.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Vastuuvapauslauseke**:
+Tämä asiakirja on käännetty käyttämällä tekoälypohjaista käännöspalvelua [Co-op Translator](https://github.com/Azure/co-op-translator). Vaikka pyrimme tarkkuuteen, otathan huomioon, että automaattiset käännökset saattavat sisältää virheitä tai epätarkkuuksia. Alkuperäinen asiakirja sen alkuperäiskielellä on virallinen lähde. Tärkeissä asioissa suositellaan ammattimaista ihmiskäännöstä. Emme ole vastuussa tämän käännöksen käytöstä aiheutuvista väärinymmärryksistä tai tulkinnoista.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

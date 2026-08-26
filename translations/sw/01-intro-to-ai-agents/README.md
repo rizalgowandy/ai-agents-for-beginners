@@ -1,123 +1,155 @@
-[![Utangulizi wa Mawakala wa AI](../../../translated_images/sw/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
+[![Utangulizi kwa Wakala wa AI](../../../translated_images/sw/lesson-1-thumbnail.d21b2c34b32d35bb.webp)](https://youtu.be/3zgm60bXmQk?si=QA4CW2-cmul5kk3D)
 
-> _(Bonyeza picha hapo juu kutazama video ya somo hili)_
+> _(Bofya picha hapo juu kutazama video ya somo hili)_
 
-# Utangulizi wa Mawakala wa AI na Matumizi Yake
+# Utangulizi kwa Wakala wa AI na Matumizi ya Wakala
 
-Karibu kwenye kozi ya "Mawakala wa AI kwa Kompyuta"! Kozi hii inatoa maarifa ya msingi na mifano ya matumizi ya kujenga Mawakala wa AI.
+Karibu kwenye kozi ya **Wakala wa AI kwa Waanzilishi**! Kozi hii inakupa maarifa ya msingi — na msimbo halisi unaofanya kazi — kuanza kujenga Wakala wa AI kutoka mwanzo.
 
-Jiunge na <a href="https://discord.gg/kzRShWzttr" target="_blank">Jamii ya Azure AI Discord</a> ili kukutana na wanafunzi wengine na Watengenezaji wa Mawakala wa AI na kuuliza maswali yoyote kuhusu kozi hii.
+Njoo useme habari katika <a href="https://discord.gg/kzRShWzttr" target="_blank">Jamii ya Azure AI Discord</a> — imejaa wanafunzi na wajenzi wa AI ambao wanafurahia kujibu maswali.
 
-Ili kuanza kozi hii, tunaanza kwa kuelewa vizuri Mawakala wa AI ni nini na jinsi tunavyoweza kuyatumia katika programu na mtiririko wa kazi tunazojenga.
+Kabla hatujaanza kujenga, hebu tuhakikishe tunaelewa kweli ni nini Wakala wa AI *anavyokuwa* na lini inafaa kutumia mmoja.
+
+---
 
 ## Utangulizi
 
-Somo hili linashughulikia:
+Somo hili linahusu:
 
-- Mawakala wa AI ni nini na ni aina gani tofauti za mawakala?
-- Matumizi gani ni bora kwa Mawakala wa AI na jinsi wanavyoweza kutusaidia?
-- Ni vipengele gani vya msingi tunavyohitaji kuzingatia tunapounda Suluhisho za Kimawakala?
+- Nini Wakala wa AI ni, na aina tofauti zinazopo
+- Aina gani za kazi Wakala wa AI wanafaa zaidi kwa ajili yake
+- Misingi ya msingi utakayotumia unapounda suluhisho la Wakala
 
 ## Malengo ya Kujifunza
-Baada ya kukamilisha somo hili, unapaswa kuwa na uwezo wa:
 
-- Kuelewa dhana za Mawakala wa AI na jinsi zinavyotofautiana na suluhisho zingine za AI.
-- Kutumia Mawakala wa AI kwa ufanisi zaidi.
-- Kubuni suluhisho za kimawakala kwa tija kwa watumiaji na wateja.
+Mwisho wa somo hili, unapaswa kuwa unaweza:
 
-## Kufafanua Mawakala wa AI na Aina za Mawakala wa AI
+- Eleza ni nini Wakala wa AI ni na jinsi unavyotofautiana na suluhisho la AI la kawaida
+- Jua lini inafaa kutumia Wakala wa AI (na lini siyo)
+- Chora muundo wa suluhisho la Wakala la msingi kwa tatizo halisi la dunia
 
-### Mawakala wa AI ni nini?
+---
 
-Mawakala wa AI ni **mifumo** inayowezesha **Large Language Models (LLMs)** **kufanya vitendo** kwa kupanua uwezo wao kwa kuwapa LLMs **upatikanaji wa zana** na **maarifa**.
+## Kufafanua Wakala wa AI na Aina za Wakala wa AI
 
-Hebu tuchambue ufafanuzi huu katika sehemu ndogo:
+### Wakala wa AI ni Nini?
 
-- **Mfumo** - Ni muhimu kufikiria mawakala si kama sehemu moja tu bali kama mfumo wa vipengele vingi. Kwa kiwango cha msingi, vipengele vya Mwakala wa AI ni:
-  - **Mazingira** - Eneo lililofafanuliwa ambapo Mwakala wa AI anafanya kazi. Kwa mfano, ikiwa tungekuwa na Mwakala wa AI wa kuhifadhi safari, mazingira yanaweza kuwa mfumo wa kuhifadhi safari ambao Mwakala wa AI hutumia kukamilisha kazi.
-  - **Vihisi** - Mazingira yana taarifa na hutoa maoni. Mawakala wa AI hutumia vihisi kukusanya na kutafsiri taarifa kuhusu hali ya sasa ya mazingira. Katika mfano wa Mwakala wa Kuhifadhi Safari, mfumo wa kuhifadhi safari unaweza kutoa taarifa kama upatikanaji wa hoteli au bei za ndege.
-  - **Vitendaji** - Mara Mwakala wa AI anapopokea hali ya sasa ya mazingira, kwa kazi ya sasa mwakala huamua ni kitendo gani cha kufanya kubadilisha mazingira. Kwa mfano wa Mwakala wa Kuhifadhi Safari, inaweza kuwa kuhifadhi chumba kinachopatikana kwa mtumiaji.
+Hapa kuna njia rahisi ya kufikiria kuhusu hilo:
 
-![Mawakala wa AI ni nini?](../../../translated_images/sw/what-are-ai-agents.1ec8c4d548af601a.webp)
+> **Wakala wa AI ni mifumo inayowawezesha Vifaa Vikubwa vya Lugha (LLMs) *kufanya mambo* — kwa kuwapatia zana na maarifa ya kuchukua hatua duniani, siyo tu kujibu maelekezo.**
 
-**Large Language Models** - Dhana ya mawakala ilikuwepo kabla ya kuundwa kwa LLMs. Faida ya kujenga Mawakala wa AI kwa kutumia LLMs ni uwezo wao wa kutafsiri lugha ya binadamu na data. Uwezo huu unawawezesha LLMs kutafsiri taarifa za mazingira na kufafanua mpango wa kubadilisha mazingira.
+Hebu tufafanue kidogo:
 
-**Kufanya Vitendo** - Nje ya mifumo ya Mawakala wa AI, LLMs zimewekewa mipaka kwa hali ambapo kitendo ni kuunda maudhui au taarifa kulingana na ombi la mtumiaji. Ndani ya mifumo ya Mawakala wa AI, LLMs zinaweza kukamilisha kazi kwa kutafsiri ombi la mtumiaji na kutumia zana zinazopatikana katika mazingira yao.
+- **Mfumo** — Wakala wa AI si kitu kimoja tu. Ni mkusanyiko wa sehemu zinazofanya kazi pamoja. Msingi wake, kila wakala ana vipande vitatu:
+  - **Mazingira** — Eneo ambalo wakala anafanya kazi. Kwa wakala wa uhifadhi wa safari, hii itakuwa jukwaa la kuhifadhi tiketi la kusafiri lenyewe.
+  - **Vichunguzi** — Jinsi wakala anavyosoma hali ya sasa ya mazingira yake. Wakala wetu wa safari anaweza kuangalia upatikanaji wa hoteli au bei za ndege.
+  - **Watekelezaji** — Jinsi wakala anavyochukua hatua. Wakala wa safari anaweza kuhifadhi chumba, kutuma uthibitisho, au kughairi uhifadhi.
 
-**Upatikanaji wa Zana** - Zana ambazo LLM zinaweza kufikia zinaamuliwa na 1) mazingira ambayo zinafanya kazi na 2) msanidi wa Mwakala wa AI. Kwa mfano wa wakala wa safari, zana za wakala zimewekewa mipaka na operesheni zinazopatikana katika mfumo wa kuhifadhi, na/au msanidi anaweza kuweka mipaka ya upatikanaji wa zana za wakala kwa ndege.
+![Wakala ni Nini?](../../../translated_images/sw/what-are-ai-agents.1ec8c4d548af601a.webp)
 
-**Kumbukumbu+Maarifa** - Kumbukumbu inaweza kuwa ya muda mfupi katika muktadha wa mazungumzo kati ya mtumiaji na wakala. Kwa muda mrefu, nje ya taarifa zinazotolewa na mazingira, Mawakala wa AI pia wanaweza kupata maarifa kutoka kwa mifumo mingine, huduma, zana, na hata mawakala wengine. Katika mfano wa wakala wa safari, maarifa haya yanaweza kuwa taarifa kuhusu mapendeleo ya safari ya mtumiaji yaliyoko katika hifadhidata ya wateja.
+- **Vifaa Vikubwa vya Lugha** — Wakala walikuwepo kabla ya LLMs, lakini LLMs ndizo zinazowafanya wakala wa kisasa kuwa nguvu zaidi. Wanaweza kuelewa lugha asilia, kutafakari muktadha, na kubadilisha ombi la mtumiaji lenye msamiati mdogo kuwa mpango halisi wa hatua.
 
-### Aina tofauti za Mawakala
+- **Kuchukua Hatua** — Bila mfumo wa wakala, LLM hutengeneza tu maandishi. Ndani ya mfumo wa wakala, LLM inaweza *kutekeleza* hatua — kutafuta kwenye hifadhidata, kuita API, kutuma ujumbe.
 
-Sasa kwa kuwa tuna ufafanuzi wa jumla wa Mawakala wa AI, hebu tuangalie baadhi ya aina maalum za mawakala na jinsi wangetumika kwa wakala wa kuhifadhi safari.
+- **Kupata Zana** — Ni zana gani wakala anaweza kutumia hutegemea (1) mazingira anayotumia na (2) kile msanidi alichokichagua kumpa. Wakala wa safari anaweza kutafuta ndege lakini siyo kuhariri rekodi za wateja — yote ni kuhusu nini unachompa.
 
-| **Aina ya Mwakala**           | **Maelezo**                                                                                                                           | **Mfano**                                                                                                                                                                                                                   |
-| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Mawakala wa Reflex Rahisi** | Hufanya vitendo vya haraka kulingana na sheria zilizowekwa awali.                                                                      | Mwakala wa safari hutafsiri muktadha wa barua pepe na kupeleka malalamiko ya safari kwa huduma kwa wateja.                                                                                                                   |
-| **Mawakala wa Reflex wa Kielelezo** | Hufanya vitendo kulingana na kielelezo cha dunia na mabadiliko ya kielelezo hicho.                                                   | Mwakala wa safari huweka kipaumbele njia zilizo na mabadiliko makubwa ya bei kulingana na upatikanaji wa data ya bei za kihistoria.                                                                                          |
-| **Mawakala wa Kulingana na Malengo** | Huunda mipango ya kufanikisha malengo maalum kwa kutafsiri lengo na kuamua vitendo vya kufanikisha.                                | Mwakala wa safari huhifadhi safari kwa kuamua mipango ya usafiri inayohitajika (gari, usafiri wa umma, ndege) kutoka eneo la sasa hadi marudio.                                                                               |
-| **Mawakala wa Kulingana na Faida** | Huzingatia mapendeleo na kupima faida na hasara kwa njia ya namba ili kuamua jinsi ya kufanikisha malengo.                         | Mwakala wa safari huongeza faida kwa kupima urahisi dhidi ya gharama wakati wa kuhifadhi safari.                                                                                                                             |
-| **Mawakala wa Kujifunza**     | Huboresha kwa muda kwa kujibu maoni na kurekebisha vitendo ipasavyo.                                                                  | Mwakala wa safari huboresha kwa kutumia maoni ya wateja kutoka kwa tafiti za baada ya safari ili kufanya marekebisho kwa uhifadhi wa safari za baadaye.                                                                 |
-| **Mawakala wa Kihierarkia**   | Huwa na mawakala wengi katika mfumo wa ngazi, ambapo mawakala wa ngazi ya juu hugawanya kazi katika kazi ndogo kwa mawakala wa ngazi ya chini kukamilisha. | Mwakala wa safari husitisha safari kwa kugawanya kazi katika kazi ndogo (kwa mfano, kufuta uhifadhi maalum) na kuwa na mawakala wa ngazi ya chini kukamilisha, wakiripoti kwa wakala wa ngazi ya juu.                             |
-| **Mifumo ya Mawakala Wengi (MAS)** | Mawakala hukamilisha kazi kwa uhuru, ama kwa kushirikiana au kwa ushindani.                                                         | Ushirikiano: Mawakala wengi huhifadhi huduma maalum za safari kama hoteli, ndege, na burudani. Ushindani: Mawakala wengi husimamia na kushindana juu ya kalenda ya uhifadhi wa hoteli ya pamoja ili kuhifadhi wateja katika hoteli. |
+- **Kumbukumbu + Maarifa** — Wakala wanaweza kuwa na kumbukumbu ya muda mfupi (mazungumzo ya sasa) na kumbukumbu ya muda mrefu (hifadhidata ya wateja, mawasiliano ya zamani). Wakala wa safari anaweza "kukumbuka" unavyopendelea viti vya dirisha.
 
-## Wakati wa Kutumia Mawakala wa AI
+---
 
-Katika sehemu ya awali, tulitumia mfano wa Mwakala wa Safari kuelezea jinsi aina tofauti za mawakala zinavyoweza kutumika katika hali tofauti za uhifadhi wa safari. Tutaendelea kutumia programu hii katika kozi nzima.
+### Aina Tofauti za Wakala wa AI
 
-Hebu tuangalie aina za matumizi ambayo Mawakala wa AI yanatumika vizuri:
+Siyo wakala wote wamejengwa sawa. Hapa kuna muhtasari wa aina kuu, tukitumia mfano wa wakala wa uhifadhi wa safari:
 
-![Wakati wa kutumia Mawakala wa AI?](../../../translated_images/sw/when-to-use-ai-agents.54becb3bed74a479.webp)
+| **Aina ya Wakala** | **Kinachofanya** | **Mfano wa Wakala wa Safari** |
+|---|---|---|
+| **Wakala wa Rejeleo Rahisi** | Hufuata sheria kali zilizowekwa — haina kumbukumbu, haina mipango. | Anaona barua ya malalamiko → anaituma huduma kwa wateja. Ndiyo yote. |
+| **Wakala wa Rejeleo wa Mfano** | Huweka mfano wa ndani wa dunia na kuuboresha inavyobadilika. | Anafuata bei za ndege za zamani na kuonesha njia ambazo ghafla zinapata gharama kubwa. |
+| **Wakala wa Lengo** | Ana lengo akilini na hupanga jinsi la kufikia hatua kwa hatua. | Anahifadhi safari nzima (ndege, gari, hoteli) kuanzia mahali ulipo sasa ili kukufikisha kwenye marudio yako. |
+| **Wakala wa Taarifa za Matumizi** | Hapatangi suluhisho tu *moja* — huchagua bora kwa kuzingatia makubaliano. | Analinganisha gharama dhidi ya urahisi ili kupata safari inayoridhisha zaidi mapendeleo yako. |
+| **Wakala wa Kujifunza** | Huboresha kwa muda kwa kujifunza kutoka maoni. | Hubadilisha mapendekezo ya uhifadhi wa baadaye kulingana na matokeo ya dodoso baada ya safari. |
+| **Wakala wa Ngazi Mbalimbali** | Wakala wa kiwango cha juu hugawanya kazi katika kazi ndogo na kuzirudisha kwenye wakala wa ngazi ya chini. | Ombi la "kughairi safari" husambazwa kuwa: ghairi ndege, ghairi hoteli, ghairi kukodisha gari — kila moja hufanywa na wakala mdogo. |
+| **Mifumo ya Wakala Wengi (MAS)** | Wakala wengi hufanya kazi kwa kushirikiana (au kushindana). | Ushirikiano: wakala tofauti hushughulikia hoteli, ndege, na burudani. Ushindani: wakala wengi hushindana kujaza vyumba vya hoteli kwa bei bora. |
 
-- **Masuala Yasiyo na Mwisho** - kuruhusu LLM kuamua hatua zinazohitajika kukamilisha kazi kwa sababu haiwezi kila mara kuwekwa moja kwa moja katika mtiririko wa kazi.
-- **Michakato ya Hatua Nyingi** - kazi zinazohitaji kiwango cha ugumu ambapo Mwakala wa AI anahitaji kutumia zana au taarifa kwa mizunguko mingi badala ya upatikanaji wa mara moja.  
-- **Kuboresha kwa Muda** - kazi ambapo wakala anaweza kuboresha kwa muda kwa kupokea maoni kutoka kwa mazingira yake au watumiaji ili kutoa faida bora.
+---
 
-Tunashughulikia zaidi masuala ya kutumia Mawakala wa AI katika somo la Kujenga Mawakala wa AI Wenye Kuaminika.
+## Lini Kutumia Wakala wa AI
 
-## Misingi ya Suluhisho za Kimawakala
+Kwa sababu unaweza kutumia Wakala wa AI haimaanishi daima unapaswa kutumia. Hapa ni hali ambapo wakala hufanya vizuri kweli:
 
-### Uundaji wa Mawakala
+![Lini kutumia Wakala wa AI?](../../../translated_images/sw/when-to-use-ai-agents.54becb3bed74a479.webp)
 
-Hatua ya kwanza katika kubuni mfumo wa Mwakala wa AI ni kufafanua zana, vitendo, na tabia. Katika kozi hii, tunazingatia kutumia **Huduma ya Mawakala wa Azure AI** kufafanua Mawakala wetu. Inatoa vipengele kama:
+- **Matatizo Yasiyo na Mwisho Umefafanuliwa** — Wakati hatua za kutatua tatizo haziwezi kupangwa kabla. Unahitaji LLM kugundua njia kwa mabadiliko.
+- **Mchakato wa Hatua Nyingi** — Kazi zinazohitaji kutumia zana kwa mizunguko mingi, siyo kutafuta au kutengeneza mara moja tu.
+- **Kuboresha kwa Muda** — Unapotaka mfumo kuwa akili zaidi kutegemea maoni ya mtumiaji au ishara za mazingira.
 
-- Uchaguzi wa Miundo ya Wazi kama OpenAI, Mistral, na Llama
-- Matumizi ya Data Iliyotolewa Leseni kupitia watoa huduma kama Tripadvisor
-- Matumizi ya zana za OpenAPI 3.0 zilizo sanifu
+Tutachunguza kwa undani lini (na lini *siyo*) kutumia Wakala wa AI katika somo la **Kujenga Wakala wa AI wa Kuaminika** baadaye kwenye kozi.
 
-### Mifumo ya Kimawakala
+---
 
-Mawasiliano na LLMs ni kupitia maelekezo. Kutokana na asili ya nusu ya kujitegemea ya Mawakala wa AI, si kila mara inawezekana au inahitajika kuandika upya maelekezo kwa LLM baada ya mabadiliko katika mazingira. Tunatumia **Mifumo ya Kimawakala** inayoturuhusu kutoa maelekezo kwa LLM kwa hatua nyingi kwa njia inayoweza kupanuka zaidi.
+## Misingi ya Suluhisho za Wakala
 
-Kozi hii imegawanywa katika baadhi ya mifumo maarufu ya Kimawakala ya sasa.
+### Ujenzi wa Wakala
 
-### Miundombinu ya Kimawakala
+Kitu cha kwanza unachofanya unapojenga wakala ni kuamua *anachoweza kufanya* — zana zake, vitendo, na tabia.
 
-Miundombinu ya Kimawakala inawaruhusu watengenezaji kutekeleza mifumo ya kimawakala kupitia msimbo. Miundombinu hii inatoa templeti, programu-jalizi, na zana kwa ushirikiano bora wa Mawakala wa AI. Faida hizi zinatoa uwezo wa ufuatiliaji bora na utatuzi wa matatizo ya mifumo ya Mawakala wa AI.
+Katika kozi hii, tunatumia **Huduma ya Wakala wa Microsoft Foundry** kama jukwaa letu kuu. Inasaidia:
 
-Katika kozi hii, tutachunguza mfumo wa AutoGen unaotokana na utafiti na mfumo wa Mwakala wa Semantic Kernel ulio tayari kwa uzalishaji.
+- Miundo kutoka kwa watoa huduma kama OpenAI, Mistral, na Meta (Llama)
+- Data iliyopewa leseni kutoka kwa watoa huduma kama Tripadvisor
+- Maelezo ya zana za OpenAPI 3.0 yaliyo viwango
 
-## Mifano ya Msimbo
+### Mifano ya Wakala
 
-- Python: [Mfumo wa Mwakala](./code_samples/01-python-agent-framework.ipynb)
-- .NET: [Mfumo wa Mwakala](./code_samples/01-dotnet-agent-framework.md)
+Unawasiliana na LLM kupitia maelekezo. Kwa wakala, huwezi kila wakati kutengeneza maelekezo kwa mkono — wakala anahitaji kuchukua hatua katika hatua nyingi. Hapa ndipo **Mifano ya Wakala** inapoingia. Ni mikakati inayoweza kutumika tena ya kutoa maelekezo na kupanga LLM kwa njia inayoweza kupanuliwa na ya kuaminika.
 
-## Una Maswali Zaidi Kuhusu Mawakala wa AI?
+Kozi hii imepangwa kulingana na mifano ya wakala inayotumika zaidi na yenye manufaa.
 
-Jiunge na [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) ili kukutana na wanafunzi wengine, kuhudhuria masaa ya ofisi na kupata majibu ya maswali yako kuhusu Mawakala wa AI.
+### Mfumo wa Agentic
 
-## Somo la Awali
+Mfumo wa Agentic huwapatia wasanidi programu templeti, zana, na miundombinu tayari kwa kujenga wakala. Hufanya iwe rahisi:
+
+- Kuunganisha zana na uwezo
+- Kuangalia wanachofanya wakala (na kutatua matatizo yanapojitokeza)
+- Kushirikiana kati ya wakala wengi
+
+Katika kozi hii, tunazingatia **Mfumo wa Wakala wa Microsoft (MAF)** kwa ajili ya kujenga wakala tayari kwa uzalishaji.
+
+---
+
+## Sampuli za Msimbo
+
+Tayari kuona jinsi inavyofanya kazi? Hapa kuna sampuli za msimbo kwa somo hili:
+
+- 🐍 Python: [Mfumo wa Wakala](./code_samples/01-python-agent-framework.ipynb)
+- 🔷 .NET: [Mfumo wa Wakala](./code_samples/01-dotnet-agent-framework.md)
+
+---
+
+## Una Maswali?
+
+Jiunge na [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) kuungana na wanafunzi wengine, kuhudhuria masaa ya ofisi, na kupata majibu ya maswali yako ya Wakala wa AI kutoka kwenye jamii.
+
+
+---
+
+## Kupima Haraka Wakala Huyu (Hiari)
+
+Mara tu unapojifunza kupeleka wakala katika [Somo la 16](../16-deploying-scalable-agents/README.md), unaweza kuongeza ukaguzi wa haraka wa afya baada ya kuweka kwa `TravelAgent` wa somo hili kwa kanda iliyotungwa tayari [`tests/lesson-01-smoke-tests.json`](../../../tests/lesson-01-smoke-tests.json). Tazama [`tests/README.md`](../tests/README.md) kwa jinsi ya kuendesha.
+
+---
+
+## Somo lililopita
 
 [Usanidi wa Kozi](../00-course-setup/README.md)
 
-## Somo Linalofuata
+## Somo lijalo
 
-[Kuchunguza Miundombinu ya Kimawakala](../02-explore-agentic-frameworks/README.md)
+[Kuchunguza Mifumo ya Agentic](../02-explore-agentic-frameworks/README.md)
 
 ---
 
 <!-- CO-OP TRANSLATOR DISCLAIMER START -->
-**Kanusho**:  
-Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kwa usahihi, tafadhali fahamu kuwa tafsiri za kiotomatiki zinaweza kuwa na makosa au kutokuwa sahihi. Hati ya asili katika lugha yake ya awali inapaswa kuzingatiwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu ya binadamu inapendekezwa. Hatutawajibika kwa kutoelewana au tafsiri zisizo sahihi zinazotokana na matumizi ya tafsiri hii.
+**Kionyozo**:
+Hati hii imetafsiriwa kwa kutumia huduma ya tafsiri ya AI [Co-op Translator](https://github.com/Azure/co-op-translator). Ingawa tunajitahidi kupata usahihi, tafadhali fahamu kwamba tafsiri za kiotomatiki zinaweza kuwa na makosa au upungufu wa usahihi. Hati ya asili katika lugha yake halisi inapaswa kuchukuliwa kama chanzo cha mamlaka. Kwa taarifa muhimu, tafsiri ya kitaalamu inayofanywa na binadamu inapendekezwa. Hatutojibu kwa kuelewa vibaya au tafsiri potofu zinazotokea kutokana na matumizi ya tafsiri hii.
 <!-- CO-OP TRANSLATOR DISCLAIMER END -->

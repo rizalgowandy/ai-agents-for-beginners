@@ -1,95 +1,95 @@
 [![Multi-Agent Design](../../../translated_images/nl/lesson-9-thumbnail.38059e8af1a5b71d.webp)](https://youtu.be/His9R6gw6Ec?si=3_RMb8VprNvdLRhX)
 
 > _(Klik op de afbeelding hierboven om de video van deze les te bekijken)_
-# Metacognitie in AI-agenten
+# Metacognitie in AI-agents
 
-## Introductie
+## Inleiding
 
-Welkom bij de les over metacognitie in AI-agenten! Dit hoofdstuk is bedoeld voor beginners die nieuwsgierig zijn naar hoe AI-agenten kunnen nadenken over hun eigen denkprocessen. Aan het einde van deze les begrijp je de belangrijkste concepten en beschik je over praktische voorbeelden om metacognitie toe te passen in het ontwerp van AI-agenten.
+Welkom bij de les over metacognitie in AI-agents! Dit hoofdstuk is ontworpen voor beginners die nieuwsgierig zijn naar hoe AI-agents na kunnen denken over hun eigen denkprocessen. Aan het einde van deze les begrijp je de belangrijkste concepten en ben je uitgerust met praktische voorbeelden om metacognitie toe te passen in het ontwerp van AI-agents.
 
 ## Leerdoelen
 
 Na het voltooien van deze les kun je:
 
 1. De implicaties van redeneerlussen in agentdefinities begrijpen.
-2. Plannings- en evaluatietechnieken gebruiken om zelfcorrigerende agenten te ondersteunen.
-3. Je eigen agenten maken die code kunnen manipuleren om taken uit te voeren.
+2. Plannings- en evaluatietechnieken gebruiken om zelfcorrigerende agents te helpen.
+3. Je eigen agents creëren die in staat zijn code te manipuleren om taken uit te voeren.
 
 ## Introductie tot Metacognitie
 
-Metacognitie verwijst naar de hogere-orde cognitieve processen die betrekking hebben op nadenken over je eigen denken. Voor AI-agenten betekent dit dat ze hun acties kunnen evalueren en aanpassen op basis van zelfbewustzijn en eerdere ervaringen. Metacognitie, of "nadenken over denken," is een belangrijk concept in de ontwikkeling van agentische AI-systemen. Het houdt in dat AI-systemen zich bewust zijn van hun eigen interne processen en in staat zijn hun gedrag te monitoren, reguleren en aanpassen. Net zoals wij dat doen wanneer we een situatie inschatten of een probleem analyseren. Dit zelfbewustzijn kan AI-systemen helpen betere beslissingen te nemen, fouten te identificeren en hun prestaties in de loop van de tijd te verbeteren – wat weer teruggrijpt op de Turing-test en de discussie over de vraag of AI de wereld zal overnemen.
+Metacognitie verwijst naar de hogere-orde cognitieve processen die gaan over het nadenken over het eigen denken. Voor AI-agents betekent dit dat ze hun acties kunnen evalueren en aanpassen op basis van zelfbewustzijn en ervaringen uit het verleden. Metacognitie, of "nadenken over nadenken," is een belangrijk concept in de ontwikkeling van agentgebaseerde AI-systemen. Het houdt in dat AI-systemen zich bewust zijn van hun eigen interne processen en in staat zijn hun gedrag te monitoren, reguleren en aanpassen. Net zoals wij dat doen als we de sfeer peilen of een probleem bekijken. Dit zelfbewustzijn kan AI-systemen helpen betere beslissingen te nemen, fouten te identificeren en hun prestaties in de loop van de tijd te verbeteren — wat weer terugkoppelt naar de Turing-test en het debat of AI de macht zal overnemen.
 
-In de context van agentische AI-systemen kan metacognitie helpen bij het aanpakken van verschillende uitdagingen, zoals:
-- Transparantie: Zorgen dat AI-systemen hun redeneringen en beslissingen kunnen uitleggen.
-- Redenering: Het verbeteren van het vermogen van AI-systemen om informatie te synthetiseren en weloverwogen beslissingen te nemen.
+In de context van agentgebaseerde AI-systemen kan metacognitie helpen verschillende uitdagingen aan te pakken, zoals:
+- Transparantie: Zorgdragen dat AI-systemen hun redenering en beslissingen kunnen uitleggen.
+- Redeneren: Het verbeteren van het vermogen van AI-systemen om informatie te synthetiseren en weloverwogen beslissingen te nemen.
 - Aanpassing: AI-systemen in staat stellen zich aan te passen aan nieuwe omgevingen en veranderende omstandigheden.
-- Perceptie: Het verbeteren van de nauwkeurigheid van AI-systemen bij het herkennen en interpreteren van gegevens uit hun omgeving.
+- Waarneming: Verbeteren van de nauwkeurigheid van AI-systemen bij het herkennen en interpreteren van gegevens uit hun omgeving.
 
 ### Wat is Metacognitie?
 
-Metacognitie, of "nadenken over denken," is een hogere-orde cognitief proces dat zelfbewustzijn en zelfregulatie van cognitieve processen omvat. In de wereld van AI stelt metacognitie agenten in staat hun strategieën en acties te evalueren en aan te passen, wat leidt tot verbeterde probleemoplossende en besluitvormingsvaardigheden. Door metacognitie te begrijpen, kun je AI-agenten ontwerpen die niet alleen intelligenter, maar ook aanpasbaarder en efficiënter zijn. Bij echte metacognitie zie je dat de AI expliciet redeneert over zijn eigen redenering.
+Metacognitie, of "nadenken over nadenken," is een hogere-orde cognitief proces dat zelfbewustzijn en zelfregulatie van de eigen cognitieve processen omvat. In het domein van AI stelt metacognitie agents in staat hun strategieën en acties te evalueren en aan te passen, wat leidt tot verbeterde probleemoplossing en besluitvorming. Door metacognitie te begrijpen, kun je AI-agents ontwerpen die niet alleen slimmer zijn, maar ook adaptiever en efficiënter. Bij echte metacognitie zou je zien dat de AI expliciet redeneringen maakt over zijn eigen redeneringen.
 
-Voorbeeld: “Ik gaf prioriteit aan goedkopere vluchten omdat... ik misschien directe vluchten over het hoofd zie, dus laat me dat opnieuw controleren.”
-Bijhouden hoe of waarom een bepaalde route is gekozen.
-- Opmerken dat er fouten zijn gemaakt omdat te veel werd vertrouwd op gebruikersvoorkeuren van de vorige keer, en daarom niet alleen de uiteindelijke aanbeveling aanpassen, maar ook de besluitvormingsstrategie.
-- Patronen diagnosticeren zoals: “Telkens wanneer de gebruiker ‘te druk’ noemt, moet ik niet alleen bepaalde attracties verwijderen, maar ook erkennen dat mijn methode om ‘topattracties’ te kiezen gebrekkig is als ik altijd op populariteit rangschik.”
+Voorbeeld: “Ik gaf prioriteit aan goedkopere vluchten omdat… misschien mis ik rechtstreekse vluchten, dus laat ik het opnieuw controleren.”.
+Bijhouden hoe of waarom het een bepaalde route koos.
+- Opmerken dat het fouten maakte omdat het te veel vertrouwde op gebruikersvoorkeuren van de vorige keer, dus het past zijn besluitvormingsstrategie aan en niet alleen de uiteindelijke aanbeveling.
+- Patronen diagnosticeren zoals: “Telkens wanneer ik de gebruiker ‘te druk’ hoor zeggen, moet ik niet alleen bepaalde attracties verwijderen maar ook reflecteren dat mijn methode om ‘topattracties’ te kiezen gebrekkig is als ik altijd rangschik op populariteit.”
 
-### Belang van Metacognitie in AI-agenten
+### Belang van Metacognitie in AI-agents
 
-Metacognitie speelt een cruciale rol in het ontwerp van AI-agenten om verschillende redenen:
+Metacognitie speelt een cruciale rol in het ontwerp van AI-agents om verschillende redenen:
 
 ![Belang van Metacognitie](../../../translated_images/nl/importance-of-metacognition.b381afe9aae352f7.webp)
 
-- Zelfreflectie: Agenten kunnen hun eigen prestaties beoordelen en verbeterpunten identificeren.
-- Aanpassingsvermogen: Agenten kunnen hun strategieën aanpassen op basis van eerdere ervaringen en veranderende omgevingen.
-- Foutcorrectie: Agenten kunnen zelfstandig fouten detecteren en corrigeren, wat leidt tot nauwkeurigere resultaten.
-- Middelenbeheer: Agenten kunnen het gebruik van middelen, zoals tijd en rekenkracht, optimaliseren door hun acties te plannen en te evalueren.
+- Zelfreflectie: Agents kunnen hun eigen prestaties beoordelen en verbeterpunten identificeren.
+- Aanpassingsvermogen: Agents kunnen hun strategieën aanpassen op basis van ervaringen uit het verleden en veranderende omgevingen.
+- Foutcorrectie: Agents kunnen autonoom fouten detecteren en corrigeren, wat leidt tot nauwkeurigere uitkomsten.
+- Hulpbronnenbeheer: Agents kunnen het gebruik van middelen zoals tijd en rekenkracht optimaliseren door hun acties te plannen en te evalueren.
 
 ## Componenten van een AI-agent
 
-Voordat we ingaan op metacognitieve processen, is het essentieel om de basiscomponenten van een AI-agent te begrijpen. Een AI-agent bestaat doorgaans uit:
+Voordat we dieper ingaan op metacognitieve processen, is het essentieel om de basiscomponenten van een AI-agent te begrijpen. Een AI-agent bestaat typisch uit:
 
-- Persona: De persoonlijkheid en kenmerken van de agent, die bepalen hoe deze met gebruikers communiceert.
-- Tools: De mogelijkheden en functies die de agent kan uitvoeren.
+- Persona: De persoonlijkheid en kenmerken van de agent, die bepalen hoe hij met gebruikers omgaat.
+- Hulpmiddelen: De mogelijkheden en functies die de agent kan uitvoeren.
 - Vaardigheden: De kennis en expertise die de agent bezit.
 
-Deze componenten werken samen om een "expertise-eenheid" te creëren die specifieke taken kan uitvoeren.
+Deze componenten werken samen om een "expertiseenheid" te vormen die specifieke taken kan uitvoeren.
 
 **Voorbeeld**:
-Denk aan een reisagent, een agentservice die niet alleen je vakantie plant, maar ook zijn aanpak aanpast op basis van realtime gegevens en eerdere klantreiservaringen.
+Denk aan een reisagent, een dienst die niet alleen je vakantie plant maar ook zijn route aanpast op basis van realtime data en eerdere ervaringen met klanten.
 
-### Voorbeeld: Metacognitie in een Reisagentservice
+### Voorbeeld: Metacognitie in een Reisagentendienst
 
-Stel je voor dat je een reisagentservice ontwerpt die wordt aangedreven door AI. Deze agent, "Reisagent," helpt gebruikers bij het plannen van hun vakanties. Om metacognitie te integreren, moet Reisagent zijn acties evalueren en aanpassen op basis van zelfbewustzijn en eerdere ervaringen. Hier is hoe metacognitie een rol kan spelen:
+Stel je voor dat je een reisagentendienst ontwerpt die aangedreven wordt door AI. Deze agent, “Travel Agent,” helpt gebruikers met het plannen van hun vakanties. Om metacognitie te integreren, moet Travel Agent zijn acties evalueren en aanpassen op basis van zelfbewustzijn en ervaringen uit het verleden. Zo zou metacognitie een rol kunnen spelen:
 
-#### Huidige Taak
+#### Huidige taak
 
 De huidige taak is om een gebruiker te helpen een reis naar Parijs te plannen.
 
-#### Stappen om de Taak te Voltooien
+#### Stappen om de taak te voltooien
 
-1. **Gebruikersvoorkeuren Verzamelen**: Vraag de gebruiker naar hun reisdata, budget, interesses (bijv. musea, gastronomie, winkelen) en specifieke vereisten.
-2. **Informatie Opzoeken**: Zoek naar vluchtopties, accommodaties, attracties en restaurants die aansluiten bij de voorkeuren van de gebruiker.
-3. **Aanbevelingen Genereren**: Bied een gepersonaliseerd reisschema aan met vluchtgegevens, hotelreserveringen en voorgestelde activiteiten.
-4. **Aanpassen op Basis van Feedback**: Vraag de gebruiker om feedback op de aanbevelingen en maak de nodige aanpassingen.
+1. **Verzamelen van gebruikersvoorkeuren**: Vraag de gebruiker naar zijn reisdata, budget, interesses (bijv. musea, keuken, shoppen) en specifieke wensen.
+2. **Informatie ophalen**: Zoek naar vluchtopties, accommodaties, bezienswaardigheden en restaurants die passen bij de voorkeuren van de gebruiker.
+3. **Aanbevelingen genereren**: Bied een gepersonaliseerd reisschema met vluchtgegevens, hotelreserveringen en voorgestelde activiteiten.
+4. **Aanpassen op basis van feedback**: Vraag de gebruiker om feedback op de aanbevelingen en pas deze indien nodig aan.
 
-#### Benodigde Middelen
+#### Vereiste middelen
 
 - Toegang tot databases voor vlucht- en hotelreserveringen.
-- Informatie over Parijse attracties en restaurants.
-- Gebruikersfeedbackgegevens van eerdere interacties.
+- Informatie over Parijse bezienswaardigheden en restaurants.
+- Gebruikersfeedback van eerdere interacties.
 
-#### Ervaring en Zelfreflectie
+#### Ervaring en zelfreflectie
 
-Reisagent gebruikt metacognitie om zijn prestaties te evalueren en te leren van eerdere ervaringen. Bijvoorbeeld:
+Travel Agent gebruikt metacognitie om zijn prestaties te evalueren en te leren van eerdere ervaringen. Bijvoorbeeld:
 
-1. **Analyseren van Gebruikersfeedback**: Reisagent beoordeelt gebruikersfeedback om te bepalen welke aanbevelingen goed werden ontvangen en welke niet. Het past zijn toekomstige suggesties hierop aan.
-2. **Aanpassingsvermogen**: Als een gebruiker eerder heeft aangegeven niet van drukke plekken te houden, zal Reisagent in de toekomst vermijden om populaire toeristische plekken tijdens piekuren aan te bevelen.
-3. **Foutcorrectie**: Als Reisagent in het verleden een fout heeft gemaakt, zoals het aanbevelen van een hotel dat volgeboekt was, leert het om beschikbaarheid grondiger te controleren voordat aanbevelingen worden gedaan.
+1. **Analyseren van gebruikersfeedback**: Travel Agent bekijkt gebruikersfeedback om te bepalen welke aanbevelingen goed werden ontvangen en welke niet. Het past zijn toekomstige suggesties hierop aan.
+2. **Aanpassingsvermogen**: Als een gebruiker eerder heeft aangegeven een hekel te hebben aan drukke plekken, zal Travel Agent in de toekomst vermijden om populaire toeristische plekken tijdens piekuren aan te bevelen.
+3. **Foutcorrectie**: Als Travel Agent een fout maakte bij een eerdere boeking, zoals het aanraden van een hotel dat volgeboekt was, leert het om de beschikbaarheid strenger te controleren voordat het aanbevelingen doet.
 
-#### Praktisch Ontwikkelaarsvoorbeeld
+#### Praktisch voorbeeld voor ontwikkelaars
 
-Hier is een vereenvoudigd voorbeeld van hoe de code van Reisagent eruit zou kunnen zien bij het integreren van metacognitie:
+Hier is een vereenvoudigd voorbeeld van hoe de code van Travel Agent eruit zou kunnen zien bij het integreren van metacognitie:
 
 ```python
 class Travel_Agent:
@@ -101,7 +101,7 @@ class Travel_Agent:
         self.user_preferences = preferences
 
     def retrieve_information(self):
-        # Search for flights, hotels, and attractions based on preferences
+        # Zoek naar vluchten, hotels en attracties op basis van voorkeuren
         flights = search_flights(self.user_preferences)
         hotels = search_hotels(self.user_preferences)
         attractions = search_attractions(self.user_preferences)
@@ -114,10 +114,10 @@ class Travel_Agent:
 
     def adjust_based_on_feedback(self, feedback):
         self.experience_data.append(feedback)
-        # Analyze feedback and adjust future recommendations
+        # Analyseer feedback en pas toekomstige aanbevelingen aan
         self.user_preferences = adjust_preferences(self.user_preferences, feedback)
 
-# Example usage
+# Voorbeeldgebruik
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -132,72 +132,73 @@ feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)
 travel_agent.adjust_based_on_feedback(feedback)
 ```
 
-#### Waarom Metacognitie Belangrijk Is
+#### Waarom metacognitie belangrijk is
 
-- **Zelfreflectie**: Agenten kunnen hun prestaties analyseren en verbeterpunten identificeren.
-- **Aanpassingsvermogen**: Agenten kunnen strategieën aanpassen op basis van feedback en veranderende omstandigheden.
-- **Foutcorrectie**: Agenten kunnen zelfstandig fouten detecteren en corrigeren.
-- **Middelenbeheer**: Agenten kunnen het gebruik van middelen optimaliseren, zoals tijd en rekenkracht.
+- **Zelfreflectie**: Agents kunnen hun prestaties analyseren en verbeterpunten identificeren.
+- **Aanpassingsvermogen**: Agents kunnen strategieën aanpassen op basis van feedback en veranderende omstandigheden.
+- **Foutcorrectie**: Agents kunnen autonoom fouten detecteren en corrigeren.
+- **Hulpbronnenbeheer**: Agents kunnen het gebruik van middelen zoals tijd en rekenkracht optimaliseren.
 
-Door metacognitie te integreren, kan Reisagent meer gepersonaliseerde en nauwkeurige reisaanbevelingen bieden, wat de algehele gebruikerservaring verbetert.
+Door metacognitie te integreren kan Travel Agent meer gepersonaliseerde en nauwkeurige reisaanbevelingen bieden, wat de algehele gebruikerservaring verbetert.
 
 ---
 
-## 2. Plannen in Agenten
+## 2. Planning in Agents
 
-Plannen is een cruciaal onderdeel van het gedrag van AI-agenten. Het omvat het uitstippelen van de stappen die nodig zijn om een doel te bereiken, rekening houdend met de huidige situatie, middelen en mogelijke obstakels.
 
-### Elementen van Plannen
+Planning is een cruciaal onderdeel van het gedrag van een AI-agent. Het omvat het schetsen van de stappen die nodig zijn om een doel te bereiken, rekening houdend met de huidige toestand, middelen en mogelijke obstakels.
+
+### Elementen van Planning
 
 - **Huidige Taak**: Definieer de taak duidelijk.
-- **Stappen om de Taak te Voltooien**: Splits de taak op in beheersbare stappen.
-- **Benodigde Middelen**: Identificeer de benodigde middelen.
-- **Ervaring**: Gebruik eerdere ervaringen om het plannen te informeren.
+- **Stappen om de Taak te Voltooien**: Verdeel de taak in beheersbare stappen.
+- **Benodigde Middelen**: Identificeer noodzakelijke middelen.
+- **Ervaring**: Gebruik eerdere ervaringen om de planning te informeren.
 
 **Voorbeeld**:
-Hier zijn de stappen die Reisagent moet nemen om een gebruiker effectief te helpen bij het plannen van hun reis:
+Hier zijn de stappen die Travel Agent moet nemen om een gebruiker effectief te helpen bij het plannen van zijn reis:
 
-### Stappen voor Reisagent
+### Stappen voor Travel Agent
 
-1. **Gebruikersvoorkeuren Verzamelen**
+1. **Verzamel Gebruikersvoorkeuren**
    - Vraag de gebruiker naar details over hun reisdata, budget, interesses en specifieke vereisten.
-   - Voorbeelden: "Wanneer wil je reizen?" "Wat is je budget?" "Welke activiteiten vind je leuk tijdens een vakantie?"
+   - Voorbeelden: "Wanneer ben je van plan te reizen?" "Wat is je budgetrange?" "Welke activiteiten vind je leuk tijdens je vakantie?"
 
-2. **Informatie Opzoeken**
-   - Zoek naar relevante reisopties op basis van gebruikersvoorkeuren.
-   - **Vluchten**: Zoek naar beschikbare vluchten binnen het budget en de voorkeuren van de gebruiker.
-   - **Accommodaties**: Vind hotels of huurwoningen die aansluiten bij de voorkeuren van de gebruiker qua locatie, prijs en voorzieningen.
+2. **Verkrijg Informatie**
+   - Zoek naar relevante reisopties op basis van de voorkeuren van de gebruiker.
+   - **Vluchten**: Zoek naar beschikbare vluchten binnen het budget en de gewenste reisdata van de gebruiker.
+   - **Accommodaties**: Vind hotels of huurwoningen die overeenkomen met de voorkeuren van de gebruiker voor locatie, prijs en voorzieningen.
    - **Attracties en Restaurants**: Identificeer populaire attracties, activiteiten en eetgelegenheden die aansluiten bij de interesses van de gebruiker.
 
-3. **Aanbevelingen Genereren**
-   - Stel de verzamelde informatie samen in een gepersonaliseerd reisschema.
-   - Geef details zoals vluchtopties, hotelreserveringen en voorgestelde activiteiten, afgestemd op de voorkeuren van de gebruiker.
+3. **Genereer Aanbevelingen**
+   - Stel de verkregen informatie samen in een gepersonaliseerd reisschema.
+   - Bied details zoals vluchtopties, hotelreserveringen en voorgestelde activiteiten, waarbij je ervoor zorgt dat de aanbevelingen zijn afgestemd op de voorkeuren van de gebruiker.
 
-4. **Reisschema Presenteren aan de Gebruiker**
+4. **Presenteer Reisschema aan Gebruiker**
    - Deel het voorgestelde reisschema met de gebruiker ter beoordeling.
-   - Voorbeeld: "Hier is een voorgesteld reisschema voor je reis naar Parijs. Het bevat vluchtgegevens, hotelboekingen en een lijst met aanbevolen activiteiten en restaurants. Laat me weten wat je ervan vindt!"
+   - Voorbeeld: "Hier is een voorgesteld reisschema voor je reis naar Parijs. Het bevat vluchtgegevens, hotelreserveringen en een lijst met aanbevolen activiteiten en restaurants. Laat me weten wat je ervan vindt!"
 
-5. **Feedback Verzamelen**
-   - Vraag de gebruiker om feedback op het voorgestelde reisschema.
+5. **Verzamel Feedback**
+   - Vraag de gebruiker om feedback over het voorgestelde reisschema.
    - Voorbeelden: "Vind je de vluchtopties goed?" "Is het hotel geschikt voor je behoeften?" "Zijn er activiteiten die je wilt toevoegen of verwijderen?"
 
-6. **Aanpassen op Basis van Feedback**
+6. **Pas aan op Basis van Feedback**
    - Pas het reisschema aan op basis van de feedback van de gebruiker.
-   - Breng de nodige wijzigingen aan in vlucht-, accommodatie- en activiteitsaanbevelingen om beter aan te sluiten bij de voorkeuren van de gebruiker.
+   - Breng de nodige wijzigingen aan in vlucht-, accommodatie- en activiteit-aanbevelingen om beter aan te sluiten bij de voorkeuren van de gebruiker.
 
 7. **Definitieve Bevestiging**
-   - Presenteer het bijgewerkte reisschema aan de gebruiker voor definitieve goedkeuring.
-   - Voorbeeld: "Ik heb de aanpassingen gemaakt op basis van je feedback. Hier is het bijgewerkte reisschema. Ziet alles er goed uit?"
+   - Presenteer het bijgewerkte reisschema aan de gebruiker voor definitieve bevestiging.
+   - Voorbeeld: "Ik heb de aanpassingen gedaan op basis van je feedback. Hier is het bijgewerkte reisschema. Ziet alles er goed uit voor je?"
 
-8. **Boeken en Reserveringen Bevestigen**
-   - Zodra de gebruiker het reisschema goedkeurt, ga verder met het boeken van vluchten, accommodaties en eventuele vooraf geplande activiteiten.
-   - Stuur bevestigingsdetails naar de gebruiker.
+8. **Boek en Bevestig Reserveringen**
+   - Zodra de gebruiker het reisschema goedkeurt, ga je over tot het boeken van vluchten, accommodaties en eventuele vooraf geplande activiteiten.
+   - Stuur bevestigingsgegevens naar de gebruiker.
 
-9. **Doorlopende Ondersteuning Bieden**
-   - Blijf beschikbaar om de gebruiker te helpen met eventuele wijzigingen of aanvullende verzoeken vóór en tijdens hun reis.
-   - Voorbeeld: "Als je tijdens je reis nog hulp nodig hebt, kun je altijd contact met me opnemen!"
+9. **Bied Voortdurende Ondersteuning**
+   - Blijf beschikbaar om de gebruiker te helpen met wijzigingen of extra verzoeken voor en tijdens hun reis.
+   - Voorbeeld: "Als je tijdens je reis nog hulp nodig hebt, neem dan gerust op elk moment contact met me op!"
 
-### Voorbeeldinteractie
+### Voorbeeld Interactie
 
 ```python
 class Travel_Agent:
@@ -223,7 +224,7 @@ class Travel_Agent:
         self.experience_data.append(feedback)
         self.user_preferences = adjust_preferences(self.user_preferences, feedback)
 
-# Example usage within a booing request
+# Voorbeeld van gebruik binnen een boeking aanvraag
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -238,48 +239,48 @@ feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)
 travel_agent.adjust_based_on_feedback(feedback)
 ```
 
-## 3. Correctief RAG-systeem
+## 3. Corrigerend RAG-systeem
 
-Laten we eerst het verschil begrijpen tussen het RAG-tool en Pre-emptive Context Load.
+Laten we eerst beginnen met het begrijpen van het verschil tussen RAG Tool en Pre-emptive Context Load
 
 ![RAG vs Context Loading](../../../translated_images/nl/rag-vs-context.9eae588520c00921.webp)
 
 ### Retrieval-Augmented Generation (RAG)
 
-RAG combineert een ophaalsysteem met een generatief model. Wanneer een vraag wordt gesteld, haalt het ophaalsysteem relevante documenten of gegevens op uit een externe bron, en deze opgehaalde informatie wordt gebruikt om de invoer van het generatieve model te verrijken. Dit helpt het model om nauwkeurigere en contextueel relevante antwoorden te genereren.
+RAG combineert een opvragsysteem met een generatief model. Wanneer een vraag wordt gesteld, haalt het opvragsysteem relevante documenten of gegevens op uit een externe bron, en deze opgehaalde informatie wordt gebruikt om de input van het generatieve model uit te breiden. Dit helpt het model om nauwkeurigere en contextueel relevantere antwoorden te genereren.
 
-In een RAG-systeem haalt de agent relevante informatie op uit een kennisbank en gebruikt deze om passende antwoorden of acties te genereren.
+In een RAG-systeem haalt de agent relevante informatie op uit een kennisbasis en gebruikt deze om passende antwoorden of acties te genereren.
 
-### Correctieve RAG-aanpak
+### Corrigerende RAG-benadering
 
-De Correctieve RAG-aanpak richt zich op het gebruik van RAG-technieken om fouten te corrigeren en de nauwkeurigheid van AI-agenten te verbeteren. Dit omvat:
+De corrigerende RAG-benadering richt zich op het gebruik van RAG-technieken om fouten te corrigeren en de nauwkeurigheid van AI-agents te verbeteren. Dit omvat:
 
-1. **Prompttechniek**: Het gebruik van specifieke prompts om de agent te begeleiden bij het ophalen van relevante informatie.
-2. **Tool**: Het implementeren van algoritmen en mechanismen waarmee de agent de relevantie van de opgehaalde informatie kan evalueren en nauwkeurige antwoorden kan genereren.
-3. **Evaluatie**: Het continu beoordelen van de prestaties van de agent en het aanbrengen van aanpassingen om de nauwkeurigheid en efficiëntie te verbeteren.
+1. **Promptingstechniek**: Het gebruik van specifieke prompts om de agent te begeleiden bij het ophalen van relevante informatie.
+2. **Hulpmiddel**: Implementatie van algoritmen en mechanismen die de agent in staat stellen de relevantie van de opgehaalde informatie te evalueren en nauwkeurige antwoorden te genereren.
+3. **Evaluatie**: Continue beoordeling van de prestaties van de agent en het aanbrengen van aanpassingen om de nauwkeurigheid en efficiëntie te verbeteren.
 
-#### Voorbeeld: Correctieve RAG in een Zoekagent
+#### Voorbeeld: Corrigerende RAG in een Zoekagent
 
-Denk aan een zoekagent die informatie van het web ophaalt om gebruikersvragen te beantwoorden. De Correctieve RAG-aanpak kan het volgende omvatten:
+Overweeg een zoekagent die informatie van het web haalt om gebruikersvragen te beantwoorden. De corrigerende RAG-benadering kan omvatten:
 
-1. **Prompttechniek**: Zoekopdrachten formuleren op basis van de invoer van de gebruiker.
-2. **Tool**: Het gebruik van natuurlijke taalverwerking en machine learning-algoritmen om zoekresultaten te rangschikken en te filteren.
-3. **Evaluatie**: Het analyseren van gebruikersfeedback om onnauwkeurigheden in de opgehaalde informatie te identificeren en te corrigeren.
+1. **Promptingstechniek**: Formuleren van zoekopdrachten op basis van de invoer van de gebruiker.
+2. **Hulpmiddel**: Gebruik maken van natuurlijke taalverwerking en machine learning-algoritmen om zoekresultaten te rangschikken en te filteren.
+3. **Evaluatie**: Analyseren van gebruikersfeedback om onnauwkeurigheden in de opgehaalde informatie te identificeren en te corrigeren.
 
-### Correctieve RAG in Reisagent
+### Corrigerende RAG in Travel Agent
 
-Correctieve RAG (Retrieval-Augmented Generation) verbetert het vermogen van een AI om informatie op te halen en te genereren, terwijl onnauwkeurigheden worden gecorrigeerd. Laten we zien hoe Reisagent de Correctieve RAG-aanpak kan gebruiken om nauwkeurigere en relevantere reisaanbevelingen te bieden.
+Corrigerende RAG (Retrieval-Augmented Generation) verbetert het vermogen van een AI om informatie op te halen en te genereren, terwijl het eventuele onnauwkeurigheden corrigeert. Laten we zien hoe Travel Agent de corrigerende RAG-benadering kan gebruiken om meer accurate en relevante reisaanbevelingen te bieden.
 
 Dit omvat:
 
-- **Prompttechniek:** Het gebruik van specifieke prompts om de agent te begeleiden bij het ophalen van relevante informatie.
-- **Tool:** Het implementeren van algoritmen en mechanismen waarmee de agent de relevantie van de opgehaalde informatie kan evalueren en nauwkeurige antwoorden kan genereren.
-- **Evaluatie:** Het continu beoordelen van de prestaties van de agent en het aanbrengen van aanpassingen om de nauwkeurigheid en efficiëntie te verbeteren.
+- **Promptingstechniek:** Gebruik van specifieke prompts om de agent te begeleiden bij het ophalen van relevante informatie.
+- **Hulpmiddel:** Implementatie van algoritmen en mechanismen waarmee de agent de relevantie van de opgehaalde informatie kan evalueren en nauwkeurige antwoorden kan genereren.
+- **Evaluatie:** Continue beoordeling van de prestaties van de agent en het aanbrengen van aanpassingen om de nauwkeurigheid en efficiëntie te verbeteren.
 
-#### Stappen voor het Implementeren van Correctieve RAG in Reisagent
+#### Stappen voor het Implementeren van Corrigerende RAG in Travel Agent
 
-1. **Initiële Gebruikersinteractie**
-   - Reisagent verzamelt initiële voorkeuren van de gebruiker, zoals bestemming, reisdata, budget en interesses.
+1. **Initieel Gebruikersonderzoek**
+   - Travel Agent verzamelt aanvankelijke voorkeuren van de gebruiker, zoals bestemming, reisdata, budget en interesses.
    - Voorbeeld:
 
      ```python
@@ -292,7 +293,7 @@ Dit omvat:
      ```
 
 2. **Informatie Ophalen**
-   - Reisagent haalt informatie op over vluchten, accommodaties, attracties en restaurants op basis van gebruikersvoorkeuren.
+   - Travel Agent haalt informatie op over vluchten, accommodaties, attracties en restaurants op basis van gebruikersvoorkeuren.
    - Voorbeeld:
 
      ```python
@@ -302,7 +303,7 @@ Dit omvat:
      ```
 
 3. **Genereren van Initiële Aanbevelingen**
-   - Reisagent gebruikt de opgehaalde informatie om een gepersonaliseerd reisschema te genereren.
+   - Travel Agent gebruikt de opgehaalde informatie om een gepersonaliseerd reisschema te genereren.
    - Voorbeeld:
 
      ```python
@@ -310,8 +311,8 @@ Dit omvat:
      print("Suggested Itinerary:", itinerary)
      ```
 
-4. **Gebruikersfeedback Verzamelen**
-   - Reisagent vraagt de gebruiker om feedback op de initiële aanbevelingen.
+4. **Verzamelen van Gebruikersfeedback**
+   - Travel Agent vraagt de gebruiker om feedback over de initiële aanbevelingen.
    - Voorbeeld:
 
      ```python
@@ -321,8 +322,8 @@ Dit omvat:
      }
      ```
 
-5. **Correctieve RAG-proces**
-   - **Prompttechniek**: Reisagent formuleert nieuwe zoekopdrachten op basis van gebruikersfeedback.
+5. **Corrigerend RAG Proces**
+   - **Promptingstechniek**: Travel Agent formuleert nieuwe zoekopdrachten op basis van gebruikersfeedback.
      - Voorbeeld:
 
        ```python
@@ -330,7 +331,7 @@ Dit omvat:
            preferences["avoid"] = feedback["disliked"]
        ```
 
-   - **Tool**: Reisagent gebruikt algoritmen om nieuwe zoekresultaten te rangschikken en te filteren, met nadruk op relevantie op basis van gebruikersfeedback.
+   - **Hulpmiddel**: Travel Agent gebruikt algoritmen om nieuwe zoekresultaten te rangschikken en te filteren, met nadruk op relevantie volgens gebruikersfeedback.
      - Voorbeeld:
 
        ```python
@@ -339,7 +340,7 @@ Dit omvat:
        print("Updated Itinerary:", new_itinerary)
        ```
 
-   - **Evaluatie**: Reisagent beoordeelt continu de relevantie en nauwkeurigheid van zijn aanbevelingen door gebruikersfeedback te analyseren en de nodige aanpassingen te maken.
+   - **Evaluatie**: Travel Agent beoordeelt continu de relevantie en nauwkeurigheid van zijn aanbevelingen door gebruikersfeedback te analyseren en waar nodig aanpassingen te doen.
      - Voorbeeld:
 
        ```python
@@ -355,7 +356,8 @@ Dit omvat:
 
 #### Praktisch Voorbeeld
 
-Hier is een vereenvoudigd Python-codevoorbeeld waarin de Correctieve RAG-aanpak in Reisagent wordt geïntegreerd:
+Hier is een vereenvoudigd Python-codevoorbeeld waarin de corrigerende RAG-benadering in Travel Agent wordt geïntegreerd:
+
 ```python
 class Travel_Agent:
     def __init__(self):
@@ -382,7 +384,7 @@ class Travel_Agent:
         new_itinerary = self.generate_recommendations()
         return new_itinerary
 
-# Example usage
+# Voorbeeld van gebruik
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -398,16 +400,17 @@ new_itinerary = travel_agent.adjust_based_on_feedback(feedback)
 print("Updated Itinerary:", new_itinerary)
 ```
 
-### Proactief Laden van Context
+### Pre-emptive Context Load
 
-Proactief laden van context houdt in dat relevante context of achtergrondinformatie vooraf in het model wordt geladen voordat een vraag wordt verwerkt. Dit betekent dat het model vanaf het begin toegang heeft tot deze informatie, wat kan helpen om beter geïnformeerde antwoorden te genereren zonder tijdens het proces extra gegevens op te halen.
 
-Hier is een vereenvoudigd voorbeeld van hoe proactief laden van context eruit kan zien voor een reisagententoepassing in Python:
+Pre-emptive Context Load houdt in dat relevante context of achtergrondinformatie in het model wordt geladen voordat een query wordt verwerkt. Dit betekent dat het model vanaf het begin toegang heeft tot deze informatie, wat kan helpen om beter geïnformeerde antwoorden te genereren zonder dat het tijdens het proces aanvullende gegevens hoeft op te halen.
+
+Hier is een vereenvoudigd voorbeeld van hoe een pre-emptive context load eruit zou kunnen zien voor een reisagenttoepassing in Python:
 
 ```python
 class TravelAgent:
     def __init__(self):
-        # Pre-load popular destinations and their information
+        # Laad populaire bestemmingen en hun informatie vooraf
         self.context = {
             "Paris": {"country": "France", "currency": "Euro", "language": "French", "attractions": ["Eiffel Tower", "Louvre Museum"]},
             "Tokyo": {"country": "Japan", "currency": "Yen", "language": "Japanese", "attractions": ["Tokyo Tower", "Shibuya Crossing"]},
@@ -416,14 +419,14 @@ class TravelAgent:
         }
 
     def get_destination_info(self, destination):
-        # Fetch destination information from pre-loaded context
+        # Haal bestemmingsinformatie op uit vooraf geladen context
         info = self.context.get(destination)
         if info:
             return f"{destination}:\nCountry: {info['country']}\nCurrency: {info['currency']}\nLanguage: {info['language']}\nAttractions: {', '.join(info['attractions'])}"
         else:
             return f"Sorry, we don't have information on {destination}."
 
-# Example usage
+# Voorbeeldgebruik
 travel_agent = TravelAgent()
 print(travel_agent.get_destination_info("Paris"))
 print(travel_agent.get_destination_info("Tokyo"))
@@ -431,27 +434,27 @@ print(travel_agent.get_destination_info("Tokyo"))
 
 #### Uitleg
 
-1. **Initialisatie (`__init__` methode)**: De `TravelAgent`-klasse laadt vooraf een woordenboek met informatie over populaire bestemmingen zoals Parijs, Tokio, New York en Sydney. Dit woordenboek bevat details zoals het land, de valuta, de taal en belangrijke bezienswaardigheden voor elke bestemming.
+1. **Initialisatie (`__init__` methode)**: De `TravelAgent` klasse laadt vooraf een woordenboek met informatie over populaire bestemmingen zoals Parijs, Tokio, New York en Sydney. Dit woordenboek bevat details zoals het land, de valuta, de taal en belangrijke attracties voor elke bestemming.
 
-2. **Informatie ophalen (`get_destination_info` methode)**: Wanneer een gebruiker informatie opvraagt over een specifieke bestemming, haalt de `get_destination_info`-methode de relevante informatie op uit het vooraf geladen contextwoordenboek.
+2. **Informatie ophalen (`get_destination_info` methode)**: Wanneer een gebruiker een specifieke bestemming opvraagt, haalt de `get_destination_info` methode de relevante informatie op uit het vooraf geladen contextwoordenboek.
 
-Door de context vooraf te laden, kan de reisagententoepassing snel reageren op gebruikersvragen zonder deze informatie in realtime van een externe bron te hoeven ophalen. Dit maakt de toepassing efficiënter en responsiever.
+Door de context vooraf te laden, kan de reisagenttoepassing snel reageren op gebruikersvragen zonder deze informatie in realtime uit een externe bron te hoeven halen. Dit maakt de applicatie efficiënter en responsiever.
 
-### Een Plan Opstarten met een Doel Voordat je Itereert
+### Opstarten van het Plan met een Doel voordat er wordt Geïnterateerd
 
-Een plan opstarten met een doel houdt in dat je begint met een duidelijk gedefinieerd doel of gewenste uitkomst. Door dit doel vooraf te definiëren, kan het model dit gebruiken als leidraad tijdens het iteratieve proces. Dit helpt ervoor te zorgen dat elke iteratie dichter bij het gewenste resultaat komt, waardoor het proces efficiënter en gerichter wordt.
+Het opstarten van een plan met een doel houdt in dat je begint met een duidelijk objectief of beoogde uitkomst. Door dit doel vooraf te definiëren, kan het model dit als leidraad gebruiken gedurende het iteratieve proces. Dit helpt ervoor te zorgen dat elke iteratie dichter bij het gewenste resultaat komt, waardoor het proces efficiënter en gerichter wordt.
 
-Hier is een voorbeeld van hoe je een reisplan kunt opstarten met een doel voordat je iteraties uitvoert voor een reisagent in Python:
+Hier is een voorbeeld van hoe je een reisplan zou kunnen opstarten met een doel voordat je gaat itereren voor een reisagent in Python:
 
 ### Scenario
 
-Een reisagent wil een op maat gemaakte vakantie plannen voor een klant. Het doel is om een reisroute te creëren die de tevredenheid van de klant maximaliseert op basis van hun voorkeuren en budget.
+Een reisagent wil een gepersonaliseerde vakantie plannen voor een klant. Het doel is om een reisschema te creëren dat de tevredenheid van de klant maximaliseert op basis van hun voorkeuren en budget.
 
 ### Stappen
 
-1. Definieer de voorkeuren en het budget van de klant.  
-2. Start een initieel plan op basis van deze voorkeuren.  
-3. Itereer om het plan te verfijnen en te optimaliseren voor de tevredenheid van de klant.  
+1. Definieer de voorkeuren en het budget van de klant.
+2. Start het initiële plan op basis van deze voorkeuren.
+3. Itereer om het plan te verfijnen, gericht op het optimaliseren van de tevredenheid van de klant.
 
 #### Python Code
 
@@ -488,7 +491,7 @@ class TravelAgent:
     def calculate_cost(self, plan, new_destination):
         return sum(destination['cost'] for destination in plan) + new_destination['cost']
 
-# Example usage
+# Voorbeeldgebruik
 destinations = [
     {"name": "Paris", "cost": 1000, "activity": "sightseeing"},
     {"name": "Tokyo", "cost": 1200, "activity": "shopping"},
@@ -507,55 +510,55 @@ refined_plan = travel_agent.iterate_plan(initial_plan, preferences, budget)
 print("Refined Plan:", refined_plan)
 ```
 
-#### Uitleg van de Code
+#### Uitleg Code
 
-1. **Initialisatie (`__init__` methode)**: De `TravelAgent`-klasse wordt geïnitialiseerd met een lijst van potentiële bestemmingen, elk met attributen zoals naam, kosten en type activiteit.
+1. **Initialisatie (`__init__` methode)**: De `TravelAgent` klasse wordt geïnitieerd met een lijst van potentiële bestemmingen, die elk eigenschappen hebben zoals naam, kosten en activiteittype.
 
-2. **Plan Opstarten (`bootstrap_plan` methode)**: Deze methode maakt een initieel reisplan op basis van de voorkeuren en het budget van de klant. Het doorloopt de lijst van bestemmingen en voegt ze toe aan het plan als ze overeenkomen met de voorkeuren van de klant en binnen het budget passen.
+2. **Opstarten van het Plan (`bootstrap_plan` methode)**: Deze methode maakt een initiëel reisplan gebaseerd op de voorkeuren en het budget van de klant. Het doorloopt de lijst van bestemmingen en voegt ze toe aan het plan als ze voldoen aan de voorkeuren en binnen het budget passen.
 
-3. **Voorkeuren Matchen (`match_preferences` methode)**: Deze methode controleert of een bestemming overeenkomt met de voorkeuren van de klant.
+3. **Voorkeuren Vergelijken (`match_preferences` methode)**: Deze methode controleert of een bestemming aansluit bij de voorkeuren van de klant.
 
 4. **Itereren van het Plan (`iterate_plan` methode)**: Deze methode verfijnt het initiële plan door te proberen elke bestemming in het plan te vervangen door een betere match, rekening houdend met de voorkeuren en budgetbeperkingen van de klant.
 
-5. **Kosten Berekenen (`calculate_cost` methode)**: Deze methode berekent de totale kosten van het huidige plan, inclusief een mogelijke nieuwe bestemming.
+5. **Kosten Berekenen (`calculate_cost` methode)**: Deze methode berekent de totale kosten van het huidige plan, inclusief een potentiële nieuwe bestemming.
 
-#### Voorbeeldgebruik
+#### Voorbeeld Gebruik
 
-- **Initieel Plan**: De reisagent maakt een initieel plan op basis van de voorkeuren van de klant voor bezienswaardigheden en een budget van $2000.  
-- **Verfijnd Plan**: De reisagent iterereert het plan en optimaliseert het voor de voorkeuren en het budget van de klant.  
+- **Initieel Plan**: De reisagent maakt een initieel plan op basis van de voorkeuren van de klant voor sightseeing en een budget van $2000.
+- **Verfijnd Plan**: De reisagent iterereert het plan en optimaliseert dit voor de voorkeuren en het budget van de klant.
 
-Door het plan op te starten met een duidelijk doel (bijvoorbeeld het maximaliseren van klanttevredenheid) en iteratief te verfijnen, kan de reisagent een op maat gemaakte en geoptimaliseerde reisroute voor de klant creëren. Deze aanpak zorgt ervoor dat het reisplan vanaf het begin aansluit bij de voorkeuren en het budget van de klant en verbetert met elke iteratie.
+Door het plan op te starten met een duidelijk doel (bijv. maximaliseren van klanttevredenheid) en te itereren om het plan te verfijnen, kan de reisagent een gepersonaliseerd en geoptimaliseerd reisschema maken voor de klant. Deze aanpak zorgt ervoor dat het reisplan vanaf het begin aansluit bij de voorkeuren en het budget van de klant en verbetert na elke iteratie.
 
-### Gebruikmaken van LLM voor Herordenen en Scoren
+### Gebruik maken van LLM voor Herordenen en Scoren
 
-Grote Taalmodellen (LLMs) kunnen worden gebruikt voor herordenen en scoren door de relevantie en kwaliteit van opgehaalde documenten of gegenereerde antwoorden te evalueren. Zo werkt het:
+Grote Taalmodellen (LLM's) kunnen worden gebruikt voor het herordenen en scoren door de relevantie en kwaliteit van opgehaalde documenten of gegenereerde antwoorden te evalueren. Zo werkt het:
 
-**Ophalen:** De eerste stap haalt een set kandidaat-documenten of antwoorden op basis van de vraag.  
+**Ophalen:** De initiële ophaalstap haalt een set kandidaat-documenten of antwoorden op basis van de query op.
 
-**Herordenen:** Het LLM evalueert deze kandidaten en herordent ze op basis van hun relevantie en kwaliteit. Deze stap zorgt ervoor dat de meest relevante en kwalitatieve informatie als eerste wordt gepresenteerd.  
+**Herordenen:** Het LLM evalueert deze kandidaten en herordent ze op basis van hun relevantie en kwaliteit. Deze stap zorgt ervoor dat de meest relevante en kwalitatieve informatie als eerste wordt getoond.
 
-**Scoren:** Het LLM kent scores toe aan elke kandidaat, die hun relevantie en kwaliteit weerspiegelen. Dit helpt bij het selecteren van het beste antwoord of document voor de gebruiker.  
+**Scoring:** Het LLM kent scores toe aan elke kandidaat, die hun relevantie en kwaliteit weerspiegelen. Dit helpt bij het selecteren van het beste antwoord of document voor de gebruiker.
 
-Door LLMs te gebruiken voor herordenen en scoren, kan het systeem nauwkeurigere en contextueel relevante informatie bieden, wat de algehele gebruikerservaring verbetert.
+Door LLM's in te zetten voor herordenen en scoren kan het systeem nauwkeurigere en contextueel relevantere informatie bieden, wat de algehele gebruikerservaring verbetert.
 
 Hier is een voorbeeld van hoe een reisagent een Groot Taalmodel (LLM) kan gebruiken voor het herordenen en scoren van reisbestemmingen op basis van gebruikersvoorkeuren in Python:
 
 #### Scenario - Reizen op Basis van Voorkeuren
 
-Een reisagent wil de beste reisbestemmingen aanbevelen aan een klant op basis van hun voorkeuren. Het LLM helpt bij het herordenen en scoren van de bestemmingen om ervoor te zorgen dat de meest relevante opties worden gepresenteerd.
+Een reisagent wil de beste reisbestemmingen aanbevelen aan een klant op basis van diens voorkeuren. Het LLM helpt bij het herordenen en scoren van bestemmingen om de meest relevante opties te presenteren.
 
 #### Stappen:
 
-1. Verzamel de voorkeuren van de gebruiker.  
-2. Haal een lijst van potentiële reisbestemmingen op.  
-3. Gebruik het LLM om de bestemmingen te herordenen en te scoren op basis van gebruikersvoorkeuren.  
+1. Verzamel gebruikersvoorkeuren.
+2. Haal een lijst op van potentiële reisbestemmingen.
+3. Gebruik het LLM om de bestemmingen te herordenen en te scoren op basis van de voorkeuren van de gebruiker.
 
-Hier is hoe je het vorige voorbeeld kunt aanpassen om Azure OpenAI Services te gebruiken:
+Hier zie je hoe je het vorige voorbeeld kunt bijwerken om Azure OpenAI Services te gebruiken:
 
 #### Vereisten
 
-1. Je hebt een Azure-abonnement nodig.  
-2. Maak een Azure OpenAI-resource aan en verkrijg je API-sleutel.  
+1. Je hebt een Azure-abonnement nodig.
+2. Maak een Azure OpenAI-resource aan en verkrijg je API-sleutel.
 
 #### Voorbeeld Python Code
 
@@ -568,10 +571,10 @@ class TravelAgent:
         self.destinations = destinations
 
     def get_recommendations(self, preferences, api_key, endpoint):
-        # Generate a prompt for the Azure OpenAI
+        # Genereer een prompt voor de Azure OpenAI
         prompt = self.generate_prompt(preferences)
         
-        # Define headers and payload for the request
+        # Definieer headers en payload voor het verzoek
         headers = {
             'Content-Type': 'application/json',
             'Authorization': f'Bearer {api_key}'
@@ -582,11 +585,11 @@ class TravelAgent:
             "temperature": 0.7
         }
         
-        # Call the Azure OpenAI API to get the re-ranked and scored destinations
+        # Roep de Azure OpenAI API aan om de opnieuw gerangschikte en gescoorde bestemmingen te verkrijgen
         response = requests.post(endpoint, headers=headers, json=payload)
         response_data = response.json()
         
-        # Extract and return the recommendations
+        # Extraheer en retourneer de aanbevelingen
         recommendations = response_data['choices'][0]['text'].strip().split('\n')
         return recommendations
 
@@ -599,7 +602,7 @@ class TravelAgent:
             prompt += f"- {destination['name']}: {destination['description']}\n"
         return prompt
 
-# Example usage
+# Voorbeeldgebruik
 destinations = [
     {"name": "Paris", "description": "City of lights, known for its art, fashion, and culture."},
     {"name": "Tokyo", "description": "Vibrant city, famous for its modernity and traditional temples."},
@@ -618,75 +621,75 @@ for rec in recommendations:
     print(rec)
 ```
 
-#### Uitleg van de Code - Voorkeurenboekingssysteem
+#### Uitleg Code - Voorkeuren Boeker
 
-1. **Initialisatie**: De `TravelAgent`-klasse wordt geïnitialiseerd met een lijst van potentiële reisbestemmingen, elk met attributen zoals naam en beschrijving.  
+1. **Initialisatie**: De `TravelAgent` klasse wordt geïnitieerd met een lijst van potentiële reisbestemmingen, elk met eigenschappen zoals naam en beschrijving.
 
-2. **Aanbevelingen Ophalen (`get_recommendations` methode)**: Deze methode genereert een prompt voor de Azure OpenAI-service op basis van de voorkeuren van de gebruiker en maakt een HTTP POST-verzoek naar de Azure OpenAI API om herordende en gescoorde bestemmingen te verkrijgen.  
+2. **Aanbevelingen Opvragen (`get_recommendations` methode)**: Deze methode genereert een prompt voor de Azure OpenAI-service op basis van de voorkeuren van de gebruiker en verstuurt een HTTP POST-verzoek naar de Azure OpenAI API om herordende en gescoorde bestemmingen op te halen.
 
-3. **Prompt Genereren (`generate_prompt` methode)**: Deze methode stelt een prompt samen voor Azure OpenAI, inclusief de voorkeuren van de gebruiker en de lijst van bestemmingen. De prompt begeleidt het model om de bestemmingen te herordenen en te scoren op basis van de opgegeven voorkeuren.  
+3. **Prompt Genereren (`generate_prompt` methode)**: Deze methode stelt een prompt op voor Azure OpenAI, inclusief de voorkeuren van de gebruiker en de lijst van bestemmingen. De prompt leidt het model om de bestemmingen te herordenen en te scoren op basis van de genoemde voorkeuren.
 
-4. **API-aanroep**: De `requests`-bibliotheek wordt gebruikt om een HTTP POST-verzoek te doen naar het Azure OpenAI API-eindpunt. Het antwoord bevat de herordende en gescoorde bestemmingen.  
+4. **API-aanroep**: De `requests` bibliotheek wordt gebruikt om een HTTP POST-verzoek te versturen naar de Azure OpenAI API endpoint. De respons bevat de herordende en gescoorde bestemmingen.
 
-5. **Voorbeeldgebruik**: De reisagent verzamelt gebruikersvoorkeuren (bijvoorbeeld interesse in bezienswaardigheden en diverse culturen) en gebruikt de Azure OpenAI-service om herordende en gescoorde aanbevelingen voor reisbestemmingen te verkrijgen.  
+5. **Voorbeeld Gebruik**: De reisagent verzamelt gebruikersvoorkeuren (bijv. interesse in sightseeing en diverse cultuur) en gebruikt de Azure OpenAI-service om herordende en gescoorde aanbevelingen voor reisbestemmingen te verkrijgen.
 
-Zorg ervoor dat je `your_azure_openai_api_key` vervangt door je daadwerkelijke Azure OpenAI API-sleutel en `https://your-endpoint.com/...` door de daadwerkelijke eindpunt-URL van je Azure OpenAI-implementatie.  
+Zorg ervoor dat je `your_azure_openai_api_key` vervangt door je daadwerkelijke Azure OpenAI API-sleutel en `https://your-endpoint.com/...` door de daadwerkelijke endpoint-URL van je Azure OpenAI-implementatie.
 
-Door het LLM te gebruiken voor herordenen en scoren, kan de reisagent meer gepersonaliseerde en relevante reisaanbevelingen bieden aan klanten, wat hun algehele ervaring verbetert.  
+Door het LLM in te zetten voor herordenen en scoren kan de reisagent gepersonaliseerde en relevantere reisaanbevelingen aan klanten bieden, wat hun algehele ervaring verbetert.
 
-### RAG: Prompttechniek versus Tool
+### RAG: Promptingtechniek versus Tool
 
-Retrieval-Augmented Generation (RAG) kan zowel een prompttechniek als een tool zijn bij de ontwikkeling van AI-agenten. Het begrijpen van het onderscheid tussen de twee kan je helpen RAG effectiever in je projecten te gebruiken.
+Retrieval-Augmented Generation (RAG) kan zowel een promptingtechniek als een tool zijn in de ontwikkeling van AI-agenten. Het begrijpen van het onderscheid tussen de twee kan je helpen RAG effectiever te gebruiken in je projecten.
 
-#### RAG als Prompttechniek
+#### RAG als Promptingtechniek
 
 **Wat is het?**
 
-- Als prompttechniek houdt RAG in dat je specifieke vragen of prompts formuleert om relevante informatie op te halen uit een grote corpus of database. Deze informatie wordt vervolgens gebruikt om antwoorden of acties te genereren.  
+- Als promptingtechniek houdt RAG in dat je specifieke queries of prompts formuleert om het ophalen van relevante informatie uit een grote corpus of database te sturen. Deze informatie wordt dan gebruikt om antwoorden of acties te genereren.
 
 **Hoe werkt het:**
 
-1. **Formuleer Prompts**: Maak goed gestructureerde prompts of vragen op basis van de taak of de invoer van de gebruiker.  
-2. **Informatie Ophalen**: Gebruik de prompts om relevante gegevens te zoeken in een bestaande kennisbank of dataset.  
-3. **Antwoord Genereren**: Combineer de opgehaalde informatie met generatieve AI-modellen om een uitgebreid en samenhangend antwoord te produceren.  
+1. **Formuleer Prompts**: Maak goed gestructureerde prompts of queries op basis van de taak of de invoer van de gebruiker.
+2. **Haal Informatie op**: Gebruik de prompts om relevante data op te zoeken uit een bestaande kennisbasis of dataset.
+3. **Genereer Antwoord**: Combineer de opgehaalde informatie met generatieve AI-modellen om een compleet en coherent antwoord te produceren.
 
 **Voorbeeld in Reisagent**:
 
-- Gebruikersinvoer: "Ik wil musea in Parijs bezoeken."  
-- Prompt: "Vind de beste musea in Parijs."  
-- Opgehaalde Informatie: Details over het Louvre, Musée d'Orsay, enz.  
-- Gegeneerd Antwoord: "Hier zijn enkele topmusea in Parijs: Louvre, Musée d'Orsay en Centre Pompidou."  
+- Gebruikersinvoer: "Ik wil musea in Parijs bezoeken."
+- Prompt: "Vind topmusea in Parijs."
+- Opgehaalde Informatie: Details over het Louvre, Musée d'Orsay, etc.
+- Gegeneerd Antwoord: "Hier zijn enkele topmusea in Parijs: Louvre Museum, Musée d'Orsay en Centre Pompidou."
 
 #### RAG als Tool
 
 **Wat is het?**
 
-- Als tool is RAG een geïntegreerd systeem dat het ophalen en genereren automatiseert, waardoor het voor ontwikkelaars eenvoudiger wordt om complexe AI-functionaliteiten te implementeren zonder handmatig prompts te maken voor elke vraag.  
+- Als tool is RAG een geïntegreerd systeem dat het ophalen en genereren automatiseert, waardoor het voor ontwikkelaars makkelijker wordt om complexe AI-functionaliteiten te implementeren zonder handmatig prompts te hoeven maken voor elke query.
 
 **Hoe werkt het:**
 
-1. **Integratie**: Integreer RAG binnen de architectuur van de AI-agent, zodat deze automatisch de ophaal- en genereertaken afhandelt.  
-2. **Automatisering**: De tool beheert het hele proces, van het ontvangen van gebruikersinvoer tot het genereren van het uiteindelijke antwoord, zonder expliciete prompts voor elke stap.  
-3. **Efficiëntie**: Verbetert de prestaties van de agent door het ophalen en genereren te stroomlijnen, waardoor snellere en nauwkeurigere antwoorden mogelijk zijn.  
+1. **Integratie**: Verwerk RAG in de architectuur van de AI-agent, zodat die automatisch de taken van ophalen en genereren kan uitvoeren.
+2. **Automatisering**: Het systeem beheert het hele proces, van het ontvangen van gebruikersinvoer tot het genereren van het uiteindelijke antwoord, zonder expliciete prompts voor elke stap.
+3. **Efficiëntie**: Verbetert de prestaties van de agent door het ophalen en genereren te stroomlijnen, wat snellere en nauwkeurigere antwoorden mogelijk maakt.
 
 **Voorbeeld in Reisagent**:
 
-- Gebruikersinvoer: "Ik wil musea in Parijs bezoeken."  
-- RAG Tool: Haalt automatisch informatie over musea op en genereert een antwoord.  
-- Gegeneerd Antwoord: "Hier zijn enkele topmusea in Parijs: Louvre, Musée d'Orsay en Centre Pompidou."  
+- Gebruikersinvoer: "Ik wil musea in Parijs bezoeken."
+- RAG Tool: Haalt automatisch informatie over musea op en genereert een antwoord.
+- Gegeneerd Antwoord: "Hier zijn enkele topmusea in Parijs: Louvre Museum, Musée d'Orsay en Centre Pompidou."
 
 ### Vergelijking
 
-| Aspect                 | Prompttechniek                                            | Tool                                                  |
-|------------------------|----------------------------------------------------------|-------------------------------------------------------|
-| **Handmatig vs Automatisch** | Handmatige formulering van prompts voor elke vraag.   | Geautomatiseerd proces voor ophalen en genereren.     |
-| **Controle**            | Biedt meer controle over het ophaalproces.               | Stroomlijnt en automatiseert ophalen en genereren.    |
-| **Flexibiliteit**        | Maakt aangepaste prompts mogelijk op basis van specifieke behoeften. | Efficiënter voor grootschalige implementaties.        |
-| **Complexiteit**         | Vereist het maken en aanpassen van prompts.              | Eenvoudiger te integreren in de architectuur van een AI-agent.   |
+| Aspect                 | Promptingtechniek                                      | Tool                                                  |
+|------------------------|--------------------------------------------------------|-------------------------------------------------------|
+| **Handmatig vs Automatisch**| Handmatige formulering van prompts voor elke query.    | Geautomatiseerd proces voor ophalen en genereren.      |
+| **Controle**            | Biedt meer controle over het ophaalproces.             | Stroomlijnt en automatiseert het ophalen en genereren. |
+| **Flexibiliteit**        | Laat aangepaste prompts toe op basis van specifieke behoeften.| Efficiënter voor grootschalige implementaties.        |
+| **Complexiteit**         | Vereist het maken en aanpassen van prompts.             | Makkelijker te integreren in de architectuur van een AI-agent.|
 
 ### Praktische Voorbeelden
 
-**Voorbeeld Prompttechniek:**
+**Promptingtechniek Voorbeeld:**
 
 ```python
 def search_museums_in_paris():
@@ -698,7 +701,7 @@ museums = search_museums_in_paris()
 print("Top Museums in Paris:", museums)
 ```
 
-**Voorbeeld Tool:**
+**Tool Voorbeeld:**
 
 ```python
 class Travel_Agent:
@@ -715,32 +718,32 @@ museums = travel_agent.get_museums_in_paris()
 print("Top Museums in Paris:", museums)
 ```
 
-### Relevantie Evalueren
+### Evalueren van Relevantie
 
-Het evalueren van relevantie is een cruciaal aspect van de prestaties van AI-agenten. Het zorgt ervoor dat de informatie die door de agent wordt opgehaald en gegenereerd, geschikt, accuraat en nuttig is voor de gebruiker. Laten we verkennen hoe je relevantie kunt evalueren in AI-agenten, inclusief praktische voorbeelden en technieken.
+Het evalueren van relevantie is een cruciaal aspect van de prestatie van een AI-agent. Het zorgt ervoor dat de informatie die door de agent wordt opgehaald en gegenereerd geschikt, accuraat en nuttig is voor de gebruiker. Laten we bekijken hoe je relevantie evalueert bij AI-agenten, inclusief praktische voorbeelden en technieken.
 
 #### Belangrijke Concepten bij het Evalueren van Relevantie
 
 1. **Contextbewustzijn**:
-   - De agent moet de context van de gebruikersvraag begrijpen om relevante informatie op te halen en te genereren.  
-   - Voorbeeld: Als een gebruiker vraagt naar "beste restaurants in Parijs," moet de agent rekening houden met de voorkeuren van de gebruiker, zoals type keuken en budget.  
+   - De agent moet de context van de gebruikersvraag begrijpen om relevante informatie op te halen en te genereren.
+   - Voorbeeld: Als een gebruiker vraagt om "beste restaurants in Parijs", moet de agent rekening houden met de voorkeuren van de gebruiker, zoals het type keuken en budget.
 
 2. **Nauwkeurigheid**:
-   - De informatie die door de agent wordt verstrekt, moet feitelijk correct en actueel zijn.  
-   - Voorbeeld: Aanbevelen van restaurants die momenteel open zijn en goede recensies hebben, in plaats van verouderde of gesloten opties.  
+   - De informatie die door de agent wordt geleverd moet feitelijk correct en actueel zijn.
+   - Voorbeeld: Aanbevelen van momenteel geopende restaurants met goede recensies in plaats van verouderde of gesloten opties.
 
 3. **Gebruikersintentie**:
-   - De agent moet de intentie van de gebruiker achter de vraag afleiden om de meest relevante informatie te bieden.  
-   - Voorbeeld: Als een gebruiker vraagt naar "budgetvriendelijke hotels," moet de agent betaalbare opties prioriteren.  
+   - De agent moet de intentie van de gebruiker achter de vraag afleiden om de meest relevante informatie te bieden.
+   - Voorbeeld: Als een gebruiker vraagt om "betaalbare hotels", moet de agent betaalbare opties prioriteren.
 
-4. **Feedbackloop**:
-   - Het continu verzamelen en analyseren van gebruikersfeedback helpt de agent om het proces van relevantie-evaluatie te verfijnen.  
-   - Voorbeeld: Gebruikersbeoordelingen en feedback op eerdere aanbevelingen integreren om toekomstige antwoorden te verbeteren.  
+4. **Feedback Loops**:
+   - Het continu verzamelen en analyseren van gebruikersfeedback helpt de agent zijn relevantiebeoordeling te verfijnen.
+   - Voorbeeld: Het opnemen van gebruikersbeoordelingen en feedback op eerdere aanbevelingen om toekomstige antwoorden te verbeteren.
 
 #### Praktische Technieken voor het Evalueren van Relevantie
 
-1. **Relevantie Scoren**:
-   - Ken een relevantiescore toe aan elk opgehaald item op basis van hoe goed het overeenkomt met de vraag en voorkeuren van de gebruiker.  
+1. **Relevantie Score**:
+   - Ken een relevantiescore toe aan elk opgehaald item op basis van hoe goed het overeenkomt met de gebruikersvraag en -voorkeuren.
    - Voorbeeld:
 
      ```python
@@ -756,28 +759,28 @@ Het evalueren van relevantie is een cruciaal aspect van de prestaties van AI-age
      ```
 
 2. **Filteren en Rangschikken**:
-   - Filter irrelevante items eruit en rangschik de resterende items op basis van hun relevantiescores.  
+   - Filter irrelevante items eruit en rangschik de resterende op basis van hun relevantiescores.
    - Voorbeeld:
 
      ```python
      def filter_and_rank(items, query):
          ranked_items = sorted(items, key=lambda item: relevance_score(item, query), reverse=True)
-         return ranked_items[:10]  # Return top 10 relevant items
+         return ranked_items[:10]  # Retourneer top 10 relevante items
      ```
 
-3. **Natuurlijke Taalverwerking (NLP)**:
-   - Gebruik NLP-technieken om de gebruikersvraag te begrijpen en relevante informatie op te halen.  
+3. **Natural Language Processing (NLP)**:
+   - Gebruik NLP-technieken om de gebruikersvraag te begrijpen en relevante informatie op te halen.
    - Voorbeeld:
 
      ```python
      def process_query(query):
-         # Use NLP to extract key information from the user's query
+         # Gebruik NLP om sleutelinformatie uit de query van de gebruiker te halen
          processed_query = nlp(query)
          return processed_query
      ```
 
-4. **Gebruikersfeedback Integreren**:
-   - Verzamel gebruikersfeedback over de verstrekte aanbevelingen en gebruik deze om toekomstige relevantie-evaluaties aan te passen.  
+4. **Integratie van Gebruikersfeedback**:
+   - Verzamel gebruikersfeedback over de gegeven aanbevelingen en gebruik deze om toekomstige relevantiebeoordelingen aan te passen.
    - Voorbeeld:
 
      ```python
@@ -790,9 +793,9 @@ Het evalueren van relevantie is een cruciaal aspect van de prestaties van AI-age
          return items
      ```
 
-#### Voorbeeld: Relevantie Evalueren in Reisagent
+#### Voorbeeld: Evalueren van Relevantie in Reisagent
 
-Hier is een praktisch voorbeeld van hoe een reisagent de relevantie van reisaanbevelingen kan evalueren:
+Hier is een praktisch voorbeeld van hoe Travel Agent de relevantie van reisaanbevelingen kan evalueren:
 
 ```python
 class Travel_Agent:
@@ -817,7 +820,7 @@ class Travel_Agent:
 
     def filter_and_rank(self, items, query):
         ranked_items = sorted(items, key=lambda item: self.relevance_score(item, query), reverse=True)
-        return ranked_items[:10]  # Return top 10 relevant items
+        return ranked_items[:10]  # Geef de top 10 relevante items terug
 
     def relevance_score(self, item, query):
         score = 0
@@ -837,7 +840,7 @@ class Travel_Agent:
                 item['relevance'] -= 1
         return items
 
-# Example usage
+# Voorbeeld van gebruik
 travel_agent = Travel_Agent()
 preferences = {
     "destination": "Paris",
@@ -855,29 +858,30 @@ print("Updated Itinerary with Feedback:", updated_items)
 
 ### Zoeken met Intentie
 
-Zoeken met intentie houdt in dat je het onderliggende doel of de achterliggende gedachte van een gebruikersvraag begrijpt en interpreteert om de meest relevante en nuttige informatie op te halen en te genereren. Deze aanpak gaat verder dan alleen het matchen van trefwoorden en richt zich op het begrijpen van de werkelijke behoeften en context van de gebruiker.
+Zoeken met intentie houdt in dat je het onderliggende doel of de bedoeling achter een gebruikersvraag begrijpt en interpreteert om de meest relevante en nuttige informatie op te halen en te genereren. Deze aanpak gaat verder dan het simpelweg zoeken naar trefwoorden en richt zich op het begrijpen van de daadwerkelijke behoeften en context van de gebruiker.
 
-#### Belangrijke Concepten bij Zoeken met Intentie
+#### Belangrijke Concepten in Zoeken met Intentie
 
-1. **Gebruikersintentie Begrijpen**:
-   - Gebruikersintentie kan worden onderverdeeld in drie hoofdtypen: informatief, navigerend en transactioneel.  
-     - **Informatieve Intentie**: De gebruiker zoekt informatie over een onderwerp (bijv. "Wat zijn de beste musea in Parijs?").  
-     - **Navigerende Intentie**: De gebruiker wil naar een specifieke website of pagina navigeren (bijv. "Officiële website van het Louvre").  
-     - **Transactionele Intentie**: De gebruiker wil een transactie uitvoeren, zoals het boeken van een vlucht of het doen van een aankoop (bijv. "Boek een vlucht naar Parijs").  
+1. **Begrijpen van Gebruikersintentie**:
+   - Gebruikersintentie kan worden onderverdeeld in drie hoofdtypen: informatief, navigerend en transactioneel.
+     - **Informatieve Intentie**: De gebruiker zoekt informatie over een onderwerp (bijv. "Wat zijn de beste musea in Parijs?").
+     - **Navigerende Intentie**: De gebruiker wil naar een specifieke website of pagina navigeren (bijv. "Officiële website van het Louvre").
+     - **Transactionele Intentie**: De gebruiker wil een transactie uitvoeren, zoals een vlucht boeken of een aankoop doen (bijv. "Boek een vlucht naar Parijs").
 
 2. **Contextbewustzijn**:
-   - Het analyseren van de context van de gebruikersvraag helpt bij het nauwkeurig identificeren van hun intentie. Dit omvat het overwegen van eerdere interacties, gebruikersvoorkeuren en de specifieke details van de huidige vraag.  
+   - Het analyseren van de context van de gebruikersvraag helpt om hun intentie nauwkeurig te identificeren. Dit omvat het meenemen van eerdere interacties, gebruikersvoorkeuren en specifieke details van de huidige vraag.
 
-3. **Natuurlijke Taalverwerking (NLP)**:
-   - NLP-technieken worden gebruikt om de natuurlijke taalvragen van gebruikers te begrijpen en te interpreteren. Dit omvat taken zoals entiteitsherkenning, sentimentanalyse en query-analyse.  
+3. **Natural Language Processing (NLP)**:
+   - NLP-technieken worden ingezet om de natuurlijke taalvragen van gebruikers te begrijpen en interpreteren. Dit omvat taken zoals entiteitsherkenning, sentimentanalyse en queryparsing.
 
 4. **Personalisatie**:
-   - Het personaliseren van de zoekresultaten op basis van de geschiedenis, voorkeuren en feedback van de gebruiker verbetert de relevantie van de opgehaalde informatie.  
-#### Praktisch Voorbeeld: Zoeken met Intentie in Travel Agent
+   - Het personaliseren van zoekresultaten op basis van de geschiedenis, voorkeuren en feedback van de gebruiker verhoogt de relevantie van de opgehaalde informatie.
+
+#### Praktisch Voorbeeld: Zoeken met Intentie in Reisagent
 
 Laten we Travel Agent als voorbeeld nemen om te zien hoe zoeken met intentie kan worden geïmplementeerd.
 
-1. **Gebruikersvoorkeuren Verzamelen**
+1. **Verzamelen van Gebruikersvoorkeuren**
 
    ```python
    class Travel_Agent:
@@ -888,7 +892,7 @@ Laten we Travel Agent als voorbeeld nemen om te zien hoe zoeken met intentie kan
            self.user_preferences = preferences
    ```
 
-2. **Gebruikersintentie Begrijpen**
+2. **Begrijpen van Gebruikersintentie**
 
    ```python
    def identify_intent(query):
@@ -902,9 +906,10 @@ Laten we Travel Agent als voorbeeld nemen om te zien hoe zoeken met intentie kan
 
 3. **Contextbewustzijn**
 
+
    ```python
    def analyze_context(query, user_history):
-       # Combine current query with user history to understand context
+       # Combineer de huidige zoekopdracht met de gebruikersgeschiedenis om de context te begrijpen
        context = {
            "current_query": query,
            "user_history": user_history
@@ -912,7 +917,7 @@ Laten we Travel Agent als voorbeeld nemen om te zien hoe zoeken met intentie kan
        return context
    ```
 
-4. **Zoeken en Resultaten Personaliseren**
+4. **Zoek en Personaliseer Resultaten**
 
    ```python
    def search_with_intent(query, preferences, user_history):
@@ -928,24 +933,24 @@ Laten we Travel Agent als voorbeeld nemen om te zien hoe zoeken met intentie kan
        return personalized_results
 
    def search_information(query, preferences):
-       # Example search logic for informational intent
+       # Voorbeeld zoeklogica voor informatieve intentie
        results = search_web(f"best {preferences['interests']} in {preferences['destination']}")
        return results
 
    def search_navigation(query):
-       # Example search logic for navigational intent
+       # Voorbeeld zoeklogica voor navigatie-intentie
        results = search_web(query)
        return results
 
    def search_transaction(query, preferences):
-       # Example search logic for transactional intent
+       # Voorbeeld zoeklogica voor transactionele intentie
        results = search_web(f"book {query} to {preferences['destination']}")
        return results
 
    def personalize_results(results, user_history):
-       # Example personalization logic
+       # Voorbeeld personalisatielogica
        personalized = [result for result in results if result not in user_history]
-       return personalized[:10]  # Return top 10 personalized results
+       return personalized[:10]  # Geef de top 10 gepersonaliseerde resultaten terug
    ```
 
 5. **Voorbeeldgebruik**
@@ -965,48 +970,48 @@ Laten we Travel Agent als voorbeeld nemen om te zien hoe zoeken met intentie kan
 
 ---
 
-## 4. Code Genereren als Hulpmiddel
+## 4. Code Genereren als Tool
 
-Codegenererende agents gebruiken AI-modellen om code te schrijven en uit te voeren, complexe problemen op te lossen en taken te automatiseren.
+Code genererende agenten gebruiken AI-modellen om code te schrijven en uit te voeren, waarmee ze complexe problemen oplossen en taken automatiseren.
 
-### Codegenererende Agents
+### Code Genererende Agenten
 
-Codegenererende agents maken gebruik van generatieve AI-modellen om code te schrijven en uit te voeren. Deze agents kunnen complexe problemen oplossen, taken automatiseren en waardevolle inzichten bieden door code te genereren en uit te voeren in verschillende programmeertalen.
+Code genererende agenten gebruiken generatieve AI-modellen om code te schrijven en uit te voeren. Deze agenten kunnen complexe problemen oplossen, taken automatiseren en waardevolle inzichten bieden door code te genereren en uit te voeren in verschillende programmeertalen.
 
 #### Praktische Toepassingen
 
-1. **Automatische Codegeneratie**: Genereer codefragmenten voor specifieke taken, zoals data-analyse, webscraping of machine learning.  
-2. **SQL als een RAG**: Gebruik SQL-query's om gegevens uit databases op te halen en te manipuleren.  
-3. **Probleemoplossing**: Maak en voer code uit om specifieke problemen op te lossen, zoals het optimaliseren van algoritmen of het analyseren van gegevens.  
+1. **Geautomatiseerde Codegeneratie**: Genereer codefragmenten voor specifieke taken, zoals data-analyse, webscraping of machine learning.
+2. **SQL als een RAG**: Gebruik SQL-queries om gegevens uit databases op te halen en te manipuleren.
+3. **Probleemoplossing**: Maak en voer code uit om specifieke problemen op te lossen, zoals het optimaliseren van algoritmes of het analyseren van data.
 
-#### Voorbeeld: Codegenererende Agent voor Data-analyse
+#### Voorbeeld: Code Genererende Agent voor Data-analyse
 
-Stel je voor dat je een codegenererende agent ontwerpt. Zo zou het kunnen werken:
+Stel je voor dat je een code genererende agent ontwerpt. Zo zou het kunnen werken:
 
-1. **Taak**: Een dataset analyseren om trends en patronen te identificeren.  
-2. **Stappen**:  
-   - Laad de dataset in een data-analysetool.  
-   - Genereer SQL-query's om de gegevens te filteren en te aggregeren.  
-   - Voer de query's uit en haal de resultaten op.  
-   - Gebruik de resultaten om visualisaties en inzichten te genereren.  
-3. **Benodigde Middelen**: Toegang tot de dataset, data-analysetools en SQL-mogelijkheden.  
-4. **Ervaring**: Gebruik eerdere analyse-resultaten om de nauwkeurigheid en relevantie van toekomstige analyses te verbeteren.  
+1. **Taak**: Analyseer een dataset om trends en patronen te identificeren.
+2. **Stappen**:
+   - Laad de dataset in een data-analysetool.
+   - Genereer SQL-queries om de data te filteren en te aggregeren.
+   - Voer de queries uit en haal de resultaten op.
+   - Gebruik de resultaten om visualisaties en inzichten te genereren.
+3. **Benodigde Middelen**: Toegang tot de dataset, data-analysetools en SQL-mogelijkheden.
+4. **Ervaring**: Gebruik eerdere analyses om de nauwkeurigheid en relevantie van toekomstige analyses te verbeteren.
 
-### Voorbeeld: Codegenererende Agent voor Travel Agent
+### Voorbeeld: Code Genererende Agent voor Reisagent
 
-In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebruikers te helpen bij het plannen van hun reizen door code te genereren en uit te voeren. Deze agent kan taken uitvoeren zoals het ophalen van reisopties, het filteren van resultaten en het samenstellen van een reisplan met behulp van generatieve AI.
+In dit voorbeeld ontwerpen we een code genererende agent, Reisagent, die gebruikers helpt bij het plannen van hun reis door code te genereren en uit te voeren. Deze agent kan taken afhandelen zoals het ophalen van reismogelijkheden, filteren van resultaten en het samenstellen van een reisroute met behulp van generatieve AI.
 
-#### Overzicht van de Codegenererende Agent
+#### Overzicht van de Code Genererende Agent
 
-1. **Gebruikersvoorkeuren Verzamelen**: Verzamelt gebruikersinvoer zoals bestemming, reisdata, budget en interesses.  
-2. **Code Genereren om Gegevens op te Halen**: Genereert codefragmenten om gegevens over vluchten, hotels en attracties op te halen.  
-3. **Gegenereerde Code Uitvoeren**: Voert de gegenereerde code uit om realtime informatie op te halen.  
-4. **Reisplan Genereren**: Stelt de opgehaalde gegevens samen tot een gepersonaliseerd reisplan.  
-5. **Aanpassen op Basis van Feedback**: Ontvangt gebruikersfeedback en genereert indien nodig opnieuw code om de resultaten te verfijnen.  
+1. **Verzamelen van Gebruikersvoorkeuren**: Verzamelt gebruikersinvoer zoals bestemming, reisdata, budget en interesses.
+2. **Code Genereren om Gegevens op te halen**: Genereert codefragmenten om gegevens over vluchten, hotels en attracties op te halen.
+3. **Uitvoeren van de Gegeneerde Code**: Voert de gegenereerde code uit om realtime informatie op te halen.
+4. **Genereren van Reisroute**: Stelt de opgehaalde gegevens samen in een gepersonaliseerd reisplan.
+5. **Aanpassen op basis van Feedback**: Ontvangt gebruikersfeedback en genereert indien nodig opnieuw code om de resultaten te verfijnen.
 
 #### Stapsgewijze Implementatie
 
-1. **Gebruikersvoorkeuren Verzamelen**
+1. **Verzamelen van Gebruikersvoorkeuren**
 
    ```python
    class Travel_Agent:
@@ -1017,11 +1022,11 @@ In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebrui
            self.user_preferences = preferences
    ```
 
-2. **Code Genereren om Gegevens op te Halen**
+2. **Code Genereren om Gegevens op te halen**
 
    ```python
    def generate_code_to_fetch_data(preferences):
-       # Example: Generate code to search for flights based on user preferences
+       # Voorbeeld: Genereer code om naar vluchten te zoeken op basis van gebruikersvoorkeuren
        code = f"""
        def search_flights():
            import requests
@@ -1031,7 +1036,7 @@ In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebrui
        return code
 
    def generate_code_to_fetch_hotels(preferences):
-       # Example: Generate code to search for hotels
+       # Voorbeeld: Genereer code om naar hotels te zoeken
        code = f"""
        def search_hotels():
            import requests
@@ -1041,11 +1046,11 @@ In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebrui
        return code
    ```
 
-3. **Gegenereerde Code Uitvoeren**
+3. **Uitvoeren van de Gegeneerde Code**
 
    ```python
    def execute_code(code):
-       # Execute the generated code using exec
+       # Voer de gegenereerde code uit met exec
        exec(code)
        result = locals()
        return result
@@ -1069,7 +1074,7 @@ In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebrui
    print("Hotel Options:", hotels)
    ```
 
-4. **Reisplan Genereren**
+4. **Genereren van Reisroute**
 
    ```python
    def generate_itinerary(flights, hotels, attractions):
@@ -1085,11 +1090,11 @@ In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebrui
    print("Suggested Itinerary:", itinerary)
    ```
 
-5. **Aanpassen op Basis van Feedback**
+5. **Aanpassen op basis van Feedback**
 
    ```python
    def adjust_based_on_feedback(feedback, preferences):
-       # Adjust preferences based on user feedback
+       # Pas voorkeuren aan op basis van gebruikersfeedback
        if "liked" in feedback:
            preferences["favorites"] = feedback["liked"]
        if "disliked" in feedback:
@@ -1099,7 +1104,7 @@ In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebrui
    feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
    updated_preferences = adjust_based_on_feedback(feedback, preferences)
    
-   # Regenerate and execute code with updated preferences
+   # Genereer opnieuw en voer code uit met bijgewerkte voorkeuren
    updated_flight_code = generate_code_to_fetch_data(updated_preferences)
    updated_hotel_code = generate_code_to_fetch_hotels(updated_preferences)
    
@@ -1110,33 +1115,33 @@ In dit voorbeeld ontwerpen we een codegenererende agent, Travel Agent, om gebrui
    print("Updated Itinerary:", updated_itinerary)
    ```
 
-### Omgevingsbewustzijn en Redeneren Gebruiken
+### Milieu-bewustzijn en Redeneren Benutten
 
-Het gebruik van het schema van de tabel kan inderdaad het proces van querygeneratie verbeteren door omgevingsbewustzijn en redeneren te benutten.
+Het gebruik van het schema van de tabel kan inderdaad het proces van querygeneratie verbeteren door milieu-bewustzijn en redenering te benutten.
 
-Hier is een voorbeeld van hoe dit kan worden gedaan:
+Hier is een voorbeeld hoe dit gedaan kan worden:
 
-1. **Het Schema Begrijpen**: Het systeem begrijpt het schema van de tabel en gebruikt deze informatie om de querygeneratie te onderbouwen.  
-2. **Aanpassen op Basis van Feedback**: Het systeem past gebruikersvoorkeuren aan op basis van feedback en redeneert over welke velden in het schema moeten worden bijgewerkt.  
-3. **Query's Genereren en Uitvoeren**: Het systeem genereert en voert query's uit om bijgewerkte vlucht- en hotelgegevens op te halen op basis van de nieuwe voorkeuren.  
+1. **Begrip van het Schema**: Het systeem begrijpt het schema van de tabel en gebruikt deze informatie om de querygeneratie te onderbouwen.
+2. **Aanpassen op basis van Feedback**: Het systeem past gebruikersvoorkeuren aan op basis van feedback en redeneert welke velden in het schema bijgewerkt moeten worden.
+3. **Genereren en Uitvoeren van Queries**: Het systeem genereert en voert queries uit om bijgewerkte vlucht- en hotelgegevens op te halen op basis van de nieuwe voorkeuren.
 
-Hier is een bijgewerkt Python-codevoorbeeld dat deze concepten bevat:
+Hier is een bijgewerkt Python-codevoorbeeld dat deze concepten incorporeert:
 
 ```python
 def adjust_based_on_feedback(feedback, preferences, schema):
-    # Adjust preferences based on user feedback
+    # Pas voorkeuren aan op basis van gebruikersfeedback
     if "liked" in feedback:
         preferences["favorites"] = feedback["liked"]
     if "disliked" in feedback:
         preferences["avoid"] = feedback["disliked"]
-    # Reasoning based on schema to adjust other related preferences
+    # Redeneren op basis van schema om andere gerelateerde voorkeuren aan te passen
     for field in schema:
         if field in preferences:
             preferences[field] = adjust_based_on_environment(feedback, field, schema)
     return preferences
 
 def adjust_based_on_environment(feedback, field, schema):
-    # Custom logic to adjust preferences based on schema and feedback
+    # Aangepaste logica om voorkeuren aan te passen op basis van schema en feedback
     if field in feedback["liked"]:
         return schema[field]["positive_adjustment"]
     elif field in feedback["disliked"]:
@@ -1144,33 +1149,33 @@ def adjust_based_on_environment(feedback, field, schema):
     return schema[field]["default"]
 
 def generate_code_to_fetch_data(preferences):
-    # Generate code to fetch flight data based on updated preferences
+    # Genereer code om vluchtgegevens op te halen op basis van bijgewerkte voorkeuren
     return f"fetch_flights(preferences={preferences})"
 
 def generate_code_to_fetch_hotels(preferences):
-    # Generate code to fetch hotel data based on updated preferences
+    # Genereer code om hotelgegevens op te halen op basis van bijgewerkte voorkeuren
     return f"fetch_hotels(preferences={preferences})"
 
 def execute_code(code):
-    # Simulate execution of code and return mock data
+    # Simuleer uitvoering van code en retourneer nepgegevens
     return {"data": f"Executed: {code}"}
 
 def generate_itinerary(flights, hotels, attractions):
-    # Generate itinerary based on flights, hotels, and attractions
+    # Genereer reisschema op basis van vluchten, hotels en bezienswaardigheden
     return {"flights": flights, "hotels": hotels, "attractions": attractions}
 
-# Example schema
+# Voorbeeldschema
 schema = {
     "favorites": {"positive_adjustment": "increase", "negative_adjustment": "decrease", "default": "neutral"},
     "avoid": {"positive_adjustment": "decrease", "negative_adjustment": "increase", "default": "neutral"}
 }
 
-# Example usage
+# Voorbeeldgebruik
 preferences = {"favorites": "sightseeing", "avoid": "crowded places"}
 feedback = {"liked": ["Louvre Museum"], "disliked": ["Eiffel Tower (too crowded)"]}
 updated_preferences = adjust_based_on_feedback(feedback, preferences, schema)
 
-# Regenerate and execute code with updated preferences
+# Genereer opnieuw en voer code uit met bijgewerkte voorkeuren
 updated_flight_code = generate_code_to_fetch_data(updated_preferences)
 updated_hotel_code = generate_code_to_fetch_hotels(updated_preferences)
 
@@ -1181,55 +1186,55 @@ updated_itinerary = generate_itinerary(updated_flights, updated_hotels, feedback
 print("Updated Itinerary:", updated_itinerary)
 ```
 
-#### Uitleg - Boeken op Basis van Feedback
+#### Uitleg - Boeken op basis van Feedback
 
-1. **Schema-bewustzijn**: Het `schema`-woordenboek definieert hoe voorkeuren moeten worden aangepast op basis van feedback. Het bevat velden zoals `favorieten` en `vermijden`, met bijbehorende aanpassingen.  
-2. **Voorkeuren Aanpassen (`adjust_based_on_feedback`-methode)**: Deze methode past voorkeuren aan op basis van gebruikersfeedback en het schema.  
-3. **Omgevingsgebaseerde Aanpassingen (`adjust_based_on_environment`-methode)**: Deze methode personaliseert de aanpassingen op basis van het schema en feedback.  
-4. **Query's Genereren en Uitvoeren**: Het systeem genereert code om bijgewerkte vlucht- en hotelgegevens op te halen op basis van de aangepaste voorkeuren en simuleert de uitvoering van deze query's.  
-5. **Reisplan Genereren**: Het systeem maakt een bijgewerkt reisplan op basis van de nieuwe vlucht-, hotel- en attractiegegevens.  
+1. **Schema Bewustzijn**: Het `schema` woordenboek definieert hoe voorkeuren aangepast moeten worden op basis van feedback. Het bevat velden zoals `favorites` en `avoid`, met bijbehorende aanpassingen.
+2. **Voorkeuren Aanpassen (`adjust_based_on_feedback` methode)**: Deze methode past voorkeuren aan op basis van gebruikersfeedback en het schema.
+3. **Aanpassingen op Basis van de Omgeving (`adjust_based_on_environment` methode)**: Deze methode personaliseert de aanpassingen op basis van het schema en feedback.
+4. **Genereren en Uitvoeren van Queries**: Het systeem genereert code om bijgewerkte vlucht- en hotelgegevens op te halen op basis van de aangepaste voorkeuren en simuleert het uitvoeren van deze queries.
+5. **Genereren van Reisroute**: Het systeem maakt een bijgewerkte reisroute op basis van de nieuwe vlucht-, hotel- en attractiegegevens.
 
-Door het systeem omgevingsbewust te maken en te laten redeneren op basis van het schema, kan het nauwkeurigere en relevantere query's genereren, wat leidt tot betere reisaanbevelingen en een meer gepersonaliseerde gebruikerservaring.
+Door het systeem milieu-bewust te maken en te laten redeneren op basis van het schema, kan het nauwkeurigere en relevantere queries genereren, wat leidt tot betere reissuggesties en een meer gepersonaliseerde gebruikerservaring.
 
-### SQL Gebruiken als een Retrieval-Augmented Generation (RAG) Techniek
+### SQL gebruiken als Retrieval-Augmented Generation (RAG) Techniek
 
-SQL (Structured Query Language) is een krachtig hulpmiddel voor interactie met databases. Wanneer het wordt gebruikt als onderdeel van een Retrieval-Augmented Generation (RAG)-benadering, kan SQL relevante gegevens uit databases ophalen om AI-agents te informeren en acties te genereren. Laten we verkennen hoe SQL kan worden gebruikt als een RAG-techniek in de context van Travel Agent.
+SQL (Structured Query Language) is een krachtig hulpmiddel om met databases te werken. Wanneer het gebruikt wordt als onderdeel van een Retrieval-Augmented Generation (RAG) aanpak, kan SQL relevante gegevens uit databases ophalen om antwoorden of acties in AI-agenten te informeren en genereren. Laten we verkennen hoe SQL als RAG-techniek gebruikt kan worden in de context van Reisagent.
 
-#### Belangrijke Concepten
+#### Kernconcepten
 
-1. **Database-interactie**:  
-   - SQL wordt gebruikt om databases te bevragen, relevante informatie op te halen en gegevens te manipuleren.  
-   - Voorbeeld: Vluchtdetails, hotelinformatie en attracties ophalen uit een reisdatabase.  
+1. **Database-interactie**:
+   - SQL wordt gebruikt om databases te raadplegen, relevante informatie op te halen en data te manipuleren.
+   - Voorbeeld: Vluchtgegevens, hotelinformatie en attracties ophalen uit een reisdatabase.
 
-2. **Integratie met RAG**:  
-   - SQL-query's worden gegenereerd op basis van gebruikersinvoer en voorkeuren.  
-   - De opgehaalde gegevens worden vervolgens gebruikt om gepersonaliseerde aanbevelingen of acties te genereren.  
+2. **Integratie met RAG**:
+   - SQL-queries worden gegenereerd op basis van gebruikersinvoer en voorkeuren.
+   - De opgehaalde data wordt vervolgens gebruikt om gepersonaliseerde aanbevelingen of acties te genereren.
 
-3. **Dynamische Querygeneratie**:  
-   - De AI-agent genereert dynamische SQL-query's op basis van de context en gebruikersbehoeften.  
-   - Voorbeeld: SQL-query's aanpassen om resultaten te filteren op basis van budget, data en interesses.  
+3. **Dynamische Querygeneratie**:
+   - De AI-agent genereert dynamische SQL-queries gebaseerd op de context en gebruikersbehoeften.
+   - Voorbeeld: SQL-queries aanpassen om resultaten te filteren op budget, data en interesses.
 
 #### Toepassingen
 
-- **Automatische Codegeneratie**: Genereer codefragmenten voor specifieke taken.  
-- **SQL als een RAG**: Gebruik SQL-query's om gegevens te manipuleren.  
-- **Probleemoplossing**: Maak en voer code uit om problemen op te lossen.  
+- **Geautomatiseerde Codegeneratie**: Genereer codefragmenten voor specifieke taken.
+- **SQL als een RAG**: Gebruik SQL-queries om data te manipuleren.
+- **Probleemoplossing**: Maak en voer code uit om problemen op te lossen.
 
-**Voorbeeld**:  
-Een data-analyse-agent:
+**Voorbeeld**:
+Een data-analyse agent:
 
-1. **Taak**: Een dataset analyseren om trends te vinden.  
-2. **Stappen**:  
-   - Laad de dataset.  
-   - Genereer SQL-query's om gegevens te filteren.  
-   - Voer query's uit en haal resultaten op.  
-   - Genereer visualisaties en inzichten.  
-3. **Middelen**: Toegang tot dataset, SQL-mogelijkheden.  
-4. **Ervaring**: Gebruik eerdere resultaten om toekomstige analyses te verbeteren.  
+1. **Taak**: Analyseer een dataset om trends te vinden.
+2. **Stappen**:
+   - Laad de dataset.
+   - Genereer SQL-queries om data te filteren.
+   - Voer queries uit en haal resultaten op.
+   - Genereer visualisaties en inzichten.
+3. **Middelen**: Toegang tot dataset, SQL-mogelijkheden.
+4. **Ervaring**: Gebruik eerdere resultaten om toekomstige analyses te verbeteren.
 
-#### Praktisch Voorbeeld: SQL Gebruiken in Travel Agent
+#### Praktisch Voorbeeld: SQL gebruiken in Reisagent
 
-1. **Gebruikersvoorkeuren Verzamelen**
+1. **Verzamelen van Gebruikersvoorkeuren**
 
    ```python
    class Travel_Agent:
@@ -1240,7 +1245,7 @@ Een data-analyse-agent:
            self.user_preferences = preferences
    ```
 
-2. **SQL-query's Genereren**
+2. **SQL-queries Genereren**
 
    ```python
    def generate_sql_query(table, preferences):
@@ -1252,7 +1257,7 @@ Een data-analyse-agent:
        return query
    ```
 
-3. **SQL-query's Uitvoeren**
+3. **SQL-queries Uitvoeren**
 
    ```python
    import sqlite3
@@ -1297,7 +1302,7 @@ Een data-analyse-agent:
    print("Suggested Itinerary:", itinerary)
    ```
 
-#### Voorbeeld SQL-query's
+#### Voorbeeld van SQL-queries
 
 1. **Vluchtquery**
 
@@ -1317,26 +1322,28 @@ Een data-analyse-agent:
    SELECT * FROM attractions WHERE destination='Paris' AND interests='museums, cuisine';
    ```
 
-Door SQL te gebruiken als onderdeel van de Retrieval-Augmented Generation (RAG)-techniek, kunnen AI-agents zoals Travel Agent dynamisch relevante gegevens ophalen en gebruiken om nauwkeurige en gepersonaliseerde aanbevelingen te bieden.
+Door SQL in te zetten als onderdeel van de Retrieval-Augmented Generation (RAG) techniek, kunnen AI-agenten zoals Reisagent dynamisch relevante gegevens ophalen en gebruiken om nauwkeurige en gepersonaliseerde aanbevelingen te bieden.
 
 ### Voorbeeld van Metacognitie
 
-Om een implementatie van metacognitie te demonstreren, laten we een eenvoudige agent maken die *reflecteert op zijn besluitvormingsproces* tijdens het oplossen van een probleem. In dit voorbeeld bouwen we een systeem waarin een agent probeert de keuze van een hotel te optimaliseren, maar vervolgens zijn eigen redenering evalueert en zijn strategie aanpast wanneer het fouten of suboptimale keuzes maakt.
+Om een implementatie van metacognitie te demonstreren, laten we een eenvoudige agent creëren die *reflecteert op haar besluitvormingsproces* terwijl ze een probleem oplost. Voor dit voorbeeld bouwen we een systeem waarin een agent probeert de keuze van een hotel te optimaliseren, maar daarna haar eigen redenering evalueert en haar strategie aanpast wanneer ze fouten maakt of suboptimale keuzes maakt.
+
+We simuleren dit met een eenvoudig voorbeeld waar de agent hotels selecteert op basis van een combinatie van prijs en kwaliteit, maar ze zal "reflecteren" op haar beslissingen en zich daarop aanpassen.
 
 #### Hoe dit metacognitie illustreert:
 
-1. **Initiële Beslissing**: De agent kiest het goedkoopste hotel, zonder rekening te houden met de kwaliteit.  
-2. **Reflectie en Evaluatie**: Na de initiële keuze controleert de agent of het hotel een "slechte" keuze was op basis van gebruikersfeedback. Als blijkt dat de kwaliteit van het hotel te laag was, reflecteert het op zijn redenering.  
-3. **Strategie Aanpassen**: De agent past zijn strategie aan op basis van zijn reflectie en schakelt over van "goedkoopste" naar "hoogste kwaliteit", waardoor het besluitvormingsproces in toekomstige iteraties wordt verbeterd.  
+1. **Initiële Beslissing**: De agent kiest het goedkoopste hotel, zonder de impact op kwaliteit te begrijpen.
+2. **Reflectie en Evaluatie**: Na de eerste keuze controleert de agent of het hotel een "slechte" keuze was op basis van gebruikersfeedback. Als duidelijk wordt dat de kwaliteit te laag was, reflecteert ze op haar redenering.
+3. **Strategie Aanpassen**: De agent past haar strategie aan op basis van de reflectie en schakelt van "goedkoopste" naar "hoogste kwaliteit", waarmee ze haar besluitvormingsproces in volgende rondes verbetert.
 
 Hier is een voorbeeld:
 
 ```python
 class HotelRecommendationAgent:
     def __init__(self):
-        self.previous_choices = []  # Stores the hotels chosen previously
-        self.corrected_choices = []  # Stores the corrected choices
-        self.recommendation_strategies = ['cheapest', 'highest_quality']  # Available strategies
+        self.previous_choices = []  # Slaat de eerder gekozen hotels op
+        self.corrected_choices = []  # Slaat de gecorrigeerde keuzes op
+        self.recommendation_strategies = ['cheapest', 'highest_quality']  # Beschikbare strategieën
 
     def recommend_hotel(self, hotels, strategy):
         """
@@ -1361,11 +1368,11 @@ class HotelRecommendationAgent:
             return "No choices made yet."
 
         last_choice_strategy, last_choice = self.previous_choices[-1]
-        # Let's assume we have some user feedback that tells us whether the last choice was good or not
+        # Laten we aannemen dat we wat gebruikersfeedback hebben die ons vertelt of de laatste keuze goed was of niet
         user_feedback = self.get_user_feedback(last_choice)
 
         if user_feedback == "bad":
-            # Adjust strategy if the previous choice was unsatisfactory
+            # Pas de strategie aan als de vorige keuze ontevredenstellend was
             new_strategy = 'highest_quality' if last_choice_strategy == 'cheapest' else 'cheapest'
             self.corrected_choices.append((new_strategy, last_choice))
             return f"Reflecting on choice. Adjusting strategy to {new_strategy}."
@@ -1382,54 +1389,56 @@ class HotelRecommendationAgent:
             return "bad"
         return "good"
 
-# Simulate a list of hotels (price and quality)
+# Simuleer een lijst met hotels (prijs en kwaliteit)
 hotels = [
     {'name': 'Budget Inn', 'price': 80, 'quality': 6},
     {'name': 'Comfort Suites', 'price': 120, 'quality': 8},
     {'name': 'Luxury Stay', 'price': 200, 'quality': 9}
 ]
 
-# Create an agent
+# Creëer een agent
 agent = HotelRecommendationAgent()
 
-# Step 1: The agent recommends a hotel using the "cheapest" strategy
+# Stap 1: De agent raadt een hotel aan met de "goedkoopste" strategie
 recommended_hotel = agent.recommend_hotel(hotels, 'cheapest')
 print(f"Recommended hotel (cheapest): {recommended_hotel['name']}")
 
-# Step 2: The agent reflects on the choice and adjusts strategy if necessary
+# Stap 2: De agent reflecteert op de keuze en past de strategie aan indien nodig
 reflection_result = agent.reflect_on_choice()
 print(reflection_result)
 
-# Step 3: The agent recommends again, this time using the adjusted strategy
+# Stap 3: De agent raad opnieuw aan, deze keer met de aangepaste strategie
 adjusted_recommendation = agent.recommend_hotel(hotels, 'highest_quality')
 print(f"Adjusted hotel recommendation (highest_quality): {adjusted_recommendation['name']}")
 ```
 
-#### Metacognitieve Vermogens van de Agent
+#### Metacognitieve Vermogens van Agenten
 
-Het belangrijkste hier is het vermogen van de agent om:  
-- Zijn eerdere keuzes en besluitvormingsproces te evalueren.  
-- Zijn strategie aan te passen op basis van die reflectie, oftewel metacognitie in actie.  
+Het belangrijkste is het vermogen van de agent om:
+- Haar eerdere keuzes en besluitvormingsproces te evalueren.
+- Haar strategie aan te passen op basis van die reflectie, oftewel metacognitie in actie.
 
-Dit is een eenvoudige vorm van metacognitie waarbij het systeem in staat is zijn redeneringsproces aan te passen op basis van interne feedback.
+Dit is een eenvoudige vorm van metacognitie waarbij het systeem in staat is haar redeneerproces aan te passen op basis van interne feedback.
 
 ### Conclusie
 
-Metacognitie is een krachtig hulpmiddel dat de mogelijkheden van AI-agents aanzienlijk kan verbeteren. Door metacognitieve processen te integreren, kun je agents ontwerpen die intelligenter, aanpasbaarder en efficiënter zijn. Gebruik de aanvullende bronnen om de fascinerende wereld van metacognitie in AI-agents verder te verkennen.
+Metacognitie is een krachtig hulpmiddel dat de capaciteiten van AI-agenten aanzienlijk kan verbeteren. Door metacognitieve processen te integreren, kunt u agenten ontwerpen die intelligenter, aanpasbaarder en efficiënter zijn. Gebruik de aanvullende bronnen om de fascinerende wereld van metacognitie in AI-agenten verder te verkennen.
 
-### Meer Vragen over het Metacognitie Ontwerppatroon?
+### Meer Vragen over het Metacognitie Ontwerp Patroon?
 
-Word lid van de [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord) om andere leerlingen te ontmoeten, spreekuren bij te wonen en je vragen over AI-agents beantwoord te krijgen.
+Word lid van de [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D) om andere leerders te ontmoeten, kantooruren bij te wonen en uw AI Agents vragen beantwoord te krijgen.
 
 ## Vorige Les
 
-[Multi-Agent Ontwerppatroon](../08-multi-agent/README.md)
+[Multi-Agent Design Pattern](../08-multi-agent/README.md)
 
 ## Volgende Les
 
-[AI-agents in Productie](../10-ai-agents-production/README.md)
+[AI Agents in Productie](../10-ai-agents-production/README.md)
 
 ---
 
-**Disclaimer**:  
-Dit document is vertaald met behulp van de AI-vertalingsservice [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u zich ervan bewust te zijn dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in zijn oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor cruciale informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Disclaimer**:
+Dit document is vertaald met behulp van de AI vertaaldienst [Co-op Translator](https://github.com/Azure/co-op-translator). Hoewel we streven naar nauwkeurigheid, dient u er rekening mee te houden dat geautomatiseerde vertalingen fouten of onnauwkeurigheden kunnen bevatten. Het originele document in de oorspronkelijke taal moet worden beschouwd als de gezaghebbende bron. Voor kritieke informatie wordt professionele menselijke vertaling aanbevolen. Wij zijn niet aansprakelijk voor eventuele misverstanden of verkeerde interpretaties die voortvloeien uit het gebruik van deze vertaling.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

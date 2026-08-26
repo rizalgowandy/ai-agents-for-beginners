@@ -1,43 +1,42 @@
 # AGENTS.md
 
-## 項目概覽
+## 專案概述
 
-此存儲庫包含「AI Agents for Beginners」——一個全面的教育課程，教授建立 AI Agents 所需的一切知識。課程由超過 15 篇課程組成，涵蓋基礎知識、設計模式、框架以及 AI Agents 的生產部署。
+本存儲庫包含「AI 初學者代理人」——一個全面的教育課程，教授建立 AI 代理人所需的一切。課程包含 18 課題（編號 00-18），涵蓋基礎知識、設計模式、框架、生產部署、本地/裝置代理人，以及 AI 代理人的安全性。
 
-**主要技術：**
+**關鍵技術：**
 - Python 3.12+
-- 使用 Jupyter Notebooks 進行互動式學習
-- AI 框架：Semantic Kernel、AutoGen、Microsoft Agent Framework (MAF)
-- Azure AI 服務：Azure AI Foundry、Azure AI Agent Service
-- GitHub Models Marketplace（提供免費層）
+- 使用 Jupyter 筆記本進行互動學習
+- AI 框架：Microsoft Agent Framework (MAF)
+- Azure AI 服務：Microsoft Foundry、Microsoft Foundry Agent Service V2
 
 **架構：**
 - 基於課程的結構（00-15+ 目錄）
-- 每個課程包含：README 文檔、代碼示例（Jupyter notebooks）和圖片
+- 每課包含：README 文件、代碼範例（Jupyter 筆記本）和圖片
 - 通過自動翻譯系統支持多語言
-- 每個課程提供多種框架選項（Semantic Kernel、AutoGen、Azure AI Agent Service）
+- 每課有一個使用 Microsoft Agent Framework 的 Python 筆記本
 
-## 設置指令
+## 設定命令
 
-### 先決條件
+### 前置條件
 - Python 3.12 或更高版本
-- GitHub 帳戶（用於 GitHub Models - 免費層）
-- Azure 訂閱（可選，用於 Azure AI 服務）
+- Azure 訂閱（用於 Microsoft Foundry）
+- 安裝並已認證 Azure CLI（`az login`）
 
-### 初始設置
+### 初始設定
 
-1. **克隆或分叉存儲庫：**
+1. **克隆或分支存儲庫：**
    ```bash
    gh repo fork microsoft/ai-agents-for-beginners --clone
-   # OR
+   # 或者
    git clone https://github.com/microsoft/ai-agents-for-beginners.git
    cd ai-agents-for-beginners
    ```
 
-2. **創建並激活 Python 虛擬環境：**
+2. **建立並啟用 Python 虛擬環境：**
    ```bash
    python3 -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate  # 在 Windows 上：venv\Scripts\activate
    ```
 
 3. **安裝依賴項：**
@@ -45,295 +44,275 @@
    pip install -r requirements.txt
    ```
 
-4. **設置環境變量：**
+4. **設定環境變數：**
    ```bash
    cp .env.example .env
-   # Edit .env with your API keys and endpoints
+   # 使用你的 API 密鑰和端點編輯 .env
    ```
 
-### 必需的環境變量
+### 必填環境變數
 
-對於 **GitHub Models（免費）**：
-- `GITHUB_TOKEN` - 從 GitHub 獲取的個人訪問令牌
+用於 **Microsoft Foundry**（必填）：
+- `AZURE_AI_PROJECT_ENDPOINT` - Microsoft Foundry 專案端點
+- `AZURE_AI_MODEL_DEPLOYMENT_NAME` - 模型部署名稱（如 gpt-5-mini）
 
-對於 **Azure AI Services**（可選）：
-- `PROJECT_ENDPOINT` - Azure AI Foundry 項目端點
-- `AZURE_OPENAI_API_KEY` - Azure OpenAI API 密鑰
-- `AZURE_OPENAI_ENDPOINT` - Azure OpenAI 端點 URL
-- `AZURE_OPENAI_CHAT_DEPLOYMENT_NAME` - 聊天模型的部署名稱
-- `AZURE_OPENAI_EMBEDDING_DEPLOYMENT_NAME` - 嵌入模型的部署名稱
-- 其他 Azure 配置詳情請參考 `.env.example`
+用於 **Azure AI Search**（第 05 課 - RAG）：
+- `AZURE_SEARCH_SERVICE_ENDPOINT` - Azure AI Search 端點
+- `AZURE_SEARCH_API_KEY` - Azure AI Search API 金鑰
+
+認證：在執行筆記本之前執行 `az login`（使用 `AzureCliCredential`）。
 
 ## 開發工作流程
 
-### 運行 Jupyter Notebooks
+### 運行 Jupyter 筆記本
 
-每個課程包含多個針對不同框架的 Jupyter notebooks：
+每課包含多個針對不同框架的 Jupyter 筆記本：
 
 1. **啟動 Jupyter：**
    ```bash
    jupyter notebook
    ```
 
-2. **導航至課程目錄**（例如，`01-intro-to-ai-agents/code_samples/`）
+2. <strong>導航到課程目錄</strong>（例如 `01-intro-to-ai-agents/code_samples/`）
 
-3. **打開並運行 notebooks：**
-   - `*-semantic-kernel.ipynb` - 使用 Semantic Kernel 框架
-   - `*-autogen.ipynb` - 使用 AutoGen 框架
-   - `*-python-agent-framework.ipynb` - 使用 Microsoft Agent Framework (Python)
-   - `*-dotnet-agent-framework.ipynb` - 使用 Microsoft Agent Framework (.NET)
-   - `*-azureaiagent.ipynb` - 使用 Azure AI Agent Service
+3. **打開並運行筆記本：**
+   - `*-python-agent-framework.ipynb` - 使用 Microsoft Agent Framework（Python）
+   - `*-dotnet-agent-framework.ipynb` - 使用 Microsoft Agent Framework（.NET）
 
-### 使用不同框架
+### Microsoft Agent Framework 操作
 
-**Semantic Kernel + GitHub Models：**
-- 提供免費層，需 GitHub 帳戶
-- 適合學習和實驗
-- 文件模式：`*-semantic-kernel*.ipynb`
-
-**AutoGen + GitHub Models：**
-- 提供免費層，需 GitHub 帳戶
-- 支持多代理協作功能
-- 文件模式：`*-autogen.ipynb`
-
-**Microsoft Agent Framework (MAF)：**
-- Microsoft 最新框架
-- 提供 Python 和 .NET 版本
-- 文件模式：`*-agent-framework.ipynb`
-
-**Azure AI Agent Service：**
+**Microsoft Agent Framework + Microsoft Foundry：**
 - 需要 Azure 訂閱
-- 支持生產級功能
-- 文件模式：`*-azureaiagent.ipynb`
+- 使用 `FoundryChatClient` 連接 Agent Service V2（代理人可見於 Foundry 入口網站）
+- 生產環境就緒，內建可觀察性功能
+- 檔案模式：`*-python-agent-framework.ipynb`
 
 ## 測試指引
 
-此存儲庫是一個教育性存儲庫，包含示例代碼，而非帶有自動化測試的生產代碼。要驗證您的設置和更改：
+這是一個教育存儲庫，用於示範代碼，而非具備自動化測試的生產代碼。驗證設定及修改方法：
 
 ### 手動測試
 
 1. **測試 Python 環境：**
    ```bash
-   python --version  # Should be 3.12+
-   pip list | grep -E "(autogen|semantic-kernel|azure-ai)"
+   python --version  # 應該係3.12或以上
+   pip list | grep -E "(agent-framework|azure-ai|azure-identity)"
    ```
 
-2. **測試 notebook 執行：**
+2. **測試筆記本執行：**
    ```bash
-   # Convert notebook to script and run (tests imports)
+   # 將筆記本轉換為腳本並運行（測試導入）
    jupyter nbconvert --to script <lesson-folder>/code_samples/<notebook>.ipynb --stdout | python
    ```
 
-3. **驗證環境變量：**
+3. **核對環境變數：**
    ```bash
-   python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ GITHUB_TOKEN' if os.getenv('GITHUB_TOKEN') else '✗ GITHUB_TOKEN missing')"
+   python -c "import os; from dotenv import load_dotenv; load_dotenv(); print('✓ AZURE_AI_PROJECT_ENDPOINT' if os.getenv('AZURE_AI_PROJECT_ENDPOINT') else '✗ AZURE_AI_PROJECT_ENDPOINT missing')"
    ```
 
-### 運行單個 Notebook
+### 單獨執行筆記本
 
-在 Jupyter 中打開 notebook，按順序執行每個 cell。每個 notebook 都是自包含的，並包括：
-- 導入語句
-- 配置加載
-- 示例代理實現
-- Markdown cell 中的預期輸出
+在 Jupyter 中打開筆記本並順序執行儲存格。每個筆記本都是自包含，並包括：
+- 匯入語句
+- 載入設定
+- 範例代理人實作
+- 預期輸出在 markdown 儲存格中
+
+### 部署代理人的冒煙測試
+
+對於作為 Microsoft Foundry 主機代理人部署的課程（01、04、05、16）中，存儲庫提供在 `tests/` 下的冒煙測試目錄，該目錄由 `.github/workflows/smoke-test.yml` 工作流程通過 [AI Smoke Test](https://github.com/marketplace/actions/ai-smoke-test) 操作運行。這是輕量級的部署後檢查（代理人是否可連接且符合基本提示預期？），輔助第 10 與第 16 課的評估流程。請參閱 [tests/README.md](./tests/README.md) 了解目錄到課程到代理人的對應。第 17 課使用 Foundry Local 本地運行，無託管端點，因此透過直接執行其筆記本進行驗證。
 
 ## 代碼風格
 
-### Python 規範
+### Python 慣例
 
 - **Python 版本**：3.12+
-- **代碼風格**：遵循標準 Python PEP 8 規範
-- **Notebooks**：使用清晰的 Markdown cell 解釋概念
-- **導入**：按標準庫、第三方庫、本地導入分組
+- <strong>代碼風格</strong>：遵循標準 Python PEP 8 規範
+- <strong>筆記本</strong>：使用清晰的 markdown 儲存格解釋概念
+- <strong>匯入</strong>：按標準庫、第三方、本地匯入分組
 
-### Jupyter Notebook 規範
+### Jupyter 筆記本慣例
 
-- 在代碼 cell 前包含描述性 Markdown cell
-- 在 notebook 中添加輸出示例作為參考
-- 使用清晰的變量名稱，與課程概念相匹配
-- 保持 notebook 的執行順序線性（cell 1 → 2 → 3...）
+- 在程式碼儲存格前包含描述性 markdown 儲存格
+- 筆記本中加入輸出範例作參考
+- 使用符合課程概念的清晰變數名稱
+- 保持筆記本執行順序線性（儲存格 1 → 2 → 3...）
 
-### 文件組織
+### 檔案組織
 
 ```
 <lesson-number>-<lesson-name>/
 ├── README.md                     # Lesson documentation
 ├── code_samples/
-│   ├── <number>-semantic-kernel.ipynb
-│   ├── <number>-autogen.ipynb
 │   ├── <number>-python-agent-framework.ipynb
-│   └── <number>-azureaiagent.ipynb
+│   └── <number>-dotnet-agent-framework.ipynb  (optional)
 └── images/
     └── *.png
 ```
 
-## 構建與部署
+## 建置與部署
 
-### 構建文檔
+### 建置文件
 
-此存儲庫使用 Markdown 進行文檔編寫：
-- 每個課程文件夾中的 README.md 文件
-- 存儲庫根目錄的主 README.md
-- 通過 GitHub Actions 進行自動翻譯系統
+本存儲庫使用 Markdown 作文件：
+- 每課文件夾下的 README.md 檔案
+- 儲存庫根目錄下的主 README.md
+- 透過 GitHub Actions 自動翻譯系統
 
-### CI/CD 管道
+### CI/CD 流程
 
 位於 `.github/workflows/`：
 
-1. **co-op-translator.yml** - 自動翻譯至 50+ 種語言
-2. **welcome-issue.yml** - 歡迎新問題創建者
+1. **co-op-translator.yml** - 自動翻譯成 50+ 種語言
+2. **welcome-issue.yml** - 歡迎新議題建立者
 3. **welcome-pr.yml** - 歡迎新拉取請求貢獻者
 
 ### 部署
 
-這是一個教育性存儲庫 - 無需部署流程。用戶：
-1. 分叉或克隆存儲庫
-2. 在本地或 GitHub Codespaces 中運行 notebooks
-3. 通過修改和實驗學習
+這是一個教育存儲庫，沒有部署流程。使用者可：
+1. 分支或克隆存儲庫
+2. 在本地或 GitHub Codespaces 運行筆記本
+3. 透過修改和試驗範例來學習
 
-## 拉取請求指南
+## 拉取請求指引
 
 ### 提交前
 
-1. **測試您的更改：**
-   - 完整運行受影響的 notebooks
-   - 確保所有 cell 無錯誤執行
-   - 檢查輸出是否正確
+1. **測試修改：**
+   - 完整運行影響的筆記本
+   - 確認所有儲存格均無錯誤執行
+   - 檢查輸出是否合適
 
-2. **文檔更新：**
-   - 如果添加新概念，更新 README.md
-   - 在 notebook 中為複雜代碼添加註釋
-   - 確保 Markdown cell 解釋清楚用途
+2. **文件更新：**
+   - 若新增概念，更新 README.md
+   - 在筆記本中為複雜代碼加入註釋
+   - 確保 markdown 儲存格說明目的
 
-3. **文件更改：**
-   - 避免提交 `.env` 文件（使用 `.env.example`）
-   - 不要提交 `venv/` 或 `__pycache__/` 目錄
-   - 保留 notebook 中展示概念的輸出
-   - 刪除臨時文件和備份 notebook（`*-backup.ipynb`）
+3. **檔案修改：**
+   - 避免提交 `.env` 檔（使用 `.env.example`）
+   - 不提交 `venv/` 或 `__pycache__/` 目錄
+   - 展示概念時保留筆記本輸出
+   - 移除臨時檔及備份筆記本（`*-backup.ipynb`）
 
-### PR 標題格式
+### 拉取請求標題格式
 
 使用描述性標題：
-- `[Lesson-XX] 添加新示例 <概念>`
-- `[Fix] 修正 lesson-XX README 中的拼寫錯誤`
-- `[Update] 改進 lesson-XX 中的代碼示例`
-- `[Docs] 更新設置指引`
+- `[Lesson-XX] 新增 <概念> 範例`
+- `[Fix] 修正 lesson-XX README 的錯字`
+- `[Update] 改善 lesson-XX 中的程式碼範例`
+- `[Docs] 更新設定指引`
 
-### 必需檢查
+### 必要檢查
 
-- Notebook 應無錯誤執行
+- 筆記本應無錯誤執行
 - README 文件應清晰且準確
-- 遵循存儲庫中的現有代碼模式
+- 遵循存儲庫內現有代碼模式
 - 與其他課程保持一致性
 
 ## 附加說明
 
-### 常見問題
+### 常見陷阱
 
 1. **Python 版本不匹配：**
-   - 確保使用 Python 3.12+
-   - 某些包可能不支持舊版本
+   - 確保使用 Python 3.12+ 版本
+   - 某些套件不支援較舊版本
    - 使用 `python3 -m venv` 明確指定 Python 版本
 
-2. **環境變量：**
+2. **環境變數：**
    - 始終從 `.env.example` 創建 `.env`
-   - 不要提交 `.env` 文件（已在 `.gitignore` 中）
-   - GitHub token 需要適當的權限
+   - 不提交 `.env` 檔（已加入 `.gitignore`）
+   - 使用 `az login` 登入以取得無鑰匙 Entra ID 認證
 
-3. **包衝突：**
-   - 使用全新的虛擬環境
-   - 從 `requirements.txt` 安裝，而不是單獨安裝包
-   - 某些 notebooks 可能需要其 Markdown cell 中提到的額外包
+3. **套件衝突：**
+   - 使用新的虛擬環境
+   - 從 `requirements.txt` 安裝，而非單獨安裝套件
+   - 某些筆記本可能需要其 markdown 格中提及的額外套件
 
 4. **Azure 服務：**
-   - Azure AI 服務需要有效的訂閱
-   - 某些功能僅限於特定地區
-   - GitHub Models 的免費層有使用限制
+   - Azure AI 服務需有效訂閱
+   - 某些功能區域專用
+   - 確認您的 Azure OpenAI 模型部署支持 Responses API
 
 ### 學習路徑
 
-推薦的課程進度：
-1. **00-course-setup** - 從這裡開始設置環境
-2. **01-intro-to-ai-agents** - 了解 AI Agents 的基礎知識
-3. **02-explore-agentic-frameworks** - 學習不同的框架
+建議依序進行課程：
+1. **00-course-setup** - 從這裡開始環境設定
+2. **01-intro-to-ai-agents** - 了解 AI 代理人基礎
+3. **02-explore-agentic-frameworks** - 認識不同框架
 4. **03-agentic-design-patterns** - 核心設計模式
-5. 按課程編號依次學習
+5. 按順序繼續完成編號課程
 
 ### 框架選擇
 
 根據您的目標選擇框架：
-- **學習/原型設計**：Semantic Kernel + GitHub Models（免費）
-- **多代理系統**：AutoGen
-- **最新功能**：Microsoft Agent Framework (MAF)
-- **生產部署**：Azure AI Agent Service
+- <strong>所有課程</strong>：使用帶有 `FoundryChatClient` 的 Microsoft Agent Framework (MAF)
+- <strong>代理人註冊於伺服器端</strong>，位於 Microsoft Foundry Agent Service V2，並可於 Foundry 入口網站查看
 
-### 獲取幫助
+### 獲得幫助
 
-- 加入 [Azure AI Foundry Community Discord](https://aka.ms/ai-agents/discord)
-- 查看課程 README 文件以獲取具體指導
-- 檢查主 [README.md](./README.md) 了解課程概覽
-- 參考 [Course Setup](./00-course-setup/README.md) 獲取詳細設置指引
+- 加入 [Microsoft Foundry Community Discord](https://aka.ms/ai-agents/discord)
+- 查閱課程 README 文件得到具體指引
+- 檢視主 README.md 了解課程概述
+- 參考 [Course Setup](./00-course-setup/README.md) 以獲詳細設定說明
 
 ### 貢獻
 
-這是一個開放的教育項目，歡迎貢獻：
-- 改進代碼示例
-- 修正拼寫或錯誤
-- 添加清晰的註釋
-- 建議新課程主題
-- 翻譯至其他語言
+這是一個開放教育專案，歡迎貢獻：
+- 改進程式碼範例
+- 修正錯字或錯誤
+- 添加說明性註釋
+- 建議新增課程主題
+- 翻譯成更多語言
 
-請查看 [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) 獲取當前需求。
+請參閱 [GitHub Issues](https://github.com/microsoft/ai-agents-for-beginners/issues) 了解目前需求。
 
-## 項目特定背景
+## 專案特定背景
 
 ### 多語言支持
 
-此存儲庫使用自動翻譯系統：
-- 支持 50+ 種語言
-- 翻譯存儲於 `/translations/<lang-code>/` 目錄
-- GitHub Actions 工作流處理翻譯更新
-- 源文件位於存儲庫根目錄，使用英文
+本存儲庫使用自動翻譯系統：
+- 支援 50 多種語言
+- 翻譯檔位於 `/translations/<lang-code>/` 目錄
+- 由 GitHub Actions 工作流程管理翻譯更新
+- 原始檔為英文，位於存儲庫根目錄
 
 ### 課程結構
 
-每個課程遵循一致的模式：
-1. 帶鏈接的視頻縮略圖
+每課遵循一致模式：
+1. 含連結的影片縮圖
 2. 書面課程內容（README.md）
-3. 多框架的代碼示例
-4. 學習目標和先決條件
-5. 附加學習資源鏈接
+3. 多框架的代碼範例
+4. 學習目標與先修條件
+5. 連結額外學習資源
 
-### 代碼示例命名
+### 代碼範例命名
 
-格式：`<lesson-number>-<framework-name>.ipynb`
-- `04-semantic-kernel.ipynb` - 第 4 課，Semantic Kernel
-- `07-autogen.ipynb` - 第 7 課，AutoGen
-- `14-python-agent-framework.ipynb` - 第 14 課，MAF Python
-- `14-dotnet-agent-framework.ipynb` - 第 14 課，MAF .NET
+格式：`<lesson-number>-python-agent-framework.ipynb`
+- `01-python-agent-framework.ipynb` - 第 1 課，MAF Python
+- `14-sequential.ipynb` - 第 14 課，MAF 進階模式
+- `16-python-agent-framework.ipynb` - 第 16 課，生產環境客戶支援代理人
+- `17-local-agent-foundry-local.ipynb` - 第 17 課，本地代理人使用 Foundry Local + Qwen
 
 ### 特殊目錄
 
-- `translated_images/` - 翻譯圖片的本地化版本
+- `translated_images/` - 本地化圖片，用於翻譯
 - `images/` - 英文內容的原始圖片
-- `.devcontainer/` - VS Code 開發容器配置
-- `.github/` - GitHub Actions 工作流和模板
+- `.devcontainer/` - VS Code 開發容器設定
+- `.github/` - GitHub Actions 工作流程及範本
 
 ### 依賴項
 
-`requirements.txt` 中的主要包：
-- `autogen-agentchat`、`autogen-core`、`autogen-ext` - AutoGen 框架
-- `semantic-kernel` - Semantic Kernel 框架
+來自 `requirements.txt` 的主要套件：
 - `agent-framework` - Microsoft Agent Framework
+- `a2a-sdk` - Agent-to-Agent 協定支持
 - `azure-ai-inference`、`azure-ai-projects` - Azure AI 服務
-- `azure-search-documents` - Azure AI 搜索集成
-- `chromadb` - 用於 RAG 示例的向量數據庫
-- `chainlit` - 聊天 UI 框架
-- `browser_use` - 用於代理的瀏覽器自動化
-- `mcp[cli]` - 模型上下文協議支持
-- `mem0ai` - 用於代理的記憶管理
+- `azure-identity` - Azure 認證（AzureCliCredential）
+- `azure-search-documents` - Azure AI Search 整合
+- `mcp[cli]` - 模型上下文協定支持
 
 ---
 
-**免責聲明**：  
-本文件已使用人工智能翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 進行翻譯。儘管我們致力於提供準確的翻譯，但請注意，自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要信息，建議使用專業人工翻譯。我們對因使用此翻譯而引起的任何誤解或錯誤解釋概不負責。
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**免責聲明**：
+本文件由 AI 翻譯服務 [Co-op Translator](https://github.com/Azure/co-op-translator) 翻譯而成。雖然我們致力於確保準確性，但請注意，機器自動翻譯可能包含錯誤或不準確之處。原始文件的母語版本應被視為權威來源。對於重要資訊，建議進行專業人工翻譯。我們不對因使用本翻譯而產生的任何誤解或誤釋承擔責任。
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->

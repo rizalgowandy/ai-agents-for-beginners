@@ -1,55 +1,55 @@
-[![Plánování Design Pattern](../../../translated_images/cs/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
+[![Návrhový vzor plánování](../../../translated_images/cs/lesson-7-thumbnail.f7163ac557bea123.webp)](https://youtu.be/kPfJ2BrBCMY?si=9pYpPXp0sSbK91Dr)
 
-> _(Klikněte na obrázek výše pro zhlédnutí videa této lekce)_
+> _(Klikněte na obrázek výše pro zobrazení videa této lekce)_
 
-# Plánování Designu
+# Návrh plánování
 
 ## Úvod
 
-Tato lekce pokryje:
+Tato lekce pokryje
 
-* Definování jasného celkového cíle a rozdělení složitého úkolu na zvládnutelné části.
-* Využití strukturovaného výstupu pro spolehlivější a strojově čitelné odpovědi.
-* Použití přístupu založeného na událostech k řešení dynamických úkolů a neočekávaných vstupů.
+* Definování jasného celkového cíle a rozdělení složitého úkolu na zvládnutelné podúkoly.
+* Využití strukturovaného výstupu pro spolehlivější a strojově čitelnou odpověď.
+* Aplikaci událostmi řízeného přístupu k řešení dynamických úkolů a neočekávaných vstupů.
 
 ## Cíle učení
 
 Po dokončení této lekce budete rozumět:
 
-* Jak identifikovat a nastavit celkový cíl pro AI agenta, aby jasně věděl, co je třeba dosáhnout.
-* Jak rozdělit složitý úkol na zvládnutelné dílčí úkoly a uspořádat je do logické posloupnosti.
-* Jak vybavit agenty správnými nástroji (např. vyhledávacími nebo analytickými nástroji), rozhodnout, kdy a jak je použít, a zvládnout neočekávané situace.
-* Jak vyhodnotit výsledky dílčích úkolů, měřit výkon a iterovat akce pro zlepšení konečného výstupu.
+* Jak identifikovat a nastavit celkový cíl pro AI agenta, aby jasně věděl, čeho má dosáhnout.
+* Jak rozdělit složitý úkol na zvládnutelné podúkoly a uspořádat je do logické posloupnosti.
+* Jak vybavit agenty správnými nástroji (např. nástroji pro vyhledávání nebo analytiku dat), rozhodnout, kdy a jak je použít, a zvládat neočekávané situace, které vzniknou.
+* Jak vyhodnotit výsledky podúkolů, měřit výkon a iterativně zlepšovat konečný výstup.
 
 ## Definování celkového cíle a rozdělení úkolu
 
 ![Definování cílů a úkolů](../../../translated_images/cs/defining-goals-tasks.d70439e19e37c47a.webp)
 
-Většina úkolů v reálném světě je příliš složitá na to, aby je bylo možné zvládnout jedním krokem. AI agent potřebuje stručný cíl, který bude řídit jeho plánování a akce. Například cíl:
+Většina reálných úkolů je příliš složitá na řešení v jednom kroku. AI agent potřebuje stručný cíl, který ho bude vést při plánování a činnostech. Například zvažte cíl:
 
-    "Vytvoř 3denní cestovní itinerář."
+    "Vytvořit cestovní plán na 3 dny."
 
-I když je jednoduché ho formulovat, stále vyžaduje upřesnění. Čím jasnější je cíl, tím lépe se agent (a případní lidskí spolupracovníci) mohou soustředit na dosažení správného výsledku, například vytvoření komplexního itineráře s možnostmi letů, doporučeními hotelů a návrhy aktivit.
+Přestože je jednoduché ho vyjádřit, stále vyžaduje upřesnění. Čím jasnější je cíl, tím lépe se agent (a případní lidskí spolupracovníci) mohou zaměřit na dosažení správného výsledku, jako je vytvoření komplexního itineráře s možnosti letenek, doporučení hotelů a návrhů aktivit.
 
-### Rozdělení úkolu
+### Rozklad úkolu
 
-Velké nebo složité úkoly se stávají zvládnutelnějšími, když jsou rozděleny na menší, cílené dílčí úkoly. 
-Pro příklad cestovního itineráře můžete rozdělit cíl na:
+Velké nebo složité úkoly se stávají zvládnutelnými, když je rozdělíme na menší, cílené podúkoly.
+Pro příklad cestovního plánu můžete rozdělit cíl na:
 
 * Rezervace letu
 * Rezervace hotelu
-* Pronájem auta
+* Půjčení auta
 * Personalizace
 
-Každý dílčí úkol může být řešen specializovanými agenty nebo procesy. Jeden agent se může specializovat na hledání nejlepších nabídek letů, jiný na rezervace hotelů a tak dále. Koordinující nebo „downstream“ agent pak může tyto výsledky sestavit do jednoho uceleného itineráře pro koncového uživatele.
+Každý podúkol může pak řešit specializovaný agent nebo proces. Jeden agent se může zaměřit na hledání nejlepších letenek, jiný na rezervace hotelů, a tak dále. Koordinující nebo „downstream“ agent pak může tyto výsledky zkombinovat do jednoho soudržného itineráře pro koncového uživatele.
 
-Tento modulární přístup také umožňuje postupné vylepšování. Například můžete přidat specializované agenty pro doporučení jídel nebo návrhy místních aktivit a itinerář postupně zdokonalovat.
+Tento modulární přístup také umožňuje postupná vylepšení. Například můžete přidat specializované agenty na doporučení jídla nebo místních aktivit a itinerář v průběhu času zdokonalovat.
 
 ### Strukturovaný výstup
 
-Velké jazykové modely (LLMs) mohou generovat strukturovaný výstup (např. JSON), který je snáze zpracovatelný pro následné agenty nebo služby. To je obzvláště užitečné v kontextu více agentů, kde můžeme tyto úkoly provést po obdržení výstupu z plánování. Pro rychlý přehled se podívejte na následující ukázku.
+Velké jazykové modely (LLMs) mohou generovat strukturovaný výstup (např. JSON), který je snazší pro downstream agenty nebo služby zpracovat a analyzovat. Je to zvláště užitečné v kontextu více agentů, kde můžeme tyto úkoly realizovat po obdržení plánovacího výstupu.
 
-Následující Python snippet demonstruje jednoduchého plánovacího agenta, který rozděluje cíl na dílčí úkoly a generuje strukturovaný plán:
+Následující Python ukázka demonstruje jednoduchého plánovacího agenta, který rozkládá cíl na podúkoly a vytváří strukturovaný plán:
 
 ```python
 from pydantic import BaseModel
@@ -59,9 +59,8 @@ import json
 import os
 from typing import Optional
 from pprint import pprint
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.azure import AzureAIChatCompletionClient
-from azure.core.credentials import AzureKeyCredential
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
 class AgentEnum(str, Enum):
     FlightBooking = "flight_booking"
@@ -72,35 +71,26 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Model podúkolu cestování
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum  # we want to assign the task to the agent
+    assigned_agent: AgentEnum  # chceme přiřadit úkol agentovi
 
 class TravelPlan(BaseModel):
     main_task: str
     subtasks: List[TravelSubTask]
     is_greeting: bool
 
-client = AzureAIChatCompletionClient(
-    model="gpt-4o-mini",
-    endpoint="https://models.inference.ai.azure.com",
-    # To authenticate with the model you will need to generate a personal access token (PAT) in your GitHub settings.
-    # Create your PAT token by following instructions here: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
-    credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
-    model_info={
-        "json_output": False,
-        "function_calling": True,
-        "vision": True,
-        "family": "unknown",
-    },
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
-# Define the user message
-messages = [
-    SystemMessage(content="""You are an planner agent.
+# Definujte uživatelskou zprávu
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
-                      Provide your response in JSON format with the following structure:
+    Provide your response in JSON format with the following structure:
 {'main_task': 'Plan a family trip from Singapore to Melbourne.',
  'subtasks': [{'assigned_agent': 'flight_booking',
                'task_details': 'Book round-trip flights from Singapore to '
@@ -111,45 +101,27 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(
-        content="Create a travel plan for a family of 2 kids from Singapore to Melboune", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": 'json_object'})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-response_content: Optional[str] = response.content if isinstance(
-    response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string" )
+response = client.create_response(input=user_message, instructions=system_prompt)
 
+response_content = response.output_text
 pprint(json.loads(response_content))
-
-# # Ensure the response content is a valid JSON string before loading it
-# response_content: Optional[str] = response.content if isinstance(
-#     response.content, str) else None
-# if response_content is None:
-#     raise ValueError("Response content is not a valid JSON string")
-
-# # Print the response content after loading it as JSON
-# pprint(json.loads(response_content))
-
-# Validate the response content with the MathReasoning model
-# TravelPlan.model_validate(json.loads(response_content))
 ```
 
-### Plánovací agent s orchestrací více agentů
+### Plánovací agent s multi-agentní orchestrací
 
-V tomto příkladu přijímá Semantic Router Agent požadavek uživatele (např. "Potřebuji plán hotelu pro svou cestu.").
+V tomto příkladu Semantic Router Agent přijímá uživatelský požadavek (např. "Potřebuji plán hotelu pro svou cestu.").
 
-Plánovač poté:
+Plánovač pak:
 
-* Přijímá plán hotelu: Plánovač vezme zprávu uživatele a na základě systémového promptu (včetně dostupných detailů agentů) vytvoří strukturovaný cestovní plán.
-* Vypisuje agenty a jejich nástroje: Registr agentů obsahuje seznam agentů (např. pro lety, hotely, pronájem aut a aktivity) spolu s funkcemi nebo nástroji, které nabízejí.
-* Směřuje plán k příslušným agentům: V závislosti na počtu dílčích úkolů plánovač buď odešle zprávu přímo dedikovanému agentovi (pro scénáře s jedním úkolem), nebo koordinuje prostřednictvím správce skupinového chatu pro spolupráci více agentů.
-* Shrnuje výsledek: Nakonec plánovač shrne vytvořený plán pro přehlednost.
-
-Následující ukázka Python kódu ilustruje tyto kroky:
+* Přijme Plán hotelu: Plánovač vezme uživatelovu zprávu a na základě systémového promptu (včetně dostupných agentů) vytvoří strukturovaný cestovní plán.
+* Vyjmenuje agenty a jejich nástroje: Registr agentů obsahuje seznam agentů (např. pro lety, hotely, půjčení auta a aktivity) a nástroje nebo funkce, které nabízejí.
+* Přesměruje plán příslušným agentům: V závislosti na počtu podúkolů plánovač buď pošle zprávu přímo specializovanému agentu (pro scénáře s jedním úkolem), nebo koordinuje přes správce skupinového chatu pro spolupráci více agentů.
+* Shrne výsledek: Nakonec plánovač shrne vytvořený plán pro přehlednost.
+Následující ukázka v Pythonu ilustruje tyto kroky:
 
 ```python
 
@@ -167,11 +139,11 @@ class AgentEnum(str, Enum):
     DefaultAgent = "default_agent"
     GroupChatManager = "group_chat_manager"
 
-# Travel SubTask Model
+# Model podúkolu cesty
 
 class TravelSubTask(BaseModel):
     task_details: str
-    assigned_agent: AgentEnum # we want to assign the task to the agent
+    assigned_agent: AgentEnum # chceme úkol přiřadit agentovi
 
 class TravelPlan(BaseModel):
     main_task: str
@@ -181,25 +153,22 @@ import json
 import os
 from typing import Optional
 
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-from autogen_ext.models.openai import AzureOpenAIChatCompletionClient
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
 
-# Create the client with type-checked environment variables
+# Vytvořit klienta
 
-client = AzureOpenAIChatCompletionClient(
-    azure_deployment=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    model=os.getenv("AZURE_OPENAI_DEPLOYMENT_NAME"),
-    api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
-    azure_endpoint=os.getenv("AZURE_OPENAI_ENDPOINT"),
-    api_key=os.getenv("AZURE_OPENAI_API_KEY"),
+provider = FoundryChatClient(
+    project_endpoint=os.environ["AZURE_AI_PROJECT_ENDPOINT"],
+    model=os.environ["AZURE_AI_MODEL_DEPLOYMENT_NAME"],
+    credential=AzureCliCredential(),
 )
 
 from pprint import pprint
 
-# Define the user message
+# Definovat uživatelskou zprávu
 
-messages = [
-    SystemMessage(content="""You are an planner agent.
+system_prompt = """You are a planner agent.
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -207,24 +176,20 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-]
+    - DefaultAgent: For handling general requests"""
 
-response = await client.create(messages=messages, extra_create_args={"response_format": TravelPlan})
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
 
-# Ensure the response content is a valid JSON string before loading it
+response = client.create_response(input=user_message, instructions=system_prompt)
 
-response_content: Optional[str] = response.content if isinstance(response.content, str) else None
-if response_content is None:
-    raise ValueError("Response content is not a valid JSON string")
+response_content = response.output_text
 
-# Print the response content after loading it as JSON
+# Vytisknout obsah odpovědi po jeho načtení jako JSON
 
 pprint(json.loads(response_content))
 ```
 
-Výstup z předchozího kódu můžete použít k nasměrování na `assigned_agent` a shrnutí cestovního plánu pro koncového uživatele.
+Následuje výstup z předchozího kódu, který můžete pak použít k přesměrování na `assigned_agent` a shrnutí cestovního plánu koncovému uživateli.
 
 ```json
 {
@@ -255,21 +220,23 @@ Výstup z předchozího kódu můžete použít k nasměrování na `assigned_ag
 }
 ```
 
-Příklad notebooku s předchozí ukázkou kódu je dostupný [zde](07-autogen.ipynb).
+Příklad notebooku s předchozím kódem je k dispozici [zde](./code_samples/07-python-agent-framework.ipynb).
 
 ### Iterativní plánování
 
-Některé úkoly vyžadují zpětnou vazbu nebo přeplánování, kdy výsledek jednoho dílčího úkolu ovlivňuje další. Například pokud agent objeví neočekávaný formát dat při rezervaci letů, může být nutné přizpůsobit strategii před pokračováním k rezervaci hotelů.
+Některé úkoly vyžadují zpětnou vazbu nebo přeplánování, kdy výsledek jednoho podúkolu ovlivňuje další. Například pokud agent narazí na neočekávaný formát dat při rezervaci letů, může potřebovat upravit svoji strategii před přechodem k rezervacím hotelů.
 
-Navíc zpětná vazba od uživatele (např. rozhodnutí člověka, že preferuje dřívější let) může vyvolat částečné přeplánování. Tento dynamický, iterativní přístup zajišťuje, že konečné řešení odpovídá reálným omezením a měnícím se preferencím uživatele.
+Navíc uživatelská zpětná vazba (např. člověk rozhodující, že preferuje dřívější let) může spustit částečné přeplánování. Tento dynamický, iterativní přístup zajišťuje, že konečné řešení odpovídá reálným omezením a vyvíjejícím se preferencím uživatele.
 
-Např. ukázkový kód:
+např. ukázkový kód
 
 ```python
-from autogen_core.models import UserMessage, SystemMessage, AssistantMessage
-#.. same as previous code and pass on the user history, current plan
-messages = [
-    SystemMessage(content="""You are a planner agent to optimize the
+import os
+from agent_framework.foundry import FoundryChatClient
+from azure.identity import AzureCliCredential
+#.. stejné jako předchozí kód a předat historii uživatele, aktuální plán
+
+system_prompt = """You are a planner agent to optimize the
     Your job is to decide which agents to run based on the user's request.
     Below are the available agents specialized in different tasks:
     - FlightBooking: For booking flights and providing flight information
@@ -277,38 +244,43 @@ messages = [
     - CarRental: For booking cars and providing car rental information
     - ActivitiesBooking: For booking activities and providing activity information
     - DestinationInfo: For providing information about destinations
-    - DefaultAgent: For handling general requests""", source="system"),
-    UserMessage(content="Create a travel plan for a family of 2 kids from Singapore to Melbourne", source="user"),
-    AssistantMessage(content=f"Previous travel plan - {TravelPlan}", source="assistant")
-]
-# .. re-plan and send the tasks to respective agents
+    - DefaultAgent: For handling general requests"""
+
+user_message = "Create a travel plan for a family of 2 kids from Singapore to Melbourne"
+
+response = client.create_response(
+    input=user_message,
+    instructions=system_prompt,
+    context=f"Previous travel plan - {TravelPlan}",
+)
+# .. přeplánovat a poslat úkoly příslušným agentům
 ```
 
-Pro komplexnější plánování se podívejte na Magnetic One pro řešení složitých úkolů.
+Pro komplexnější plánování si prohlédněte Magnetic One <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Blogpost</a> pro řešení složitých úkolů.
 
 ## Shrnutí
 
-V tomto článku jsme se podívali na příklad, jak vytvořit plánovač, který může dynamicky vybírat dostupné definované agenty. Výstup plánovače rozděluje úkoly a přiřazuje agenty, aby je mohli vykonat. Předpokládá se, že agenti mají přístup k funkcím/nástrojům potřebným k provedení úkolu. Kromě agentů můžete zahrnout další vzory, jako je reflexe, shrnutí a round robin chat, pro další přizpůsobení.
+V tomto článku jsme se podívali na příklad, jak můžeme vytvořit plánovač, který dokáže dynamicky vybrat dostupné definované agenty. Výstup plánovače rozkládá úkoly a přiděluje agenty tak, aby mohly být provedeny. Předpokládá se, že agenti mají přístup k funkcím/nástrojům potřebným k vykonání úkolu. Kromě agentů můžete zahrnout i další vzory jako reflexe, shrnovač a round robin chat pro další přizpůsobení.
 
 ## Další zdroje
 
-AutoGen Magnetic One - Generalistický systém více agentů pro řešení složitých úkolů, který dosáhl působivých výsledků na několika náročných benchmarkech agentů. Reference:
+Magnetic One - Generalistický multi-agentní systém pro řešení složitých úkolů, který dosáhl působivých výsledků na několika náročných agentních benchmarkech. Reference: <a href="https://www.microsoft.com/research/articles/magentic-one-a-generalist-multi-agent-system-for-solving-complex-tasks" target="_blank">Magnetic One</a>. V této implementaci orchestrátor vytváří úkolově specifické plány a deleguje tyto úkoly dostupným agentům. Kromě plánování orchestrátor také využívá mechanismus sledování průběhu úkolu a podle potřeby přeplánovává.
 
-. V této implementaci orchestrátor vytváří plán specifický pro úkol a deleguje tyto úkoly dostupným agentům. Kromě plánování orchestrátor také využívá sledovací mechanismus k monitorování pokroku úkolu a přeplánování podle potřeby.
+### Máte další otázky ohledně vzoru plánování?
 
-### Máte další otázky ohledně vzoru plánování designu?
-
-Připojte se k [Azure AI Foundry Discord](https://aka.ms/ai-agents/discord), kde se můžete setkat s dalšími studenty, zúčastnit se konzultačních hodin a získat odpovědi na své otázky ohledně AI agentů.
+Připojte se na [Microsoft Foundry Discord](https://discord.com/invite/ATgtXmAS5D), setkejte se s dalšími studenty, zúčastněte se konzultačních hodin a nechte si zodpovědět své otázky týkající se AI agentů.
 
 ## Předchozí lekce
 
-[Budování důvěryhodných AI agentů](../06-building-trustworthy-agents/README.md)
+[Vytváření důvěryhodných AI agentů](../06-building-trustworthy-agents/README.md)
 
-## Další lekce
+## Následující lekce
 
-[Vzor designu více agentů](../08-multi-agent/README.md)
+[Víceagentní návrhový vzor](../08-multi-agent/README.md)
 
 ---
 
-**Prohlášení**:  
-Tento dokument byl přeložen pomocí služby pro automatický překlad [Co-op Translator](https://github.com/Azure/co-op-translator). Ačkoli se snažíme o přesnost, mějte prosím na paměti, že automatické překlady mohou obsahovat chyby nebo nepřesnosti. Původní dokument v jeho původním jazyce by měl být považován za autoritativní zdroj. Pro důležité informace doporučujeme profesionální lidský překlad. Neodpovídáme za žádná nedorozumění nebo nesprávné interpretace vyplývající z použití tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER START -->
+**Prohlášení o omezení odpovědnosti**:
+Tento dokument byl přeložen pomocí AI překladatelské služby [Co-op Translator](https://github.com/Azure/co-op-translator). Přestože usilujeme o co největší přesnost, mějte prosím na paměti, že automatizované překlady mohou obsahovat chyby nebo nepřesnosti. Originální dokument v jeho mateřském jazyce by měl být považován za autoritativní zdroj. Pro kritické informace se doporučuje profesionální lidský překlad. Nejsme odpovědní za jakékoli nedorozumění nebo nesprávné interpretace vzniklé použitím tohoto překladu.
+<!-- CO-OP TRANSLATOR DISCLAIMER END -->
